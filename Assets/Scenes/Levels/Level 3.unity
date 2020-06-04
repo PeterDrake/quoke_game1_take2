@@ -86362,15 +86362,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477434, guid: a665d26bf3f0c8f4bb4797e811962f4b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.7
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 477434, guid: a665d26bf3f0c8f4bb4797e811962f4b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 477434, guid: a665d26bf3f0c8f4bb4797e811962f4b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.7
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 9577792, guid: a665d26bf3f0c8f4bb4797e811962f4b, type: 3}
       propertyPath: m_Controller
@@ -86443,9 +86443,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.4
-  m_Height: 1.7
+  m_Height: 1.4
   m_Direction: 1
-  m_Center: {x: 0, y: 0.84, z: 0}
+  m_Center: {x: 0, y: 0.69, z: 0}
 --- !u!4 &1755781209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477434, guid: a665d26bf3f0c8f4bb4797e811962f4b,
