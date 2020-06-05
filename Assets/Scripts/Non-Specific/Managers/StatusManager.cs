@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using Tools = MoreMountains.Tools;
 
 /// <summary>
 /// Manages the three resources, Hydration, Relief, and Warmth, their associated sliders,
@@ -19,9 +18,9 @@ public class StatusManager : MonoBehaviour
     [SerializeField] private Color refillColor;
     [SerializeField] private Color dangerColor;
 
-    [Tools.ReadOnly] public float Hydration;
-    [Tools.ReadOnly] public float Relief;
-    [Tools.ReadOnly] public float Warmth;
+    public float Hydration;
+    public float Relief;
+    public float Warmth;
 
     [Header("Time (in seconds) to deplete the entire resource")]
     [SerializeField] private float HydrationDepletionTime = 180f;
@@ -29,9 +28,9 @@ public class StatusManager : MonoBehaviour
     [SerializeField] private float WarmthDepletionTime = 300f;
 
     [Header("Loss is applied once every second")]
-    [Tools.ReadOnly][Min(0)] public float HydrationLossRate;
-    [Tools.ReadOnly][Min(0)] public float ReliefLossRate;
-    [Tools.ReadOnly][Min(0)] public float WarmthLossRate;
+    public float HydrationLossRate;
+    public float ReliefLossRate;
+    public float WarmthLossRate;
     
     [SerializeField] private bool DegradeHydration = true;
     [SerializeField] private bool DegradeRelief = true;

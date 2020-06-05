@@ -25,7 +25,6 @@ public class QuakeManager : MonoBehaviour
     
     //----Camera Shake Options---
     [Header("Camera Shake Options")]
-    [SerializeField] private MoreMountains.FeedbacksForThirdParty.MMCinemachineCameraShaker camera;
     [SerializeField] private float amplitude;
     [SerializeField] private float frequency;
     [SerializeField] private float duration;
@@ -48,11 +47,11 @@ public class QuakeManager : MonoBehaviour
 
     [HideInInspector] public bool Quaking;
 
-    [MoreMountains.Tools.ReadOnly] public byte quakes; //times quaked 
+    public byte quakes; //times quaked 
     
 
     private bool _inQuakeZone; // is player in a zone where the quake can happen?
-    [MoreMountains.Tools.ReadOnly] public bool _inSafeZone; // is the player safe (under the table)?
+    public bool _inSafeZone; // is the player safe (under the table)?
     
     private bool _countdownFinished;
     private float entranceGracePeriod = 2f;
@@ -149,7 +148,7 @@ public class QuakeManager : MonoBehaviour
         int shakes = 0;
         while (true)
         {
-            camera.ShakeCamera(duration, amplitude, frequency, false);
+            // camera.ShakeCamera(duration, amplitude, frequency, false);
             StartCoroutine(FlapDoors(duration));
             yield return new WaitForSeconds(duration);
             // if the player is in the safezone, and the earthquake has gone long enough, stop it 
