@@ -4738,8 +4738,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.3146143, y: 0.587286, z: 6.026316}
-  m_Center: {x: -3.667254, y: -0.7123699, z: 2.546654}
+  m_Size: {x: 7.3146143, y: 3.8034678, z: 6.026316}
+  m_Center: {x: -3.667254, y: 0.89572096, z: 2.546654}
 --- !u!1 &928796708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1965217916719786, guid: 2122ac2d547f3554a9ac5dc8129dff7e,
@@ -7963,8 +7963,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.5464, y: 0.63042974, z: 4.7218065}
-  m_Center: {x: 7.0504255, y: -0.7408998, z: -0.5980325}
+  m_Size: {x: 5.5464, y: 3.767364, z: 5.4036026}
+  m_Center: {x: 7.0504255, y: 0.82756734, z: -0.25713444}
 --- !u!1 &1464076246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1330766047959420, guid: 957c0d3270bfd844aba900730d2fbad9,
@@ -10279,8 +10279,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.484382, y: 0.9643183, z: 3.5791473}
-  m_Center: {x: -0.3053367, y: -0.5238538, z: 10.119631}
+  m_Size: {x: 6.484382, y: 4.113695, z: 3.5791473}
+  m_Center: {x: -0.3053367, y: 1.0508347, z: 10.119631}
 --- !u!1 &1949842988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c235d2162e4e67d4597cdc4f2db32963,
@@ -10815,8 +10815,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.8325515, y: 0.4997816, z: 2.370494}
-  m_Center: {x: 2.9745328, y: -0.7561221, z: -0.68524694}
+  m_Size: {x: 6.8325515, y: 3.6356993, z: 2.370494}
+  m_Center: {x: 2.9745328, y: 0.8118367, z: -0.68524694}
 --- !u!1 &2058079157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -10895,8 +10895,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2602682, y: 0.4997816, z: 2.0753088}
-  m_Center: {x: -4.7942576, y: -0.7561221, z: -1.1956267}
+  m_Size: {x: 3.2602682, y: 2.9768567, z: 2.0753088}
+  m_Center: {x: -4.7942576, y: 0.48241544, z: -1.1956267}
 --- !u!1 &2065635607 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1719411279065754, guid: ffe16f9903d0b604aab93d16dfb3281d,
