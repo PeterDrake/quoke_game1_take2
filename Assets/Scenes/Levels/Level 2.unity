@@ -594,6 +594,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1949241787}
+  - {fileID: 371025344}
+  - {fileID: 954791755}
+  - {fileID: 1904482228}
+  - {fileID: 1294607242}
+  - {fileID: 1463758907}
   - {fileID: 2056633070}
   - {fileID: 927887667}
   - {fileID: 2061173956}
@@ -2061,6 +2067,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809641596891352}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &371025343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371025344}
+  - component: {fileID: 371025345}
+  m_Layer: 0
+  m_Name: collider destroyed building z (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &371025344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371025343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.08, y: -53, z: -46.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88060073}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &371025345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371025343}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5947933, y: 2.9826214, z: 0.8334122}
+  m_Center: {x: 6.96924, y: 0.4852978, z: 10.212868}
 --- !u!1 &371040951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -4675,7 +4725,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88060073}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &927887668
 BoxCollider:
@@ -4688,8 +4738,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.943796, y: 0.4997816, z: 3.9247518}
-  m_Center: {x: -3.481845, y: -0.7561221, z: 1.4958718}
+  m_Size: {x: 7.3146143, y: 0.587286, z: 6.026316}
+  m_Center: {x: -3.667254, y: -0.7123699, z: 2.546654}
 --- !u!1 &928796708 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1965217916719786, guid: 2122ac2d547f3554a9ac5dc8129dff7e,
@@ -4858,6 +4908,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809641203161335}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &954791754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954791755}
+  - component: {fileID: 954791756}
+  m_Layer: 0
+  m_Name: collider destroyed building z,x
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954791755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954791754}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21, y: -53, z: -48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88060073}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &954791756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954791754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.3097, y: 3.403145, z: 1.0035744}
+  m_Center: {x: 4.256077, y: 0.6955596, z: 10.867397}
 --- !u!1 &962469782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 85ea1c48a2210ad4a9e81e60c551b406,
@@ -6624,6 +6718,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809640144303393}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1294607241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294607242}
+  - component: {fileID: 1294607243}
+  m_Layer: 0
+  m_Name: collider destroyed building x
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294607242
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294607241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21, y: -53, z: -48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88060073}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1294607243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294607241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.6469193, y: 3.397622, z: 9.418512}
+  m_Center: {x: 4.5113173, y: 0.69279814, z: 6.402997}
 --- !u!1 &1296092213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -7783,6 +7921,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809641503369037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1463758906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463758907}
+  - component: {fileID: 1463758908}
+  m_Layer: 0
+  m_Name: collider destroyed building -z,x
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1463758907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463758906}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21, y: -53, z: -48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88060073}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1463758908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463758906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5464, y: 0.63042974, z: 4.7218065}
+  m_Center: {x: 7.0504255, y: -0.7408998, z: -0.5980325}
 --- !u!1 &1464076246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1330766047959420, guid: 957c0d3270bfd844aba900730d2fbad9,
@@ -9804,6 +9986,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809641310941327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1904482227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1904482228}
+  - component: {fileID: 1904482229}
+  m_Layer: 0
+  m_Name: collider destroyed building z,x (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1904482228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904482227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21, y: -53, z: -48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88060073}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1904482229
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904482227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.71171093, y: 3.2282126, z: 0.8334122}
+  m_Center: {x: 6.9107814, y: 0.6080934, z: 10.212868}
 --- !u!1 &1906577713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1263218392565000, guid: a06ca7a29af55234ea05c41e30ccc53d,
@@ -10011,6 +10237,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809640570451347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1949241786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949241787}
+  - component: {fileID: 1949241788}
+  m_Layer: 0
+  m_Name: collider destroyed building z
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949241787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949241786}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21, y: -53, z: -48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88060073}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1949241788
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949241786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.484382, y: 0.9643183, z: 3.5791473}
+  m_Center: {x: -0.3053367, y: -0.5238538, z: 10.119631}
 --- !u!1 &1949842988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: c235d2162e4e67d4597cdc4f2db32963,
@@ -10532,7 +10802,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88060073}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2056633071
 BoxCollider:
@@ -10545,8 +10815,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.2194357, y: 0.4997816, z: 3.1572132}
-  m_Center: {x: 1.667975, y: -0.7561221, z: -1.0786066}
+  m_Size: {x: 6.8325515, y: 0.4997816, z: 2.370494}
+  m_Center: {x: 2.9745328, y: -0.7561221, z: -0.68524694}
 --- !u!1 &2058079157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -10612,7 +10882,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88060073}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2061173957
 BoxCollider:
