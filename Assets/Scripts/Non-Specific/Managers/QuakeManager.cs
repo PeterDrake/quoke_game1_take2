@@ -25,6 +25,7 @@ public class QuakeManager : MonoBehaviour
     
     //----Camera Shake Options---
     [Header("Camera Shake Options")]
+    // [SerializeField] private MoreMountains.FeedbacksForThirdParty.MMCinemachineCameraShaker camera;
     [SerializeField] private float amplitude;
     [SerializeField] private float frequency;
     [SerializeField] private float duration;

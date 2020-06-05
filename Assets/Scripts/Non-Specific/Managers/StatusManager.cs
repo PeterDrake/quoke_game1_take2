@@ -28,9 +28,9 @@ public class StatusManager : MonoBehaviour
     [SerializeField] private float WarmthDepletionTime = 300f;
 
     [Header("Loss is applied once every second")]
-    public float HydrationLossRate;
-    public float ReliefLossRate;
-    public float WarmthLossRate;
+    [Min(0)] public float HydrationLossRate;
+    [Min(0)] public float ReliefLossRate;
+    [Min(0)] public float WarmthLossRate;
     
     [SerializeField] private bool DegradeHydration = true;
     [SerializeField] private bool DegradeRelief = true;
