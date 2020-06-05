@@ -1,5 +1,4 @@
 ﻿using System;
-using MoreMountains.InventoryEngine;
 using UnityEditor;
 using UnityEngine;
 
