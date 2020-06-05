@@ -3582,6 +3582,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809641334519447}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &633504976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 499350134894848835, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 217066294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab06f00b58aaf248aafc3f2ed9b2988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &633558836 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -4539,6 +4551,11 @@ PrefabInstance:
       propertyPath: WarmthFlash
       value: 
       objectReference: {fileID: 1794101376}
+    - target: {fileID: 8109995094488212757, guid: 674b3e11e3b58af47b6107d2e1193031,
+        type: 3}
+      propertyPath: displayer
+      value: 
+      objectReference: {fileID: 633504976}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674b3e11e3b58af47b6107d2e1193031, type: 3}
 --- !u!1 &825859455 stripped
