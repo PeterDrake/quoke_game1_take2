@@ -135,8 +135,10 @@ public class InteractWithObject : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
+        Debug.Log("Called OnTriggerEnter");
         if (!playerInCollider && other.CompareTag("Player"))
         {
+            Debug.Log("OnTriggerEnter");
             CallOnEnterCollider.Invoke();
             
             interactText.ChangeText(InteractionDisplayText);
