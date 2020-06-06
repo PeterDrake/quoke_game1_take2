@@ -50,7 +50,7 @@ public class DialogueDisplayer : UIElement
     
     public void Load(DialogueNode d, NPC n)
     {
-        Debug.Log("Loading "+d.name+", "+n.name);
+        // Debug.Log("Loading "+d.name+", "+n.name);
         npcName.text = n.name;
         if (n.image != null) npcImage.sprite = n.image;
         npcSpeech.text = d.speech;
