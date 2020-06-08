@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New NPC", menuName = "Dialogue/NPC")]
 public class NPC : ScriptableObject
 {
-    public string name;
+    public new string name;
     public Sprite image;
 }

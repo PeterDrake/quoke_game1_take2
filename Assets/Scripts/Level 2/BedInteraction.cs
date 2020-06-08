@@ -16,6 +16,6 @@ public class BedInteraction : MonoBehaviour
         _firstInteraction = false;
         _interact.SetInteractText("Press 'E' to Rest in Bed");
         _interact.DeleteItems();
-        _interact = null;
+        // _interact = null;
     }
 }

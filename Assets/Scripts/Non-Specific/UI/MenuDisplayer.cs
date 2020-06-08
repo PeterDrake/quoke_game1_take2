@@ -7,7 +7,7 @@ using Button = UnityEngine.UI.Button;
 /// </summary>
 public class MenuDisplayer : UIElement
 {
-    [SerializeField] private int mainMenuSceneIndex;
+    public int mainMenuSceneIndex;
     
     // toggler, exitToMenu, quitGame, Settings, Inventory 
 

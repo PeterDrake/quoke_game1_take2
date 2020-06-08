@@ -18,7 +18,7 @@ public class Logger : Singleton<Logger>
 
     private StreamWriter writer;
 
-    private bool DoLog = true; // change to true if you want logging
+    private bool DoLog = false; // change to true if you want logging
 
     public void Log(string message)
     {
@@ -34,10 +34,11 @@ public class Logger : Singleton<Logger>
         }
         catch (Exception e)
         {
+            Debug.LogError(e.StackTrace);
             DoLog = false;
         }
 
-        Debug.Log(time + ": " + message);
+        // Debug.Log(time + ": " + message);
     }
 
     protected void Awake()
@@ -55,6 +56,7 @@ public class Logger : Singleton<Logger>
         catch (DirectoryNotFoundException e)
         {
             Debug.LogError("Unable to find log file, logging has been disabled!");
+            Debug.LogError(e.StackTrace);
             DoLog = false;
         }
     }
