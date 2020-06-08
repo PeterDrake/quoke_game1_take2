@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Orange
+  theButton: {fileID: 0}
 --- !u!65 &73679305
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -779,6 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Pee
+  theButton: {fileID: 981360262}
 --- !u!65 &156061071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2288,6 +2290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Green
+  theButton: {fileID: 0}
 --- !u!1 &538352395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,6 +2339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Bucket
+  theButton: {fileID: 981360262}
 --- !u!65 &538352398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2544,6 +2548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: ToiletPaper
+  theButton: {fileID: 981360262}
 --- !u!65 &648869679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2790,7 +2795,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0a654a430d9b77842a17b8ef6c1964b1, type: 3}
+    m_Font: {fileID: 12800000, guid: 80bc0c0884c28f64db440ca354c9ee18, type: 3}
     m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
@@ -3246,7 +3251,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61165c170c0b97c48a9bf5be5ee0f5b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 80bc0c0884c28f64db440ca354c9ee18, type: 3}
     m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
@@ -4298,6 +4303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Sawdust
+  theButton: {fileID: 981360262}
 --- !u!65 &997852163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4715,6 +4721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: PlasticBag
+  theButton: {fileID: 981360262}
 --- !u!65 &1091083016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5225,6 +5232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Blue
+  theButton: {fileID: 0}
 --- !u!1 &1281325808
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,6 +6088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Poop
+  theButton: {fileID: 981360262}
 --- !u!65 &1436593197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6281,6 +6290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctTag: Bucket
+  theButton: {fileID: 981360262}
 --- !u!65 &1448891284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8775,7 +8785,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 61165c170c0b97c48a9bf5be5ee0f5b6, type: 3}
+    m_Font: {fileID: 12800000, guid: 80bc0c0884c28f64db440ca354c9ee18, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0

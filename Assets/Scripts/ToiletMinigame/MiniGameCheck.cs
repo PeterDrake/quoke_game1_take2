@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using Image = UnityEngine.UIElements.Image;
 
 public class MiniGameCheck : MonoBehaviour
 {
@@ -9,8 +11,9 @@ public class MiniGameCheck : MonoBehaviour
     public string correctTag;
 
     private MiniGameMaster MasterCheck;
-   
 
+    public Button theButton;
+    
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(correctTag))
@@ -41,6 +44,11 @@ public class MiniGameCheck : MonoBehaviour
             {
                 MasterCheck.Pee = true;
             }
+            
+            if (MasterCheck.Bucket && MasterCheck.PlasticBag && MasterCheck.Poop && MasterCheck.ToiletPaper && MasterCheck.Sawdust && MasterCheck.Pee)
+            {
+                StartCoroutine(BlinkText());
+            }
         }
         else
         {
@@ -48,40 +56,53 @@ public class MiniGameCheck : MonoBehaviour
         }
     }
     
-    public void OnTriggerExit(Collider other)
+    public IEnumerator BlinkText()
     {
-        if (other.CompareTag(correctTag))
+        while (true)
         {
-            MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-            if (correctTag == "Bucket")
-            {
-                MasterCheck.Bucket = false;
-            }
-            if (correctTag == "PlasticBag")
-            {
-                MasterCheck.PlasticBag = false;
-            }
-            if (correctTag == "Poop")
-            {
-                MasterCheck.Poop = false;
-            }
-            if (correctTag == "ToiletPaper")
-            {
-                MasterCheck.ToiletPaper = false;
-            }
-            if (correctTag == "Sawdust")
-            {
-                MasterCheck.Sawdust = false;
-            }
-            if (correctTag == "Pee")
-            {
-                MasterCheck.Pee = false;
-            }
+            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            yield return new WaitForSeconds(.3f);
+            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            //theButton.colors = Color.white;
+            yield return new WaitForSeconds(.3f);
         }
-        else
-        {
-            //Debug.Log("An item is in the wrong place"); 
-        }
-    } 
-    
+    }
+
+
+public void OnTriggerExit(Collider other)
+{
+   if (other.CompareTag(correctTag))
+   {
+       MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
+       if (correctTag == "Bucket")
+       {
+           MasterCheck.Bucket = false;
+       }
+       if (correctTag == "PlasticBag")
+       {
+           MasterCheck.PlasticBag = false;
+       }
+       if (correctTag == "Poop")
+       {
+           MasterCheck.Poop = false;
+       }
+       if (correctTag == "ToiletPaper")
+       {
+           MasterCheck.ToiletPaper = false;
+       }
+       if (correctTag == "Sawdust")
+       {
+           MasterCheck.Sawdust = false;
+       }
+       if (correctTag == "Pee")
+       {
+           MasterCheck.Pee = false;
+       }
+   }
+   else
+   {
+       //Debug.Log("An item is in the wrong place"); 
+   }
+} 
+
 }
