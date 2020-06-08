@@ -34,6 +34,7 @@ public class Logger : Singleton<Logger>
         }
         catch (Exception e)
         {
+            Debug.LogError(e.StackTrace);
             DoLog = false;
         }
 
@@ -55,6 +56,7 @@ public class Logger : Singleton<Logger>
         catch (DirectoryNotFoundException e)
         {
             Debug.LogError("Unable to find log file, logging has been disabled!");
+            Debug.LogError(e.StackTrace);
             DoLog = false;
         }
     }

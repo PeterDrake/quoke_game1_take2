@@ -44,7 +44,7 @@ public class StatusManager : MonoBehaviour
     private float ReliefMax = 100f;
     private float WarmthMax = 100f;
     
-    private bool enabled = true;
+    private new bool enabled = true;
     private bool alive;
     private bool Degrading = true;
     private const float DEGRADETIME = 1f;
