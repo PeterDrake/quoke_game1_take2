@@ -81,7 +81,8 @@ public class InventoryDisplay : UIElement
         locked = true;
         
         selectedItem = 0;
-        capacity = Systems.Inventory.GetCapacity();
+        // capacity = Systems.Inventory.GetCapacity();
+        capacity = 8; // Temporary kludge
         itemSlots = new Image[capacity];
         amounts = new byte[]{0};
         items = new Item[capacity];
