@@ -2946,7 +2946,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactables
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6301557045620401076, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Name
+      value: Fall Collider
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6301557045620401081, guid: c9cd190dfc12c498da7654c7039f802b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9cd190dfc12c498da7654c7039f802b, type: 3}
 --- !u!1 &485245725 stripped
 GameObject:
@@ -3916,6 +3922,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809640911007575}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &695941067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6301557045620401076, guid: c9cd190dfc12c498da7654c7039f802b,
+    type: 3}
+  m_PrefabInstance: {fileID: 481829951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695941071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695941067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff36dc49cd63431aa2af2f27ec55c6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &696011511 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1586783134029144, guid: 9396d1599b0e3dc41852d63c6cc963c5,
