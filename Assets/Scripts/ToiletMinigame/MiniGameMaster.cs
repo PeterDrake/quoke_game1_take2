@@ -37,7 +37,6 @@ public class MiniGameMaster : MonoBehaviour
     {
         if (Bucket && PlasticBag && Poop && ToiletPaper && Sawdust && Pee)
         {
-            OnWin.Invoke();
             Win.SetActive(true);
         }
         else
