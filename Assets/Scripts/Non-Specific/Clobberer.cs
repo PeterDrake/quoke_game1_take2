@@ -5,7 +5,7 @@
 /// </summary>
 public class Clobberer : MonoBehaviour
 {
-    public bool enabled;
+    public new bool enabled;
 
     private void OnCollisionEnter(Collision other)
     {

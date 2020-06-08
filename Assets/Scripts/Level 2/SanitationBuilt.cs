@@ -29,7 +29,7 @@ public class SanitationBuilt : MonoBehaviour
     
     
     private GameObject canvi;
-    private GameObject camera;
+    private new GameObject camera;
 
     private void Awake()
     {
