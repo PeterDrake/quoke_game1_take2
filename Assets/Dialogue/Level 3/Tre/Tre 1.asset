@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Hey, how are you holding up?
   optionOneText: 'I''m pretty shook up, but I guess we have to carry on. '
-  optionOne: {fileID: 0}
+  optionOne: {fileID: 11400000, guid: 902c80bde6e2347569bae7c0f43e88e9, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
