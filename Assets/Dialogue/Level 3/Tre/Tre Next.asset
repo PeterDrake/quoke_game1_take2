@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Tre 2
+  m_Name: Tre Next
   m_EditorClassIdentifier: 
-  speech: 'True dat. '
+  speech: Ye I get that..
   optionOneText: We're trying to set up a pit latrine. We need a rope to hang up
     a tarp. Any idea where I could find one?
   optionOne: {fileID: 11400000, guid: cdf3dbd533555424eb1f5088e34d2dae, type: 2}
