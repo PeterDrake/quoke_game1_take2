@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4422694, g: 0.49129927, b: 0.5711838, a: 1}
+  m_IndirectSpecularColor: {r: 0.44226938, g: 0.4912992, b: 0.57118344, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6446,6 +6446,70 @@ CapsuleCollider:
   m_Height: 1.4
   m_Direction: 1
   m_Center: {x: 0, y: 0.69, z: 0}
+--- !u!114 &149367370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149367368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484bf3216f39364ea0be01cb0974e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 3593f1044c6f94b10ad54c8925d0c57c, type: 2}
+  dialogue: {fileID: 11400000, guid: 5dc2cdbbcf947413a92398b40240777c, type: 2}
+--- !u!114 &149367371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149367368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 0
+  itemToReceive:
+  - {fileID: 0}
+  InteractionDisplayText: Press 'E' to talk to Tre
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 149367370}
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
+--- !u!136 &149367372
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149367368}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &149709178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48155,7 +48219,7 @@ MonoBehaviour:
   BlinkWhenPlayerNear: 0
   itemToReceive:
   - {fileID: 0}
-  InteractionDisplayText: Press E to talk to Frank
+  InteractionDisplayText: Press 'E' to talk to Frank
   interactText: {fileID: 0}
   CallOnInteract:
     m_PersistentCalls:
@@ -101455,6 +101519,70 @@ CapsuleCollider:
   m_Height: 1.4
   m_Direction: 1
   m_Center: {x: 0, y: 0.69, z: 0}
+--- !u!114 &2095330079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095330077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9484bf3216f39364ea0be01cb0974e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: 1ef22cd2e97a9429db57a7ad17c087b4, type: 2}
+  dialogue: {fileID: 11400000, guid: 1c59ae40b5d8140c39aa5340d702bf52, type: 2}
+--- !u!114 &2095330080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095330077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 0
+  itemToReceive:
+  - {fileID: 0}
+  InteractionDisplayText: Press 'E' to talk to Zelda
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2095330079}
+        m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 1
+  DestoryObjectAfterUse: 0
+--- !u!136 &2095330081
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095330077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 3
+  m_Height: 3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2096058085
 PrefabInstance:
   m_ObjectHideFlags: 0
