@@ -24,7 +24,7 @@ MonoBehaviour:
   IfRequirementsOne:
   - {fileID: 11400000, guid: 3893671c334b24b458fd142e3af1323f, type: 2}
   optionOneTextAlt: I'm Mo.
-  optionOneAlt: {fileID: 11400000, guid: 1bc9966aab82346329866c4c43fea848, type: 2}
+  optionOneAlt: {fileID: 11400000, guid: f47e5c992c97f5046a8a7a6c471f9d96, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}

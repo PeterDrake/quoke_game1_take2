@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda 4 No gun
+  m_Name: Zelda Next
   m_EditorClassIdentifier: 
-  speech: 'Mo: We''re trying to dig a pit latrine. Do you know where I can find a
-    shovel?
-
-    Zelda: I''ve got one! I''ll trade it for some water. '
+  speech: I'm so thirsty! I have a shovel that I'd be willing to trade for some water.
   optionOneText: It's a deal!
   optionOne: {fileID: 0}
   optionTwoText: 
@@ -28,6 +25,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d77640073ece14ccfa0532ef18c92f55, type: 2}
   optionOneTextAlt: 'I''ll go see if I can find some. '
   optionOneAlt: {fileID: 0}
-  IfRequirementsTwo: []
-  optionTwoTextAlt: 
+  IfRequirementsTwo:
+  - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
+  optionTwoTextAlt: We're trying to dig a pit latrine - a shovel sound perfect. I'd
+    be happy to trade!
   optionTwoAlt: {fileID: 0}
