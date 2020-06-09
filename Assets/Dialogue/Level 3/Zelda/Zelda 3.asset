@@ -18,11 +18,11 @@ MonoBehaviour:
   optionOne: {fileID: 11400000, guid: ab6fa112f5b36496686d153814731ff2, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
-  Requirements:
-  - {fileID: 11400000, guid: 3893671c334b24b458fd142e3af1323f, type: 2}
+  Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
-  IfRequirementsOne: []
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: 3893671c334b24b458fd142e3af1323f, type: 2}
   optionOneTextAlt: I'm Mo.
   optionOneAlt: {fileID: 11400000, guid: 1bc9966aab82346329866c4c43fea848, type: 2}
   IfRequirementsTwo: []
