@@ -12,13 +12,13 @@ public class SinkInteraction : MonoBehaviour
 
     public void Interaction()
     {
-        if (!_firstInteraction) Systems.Status.AffectHydration(50);
+        if (!_firstInteraction) Systems.Status.AffectHydration(100);
         else
         {
             _firstInteraction = false;
             _interact.SetInteractText("Press 'E' to Drink from Sink");
             _interact.DeleteItems();
-            _interact = null;
+            //_interact = null;
         }
     }
 }
