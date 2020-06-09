@@ -223,23 +223,17 @@ public class StatusManager : MonoBehaviour
     }
     public void LowLevelFlash()
     {
-        if (Hydration <= 25)
+        if (Hydration <= 95)
         {
-            HydrationSlider.image.color = Color.Lerp(HydrationBar, Color.blue, Mathf.PingPong(Time.time, .5f));
-            WaterFlash.color = dangerColor;
-            WaterFlash.color = Color.Lerp(dangerColor, Color.clear, Time.time);
+            WaterFlash.color = Color.Lerp(dangerColor, Color.clear, Mathf.PingPong(Time.time, .5f));
         }
         if (Relief <= 25)
         {
-            ReliefSlider.image.color = Color.Lerp(ReliefBar, new Color(.2f, 1f, .1f, 1), Mathf.PingPong(Time.time, .5f));
-            ReliefFlash.color = dangerColor;
-            ReliefFlash.color = Color.Lerp(dangerColor, Color.clear, Time.time);
+            ReliefFlash.color = Color.Lerp(dangerColor, Color.clear, Mathf.PingPong(Time.time, .5f));
         }
         if (Warmth <= 25)
         {
-            WarmthSlider.image.color = Color.Lerp(WarmthBar, Color.red, Mathf.PingPong(Time.time, .5f));
-            WarmthFlash.color = dangerColor;
-            WarmthFlash.color = Color.Lerp(dangerColor, Color.clear, Time.time);
+            WarmthFlash.color = Color.Lerp(dangerColor, Color.clear, Mathf.PingPong(Time.time, .5f));
         }
 
     }
