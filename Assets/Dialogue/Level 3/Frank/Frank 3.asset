@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Sometimes destiny throws you on the grill.
   optionOneText: 'Ugh. You''re the wurst. '
-  optionOne: {fileID: 0}
+  optionOne: {fileID: 11400000, guid: 993a0ccb8c9dd442c9bfa75e59d98e74, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
