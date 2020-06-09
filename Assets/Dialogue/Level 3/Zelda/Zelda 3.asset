@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Zelda 3
   m_EditorClassIdentifier: 
-  speech: 'It''s short for Tsunami. Where could he have run off to? He''s got to be
-    scared and hungry! I hope he''s not hurt. I''m Zelda, by the way. '
+  speech: 'It''s short for Tsunami. Where could he have run off to? He''s got to
+    be scared and hungry! I hope he''s not hurt. I''m Zelda, by the way. '
   optionOneText: I'm Mo.
   optionOne: {fileID: 11400000, guid: ab6fa112f5b36496686d153814731ff2, type: 2}
   optionTwoText: 
@@ -24,7 +24,7 @@ MonoBehaviour:
   NewHead: {fileID: 0}
   IfRequirementsOne: []
   optionOneTextAlt: I'm Mo.
-  optionOneAlt: {fileID: 11400000, guid: 54069a7e69c9845a599c48cf07895000, type: 2}
+  optionOneAlt: {fileID: 11400000, guid: 1bc9966aab82346329866c4c43fea848, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
