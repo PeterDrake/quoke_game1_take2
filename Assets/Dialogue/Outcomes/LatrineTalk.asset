@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7d76440bc5ec647b69df00d3f6f14a, type: 3}
-  m_Name: HasTalkedToMo
+  m_Script: {fileID: 11500000, guid: b82b83c023a677e49a42bc17e2f3225e, type: 3}
+  m_Name: LatrineTalk
   m_EditorClassIdentifier: 
-  requiredEvent: LatrineTalk
-  failureMessage: 
+  ObjectiveName: LatrineTalk
