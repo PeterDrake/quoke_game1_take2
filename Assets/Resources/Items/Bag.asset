@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Trash Bag
   Description: A Trash Bag
-  Icon: {fileID: 21300000, guid: 214c57a4f2f67434099a68d6acedec91, type: 3}
-  DisplayImage: {fileID: 21300000, guid: 214c57a4f2f67434099a68d6acedec91, type: 3}
+  Icon: {fileID: 21300000, guid: 3d0b903d097be4bb1973abf60953e227, type: 3}
+  DisplayImage: {fileID: 21300000, guid: 3d0b903d097be4bb1973abf60953e227, type: 3}
   ID: bag
   action: {fileID: 0}
