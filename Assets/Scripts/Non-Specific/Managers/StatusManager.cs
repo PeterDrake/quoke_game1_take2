@@ -223,7 +223,7 @@ public class StatusManager : MonoBehaviour
     }
     public void LowLevelFlash()
     {
-        if (Hydration <= 95)
+        if (Hydration <= 25)
         {
             WaterFlash.color = Color.Lerp(dangerColor, Color.clear, Mathf.PingPong(Time.time, .5f));
         }
