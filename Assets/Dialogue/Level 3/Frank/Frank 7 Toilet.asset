@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Frank 7 Toilet
   m_EditorClassIdentifier: 
   speech: 'No, you''ll have to find one. I do have some plywood we can use to make
-    a floor around the pit. I''ve also got a tarp we can put up to keep the rain out
-    if we can find a rope. '
+    a floor around the pit. I''ve also got a tarp we can put up to keep the rain
+    out if we can find a rope. '
   optionOneText: 'Okay. Show me where your house is, and I''ll try to find that stuff. '
-  optionOne: {fileID: 0}
+  optionOne: {fileID: 11400000, guid: 4808963e4b3994f7ea6c7e5b471bbfb0, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

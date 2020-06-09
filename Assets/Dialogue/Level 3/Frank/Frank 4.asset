@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Nice.
   optionOneText: 'We should probably find some shelter from this rain. '
-  optionOne: {fileID: 11400000, guid: 25bc19464abe44a3e99e2ed6afc54745, type: 2}
+  optionOne: {fileID: 0}
   optionTwoText: What do you plan to use for a toilet?
   optionTwo: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
   Requirements:
