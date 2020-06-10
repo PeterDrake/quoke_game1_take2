@@ -28,6 +28,7 @@ public class ObjectDropper: MonoBehaviour
     
     private void Start()
     {
+        playerKiller.SetActive(false);
         player = GameObject.FindWithTag("Player");
         fallRate = TotalDropTime / (falling_objects.Length + 1);
     }
