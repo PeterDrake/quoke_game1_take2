@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Gun
   Description: 'It''s a gun! '
-  Icon: {fileID: 21300000, guid: 9800c0d3bebe94639a539244d7aa1740, type: 3}
-  DisplayImage: {fileID: 21300000, guid: 9800c0d3bebe94639a539244d7aa1740, type: 3}
-  ID: 
+  Icon: {fileID: 21300000, guid: b163d877e8b900c4b86932ec88d6fa29, type: 3}
+  DisplayImage: {fileID: 21300000, guid: b163d877e8b900c4b86932ec88d6fa29, type: 3}
+  ID: GUN
   action: {fileID: 0}

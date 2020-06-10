@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Clean Mustard Jug
   Description: 'It used to hold a condiment! '
-  Icon: {fileID: 21300000, guid: bc76d1045981c4296a91168eb26e3056, type: 3}
-  DisplayImage: {fileID: 21300000, guid: bc76d1045981c4296a91168eb26e3056, type: 3}
+  Icon: {fileID: 21300000, guid: 70a5d349c1e1f6b4487b53b13ad7c8df, type: 3}
+  DisplayImage: {fileID: 21300000, guid: 70a5d349c1e1f6b4487b53b13ad7c8df, type: 3}
   ID: JUG
   action: {fileID: 0}
