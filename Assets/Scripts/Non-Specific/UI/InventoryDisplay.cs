@@ -148,7 +148,6 @@ public class InventoryDisplay : UIElement
                     componentsFound += 3;
                     openToggle = child.gameObject;
                     Transform button2 = child.Find("open");
-                    button2.GetComponent<Button>().onClick.AddListener(useSelectedItem);
                     openText = button2.Find("text").GetComponent<Text>();
                     break;
             }
@@ -167,12 +166,12 @@ public class InventoryDisplay : UIElement
         description.text = items[i].Description;
         displayAmount.text = amounts[i].ToString();
 
-        if(items[i].ID == "PAM")
+        if (items[i].ID == "PAM")
         {
             useToggle.SetActive(false);
             openToggle.SetActive(true);
             openText.text = "Open Pamphlet";
-            
+
         }
 
         else if (items[i].action != null)
@@ -203,4 +202,5 @@ public class InventoryDisplay : UIElement
         items[selectedItem].action.Use(ref items[selectedItem]);
        UIManager.Instance.SetAsActive(this);
     }
+
 }
