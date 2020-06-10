@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adminMode: 0
-  showCountdown: 0
+  showCountdown: 1
   TimeBeforeQuake: 30000000
   AftershockTime: 60
   amplitude: 1.3
