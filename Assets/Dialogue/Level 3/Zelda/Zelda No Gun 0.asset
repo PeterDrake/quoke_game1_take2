@@ -18,15 +18,13 @@ MonoBehaviour:
   optionTwoText: We're trying to dig a pit latrine - a shovel sound perfect. I'd
     be happy to trade!
   optionTwo: {fileID: 11400000, guid: b52ff2f96d3275349a9e7d7d9a05e026, type: 2}
-  Requirements:
-  - {fileID: 11400000, guid: d77640073ece14ccfa0532ef18c92f55, type: 2}
-  Outcomes:
-  - {fileID: 11400000, guid: ce15081f5a79b430697066141b2a3fef, type: 2}
+  Requirements: []
+  Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: d77640073ece14ccfa0532ef18c92f55, type: 2}
   optionOneTextAlt: 'I''ll go see if I can find some. '
-  optionOneAlt: {fileID: 0}
+  optionOneAlt: {fileID: 11400000, guid: e2356adc9687b124ba15150827eacc65, type: 2}
   IfRequirementsTwo:
   - {fileID: 11400000, guid: d77640073ece14ccfa0532ef18c92f55, type: 2}
   - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
