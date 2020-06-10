@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7680496636982401321}
   - component: {fileID: 7680496636982401318}
   - component: {fileID: 7680496636982401319}
+  - component: {fileID: 8577375543034244270}
   m_Layer: 8
   m_Name: Swingy door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +123,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 37.832, y: 0.100124024, z: 41.052}
+  m_ConnectedAnchor: {x: 37.832, y: 0.10012412, z: 41.052}
   m_UseSpring: 1
   m_Spring:
     spring: 10
@@ -146,3 +147,16 @@ HingeJoint:
   m_EnablePreprocessing: 0
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &8577375543034244270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7680496636982401320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75c36dbf553744ad49a2690fc756a5e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enabled: 0

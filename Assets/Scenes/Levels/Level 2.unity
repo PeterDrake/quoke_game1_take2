@@ -7818,6 +7818,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bedroom door
       objectReference: {fileID: 0}
+    - target: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
+      objectReference: {fileID: 0}
     - target: {fileID: 7682069275248220870, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11861,7 +11866,7 @@ PrefabInstance:
     - target: {fileID: 7680496636982401319, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 29.298
+      value: 22.824
       objectReference: {fileID: 0}
     - target: {fileID: 7680496636982401319, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
@@ -11871,12 +11876,17 @@ PrefabInstance:
     - target: {fileID: 7680496636982401319, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 42.674
+      value: 51.12
       objectReference: {fileID: 0}
     - target: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
       propertyPath: m_Name
       value: Bathroom door
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
+        type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 7682069275248220870, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
