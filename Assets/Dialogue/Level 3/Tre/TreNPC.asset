@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40ddc9b230139e4482577e37f37b881, type: 3}
   m_Name: TreNPC
   m_EditorClassIdentifier: 
-  name: 
-  image: {fileID: 21300000, guid: ee71543dfc0bfdd4ca529cd120da57c7, type: 3}
+  name: Tre
+  image: {fileID: 21300000, guid: 322411f67ef4ef3428578bee78410967, type: 3}

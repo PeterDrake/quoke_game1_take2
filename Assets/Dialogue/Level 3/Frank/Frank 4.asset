@@ -20,7 +20,7 @@ MonoBehaviour:
   Requirements:
   - {fileID: 0}
   Outcomes: []
-  NewHead: {fileID: 0}
+  NewHead: {fileID: 11400000}
   IfRequirementsOne:
   - {fileID: 11400000, guid: 823f6202d7f614bb5b98093ed3eab4a9, type: 2}
   optionOneTextAlt: 'I''m so thirsty! Do you know where we can find some water? I''ve
