@@ -181,7 +181,7 @@ public class QuakeManager : MonoBehaviour
         Quaking = true;
         Logger.Instance.Log((quakes == 0 ? "Earthquake" : "Aftershock")+" triggered!");
         StopAllCoroutines();
-        
+
         OnQuake.Invoke(); // every function subscribed to OnQuake is called here
 
         _informationCanvas.ChangeText(textOnQuake);
