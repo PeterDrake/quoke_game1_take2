@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RequiredItems:
   - {fileID: 11400000, guid: 02baad44482c24b9aa5d092b03fe5250, type: 2}
-  Amounts: 
+  Amounts: 01000000

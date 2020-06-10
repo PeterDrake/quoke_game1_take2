@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db31c4a6f274bd349acba418682f36ce, type: 3}
-  m_Name: HasWater
+  m_Script: {fileID: 11500000, guid: b82b83c023a677e49a42bc17e2f3225e, type: 3}
+  m_Name: LatrineTalk
   m_EditorClassIdentifier: 
-  RequiredItems:
-  - {fileID: 11400000, guid: 74509f734533b496cbca49ee30a6c3a4, type: 2}
-  Amounts: 01000000
+  ObjectiveName: LatrineTalk

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GiveRope
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 0}
-  Amounts: 
+  - {fileID: 11400000, guid: 8526991120fe41d4996fcb2e99aca9f4, type: 2}
+  Amounts: 01000000

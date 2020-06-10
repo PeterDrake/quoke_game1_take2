@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Frank 1
   m_EditorClassIdentifier: 
-  speech: 'Mo: Are you dressed as a hot dog, or am I starting to hallucinate?
-
-    Frank: No, I sell hot dogs. I was working when it happened.'
+  speech: No, I sell hot dogs. I was working when it happened.
   optionOneText: 'Cool. My name''s Mo. '
   optionOne: {fileID: 11400000, guid: c462d76fa4f7b449c8c12dd9e1886b44, type: 2}
   optionTwoText: 

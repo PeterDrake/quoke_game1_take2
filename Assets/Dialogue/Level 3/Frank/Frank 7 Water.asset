@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Frank 7 Water
   m_EditorClassIdentifier: 
   speech: I've got this empty 5-gallon mustard jug. It's clean. Will that work?
-  optionOneText: 'I think so. Where''s your house? '
-  optionOne: {fileID: 0}
+  optionOneText: 'I think so. Let''s go to your garage. '
+  optionOne: {fileID: 11400000, guid: 9961b93dda3a4104397049825496b09a, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

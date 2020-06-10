@@ -17,7 +17,7 @@ MonoBehaviour:
   optionOneText: 'Perfect! Do you have a shovel?
 
 '
-  optionOne: {fileID: 11400000, guid: 4808963e4b3994f7ea6c7e5b471bbfb0, type: 2}
+  optionOne: {fileID: 11400000, guid: e295654cd21c3384e8c39c6bfa970c85, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
