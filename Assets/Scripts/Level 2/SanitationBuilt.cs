@@ -30,6 +30,7 @@ public class SanitationBuilt : MonoBehaviour
     
     private GameObject canvi;
     private GameObject camera;
+    private GameObject vcam;
 
     private void Awake()
     {
@@ -88,7 +89,8 @@ public class SanitationBuilt : MonoBehaviour
 
 
         (canvi = GameObject.Find("Canvi")).SetActive(false);
-        (camera = GameObject.Find("Cameras")).SetActive(false);
+        (camera = GameObject.Find("Main Camera")).SetActive(false);
+        (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnWin += MiniGameFinished;
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnExit += MiniGameLeave;
     }
@@ -98,16 +100,17 @@ public class SanitationBuilt : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
         camera.SetActive(true);
+        vcam.SetActive(true);
     }
     private void MiniGameFinished()//this is not getting called
     {
         Systems.Status.UnPause();
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
-        canvi.SetActive(true);
         
         Systems.Objectives.Satisfy("TOILETEVENT");
         camera.SetActive(true);
+        vcam.SetActive(true);
         canvi.SetActive(true);
 
         _inventory.RemoveItem(Bucket, 2);
