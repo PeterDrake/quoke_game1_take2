@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using Cinemachine;
 using Random = UnityEngine.Random;
 
 /// <summary>
@@ -25,13 +26,18 @@ public class QuakeManager : MonoBehaviour
     
     //----Camera Shake Options---
     [Header("Camera Shake Options")]
-    // [SerializeField] private MoreMountains.FeedbacksForThirdParty.MMCinemachineCameraShaker camera;
-    [SerializeField] private float amplitude;
-    [SerializeField] private float frequency;
-    [SerializeField] private float duration;
+    // Cinemachine Shake
+    public CinemachineVirtualCamera VirtualCamera;
+    private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
+
+    public float ShakeDuration = 0.3f;          
+    public float ShakeAmplitude = 1.2f;         
+    public float ShakeFrequency = 2.0f;         
+
+    private float ShakeElapsedTime = 0f;
     //--------------------
-    
-    
+
+
     [TextArea][SerializeField] private string textOnQuake;
     [TextArea][SerializeField] private string textAfterQuake;
 
@@ -88,6 +94,8 @@ public class QuakeManager : MonoBehaviour
         clobberers = Array.ConvertAll(doors, d => d.GetComponent(typeof(Clobberer)) as Clobberer);
 
         _informationCanvas = GameObject.Find("Canvi").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
+        virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
+
     }
 
     void Update()
@@ -145,13 +153,15 @@ public class QuakeManager : MonoBehaviour
         {
             c.enabled = true;
         }
-        
+
+  
         int shakes = 0;
         while (true)
         {
+            shakecamera(ShakeDuration, ShakeAmplitude, ShakeFrequency);
             // camera.ShakeCamera(duration, amplitude, frequency, false);
-            StartCoroutine(FlapDoors(duration));
-            yield return new WaitForSeconds(duration);
+            StartCoroutine(FlapDoors(ShakeDuration));
+            yield return new WaitForSeconds(ShakeDuration);
             // if the player is in the safezone, and the earthquake has gone long enough, stop it 
             if (_inSafeZone && shakes >= _minimumShakes)
             {
@@ -160,7 +170,7 @@ public class QuakeManager : MonoBehaviour
 
             shakes++;
         }
-        
+
         StopQuake();
         foreach (Clobberer c in clobberers)
         {
@@ -179,6 +189,7 @@ public class QuakeManager : MonoBehaviour
         Systems.Status.Pause();
         
         Quaking = true;
+        Debug.Log("BEGGIIIINNN");
         Logger.Instance.Log((quakes == 0 ? "Earthquake" : "Aftershock")+" triggered!");
         StopAllCoroutines();
 
@@ -193,7 +204,11 @@ public class QuakeManager : MonoBehaviour
     {
         if (!Quaking || quakes > 0) return;
         Logger.Instance.Log("Quake Stopped");
-        
+        Debug.Log("PAUUU KAHANZZZ");
+ 
+        virtualCameraNoise.m_AmplitudeGain = 0f;
+        ShakeElapsedTime = 0f;
+    
         Quaking = false;
         Systems.Status.Pause();
         TriggerCountdown(AftershockTime);
@@ -224,5 +239,25 @@ public class QuakeManager : MonoBehaviour
             TriggerCountdown(gracePeroid);
         }
     }
+
+    public void shakecamera(float duration, float amplitude, float frequency)
+    {
+        Debug.Log("SHAKEEEYYY");
+        ShakeElapsedTime = duration;
+        while (ShakeElapsedTime > 0)
+        {
+            // Set Cinemachine Camera Noise parameter
+            virtualCameraNoise.m_AmplitudeGain = amplitude;
+            virtualCameraNoise.m_FrequencyGain = frequency;
+
+            // Update Shake Timer
+            ShakeElapsedTime -= Time.deltaTime;
+           
+        }
+
+
+    }
 }
+
+
 
