@@ -12,6 +12,7 @@ public class ExitToiletMinigame : MonoBehaviour
     
     public void LoadLevel()
     {
-        SceneManager.LoadScene("GabeUseThisL2", LoadSceneMode.Single);
+        //SceneManager.LoadScene("Level 2", LoadSceneMode.Single);
+        
     }
 }
