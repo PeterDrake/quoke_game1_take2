@@ -30,9 +30,9 @@ public class QuakeManager : MonoBehaviour
     public CinemachineVirtualCamera VirtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
-    public float ShakeDuration = 0.3f;          
-    public float ShakeAmplitude = 1.2f;         
-    public float ShakeFrequency = 2.0f;         
+    public float ShakeDuration;          
+    public float ShakeAmplitude;         
+    public float ShakeFrequency;         
 
     private float ShakeElapsedTime = 0f;
     //--------------------
@@ -64,7 +64,7 @@ public class QuakeManager : MonoBehaviour
     private float entranceGracePeriod = 2f;
     private float _timeTillQuake;
     
-    [SerializeField] private float _minimumShakes = 1; //each shake is 'duration' (5) seconds long
+    [SerializeField] private float _minimumShakes = 1;
     private bool quakeOverride;
 
 
@@ -153,9 +153,8 @@ public class QuakeManager : MonoBehaviour
         {
             c.enabled = true;
         }
-
   
-        int shakes = 0;
+        int shakes = 1;
         while (true)
         {
             shakecamera(ShakeDuration, ShakeAmplitude, ShakeFrequency);
@@ -240,17 +239,17 @@ public class QuakeManager : MonoBehaviour
 
     public void shakecamera(float duration, float amplitude, float frequency)
     {
-        Debug.Log("SHAKEEEYYY");
         ShakeElapsedTime = duration;
         while (ShakeElapsedTime > 0)
         {
+
             // Set Cinemachine Camera Noise parameter
             virtualCameraNoise.m_AmplitudeGain = amplitude;
             virtualCameraNoise.m_FrequencyGain = frequency;
 
             // Update Shake Timer
             ShakeElapsedTime -= Time.deltaTime;
-           
+
         }
 
 
