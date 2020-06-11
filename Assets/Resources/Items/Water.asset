@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Water
   Description: 'Water from Frank''s water heater. It''s alright. '
-  Icon: {fileID: 21300000, guid: 12a5844169eb7374583f5a6d575ceff1, type: 3}
-  DisplayImage: {fileID: 21300000, guid: 12a5844169eb7374583f5a6d575ceff1, type: 3}
-  ID: 
+  Icon: {fileID: 21300000, guid: fcdefa0131b3d7045b0aaace3720a935, type: 3}
+  DisplayImage: {fileID: 21300000, guid: fcdefa0131b3d7045b0aaace3720a935, type: 3}
+  ID: WATER
   action: {fileID: 0}

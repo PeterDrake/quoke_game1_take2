@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Rope
   Description: It's a rope!
-  Icon: {fileID: 21300000, guid: e94883aed0bbde54787db679ad0a8912, type: 3}
-  DisplayImage: {fileID: 21300000, guid: e94883aed0bbde54787db679ad0a8912, type: 3}
-  ID: 
+  Icon: {fileID: 21300000, guid: 4673f99f42cf0414894e231c0641d80e, type: 3}
+  DisplayImage: {fileID: 21300000, guid: 4673f99f42cf0414894e231c0641d80e, type: 3}
+  ID: ROPE
   action: {fileID: 0}

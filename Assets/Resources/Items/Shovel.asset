@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DisplayName: Shovel
   Description: 'Handy for moving dirt. '
-  Icon: {fileID: 21300014, guid: feda0c18015b3284cabbc0da85254f9a, type: 3}
-  DisplayImage: {fileID: 21300014, guid: feda0c18015b3284cabbc0da85254f9a, type: 3}
-  ID: 
+  Icon: {fileID: 21300000, guid: 83b1f6793af5d3142a2d482152137f4c, type: 3}
+  DisplayImage: {fileID: 21300000, guid: 83b1f6793af5d3142a2d482152137f4c, type: 3}
+  ID: SHOVEL
   action: {fileID: 0}
