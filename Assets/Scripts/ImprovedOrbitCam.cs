@@ -203,4 +203,9 @@ public class ImprovedOrbitCam : MonoBehaviour
 	{
 		return Mathf.Abs ((finalPivotOffset - smoothPivotOffset).magnitude);
 	}
+
+	void ShakeCamera(float duration, float amplitude, float frequency, bool idkWhatThisIsFor)
+	{
+		
+	}
 }

@@ -7506,6 +7506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactables
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557045448172750, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: DestoryObjectAfterUse
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557045620401076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: m_Name
@@ -96318,7 +96323,7 @@ MonoBehaviour:
   - {fileID: 96417018}
   - {fileID: 1278669968}
   - {fileID: 1243220728}
-  playerKiller: {fileID: 0}
+  playerKiller: {fileID: 557489951}
   DropDelay: 0
   TotalDropTime: 0
 --- !u!1 &1131668263560558287
