@@ -45,7 +45,7 @@ public class Bookcase : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         
         fallCollider = transform.Find("Fall Collider").GetComponent<BoxCollider>(); 
-        // fallCollider.gameObject.GetComponent<CollisionCallback>().AddCallback("Player", HitPlayer);
+        fallCollider.gameObject.GetComponent<CollisionCallback>().AddCallback("Player", HitPlayer);
         fallCollider.enabled = false;
 
         //QuakeManager.Instance.OnQuake.AddListener(Fall);
