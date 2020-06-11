@@ -189,7 +189,6 @@ public class QuakeManager : MonoBehaviour
         Systems.Status.Pause();
         
         Quaking = true;
-        Debug.Log("BEGGIIIINNN");
         Logger.Instance.Log((quakes == 0 ? "Earthquake" : "Aftershock")+" triggered!");
         StopAllCoroutines();
 
@@ -204,7 +203,6 @@ public class QuakeManager : MonoBehaviour
     {
         if (!Quaking || quakes > 0) return;
         Logger.Instance.Log("Quake Stopped");
-        Debug.Log("PAUUU KAHANZZZ");
  
         virtualCameraNoise.m_AmplitudeGain = 0f;
         ShakeElapsedTime = 0f;
