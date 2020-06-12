@@ -16,7 +16,7 @@ MonoBehaviour:
     a floor around the pit. I''ve also got a tarp we can put up to keep the rain
     out if we can find a rope. '
   optionOneText: 'Okay. I''ll try to find that stuff and meet you in your backyard. '
-  optionOne: {fileID: 11400000, guid: 9961b93dda3a4104397049825496b09a, type: 2}
+  optionOne: {fileID: 11400000, guid: ab50eb836ed985c47ade7e74d19d6191, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

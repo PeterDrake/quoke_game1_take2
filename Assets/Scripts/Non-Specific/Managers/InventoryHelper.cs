@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.ComponentModel;
+using UnityEngine;
 using UnityEngine.Events;
 
 
@@ -11,6 +12,15 @@ public class InventoryHelper : MonoBehaviour
     public UnityEvent CheckOnAdd;
     [SerializeField] private OurInventory _inventory;
 
+    public Item[] holderItems;
+    public int[] holderAmts;
+
+    public void Start()
+    {
+        for (int i = 0; i < holderItems.Length; i++)
+            AddItem(holderItems[i], holderAmts[i]);
+    }
+    
     public void AddItem(Item item, int amt)
     {
         Logger.Instance.Log("Picked up: "+item.name);
