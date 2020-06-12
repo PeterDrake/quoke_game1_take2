@@ -58,7 +58,7 @@ public class GasShutDown : MonoBehaviour
 
 
         (canvi = GameObject.Find("Canvi")).SetActive(false);
-        (camera = GameObject.Find("Cameras")).SetActive(false);
+        (camera = GameObject.Find("Main Camera")).SetActive(false);
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnWin += MiniGameFinished;
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnExit += MiniGameLeave;
     }
