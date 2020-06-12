@@ -15,7 +15,7 @@ public class GasShutDown : MonoBehaviour
     
     private bool HasWrench;
     
-    private byte Conditions;
+    private byte Conditions; //Condition is 0
     
     private GameObject canvi;
     private GameObject camera;
@@ -32,7 +32,7 @@ public class GasShutDown : MonoBehaviour
     
     public void Interaction()
     {
-        if ((Conditions ^ 0xF) == 0)
+        if ((Conditions ^ 0x1) == 0)
         {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
@@ -45,7 +45,7 @@ public class GasShutDown : MonoBehaviour
     //CAMERA, ui, move stage up a lot
     private void UpdateConditions() //called every time an item is added to the inventory 
     {
-        if ((Conditions ^ 0xF) == 0) return;
+        if ((Conditions ^ 0x1) == 0) return;
 
         if ((Conditions & 0x1) > 0 || _inventory.HasItem(Wrench, 1)) //first condition not met
             Conditions |= 0x1;
@@ -80,9 +80,7 @@ public class GasShutDown : MonoBehaviour
         camera.SetActive(true);
         canvi.SetActive(true);
 
-        _inventory.RemoveItem(Wrench, 1);
-        
-        Destroy(gameObject);
-        Destroy(this);
+        //_inventory.RemoveItem(Wrench, 1);
+       
     }
 }

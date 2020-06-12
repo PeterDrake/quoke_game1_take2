@@ -2293,7 +2293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
   itemToReceive:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: f2b6b56adffec5c458a8ad17aa45f929, type: 2}
   InteractionDisplayText: Press "E" to Pickup Wrench
   interactText: {fileID: 0}
   CallOnInteract:
