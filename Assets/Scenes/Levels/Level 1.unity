@@ -2261,7 +2261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe367b7d8a15f149a38a692fdf8a2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Wrench: {fileID: 1981440159}
 --- !u!114 &1942026656 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6455381915595446219, guid: 54201a432732e3644b92dd53d5d1fef5,
@@ -2397,7 +2396,7 @@ PrefabInstance:
     - target: {fileID: 7406703957348376966, guid: b5c1ffca8756cc84ebe50db3d2c5c380,
         type: 3}
       propertyPath: m_Name
-      value: MiniGame Wrench
+      value: Wrench
       objectReference: {fileID: 0}
     - target: {fileID: 7406703957348376966, guid: b5c1ffca8756cc84ebe50db3d2c5c380,
         type: 3}
