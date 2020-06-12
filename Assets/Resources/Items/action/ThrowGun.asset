@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7f190369d198546945c923af2b94a5, type: 3}
   m_Name: ThrowGun
   m_EditorClassIdentifier: 
-  ActionWord: Throw Away Gun
+  ActionWord: Throw away gun
