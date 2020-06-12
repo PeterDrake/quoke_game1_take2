@@ -207,7 +207,7 @@ public class QuakeManager : MonoBehaviour
         ShakeElapsedTime = 0f;
 
         Quaking = false;
-        Systems.Status.Pause();
+        Systems.Status.UnPause();
         TriggerCountdown(AftershockTime);
     }
 
