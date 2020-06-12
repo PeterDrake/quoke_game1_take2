@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 0c6ceb865a050c64683892d8aa073844, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,13 +109,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   adminMode: 0
   showCountdown: 1
-  TimeBeforeQuake: 30000000
-  AftershockTime: 60
-  amplitude: 1.3
-  frequency: 35
-  duration: 5
-  textOnQuake: 
-  textAfterQuake: 
+  TimeBeforeQuake: 30
+  AftershockTime: 100
+  VirtualCamera: {fileID: 0}
+  ShakeDuration: 10
+  ShakeAmplitude: 5
+  ShakeFrequency: 5
+  textOnQuake: Earthquake! Find a stable object to hide under.
+  textAfterQuake: Explore outside.
   enableDoors: {fileID: 0}
   dustStormPrefab: {fileID: 100000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 3}
   Quaking: 0
@@ -244,8 +245,8 @@ MonoBehaviour:
   WaterFlash: {fileID: 0}
   ReliefFlash: {fileID: 0}
   WarmthFlash: {fileID: 0}
-  refillColor: {r: 0.9987322, g: 1, b: 0, a: 0}
-  dangerColor: {r: 1, g: 0, b: 0, a: 0}
+  refillColor: {r: 0.9987322, g: 1, b: 0, a: 1}
+  dangerColor: {r: 1, g: 0, b: 0, a: 1}
   Hydration: 0
   Relief: 0
   Warmth: 0

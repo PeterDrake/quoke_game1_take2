@@ -17,4 +17,4 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: b163d877e8b900c4b86932ec88d6fa29, type: 3}
   DisplayImage: {fileID: 21300000, guid: b163d877e8b900c4b86932ec88d6fa29, type: 3}
   ID: GUN
-  action: {fileID: 0}
+  action: {fileID: 11400000, guid: 1b44f8cd68a3e1742bcbbca4d0c0eae5, type: 2}
