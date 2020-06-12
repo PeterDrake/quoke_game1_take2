@@ -27,6 +27,6 @@ public class VanNextLevel : MonoBehaviour
     public void Interact()
     {
         if (_satisfied)
-           UIManager.Instance.SetAsActive(winCanvas);
+           UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
     }
 }

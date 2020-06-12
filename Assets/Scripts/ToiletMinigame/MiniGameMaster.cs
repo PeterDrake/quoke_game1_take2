@@ -56,7 +56,11 @@ public class MiniGameMaster : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Wrong.SetActive(false);
     }
-    
+
+    public void WinLeave()
+    {
+        OnWin.Invoke();
+    }
 
     
     
