@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class WrenchMiniGameMaster : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class WrenchMiniGameMaster : MonoBehaviour
         {
             Debug.Log("Congratz, you have won!");
             Win.SetActive(true);
+            SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         }
         
     }
