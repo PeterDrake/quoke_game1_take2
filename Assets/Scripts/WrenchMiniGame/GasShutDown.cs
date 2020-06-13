@@ -59,8 +59,8 @@ public class GasShutDown : MonoBehaviour
 
         (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
-    //    GameObject.Find("WrenchMiniGameMaster").GetComponent<WrenchMiniGameMaster>().OnWin += MiniGameFinished;
-    //    GameObject.Find("WrenchMiniGameMaster").GetComponent<WrenchMiniGameMaster>().OnExit += MiniGameLeave;
+        GameObject.Find("GasMaster").GetComponent<WrenchMiniGameMaster>().OnWin += MiniGameFinished;
+        GameObject.Find("GasMaster").GetComponent<WrenchMiniGameMaster>().OnExit += MiniGameLeave;
     }
 
     private void MiniGameLeave()
@@ -76,7 +76,7 @@ public class GasShutDown : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
         
-        Systems.Objectives.Satisfy("TOILETEVENT");
+        //Systems.Objectives.Satisfy("TOILETEVENT");
         camera.SetActive(true);
         canvi.SetActive(true);
 
