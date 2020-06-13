@@ -18,13 +18,26 @@ public class StartMiniGame : MonoBehaviour
 
 	private GameObject wrench;
 
+	private bool Turned = false;
 	private bool started = false;
+	
+	private WrenchMiniGameMaster _wrenchMiniGameMaster;
+
+
+	public void Awake()
+	{
+		_wrenchMiniGameMaster = GameObject.FindObjectOfType<WrenchMiniGameMaster>();
+	}
+
 
 	private void Success()
 	{
+		
 		//replace this with success action, i.e. turn off gas
 		Debug.Log("Congratz, you have won!");
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
+		Turned = true;
+		_wrenchMiniGameMaster.CheckCorrect(Turned);
 	}
 
 	private void AttachWrench()
