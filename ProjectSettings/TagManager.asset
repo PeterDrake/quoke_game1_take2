@@ -16,6 +16,7 @@ TagManager:
   - PlasticBag
   - Pee
   - Sawdust
+  - Dog
   layers:
   - Default
   - TransparentFX
