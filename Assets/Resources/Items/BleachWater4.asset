@@ -19,6 +19,5 @@ MonoBehaviour:
   ID: BLCHWTR4
   action: {fileID: 11400000, guid: f8ed056a5c69c124ebe07b3bbf1c644f, type: 2}
   hydrationChange: 0
-  killPlayer: 1
-  DeathMessage: You died after some time from drinking a gallon of water with 4 drops
-    of bleach.
+  killPlayer: 0
+  DeathMessage: You drank dirty water and died of dysentery
