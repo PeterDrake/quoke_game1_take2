@@ -28244,7 +28244,7 @@ PrefabInstance:
         type: 3}
       propertyPath: objectDropper
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 660546595}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a8bd79396454dc8a320f82efe24b84, type: 3}
 --- !u!1001 &1590216177
