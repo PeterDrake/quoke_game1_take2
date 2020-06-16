@@ -11708,6 +11708,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5afed722cc07f0045bfb9c283f384e9c, type: 3}
+--- !u!1 &684600402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1748232533489922633, guid: 759ac008cfb0549d3af84857cb10b4cc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7122805518895929863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &684600403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684600402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 1
+  itemToReceive: []
+  InteractionDisplayText: Press 'E' to Rest in Bed
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 684600404}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
+--- !u!114 &684600404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684600402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f483616924a64c0da0db1ae3e34b511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &687128037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33585,7 +33638,7 @@ PrefabInstance:
     - target: {fileID: 212004896451686554, guid: 7d9cfeac88feefa42800a1b385ef3c86,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 108.582
+      value: 92.19
       objectReference: {fileID: 0}
     - target: {fileID: 212004896451686554, guid: 7d9cfeac88feefa42800a1b385ef3c86,
         type: 3}
@@ -33595,7 +33648,7 @@ PrefabInstance:
     - target: {fileID: 212004896451686554, guid: 7d9cfeac88feefa42800a1b385ef3c86,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73.265
+      value: -78.16
       objectReference: {fileID: 0}
     - target: {fileID: 212004896451686554, guid: 7d9cfeac88feefa42800a1b385ef3c86,
         type: 3}
