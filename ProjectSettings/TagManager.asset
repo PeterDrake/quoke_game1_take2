@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
+  - Ground
+  - Wrench
+  - Blue
+  - Bucket
+  - Green
+  - Orange
+  - Poop
+  - ToiletPaper
+  - PlasticBag
+  - Pee
+  - Sawdust
+  - Dog
   layers:
   - Default
   - TransparentFX
@@ -16,7 +28,7 @@ TagManager:
   - 
   - Door
   - Player
-  - 
+  - Dog
   - 
   - 
   - 
