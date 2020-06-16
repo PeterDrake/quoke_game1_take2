@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Mo NPC
   m_EditorClassIdentifier: 
   name: Mo
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: ec79746ee3502734f9d2b49069b214eb, type: 3}
