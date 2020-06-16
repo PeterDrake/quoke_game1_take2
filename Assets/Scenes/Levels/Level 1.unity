@@ -10934,6 +10934,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4204111617955944534, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Text
+      value: Level 1 Complete! You're a Star!
+      objectReference: {fileID: 0}
     - target: {fileID: 6455381913799971937, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -33788,7 +33793,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  killAfterUse: 1
+  killAfterUse: 0
   DestoryObjectAfterUse: 0
 --- !u!114 &1880621272
 MonoBehaviour:
