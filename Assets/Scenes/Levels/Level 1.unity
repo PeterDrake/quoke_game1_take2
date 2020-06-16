@@ -11761,6 +11761,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f483616924a64c0da0db1ae3e34b511, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &684600405
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684600402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.601539, y: 1.8600115, z: 6.658923}
+  m_Center: {x: 0.58753645, y: 0.9300057, z: 0.8932812}
 --- !u!1001 &687128037
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67021,6 +67034,67 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8834850651373779870}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8834850651373779875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850651373779872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 1
+  itemToReceive:
+  - {fileID: 0}
+  InteractionDisplayText: Press 'E' to Drink from Sink
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8834850651373779876}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
+--- !u!114 &8834850651373779876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850651373779872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e50d1c3a8c564d54ebec8fc91de70ce1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &8834850651373779877
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850651373779872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.221934, y: 1.7186362, z: 3.5614808}
+  m_Center: {x: -1.1434633, y: 0.8593181, z: 1.7807379}
 --- !u!64 &8834850651374297491
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -85854,6 +85928,67 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8834850652103626553}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8834850652103626558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850652103626555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbe10fa050b64aeb91b550cb7f566ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8834850652103626559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850652103626555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 1
+  itemToReceive:
+  - {fileID: 0}
+  InteractionDisplayText: Press 'E' to Use the Toilet
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8834850652103626558}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
+--- !u!65 &8834850652103626560
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850652103626555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.5201404, y: 1.7136714, z: 2.4464393}
+  m_Center: {x: -0.12568903, y: 0.8568357, z: 1.215406}
 --- !u!1001 &8834850652104874422
 PrefabInstance:
   m_ObjectHideFlags: 0
