@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pulsing: MonoBehaviour
+public class MouseInteract: MonoBehaviour
 {
     private bool coroutineAllowed;
 
