@@ -17,4 +17,7 @@ public class ExploreArea : MonoBehaviour
             //TheObject.QuakeCommence.incrementExplored();
         }
     }
+
+    
+   
 }

@@ -5,24 +5,31 @@ using UnityEngine;
 public class QuakeCommence : MonoBehaviour
 {
 
-    private int Explored;
+    private bool ExploreBath;
+    private bool ExploreKitc;
 
-    public void incrementExplored()
+    public void ExploredBath()
     {
-        Explored = Explored + 1;
+        ExploreBath = true;
+    }
+
+    public void ExploredKitc()
+    {
+        ExploreKitc = true;
     }
     
     // Start is called before the first frame update
     void Start()
     {
-        Explored = 0;
+        ExploreBath = false;
+        ExploreKitc = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            if (Explored >= 2)
+            if (ExploreBath && ExploreKitc)
             {
                 QuakeManager.Instance.TriggerQuake();
             }
