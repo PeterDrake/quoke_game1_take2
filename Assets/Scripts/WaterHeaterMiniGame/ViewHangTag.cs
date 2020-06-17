@@ -10,11 +10,11 @@ public class ViewHangTag : MonoBehaviour
 
     private bool isOpen;
 
-    private void Awake()
+    private void Start()
     {
-        Hangtag.SetActive(false);
-        isOpen = false;
-        Debug.Log("Begin : is open = " + isOpen);
+        //Hangtag.SetActive(false);
+        //isOpen = false;
+        //Debug.Log("Begin : is open = " + isOpen);
     }
 
     public void OnMouseDown()

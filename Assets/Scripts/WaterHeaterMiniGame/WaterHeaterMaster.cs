@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class WaterHeaterMaster : MonoBehaviour
 {
@@ -11,20 +12,42 @@ public class WaterHeaterMaster : MonoBehaviour
     public UnityAction OnWin;
     public UnityAction OnExit;
 
-    public GameObject ElectricBox;
-    public GameObject WaterPipe;
-    public GameObject AirPipe;
-    public GameObject WaterSpout;
+    public GameObject ElectricBoxCheck;
+    public GameObject WaterPipeCheck;
+    public GameObject AirPipeCheck;
+    public GameObject WaterSpoutCheck;
 
     public bool stepOne;
     public bool stepTwo;
     public bool stepThree;
     public bool stepFour;
 
+    public Button FillButton;
+    public GameObject Fill;
+
+    private GameObject ElectricBox;
+    private GameObject WaterPipe;
+    private GameObject AirPipe;
+    private GameObject WaterSpout;
+
     private void Start()
     {
-        resetSteps();
+        stepOne = false;
+        stepTwo = false;
+        stepThree = false;
+        stepFour = false;
+        ElectricBoxCheck.SetActive(false);
+        WaterPipeCheck.SetActive(false);
+        AirPipeCheck.SetActive(false);
+        WaterSpoutCheck.SetActive(false);
+        Fill.SetActive(false);
+
+        ElectricBox = GameObject.FindGameObjectWithTag("ElectricBox");
+        WaterPipe = GameObject.FindGameObjectWithTag("WaterPipe");
+        AirPipe = GameObject.FindGameObjectWithTag("AirPipe");
+        WaterSpout = GameObject.FindGameObjectWithTag("WaterSpout");
     }
+
 
     public bool CheckAnswers(string tag)
     {
@@ -38,16 +61,36 @@ public class WaterHeaterMaster : MonoBehaviour
         return false;
     }
 
+    public void isDone()
+    {
+        if(stepOne && stepTwo && stepThree && stepFour)
+        {
+            Destroy(ElectricBox.GetComponent<MouseInteract>());
+            Destroy(WaterPipe.GetComponent<MouseInteract>());
+            Destroy(AirPipe.GetComponent<MouseInteract>());
+            Destroy(WaterSpout.GetComponent<MouseInteract>());
+            Destroy(ElectricBox.GetComponent<EachStepAction>());
+            Destroy(WaterPipe.GetComponent<EachStepAction>());
+            Destroy(AirPipe.GetComponent<EachStepAction>());
+            Destroy(WaterSpout.GetComponent<EachStepAction>());
+
+            Fill.SetActive(true);
+            StartCoroutine(BlinkText());
+        }
+    }
+
     public void resetSteps()
     {
+        StartCoroutine(TryAgain());
+        Debug.Log("reset");
         stepOne = false;
         stepTwo = false;
-        stepThree = false;
+        stepThree = false; 
         stepFour = false;
-        ElectricBox.SetActive(false);
-        WaterPipe.SetActive(false);
-        AirPipe.SetActive(false);
-        WaterSpout.SetActive(false);
+        ElectricBoxCheck.SetActive(false);
+        WaterPipeCheck.SetActive(false);
+        AirPipeCheck.SetActive(false);
+        WaterSpoutCheck.SetActive(false);
     }
 
     public void Leave()
@@ -55,15 +98,28 @@ public class WaterHeaterMaster : MonoBehaviour
         OnExit.Invoke();
     }
 
-    public IEnumerable TryAgain()
-    {
-        Wrong.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        Wrong.SetActive(false);
-    }
-
     public void WinLeave()
     {
         OnWin.Invoke();
     }
+
+    public IEnumerator TryAgain()
+    {
+        Debug.Log("try again message");
+        Wrong.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        Wrong.SetActive(false);
+    }
+
+    public IEnumerator BlinkText()
+    {
+        while (true)
+        {
+            FillButton.GetComponent<UnityEngine.UI.Image>().color = Color.blue;
+            yield return new WaitForSeconds(.5f);
+            FillButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            yield return new WaitForSeconds(.5f);
+        }
+    }
+
 }

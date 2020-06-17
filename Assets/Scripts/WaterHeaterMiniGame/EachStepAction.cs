@@ -37,10 +37,12 @@ public class EachStepAction : MonoBehaviour
             }
             Debug.Log("CHECKED OFF " + current.tag);
             check.SetActive(true);
+            Master.isDone();
 
         }
         else
         {
+            //Master.TryAgain();
             Master.resetSteps();
             Debug.Log("Wrong Step restart");
         }
