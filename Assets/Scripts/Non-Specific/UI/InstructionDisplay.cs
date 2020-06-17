@@ -8,6 +8,7 @@ public class InstructionDisplay : UIElement
 
     //[Header("A prefab object which will be instantiated for each slot in the inventory")]
 
+    private GameObject toggler;
 
     public override void Open()
     {
@@ -34,7 +35,7 @@ public class InstructionDisplay : UIElement
     private void initialize() //Get all references that are needed to populate the dialogue UI
     {
         Transform main = transform.Find("InstructToggler");
-        //toggler = main.gameObject;
+        toggler = main.gameObject;
         //byte componentsFound = 1;
 
         
@@ -47,7 +48,8 @@ public class InstructionDisplay : UIElement
 
     private void activate(bool active)
     {
-        //toggler.SetActive(active);
+        
+        toggler.SetActive(active);
     }
 
 
