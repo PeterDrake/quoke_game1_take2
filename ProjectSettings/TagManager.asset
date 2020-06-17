@@ -17,6 +17,9 @@ TagManager:
   - Pee
   - Sawdust
   - Dog
+  - Bathroom
+  - MainRoom
+  - Kitchen
   layers:
   - Default
   - TransparentFX

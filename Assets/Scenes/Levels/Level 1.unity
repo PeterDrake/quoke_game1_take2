@@ -8800,7 +8800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531953334}
   m_LocalRotation: {x: 0.37460655, y: -0, z: -0, w: 0.9271839}
-  m_LocalPosition: {x: -0.6029587, y: 8.001036, z: -2.7198944}
+  m_LocalPosition: {x: 5.337036, y: 8.001036, z: -2.7198944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453631631}
@@ -12948,10 +12948,9 @@ GameObject:
   - component: {fileID: 750603468}
   - component: {fileID: 750603467}
   - component: {fileID: 750603466}
-  - component: {fileID: 750603465}
   m_Layer: 0
   m_Name: QuakeZone
-  m_TagString: Untagged
+  m_TagString: MainRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12970,46 +12969,6 @@ Transform:
   m_Father: {fileID: 1979804782}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &750603465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750603463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1057bb53b86a74b0a92fd7e962a1fcfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1954803908}
-        m_MethodName: PlayerInQuakeZone
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnExit:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1954803908}
-        m_MethodName: PlayerInQuakeZone
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!65 &750603466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14470,9 +14429,10 @@ GameObject:
   - component: {fileID: 830664778}
   - component: {fileID: 830664777}
   - component: {fileID: 830664776}
+  - component: {fileID: 830664779}
   m_Layer: 0
   m_Name: CheckBathroom
-  m_TagString: Untagged
+  m_TagString: Bathroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14484,12 +14444,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830664774}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -14.96, y: 0, z: -3.07}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -15.88, y: -0.40060198, z: 0.32}
   m_LocalScale: {x: 1, y: 3.19, z: 1.75}
   m_Children: []
-  m_Father: {fileID: 1046176626}
-  m_RootOrder: 0
+  m_Father: {fileID: 1979804782}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &830664776
 BoxCollider:
@@ -14551,6 +14511,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830664774}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &830664779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830664774}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22f73378012da146a394cc83bbed77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bath: 0
+  Kitch: 0
+  Bathroom: {fileID: 0}
+  Kitchen: {fileID: 0}
+  MainRoom: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1001 &833060924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18274,38 +18252,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5afed722cc07f0045bfb9c283f384e9c, type: 3}
---- !u!1 &1046176625
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1046176626}
-  m_Layer: 0
-  m_Name: EarthquakeTriggerColliders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1046176626
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046176625}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.120964, y: 1.4931954, z: -65.53}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 830664775}
-  - {fileID: 1175867447}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1046300136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20927,9 +20873,10 @@ GameObject:
   - component: {fileID: 1175867450}
   - component: {fileID: 1175867449}
   - component: {fileID: 1175867448}
+  - component: {fileID: 1175867451}
   m_Layer: 0
   m_Name: CheckKitchen
-  m_TagString: Untagged
+  m_TagString: Kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20942,11 +20889,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175867446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.459038, y: 0.22883904, z: 5.079998}
+  m_LocalPosition: {x: 4.667038, y: -0.17176294, z: 8.360104}
   m_LocalScale: {x: 2.66, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1046176626}
-  m_RootOrder: 1
+  m_Father: {fileID: 1979804782}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1175867448
 BoxCollider:
@@ -21008,6 +20955,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175867446}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1175867451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175867446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 0
+  itemToReceive:
+  - {fileID: 0}
+  InteractionDisplayText: 
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1979804783}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Entered Kitchen
+          m_BoolArgument: 0
+        m_CallState: 2
+  killAfterUse: 0
+  DestoryObjectAfterUse: 1
 --- !u!1001 &1179247873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24729,7 +24712,7 @@ PrefabInstance:
     - target: {fileID: 749994652110799477, guid: fda79de971dc94b048e99a345f7d10c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6029587
+      value: 5.337036
       objectReference: {fileID: 0}
     - target: {fileID: 749994652110799477, guid: fda79de971dc94b048e99a345f7d10c2,
         type: 3}
@@ -31038,7 +31021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417210, guid: ae8b16115c4dca4499645ab171e10144, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.12
+      value: 112.06
       objectReference: {fileID: 0}
     - target: {fileID: 417210, guid: ae8b16115c4dca4499645ab171e10144, type: 3}
       propertyPath: m_LocalPosition.y
@@ -36657,6 +36640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1979804782}
+  - component: {fileID: 1979804783}
   m_Layer: 0
   m_Name: AreaChecks
   m_TagString: Untagged
@@ -36679,9 +36663,29 @@ Transform:
   - {fileID: 750603464}
   - {fileID: 1506879584}
   - {fileID: 881531980}
+  - {fileID: 830664775}
+  - {fileID: 1175867447}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1979804783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979804781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22f73378012da146a394cc83bbed77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bath: 0
+  Kitch: 0
+  Bathroom: {fileID: 830664776}
+  Kitchen: {fileID: 1175867448}
+  MainRoom: {fileID: 750603466}
+  Player: {fileID: 1711242433}
 --- !u!1 &1981440159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7406703957348376966, guid: b5c1ffca8756cc84ebe50db3d2c5c380,
