@@ -16,8 +16,7 @@ public class EachStepAction : MonoBehaviour
 
     public void OnMouseDown()
     {
-
-        if (Master.CheckAnswers(current.tag))
+        if (Master.CheckAnswers(current.tag) == 1)
         {
             if (current.tag == "ElectricBox")
             {
@@ -40,11 +39,16 @@ public class EachStepAction : MonoBehaviour
             Master.isDone();
 
         }
-        else
+        if (Master.CheckAnswers(current.tag) == -1)
         {
             //Master.TryAgain();
             Master.resetSteps();
-            Debug.Log("Wrong Step restart");
+            Debug.Log("Wrong Step");
+        }
+
+        if (Master.CheckAnswers(current.tag) == 0)
+        {
+            Debug.Log("Already Clicked");
         }
        
     }

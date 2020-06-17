@@ -49,26 +49,39 @@ public class WaterHeaterMaster : MonoBehaviour
     }
 
 
-    public bool CheckAnswers(string tag)
+    public int CheckAnswers(string tag)
     {
+        //next step to add check
         if ((tag == "ElectricBox" && !stepOne && !stepTwo && !stepThree && !stepFour )
         || (tag == "WaterPipe" && stepOne && !stepTwo && !stepThree && !stepFour)
         || (tag == "AirPipe" && stepOne && stepTwo && !stepThree && !stepFour)
         || (tag == "WaterSpout" && stepOne && stepTwo && stepThree && !stepFour))
         {
-            return true;
+            return 1;
         }
-        return false;
+        //same step thats already check
+        else if ((tag == "ElectricBox" && stepOne)
+        || (tag == "WaterPipe" && stepOne && stepTwo)
+        || (tag == "AirPipe" && stepOne && stepTwo && stepThree)
+        || (tag == "WaterSpout" && stepOne && stepTwo && stepThree && stepFour))
+        {
+            return 0;
+        }
+        else
+        {
+            return -1;
+
+        }
     }
 
     public void isDone()
     {
         if(stepOne && stepTwo && stepThree && stepFour)
         {
-            Destroy(ElectricBox.GetComponent<MouseInteract>());
-            Destroy(WaterPipe.GetComponent<MouseInteract>());
-            Destroy(AirPipe.GetComponent<MouseInteract>());
-            Destroy(WaterSpout.GetComponent<MouseInteract>());
+            //Destroy(ElectricBox.GetComponent<MouseInteract>());
+            //Destroy(WaterPipe.GetComponent<MouseInteract>());
+            //Destroy(AirPipe.GetComponent<MouseInteract>());
+            //Destroy(WaterSpout.GetComponent<MouseInteract>());
             Destroy(ElectricBox.GetComponent<EachStepAction>());
             Destroy(WaterPipe.GetComponent<EachStepAction>());
             Destroy(AirPipe.GetComponent<EachStepAction>());
