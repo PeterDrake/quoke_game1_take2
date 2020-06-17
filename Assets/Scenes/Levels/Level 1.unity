@@ -12948,6 +12948,7 @@ GameObject:
   - component: {fileID: 750603468}
   - component: {fileID: 750603467}
   - component: {fileID: 750603466}
+  - component: {fileID: 750603465}
   m_Layer: 0
   m_Name: QuakeZone
   m_TagString: MainRoom
@@ -12969,6 +12970,18 @@ Transform:
   m_Father: {fileID: 1979804782}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &750603465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750603463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13739c326656aab4bb12e448334c6bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &750603466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14430,6 +14443,7 @@ GameObject:
   - component: {fileID: 830664777}
   - component: {fileID: 830664776}
   - component: {fileID: 830664779}
+  - component: {fileID: 830664780}
   m_Layer: 0
   m_Name: CheckBathroom
   m_TagString: Bathroom
@@ -14529,6 +14543,32 @@ MonoBehaviour:
   Kitchen: {fileID: 0}
   MainRoom: {fileID: 0}
   Player: {fileID: 0}
+--- !u!114 &830664780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830664774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3ac35a845d2e3e45843044d2d878593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 750603465}
+        m_MethodName: incrementExplored
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &833060924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20873,7 +20913,7 @@ GameObject:
   - component: {fileID: 1175867450}
   - component: {fileID: 1175867449}
   - component: {fileID: 1175867448}
-  - component: {fileID: 1175867451}
+  - component: {fileID: 1175867452}
   m_Layer: 0
   m_Name: CheckKitchen
   m_TagString: Kitchen
@@ -20955,7 +20995,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175867446}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1175867451
+--- !u!114 &1175867452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20964,33 +21004,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1175867446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Script: {fileID: 11500000, guid: d3ac35a845d2e3e45843044d2d878593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlinkWhenPlayerNear: 0
-  itemToReceive:
-  - {fileID: 0}
-  InteractionDisplayText: 
-  interactText: {fileID: 0}
-  CallOnInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  CallOnEnterCollider:
+  OnEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979804783}
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 750603465}
+        m_MethodName: incrementExplored
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Entered Kitchen
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  killAfterUse: 0
-  DestoryObjectAfterUse: 1
 --- !u!1001 &1179247873
 PrefabInstance:
   m_ObjectHideFlags: 0
