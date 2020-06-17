@@ -9,6 +9,7 @@ public class InstructionDisplay : UIElement
     //[Header("A prefab object which will be instantiated for each slot in the inventory")]
 
     private GameObject toggler;
+    public Button ExitButton;
 
     public override void Open()
     {
@@ -32,6 +33,7 @@ public class InstructionDisplay : UIElement
     {
         Transform main = transform.Find("InstructToggler");
         toggler = main.gameObject;
+        ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
         //byte componentsFound = 1;
 
         
