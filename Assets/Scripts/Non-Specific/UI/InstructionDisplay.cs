@@ -12,10 +12,6 @@ public class InstructionDisplay : UIElement
 
     public override void Open()
     {
-    }
-
-    private void Load(Item[] items, byte[] amounts)
-    {
         activate(true);
         
     }
