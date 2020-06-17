@@ -10,22 +10,22 @@ public class WaterHeaterVisit : MonoBehaviour
 
 
     private InteractWithObject _interact;
+    private InventoryHelper _inventory;
 
-    private byte Conditions;
+    public GameObject Heater;
+    private Item MustardWater;
 
     private GameObject canvi;
     private GameObject camera;
-    //private GameObject vcam;
     private GameObject sunlight;
-
-    private void Awake()
-    {
-    }
 
     void Start()
     {
         _interact = GetComponent<InteractWithObject>();
+        _inventory = Systems.Inventory;
 
+        Heater.SetActive(false);
+        MustardWater = Resources.Load<Item>("Items/MustardWater");
     }
 
     public void Interaction()
@@ -43,7 +43,6 @@ public class WaterHeaterVisit : MonoBehaviour
 
         (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
-        //(vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
 
         GameObject.Find("WaterHeaterMaster").GetComponent<WaterHeaterMaster>().OnWin += MiniGameFinished;
@@ -55,7 +54,6 @@ public class WaterHeaterVisit : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
         camera.SetActive(true);
-        //vcam.SetActive(true);
         sunlight.SetActive(true);
     }
     private void MiniGameFinished()
@@ -66,16 +64,13 @@ public class WaterHeaterVisit : MonoBehaviour
 
         Systems.Objectives.Satisfy("WATERHEATEREVENT");
         camera.SetActive(true);
-        //vcam.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
 
-        // _inventory.RemoveItem( Sanitizer, 1);
-        // _inventory.RemoveItem( ToiletPaper, 1);
+        _inventory.AddItem(MustardWater, 1);
 
-        //Destroy(gameObject);
+        Heater.SetActive(true);
+        Destroy(gameObject);
         Destroy(this);
-        Destroy(gameObject.GetComponent<InteractWithObject>());
-        Destroy(gameObject.GetComponent<WaterSwapText>());
     }
 }
