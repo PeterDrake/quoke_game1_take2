@@ -1869,7 +1869,7 @@ GameObject:
   - component: {fileID: 605241624}
   m_Layer: 0
   m_Name: AirPipe
-  m_TagString: Untagged
+  m_TagString: AirPipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3972,7 +3972,7 @@ GameObject:
   - component: {fileID: 1457481675}
   m_Layer: 0
   m_Name: ElectricBox
-  m_TagString: Untagged
+  m_TagString: ElectricBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4489,7 +4489,7 @@ GameObject:
   - component: {fileID: 1695720634}
   m_Layer: 0
   m_Name: R WallPipe (1)
-  m_TagString: Untagged
+  m_TagString: WaterPipe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5403,7 +5403,7 @@ GameObject:
   - component: {fileID: 2060636578}
   m_Layer: 0
   m_Name: WaterSpout
-  m_TagString: Untagged
+  m_TagString: WaterSpout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

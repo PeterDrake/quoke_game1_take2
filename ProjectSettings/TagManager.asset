@@ -6,6 +6,20 @@ TagManager:
   tags:
   - Door
   - Ground
+  - Blue
+  - Bucket
+  - Green
+  - Orange
+  - Poop
+  - ToiletPaper
+  - PlasticBag
+  - Pee
+  - Sawdust
+  - Wrench
+  - ElectricBox
+  - WaterPipe
+  - AirPipe
+  - WaterSpout
   layers:
   - Default
   - TransparentFX
