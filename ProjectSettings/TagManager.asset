@@ -16,6 +16,10 @@ TagManager:
   - PlasticBag
   - Pee
   - Sawdust
+  - ElectricBox
+  - WaterPipe
+  - AirPipe
+  - WaterSpout
   - Dog
   layers:
   - Default
