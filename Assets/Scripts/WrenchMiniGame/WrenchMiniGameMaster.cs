@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class WrenchMiniGameMaster : MonoBehaviour
 {
 
-    public GameObject Win;
+    public GameObject WinScreen;
     
     public UnityAction OnWin;
 
@@ -20,7 +20,7 @@ public class WrenchMiniGameMaster : MonoBehaviour
         if (Turned)
         {
             Debug.Log("Congratz, you have won!");
-            Win.SetActive(true);
+            WinScreen.SetActive(true);
            // SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         }
         

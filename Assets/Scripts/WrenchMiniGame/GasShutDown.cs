@@ -69,7 +69,7 @@ public class GasShutDown : MonoBehaviour
         canvi.SetActive(true);
         camera.SetActive(true);
     }
-    private void MiniGameFinished()//this is not getting called
+    private void MiniGameFinished()
     {
         Systems.Status.UnPause();
 
