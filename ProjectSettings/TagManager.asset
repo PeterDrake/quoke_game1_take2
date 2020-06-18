@@ -21,6 +21,9 @@ TagManager:
   - AirPipe
   - WaterSpout
   - Dog
+  - Bathroom
+  - MainRoom
+  - Kitchen
   layers:
   - Default
   - TransparentFX
