@@ -8800,7 +8800,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531953334}
   m_LocalRotation: {x: 0.37460655, y: -0, z: -0, w: 0.9271839}
-  m_LocalPosition: {x: 5.337036, y: 8.001036, z: -2.7198944}
+  m_LocalPosition: {x: -0.15296173, y: 8.001036, z: -2.7198944}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453631631}
@@ -15199,7 +15199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881531979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 0, z: -3.69}
+  m_LocalPosition: {x: -0.72, y: 0, z: -4.17}
   m_LocalScale: {x: 1.56, y: 4.52, z: 0.51}
   m_Children: []
   m_Father: {fileID: 1979804782}
@@ -21883,11 +21883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 109846, guid: 2b7716262d769d24fb8643017c8cdc75, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 413430, guid: 2b7716262d769d24fb8643017c8cdc75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 55.7
+      value: 108.7
       objectReference: {fileID: 0}
     - target: {fileID: 413430, guid: 2b7716262d769d24fb8643017c8cdc75, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21895,7 +21895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413430, guid: 2b7716262d769d24fb8643017c8cdc75, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.9
+      value: -40.1
       objectReference: {fileID: 0}
     - target: {fileID: 413430, guid: 2b7716262d769d24fb8643017c8cdc75, type: 3}
       propertyPath: m_LocalRotation.x
@@ -24866,7 +24866,7 @@ PrefabInstance:
     - target: {fileID: 749994652110799477, guid: fda79de971dc94b048e99a345f7d10c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.337036
+      value: -0.15296173
       objectReference: {fileID: 0}
     - target: {fileID: 749994652110799477, guid: fda79de971dc94b048e99a345f7d10c2,
         type: 3}
@@ -28953,6 +28953,11 @@ PrefabInstance:
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232355, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: m_IsActive
@@ -31183,7 +31188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 417210, guid: ae8b16115c4dca4499645ab171e10144, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 112.06
+      value: 106.57
       objectReference: {fileID: 0}
     - target: {fileID: 417210, guid: ae8b16115c4dca4499645ab171e10144, type: 3}
       propertyPath: m_LocalPosition.y
