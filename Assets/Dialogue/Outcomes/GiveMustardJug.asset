@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: GiveMustardJug
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 524b24933933c5c46ab35a59f612fd4d, type: 2}
+  - {fileID: 11400000, guid: 52b99153d81cb48e98e00d154e471dd7, type: 2}
   Amounts: 01000000
