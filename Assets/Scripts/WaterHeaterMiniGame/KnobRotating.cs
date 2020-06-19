@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KnobRotating : MonoBehaviour
 {
-
+    private float electric = 0;
     private float air = 0;
     private float pipe = 0;
     private float spout = 0;
@@ -32,6 +32,11 @@ public class KnobRotating : MonoBehaviour
         {
             transform.Rotate(0, 0, -5);
             air += 5;
+        }
+        if (gameObject.tag == "ElectricBox" && electric < 40)
+        {
+            transform.Rotate(0, -5, 0);
+            electric += 5;
         }
     }
 }
