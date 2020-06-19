@@ -6,7 +6,8 @@ using UnityEngine;
 public class StartMiniGame : MonoBehaviour
 {
 	public GameObject wrenchPrefab;
-	public GameObject flange; 
+	public GameObject flange;
+	public GameObject WinScreen;
 
 	public Vector3 attachedWrenchPosition;
 	public float z_offset;
@@ -37,7 +38,8 @@ public class StartMiniGame : MonoBehaviour
 		Debug.Log("Congratz, you have won!");
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
-		_wrenchMiniGameMaster.CheckCorrect(Turned);
+		WinScreen.SetActive(true);
+//		_wrenchMiniGameMaster.CheckCorrect(Turned);
 	}
 
 	private void AttachWrench()

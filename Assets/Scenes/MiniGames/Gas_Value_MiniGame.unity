@@ -1588,6 +1588,7 @@ MonoBehaviour:
   wrenchPrefab: {fileID: 7406703957348376966, guid: b5c1ffca8756cc84ebe50db3d2c5c380,
     type: 3}
   flange: {fileID: 207983115}
+  WinScreen: {fileID: 781430063}
   attachedWrenchPosition: {x: 0, y: 0, z: 0}
   z_offset: -0.371
   flangeRotationUpperBound: -5
