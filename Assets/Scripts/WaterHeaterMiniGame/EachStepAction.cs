@@ -7,7 +7,6 @@ public class EachStepAction : MonoBehaviour
 {
     public GameObject check;
     public GameObject current;
-    public GameObject MovingPart;
 
     public GameObject PIP;
 
@@ -19,8 +18,6 @@ public class EachStepAction : MonoBehaviour
     {
         check.SetActive(false);
         PIP.SetActive(false);
-        move = MovingPart.GetComponent<KnobRotating>();
-        move.enabled = false;
     }
 
     public void OnMouseDown()
@@ -29,23 +26,27 @@ public class EachStepAction : MonoBehaviour
         {
             if (current.tag == "ElectricBox")
             {
-                move.enabled = true;
+                GameObject.Find("Flip").AddComponent<KnobRotating>();
                 Master.stepOne = true;
+
             }
             else if (current.tag == "WaterPipe")
             {
-                move.enabled = true;
+                GameObject.Find("Turn").AddComponent<KnobRotating>();
                 Master.stepTwo = true;
+
             }
             else if (current.tag == "AirPipe")
             {
-                move.enabled = true;
+                GameObject.Find("Lever").AddComponent<KnobRotating>();
                 Master.stepThree = true;
+
             }
             else if (current.tag == "WaterSpout")
             {
-                move.enabled = true;
+                GameObject.Find("Water").AddComponent<KnobRotating>();
                 Master.stepFour = true;
+
             }
             Debug.Log("CHECKED OFF " + current.tag);
             check.SetActive(true);

@@ -68,6 +68,7 @@ public class WaterHeaterMaster : MonoBehaviour
         || (tag == "AirPipe" && stepOne && stepTwo && !stepThree && !stepFour)
         || (tag == "WaterSpout" && stepOne && stepTwo && stepThree && !stepFour))
         {
+            Debug.Log("Good step");
             return 1;
         }
         //same step thats already check
@@ -81,7 +82,6 @@ public class WaterHeaterMaster : MonoBehaviour
         else
         {
             return -1;
-
         }
     }
 
@@ -89,10 +89,10 @@ public class WaterHeaterMaster : MonoBehaviour
     {
         if(stepOne && stepTwo && stepThree && stepFour)
         {
-            Destroy(ElectricBox.GetComponent<MouseInteract>());
-            Destroy(WaterPipe.GetComponent<MouseInteract>());
-            Destroy(AirPipe.GetComponent<MouseInteract>());
-            Destroy(WaterSpout.GetComponent<MouseInteract>());
+            //Destroy(ElectricBox.GetComponent<MouseInteract>());
+            //Destroy(WaterPipe.GetComponent<MouseInteract>());
+            //Destroy(AirPipe.GetComponent<MouseInteract>());
+            //Destroy(WaterSpout.GetComponent<MouseInteract>());
             Destroy(ElectricBox.GetComponent<EachStepAction>());
             Destroy(WaterPipe.GetComponent<EachStepAction>());
             Destroy(AirPipe.GetComponent<EachStepAction>());
@@ -106,7 +106,23 @@ public class WaterHeaterMaster : MonoBehaviour
     public void resetSteps()
     {
         StartCoroutine(TryAgain());
-        Debug.Log("reset");
+        if (stepOne)
+        {
+            GameObject.Find("Flip").transform.Rotate(0, 40, 0);
+        }
+        if (stepTwo)
+        {
+            GameObject.Find("Turn").transform.Rotate(0, 0, 360);
+        }
+        if (stepThree)
+        {
+            GameObject.Find("Lever").transform.Rotate(0, 0, 90);
+        }
+        if (stepFour)
+        {
+            GameObject.Find("Water").transform.Rotate(0, 0, -500);
+        }
+
         stepOne = false;
         stepTwo = false;
         stepThree = false;
@@ -115,12 +131,13 @@ public class WaterHeaterMaster : MonoBehaviour
         WaterPipeCheck.SetActive(false);
         AirPipeCheck.SetActive(false);
         WaterSpoutCheck.SetActive(false);
+
         PIP1.SetActive(false);
         PIP2.SetActive(false);
         PIP3.SetActive(false);
         PIP4.SetActive(false);
-        
-   }
+
+    }
 
     public void Leave()
     {

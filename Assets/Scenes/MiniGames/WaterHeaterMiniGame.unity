@@ -2056,7 +2056,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: {fileID: 1971163992}
   current: {fileID: 605241620}
-  MovingPart: {fileID: 1123576682}
   PIP: {fileID: 1536870545}
   Master: {fileID: 367340604}
 --- !u!1 &614093237
@@ -4362,7 +4361,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123576683}
-  - component: {fileID: 1123576684}
   m_Layer: 0
   m_Name: Lever
   m_TagString: AirPipe
@@ -4385,18 +4383,6 @@ Transform:
   m_Father: {fileID: 605241621}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1123576684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1123576682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4f9a3adeef44619af0a37bf6dde69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1154955399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4667,7 +4653,6 @@ GameObject:
   - component: {fileID: 1227646125}
   - component: {fileID: 1227646124}
   - component: {fileID: 1227646123}
-  - component: {fileID: 1227646126}
   m_Layer: 0
   m_Name: Turn
   m_TagString: WaterPipe
@@ -4750,18 +4735,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227646121}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1227646126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227646121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4f9a3adeef44619af0a37bf6dde69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1227975395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,7 +5134,6 @@ GameObject:
   - component: {fileID: 1341236143}
   - component: {fileID: 1341236142}
   - component: {fileID: 1341236141}
-  - component: {fileID: 1341236144}
   m_Layer: 0
   m_Name: Flip
   m_TagString: ElectricBox
@@ -5243,18 +5215,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341236139}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1341236144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341236139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4f9a3adeef44619af0a37bf6dde69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1349334633
 GameObject:
   m_ObjectHideFlags: 0
@@ -5622,7 +5582,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: {fileID: 1777232476}
   current: {fileID: 1457481671}
-  MovingPart: {fileID: 1341236139}
   PIP: {fileID: 2060694169}
   Master: {fileID: 367340604}
 --- !u!1 &1504736196
@@ -6413,7 +6372,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: {fileID: 758050839}
   current: {fileID: 1695720630}
-  MovingPart: {fileID: 1227646121}
   PIP: {fileID: 685449988}
   Master: {fileID: 367340604}
 --- !u!1 &1737651891
@@ -7407,9 +7365,8 @@ GameObject:
   - component: {fileID: 1873183857}
   - component: {fileID: 1873183856}
   - component: {fileID: 1873183855}
-  - component: {fileID: 1873183858}
   m_Layer: 0
-  m_Name: Cylinder (11)
+  m_Name: Water
   m_TagString: WaterSpout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7490,18 +7447,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873183853}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1873183858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1873183853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4f9a3adeef44619af0a37bf6dde69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1901232348
 GameObject:
   m_ObjectHideFlags: 0
@@ -8179,7 +8124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   check: {fileID: 1120436175}
   current: {fileID: 2060636574}
-  MovingPart: {fileID: 1873183853}
   PIP: {fileID: 3943643}
   Master: {fileID: 367340604}
 --- !u!1 &2060694169
