@@ -14,6 +14,7 @@ public class WaterHeaterVisit : MonoBehaviour
 
     public GameObject Heater;
     private Item MustardWater;
+    private Item FilledWater;
 
     private GameObject canvi;
     private GameObject camera;
@@ -25,14 +26,23 @@ public class WaterHeaterVisit : MonoBehaviour
         _inventory = Systems.Inventory;
 
         Heater.SetActive(false);
-        MustardWater = Resources.Load<Item>("Items/MustardWater");
+        MustardWater = Resources.Load<Item>("Items/Jug");
+        FilledWater = Resources.Load<Item>("Items/DirtyMustardWater");
     }
 
     public void Interaction()
     {
+        if (_inventory.HasItem(MustardWater, 1))
+        {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
-   
+        }
+        else
+        {
+            _interact.SetInteractText("Go Talk to Frank");
+
+        }
+
     }
 
     private void StartMinigame(Scene scn, LoadSceneMode lsm)
@@ -67,10 +77,13 @@ public class WaterHeaterVisit : MonoBehaviour
         canvi.SetActive(true);
         sunlight.SetActive(true);
 
-        _inventory.AddItem(MustardWater, 1);
+        _inventory.RemoveItem(MustardWater, 1);
+        _inventory.AddItem(FilledWater, 1);
 
         Heater.SetActive(true);
-        Destroy(gameObject);
-        Destroy(this);
+        _interact.Kill();
+
+        //Destroy(gameObject);
+        //Destroy(this);
     }
 }

@@ -30,6 +30,12 @@ public class WaterHeaterMaster : MonoBehaviour
     private GameObject AirPipe;
     private GameObject WaterSpout;
 
+    public GameObject PIP1;
+    public GameObject PIP2;
+    public GameObject PIP3;
+    public GameObject PIP4;
+
+
     private void Start()
     {
         stepOne = false;
@@ -41,6 +47,11 @@ public class WaterHeaterMaster : MonoBehaviour
         AirPipeCheck.SetActive(false);
         WaterSpoutCheck.SetActive(false);
         Fill.SetActive(false);
+
+        //PIP1.SetActive(false);
+        //PIP2.SetActive(false);
+        //PIP3.SetActive(false);
+        //PIP4.SetActive(false);
 
         ElectricBox = GameObject.FindGameObjectWithTag("ElectricBox");
         WaterPipe = GameObject.FindGameObjectWithTag("WaterPipe");
@@ -57,6 +68,7 @@ public class WaterHeaterMaster : MonoBehaviour
         || (tag == "AirPipe" && stepOne && stepTwo && !stepThree && !stepFour)
         || (tag == "WaterSpout" && stepOne && stepTwo && stepThree && !stepFour))
         {
+            Debug.Log("Good step");
             return 1;
         }
         //same step thats already check
@@ -70,7 +82,6 @@ public class WaterHeaterMaster : MonoBehaviour
         else
         {
             return -1;
-
         }
     }
 
@@ -95,15 +106,37 @@ public class WaterHeaterMaster : MonoBehaviour
     public void resetSteps()
     {
         StartCoroutine(TryAgain());
-        Debug.Log("reset");
+        if (stepOne)
+        {
+            GameObject.Find("Flip").transform.Rotate(0, 40, 0);
+        }
+        if (stepTwo)
+        {
+            GameObject.Find("Turn").transform.Rotate(0, 0, 360);
+        }
+        if (stepThree)
+        {
+            GameObject.Find("Lever").transform.Rotate(0, 0, 90);
+        }
+        if (stepFour)
+        {
+            GameObject.Find("Water").transform.Rotate(0, 0, -500);
+        }
+
         stepOne = false;
         stepTwo = false;
-        stepThree = false; 
+        stepThree = false;
         stepFour = false;
         ElectricBoxCheck.SetActive(false);
         WaterPipeCheck.SetActive(false);
         AirPipeCheck.SetActive(false);
         WaterSpoutCheck.SetActive(false);
+
+        PIP1.SetActive(false);
+        PIP2.SetActive(false);
+        PIP3.SetActive(false);
+        PIP4.SetActive(false);
+
     }
 
     public void Leave()
