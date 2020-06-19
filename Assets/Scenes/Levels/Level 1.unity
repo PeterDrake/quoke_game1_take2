@@ -543,7 +543,7 @@ MonoBehaviour:
   - {fileID: 2139955424}
   - {fileID: 821855975}
   playerKiller: {fileID: 595748492}
-  DropDelay: 3
+  DropDelay: 6
   TotalDropTime: 15
 --- !u!1001 &15978983
 PrefabInstance:
