@@ -38393,11 +38393,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Use the right mouse click to move the camera
+  m_Text: 'Use the mouse to move the camera
 
 
-    Use the arrow buttons
-    or WASD to move
+    Use the arrow buttons or WASD to
+    move
 
 
     Press ''I'' to get the inventory
