@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,13 +11,19 @@ public class SegueDisplayer : UIElement
 
     private GameObject toggler;
     public Button ExitButton;
+    public float WaitTime;
 
     public override void Open()
     {
         //activate(true);
 
     }
-
+    /*
+    private int WaitForIt()
+    {
+        yield return new WaitForSeconds(WaitTime);
+    }
+    */
     private void Start()
     {
         pauseOnOpen = true;
@@ -25,7 +32,8 @@ public class SegueDisplayer : UIElement
 
 
         initialize();
-        //activate(true);
+        //WaitForIt();
+        //activate(false);
 
     }
 
@@ -33,7 +41,7 @@ public class SegueDisplayer : UIElement
     {
         Transform main = transform.Find("SegueToggler");
         toggler = main.gameObject;
-        ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
+        //ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
         //byte componentsFound = 1;
 
 
@@ -46,7 +54,6 @@ public class SegueDisplayer : UIElement
 
     private void activate(bool active)
     {
-
         toggler.SetActive(active);
     }
 
