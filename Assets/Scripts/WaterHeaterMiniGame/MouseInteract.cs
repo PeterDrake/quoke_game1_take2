@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class MouseInteract: MonoBehaviour
 {
-    private bool coroutineAllowed;
+    public bool coroutineAllowed;
 
     // Start is called before the first frame update
     void Start()
     {
-        coroutineAllowed = true;
+        coroutineAllowed = false;
     }
 
     private void OnMouseOver()
@@ -43,5 +43,6 @@ public class MouseInteract: MonoBehaviour
             yield return new WaitForSeconds(0.015f);
         }
         coroutineAllowed = true;
+
     }
 }
