@@ -1605,6 +1605,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6455381915499314064, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Text
+      value: Prepare for an earthquake
+      objectReference: {fileID: 0}
     - target: {fileID: 6455381915534295785, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -97945,7 +97950,7 @@ MonoBehaviour:
   - {fileID: 1385273495}
   - {fileID: 719859610}
   playerKiller: {fileID: 557489951}
-  DropDelay: 3
+  DropDelay: 6
   TotalDropTime: 15
 --- !u!64 &1131668263822085136
 MeshCollider:
