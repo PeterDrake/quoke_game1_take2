@@ -89,10 +89,10 @@ public class WaterHeaterMaster : MonoBehaviour
     {
         if(stepOne && stepTwo && stepThree && stepFour)
         {
-            //Destroy(ElectricBox.GetComponent<MouseInteract>());
-            //Destroy(WaterPipe.GetComponent<MouseInteract>());
-            //Destroy(AirPipe.GetComponent<MouseInteract>());
-            //Destroy(WaterSpout.GetComponent<MouseInteract>());
+            Destroy(ElectricBox.GetComponent<MouseInteract>());
+            Destroy(WaterPipe.GetComponent<MouseInteract>());
+            Destroy(AirPipe.GetComponent<MouseInteract>());
+            Destroy(WaterSpout.GetComponent<MouseInteract>());
             Destroy(ElectricBox.GetComponent<EachStepAction>());
             Destroy(WaterPipe.GetComponent<EachStepAction>());
             Destroy(AirPipe.GetComponent<EachStepAction>());
@@ -109,19 +109,18 @@ public class WaterHeaterMaster : MonoBehaviour
         Debug.Log("reset");
         stepOne = false;
         stepTwo = false;
-        stepThree = false; 
+        stepThree = false;
         stepFour = false;
         ElectricBoxCheck.SetActive(false);
         WaterPipeCheck.SetActive(false);
         AirPipeCheck.SetActive(false);
         WaterSpoutCheck.SetActive(false);
-
         PIP1.SetActive(false);
         PIP2.SetActive(false);
         PIP3.SetActive(false);
         PIP4.SetActive(false);
-
-    }
+        
+   }
 
     public void Leave()
     {
