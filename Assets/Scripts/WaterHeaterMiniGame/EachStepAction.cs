@@ -7,11 +7,14 @@ public class EachStepAction : MonoBehaviour
     public GameObject check;
     public GameObject current;
 
+    public GameObject PIP;
+
     public WaterHeaterMaster Master;
 
     private void Awake()
     {
         check.SetActive(false);
+        PIP.SetActive(false);
     }
 
     public void OnMouseDown()
@@ -20,6 +23,7 @@ public class EachStepAction : MonoBehaviour
         {
             if (current.tag == "ElectricBox")
             {
+                
                 Master.stepOne = true;
             }
             else if (current.tag == "WaterPipe")
@@ -36,6 +40,7 @@ public class EachStepAction : MonoBehaviour
             }
             Debug.Log("CHECKED OFF " + current.tag);
             check.SetActive(true);
+            PIP.SetActive(true);
             Master.isDone();
 
         }

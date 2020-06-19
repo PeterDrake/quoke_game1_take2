@@ -30,6 +30,12 @@ public class WaterHeaterMaster : MonoBehaviour
     private GameObject AirPipe;
     private GameObject WaterSpout;
 
+    public GameObject PIP1;
+    public GameObject PIP2;
+    public GameObject PIP3;
+    public GameObject PIP4;
+
+
     private void Start()
     {
         stepOne = false;
@@ -41,6 +47,11 @@ public class WaterHeaterMaster : MonoBehaviour
         AirPipeCheck.SetActive(false);
         WaterSpoutCheck.SetActive(false);
         Fill.SetActive(false);
+
+        //PIP1.SetActive(false);
+        //PIP2.SetActive(false);
+        //PIP3.SetActive(false);
+        //PIP4.SetActive(false);
 
         ElectricBox = GameObject.FindGameObjectWithTag("ElectricBox");
         WaterPipe = GameObject.FindGameObjectWithTag("WaterPipe");
@@ -104,6 +115,12 @@ public class WaterHeaterMaster : MonoBehaviour
         WaterPipeCheck.SetActive(false);
         AirPipeCheck.SetActive(false);
         WaterSpoutCheck.SetActive(false);
+
+        PIP1.SetActive(false);
+        PIP2.SetActive(false);
+        PIP3.SetActive(false);
+        PIP4.SetActive(false);
+
     }
 
     public void Leave()
