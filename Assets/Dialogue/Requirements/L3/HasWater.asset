@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HasWater
   m_EditorClassIdentifier: 
   RequiredItems:
-  - {fileID: 11400000, guid: 74509f734533b496cbca49ee30a6c3a4, type: 2}
+  - {fileID: 11400000, guid: 8499936600b8f4a4b972e21858e93872, type: 2}
   Amounts: 01000000
