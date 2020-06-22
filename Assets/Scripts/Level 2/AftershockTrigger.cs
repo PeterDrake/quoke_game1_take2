@@ -10,7 +10,7 @@ public class AftershockTrigger : MonoBehaviour
     public InformationCanvas _canvas;
     private void OnTriggerEnter(Collider other)
     {
-        QuakeManager.Instance.TriggerCountdown(2f);
+        QuakeManager.Instance.TriggerCountdown(5f);
         _canvas.ChangeText("Have a look around...");
         Logger.Instance.Log("Player has left the house");
         Destroy(gameObject);
