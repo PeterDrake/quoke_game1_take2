@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Frank 5 Water
+  m_Name: Frank 5 Water 2
   m_EditorClassIdentifier: 
-  speech: 'I was about to ask you the same thing. I''d give anything for a cold glass
-    of water and a hot shower. '
+  speech: 'Dang, I''d give anything for a cold glass of water and a hot shower. '
   optionOneText: Hey, that gives me an idea. Do you have a hot water heater?
   optionOne: {fileID: 11400000, guid: e359d12a08a084dba82e1cc9715c917a, type: 2}
   optionTwoText: 

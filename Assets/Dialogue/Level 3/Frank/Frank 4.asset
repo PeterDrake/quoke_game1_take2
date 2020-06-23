@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Frank 4
   m_EditorClassIdentifier: 
   speech: Nice.
-  optionOneText: 'I''m so thirsty! Do you know where we can find some water? I''ve
-    got these water purification tablets and nothing to put them in. '
-  optionOne: {fileID: 11400000, guid: 25bc19464abe44a3e99e2ed6afc54745, type: 2}
+  optionOneText: I'm so thirsty! Do you know where we can find some water?
+  optionOne: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
   optionTwoText: What do you plan to use for a toilet?
   optionTwo: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
   Requirements: []
