@@ -12,21 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Frank 4
   m_EditorClassIdentifier: 
-  speech: Hey, nice.
-  optionOneText: 'We should probably find some shelter from this rain. '
-  optionOne: {fileID: 0}
-  optionTwoText: 
-  optionTwo: {fileID: 0}
-  Requirements:
-  - {fileID: 0}
+  speech: Nice.
+  optionOneText: I'm so thirsty! Do you know where we can find some water?
+  optionOne: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
+  optionTwoText: What do you plan to use for a toilet?
+  optionTwo: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
+  Requirements: []
   Outcomes: []
-  NewHead: {fileID: 11400000}
-  IfRequirementsOne:
-  - {fileID: 11400000, guid: 823f6202d7f614bb5b98093ed3eab4a9, type: 2}
-  optionOneTextAlt: 'I''m so thirsty! Do you know where we can find some water? I''ve
-    got these water purification tablets and nothing to put them in. '
-  optionOneAlt: {fileID: 11400000, guid: 25bc19464abe44a3e99e2ed6afc54745, type: 2}
-  IfRequirementsTwo:
-  - {fileID: 11400000, guid: 823f6202d7f614bb5b98093ed3eab4a9, type: 2}
-  optionTwoTextAlt: What do you plan to use for a toilet?
-  optionTwoAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
+  NewHead: {fileID: 0}
+  IfRequirementsOne: []
+  optionOneTextAlt: 
+  optionOneAlt: {fileID: 0}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
