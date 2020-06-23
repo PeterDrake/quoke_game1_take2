@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PurificationTablet
   m_EditorClassIdentifier: 
   DisplayName: Chlorine Dioxide Tablets
-  Description: I can add one tablet at a time to the water
+  Description: I can add one tablet at a time to the water, I should put in 4 tablets
+    per gallon
   Icon: {fileID: 21300000, guid: 3072feed57303499395a7c2ae9cc84d6, type: 3}
   DisplayImage: {fileID: 21300000, guid: 3072feed57303499395a7c2ae9cc84d6, type: 3}
   ID: TABLET
