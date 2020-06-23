@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe544f770ae3e64f8d171e0461b7b76, type: 3}
   m_Name: PurificationTablet
   m_EditorClassIdentifier: 
-  DisplayName: Water Purification Tablets
-  Description: NEED DESCRIPTION
+  DisplayName: Chlorine Dioxide Tablets
+  Description: I can add one tablet at a time to the water
   Icon: {fileID: 21300000, guid: 3072feed57303499395a7c2ae9cc84d6, type: 3}
   DisplayImage: {fileID: 21300000, guid: 3072feed57303499395a7c2ae9cc84d6, type: 3}
   ID: TABLET
