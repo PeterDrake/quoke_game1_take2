@@ -29734,12 +29734,12 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: showCountdown
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -29749,7 +29749,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: AftershockTime
-      value: 100
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -29856,12 +29856,12 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -29882,6 +29882,26 @@ PrefabInstance:
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1979804784}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: StartGasCount
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_FloatArgument
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232355, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -29998,6 +30018,11 @@ PrefabInstance:
       propertyPath: objectDropper
       value: 
       objectReference: {fileID: 660546595}
+    - target: {fileID: 8418557875464114439, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a8bd79396454dc8a320f82efe24b84, type: 3}
 --- !u!1001 &1590216177
