@@ -1327,8 +1327,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.3205214, y: 5, z: 0.3}
-  m_Center: {x: -1.8397471, y: 2, z: 0.02744498}
+  m_Size: {x: 6.3205214, y: 5, z: 0.5}
+  m_Center: {x: -1.8397471, y: 2, z: -0.0860966}
 --- !u!1 &173183910 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -2161,7 +2161,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2514088, y: 5, z: 0}
+  m_Size: {x: 1.2514088, y: 5, z: 0.5}
   m_Center: {x: -0.6257045, y: 2, z: -0.02770902}
 --- !u!114 &261449355 stripped
 MonoBehaviour:
@@ -14750,15 +14750,15 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_FontSize: 38
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 120
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Elsewhere in town, it happened like this...
