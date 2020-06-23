@@ -12,11 +12,13 @@ public class L2Aftershock : MonoBehaviour
 
     private void OnQuake()
     {
-        if (QuakeManager.Instance.quakes > 0)
+        if (QuakeManager.Instance.Aftershock)
         {
+            //objectDropper.Drop();
+            Debug.Log("KILL ME");
             Logger.Instance.Log("Aftershock Started");
             Systems.Status.PlayerDeath("The house collapsed in an aftershock!");
-            objectDropper.Drop();
+            
         }
     }
 }

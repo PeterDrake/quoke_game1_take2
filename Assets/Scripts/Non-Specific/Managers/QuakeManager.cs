@@ -53,6 +53,8 @@ public class QuakeManager : MonoBehaviour
 
 
     [HideInInspector] public bool Quaking;
+    [HideInInspector] public bool Aftershock;
+
 
     public byte quakes; //times quaked 
 
@@ -191,7 +193,8 @@ public class QuakeManager : MonoBehaviour
         Logger.Instance.Log((quakes == 0 ? "Earthquake" : "Aftershock") + " triggered!");
         StopAllCoroutines();
 
-        OnQuake.Invoke(); // every function subscribed to OnQuake is called here
+        Debug.Log("aftershock = " + Aftershock);
+        //OnQuake.Invoke(); // every function subscribed to OnQuake is called here
 
         _informationCanvas.ChangeText(textOnQuake);
 
@@ -205,10 +208,15 @@ public class QuakeManager : MonoBehaviour
 
         virtualCameraNoise.m_AmplitudeGain = 0f;
         ShakeElapsedTime = 0f;
+        if (Aftershock)
+        {
+            OnQuake.Invoke();
+        }
 
         Quaking = false;
         Systems.Status.UnPause();
         TriggerCountdown(AftershockTime);
+        Aftershock = true;
     }
 
     public void InSafeZone(bool status)
