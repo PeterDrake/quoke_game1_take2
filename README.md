@@ -10,6 +10,7 @@ To open this project in Unity:
 2. Within the `Assets` directory, create a directory called `Purchased`.
 3. Obtain the following assets and copy them into `Purchased`:
     - DogPack
+    - hospital assets
     - PolygonApocalypse
     - POLYGONCityCharacters
     - PolygonCity

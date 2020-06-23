@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
+  m_Name: Frank New Head
+  m_EditorClassIdentifier: 
+  speech: Hey Mo.
+  optionOneText: 'We should probably find some shelter from this rain. '
+  optionOne: {fileID: 11400000, guid: 9a6b38175a2b44100a1c85fcdfc0f91b, type: 2}
+  optionTwoText: 
+  optionTwo: {fileID: 0}
+  Requirements:
+  - {fileID: 0}
+  Outcomes: []
+  NewHead: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
+  optionOneTextAlt: What do you plan to use for a toilet?
+  optionOneAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
+  IfRequirementsTwo:
+  - {fileID: 11400000, guid: 335f5786a5f2d49b7b78c24ac9506bbc, type: 2}
+  optionTwoTextAlt: 'I''m so thirsty! Do you know where we can find some water? I''ve
+    got these water purification tablets and nothing to put them in. '
+  optionTwoAlt: {fileID: 11400000, guid: 25bc19464abe44a3e99e2ed6afc54745, type: 2}
