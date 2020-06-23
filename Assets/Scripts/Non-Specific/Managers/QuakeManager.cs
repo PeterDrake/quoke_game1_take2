@@ -117,14 +117,10 @@ public class QuakeManager : MonoBehaviour
     // the actual countdown
     private IEnumerator QuakeCountdown(float CountdownTime)
     {
-        Debug.Log("TEST TIME " + CountdownTime);
         _timeTillQuake = CountdownTime;
-        Debug.Log("Time until Quake" + _timeTillQuake);
-
         while (_timeTillQuake > 0)
         {
             yield return new WaitForSeconds(1f);
-            Debug.Log("Quake time " + _timeTillQuake);
             _timeTillQuake--;
             if (showCountdown) Debug.Log("Time Till Quake: " + _timeTillQuake);
         }

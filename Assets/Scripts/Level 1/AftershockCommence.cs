@@ -10,10 +10,7 @@ public class AftershockCommence : MonoBehaviour
 
     public void LeavingHouse()
     {
-        Debug.Log("Left House");
-
         LeftHouse = true;
-
     }
 
 
@@ -23,20 +20,15 @@ public class AftershockCommence : MonoBehaviour
         LeftHouse = false;
     }
 
-    // This is reentry to the house
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
             if (LeftHouse)
             {
-                Debug.Log("Aftershock");
-                //QuakeManager.Instance.TriggerQuake();
-                QuakeManager.Instance.TriggerCountdown(5f);
-                new WaitForSeconds(5f);
-                Debug.Log("You died in the aftershock");
+                QuakeManager.Instance.TriggerQuake();
+                new WaitForSeconds(3f);
                 Systems.Status.PlayerDeath("You died in the aftershock");
-                
             }
         }
     }
