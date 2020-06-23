@@ -26,9 +26,10 @@ public class AftershockCommence : MonoBehaviour
         {
             if (LeftHouse)
             {
-                QuakeManager.Instance.TriggerQuake();
-                new WaitForSeconds(3f);
-                Systems.Status.PlayerDeath("You died in the aftershock");
+                //QuakeManager.Instance.TriggerQuake();
+                //player dies in an explosion
+                //new WaitForSeconds(3f);
+                Systems.Status.PlayerDeath("You died in a gas explosion");
             }
         }
     }
