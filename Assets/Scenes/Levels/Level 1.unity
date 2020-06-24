@@ -29287,7 +29287,7 @@ PrefabInstance:
         type: 3}
       propertyPath: VirtualCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1678459245}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: adminMode
