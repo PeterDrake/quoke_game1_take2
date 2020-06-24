@@ -13,18 +13,20 @@ MonoBehaviour:
   m_Name: NewHead
   m_EditorClassIdentifier: 
   speech: Have you set up that sanitation station yet?
-  optionOneText: 'No, I haven''t put that together yet. '
-  optionOne: {fileID: 11400000, guid: 2ef321040985c124f99112c8842ec078, type: 2}
-  optionTwoText: 'Yes, I finished a two-bucket system. '
-  optionTwo: {fileID: 11400000, guid: f2c92a4312374e64dbfa4255d17e7741, type: 2}
+  optionOneText: 'Yes, I finished a two-bucket system. '
+  optionOne: {fileID: 11400000, guid: f2c92a4312374e64dbfa4255d17e7741, type: 2}
+  optionTwoText: 
+  optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: 0b03776babcbacf42a38be727d03c61e, type: 2}
-  optionOneTextAlt: Can you give me any more information?
-  optionOneAlt: {fileID: 11400000, guid: b30c2c3cca90abb4d94a5b52a6f11dfe, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: ca56d5c637697024684243562fb6aced, type: 2}
+  optionOneTextAlt: 'No, I haven''t put that together yet. '
+  optionOneAlt: {fileID: 11400000, guid: 2ef321040985c124f99112c8842ec078, type: 2}
   IfRequirementsTwo:
   - {fileID: 11400000, guid: ca56d5c637697024684243562fb6aced, type: 2}
-  optionTwoTextAlt: Not yet.
-  optionTwoAlt: {fileID: 11400000, guid: 2ef321040985c124f99112c8842ec078, type: 2}
+  - {fileID: 11400000, guid: 0b03776babcbacf42a38be727d03c61e, type: 2}
+  optionTwoTextAlt: Can you give me any more information?
+  optionTwoAlt: {fileID: 11400000, guid: b30c2c3cca90abb4d94a5b52a6f11dfe, type: 2}

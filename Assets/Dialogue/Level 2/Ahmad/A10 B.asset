@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A10 B
   m_EditorClassIdentifier: 
   speech: Very bad idea. If everybody did that we would have a serious disease outbreak.
-  optionOneText: 'Tre: Okay, I''ll go look for this stuff.'
+  optionOneText: Okay, I'll go look for this stuff.
   optionOne: {fileID: 11400000, guid: 71f37ce851b9e4ae2a9fc62f812e27bc, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
