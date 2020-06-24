@@ -16041,7 +16041,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Exit
+  m_Text: Close
 --- !u!222 &920647047
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36774,7 +36774,7 @@ GameObject:
   - component: {fileID: 1965501445}
   - component: {fileID: 1965501444}
   m_Layer: 5
-  m_Name: exitButton
+  m_Name: closeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37939,17 +37939,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Use the mouse to move the camera
-
-
-    Use the arrow buttons or WASD to
-    move
+  m_Text: 'Use the arrow buttons or WASD to move
 
 
     Press ''I'' to get the inventory
 
 
-    Press ''C'' to crouch
+    Press
+    ''C'' to crouch
 
 '
 --- !u!222 &2000796664
