@@ -7,6 +7,7 @@ public class AftershockCommence : MonoBehaviour
 
     private bool LeftHouse;
     public AudioSource boomAudio;
+    public GameObject bigBoom;
 
 
 
@@ -31,7 +32,8 @@ public class AftershockCommence : MonoBehaviour
                 //QuakeManager.Instance.TriggerQuake();
                 //player dies in an explosion
                 //new WaitForSeconds(3f);
-                boomAudio.Play();
+                bigBoom.SetActive(true);
+                //boomAudio.Play();
                 Systems.Status.PlayerDeath("You died in a gas explosion");
             }
         }
