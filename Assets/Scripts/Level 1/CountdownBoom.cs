@@ -8,7 +8,8 @@ public class CountdownBoom : MonoBehaviour
     private bool _countdownFinished = false;
     [SerializeField] private bool showCountdown = true;
     private float _timeTillBoom;
-    
+    public AudioSource boomAudio;
+
     // Start is called before the first frame update
     /*void Start()
     {
@@ -20,6 +21,7 @@ public class CountdownBoom : MonoBehaviour
     {
         if (_countdownFinished)
         {
+            boomAudio.Play();
             Systems.Status.PlayerDeath("You died in a gas explosion");
             //add animation of house exploding
         }
