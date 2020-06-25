@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CountdownBoom : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CountdownBoom : MonoBehaviour
     [SerializeField] private bool showCountdown = true;
     private float _timeTillBoom;
     public AudioSource boomAudio;
+    public GameObject bigBoom;
 
     // Start is called before the first frame update
     /*void Start()
@@ -21,7 +23,8 @@ public class CountdownBoom : MonoBehaviour
     {
         if (_countdownFinished)
         {
-            boomAudio.Play();
+            //boomAudio.Play();
+            bigBoom.SetActive(true);
             Systems.Status.PlayerDeath("You died in a gas explosion");
             //add animation of house exploding
         }

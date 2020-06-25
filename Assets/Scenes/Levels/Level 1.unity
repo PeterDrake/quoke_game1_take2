@@ -12620,7 +12620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &690255666
 Transform:
   m_ObjectHideFlags: 0
@@ -12646,7 +12646,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8cb9b3c1095c7fc43b1abb7c48f474ac, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
@@ -39172,6 +39172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showCountdown: 1
   boomAudio: {fileID: 690255667}
+  bigBoom: {fileID: 690255665}
 --- !u!1 &1981440159 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7406703957348376966, guid: b5c1ffca8756cc84ebe50db3d2c5c380,
