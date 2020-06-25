@@ -16152,6 +16152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boomAudio: {fileID: 690255667}
+  bigBoom: {fileID: 690255665}
 --- !u!65 &881531982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28569,6 +28570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boomAudio: {fileID: 690255667}
+  bigBoom: {fileID: 690255665}
 --- !u!65 &1506879586
 BoxCollider:
   m_ObjectHideFlags: 0
