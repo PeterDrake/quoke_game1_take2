@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f40ddc9b230139e4482577e37f37b881, type: 3}
-  m_Name: New NPC
+  m_Name: TsuNPC
   m_EditorClassIdentifier: 
   name: Some corgi
-  image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  image: {fileID: 21300000, guid: 541474147f6f848bd8940c77217994b3, type: 3}
