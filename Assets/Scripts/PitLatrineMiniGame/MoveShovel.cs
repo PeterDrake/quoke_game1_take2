@@ -16,6 +16,7 @@ public class MoveShovel : MonoBehaviour
     public void Dig()
     {
         StartCoroutine(nameof(DigVertically));
+        StartCoroutine(nameof(FillWaterPond));
     }
     
     private IEnumerator DigVertically()
@@ -50,7 +51,6 @@ public class MoveShovel : MonoBehaviour
             Pit2.SetActive(true);
             Dirt2.SetActive(true);
             Water.SetActive(true);
-            StartCoroutine(nameof(FillWaterPond));
         }
         else
         {
