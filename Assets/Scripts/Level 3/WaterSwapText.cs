@@ -12,7 +12,7 @@ public class WaterSwapText : MonoBehaviour
 
     public void Interaction()
     {
-        _interact.SetInteractText("Press 'E' to Get Water From Water Heater");
+        _interact.SetInteractText("Press 'E' to get water from water heater");
     }
 
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2nd node L1 NPC
   m_EditorClassIdentifier: 
   speech: Yeah, but that little guy is fast. I'm not sure what direction he went,
-    sorry
+    sorry.
   optionOneText: 'He''s a good dog, I''m sure he''ll come back
 
     By the way I
