@@ -7,36 +7,17 @@ public class MoveShovel : MonoBehaviour
 {
     private float movementSpeed = 0.5f;
 
+    public GameObject Pit1;
+    public GameObject Pit2;
+    public GameObject Dirt1;
+    public GameObject Dirt2;
+    public GameObject Water;
     
-   /* void Update()
-    {
-        Vector3 Target = new Vector3(transform.position.x, -1, transform.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
-        //transform.Rotate(Vector3.up* Time.deltaTime); 
-    }*/
-   
     public void Dig()
     {
-        //float verticalInput = Input.GetAxis("Vertical");
-        Debug.Log(transform.position.x);
-        Debug.Log(transform.position.y);
-        Debug.Log(transform.position.z);
         StartCoroutine(nameof(DigVertically));
-
-        
-        //transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
-        //transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 180, 0), movementSpeed * Time.deltaTime);
-
-
-        //Debug.Log("transform position y is " + transform.position.y.ToString());
-        //transform.position = transform.position + new Vector3(0, -1 * movementSpeed * Time.deltaTime, 0);
-        //verticalInput = Input.GetAxis("Vertical");
-
-
-        //transform.position = transform.position + new Vector3(0, -5*movementSpeed*Time.deltaTime, 0);
     }
-
-
+    
     private IEnumerator DigVertically()
     {
         //Moves shovel down
@@ -47,6 +28,8 @@ public class MoveShovel : MonoBehaviour
             yield return new WaitForSeconds(0.0005f);
         }
 
+        MakeThingsAppear();
+
         //Moves shovel to the side
         while (transform.position.x > 71.81f && transform.position.y<1)
         {
@@ -56,8 +39,29 @@ public class MoveShovel : MonoBehaviour
         }
             
         //Moves shovel to the start position
-        
         transform.position = new Vector3(73.04f, 0.14f * movementSpeed * Time.deltaTime, transform.position.z);
         
     }
+
+    private void MakeThingsAppear()
+    {
+        if (Pit1.activeSelf == true)
+        {
+            Pit2.SetActive(true);
+            Dirt2.SetActive(true);
+            Water.SetActive(true);
+            StartCoroutine(nameof(FillWaterPond));
+        }
+        else
+        {
+            Pit1.SetActive(true);
+            Dirt1.SetActive(true);
+        }
+    }
+
+    private IEnumerator FillWaterPond()
+    {
+        yield return new WaitForSeconds(1f);
+    }
+    
 }
