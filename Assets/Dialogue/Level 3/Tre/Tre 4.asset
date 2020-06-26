@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Tre 4
   m_EditorClassIdentifier: 
-  speech: 'I''m in line when you get that thing built. '
+  speech: I'm in line when you get that thing built. Buckets only last so long, you
+    know?
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 

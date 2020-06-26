@@ -40,7 +40,7 @@ public class WaterHeaterVisit : MonoBehaviour
         }
         else
         {
-            _interact.SetInteractText("Go Talk to Frank about Water");
+            _interact.SetInteractText("Go talk to Frank about water");
 
         }
 
