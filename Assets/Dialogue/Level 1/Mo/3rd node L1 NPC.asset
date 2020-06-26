@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: 3rd node L1 NPC
   m_EditorClassIdentifier: 
-  speech: You should shut that off. Here, you can use my wrench. Do you know where
-    your gas meter is?
-  optionOneText: No
+  speech: You should shut that off as soon as you can. Here, you can use my wrench.
+    It's nonsparking, so it's good for gas. Do you know where your gas meter is?
+  optionOneText: No, I don't.
   optionOne: {fileID: 11400000, guid: f0f8d784b5fda45dcadd4ed58927d772, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

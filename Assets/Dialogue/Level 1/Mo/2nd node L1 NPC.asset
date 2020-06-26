@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Yeah, but that little guy is fast. I'm not sure what direction he went,
     sorry.
-  optionOneText: 'He''s a good dog, I''m sure he''ll come back
+  optionOneText: 'I really hope he comes back. I don''t know where he might have
+    gone!
 
-    By the way I
-    think I smelled gas while I was inside'
+    By the way I think I smelled gas while I was inside...'
   optionOne: {fileID: 11400000, guid: faea91835bff14695b037ce2859056fc, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
