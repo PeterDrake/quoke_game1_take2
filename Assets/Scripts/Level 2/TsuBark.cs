@@ -5,12 +5,14 @@ using UnityEngine;
 public class TsuBark : MonoBehaviour
 {
     private const string EventKey = "LEVELFINISHED";
-    private const string SATISFIED = "";
+    private const string SATISFIED = "Press 'E' to enter car";
     private const string NOT_SATISFIED = "";
-    public GameObject theBark;
+    //public GameObject theBark;
 
     private InteractWithObject _interact;
     private bool _satisfied;
+    public AudioSource Bark;
+    public StartDialogue Talk;
 
     private void Start()
     {
@@ -26,6 +28,10 @@ public class TsuBark : MonoBehaviour
     public void Interact()
     {
         if (_satisfied)
-            theBark.SetActive(true); //changed from winCanvas
+        {
+            Bark.Play();
+            Talk.Interact();
+            //theBark.SetActive(true); //changed from winCanvas
+        }
     }
 }
