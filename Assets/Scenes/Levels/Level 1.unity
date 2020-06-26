@@ -39706,8 +39706,11 @@ MonoBehaviour:
     Press ''I'' to get the inventory
 
 
-    Press
+    Hold
     ''C'' to crouch
+
+
+    Click dialogue box to keep talking, and ''bye'' to leave
 
 '
 --- !u!222 &2000796664
