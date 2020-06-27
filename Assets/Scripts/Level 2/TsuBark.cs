@@ -8,7 +8,7 @@ public class TsuBark : MonoBehaviour
     private const string SATISFIED = "Press 'E' to enter car";
     private const string NOT_SATISFIED = "";
     //public GameObject theBark;
-
+    public InformationCanvas _canvas;
     private InteractWithObject _interact;
     private bool _satisfied;
     public AudioSource Bark;
@@ -32,6 +32,15 @@ public class TsuBark : MonoBehaviour
             Bark.Play();
             Talk.Interact();
             //theBark.SetActive(true); //changed from winCanvas
+        }
+    }
+
+    public void Update()
+    {
+        if (_satisfied)
+        {
+            _canvas.ChangeText("Find Ahmad's van");
+
         }
     }
 }

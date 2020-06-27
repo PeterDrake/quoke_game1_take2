@@ -15541,6 +15541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64cbed123a3a56f4b81065fd049992d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _canvas: {fileID: 217066295}
   Bark: {fileID: 1978150295}
   Talk: {fileID: 1585708365}
 --- !u!1 &1585908235 stripped
