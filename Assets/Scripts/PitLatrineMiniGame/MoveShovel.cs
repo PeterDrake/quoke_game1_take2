@@ -23,7 +23,6 @@ public class MoveShovel : MonoBehaviour
     public void Dig()
     {
         StartCoroutine(nameof(DigVertically));
-        StartCoroutine(nameof(FillWaterPond));
     }
     
     private IEnumerator DigVertically()
@@ -93,9 +92,5 @@ public class MoveShovel : MonoBehaviour
         }
     }
 
-    private IEnumerator FillWaterPond()
-    {
-        yield return new WaitForSeconds(1f);
-    }
     
 }
