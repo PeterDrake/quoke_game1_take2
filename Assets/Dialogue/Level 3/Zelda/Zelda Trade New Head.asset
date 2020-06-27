@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda Water Trade
+  m_Name: Zelda Trade New Head
   m_EditorClassIdentifier: 
-  speech: Is this water clean?
-  optionOneText: 'Yes, it''s clean. '
-  optionOne: {fileID: 11400000, guid: b52ff2f96d3275349a9e7d7d9a05e026, type: 2}
+  speech: I'm so thirsty! Do you have any water?
+  optionOneText: Yes, I do.
+  optionOne: {fileID: 11400000, guid: 61dd7d6f5d51149f3832286f88cf82ac, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: d77640073ece14ccfa0532ef18c92f55, type: 2}
-  optionOneTextAlt: No, but I have some chlorine tablets to clean it.
-  optionOneAlt: {fileID: 11400000, guid: efed67df7bdf74d73ad784c2bdc842c0, type: 2}
+  - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
+  optionOneTextAlt: 'I''ll go see if I can find some. '
+  optionOneAlt: {fileID: 11400000, guid: e2356adc9687b124ba15150827eacc65, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
