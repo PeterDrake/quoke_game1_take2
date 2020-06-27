@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CleanMustardWater
   m_EditorClassIdentifier: 
   DisplayName: Clean Water in Mustard Jar
-  Description: A mustard jug filled with a gallon of water from Frank's water heater
-    and cleaned with water purification tablets
+  Description: A mustard jug filled with a gallon of clean water from Frank's water
+    heater and cleaned with water purification tablets
   Icon: {fileID: 21300000, guid: 2140cab1ba37643f49f26a7d7f6c7144, type: 3}
   DisplayImage: {fileID: 21300000, guid: 2140cab1ba37643f49f26a7d7f6c7144, type: 3}
   ID: MCLEAN
