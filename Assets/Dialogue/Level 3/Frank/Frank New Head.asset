@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Frank New Head
   m_EditorClassIdentifier: 
   speech: Hey Mo.
-  optionOneText: 'We should probably find some shelter from this rain. '
-  optionOne: {fileID: 11400000, guid: 9a6b38175a2b44100a1c85fcdfc0f91b, type: 2}
+  optionOneText: We should find some shelter.
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
-  Requirements:
-  - {fileID: 0}
+  Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
