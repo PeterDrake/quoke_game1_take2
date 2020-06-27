@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: A4
   m_EditorClassIdentifier: 
   speech: 'Nice to meet you. I''m glad you made it this far. '
-  optionOneText: Thanks, me too
+  optionOneText: Thanks, me too.
   optionOne: {fileID: 11400000, guid: ee6644894426f9b42aea06a73cd397af, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

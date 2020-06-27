@@ -11,7 +11,7 @@ public class Bookcase : MonoBehaviour
     public Item hasHandSanitizer;
     
     private const string NO_TOOLS = "This bookcase could fall over in an earthquake. I should secure it to the wall.";
-    private  const string HAS_TOOLS = "Press 'E' to Secure the Bookshelf";
+    private  const string HAS_TOOLS = "Press 'E' to secure the bookshelf";
     
     [Header("The bookcase will fall on the player the (kill_count)th time the player enters the collider")]
     public int KillCount = 4;

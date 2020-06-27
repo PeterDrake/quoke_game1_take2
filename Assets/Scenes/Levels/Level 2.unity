@@ -8070,6 +8070,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557043683169967, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: InteractionDisplayText
+      value: Press 'E' to rest in bed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557043688527413, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: InteractionDisplayText
+      value: Press 'E' to pick up bucket
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557044159806426, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: winCanvas
@@ -8110,6 +8120,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557044322611016, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: InteractionDisplayText
+      value: Press 'E' to get items from under the sink
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557044367878306, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: m_Enabled
@@ -8129,6 +8144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557044537540015, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: InteractionDisplayText
+      value: Press 'E' to pickup sawdust
       objectReference: {fileID: 0}
     - target: {fileID: 6301557044776409842, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
@@ -8190,10 +8210,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactables
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557045089568252, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: InteractionDisplayText
+      value: Press 'E' to pick up bucket
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557045448172750, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: DestoryObjectAfterUse
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045542398764, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: InteractionDisplayText
+      value: Press 'E' to build sanitation system
       objectReference: {fileID: 0}
     - target: {fileID: 6301557045620401076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
@@ -8218,7 +8248,7 @@ PrefabInstance:
     - target: {fileID: 6301557045755891076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: InteractionDisplayText
-      value: Press 'E' to use Buckets
+      value: Press 'E' to use buckets
       objectReference: {fileID: 0}
     - target: {fileID: 6304079448651278719, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
