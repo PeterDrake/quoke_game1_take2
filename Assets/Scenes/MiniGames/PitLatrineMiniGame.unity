@@ -4816,7 +4816,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c55afdc4a8a3b4890b07cc7d176510bb, type: 2}
+      objectReference: {fileID: 2100000, guid: 52b7d70b1de7c4ce09662b77c14d9fda, type: 2}
     - target: {fileID: 23479254153191138, guid: d7ef0a4417e3c154bb14482f7b5e018b,
         type: 3}
       propertyPath: m_CastShadows
@@ -15234,6 +15234,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 733512365}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1815745250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815745245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebc4b182b1192849bbe42c92e2e88e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1816004289
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -55,7 +55,10 @@ public class MoveShovel : MonoBehaviour
         Dirt3.SetActive(false);
         MakeDirtAppear();
         DirtFlies.Stop();
-        
+        if (Dirt2.activeSelf == true)
+        {
+            Water.SetActive(true);
+        }
         //Moves shovel to the start position
         transform.position = new Vector3(73.04f, 0.14f * movementSpeed * Time.deltaTime, transform.position.z);
         
@@ -66,7 +69,7 @@ public class MoveShovel : MonoBehaviour
         if (Pit1.activeSelf == true)
         {
             Pit2.SetActive(true);
-            Water.SetActive(true);
+            //Water.SetActive(true);
         }
         else
         {
