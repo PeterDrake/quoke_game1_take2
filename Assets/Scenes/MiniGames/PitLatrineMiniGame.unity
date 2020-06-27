@@ -9651,7 +9651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &1666488798
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -9906,7 +9906,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.18867922, g: 0.08598039, b: 0, a: 1}
+      maxColor: {r: 0.084905684, g: 0.038915105, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -17263,6 +17263,11 @@ PrefabInstance:
       propertyPath: Dirt3
       value: 
       objectReference: {fileID: 271308785}
+    - target: {fileID: 722633905614999347, guid: 314bdea1f12607d4bb976ad6d30213ae,
+        type: 3}
+      propertyPath: DirtFlies
+      value: 
+      objectReference: {fileID: 1666488799}
     - target: {fileID: 5728010809794395275, guid: 314bdea1f12607d4bb976ad6d30213ae,
         type: 3}
       propertyPath: m_LocalPosition.x

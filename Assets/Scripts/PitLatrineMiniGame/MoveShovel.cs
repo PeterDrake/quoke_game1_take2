@@ -13,8 +13,13 @@ public class MoveShovel : MonoBehaviour
     public GameObject Dirt2;
     public GameObject Dirt3;    //Dirt on the shovel
     public GameObject Water;
-    
-    
+    public ParticleSystem DirtFlies;
+
+    private void Start()
+    {
+        DirtFlies.Stop();
+    }
+
     public void Dig()
     {
         StartCoroutine(nameof(DigVertically));
@@ -31,6 +36,10 @@ public class MoveShovel : MonoBehaviour
             yield return new WaitForSeconds(0.0005f);
         }
 
+        DirtFlies.Play();
+        
+        yield return new WaitForSeconds(0.5f);
+        
         MakePitAppear();
         
         Dirt3.SetActive(true); //Dirt on the shovel
@@ -43,9 +52,9 @@ public class MoveShovel : MonoBehaviour
             yield return new WaitForSeconds(0.0005f);
         }
 
-        MakeDirtAppear();
-        
         Dirt3.SetActive(false);
+        MakeDirtAppear();
+        DirtFlies.Stop();
         
         //Moves shovel to the start position
         transform.position = new Vector3(73.04f, 0.14f * movementSpeed * Time.deltaTime, transform.position.z);
@@ -57,13 +66,11 @@ public class MoveShovel : MonoBehaviour
         if (Pit1.activeSelf == true)
         {
             Pit2.SetActive(true);
-            //Dirt2.SetActive(true);
             Water.SetActive(true);
         }
         else
         {
             Pit1.SetActive(true);
-            //Dirt1.SetActive(true);
         }
     }
 
