@@ -1995,6 +1995,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffe16f9903d0b604aab93d16dfb3281d, type: 3}
+--- !u!1 &271308785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 176646, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1335876609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &284001795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7760,6 +7766,83 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 509a08e0f20d5c84d8f1d9fec3603792, type: 3}
+--- !u!1001 &1335876609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5006512736152580384}
+    m_Modifications:
+    - target: {fileID: 176646, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_Name
+      value: Dirt3
+      objectReference: {fileID: 0}
+    - target: {fileID: 176646, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.00125
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.01543
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.1929949
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4769605
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.14885853
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8444541
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 10.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -61.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -26.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 405492, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0032499998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326442, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f03c416766dc84e47a29be69ecf13208, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cd7f93b8e6d2774eb99e9517c1f5f8c, type: 3}
 --- !u!1001 &1341223524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9568,7 +9651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &1666488798
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -17175,6 +17258,11 @@ PrefabInstance:
       propertyPath: Water
       value: 
       objectReference: {fileID: 1815745245}
+    - target: {fileID: 722633905614999347, guid: 314bdea1f12607d4bb976ad6d30213ae,
+        type: 3}
+      propertyPath: Dirt3
+      value: 
+      objectReference: {fileID: 271308785}
     - target: {fileID: 5728010809794395275, guid: 314bdea1f12607d4bb976ad6d30213ae,
         type: 3}
       propertyPath: m_LocalPosition.x
