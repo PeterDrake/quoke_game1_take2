@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac59c6faa91447cd9b7460a5b73b752, type: 3}
   m_Name: TabletUsage
   m_EditorClassIdentifier: 
-  ActionWord: Add Tablet
+  ActionWord: Add 4 tablets
