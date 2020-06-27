@@ -34,9 +34,13 @@ public class MoveShovel : MonoBehaviour
             Vector3 Target = new Vector3(transform.position.x, -10, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
             yield return new WaitForSeconds(0.0005f);
+            if (transform.position.y < -0.4)
+            {
+                DirtFlies.Play();
+            }
         }
 
-        DirtFlies.Play();
+        
         
         yield return new WaitForSeconds(0.5f);
         

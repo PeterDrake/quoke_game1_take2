@@ -15,7 +15,7 @@ public class WaterFillsPond : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.localScale.x < 0.5f)
+        if (transform.localScale.x < 0.3f)
         {
             transform.localScale += scaleChange;
         }
