@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tre New Head
   m_EditorClassIdentifier: 
   speech: Hey how is that toilet coming along?
-  optionOneText: All ready for you.
+  optionOneText: It's all set up.
   optionOne: {fileID: 11400000, guid: f071e77b053c64ffb80ee6920c1d8d8a, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

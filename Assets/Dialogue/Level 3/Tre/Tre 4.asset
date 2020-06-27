@@ -12,10 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Tre 4
   m_EditorClassIdentifier: 
-  speech: I'm in line when you get that thing built. Buckets only last so long, you
-    know?
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: Good luck. I'd offter to share my bucket toilet but...
+  optionOneText: Yeah, no, that's ok.
+  optionOne: {fileID: 11400000, guid: f071e77b053c64ffb80ee6920c1d8d8a, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
