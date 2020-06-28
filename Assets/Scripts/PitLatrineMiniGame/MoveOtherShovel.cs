@@ -19,6 +19,7 @@ public class MoveOtherShovel : MonoBehaviour
     private void Start()
     {
         DirtFlies.Stop();
+        //Stop all coroutines
     }
 
     public void Dig()
@@ -65,7 +66,19 @@ public class MoveOtherShovel : MonoBehaviour
 
     private void MakePitAppear()
     {
-        if (Pit1.activeSelf == true)
+        if (Pit3.activeSelf)
+        {
+            Pit2.SetActive(false);
+            //disable buttons while pit 3 gets smaller and smaller
+            //display message canvas
+        }
+        
+        else if (Pit2.activeSelf)
+        {
+            Pit3.SetActive(true);
+        }
+        
+        else if (Pit1.activeSelf)
         {
             Pit2.SetActive(true);
         }
@@ -77,7 +90,17 @@ public class MoveOtherShovel : MonoBehaviour
 
     private void MakeDirtAppear()
     {
-        if (Dirt1.activeSelf == true)
+        if (Dirt3.activeSelf)
+        {
+            Dirt4.SetActive(true);
+        }
+        
+        else if (Dirt2.activeSelf)
+        {
+            Dirt3.SetActive(true);
+        }
+        
+        else if (Dirt1.activeSelf)
         {
             Dirt2.SetActive(true);
         }
@@ -86,4 +109,5 @@ public class MoveOtherShovel : MonoBehaviour
             Dirt1.SetActive(true);
         }
     }
+
 }

@@ -1588,7 +1588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.82
+      value: 5.97
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1632,7 +1632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.12
+      value: 0.102
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalScale.y
@@ -13717,7 +13717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.79
+      value: 5.97
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13769,7 +13769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316265118851238, guid: d7ef0a4417e3c154bb14482f7b5e018b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.09
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: 23479254153191138, guid: d7ef0a4417e3c154bb14482f7b5e018b,
         type: 3}
@@ -14556,6 +14556,8 @@ MonoBehaviour:
   Water: {fileID: 1815745245}
   ErrorScreen: {fileID: 364409169}
   TryHighGround: {fileID: 1743689748}
+  S2Pit2: {fileID: 1064380707}
+  S2Pit3: {fileID: 1622709211}
   Use: {fileID: 1032178335}
   Dig: {fileID: 1472520561}
   Dig2: {fileID: 453973414}
@@ -15635,6 +15637,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1287020741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622709216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622709211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0946194015137b0419d37f2794c7ba9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1626712982
 GameObject:
   m_ObjectHideFlags: 0

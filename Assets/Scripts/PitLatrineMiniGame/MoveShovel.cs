@@ -40,8 +40,6 @@ public class MoveShovel : MonoBehaviour
                 DirtFlies.Play();
             }
         }
-
-        
         
         yield return new WaitForSeconds(0.5f);
         

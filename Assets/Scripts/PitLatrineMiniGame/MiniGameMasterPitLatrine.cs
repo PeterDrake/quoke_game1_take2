@@ -18,6 +18,9 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
 
+    public GameObject S2Pit2;
+    public GameObject S2Pit3;
+
     public GameObject Use;
     public GameObject Dig;
     public GameObject Dig2;
@@ -57,6 +60,14 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 StartCoroutine(nameof(TryElsewhere));
             }
         }
+
+        else
+        {
+            if (S2Pit3.activeSelf && !S2Pit2.activeSelf)
+            {
+                //StartCoroutine(nameof(TooDeep));
+            }
+        }
     }
     
     private IEnumerator TooShallow()
@@ -66,6 +77,11 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         ErrorScreen.SetActive(false);
         UseClicked = false;
     }
+
+   /* private IEnumerator TooDeep()
+    {
+        
+    }*/
     
     private void UseIsClicked()
     {
