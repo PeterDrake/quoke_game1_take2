@@ -5,6 +5,7 @@ using UnityEngine;
 public class MoveOtherShovel : MonoBehaviour
 {
     private float movementSpeed = 0.5f;
+    private bool Check;
 
     public GameObject Pit1;
     public GameObject Pit2;
@@ -68,18 +69,26 @@ public class MoveOtherShovel : MonoBehaviour
     {
         if (Pit3.activeSelf)
         {
-            Pit2.SetActive(false);
-            //disable buttons while pit 3 gets smaller and smaller
-            //display message canvas
+            //Pit2.SetActive(false) happens in Erosion script attached to Pit3
+            Check = false;
+        }
+        
+        else if (Pit2.activeSelf && Check)
+        {
+            Pit3.SetActive(true);
+            Pit3.transform.localScale = new Vector3(0.2f, 0.01f, 0.12f);
+            Check = false;
         }
         
         else if (Pit2.activeSelf)
         {
-            Pit3.SetActive(true);
+            Check = true;
+            Pit2.transform.localScale = new Vector3(0.16f, 0.01f, 0.09f);
         }
         
         else if (Pit1.activeSelf)
         {
+            Pit2.transform.localScale = new Vector3(0.1f, 0.01f, 0.09f);
             Pit2.SetActive(true);
         }
         else

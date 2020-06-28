@@ -18,6 +18,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
 
+    public GameObject S2Pit1;
     public GameObject S2Pit2;
     public GameObject S2Pit3;
 
@@ -63,10 +64,12 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
         else
         {
-            if (S2Pit3.activeSelf && !S2Pit2.activeSelf)
+            if (!S2Pit2.activeSelf && !S2Pit3 && S2Pit1 && UseClicked)
             {
-                //StartCoroutine(nameof(TooDeep));
+                StartCoroutine(nameof(TooShallow));
             }
+            
+            
         }
     }
     
