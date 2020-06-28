@@ -20,6 +20,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     public GameObject Use;
     public GameObject Dig;
+    public GameObject Dig2;
 
     public void Start()
     {
@@ -27,12 +28,16 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         {
             S1Folder.SetActive(true);
             S2Folder.SetActive(false);
+            Dig.SetActive(true);
+            Dig2.SetActive(false);
         }
 
         else
         {
             S1Folder.SetActive(false);
             S2Folder.SetActive(true);
+            Dig.SetActive(false);
+            Dig2.SetActive(true);
         }
     }
     

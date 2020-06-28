@@ -7,6 +7,7 @@ public class MoveShovel : MonoBehaviour
 {
     private float movementSpeed = 0.5f;
 
+    //public GameObject Shovel1;
     public GameObject Pit1;
     public GameObject Pit2;
     public GameObject Dirt1;
@@ -18,6 +19,7 @@ public class MoveShovel : MonoBehaviour
     private void Start()
     {
         DirtFlies.Stop();
+        //StopCoroutine(nameof(DigVertically));
     }
 
     public void Dig()

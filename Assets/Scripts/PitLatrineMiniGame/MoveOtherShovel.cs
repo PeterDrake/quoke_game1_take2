@@ -29,18 +29,16 @@ public class MoveOtherShovel : MonoBehaviour
     private IEnumerator DigVertically()
     {
         //Moves shovel down
-        while (transform.position.y > -0.8f)
+        while (transform.position.y > 1f)
         {
-            Vector3 Target = new Vector3(transform.position.x, -10, transform.position.z);
+            Vector3 Target = new Vector3(transform.position.x, -5, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
             yield return new WaitForSeconds(0.0005f);
-            if (transform.position.y < -0.4)
+            if (transform.position.y < 1.07)
             {
                 DirtFlies.Play();
             }
         }
-
-        
         
         yield return new WaitForSeconds(0.5f);
         
@@ -49,9 +47,9 @@ public class MoveOtherShovel : MonoBehaviour
         Dirt5.SetActive(true); //Dirt on the shovel
 
         //Moves shovel to the side
-        while (transform.position.x > 71.81f && transform.position.y<1)
+        while (transform.position.x > 77 && transform.position.y<1.41)
         {
-            Vector3 Target = new Vector3(71, 0.5f, transform.position.z);
+            Vector3 Target = new Vector3(77, 1.4f, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
             yield return new WaitForSeconds(0.0005f);
         }
@@ -59,12 +57,9 @@ public class MoveOtherShovel : MonoBehaviour
         Dirt5.SetActive(false);
         MakeDirtAppear();
         DirtFlies.Stop();
-        if (Dirt2.activeSelf == true)
-        {
-            //Water.SetActive(true);
-        }
+        
         //Moves shovel to the start position
-        transform.position = new Vector3(73.04f, 0.14f * movementSpeed * Time.deltaTime, transform.position.z);
+        transform.position = new Vector3(78.34f, 1.42f, transform.position.z);
         
     }
 
@@ -73,7 +68,6 @@ public class MoveOtherShovel : MonoBehaviour
         if (Pit1.activeSelf == true)
         {
             Pit2.SetActive(true);
-            //Water.SetActive(true);
         }
         else
         {
