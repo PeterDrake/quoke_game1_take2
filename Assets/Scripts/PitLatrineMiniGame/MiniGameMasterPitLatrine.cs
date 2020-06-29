@@ -10,6 +10,8 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public bool Situation1;    //Low ground
     public bool Situation2;    //High ground
     public bool UseClicked;
+    private bool check;
+    private float timer;
     
     public GameObject S1Folder;
     public GameObject S2Folder;
@@ -18,6 +20,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
+    public GameObject ErosionScreen;
     public GameObject WinScreen;
 
     public GameObject S2Pit1;
@@ -77,8 +80,18 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 Dig2.SetActive(false);
                 WinScreen.SetActive(true);
             }
-            
-            
+
+            if (S2Pit3.activeSelf && !check)
+            {
+                check = true;
+                StartCoroutine(nameof(TooDeep));
+                //StartCoroutine(nameof(CloseErosionScreen));
+            }
+
+            if (!S2Pit3.activeSelf)
+            {
+                check = false;
+            }
         }
     }
     
@@ -90,11 +103,18 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         UseClicked = false;
     }
 
-   /* private IEnumerator TooDeep()
+    private IEnumerator TooDeep()
     {
-        
-    }*/
-    
+        Dig2.SetActive(false);
+        Use.SetActive(false);
+        yield return new WaitForSeconds(3f);
+        ErosionScreen.SetActive(true);
+        yield return new WaitForSeconds(3f); 
+        ErosionScreen.SetActive(false);
+        Dig2.SetActive(true);
+        Use.SetActive(true);
+    }
+
     private void UseIsClicked()
     {
         UseClicked = true;
