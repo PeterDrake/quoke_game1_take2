@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Zelda 4 Gun
+  m_Name: Zelda Gun 1
   m_EditorClassIdentifier: 
-  speech: Thanks Mo... wait, is that a gun?
+  speech: If you need a place to crash, I've got a tent... wait, is that a gun?
   optionOneText: 'Yeah. '
   optionOne: {fileID: 11400000, guid: 849a2b9c39fc1417e909a6a3bf20b4ec, type: 2}
   optionTwoText: 

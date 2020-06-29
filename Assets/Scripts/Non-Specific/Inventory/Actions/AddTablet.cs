@@ -8,9 +8,12 @@ public class AddTablet : ItemAction
         Item item;
         if (Systems.Inventory.HasItem((item = Resources.Load<Item>("Items/DirtyMustardWater")), 1))
         {
+            Systems.Inventory.RemoveItem(Resources.Load<Item>("Items/PurificationTablet"), 4);
             Systems.Inventory.RemoveItem(item, 1);
             Systems.Inventory.AddItem(Resources.Load<Item>("Items/CleanMustardWater"), 1);
+            
         }
+
         return false;
     }
 }

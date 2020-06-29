@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Tre Next
+  m_Name: Zelda Trade New Head
   m_EditorClassIdentifier: 
-  speech: Yea I get that..
-  optionOneText: We're trying to set up a pit latrine. We need a rope to hang up
-    a tarp. Any idea where I could find one?
-  optionOne: {fileID: 11400000, guid: cdf3dbd533555424eb1f5088e34d2dae, type: 2}
+  speech: I'm so thirsty! Do you have any water?
+  optionOneText: Yes, I do.
+  optionOne: {fileID: 11400000, guid: 61dd7d6f5d51149f3832286f88cf82ac, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
-  optionOneTextAlt: 
-  optionOneAlt: {fileID: 0}
+  - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
+  optionOneTextAlt: 'I''ll go see if I can find some. '
+  optionOneAlt: {fileID: 11400000, guid: e2356adc9687b124ba15150827eacc65, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
