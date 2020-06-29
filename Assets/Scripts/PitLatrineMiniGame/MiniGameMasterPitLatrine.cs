@@ -9,9 +9,9 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 {
     public bool Situation1;    //Low ground
     public bool Situation2;    //High ground
+    public GameObject Camera;
     public bool UseClicked;
     private bool check;
-    private float timer;
     
     public GameObject S1Folder;
     public GameObject S2Folder;
@@ -35,6 +35,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     {
         if (Situation1)
         {
+            Camera.transform.position = new Vector3(72.409f, 1.763f, -139.003f);
             S1Folder.SetActive(true);
             S2Folder.SetActive(false);
             Dig.SetActive(true);
@@ -43,6 +44,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
         else
         {
+            Camera.transform.position = new Vector3(77.6f, 2.9f, -134.4f);
             S1Folder.SetActive(false);
             S2Folder.SetActive(true);
             Dig.SetActive(false);
@@ -85,7 +87,6 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             {
                 check = true;
                 StartCoroutine(nameof(TooDeep));
-                //StartCoroutine(nameof(CloseErosionScreen));
             }
 
             if (!S2Pit3.activeSelf)
