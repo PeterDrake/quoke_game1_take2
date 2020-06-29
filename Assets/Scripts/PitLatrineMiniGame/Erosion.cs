@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Erosion : MonoBehaviour
 {
+    //This script is used in Situation2, after digging 4 times the erosion happens
+    //Attached to S2Pit3
+    
     private Vector3 scaleChange;
-    private bool check;
     public GameObject Pit2;
     public GameObject Pit3;
     public GameObject Shovel;
@@ -30,7 +32,6 @@ public class Erosion : MonoBehaviour
             
             else
             {
-                check = false;
                 Pit3.SetActive(false);
             }
         }
