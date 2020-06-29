@@ -15,8 +15,10 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject S2Folder;
     public GameObject S1Pit2;
     public GameObject Water;
+    
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
+    public GameObject WinScreen;
 
     public GameObject S2Pit1;
     public GameObject S2Pit2;
@@ -64,9 +66,16 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
         else
         {
-            if (!S2Pit2.activeSelf && !S2Pit3 && S2Pit1 && UseClicked)
+            if (!S2Pit2.activeSelf && !S2Pit3.activeSelf && UseClicked)
             {
                 StartCoroutine(nameof(TooShallow));
+            }
+
+            if (S2Pit2.activeSelf && !S2Pit3.activeSelf && UseClicked)
+            {
+                Use.SetActive(false);
+                Dig2.SetActive(false);
+                WinScreen.SetActive(true);
             }
             
             
@@ -95,6 +104,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         TryHighGround.SetActive(true);
+        UseClicked = false;
     }
-    
+
 }
