@@ -1555,7 +1555,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: this was too deep and caused erosion. try again
+  m_Text: this was too deep and the hole collapsed. try again
 --- !u!222 &138548617
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9296,6 +9296,10 @@ MonoBehaviour:
   Dirt3: {fileID: 696159559}
   Dirt4: {fileID: 1238973251}
   Dirt5: {fileID: 1197770727}
+  Depth1: {fileID: 344212891}
+  Depth2: {fileID: 1503388282}
+  Depth3: {fileID: 1457064627}
+  Depth4: {fileID: 1069713960}
   DirtFlies: {fileID: 453649422}
 --- !u!1 &519569760 stripped
 GameObject:
@@ -15815,8 +15819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed305087499574f859e4aa071951fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Situation1: 1
-  Situation2: 0
+  Situation1: 0
+  Situation2: 1
   Camera: {fileID: 1658197137}
   UseClicked: 0
   S1Folder: {fileID: 1661880625}
@@ -15832,8 +15836,6 @@ MonoBehaviour:
   WinScreen: {fileID: 689588163}
   Depth1: {fileID: 344212891}
   Depth2: {fileID: 1503388282}
-  Depth3: {fileID: 1457064627}
-  Depth4: {fileID: 1069713960}
   Use: {fileID: 1032178335}
   Dig: {fileID: 1472520561}
   Dig2: {fileID: 453973414}
@@ -17177,6 +17179,7 @@ MonoBehaviour:
   Pit2: {fileID: 1064380707}
   Pit3: {fileID: 1622709211}
   Shovel: {fileID: 506792029}
+  Depth4: {fileID: 1069713960}
 --- !u!1 &1626712982
 GameObject:
   m_ObjectHideFlags: 0
