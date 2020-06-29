@@ -16164,8 +16164,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2.251358}
-  m_Center: {x: 0, y: 0, z: -1.3481582}
+  m_Size: {x: 1, y: 1, z: 0.99258447}
+  m_Center: {x: 0, y: 0, z: -0.7187711}
 --- !u!23 &881531983
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28582,8 +28582,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 8.826372}
-  m_Center: {x: 0, y: 0, z: 9.368502}
+  m_Size: {x: 1, y: 1, z: 4.4219775}
+  m_Center: {x: 0, y: 0, z: 7.1663}
 --- !u!23 &1506879587
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30648,7 +30648,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -30945,6 +30945,36 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[8].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[9].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[9].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[9].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[9].m_Target
+      value: 
+      objectReference: {fileID: 750603463}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[9].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[9].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232355, guid: 21a8bd79396454dc8a320f82efe24b84,
@@ -39706,8 +39736,11 @@ MonoBehaviour:
     Press ''I'' to get the inventory
 
 
-    Press
+    Hold
     ''C'' to crouch
+
+
+    Click dialogue box to keep talking, and ''bye'' to leave
 
 '
 --- !u!222 &2000796664
@@ -63918,6 +63951,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8834850651097803577}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &8834850651097803580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8834850651097803579}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8811889, y: 2.7995355, z: 1.1577456}
+  m_Center: {x: 0.00000047683716, y: 1.3997678, z: -1.6155871e-27}
 --- !u!1001 &8834850651098590033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67813,7 +67859,7 @@ BoxCollider:
   m_GameObject: {fileID: 8834850651272607957}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 6.9999995, y: 3, z: 4.065722}
   m_Center: {x: -2.4999938, y: 0, z: -1.8722382}
@@ -83812,7 +83858,7 @@ BoxCollider:
   m_GameObject: {fileID: 8834850651925251412}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 5.0000024, y: 1.8390884, z: 2.552745}
   m_Center: {x: -2.5000012, y: 0.6488812, z: 0.6701792}
@@ -94549,7 +94595,7 @@ MeshCollider:
   m_GameObject: {fileID: 8834850650362396548}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
