@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaterFillsPond : MonoBehaviour
 {
+    //This script is used for filling the pond in situation 1
+    
     private Vector3 scaleChange;
     
     // Start is called before the first frame update

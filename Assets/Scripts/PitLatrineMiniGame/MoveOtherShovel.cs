@@ -20,7 +20,6 @@ public class MoveOtherShovel : MonoBehaviour
     private void Start()
     {
         DirtFlies.Stop();
-        //Stop all coroutines
     }
 
     public void Dig()
@@ -70,7 +69,7 @@ public class MoveOtherShovel : MonoBehaviour
         if (Pit3.activeSelf)
         {
             //Pit2.SetActive(false) happens in Erosion script attached to Pit3
-            Check = false;
+            Check = false;    //Check is used to see if Pit2 is active AND increased in size, which is case3
         }
         
         else if (Pit2.activeSelf && Check)

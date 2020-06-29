@@ -1,9 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.PackageManager;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityStandardAssets.Water;
 
 public class MiniGameMasterPitLatrine : MonoBehaviour
 {
@@ -17,19 +13,17 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject S2Folder;
     public GameObject S1Pit2;
     public GameObject Water;
-    
+    public GameObject S2Pit2;
+    public GameObject S2Pit3;
+        
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
-
-    public GameObject S2Pit1;
-    public GameObject S2Pit2;
-    public GameObject S2Pit3;
-
+    
     public GameObject Use;
-    public GameObject Dig;
-    public GameObject Dig2;
+    public GameObject Dig;    //Button for S1
+    public GameObject Dig2;    //Button for S2
 
     public void Start()
     {
@@ -56,12 +50,12 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     {
         if (Situation1)
         {
-            if (S1Pit2.activeSelf == false && UseClicked==true)
+            if (S1Pit2.activeSelf == false && UseClicked)
             {
                 StartCoroutine(nameof(TooShallow));
             }
 
-            if (Water.activeSelf==true)
+            if (Water.activeSelf)
             {
                 Use.SetActive(false);
                 Dig.SetActive(false);

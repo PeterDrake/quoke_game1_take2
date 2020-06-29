@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
 public class MoveShovel : MonoBehaviour
@@ -19,7 +17,6 @@ public class MoveShovel : MonoBehaviour
     private void Start()
     {
         DirtFlies.Stop();
-        //StopCoroutine(nameof(DigVertically));
     }
 
     public void Dig()
@@ -42,9 +39,7 @@ public class MoveShovel : MonoBehaviour
         }
         
         yield return new WaitForSeconds(0.5f);
-        
         MakePitAppear();
-        
         Dirt3.SetActive(true); //Dirt on the shovel
 
         //Moves shovel to the side
@@ -58,7 +53,8 @@ public class MoveShovel : MonoBehaviour
         Dirt3.SetActive(false);
         MakeDirtAppear();
         DirtFlies.Stop();
-        if (Dirt2.activeSelf == true)
+        
+        if (Dirt2.activeSelf)
         {
             Water.SetActive(true);
         }
@@ -69,10 +65,9 @@ public class MoveShovel : MonoBehaviour
 
     private void MakePitAppear()
     {
-        if (Pit1.activeSelf == true)
+        if (Pit1.activeSelf)
         {
             Pit2.SetActive(true);
-            //Water.SetActive(true);
         }
         else
         {
