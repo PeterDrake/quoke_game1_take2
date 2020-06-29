@@ -12,19 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Zelda 3
   m_EditorClassIdentifier: 
-  speech: 'It''s short for Tsunami. Where could he have run off to? He''s got to
-    be scared and hungry! I hope he''s not hurt. I''m Zelda, by the way. '
-  optionOneText: I'm Mo.
-  optionOne: {fileID: 11400000, guid: ab6fa112f5b36496686d153814731ff2, type: 2}
+  speech: 'He''s got to be scared and hungry! I hope he''s not hurt. I thought he''d
+    come back when the shaking stopped, but... '
+  optionOneText: I'm sorry. I'll keep an eye out for him.
+  optionOne: {fileID: 11400000, guid: f47e5c992c97f5046a8a7a6c471f9d96, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 11400000, guid: 9f9dd90bc6e5d43cab619f717ed34e9d, type: 2}
-  IfRequirementsOne:
-  - {fileID: 11400000, guid: 3893671c334b24b458fd142e3af1323f, type: 2}
-  optionOneTextAlt: I'm Mo.
-  optionOneAlt: {fileID: 11400000, guid: f47e5c992c97f5046a8a7a6c471f9d96, type: 2}
+  NewHead: {fileID: 11400000, guid: 3bc6df00ad0d0f84bb1c6e4fd787d0fc, type: 2}
+  IfRequirementsOne: []
+  optionOneTextAlt: 
+  optionOneAlt: {fileID: 0}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}

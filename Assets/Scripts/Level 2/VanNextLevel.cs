@@ -9,7 +9,6 @@ public class VanNextLevel : MonoBehaviour
     private const string SATISFIED = "Press 'E' to rest in Ahmad's van";
     private const string NOT_SATISFIED = "";
     public UIElement winCanvas;
-    
     private InteractWithObject _interact;
     private bool _satisfied;
     
@@ -18,7 +17,8 @@ public class VanNextLevel : MonoBehaviour
         _interact = GetComponent<InteractWithObject>();
         Systems.Objectives.Register(EventKey,() => _satisfied = true);
     }
-    
+
+
     public void OnEnter()
     {
         _interact.SetInteractText(_satisfied? SATISFIED:NOT_SATISFIED);
@@ -27,6 +27,9 @@ public class VanNextLevel : MonoBehaviour
     public void Interact()
     {
         if (_satisfied)
-           UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
+        {
+            UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
+
+        }
     }
 }

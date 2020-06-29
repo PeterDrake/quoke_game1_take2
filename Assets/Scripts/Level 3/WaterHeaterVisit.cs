@@ -36,10 +36,11 @@ public class WaterHeaterVisit : MonoBehaviour
         {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
+            _interact.enabled = false;
         }
         else
         {
-            _interact.SetInteractText("Go Talk to Frank");
+            _interact.SetInteractText("Go talk to Frank about water");
 
         }
 

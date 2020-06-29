@@ -7,7 +7,7 @@ public class WinDisplayer : UIElement
     private void Start()
     {
         locked = true;
-        pauseOnOpen = true;
+        //pauseOnOpen = true;
     }
 
     public override void Open()

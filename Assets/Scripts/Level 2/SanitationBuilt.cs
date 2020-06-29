@@ -59,6 +59,7 @@ public class SanitationBuilt : MonoBehaviour
         {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
+            _interact.enabled = false;
         }
         else
         {
@@ -105,6 +106,7 @@ public class SanitationBuilt : MonoBehaviour
         camera.SetActive(true);
         vcam.SetActive(true);
         sunlight.SetActive(true);
+        _interact.enabled = true;
     }
     private void MiniGameFinished()//this is not getting called
     {
