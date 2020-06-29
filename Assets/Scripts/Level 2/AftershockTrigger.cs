@@ -12,7 +12,7 @@ public class AftershockTrigger : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("CHANGE TO TWO");
-        QuakeManager.Instance.TriggerCountdown(2f);
+        QuakeManager.Instance.TriggerCountdown(5f);
         aftershock = true;
         _canvas.ChangeText("Have a look around...");
         Logger.Instance.Log("Player has left the house");

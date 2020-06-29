@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: A7
+  m_Name: TsuBark
   m_EditorClassIdentifier: 
-  speech: You should probably get to work on that.
-  optionOneText: 
+  speech: Woof! Woof!
+  optionOneText: Oops, wrong car.
   optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
