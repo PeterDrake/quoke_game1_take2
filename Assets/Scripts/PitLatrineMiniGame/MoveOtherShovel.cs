@@ -19,13 +19,7 @@ public class MoveOtherShovel : MonoBehaviour
     public GameObject Depth2;
     public GameObject Depth3;
     public GameObject Depth4;
-    public ParticleSystem DirtFlies;
-
-    private void Start()
-    {
-        DirtFlies.Stop();
-    }
-
+    
     public void Dig()
     {
         StartCoroutine(nameof(DigVertically));
@@ -39,10 +33,6 @@ public class MoveOtherShovel : MonoBehaviour
             Vector3 Target = new Vector3(transform.position.x, -5, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
             yield return new WaitForSeconds(0.0005f);
-            if (transform.position.y < 1.07)
-            {
-                DirtFlies.Play();
-            }
         }
         
         yield return new WaitForSeconds(0.5f);
@@ -61,7 +51,6 @@ public class MoveOtherShovel : MonoBehaviour
 
         Dirt5.SetActive(false);
         MakeDirtAppear();
-        DirtFlies.Stop();
         
         //Moves shovel to the start position
         transform.position = new Vector3(78.34f, 1.42f, transform.position.z);
