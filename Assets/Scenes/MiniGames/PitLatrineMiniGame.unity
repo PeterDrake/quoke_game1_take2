@@ -14174,7 +14174,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 9ce32161bfb0e7f4fa36a2d8df7ed8a3, type: 3}
 --- !u!1001 &1287020741
@@ -15028,8 +15028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed305087499574f859e4aa071951fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Situation1: 1
-  Situation2: 0
+  Situation1: 0
+  Situation2: 1
   Camera: {fileID: 1658197137}
   UseClicked: 0
   S1Folder: {fileID: 1661880625}
