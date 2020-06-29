@@ -11,6 +11,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     
     public GameObject S1Folder;
     public GameObject S2Folder;
+    public GameObject S1Pit1;
     public GameObject S1Pit2;
     public GameObject Water;
     public GameObject S2Pit2;
@@ -20,6 +21,10 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
+    public GameObject Depth1;
+    public GameObject Depth2;
+    public GameObject Depth3;
+    public GameObject Depth4;
     
     public GameObject Use;
     public GameObject Dig;    //Button for S1
@@ -50,6 +55,16 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     {
         if (Situation1)
         {
+            if (S1Pit1.activeSelf)
+            {
+                Depth1.SetActive(true);
+            }
+
+            if (S1Pit2.activeSelf)
+            {
+                Depth2.SetActive(true);
+            }
+            
             if (S1Pit2.activeSelf == false && UseClicked)
             {
                 StartCoroutine(nameof(TooShallow));
