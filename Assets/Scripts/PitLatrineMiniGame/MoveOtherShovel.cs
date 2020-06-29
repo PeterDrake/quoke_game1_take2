@@ -15,6 +15,10 @@ public class MoveOtherShovel : MonoBehaviour
     public GameObject Dirt3;
     public GameObject Dirt4;
     public GameObject Dirt5;    //Dirt on the shovel
+    public GameObject Depth1;
+    public GameObject Depth2;
+    public GameObject Depth3;
+    public GameObject Depth4;
     public ParticleSystem DirtFlies;
 
     private void Start()
@@ -70,6 +74,7 @@ public class MoveOtherShovel : MonoBehaviour
         {
             //Pit2.SetActive(false) happens in Erosion script attached to Pit3
             Check = false;    //Check is used to see if Pit2 is active AND increased in size, which is case3
+            //Disabling Depth4 happens in Erosion script
         }
         
         else if (Pit2.activeSelf && Check)
@@ -77,22 +82,31 @@ public class MoveOtherShovel : MonoBehaviour
             Pit3.SetActive(true);
             Pit3.transform.localScale = new Vector3(0.2f, 0.01f, 0.12f);
             Check = false;
+            Depth4.SetActive(true);
+            Depth3.SetActive(false);
         }
         
         else if (Pit2.activeSelf)
         {
             Check = true;
             Pit2.transform.localScale = new Vector3(0.16f, 0.01f, 0.09f);
+            Depth3.SetActive(true);
+            Depth2.SetActive(false);
         }
         
         else if (Pit1.activeSelf)
         {
             Pit2.transform.localScale = new Vector3(0.1f, 0.01f, 0.09f);
             Pit2.SetActive(true);
+            Depth2.SetActive(true);
         }
         else
         {
+            Depth2.SetActive(false);
+            Depth3.SetActive(false);
+            Depth4.SetActive(false);
             Pit1.SetActive(true);
+            Depth1.SetActive(true);
         }
     }
 

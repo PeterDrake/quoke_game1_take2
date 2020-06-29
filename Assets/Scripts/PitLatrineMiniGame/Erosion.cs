@@ -11,6 +11,7 @@ public class Erosion : MonoBehaviour
     public GameObject Pit2;
     public GameObject Pit3;
     public GameObject Shovel;
+    public GameObject Depth4;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,7 @@ public class Erosion : MonoBehaviour
             else
             {
                 Pit3.SetActive(false);
+                Depth4.SetActive(false);
             }
         }
         

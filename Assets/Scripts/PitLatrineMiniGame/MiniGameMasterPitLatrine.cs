@@ -22,9 +22,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject ErosionScreen;
     public GameObject WinScreen;
     public GameObject Depth1;
-    public GameObject Depth2;
-    public GameObject Depth3;
-    public GameObject Depth4;
+    public GameObject Depth2; //Depths 3 and 4 are regulated in MoveOtherShovel script
     
     public GameObject Use;
     public GameObject Dig;    //Button for S1
