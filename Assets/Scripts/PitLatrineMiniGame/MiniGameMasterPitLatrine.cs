@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MiniGameMasterPitLatrine : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public bool UseClicked;
     private bool check;
     
+    public UnityAction OnWin;
+    public UnityAction OnExit;
+    public GameObject Win;
+    
     public GameObject S1Folder;
     public GameObject S2Folder;
+    public GameObject S1Pit1;
     public GameObject S1Pit2;
     public GameObject Water;
     public GameObject S2Pit2;
@@ -20,6 +26,8 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
+    public GameObject Depth1;
+    public GameObject Depth2; //Depths 3 and 4 are regulated in MoveOtherShovel script
     
     public GameObject Use;
     public GameObject Dig;    //Button for S1
@@ -27,7 +35,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     public void Start()
     {
-        if (Situation1)
+        if (S1Folder.activeSelf)
         {
             Camera.transform.position = new Vector3(72.409f, 1.763f, -139.003f);
             S1Folder.SetActive(true);
@@ -48,8 +56,18 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     
     public void Update()
     {
-        if (Situation1)
+        if (S1Folder.activeSelf)
         {
+            if (S1Pit1.activeSelf)
+            {
+                Depth1.SetActive(true);
+            }
+
+            if (S1Pit2.activeSelf)
+            {
+                Depth2.SetActive(true);
+            }
+            
             if (S1Pit2.activeSelf == false && UseClicked)
             {
                 StartCoroutine(nameof(TooShallow));
@@ -120,6 +138,16 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         yield return new WaitForSeconds(3f);
         TryHighGround.SetActive(true);
         UseClicked = false;
+    }
+    
+    public void Leave()
+    {
+        OnExit.Invoke();
+    }
+    
+    public void WinLeave()
+    {
+        OnWin.Invoke();
     }
 
 }

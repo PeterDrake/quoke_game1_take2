@@ -15,13 +15,11 @@ public class MoveOtherShovel : MonoBehaviour
     public GameObject Dirt3;
     public GameObject Dirt4;
     public GameObject Dirt5;    //Dirt on the shovel
-    public ParticleSystem DirtFlies;
-
-    private void Start()
-    {
-        DirtFlies.Stop();
-    }
-
+    public GameObject Depth1;
+    public GameObject Depth2;
+    public GameObject Depth3;
+    public GameObject Depth4;
+    
     public void Dig()
     {
         StartCoroutine(nameof(DigVertically));
@@ -35,10 +33,6 @@ public class MoveOtherShovel : MonoBehaviour
             Vector3 Target = new Vector3(transform.position.x, -5, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
             yield return new WaitForSeconds(0.0005f);
-            if (transform.position.y < 1.07)
-            {
-                DirtFlies.Play();
-            }
         }
         
         yield return new WaitForSeconds(0.5f);
@@ -57,7 +51,6 @@ public class MoveOtherShovel : MonoBehaviour
 
         Dirt5.SetActive(false);
         MakeDirtAppear();
-        DirtFlies.Stop();
         
         //Moves shovel to the start position
         transform.position = new Vector3(78.34f, 1.42f, transform.position.z);
@@ -70,6 +63,7 @@ public class MoveOtherShovel : MonoBehaviour
         {
             //Pit2.SetActive(false) happens in Erosion script attached to Pit3
             Check = false;    //Check is used to see if Pit2 is active AND increased in size, which is case3
+            //Disabling Depth4 happens in Erosion script
         }
         
         else if (Pit2.activeSelf && Check)
@@ -77,22 +71,31 @@ public class MoveOtherShovel : MonoBehaviour
             Pit3.SetActive(true);
             Pit3.transform.localScale = new Vector3(0.2f, 0.01f, 0.12f);
             Check = false;
+            Depth4.SetActive(true);
+            Depth3.SetActive(false);
         }
         
         else if (Pit2.activeSelf)
         {
             Check = true;
             Pit2.transform.localScale = new Vector3(0.16f, 0.01f, 0.09f);
+            Depth3.SetActive(true);
+            Depth2.SetActive(false);
         }
         
         else if (Pit1.activeSelf)
         {
             Pit2.transform.localScale = new Vector3(0.1f, 0.01f, 0.09f);
             Pit2.SetActive(true);
+            Depth2.SetActive(true);
         }
         else
         {
+            Depth2.SetActive(false);
+            Depth3.SetActive(false);
+            Depth4.SetActive(false);
             Pit1.SetActive(true);
+            Depth1.SetActive(true);
         }
     }
 

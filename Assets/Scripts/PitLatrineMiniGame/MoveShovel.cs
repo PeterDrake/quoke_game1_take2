@@ -12,12 +12,6 @@ public class MoveShovel : MonoBehaviour
     public GameObject Dirt2;
     public GameObject Dirt3;    //Dirt on the shovel
     public GameObject Water;
-    public ParticleSystem DirtFlies;
-
-    private void Start()
-    {
-        DirtFlies.Stop();
-    }
 
     public void Dig()
     {
@@ -32,10 +26,6 @@ public class MoveShovel : MonoBehaviour
             Vector3 Target = new Vector3(transform.position.x, -10, transform.position.z);
             transform.position = Vector3.MoveTowards(transform.position, Target, movementSpeed * Time.deltaTime);
             yield return new WaitForSeconds(0.0005f);
-            if (transform.position.y < -0.4)
-            {
-                DirtFlies.Play();
-            }
         }
         
         yield return new WaitForSeconds(0.5f);
@@ -52,7 +42,6 @@ public class MoveShovel : MonoBehaviour
 
         Dirt3.SetActive(false);
         MakeDirtAppear();
-        DirtFlies.Stop();
         
         if (Dirt2.activeSelf)
         {
