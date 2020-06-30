@@ -17,11 +17,6 @@ public class ToggleButton : MonoBehaviour
     public GameObject onIcon;
     public GameObject offIcon;
 
-    public float moveSpeed;
-    public float t = 0.0f;
-    public bool switching = false;
-
-
     public void Awake()
     {
         handleTransform = handle.GetComponent<RectTransform>();
@@ -48,72 +43,43 @@ public class ToggleButton : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log("ON is " + isOn);
-        //Debug.Log("switching is " + switching);
-        //if (switching)
-        //{
-        //    StartToggle();
-        //}
-    }
-
     public void StartToggle()
     {
         Debug.Log("start");
-        //if (!onIcon.activeSelf || !offIcon.activeSelf)
-        //{
-        //    onIcon.gameObject.SetActive(true);
-        //    offIcon.gameObject.SetActive(false);
-        //}
-        if (isOn)
+        if (!onIcon.activeSelf || !offIcon.activeSelf)
         {
-            handleTransform.localPosition = SmoothlyMove(handle, onPosX, offPosX);
             onIcon.gameObject.SetActive(true);
             offIcon.gameObject.SetActive(false);
         }
-        else
+        if (isOn)
         {
-            handleTransform.localPosition = SmoothlyMove(handle, offPosX, onPosX);
+            Debug.Log("on to off");
+            handleTransform.localPosition = SmoothlyMove(onPosX, offPosX);
             onIcon.gameObject.SetActive(false);
             offIcon.gameObject.SetActive(true);
         }
-    }
-
-    private Vector3 SmoothlyMove(GameObject handle, float startPosX, float endPosX)
-    {
-        Vector3 position = new Vector3(Mathf.Lerp(startPosX, endPosX, t += moveSpeed * Time.deltaTime), 0, 0);
-        Debug.Log("t = " +t+ moveSpeed  + " " + Time.deltaTime);
-        StopSwitching();
-        return position;
-    }
-
-    public void StopSwitching()
-    {
-        Debug.Log("done");
-        
-        if (t > 1)
+        else
         {
-            switching = false;
-            t = 0;
-            switch (isOn)
-            {
-                case true:
-                    isOn = false;
-                    break;
-
-                case false:
-                    isOn = true;
-                    break;
-            }
+            Debug.Log("off to on");
+            handleTransform.localPosition = SmoothlyMove(offPosX, onPosX);
+            onIcon.gameObject.SetActive(true);
+            offIcon.gameObject.SetActive(false);
         }
     }
 
-    public void isSwitching()
+    private Vector3 SmoothlyMove(float startPosX, float endPosX)
     {
-        Debug.Log("Triggered");
-        switching = true;
+        Vector3 position = new Vector3(Mathf.Lerp(startPosX, endPosX, 1), 0, 0);
+        switch (isOn)
+        {
+            case true:
+                isOn = false;
+                break;
+
+            case false:
+                isOn = true;
+                break;
+        }
+        return position;
     }
-  
 }
