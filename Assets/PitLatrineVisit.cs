@@ -18,6 +18,7 @@ public class PitLatrineVisit : MonoBehaviour
     public GameObject Player;
     public GameObject Place1;
     public GameObject WaterPond;
+    public GameObject PitLatrine;
     private Item Shovel;
 
     private GameObject S1;
@@ -98,6 +99,7 @@ public class PitLatrineVisit : MonoBehaviour
     private void MiniGameFinished()
     {
         Place1.SetActive(false);
+        PitLatrine.SetActive(true);
         House.SetActive(true);
         Player.SetActive(true);
         Systems.Status.UnPause();
