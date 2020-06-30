@@ -13,7 +13,7 @@ public class DeathDisplay : UIElement
    
     public void Start()
     {
-       pauseOnOpen = true;
+       //pauseOnOpen = true;
        forceOpen = true;
        locked = true;
        toggle.SetActive(false);

@@ -8,7 +8,7 @@ public class AftershockCommence : MonoBehaviour
     private bool LeftHouse;
     public AudioSource boomAudio;
     public GameObject bigBoom;
-
+    public GameObject animateBoom;
 
 
     public void LeavingHouse()
@@ -33,6 +33,8 @@ public class AftershockCommence : MonoBehaviour
                 //player dies in an explosion
                 //new WaitForSeconds(3f);
                 bigBoom.SetActive(true);
+                animateBoom.SetActive(true);
+                new WaitForSeconds(1f);
                 //boomAudio.Play();
                 Systems.Status.PlayerDeath("You died in a gas explosion");
             }
