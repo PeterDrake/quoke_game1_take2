@@ -12,7 +12,7 @@ public class ToggleButton : MonoBehaviour
     public RectTransform toggle;
     private float onPosX;
     private float offPosX;
-    public float handleOffset;
+    private float handleOffset = 75;
 
     public GameObject onIcon;
     public GameObject offIcon;
@@ -45,22 +45,21 @@ public class ToggleButton : MonoBehaviour
 
     public void StartToggle()
     {
-        Debug.Log("start");
-        if (!onIcon.activeSelf || !offIcon.activeSelf)
-        {
-            onIcon.gameObject.SetActive(true);
-            offIcon.gameObject.SetActive(false);
-        }
+        //if (!onIcon.activeSelf || !offIcon.activeSelf)
+        //{
+        //    onIcon.gameObject.SetActive(true);
+        //    offIcon.gameObject.SetActive(false);
+        //}
         if (isOn)
         {
-            Debug.Log("on to off");
+            Debug.Log("music off");
             handleTransform.localPosition = SmoothlyMove(onPosX, offPosX);
             onIcon.gameObject.SetActive(false);
             offIcon.gameObject.SetActive(true);
         }
         else
         {
-            Debug.Log("off to on");
+            Debug.Log("music on");
             handleTransform.localPosition = SmoothlyMove(offPosX, onPosX);
             onIcon.gameObject.SetActive(true);
             offIcon.gameObject.SetActive(false);
