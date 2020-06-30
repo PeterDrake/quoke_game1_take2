@@ -8,14 +8,17 @@ public class ButtonFlashes : MonoBehaviour
 {
     public Button.ButtonClickedEvent onClick;
     public Button theButton;
-    
+
+    public Color oneColor, otherColor;
+    public float fadeSpeed;
+    private Color currentColor, goalColor;
    
     private void Start()
     {
-        StartCoroutine(BlinkText());
+        StartCoroutine(ButtonThrob());
     }
 
-    public IEnumerator BlinkText()
+    /*public IEnumerator BlinkText()
     {
         while (true)
         {
@@ -24,6 +27,18 @@ public class ButtonFlashes : MonoBehaviour
             theButton.GetComponent<Image>().color = Color.white;
             //theButton.colors = Color.white;
             yield return new WaitForSeconds(0.15f);
+        }
+    }*/
+
+    public IEnumerator ButtonThrob()
+    {
+        while (true)
+        {
+            if (currentColor == oneColor) { goalColor = otherColor; }
+            else if (currentColor == otherColor) { goalColor = oneColor; }
+
+            currentColor = Color.Lerp(currentColor, goalColor, fadeSpeed);
+            theButton.GetComponent<Image>().color = currentColor;
         }
     }
 }

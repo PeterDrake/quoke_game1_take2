@@ -5382,61 +5382,48 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 625580730}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &299297937
+--- !u!114 &299297933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299297932}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cef160649555eb438486ce435bd7429, type: 3}
+  m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstColor: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0}
-  secondColor: {r: 0.31764707, g: 0.46542925, b: 0.89411765, a: 0.6745098}
-  fade: 1
-  speed: 0.05
---- !u!23 &299297938
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 299297933}
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  theButton: {fileID: 299297934}
+  oneColor: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0}
+  otherColor: {r: 0.4229263, g: 0.68154025, b: 0.9056604, a: 1}
+  fadeSpeed: 0.2
+--- !u!114 &299297934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299297932}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &300987591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26523,6 +26510,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   theButton: {fileID: 1362110718}
+  oneColor: {r: 0, g: 0, b: 0, a: 0}
+  otherColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeSpeed: 0
 --- !u!1 &1365029860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
