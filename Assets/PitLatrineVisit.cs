@@ -13,8 +13,9 @@ public class PitLatrineVisit : MonoBehaviour
 
     public float SituationNumber;
 
-    public GameObject Place1;
+    public GameObject House;
     public GameObject Player;
+    public GameObject Place1;
     private Item Shovel;
 
     private GameObject S1;
@@ -40,7 +41,7 @@ public class PitLatrineVisit : MonoBehaviour
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
-            Place1.SetActive(false);
+            House.SetActive(false);
             Player.SetActive(false);
         //}
         //else
@@ -88,12 +89,13 @@ public class PitLatrineVisit : MonoBehaviour
         canvi.SetActive(true);
         camera.SetActive(true);
         sunlight.SetActive(true);
-        Place1.SetActive(true);
+        House.SetActive(true);
         Player.SetActive(true);
     }
     private void MiniGameFinished()
     {
-        Place1.SetActive(true);
+        Place1.SetActive(false);
+        House.SetActive(true);
         Player.SetActive(true);
         Systems.Status.UnPause();
 
