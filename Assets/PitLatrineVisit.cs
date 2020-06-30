@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets.Water;
 
 public class PitLatrineVisit : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PitLatrineVisit : MonoBehaviour
     public GameObject House;
     public GameObject Player;
     public GameObject Place1;
+    public GameObject WaterPond;
     private Item Shovel;
 
     private GameObject S1;
@@ -90,6 +92,7 @@ public class PitLatrineVisit : MonoBehaviour
         camera.SetActive(true);
         sunlight.SetActive(true);
         House.SetActive(true);
+        WaterPond.SetActive(true);
         Player.SetActive(true);
     }
     private void MiniGameFinished()
