@@ -13,18 +13,20 @@ MonoBehaviour:
   m_Name: Frank New Head
   m_EditorClassIdentifier: 
   speech: Hey Mo.
-  optionOneText: What do you plan to use for a toilet?
-  optionOne: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
+  optionOneText: Do you think this rain will stop soon?
+  optionOne: {fileID: 11400000, guid: 691186b739e864c289927e9426d75a9d, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
-  optionOneTextAlt: I'm so thirsty! Do you know where we can find some water?
-  optionOneAlt: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
+  - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
+  - {fileID: 11400000, guid: d19cf06f15cb444268b6e175453a09b5, type: 2}
+  optionOneTextAlt: What do you plan to use for a toilet?
+  optionOneAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
   IfRequirementsTwo:
+  - {fileID: 11400000, guid: 335f5786a5f2d49b7b78c24ac9506bbc, type: 2}
   - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
-  optionTwoTextAlt: What do you plan to use for a toilet?
-  optionTwoAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
+  optionTwoTextAlt: I'm so thirsty! Do you know where we can find some water?
+  optionTwoAlt: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
