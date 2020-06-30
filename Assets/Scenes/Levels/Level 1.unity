@@ -5389,7 +5389,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299297932}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
   m_Name: 
@@ -26510,8 +26510,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   theButton: {fileID: 1362110718}
-  oneColor: {r: 0, g: 0, b: 0, a: 0}
-  otherColor: {r: 0, g: 0, b: 0, a: 0}
+  oneColor: {r: 0.92549026, g: 0.20392159, b: 0, a: 1}
+  otherColor: {r: 0.92549026, g: 0.20392159, b: 0, a: 0.48235294}
   fadeSpeed: 0
 --- !u!1 &1365029860 stripped
 GameObject:

@@ -15,6 +15,8 @@ public class ButtonFlashes : MonoBehaviour
    
     private void Start()
     {
+        currentColor = theButton.GetComponent<Image>().color;
+        goalColor = oneColor;
         StartCoroutine(ButtonThrob());
     }
 
