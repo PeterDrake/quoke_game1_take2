@@ -8,6 +8,9 @@ using Button = UnityEngine.UI.Button;
 public class MenuDisplayer : UIElement
 {
     public int mainMenuSceneIndex;
+
+    public GameObject menuOptions;
+    private GameObject settingOptions;
     
     // toggler, exitToMenu, quitGame, Settings, Inventory 
 
@@ -15,7 +18,10 @@ public class MenuDisplayer : UIElement
     private void initialize()
     {
         toggler = transform.Find("toggle").gameObject;
-        Transform buttons = toggler.transform.Find("buttons"); 
+        menuOptions = toggler.transform.Find("buttons").gameObject;
+        settingOptions = toggler.transform.Find("volume").gameObject;
+        Transform buttons = toggler.transform.Find("buttons");
+        Transform volume = toggler.transform.Find("volume");
         
         foreach (Transform child in buttons)
         {
@@ -32,6 +38,22 @@ public class MenuDisplayer : UIElement
                     break;
                 case "settings":
                     child.GetComponent<Button>().onClick.AddListener(settings);
+                    break;
+            }
+
+        }
+
+        foreach (Transform child in volume)
+        {
+            switch (child.name)
+            {
+                case "musicToggle":
+                    //child.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<ToggleButton>().isSwitching);
+                    break;
+                case "fxToggle":
+                    break;
+                case "back":
+                    child.GetComponent<Button>().onClick.AddListener(backToMenu);
                     break;
             }
         }
@@ -60,5 +82,15 @@ public class MenuDisplayer : UIElement
         SceneManager.LoadScene(mainMenuSceneIndex);
     }
 
-    private void settings() { }
+    private void settings()
+    {
+        menuOptions.SetActive(false);
+        settingOptions.SetActive(true);
+    }
+
+    private void backToMenu()
+    {
+        menuOptions.SetActive(true);
+        settingOptions.SetActive(false);
+    }
 }
