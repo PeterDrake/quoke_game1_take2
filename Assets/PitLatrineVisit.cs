@@ -15,6 +15,9 @@ public class PitLatrineVisit : MonoBehaviour
     public GameObject Player;
     private Item Shovel;
 
+    private GameObject S1;
+    private GameObject S2;
+
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
@@ -56,6 +59,15 @@ public class PitLatrineVisit : MonoBehaviour
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
 
+
+        
+        
+        S2 = GameObject.Find("Pit High Ground");
+        S2.SetActive(false);
+        
+        S1 = GameObject.Find("Pit Low Ground");
+        S1.SetActive(true);
+        
         GameObject.Find("MiniGameMasterPitLatrine").GetComponent<MiniGameMasterPitLatrine>().OnWin += MiniGameFinished;
         GameObject.Find("MiniGameMasterPitLatrine").GetComponent<MiniGameMasterPitLatrine>().OnExit += MiniGameLeave;
     }

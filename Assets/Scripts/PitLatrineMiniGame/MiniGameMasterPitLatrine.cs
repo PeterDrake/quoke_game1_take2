@@ -35,7 +35,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     public void Start()
     {
-        if (Situation1)
+        if (S1Folder.activeSelf)
         {
             Camera.transform.position = new Vector3(72.409f, 1.763f, -139.003f);
             S1Folder.SetActive(true);
@@ -56,7 +56,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     
     public void Update()
     {
-        if (Situation1)
+        if (S1Folder.activeSelf)
         {
             if (S1Pit1.activeSelf)
             {

@@ -11064,7 +11064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Situation1: 0
-  Situation2: 1
+  Situation2: 0
   Camera: {fileID: 1658197137}
   UseClicked: 0
   Win: {fileID: 689588163}
@@ -12740,7 +12740,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1661880626
 Transform:
   m_ObjectHideFlags: 0
