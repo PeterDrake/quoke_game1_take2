@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: 2nd node L1 NPC
   m_EditorClassIdentifier: 
-  speech: Yeah, but that little guy is fast. I'm not sure what direction he went,
-    sorry.
-  optionOneText: 'I really hope he comes back. I don''t know where he might have
-    gone!
-
-    By the way I think I smelled gas while I was inside...'
+  speech: Oh no. That little guy is fast when he wants to be. I'm not sure what direction
+    he went, sorry.
+  optionOneText: I really hope he comes back. I don't know where he might have gone!
   optionOne: {fileID: 11400000, guid: faea91835bff14695b037ce2859056fc, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
