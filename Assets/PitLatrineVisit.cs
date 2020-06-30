@@ -17,6 +17,7 @@ public class PitLatrineVisit : MonoBehaviour
     public GameObject House;
     public GameObject Player;
     public GameObject Place1;
+    public GameObject Place2;
     public GameObject WaterPond;
     public GameObject PitLatrine;
     private Item Shovel;
@@ -46,6 +47,7 @@ public class PitLatrineVisit : MonoBehaviour
             _interact.enabled = false;
             House.SetActive(false);
             Player.SetActive(false);
+            Place2.SetActive(false);
         }
         else
         {
@@ -117,6 +119,6 @@ public class PitLatrineVisit : MonoBehaviour
         _interact.Kill();
 
         //Destroy(gameObject);
-        //Destroy(this);
+        Destroy(this);
     }
 }
