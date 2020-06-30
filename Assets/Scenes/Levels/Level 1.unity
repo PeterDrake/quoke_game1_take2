@@ -5389,28 +5389,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299297932}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 299297933}
-        m_MethodName: StopAllCoroutines
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   theButton: {fileID: 299297934}
-  oneColor: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0}
-  otherColor: {r: 0.4229263, g: 0.68154025, b: 0.9056604, a: 1}
+  oneColor: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0.78431374}
+  otherColor: {r: 0.4229263, g: 0.68154025, b: 0.9056604, a: 0.78431374}
   fadeSpeed: 0.2
 --- !u!114 &299297934 stripped
 MonoBehaviour:
@@ -11731,17 +11720,17 @@ PrefabInstance:
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 299297932}
+      objectReference: {fileID: 299297933}
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: KillIt
       objectReference: {fileID: 0}
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -11771,7 +11760,7 @@ PrefabInstance:
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 499350135352073168, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -26446,6 +26435,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1362110721}
+        m_MethodName: KillIt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1362110719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26497,22 +26497,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1362110721}
-        m_MethodName: StopAllCoroutines
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   theButton: {fileID: 1362110718}
   oneColor: {r: 0.92549026, g: 0.20392159, b: 0, a: 1}
   otherColor: {r: 0.92549026, g: 0.20392159, b: 0, a: 0.48235294}
-  fadeSpeed: 0
+  fadeSpeed: 0.01
 --- !u!1 &1365029860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,

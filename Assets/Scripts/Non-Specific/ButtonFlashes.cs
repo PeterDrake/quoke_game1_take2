@@ -11,16 +11,21 @@ public class ButtonFlashes : MonoBehaviour
 
     public Color oneColor, otherColor;
     public float fadeSpeed;
-    private Color currentColor, goalColor;
+    private Color currentColor, goalColor, initialColor;
    
     private void Start()
     {
-        currentColor = theButton.GetComponent<Image>().color;
+        initialColor = theButton.GetComponent<Image>().color;
+        currentColor = initialColor;
         goalColor = oneColor;
-        StartCoroutine(ButtonThrob());
     }
 
-    /*public IEnumerator BlinkText()
+    private void Update()
+    {
+        StartCoroutine(ButtonThrob());
+    }
+    /*
+    public IEnumerator BlinkText()
     {
         while (true)
         {
@@ -30,8 +35,8 @@ public class ButtonFlashes : MonoBehaviour
             //theButton.colors = Color.white;
             yield return new WaitForSeconds(0.15f);
         }
-    }*/
-
+    }
+    */
     public IEnumerator ButtonThrob()
     {
         while (true)
@@ -41,6 +46,13 @@ public class ButtonFlashes : MonoBehaviour
 
             currentColor = Color.Lerp(currentColor, goalColor, fadeSpeed);
             theButton.GetComponent<Image>().color = currentColor;
+            yield return new WaitForSeconds(1f);
         }
+    }
+
+    public void KillIt()
+    {
+        theButton.GetComponent<Image>().color = initialColor;
+        Destroy(this);
     }
 }
