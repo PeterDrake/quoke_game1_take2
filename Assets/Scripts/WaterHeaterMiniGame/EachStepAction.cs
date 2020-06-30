@@ -14,10 +14,13 @@ public class EachStepAction : MonoBehaviour
 
     private KnobRotating move;
 
+    public GameObject rawimage;
+
     private void Awake()
     {
         check.SetActive(false);
         PIP.SetActive(false);
+        rawimage.SetActive(false);
     }
 
     public void OnMouseDown()
@@ -51,6 +54,7 @@ public class EachStepAction : MonoBehaviour
             Debug.Log("CHECKED OFF " + current.tag);
             check.SetActive(true);
             PIP.SetActive(true);
+            rawimage.SetActive(true);
             check.GetComponent<Image>().color = Color.green;
             Master.isDone();
 
