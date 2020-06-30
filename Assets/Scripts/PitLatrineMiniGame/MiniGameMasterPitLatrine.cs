@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MiniGameMasterPitLatrine : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject Camera;
     public bool UseClicked;
     private bool check;
+    
+    public UnityAction OnWin;
+    public UnityAction OnExit;
+    public GameObject Win;
     
     public GameObject S1Folder;
     public GameObject S2Folder;
@@ -133,6 +138,16 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         yield return new WaitForSeconds(3f);
         TryHighGround.SetActive(true);
         UseClicked = false;
+    }
+    
+    public void Leave()
+    {
+        OnExit.Invoke();
+    }
+    
+    public void WinLeave()
+    {
+        OnWin.Invoke();
     }
 
 }

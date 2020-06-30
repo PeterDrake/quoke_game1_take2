@@ -669,7 +669,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1461976792}
         m_MethodName: WinLeave
         m_Mode: 1
         m_Arguments:
@@ -11045,7 +11045,7 @@ GameObject:
   - component: {fileID: 1461976793}
   - component: {fileID: 1461976792}
   m_Layer: 0
-  m_Name: MiniGameMaster
+  m_Name: MiniGameMasterPitLatrine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11067,6 +11067,7 @@ MonoBehaviour:
   Situation2: 1
   Camera: {fileID: 1658197137}
   UseClicked: 0
+  Win: {fileID: 689588163}
   S1Folder: {fileID: 1661880625}
   S2Folder: {fileID: 754902471}
   S1Pit1: {fileID: 1653208206}

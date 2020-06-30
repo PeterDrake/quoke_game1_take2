@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGames/WaterHeaterMiniGame.unity
     guid: cea15f03dabfd4efba0076a79e1e1231
+  - enabled: 1
+    path: Assets/Scenes/MiniGames/PitLatrineMiniGame.unity
+    guid: c8373060399cc6044b2dea749fe1ddf3
   m_configObjects: {}
