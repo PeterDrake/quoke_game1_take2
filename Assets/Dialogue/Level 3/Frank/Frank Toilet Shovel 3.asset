@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Frank 8 Toilet
+  m_Name: Frank Toilet Shovel 3
   m_EditorClassIdentifier: 
-  speech: Alright. The entrance is along this fence.
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: 'I have some plywood we can use to make a floor around the pit. I''ve also
+    got a tarp we can put up to keep the rain out if we can find a rope. '
+  optionOneText: 'Okay. I''ll try to find some rope and meet you in your backyard. '
+  optionOne: {fileID: 11400000, guid: ab50eb836ed985c47ade7e74d19d6191, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes:
   - {fileID: 11400000, guid: 86924ef4695f1a24c985f7acfc127079, type: 2}
-  NewHead: {fileID: 11400000, guid: 61e49b6926813496e991792bdce463f4, type: 2}
+  NewHead: {fileID: 0}
