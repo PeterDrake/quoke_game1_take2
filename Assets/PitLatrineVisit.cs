@@ -33,24 +33,24 @@ public class PitLatrineVisit : MonoBehaviour
         _inventory = Systems.Inventory;
 
         //Place1.SetActive(false);
-        //Shovel = Resources.Load<Item>("Items/Shovel");
+        Shovel = Resources.Load<Item>("Items/Shovel");
     }
 
     public void Interaction()
     {
-        //if (_inventory.HasItem(Shovel, 1))
-        //{
+        if (_inventory.HasItem(Shovel, 1))
+        {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
             House.SetActive(false);
             Player.SetActive(false);
-        //}
-        //else
-        //{
-        //    _interact.SetInteractText("Go talk to Frank about sanitation");
+        }
+        else
+        {
+            _interact.SetInteractText("Go talk to Frank about sanitation");
 
-        //}
+        }
 
     }
 
@@ -110,9 +110,8 @@ public class PitLatrineVisit : MonoBehaviour
         canvi.SetActive(true);
         sunlight.SetActive(true);
 
-        //_inventory.RemoveItem(Shovel, 1);
-
-        //WaterPond.SetActive(true); this is for the water pond
+        _inventory.RemoveItem(Shovel, 1);
+        
         _interact.Kill();
 
         //Destroy(gameObject);
