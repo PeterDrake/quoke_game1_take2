@@ -51,42 +51,48 @@ public class ToggleButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (switching)
-        {
-            StartToggle(isOn);
-        }
+        //Debug.Log("ON is " + isOn);
+        //Debug.Log("switching is " + switching);
+        //if (switching)
+        //{
+        //    StartToggle();
+        //}
     }
 
-    private void StartToggle(bool tStatus)
+    public void StartToggle()
     {
-        if (!onIcon.activeSelf || !offIcon.activeSelf)
-        {
-            onIcon.gameObject.SetActive(true);
-            offIcon.gameObject.SetActive(false);
-        }
-        if (tStatus)
+        Debug.Log("start");
+        //if (!onIcon.activeSelf || !offIcon.activeSelf)
+        //{
+        //    onIcon.gameObject.SetActive(true);
+        //    offIcon.gameObject.SetActive(false);
+        //}
+        if (isOn)
         {
             handleTransform.localPosition = SmoothlyMove(handle, onPosX, offPosX);
-            onIcon.gameObject.SetActive(false);
-            offIcon.gameObject.SetActive(true);
+            onIcon.gameObject.SetActive(true);
+            offIcon.gameObject.SetActive(false);
         }
         else
         {
             handleTransform.localPosition = SmoothlyMove(handle, offPosX, onPosX);
-            onIcon.gameObject.SetActive(true);
-            offIcon.gameObject.SetActive(false);
+            onIcon.gameObject.SetActive(false);
+            offIcon.gameObject.SetActive(true);
         }
     }
 
     private Vector3 SmoothlyMove(GameObject handle, float startPosX, float endPosX)
     {
         Vector3 position = new Vector3(Mathf.Lerp(startPosX, endPosX, t += moveSpeed * Time.deltaTime), 0, 0);
+        Debug.Log("t = " +t+ moveSpeed  + " " + Time.deltaTime);
         StopSwitching();
         return position;
     }
 
     public void StopSwitching()
     {
+        Debug.Log("done");
+        
         if (t > 1)
         {
             switching = false;
@@ -106,6 +112,7 @@ public class ToggleButton : MonoBehaviour
 
     public void isSwitching()
     {
+        Debug.Log("Triggered");
         switching = true;
     }
   

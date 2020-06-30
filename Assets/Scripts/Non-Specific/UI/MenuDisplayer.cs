@@ -9,26 +9,29 @@ public class MenuDisplayer : UIElement
 {
     public int mainMenuSceneIndex;
 
-    public GameObject menuOptions;
+    private GameObject menuOptions;
     private GameObject settingOptions;
-    
-    // toggler, exitToMenu, quitGame, Settings, Inventory 
-
     private GameObject toggler;
+    private Transform volume;
+    private Transform buttons;
+
+    private ToggleButton music;
+
     private void initialize()
     {
         toggler = transform.Find("toggle").gameObject;
         menuOptions = toggler.transform.Find("buttons").gameObject;
         settingOptions = toggler.transform.Find("volume").gameObject;
-        Transform buttons = toggler.transform.Find("buttons");
-        Transform volume = toggler.transform.Find("volume");
-        
+        buttons = toggler.transform.Find("buttons");
+        volume = toggler.transform.Find("volume");
+  
+
         foreach (Transform child in buttons)
         {
             switch (child.name)
             {
                 case "close":
-                    child.GetComponent<Button>().onClick.AddListener(delegate {UIManager.Instance.ToggleActive(this); });
+                    child.GetComponent<Button>().onClick.AddListener(delegate { UIManager.Instance.ToggleActive(this); });
                     break;
                 case "exit":
                     child.GetComponent<Button>().onClick.AddListener(Application.Quit);
@@ -48,7 +51,8 @@ public class MenuDisplayer : UIElement
             switch (child.name)
             {
                 case "musicToggle":
-                    //child.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<ToggleButton>().isSwitching);
+                    music = child.GetComponent<ToggleButton>();
+                    child.transform.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<ToggleButton>().StartToggle);
                     break;
                 case "fxToggle":
                     break;
@@ -93,4 +97,17 @@ public class MenuDisplayer : UIElement
         menuOptions.SetActive(true);
         settingOptions.SetActive(false);
     }
+
+    private void move()
+    {
+        if (music.isOn)
+        {
+            Debug.Log("music on");
+        }
+        else
+        {
+            Debug.Log("music off");
+        }
+    }
+
 }
