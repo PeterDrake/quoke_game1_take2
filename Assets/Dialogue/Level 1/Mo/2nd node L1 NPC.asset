@@ -15,7 +15,7 @@ MonoBehaviour:
   speech: Oh no. That little guy is fast when he wants to be. I'm not sure what direction
     he went, sorry.
   optionOneText: I really hope he comes back. I don't know where he might have gone!
-  optionOne: {fileID: 11400000, guid: faea91835bff14695b037ce2859056fc, type: 2}
+  optionOne: {fileID: 11400000, guid: 16c2fa47eaa2a26428886868e4622b48, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
