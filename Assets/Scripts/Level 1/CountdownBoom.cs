@@ -11,6 +11,7 @@ public class CountdownBoom : MonoBehaviour
     private float _timeTillBoom;
     public AudioSource boomAudio;
     public GameObject bigBoom;
+    public GameObject animateBoom;
 
     // Start is called before the first frame update
     /*void Start()
@@ -25,6 +26,8 @@ public class CountdownBoom : MonoBehaviour
         {
             //boomAudio.Play();
             bigBoom.SetActive(true);
+            animateBoom.SetActive(true);
+            new WaitForSeconds(1f);
             Systems.Status.PlayerDeath("You died in a gas explosion");
             //add animation of house exploding
         }
