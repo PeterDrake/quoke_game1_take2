@@ -34,8 +34,7 @@ public class PitLatrineVisit : MonoBehaviour
     {
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
-
-        //Place1.SetActive(false);
+        
         Shovel = Resources.Load<Item>("Items/Shovel");
         Rope = Resources.Load<Item>("Items/Rope");
     }
@@ -49,7 +48,6 @@ public class PitLatrineVisit : MonoBehaviour
             _interact.enabled = false;
             House.SetActive(false);
             Player.SetActive(false);
-            //.SetActive(false);
         }
         else
         {
@@ -95,7 +93,6 @@ public class PitLatrineVisit : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
-        //Destroy(gameObject);
         Place1.SetActive(false);
         camera.SetActive(true);
         sunlight.SetActive(true);
