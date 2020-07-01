@@ -8,7 +8,8 @@ public class PitLatrineVisit : MonoBehaviour
 {
     private const string MiniGameSceneName = "PitLatrineMiniGame";
 
-
+    public InformationCanvas _canvas;
+    
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
@@ -120,7 +121,8 @@ public class PitLatrineVisit : MonoBehaviour
         _inventory.RemoveItem(Shovel, 1);
         
         _interact.Kill();
-
+        _canvas.ChangeText("Look for shelter");
+        
         Place2.SetActive(false);
         //Destroy(gameObject);
         //Destroy(this);
