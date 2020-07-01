@@ -11982,6 +11982,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 511732269421594741, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: waitTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3262251361304920450, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_LocalPosition.z
