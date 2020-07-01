@@ -6,6 +6,7 @@ public class MoveOtherShovel : MonoBehaviour
 {
     private float movementSpeed = 0.5f;
     private bool Check;
+    private bool Check1;
 
     public GameObject Pit1;
     public GameObject Pit2;
@@ -19,6 +20,7 @@ public class MoveOtherShovel : MonoBehaviour
     public GameObject Depth2;
     public GameObject Depth3;
     public GameObject Depth4;
+    public GameObject Depth5;
     
     public void Dig()
     {
@@ -66,11 +68,20 @@ public class MoveOtherShovel : MonoBehaviour
             //Disabling Depth4 happens in Erosion script
         }
         
-        else if (Pit2.activeSelf && Check)
+        else if (Pit2.activeSelf && Check1)
         {
+            Check1 = false;
+            Depth4.SetActive(false);
+            Depth5.SetActive(true);
             Pit3.SetActive(true);
             Pit3.transform.localScale = new Vector3(0.2f, 0.01f, 0.12f);
+        }
+        
+        else if (Pit2.activeSelf && Check)
+        {
+            
             Check = false;
+            Check1 = true;
             Depth4.SetActive(true);
             Depth3.SetActive(false);
         }

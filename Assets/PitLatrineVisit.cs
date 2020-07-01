@@ -8,7 +8,8 @@ public class PitLatrineVisit : MonoBehaviour
 {
     private const string MiniGameSceneName = "PitLatrineMiniGame";
 
-
+    public InformationCanvas _canvas;
+    
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
@@ -17,9 +18,11 @@ public class PitLatrineVisit : MonoBehaviour
     public GameObject House;
     public GameObject Player;
     public GameObject Place1;
+    public GameObject Place2;
     public GameObject WaterPond;
     public GameObject PitLatrine;
     private Item Shovel;
+    private Item Rope;
 
     private GameObject S1;
     private GameObject S2;
@@ -32,14 +35,14 @@ public class PitLatrineVisit : MonoBehaviour
     {
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
-
-        //Place1.SetActive(false);
+        
         Shovel = Resources.Load<Item>("Items/Shovel");
+        Rope = Resources.Load<Item>("Items/Rope");
     }
 
     public void Interaction()
     {
-        if (_inventory.HasItem(Shovel, 1))
+        if (_inventory.HasItem(Shovel, 1) && _inventory.HasItem(Rope, 1))
         {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
@@ -49,7 +52,7 @@ public class PitLatrineVisit : MonoBehaviour
         }
         else
         {
-            _interact.SetInteractText("Go talk to Frank about sanitation");
+            _interact.SetInteractText("Go talk to Frank about sanitation, get a rope and a shovel");
 
         }
 
@@ -78,6 +81,7 @@ public class PitLatrineVisit : MonoBehaviour
         {
             S1.SetActive(false);
             S2.SetActive(true);
+            Place2.SetActive(false);
         }
         
         
@@ -90,6 +94,7 @@ public class PitLatrineVisit : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
+        Place1.SetActive(false);
         camera.SetActive(true);
         sunlight.SetActive(true);
         House.SetActive(true);
@@ -99,6 +104,7 @@ public class PitLatrineVisit : MonoBehaviour
     private void MiniGameFinished()
     {
         Place1.SetActive(false);
+        
         PitLatrine.SetActive(true);
         House.SetActive(true);
         Player.SetActive(true);
@@ -107,7 +113,7 @@ public class PitLatrineVisit : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         
 
-        Systems.Objectives.Satisfy("PITLATRINEEVENT");
+        Systems.Objectives.Satisfy("BuiltLatrine");
         camera.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
@@ -115,7 +121,9 @@ public class PitLatrineVisit : MonoBehaviour
         _inventory.RemoveItem(Shovel, 1);
         
         _interact.Kill();
-
+        _canvas.ChangeText("Look for shelter");
+        
+        Place2.SetActive(false);
         //Destroy(gameObject);
         //Destroy(this);
     }

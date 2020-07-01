@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Zelda 2
   m_EditorClassIdentifier: 
   speech: 'I''m so worried about him. Where could he have run off to? '
-  optionOneText: He's got to be around here somewhere. Short little corgi legs can't
-    go that far.
+  optionOneText: "He's got to be around here somewhere. \nShort little corgi legs
+    can't go that far."
   optionOne: {fileID: 11400000, guid: a4c02b1784cf04994bdee98282a35cb5, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

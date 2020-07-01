@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Zelda 1
   m_EditorClassIdentifier: 
   speech: Tsu! Tsu! Hey, have you seen my dog around here?
-  optionOneText: Tsunami? No, sorry, I haven't seen the little guy since he ran off.
+  optionOneText: "Tsunami? No, sorry, I haven't seen the little guy\n since he ran
+    off."
   optionOne: {fileID: 11400000, guid: a7b786e07386f4b81ac8ce5638c03fc1, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
