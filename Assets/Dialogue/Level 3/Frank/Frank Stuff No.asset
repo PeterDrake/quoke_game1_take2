@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Frank Tent
+  m_Name: Frank Stuff No
   m_EditorClassIdentifier: 
-  speech: I don't think so. You should find some shelter to stay dry tonight.
-  optionOneText: I've been sleeping outside and it's very hard to sleep in the cold.
-  optionOne: {fileID: 11400000, guid: 6201752c8dfd54fbe9a5828ca6c435c5, type: 2}
+  speech: Okay, keep asking around.
+  optionOneText: 
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 11400000, guid: 61e49b6926813496e991792bdce463f4, type: 2}
+  NewHead: {fileID: 11400000, guid: 9ccdbbac3352a43de86009a4a6491cc9, type: 2}
