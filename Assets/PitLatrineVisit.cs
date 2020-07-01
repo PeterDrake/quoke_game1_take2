@@ -93,6 +93,8 @@ public class PitLatrineVisit : MonoBehaviour
     {
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
+        //Destroy(gameObject);
+        Place1.SetActive(false);
         camera.SetActive(true);
         sunlight.SetActive(true);
         House.SetActive(true);
@@ -102,6 +104,7 @@ public class PitLatrineVisit : MonoBehaviour
     private void MiniGameFinished()
     {
         Place1.SetActive(false);
+        
         PitLatrine.SetActive(true);
         House.SetActive(true);
         Player.SetActive(true);
@@ -119,6 +122,7 @@ public class PitLatrineVisit : MonoBehaviour
         
         _interact.Kill();
 
+        Place2.SetActive(false);
         //Destroy(gameObject);
         //Destroy(this);
     }
