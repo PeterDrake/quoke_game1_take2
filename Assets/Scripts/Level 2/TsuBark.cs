@@ -39,7 +39,7 @@ public class TsuBark : MonoBehaviour
     {
         if (_satisfied)
         {
-            _canvas.ChangeText("Find Ahmad's van");
+            _canvas.ChangeText("Find Ahmad's vehicle");
 
         }
     }

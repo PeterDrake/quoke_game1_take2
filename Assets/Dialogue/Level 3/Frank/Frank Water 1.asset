@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Frank 6 Toilet
+  m_Name: Frank Water 1
   m_EditorClassIdentifier: 
-  speech: 'I''ve got a yard. I was about to put in a new deck so they''ve already
-    marked where the utility lines are. '
-  optionOneText: 'Perfect! Do you have a shovel?
-
-'
-  optionOne: {fileID: 11400000, guid: e295654cd21c3384e8c39c6bfa970c85, type: 2}
+  speech: You didn't store any beforehand?
+  optionOneText: I didn't have space in my tiny apartment. But I have these water
+    purification tablets that I can use once I find some.
+  optionOne: {fileID: 11400000, guid: 25bc19464abe44a3e99e2ed6afc54745, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

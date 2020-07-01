@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Frank 6 Water
+  m_Name: Frank Tent 1
   m_EditorClassIdentifier: 
-  speech: 'Yeah, but the plumbing''s not working. I think a lot of pipes broke in
-    the quake. '
-  optionOneText: That doesn't matter. We can make it out of the water heater. Do you
-    have a bucket or something?
-  optionOne: {fileID: 11400000, guid: 1bcee1fd965b742afb5ec2c866ed158a, type: 2}
+  speech: I don't think you should sleep outside. I'm staying with Zelda in her tent
+    and I think her tent is big enough for one more.
+  optionOneText: Okay. I'll ask her first just to make sure it's okay with her.
+  optionOne: {fileID: 11400000, guid: 9a6b38175a2b44100a1c85fcdfc0f91b, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 0}
+  NewHead: {fileID: 11400000, guid: 61e49b6926813496e991792bdce463f4, type: 2}
