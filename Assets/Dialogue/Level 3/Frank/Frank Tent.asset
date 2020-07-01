@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Frank Tent
   m_EditorClassIdentifier: 
   speech: I don't think so. You should find some shelter to stay dry tonight.
-  optionOneText: I have been sleeping outside and it is very hard to sleep in the
-    cold.
+  optionOneText: I've been sleeping outside and it's very hard to sleep in the cold.
   optionOne: {fileID: 11400000, guid: 6201752c8dfd54fbe9a5828ca6c435c5, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
