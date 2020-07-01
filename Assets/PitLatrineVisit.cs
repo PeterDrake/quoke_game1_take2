@@ -21,6 +21,7 @@ public class PitLatrineVisit : MonoBehaviour
     public GameObject WaterPond;
     public GameObject PitLatrine;
     private Item Shovel;
+    private Item Rope;
 
     private GameObject S1;
     private GameObject S2;
@@ -36,11 +37,12 @@ public class PitLatrineVisit : MonoBehaviour
 
         //Place1.SetActive(false);
         Shovel = Resources.Load<Item>("Items/Shovel");
+        Rope = Resources.Load<Item>("Items/Rope");
     }
 
     public void Interaction()
     {
-        if (_inventory.HasItem(Shovel, 1))
+        if (_inventory.HasItem(Shovel, 1) && _inventory.HasItem(Rope, 1))
         {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
@@ -51,7 +53,7 @@ public class PitLatrineVisit : MonoBehaviour
         }
         else
         {
-            _interact.SetInteractText("Go talk to Frank about sanitation");
+            _interact.SetInteractText("Go talk to Frank about sanitation, get a rope and a shovel");
 
         }
 
