@@ -109,7 +109,7 @@ public class PitLatrineVisit : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         
 
-        Systems.Objectives.Satisfy("PITLATRINEEVENT");
+        Systems.Objectives.Satisfy("BuiltLatrine");
         camera.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
