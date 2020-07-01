@@ -47,7 +47,7 @@ public class PitLatrineVisit : MonoBehaviour
             _interact.enabled = false;
             House.SetActive(false);
             Player.SetActive(false);
-            Place2.SetActive(false);
+            //.SetActive(false);
         }
         else
         {
@@ -80,6 +80,7 @@ public class PitLatrineVisit : MonoBehaviour
         {
             S1.SetActive(false);
             S2.SetActive(true);
+            Place2.SetActive(false);
         }
         
         
@@ -119,6 +120,6 @@ public class PitLatrineVisit : MonoBehaviour
         _interact.Kill();
 
         //Destroy(gameObject);
-        Destroy(this);
+        //Destroy(this);
     }
 }
