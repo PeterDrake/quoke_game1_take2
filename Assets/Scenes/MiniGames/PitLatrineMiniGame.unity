@@ -4867,7 +4867,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -88.24}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &494513804
@@ -9415,7 +9415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1032178336
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12038,7 +12038,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 1658197137}
-  UseClicked: 0
   PlywoodButton: {fileID: 300744590}
   TarpButton: {fileID: 2094510459}
   PButton: {fileID: 300744588}
@@ -12061,7 +12060,6 @@ MonoBehaviour:
   WinScreen: {fileID: 689588163}
   Depth1: {fileID: 344212891}
   Depth2: {fileID: 1503388282}
-  Use: {fileID: 1032178335}
   Dig: {fileID: 1472520561}
   Dig2: {fileID: 453973414}
 --- !u!4 &1461976793
@@ -13720,7 +13718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1661880626
 Transform:
   m_ObjectHideFlags: 0
