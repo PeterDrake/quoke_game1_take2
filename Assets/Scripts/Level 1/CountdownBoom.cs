@@ -12,6 +12,8 @@ public class CountdownBoom : MonoBehaviour
     public AudioSource boomAudio;
     public GameObject bigBoom;
     public GameObject animateBoom;
+    public GameObject house;
+    public GameObject destroyed;
     public UnityEvent OnDeath;
 
     // Start is called before the first frame update
@@ -28,6 +30,7 @@ public class CountdownBoom : MonoBehaviour
             //boomAudio.Play();
             bigBoom.SetActive(true);
             animateBoom.SetActive(true);
+            StartCoroutine(DestroyHouse());
             OnDeath.Invoke();
             Systems.Status.PlayerDeath("You died in a gas explosion");
             //add animation of house exploding
@@ -49,5 +52,12 @@ public class CountdownBoom : MonoBehaviour
             if (showCountdown) Debug.Log("Time Till Boom: " + _timeTillBoom);
         }
         _countdownFinished = true;
+    }
+
+    private IEnumerator DestroyHouse()
+    {
+        yield return new WaitForSeconds(0.5f);
+        house.SetActive(false);
+        destroyed.SetActive(true);
     }
 }
