@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Frank New Head
   m_EditorClassIdentifier: 
-  speech: Hey Mo.
-  optionOneText: Hey, Frank. Do you think this rain will stop soon?
-  optionOne: {fileID: 11400000, guid: 691186b739e864c289927e9426d75a9d, type: 2}
+  speech: Hey, Mo.
+  optionOneText: Hey, Frank.
+  optionOne: {fileID: 11400000, guid: c010402ff2295491981c287dae1c4fb8, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
@@ -22,7 +22,7 @@ MonoBehaviour:
   NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
-  - {fileID: 11400000, guid: d19cf06f15cb444268b6e175453a09b5, type: 2}
+  - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
   optionOneTextAlt: What do you plan to use for a toilet?
   optionOneAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
   IfRequirementsTwo:

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Zelda Tent 2
   m_EditorClassIdentifier: 
-  speech: Alright, let me know if you change your mind.
+  speech: Alright, good luck with that.
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 0}
+  NewHead: {fileID: 11400000, guid: e059e5d3bceb64ea5b5b87a0a3a1f004, type: 2}
