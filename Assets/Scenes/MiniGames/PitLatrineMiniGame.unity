@@ -12037,18 +12037,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed305087499574f859e4aa071951fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Situation1: 0
-  Situation2: 0
   Camera: {fileID: 1658197137}
   UseClicked: 0
+  PlywoodButton: {fileID: 300744590}
+  TarpButton: {fileID: 2094510459}
+  PButton: {fileID: 300744588}
+  TButton: {fileID: 2094510457}
   Win: {fileID: 689588163}
   S1Folder: {fileID: 1661880625}
   S2Folder: {fileID: 754902471}
   S1Pit1: {fileID: 1653208206}
   S1Pit2: {fileID: 1859223374}
   Water: {fileID: 1815745245}
+  S2Pit1: {fileID: 1191762087}
   S2Pit2: {fileID: 1064380707}
   S2Pit3: {fileID: 1622709211}
+  Shovel2: {fileID: 506792029}
+  Tarp: {fileID: 128617772}
+  Plywood: {fileID: 825104512}
   ErrorScreen: {fileID: 364409169}
   TryHighGround: {fileID: 1743689748}
   ErosionScreen: {fileID: 1075880751}
