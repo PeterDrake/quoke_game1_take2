@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AftershockCommence : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AftershockCommence : MonoBehaviour
     public AudioSource boomAudio;
     public GameObject bigBoom;
     public GameObject animateBoom;
+    public UnityEvent OnDeath;
 
 
     public void LeavingHouse()
@@ -34,8 +36,9 @@ public class AftershockCommence : MonoBehaviour
                 //new WaitForSeconds(3f);
                 bigBoom.SetActive(true);
                 animateBoom.SetActive(true);
-                new WaitForSeconds(1f);
+                //new WaitForSeconds(1f);
                 //boomAudio.Play();
+                OnDeath.Invoke();
                 Systems.Status.PlayerDeath("You died in a gas explosion");
             }
         }
