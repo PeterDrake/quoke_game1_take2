@@ -14,6 +14,7 @@ public class DeathDisplay : UIElement
     public GameObject toggle;
     public Text deathText;
     public float waitTime;
+    public GameObject explosion;
 
     private bool dead;
    
@@ -38,12 +39,19 @@ public class DeathDisplay : UIElement
 
     private IEnumerator WaitThenShow(float time)
     {
-        while (time>0)
+        float theTime = time;
+        while (theTime>0)
         {
-            yield return new WaitForSeconds(1f);
-            time--;
+            yield return new WaitForSeconds(0.5f);
+            theTime--;
         }
         UIManager.Instance.SetAsActive(this);
+        while (theTime<time)
+        {
+            yield return new WaitForSeconds(0.5f);
+            theTime++;
+        }
+        Destroy(explosion);
     }
 
     public override void Open()
