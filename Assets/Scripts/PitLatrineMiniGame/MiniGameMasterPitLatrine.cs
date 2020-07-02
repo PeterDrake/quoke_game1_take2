@@ -88,6 +88,8 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             {
                 Use.SetActive(false);
                 Dig.SetActive(false);
+                PButton.SetActive(false);
+                TButton.SetActive(false);
                 StartCoroutine(nameof(TryElsewhere));
             }
         }
