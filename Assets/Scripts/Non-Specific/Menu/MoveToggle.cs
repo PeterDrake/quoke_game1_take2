@@ -10,12 +10,12 @@ public class MoveToggle : MonoBehaviour
     public GameObject handle;
     private RectTransform handleTransform;
     private float handleSize;
-    public GameObject toggle;
+    public GameObject toggleBackground;
     private RectTransform toggleTransform;
     private float onPosX;
     private float offPosX;
     public float handleOffset;
-    public Text title;
+    public Text status;
     public GameObject sound;
 
     // Start is called before the first frame update
@@ -37,14 +37,14 @@ public class MoveToggle : MonoBehaviour
         {
             Debug.Log("toggle turned on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
-            title.text = "ON";
+            status.text = "ON";
             sound.SetActive(true);
         }
         else
         {
             Debug.Log("toggle turned off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
-            title.text = "OFF";
+            status.text = "OFF";
             sound.SetActive(false);
         }
 
