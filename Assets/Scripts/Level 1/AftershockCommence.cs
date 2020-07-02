@@ -49,7 +49,7 @@ public class AftershockCommence : MonoBehaviour
 
     private IEnumerator DestroyHouse()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.75f);
         house.SetActive(false);
         destroyed.SetActive(true);
     }
