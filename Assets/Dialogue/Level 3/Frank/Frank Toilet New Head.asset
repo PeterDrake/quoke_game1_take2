@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Frank New Head
+  m_Name: Frank Toilet New Head
   m_EditorClassIdentifier: 
   speech: Hey, Mo.
   optionOneText: Hey, Frank.
@@ -22,11 +22,8 @@ MonoBehaviour:
   NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
-  - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
-  optionOneTextAlt: What do you plan to use for a toilet?
+  optionOneTextAlt: I'm so thirsty! Do you know where we can find some water?
   optionOneAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
-  IfRequirementsTwo:
-  - {fileID: 11400000, guid: 335f5786a5f2d49b7b78c24ac9506bbc, type: 2}
-  - {fileID: 11400000, guid: 11cf0277d60c64f59b99f77ae8af9ffa, type: 2}
-  optionTwoTextAlt: I'm so thirsty! Do you know where we can find some water?
-  optionTwoAlt: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
