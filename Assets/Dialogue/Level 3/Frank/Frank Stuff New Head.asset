@@ -22,7 +22,7 @@ MonoBehaviour:
   NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: d19cf06f15cb444268b6e175453a09b5, type: 2}
-  optionOneTextAlt: Hey, Frank.
+  optionOneTextAlt: Yeah, I should get this pit latrine build soon.
   optionOneAlt: {fileID: 11400000, guid: c010402ff2295491981c287dae1c4fb8, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
