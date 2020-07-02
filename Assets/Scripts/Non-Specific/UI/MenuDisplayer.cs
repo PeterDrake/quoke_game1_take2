@@ -12,7 +12,6 @@ public class MenuDisplayer : UIElement
     // toggler, exitToMenu, quitGame, Settings, Inventory 
 
     private GameObject toggler;
-    private GameObject menu;
     private void initialize()
     {
         toggler = transform.Find("toggle").gameObject;
@@ -62,5 +61,4 @@ public class MenuDisplayer : UIElement
     }
 
     private void settings() { }
-   
 }
