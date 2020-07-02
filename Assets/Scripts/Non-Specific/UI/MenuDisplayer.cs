@@ -8,28 +8,21 @@ using Button = UnityEngine.UI.Button;
 public class MenuDisplayer : UIElement
 {
     public int mainMenuSceneIndex;
+    
+    // toggler, exitToMenu, quitGame, Settings, Inventory 
 
-    private GameObject menuOptions;
-    private GameObject settingOptions;
     private GameObject toggler;
-    private Transform volume;
-    private Transform buttons;
-
     private void initialize()
     {
         toggler = transform.Find("toggle").gameObject;
-        menuOptions = toggler.transform.Find("buttons").gameObject;
-        settingOptions = toggler.transform.Find("volume").gameObject;
-        buttons = toggler.transform.Find("buttons");
-        volume = toggler.transform.Find("volume");
-
-
+        Transform buttons = toggler.transform.Find("buttons"); 
+        
         foreach (Transform child in buttons)
         {
             switch (child.name)
             {
                 case "close":
-                    child.GetComponent<Button>().onClick.AddListener(delegate { UIManager.Instance.ToggleActive(this); });
+                    child.GetComponent<Button>().onClick.AddListener(delegate {UIManager.Instance.ToggleActive(this); });
                     break;
                 case "exit":
                     child.GetComponent<Button>().onClick.AddListener(Application.Quit);
@@ -41,30 +34,13 @@ public class MenuDisplayer : UIElement
                     child.GetComponent<Button>().onClick.AddListener(settings);
                     break;
             }
-
-        }
-
-        foreach (Transform child in volume)
-        {
-            switch (child.name)
-            {
-                case "musicToggle":
-                    child.transform.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<SoundToggle>().StartToggle);
-                    break;
-                case "fxToggle":
-                    child.transform.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<SoundToggle>().StartToggle);
-                    break;
-                case "back":
-                    child.GetComponent<Button>().onClick.AddListener(backToMenu);
-                    break;
-            }
         }
     }
     private void Start()
     {
         locked = true;
         pauseOnOpen = true;
-        Systems.Input.RegisterKey("escape", delegate { UIManager.Instance.ToggleActive(this); });
+        Systems.Input.RegisterKey("escape",delegate {UIManager.Instance.ToggleActive(this); });
         initialize();
         toggler.SetActive(false);
     }
@@ -84,15 +60,5 @@ public class MenuDisplayer : UIElement
         SceneManager.LoadScene(mainMenuSceneIndex);
     }
 
-    private void settings()
-    {
-        menuOptions.SetActive(false);
-        settingOptions.SetActive(true);
-    }
-
-    private void backToMenu()
-    {
-        menuOptions.SetActive(true);
-        settingOptions.SetActive(false);
-    }
+    private void settings() { }
 }
