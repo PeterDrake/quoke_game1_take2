@@ -43,6 +43,22 @@ public class MenuDisplayer : UIElement
             }
 
         }
+
+        foreach (Transform child in volume)
+        {
+            switch (child.name)
+            {
+                case "musicToggle":
+                    child.transform.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<SoundToggle>().StartToggle);
+                    break;
+                case "fxToggle":
+                    child.transform.Find("button").GetComponent<Button>().onClick.AddListener(child.GetComponent<SoundToggle>().StartToggle);
+                    break;
+                case "back":
+                    child.GetComponent<Button>().onClick.AddListener(backToMenu);
+                    break;
+            }
+        }
     }
     private void Start()
     {
@@ -70,6 +86,13 @@ public class MenuDisplayer : UIElement
 
     private void settings()
     {
+        menuOptions.SetActive(false);
+        settingOptions.SetActive(true);
+    }
 
+    private void backToMenu()
+    {
+        menuOptions.SetActive(true);
+        settingOptions.SetActive(false);
     }
 }
