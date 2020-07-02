@@ -635,6 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggle: {fileID: 8919649218839629701}
   deathText: {fileID: 6755552870264331954}
+  waitTime: 0
 --- !u!1 &6455381914703354311
 GameObject:
   m_ObjectHideFlags: 0

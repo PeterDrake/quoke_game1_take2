@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Frank Stuff New Head
   m_EditorClassIdentifier: 
-  speech: Hey, Mo.
-  optionOneText: Hey, Frank. Do you think this rain will stop soon?
+  speech: This rain is really coming down.
+  optionOneText: Do you think it will stop soon?
   optionOne: {fileID: 11400000, guid: 691186b739e864c289927e9426d75a9d, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

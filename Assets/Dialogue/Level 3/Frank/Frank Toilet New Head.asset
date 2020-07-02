@@ -22,7 +22,7 @@ MonoBehaviour:
   NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
-  optionOneTextAlt: I'm so thirsty! Do you know where we can find some water?
+  optionOneTextAlt: What do you plan to use for a toilet?
   optionOneAlt: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 

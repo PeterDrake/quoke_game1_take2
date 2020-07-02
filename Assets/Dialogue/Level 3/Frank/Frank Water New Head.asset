@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Hey, Mo.
   optionOneText: Hey, Frank.
-  optionOne: {fileID: 11400000, guid: c010402ff2295491981c287dae1c4fb8, type: 2}
+  optionOne: {fileID: 11400000, guid: 9ccdbbac3352a43de86009a4a6491cc9, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
