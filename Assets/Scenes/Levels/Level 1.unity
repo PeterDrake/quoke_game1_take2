@@ -41882,7 +41882,9 @@ MonoBehaviour:
 
     Click dialogue box to keep talking
 
-'
+
+    Press ''Esc''
+    for sound/exit menu'
 --- !u!222 &2000796664
 CanvasRenderer:
   m_ObjectHideFlags: 0
