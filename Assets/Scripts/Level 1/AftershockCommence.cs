@@ -10,6 +10,8 @@ public class AftershockCommence : MonoBehaviour
     public AudioSource boomAudio;
     public GameObject bigBoom;
     public GameObject animateBoom;
+    public GameObject house;
+    public GameObject destroyed;
     public UnityEvent OnDeath;
 
 
@@ -38,9 +40,17 @@ public class AftershockCommence : MonoBehaviour
                 animateBoom.SetActive(true);
                 //new WaitForSeconds(1f);
                 //boomAudio.Play();
+                StartCoroutine(DestroyHouse());
                 OnDeath.Invoke();
                 Systems.Status.PlayerDeath("You died in a gas explosion");
             }
         }
+    }
+
+    private IEnumerator DestroyHouse()
+    {
+        yield return new WaitForSeconds(0.75f);
+        house.SetActive(false);
+        destroyed.SetActive(true);
     }
 }
