@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Hey Mo!
   optionOneText: Hi Zelda.
-  optionOne: {fileID: 11400000, guid: d6834eacaedc04a9da86a81430c0d2da, type: 2}
+  optionOne: {fileID: 11400000, guid: ab6fa112f5b36496686d153814731ff2, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
