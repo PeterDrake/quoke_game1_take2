@@ -15,6 +15,9 @@ public class DeathDisplay : UIElement
     public Text deathText;
     public float waitTime;
     public GameObject explosion;
+    public AudioSource DeathMusic;
+    public GameObject DMusic;
+    public GameObject OtherMusic;
 
     private bool dead;
    
@@ -32,8 +35,11 @@ public class DeathDisplay : UIElement
     }
 
     public void Activate(string text)
-    { 
+    {
         deathText.text = text;
+        DMusic.SetActive(true);
+        OtherMusic.SetActive(false);
+        DeathMusic.Play();
         StartCoroutine(nameof(WaitThenShow), waitTime);
     }
 
