@@ -104,7 +104,7 @@ public class PitLatrineVisit : MonoBehaviour
     }
     private void MiniGameFinished()
     {
-        Place1.SetActive(false);
+        //Place1.SetActive(false);
         
         PitLatrine.SetActive(true);
         House.SetActive(true);
