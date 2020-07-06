@@ -1616,6 +1616,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499350134894848846, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 499350134894848847, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1665,6 +1670,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3262251361304920451, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510980183834463910, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3677249790432770929, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -1775,6 +1790,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455381914245048020, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6455381914281399892, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -1996,6 +2016,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455381915777254497, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8077493130667667356, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -11477,7 +11502,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &967837066
 MonoBehaviour:
@@ -12182,7 +12207,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &1071191748 stripped
 GameObject:
