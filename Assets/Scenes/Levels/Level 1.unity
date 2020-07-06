@@ -323,6 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InsideCheck: {fileID: 1589015081}
   DeathScreen: {fileID: 1185150363}
+  ExplosionSound: {fileID: 690255665}
 --- !u!1 &15392121
 GameObject:
   m_ObjectHideFlags: 0

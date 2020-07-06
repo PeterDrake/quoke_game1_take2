@@ -6,6 +6,7 @@ public class ControlIndoorsAreaCheck : MonoBehaviour
 {
     public GameObject InsideCheck;
     public GameObject DeathScreen;
+    public GameObject ExplosionSound;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class ControlIndoorsAreaCheck : MonoBehaviour
     {
         if (DeathScreen.activeSelf)
         {
+            StartCoroutine(nameof(Wait2));
             InsideCheck.SetActive(false);
         }
     }
@@ -26,6 +28,12 @@ public class ControlIndoorsAreaCheck : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         InsideCheck.SetActive(true);
+    }
+
+    private IEnumerator Wait2()
+    {
+        yield return new WaitForSeconds(5f);
+        ExplosionSound.SetActive(false);
     }
     
 }
