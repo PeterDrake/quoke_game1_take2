@@ -19,11 +19,13 @@ MonoBehaviour:
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes: []
+  Outcomes:
+  - {fileID: 11400000, guid: e4e423ab946e74934aa82b22fb6c2627, type: 2}
   NewHead: {fileID: 0}
-  IfRequirementsOne: []
-  optionOneTextAlt: 
-  optionOneAlt: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: d19cf06f15cb444268b6e175453a09b5, type: 2}
+  optionOneTextAlt: Thanks, I'm going to build this pit latrine first.
+  optionOneAlt: {fileID: 11400000, guid: 8fdfd06d271eb074190d52037fdb3ca4, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}

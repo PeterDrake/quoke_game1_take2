@@ -21,4 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d77640073ece14ccfa0532ef18c92f55, type: 2}
   Outcomes:
   - {fileID: 11400000, guid: ce15081f5a79b430697066141b2a3fef, type: 2}
-  NewHead: {fileID: 11400000, guid: 304e1480821d14b389bdc508023495e3, type: 2}
+  NewHead: {fileID: 11400000, guid: 9f9dd90bc6e5d43cab619f717ed34e9d, type: 2}

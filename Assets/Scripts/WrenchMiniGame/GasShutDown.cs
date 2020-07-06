@@ -36,6 +36,7 @@ public class GasShutDown : MonoBehaviour
         {
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
+            _interact.enabled = false;
         }
         else
         {

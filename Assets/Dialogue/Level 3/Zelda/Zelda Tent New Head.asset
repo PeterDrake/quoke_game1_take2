@@ -9,14 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Zelda Tent New Head
   m_EditorClassIdentifier: 
   speech: Hey Mo!
   optionOneText: Hi Zelda.
-  optionOne: {fileID: 11400000, guid: 5c2d2f733874c404f9e746fbb392dace, type: 2}
+  optionOne: {fileID: 11400000, guid: ed77347f142c84314be4a238419b150c, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: 5658e9ab0647f4447b900f817248a3b5, type: 2}
+  optionOneTextAlt: Hi Zelda.
+  optionOneAlt: {fileID: 11400000, guid: 5c2d2f733874c404f9e746fbb392dace, type: 2}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
