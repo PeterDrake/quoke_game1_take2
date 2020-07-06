@@ -12826,6 +12826,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 625580730}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &625580732 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6455381915030585878, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4546923acd72d4519bd65e8982d6a092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &628812459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -30385,6 +30397,7 @@ GameObject:
   - component: {fileID: 1506879590}
   - component: {fileID: 1506879585}
   - component: {fileID: 1506879589}
+  - component: {fileID: 1506879591}
   m_Layer: 0
   m_Name: FrontDoor
   m_TagString: Untagged
@@ -30534,6 +30547,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1506879591}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1506879590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30547,6 +30571,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1720734, y: 5.5, z: 0.2006836}
   m_Center: {x: -0.5860367, y: 1, z: -4.3882904}
+--- !u!114 &1506879591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506879583}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a7cbeb1614cee49a5d5b8ecdf3c37d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 625580732}
 --- !u!1 &1511606321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -33089,7 +33126,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[12].m_MethodName
-      value: 
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
