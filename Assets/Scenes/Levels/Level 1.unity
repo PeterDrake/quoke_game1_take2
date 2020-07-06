@@ -285,6 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 14772360}
+  - component: {fileID: 14772361}
   m_Layer: 0
   m_Name: GasExpTriggers
   m_TagString: Untagged
@@ -308,6 +309,20 @@ Transform:
   m_Father: {fileID: 1979804782}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &14772361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14772359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dda9690f4343fb4a87120179aa91b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InsideCheck: {fileID: 1589015081}
+  DeathScreen: {fileID: 1185150363}
 --- !u!1 &15392121
 GameObject:
   m_ObjectHideFlags: 0
@@ -24276,6 +24291,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8340e8586e8556c4b82f331a034bae19, type: 3}
+--- !u!1 &1185150363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8919649218839629701, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1185346577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
