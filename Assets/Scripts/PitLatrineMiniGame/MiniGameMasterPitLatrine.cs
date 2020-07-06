@@ -44,7 +44,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     public void Start()
     {
-        PlywoodButton.GetComponent<Button>().interactable = false;
+        PlywoodButton.GetComponent<Button>().interactable = true;
         TarpButton.GetComponent<Button>().interactable = false;
 
         if (S1Folder.activeSelf)

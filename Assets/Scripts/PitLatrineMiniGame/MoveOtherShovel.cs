@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveOtherShovel : MonoBehaviour
 {
-    private float movementSpeed = 0.5f;
+    private float movementSpeed = 2f;
     private bool Check;
     private bool Check1;
 
