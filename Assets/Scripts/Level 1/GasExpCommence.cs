@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AftershockCommence : MonoBehaviour
+public class GasExpCommence : MonoBehaviour
 {
 
     private bool LeftHouse;
