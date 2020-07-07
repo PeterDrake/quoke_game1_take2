@@ -142,6 +142,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             {
                 //Use.SetActive(false);
                 //Dig2.SetActive(false);
+                TarpButton.GetComponent<Button>().interactable = false;
                 StartCoroutine(nameof(Winning));
                 //WinScreen.SetActive(true);
             }
@@ -232,7 +233,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     public void NoBuildPly()
     {
-        BuildErrorText.text = "You need a bigger hole.     Keep Digging";
+        BuildErrorText.text = "You need a bigger hole. Keep Digging";
         StartCoroutine(BuildErrorMessage());
     }
 

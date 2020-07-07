@@ -5088,8 +5088,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17.999992, y: 22}
-  m_SizeDelta: {x: 304.4, y: 135.3}
+  m_AnchoredPosition: {x: 17.999989, y: 22}
+  m_SizeDelta: {x: 269.69998, y: 135.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511441716
 MonoBehaviour:
@@ -5122,8 +5122,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Keep Digging
+    m_LineSpacing: 1.5
+  m_Text: You need a bigger hole. Keep Digging
 --- !u!222 &511441717
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7465,7 +7465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &754902472
 Transform:
   m_ObjectHideFlags: 0
@@ -13963,7 +13963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1661880626
 Transform:
   m_ObjectHideFlags: 0
