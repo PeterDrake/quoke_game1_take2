@@ -31,12 +31,16 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject Tarp;
     public GameObject Plywood;
 
+    public GameObject BuildError;
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
     public GameObject Depth1;
     public GameObject Depth2; //Depths 3 and 4 are regulated in MoveOtherShovel script
+    public GameObject Depth3;
+    public GameObject Depth4;
+    public GameObject Depth5;
 
     //public GameObject Use;
     public GameObject Dig; //Button for S1
@@ -44,8 +48,11 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     public void Start()
     {
-        PlywoodButton.GetComponent<Button>().interactable = true;
-        TarpButton.GetComponent<Button>().interactable = false;
+        //PlywoodButton.GetComponent<Button>().interactable = false;
+        //TarpButton.GetComponent<Button>().interactable = false;
+
+        PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuild);
+        TarpButton.GetComponent<Button>().onClick.AddListener(NoBuild);
 
         if (S1Folder.activeSelf)
         {
@@ -102,6 +109,28 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 StartCoroutine(nameof(TooShallow));
             }*/
 
+            if (Depth2.activeSelf)
+            {
+                PlywoodButton.GetComponent<Button>().onClick.RemoveListener(NoBuild);
+                PlywoodButton.GetComponent<Button>().onClick.AddListener(PlyBuild);
+            }
+
+            if (Plywood.activeSelf)
+            {
+                //TarpButton.GetComponent<Button>().interactable = true;
+                PlywoodButton.GetComponent<Button>().interactable = false;
+                Dig2.GetComponent<Button>().interactable = false;
+                Shovel2.SetActive(false);
+                S2Pit2.SetActive(false);
+                S2Pit1.SetActive(false);
+                TarpButton.GetComponent<Button>().onClick.RemoveListener(NoBuild);
+                TarpButton.GetComponent<Button>().onClick.AddListener(TarpBuild);
+                //if (Tarp.activeSelf)
+                //{
+                //    TarpButton.GetComponent<Button>().interactable = false;
+                //}
+            }
+
             if (Tarp.activeSelf) //&& UseClicked)
             {
                 //Use.SetActive(false);
@@ -110,24 +139,10 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 //WinScreen.SetActive(true);
             }
 
-            if (Plywood.activeSelf)
-            {
-                TarpButton.GetComponent<Button>().interactable = true;
-                PlywoodButton.GetComponent<Button>().interactable = false;
-                Dig2.GetComponent<Button>().interactable = false;
-                Shovel2.SetActive(false);
-                S2Pit2.SetActive(false);
-                S2Pit1.SetActive(false);
-                if (Tarp.activeSelf)
-                {
-                    TarpButton.GetComponent<Button>().interactable = false;
-                }
-            }
-
-            if (S2Pit2.activeSelf && !S2Pit3.activeSelf)
-            {
-                PlywoodButton.GetComponent<Button>().interactable = true;
-            }
+            //if (S2Pit2.activeSelf && !S2Pit3.activeSelf)
+            //{
+            //    PlywoodButton.GetComponent<Button>().interactable = true;
+            //}
 
             if (S2Pit3.activeSelf && !check)
             {
@@ -172,7 +187,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         //Use.SetActive(true);
         PButton.SetActive(true);
         TButton.SetActive(true);
-        PlywoodButton.GetComponent<Button>().interactable = false;
+        //PlywoodButton.GetComponent<Button>().interactable = false;
     }
 
     private void UseIsClicked()
@@ -186,7 +201,29 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         TryHighGround.SetActive(true);
         //UseClicked = false;
     }
-    
+
+    private void PlyBuild()
+    {
+        Plywood.SetActive(true);
+    }
+
+    private void TarpBuild()
+    {
+        Tarp.SetActive(true);
+    }
+
+    public void NoBuild()
+    {
+        StartCoroutine(BuildErrorMessage());
+    }
+
+    private IEnumerator BuildErrorMessage()
+    {
+        BuildError.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        BuildError.SetActive(false);
+    }
+
     public void Leave()
     {
         OnExit.Invoke();
