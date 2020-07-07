@@ -68,8 +68,8 @@ public class PitLatrineVisit : MonoBehaviour
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
 
-        S2 = GameObject.Find("Pit High Ground");
-        S1 = GameObject.Find("Pit Low Ground");
+        S2 = GameObject.FindGameObjectWithTag("HighGround").gameObject;
+        S1 = GameObject.FindGameObjectWithTag("LowGround").gameObject;
 
         if (SituationNumber == 1)
         {

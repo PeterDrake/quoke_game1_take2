@@ -7461,7 +7461,7 @@ GameObject:
   - component: {fileID: 754902472}
   m_Layer: 0
   m_Name: Pit High Ground
-  m_TagString: Untagged
+  m_TagString: HighGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13959,11 +13959,11 @@ GameObject:
   - component: {fileID: 1661880626}
   m_Layer: 0
   m_Name: Pit Low Ground
-  m_TagString: Untagged
+  m_TagString: LowGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1661880626
 Transform:
   m_ObjectHideFlags: 0
