@@ -32,27 +32,33 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject Plywood;
 
     public GameObject BuildError;
+    public Text BuildErrorText;
     public GameObject ErrorScreen;
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
     public GameObject Depth1;
     public GameObject Depth2; //Depths 3 and 4 are regulated in MoveOtherShovel script
-    public GameObject Depth3;
-    public GameObject Depth4;
-    public GameObject Depth5;
+    //public GameObject Depth3;
+    //public GameObject Depth4;
+    //public GameObject Depth5;
 
     //public GameObject Use;
     public GameObject Dig; //Button for S1
     public GameObject Dig2; //Button for S2
 
+    public GameObject Dirt1;
+    public GameObject Dirt2;
+    public GameObject Dirt3;
+    public GameObject Dirt4;
+
+
     public void Start()
     {
         //PlywoodButton.GetComponent<Button>().interactable = false;
         //TarpButton.GetComponent<Button>().interactable = false;
-
-        PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuild);
-        TarpButton.GetComponent<Button>().onClick.AddListener(NoBuild);
+        PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuildPly);
+        TarpButton.GetComponent<Button>().onClick.AddListener(NoBuildTarp);
 
         if (S1Folder.activeSelf)
         {
@@ -111,7 +117,8 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
             if (Depth2.activeSelf)
             {
-                PlywoodButton.GetComponent<Button>().onClick.RemoveListener(NoBuild);
+                Depth1.SetActive(false);
+                PlywoodButton.GetComponent<Button>().onClick.RemoveListener(NoBuildPly);
                 PlywoodButton.GetComponent<Button>().onClick.AddListener(PlyBuild);
             }
 
@@ -123,7 +130,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 Shovel2.SetActive(false);
                 S2Pit2.SetActive(false);
                 S2Pit1.SetActive(false);
-                TarpButton.GetComponent<Button>().onClick.RemoveListener(NoBuild);
+                TarpButton.GetComponent<Button>().onClick.RemoveListener(NoBuildTarp);
                 TarpButton.GetComponent<Button>().onClick.AddListener(TarpBuild);
                 //if (Tarp.activeSelf)
                 //{
@@ -187,6 +194,17 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         //Use.SetActive(true);
         PButton.SetActive(true);
         TButton.SetActive(true);
+        PlywoodButton.GetComponent<Button>().onClick.RemoveListener(PlyBuild);
+        PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuildPly);
+        TarpButton.GetComponent<Button>().onClick.RemoveListener(TarpBuild);
+        TarpButton.GetComponent<Button>().onClick.AddListener(NoBuildTarp);
+        Dirt1.SetActive(false);
+        Dirt2.SetActive(false);
+        Dirt3.SetActive(false);
+        Dirt4.SetActive(false);
+        Depth1.SetActive(false);
+        S2Pit1.SetActive(false);
+
         //PlywoodButton.GetComponent<Button>().interactable = false;
     }
 
@@ -212,15 +230,22 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         Tarp.SetActive(true);
     }
 
-    public void NoBuild()
+    public void NoBuildPly()
     {
+        BuildErrorText.text = "You need a bigger hole.     Keep Digging";
+        StartCoroutine(BuildErrorMessage());
+    }
+
+    public void NoBuildTarp()
+    {
+        BuildErrorText.text = "Add some plywood before setting up the tarp";
         StartCoroutine(BuildErrorMessage());
     }
 
     private IEnumerator BuildErrorMessage()
     {
         BuildError.SetActive(true);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         BuildError.SetActive(false);
     }
 

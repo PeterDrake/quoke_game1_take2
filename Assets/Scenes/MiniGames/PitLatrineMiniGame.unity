@@ -7465,7 +7465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &754902472
 Transform:
   m_ObjectHideFlags: 0
@@ -12294,17 +12294,19 @@ MonoBehaviour:
   Tarp: {fileID: 128617772}
   Plywood: {fileID: 825104512}
   BuildError: {fileID: 989343433}
+  BuildErrorText: {fileID: 511441716}
   ErrorScreen: {fileID: 364409169}
   TryHighGround: {fileID: 1743689748}
   ErosionScreen: {fileID: 1075880751}
   WinScreen: {fileID: 689588163}
   Depth1: {fileID: 344212891}
   Depth2: {fileID: 1503388282}
-  Depth3: {fileID: 1457064627}
-  Depth4: {fileID: 1069713960}
-  Depth5: {fileID: 2069200489}
   Dig: {fileID: 1472520561}
   Dig2: {fileID: 453973414}
+  Dirt1: {fileID: 502577367}
+  Dirt2: {fileID: 1192159402}
+  Dirt3: {fileID: 696159559}
+  Dirt4: {fileID: 1238973251}
 --- !u!4 &1461976793
 Transform:
   m_ObjectHideFlags: 0
@@ -13961,7 +13963,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1661880626
 Transform:
   m_ObjectHideFlags: 0
