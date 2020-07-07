@@ -27,6 +27,7 @@ public class Bookcase : MonoBehaviour
     private Rigidbody rb;
     private bool isFalling = false;
     private BoxCollider fallCollider;
+    public BoxCollider TriggerCollider;
 
 
     private Vector3 vel;
@@ -70,8 +71,11 @@ public class Bookcase : MonoBehaviour
 
         if (secure && HasEverything())
         {
+            Destroy(TriggerCollider);
             QuakeManager.Instance.TriggerQuake();
+
         }
+
         if (count < KillCount)
         {
             if (secure)
@@ -97,7 +101,9 @@ public class Bookcase : MonoBehaviour
         }
         else if (!secure)
         {
+            Destroy(TriggerCollider);
             QuakeManager.Instance.TriggerQuake();
+ 
         }
 
 
