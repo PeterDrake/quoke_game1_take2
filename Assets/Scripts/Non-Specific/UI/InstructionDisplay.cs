@@ -10,6 +10,7 @@ public class InstructionDisplay : UIElement
 
     private GameObject toggler;
     public Button ExitButton;
+    private GameObject pauseMenu;
 
     public override void Open()
     {
@@ -22,7 +23,7 @@ public class InstructionDisplay : UIElement
         pauseOnOpen = true;
         locked = true;
 
-        
+        pauseMenu = GameObject.Find("Basic Pause Menu");
 
         initialize();
         activate(false);
@@ -48,6 +49,13 @@ public class InstructionDisplay : UIElement
     {
         
         toggler.SetActive(active);
+        pauseMenu.SetActive(!active);
+        if (active) { 
+            Systems.Input.RegisterKey("escape", delegate { 
+                UIManager.Instance.ToggleActive(this);
+                pauseMenu.SetActive(true);
+            }); 
+        }
     }
 
 
