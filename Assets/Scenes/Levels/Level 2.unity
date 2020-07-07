@@ -18285,6 +18285,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809639675827629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1872034614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1630289390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1875765875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -105988,6 +105994,11 @@ PrefabInstance:
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: frontDoor
+      value: 
+      objectReference: {fileID: 1872034614}
     - target: {fileID: 2863601547666779320, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: HydrationSlider
