@@ -125,6 +125,7 @@ public class PitLatrineVisit : MonoBehaviour
         _canvas.ChangeText("Look for shelter");
 
         //Place2.SetActive(false);
+        Destroy(Place1);
         Destroy(Place2);
         Destroy(this);
     }
