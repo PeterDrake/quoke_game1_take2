@@ -20,8 +20,8 @@ public class InstructionDisplay : UIElement
 
     private void Start()
     {
-        //pauseOnOpen = true;
-        //locked = true;
+        pauseOnOpen = true;
+        locked = true;
 
         //inst = GameObject.Find("InstructDisplay").GetComponent<In;
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();

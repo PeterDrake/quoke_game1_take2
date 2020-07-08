@@ -13,21 +13,21 @@ public class MenuDisplayer : UIElement
 
     private GameObject toggler;
     private bool othCanviOpen;
-    private GameObject othCanvi;
     private UIElement othCanviScript;
 
     private void Start()
     {
         locked = true;
         pauseOnOpen = true;
-        //othCanviOpen = false;
         Systems.Input.RegisterKey("escape", delegate {
             if (othCanviOpen)
             {
-                //othCanvi.SetActive(false);
-                //closeCanvi();
-                UIManager.Instance.ToggleActive(this);
+                //does not open
+                //UIManager.Instance.ToggleActive(this);
+                
+                //will not close
                 othCanviScript.Close();
+                Open();
             }
             else
             {
