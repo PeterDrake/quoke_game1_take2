@@ -100532,8 +100532,8 @@ MonoBehaviour:
   - {fileID: 1385273495}
   - {fileID: 719859610}
   playerKiller: {fileID: 557489951}
-  DropDelay: 6
-  TotalDropTime: 15
+  DropDelay: 4
+  TotalDropTime: 4
 --- !u!64 &1131668263822085136
 MeshCollider:
   m_ObjectHideFlags: 0
