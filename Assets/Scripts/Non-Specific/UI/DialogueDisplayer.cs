@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueDisplayer : UIElement
 {
-    private GameObject dialogue;
+    //private GameObject dialogue;
     private MenuDisplayer menu;
 
     public delegate string DialogueEvent();
@@ -44,13 +44,11 @@ public class DialogueDisplayer : UIElement
     public override void Close()
     {
         activate(false);
-        menu.closeCanvi();
     }
 
     public override void Open()
     {
         activate(true);
-        menu.openCanvi(dialogue);
     }
     
     public void Load(DialogueNode d, NPC n)
@@ -103,7 +101,7 @@ public class DialogueDisplayer : UIElement
     private void Start()
     {
         locked = true;
-        dialogue = GameObject.Find("DialogueWindow (Basic)");
+        //dialogue = GameObject.Find("DialogueWindow (Basic)");
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
         initialize();
         activate(false);   
@@ -196,7 +194,7 @@ public class DialogueDisplayer : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
-        if (active) { menu.openCanvi(dialogue); }
+        if (active) { menu.openCanvi(this); }
         else { menu.closeCanvi(); }
     }
 }

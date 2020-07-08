@@ -12,19 +12,22 @@ public class MenuDisplayer : UIElement
     // toggler, exitToMenu, quitGame, Settings, Inventory 
 
     private GameObject toggler;
-    private bool escCanviToggler;
-    private GameObject escCanvi;
-
+    private bool othCanviOpen;
+    private GameObject othCanvi;
+    private UIElement othCanviScript;
 
     private void Start()
     {
         locked = true;
         pauseOnOpen = true;
-        escCanviToggler = false;
+        //othCanviOpen = false;
         Systems.Input.RegisterKey("escape", delegate {
-            if (escCanviToggler)
+            if (othCanviOpen)
             {
-                escCanvi.SetActive(false);
+                //othCanvi.SetActive(false);
+                //closeCanvi();
+                UIManager.Instance.ToggleActive(this);
+                othCanviScript.Close();
             }
             else
             {
@@ -35,14 +38,14 @@ public class MenuDisplayer : UIElement
         toggler.SetActive(false);
     }
 
-    public void openCanvi(GameObject theCanvi)
+    public void openCanvi(UIElement othScript)
     {
-        escCanvi = theCanvi;
-        escCanviToggler = true;
+        othCanviScript = othScript;
+        othCanviOpen = true;
     }
     public void closeCanvi()
     {
-        escCanviToggler = false;
+        othCanviOpen = false;
     }
 
     private void initialize()
