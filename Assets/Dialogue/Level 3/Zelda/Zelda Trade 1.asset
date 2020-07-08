@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zelda Trade 1
   m_EditorClassIdentifier: 
   speech: Could I have some water? I'll trade you my shovel.
-  optionOneText: We're trying to dig a pit latrine - a shovel sound perfect. I'd
+  optionOneText: We're trying to dig a pit latrine - a shovel sounds perfect. I'd
     be happy to trade!
   optionOne: {fileID: 11400000, guid: abef42fabd64d4121bdad93cb5453f3f, type: 2}
   optionTwoText: 

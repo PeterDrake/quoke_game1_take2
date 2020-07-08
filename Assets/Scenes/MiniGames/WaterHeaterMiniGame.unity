@@ -1011,6 +1011,10 @@ MonoBehaviour:
   PIP2: {fileID: 1604871804}
   PIP3: {fileID: 1331464423}
   PIP4: {fileID: 1285181792}
+  RawImage: {fileID: 2023601574}
+  RawImage1: {fileID: 745364067}
+  RawImage2: {fileID: 136045630}
+  RawImage3: {fileID: 649515272}
 --- !u!4 &367340605
 Transform:
   m_ObjectHideFlags: 0

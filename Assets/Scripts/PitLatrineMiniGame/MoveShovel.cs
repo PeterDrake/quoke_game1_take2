@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class MoveShovel : MonoBehaviour
 {
-    private float movementSpeed = 0.5f;
+    private float movementSpeed = 2f;
 
     //public GameObject Shovel1;
     public GameObject Pit1;

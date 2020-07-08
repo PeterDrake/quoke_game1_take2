@@ -24,6 +24,8 @@ TagManager:
   - Bathroom
   - MainRoom
   - Kitchen
+  - HighGround
+  - LowGround
   layers:
   - Default
   - TransparentFX

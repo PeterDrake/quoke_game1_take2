@@ -35,6 +35,11 @@ public class WaterHeaterMaster : MonoBehaviour
     public GameObject PIP3;
     public GameObject PIP4;
 
+    public GameObject RawImage;
+    public GameObject RawImage1;
+    public GameObject RawImage2;
+    public GameObject RawImage3;
+
 
     private void Start()
     {
@@ -151,6 +156,10 @@ public class WaterHeaterMaster : MonoBehaviour
 
     public IEnumerator TryAgain()
     {
+        RawImage.SetActive(false);
+        RawImage1.SetActive(false);
+        RawImage2.SetActive(false);
+        RawImage3.SetActive(false);
         Debug.Log("try again message");
         Wrong.SetActive(true);
         yield return new WaitForSeconds(2f);
