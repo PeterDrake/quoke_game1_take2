@@ -53,6 +53,8 @@ public class QuakeManager : MonoBehaviour
     private Rigidbody[] bodies;
     private Clobberer[] clobberers;
 
+    private GameObject Sink;
+
 
     [HideInInspector] public bool Quaking;
 
@@ -94,6 +96,8 @@ public class QuakeManager : MonoBehaviour
         doors = GameObject.FindGameObjectsWithTag("Door");
         bodies = Array.ConvertAll(doors, d => d.GetComponent(typeof(Rigidbody)) as Rigidbody);
         clobberers = Array.ConvertAll(doors, d => d.GetComponent(typeof(Clobberer)) as Clobberer);
+
+        Sink = GameObject.Find("Kitchen Sink").gameObject;
 
         _informationCanvas = GameObject.Find("Canvi").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
         virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
@@ -211,6 +215,7 @@ public class QuakeManager : MonoBehaviour
         ShakeElapsedTime = 0f;
 
         Quaking = false;
+        Destroy(Sink.GetComponent<InteractWithObject>());
         Systems.Status.UnPause();
         TriggerCountdown(AftershockTime);
     }
