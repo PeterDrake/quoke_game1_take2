@@ -8585,6 +8585,11 @@ PrefabInstance:
       propertyPath: DestoryObjectAfterUse
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557045448172751, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: TriggerCollider
+      value: 
+      objectReference: {fileID: 601265817}
     - target: {fileID: 6301557045542398764, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: InteractionDisplayText
@@ -9241,6 +9246,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4055743977899574, guid: 50f20480d334edf40a55699af0463272,
     type: 3}
   m_PrefabInstance: {fileID: 676809641295278416}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &601265817 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6301557045448172593, guid: c9cd190dfc12c498da7654c7039f802b,
+    type: 3}
+  m_PrefabInstance: {fileID: 481829951}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &601415364 stripped
 GameObject:
@@ -18284,6 +18295,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4296191072198384, guid: 283ee93a31feed4458d3a2d3f5cf34ea,
     type: 3}
   m_PrefabInstance: {fileID: 676809639675827629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1872034614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1630289390}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1875765875 stripped
 GameObject:
@@ -105988,6 +106005,11 @@ PrefabInstance:
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: frontDoor
+      value: 
+      objectReference: {fileID: 1872034614}
     - target: {fileID: 2863601547666779320, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: HydrationSlider

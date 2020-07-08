@@ -48,7 +48,7 @@ public class DeathDisplay : UIElement
         float theTime = time;
         while (theTime>0)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
             theTime--;
         }
         UIManager.Instance.SetAsActive(this);

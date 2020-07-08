@@ -44,6 +44,8 @@ public class QuakeManager : MonoBehaviour
     // Game object which will be disabled after quake
     [SerializeField] private GameObject enableDoors;
 
+    [SerializeField] private GameObject frontDoor;
+
     [SerializeField] private GameObject dustStormPrefab;
 
     // TODO Move these into a separate object
@@ -171,10 +173,12 @@ public class QuakeManager : MonoBehaviour
         }
 
         StopQuake();
-        foreach (Clobberer c in clobberers)
-        {
-            c.enabled = false;
-        }
+        //foreach (Clobberer c in clobberers)
+        //{
+        //    c.enabled = false;
+        //}
+
+        frontDoor.GetComponent<Clobberer>().enabled = false;
         _informationCanvas.ChangeText(textAfterQuake);
 
         enableDoors.SetActive(false); // allow player to exit house
