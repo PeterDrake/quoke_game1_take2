@@ -30,7 +30,7 @@ public class InstructionDisplay : UIElement
         
     }
 
-    private void initialize() //Get all references that are needed to populate the dialogue UI
+    private void initialize() //Get all references that are needed to populate the UI
     {
         Transform main = transform.Find("InstructToggler");
         toggler = main.gameObject;
