@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Button = UnityEngine.UI.Button;
 
@@ -19,6 +20,8 @@ public class MenuDisplayer : UIElement
     {
         locked = true;
         pauseOnOpen = true;
+        othCanviOpen = false;
+        print(UIManager.Instance);
         Systems.Input.RegisterKey("escape", delegate {
             if (othCanviOpen)
             {
