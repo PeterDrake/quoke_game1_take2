@@ -22,8 +22,10 @@ public class MenuDisplayer : UIElement
         Systems.Input.RegisterKey("escape", delegate {
             if (othCanviOpen)
             {
-                //doesn't close canvi, open menu
-                //UIManager.Instance.ToggleActive(this);
+                //doesn't close othCanvi, open menu         <- best result
+                //if locked = true is inactive in othScript, 
+                    //then will toggle between menu and othCanvi, no exit
+                UIManager.Instance.ToggleActive(this);
 
                 //doesn't open menu, still paused
                 //othCanviScript.Close();
@@ -32,7 +34,13 @@ public class MenuDisplayer : UIElement
                 //doesn't open menu, still paused
                 //othCanviScript.Close();
 
-
+                //doesn't close othCanvi, open menu         <- best result
+                //if locked = true inactive,
+                    //then doesn't open menu, still paused
+                //if locked = true is inactive in othScript,
+                    //then will toggle between menu and othCanvi, no exit
+                //UIManager.Instance.ToggleActive(this);
+                //othCanviScript.Close();
             }
             else
             {
@@ -43,12 +51,12 @@ public class MenuDisplayer : UIElement
         toggler.SetActive(false);
     }
 
-    public void openCanvi(UIElement othScript)
+    public void openedCanvi(UIElement othScript)
     {
         othCanviScript = othScript;
         othCanviOpen = true;
     }
-    public void closeCanvi()
+    public void closedCanvi()
     {
         othCanviOpen = false;
     }

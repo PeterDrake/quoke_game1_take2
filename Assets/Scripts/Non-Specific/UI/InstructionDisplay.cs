@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class InstructionDisplay : UIElement
 {
 
-    //[Header("A prefab object which will be instantiated for each slot in the inventory")]
 
     private GameObject toggler;
     public Button ExitButton;
-    //private UIElement inst;
+
     private MenuDisplayer menu;
 
     public override void Open()
@@ -23,7 +22,6 @@ public class InstructionDisplay : UIElement
         pauseOnOpen = true;
         locked = true;
 
-        //inst = GameObject.Find("InstructDisplay").GetComponent<In;
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
 
         initialize();
@@ -35,6 +33,9 @@ public class InstructionDisplay : UIElement
     {
         Transform main = transform.Find("InstructToggler");
         toggler = main.gameObject;
+
+        //ActivatePrevious would reactivate the menu if it had been pulled up, 
+            //how do I fix this?
         ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
         //byte componentsFound = 1;
 
@@ -49,8 +50,8 @@ public class InstructionDisplay : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
-        if (active) { menu.openCanvi(this); }
-        else { menu.closeCanvi(); }
+        if (active) { menu.openedCanvi(this); }
+        else { menu.closedCanvi(); }
     }
 
 
