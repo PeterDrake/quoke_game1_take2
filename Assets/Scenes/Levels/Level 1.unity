@@ -324,6 +324,8 @@ MonoBehaviour:
   InsideCheck: {fileID: 1589015081}
   DeathScreen: {fileID: 1185150363}
   ExplosionSound: {fileID: 690255665}
+  house: {fileID: 8834850650941189295}
+  destroy: {fileID: 127534875}
 --- !u!1 &15392121
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +643,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &22545088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1614772525}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &26862892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28198,7 +28206,7 @@ GameObject:
   - component: {fileID: 1506879589}
   - component: {fileID: 1506879591}
   m_Layer: 0
-  m_Name: FrontDoor
+  m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28260,8 +28268,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1355896, y: 5.5, z: 0.40192032}
-  m_Center: {x: -0.7761383, y: 1, z: 11.539141}
+  m_Size: {x: 2.17, y: 5.5, z: 0.2}
+  m_Center: {x: -0.8, y: 1, z: 11}
 --- !u!23 &1506879587
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28369,7 +28377,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.1720734, y: 5.5, z: 0.2006836}
-  m_Center: {x: -0.5860367, y: 1, z: -4.3882904}
+  m_Center: {x: -0.6, y: 1, z: -4}
 --- !u!114 &1506879591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30339,7 +30347,6 @@ GameObject:
   - component: {fileID: 1589015087}
   - component: {fileID: 1589015086}
   - component: {fileID: 1589015085}
-  - component: {fileID: 1589015088}
   - component: {fileID: 1589015084}
   - component: {fileID: 1589015083}
   m_Layer: 0
@@ -30357,7 +30364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589015081}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5.16, y: 0, z: -0.28}
+  m_LocalPosition: {x: -4.79, y: 0, z: -0.64}
   m_LocalScale: {x: 1.5600001, y: 4.52, z: 0.51}
   m_Children: []
   m_Father: {fileID: 14772360}
@@ -30431,7 +30438,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.088999, y: 1, z: 1.781183}
+  m_Size: {x: 2.088999, y: 1, z: 1}
   m_Center: {x: -3, y: 0, z: -7.405644}
 --- !u!23 &1589015086
 MeshRenderer:
@@ -30480,19 +30487,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589015081}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &1589015088
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589015081}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.0889986, y: 1, z: 1.7811826}
-  m_Center: {x: -3.4109056, y: 0, z: 22.54289}
 --- !u!1001 &1589447315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30952,6 +30946,11 @@ PrefabInstance:
       propertyPath: backDoor
       value: 
       objectReference: {fileID: 1396775428}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: bedroomDoor
+      value: 
+      objectReference: {fileID: 22545088}
     - target: {fileID: 1009612024110232355, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: m_IsActive

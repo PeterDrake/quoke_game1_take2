@@ -47,6 +47,8 @@ public class QuakeManager : MonoBehaviour
     [SerializeField] private GameObject frontDoor;
     //added 49
     [SerializeField] private GameObject backDoor;
+    //added 51
+    [SerializeField] private GameObject bedroomDoor;
 
     [SerializeField] private GameObject dustStormPrefab;
 
@@ -187,6 +189,9 @@ public class QuakeManager : MonoBehaviour
         frontDoor.GetComponent<Clobberer>().enabled = false;
         //added 189
         backDoor.GetComponent<Clobberer>().enabled = false;
+        //added 193
+        bedroomDoor.GetComponent<Clobberer>().enabled = false;
+
         _informationCanvas.ChangeText(textAfterQuake);
 
         enableDoors.SetActive(false); // allow player to exit house

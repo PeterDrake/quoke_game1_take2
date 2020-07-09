@@ -7,7 +7,9 @@ public class ControlIndoorsAreaCheck : MonoBehaviour
     public GameObject InsideCheck;
     public GameObject DeathScreen;
     public GameObject ExplosionSound;
-    
+    public GameObject house;
+    public GameObject destroy;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +34,12 @@ public class ControlIndoorsAreaCheck : MonoBehaviour
 
     private IEnumerator Wait2()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(1f);
         ExplosionSound.SetActive(false);
+        house.SetActive(false);
+        destroy.SetActive(true);
     }
+        
+        
     
 }
