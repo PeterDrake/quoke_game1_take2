@@ -68767,7 +68767,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: e754f5928360aeb40937379118bc8f45, type: 3}
       propertyPath: m_Name
-      value: Prop_KitchenSink_Black
+      value: Kitchen Sink
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e754f5928360aeb40937379118bc8f45, type: 3}
       propertyPath: m_IsActive
