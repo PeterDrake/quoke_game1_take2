@@ -34,7 +34,7 @@ public class ControlIndoorsAreaCheck : MonoBehaviour
 
     private IEnumerator Wait2()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.85f);
         ExplosionSound.SetActive(false);
         house.SetActive(false);
         destroy.SetActive(true);
