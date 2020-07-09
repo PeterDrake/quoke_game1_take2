@@ -13456,12 +13456,12 @@ PrefabInstance:
     - target: {fileID: 7680496636982401319, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.26
+      value: 0.08884619
       objectReference: {fileID: 0}
     - target: {fileID: 7680496636982401319, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 107.22
+      value: 107.271805
       objectReference: {fileID: 0}
     - target: {fileID: 7680496636982401319, guid: 6881108f38a3f450484ace239bbbbd65,
         type: 3}
@@ -13552,6 +13552,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577375543034244270, guid: 6881108f38a3f450484ace239bbbbd65,
+        type: 3}
+      propertyPath: enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6881108f38a3f450484ace239bbbbd65, type: 3}
@@ -26515,6 +26520,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8340e8586e8556c4b82f331a034bae19, type: 3}
+--- !u!1 &1396775428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7680496636982401320, guid: 6881108f38a3f450484ace239bbbbd65,
+    type: 3}
+  m_PrefabInstance: {fileID: 740873520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1398842456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30931,6 +30942,16 @@ PrefabInstance:
       propertyPath: frontDoor
       value: 
       objectReference: {fileID: 255789862}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: _inSafeZone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: backDoor
+      value: 
+      objectReference: {fileID: 1396775428}
     - target: {fileID: 1009612024110232355, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: m_IsActive
