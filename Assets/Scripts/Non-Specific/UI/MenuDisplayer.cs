@@ -22,12 +22,17 @@ public class MenuDisplayer : UIElement
         Systems.Input.RegisterKey("escape", delegate {
             if (othCanviOpen)
             {
-                //does not open
+                //doesn't close canvi, open menu
                 //UIManager.Instance.ToggleActive(this);
-                
-                //will not close
-                othCanviScript.Close();
-                Open();
+
+                //doesn't open menu, still paused
+                //othCanviScript.Close();
+                //UIManager.Instance.ToggleActive(this);
+
+                //doesn't open menu, still paused
+                //othCanviScript.Close();
+
+
             }
             else
             {

@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class DialogueDisplayer : UIElement
 {
-    //private GameObject dialogue;
-    private MenuDisplayer menu;
 
     public delegate string DialogueEvent();
     private const byte requiredComponentsAmount = 8;
@@ -101,8 +99,6 @@ public class DialogueDisplayer : UIElement
     private void Start()
     {
         locked = true;
-        //dialogue = GameObject.Find("DialogueWindow (Basic)");
-        menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
         initialize();
         activate(false);   
     }
@@ -194,7 +190,5 @@ public class DialogueDisplayer : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
-        if (active) { menu.openCanvi(this); }
-        else { menu.closeCanvi(); }
     }
 }
