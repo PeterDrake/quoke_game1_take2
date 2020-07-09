@@ -25,7 +25,7 @@ public class MenuDisplayer : UIElement
                 //doesn't close othCanvi, open menu         <- best result
                 //if locked = true is inactive in othScript, 
                     //then will toggle between menu and othCanvi, no exit
-                UIManager.Instance.ToggleActive(this);
+                //UIManager.Instance.ToggleActive(this);
 
                 //doesn't open menu, still paused
                 //othCanviScript.Close();
@@ -36,11 +36,17 @@ public class MenuDisplayer : UIElement
 
                 //doesn't close othCanvi, open menu         <- best result
                 //if locked = true inactive,
-                    //then doesn't open menu, still paused
+                //then doesn't open menu, still paused
                 //if locked = true is inactive in othScript,
-                    //then will toggle between menu and othCanvi, no exit
+                //then will toggle between menu and othCanvi, no exit
                 //UIManager.Instance.ToggleActive(this);
                 //othCanviScript.Close();
+
+                // BEST RESULT!!!
+                UIManager.Instance.ActivatePrevious();
+                //closes canvi properly! Yay!
+                UIManager.Instance.ToggleActive(this);
+                //opens menu! which can be closed again to the play!
             }
             else
             {

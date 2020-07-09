@@ -35,7 +35,6 @@ public class InstructionDisplay : UIElement
         toggler = main.gameObject;
 
         //ActivatePrevious would reactivate the menu if it had been pulled up, 
-            //how do I fix this?
         ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
         //byte componentsFound = 1;
 
