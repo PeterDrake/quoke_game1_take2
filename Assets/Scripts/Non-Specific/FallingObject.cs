@@ -25,7 +25,7 @@ public class FallingObject : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         isEnabled = false;
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
     }
 
     public void OnTriggerEnter(Collider other)
