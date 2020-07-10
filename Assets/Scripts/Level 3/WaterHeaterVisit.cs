@@ -19,6 +19,8 @@ public class WaterHeaterVisit : MonoBehaviour
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
+    //private GameObject levelAudio;
+
 
     void Start()
     {
@@ -55,6 +57,7 @@ public class WaterHeaterVisit : MonoBehaviour
         (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
+        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
 
         GameObject.Find("WaterHeaterMaster").GetComponent<WaterHeaterMaster>().OnWin += MiniGameFinished;
         GameObject.Find("WaterHeaterMaster").GetComponent<WaterHeaterMaster>().OnExit += MiniGameLeave;
@@ -66,6 +69,7 @@ public class WaterHeaterVisit : MonoBehaviour
         canvi.SetActive(true);
         camera.SetActive(true);
         sunlight.SetActive(true);
+        //levelAudio.SetActive(true);
     }
     private void MiniGameFinished()
     {
@@ -77,6 +81,8 @@ public class WaterHeaterVisit : MonoBehaviour
         camera.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
+        //levelAudio.SetActive(true);
+
 
         _inventory.RemoveItem(MustardWater, 1);
         _inventory.AddItem(FilledWater, 1);
