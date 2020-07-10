@@ -26,9 +26,9 @@ public class SC_NPCFollowsPC : MonoBehaviour
             //agent.SetDestination(new Vector3(transformToFollow.position.x - 1, transformToFollow.position.y, transformToFollow.position.z-1));
         //}
 
-        //agent.SetDestination(transformToFollow.position);
+        agent.SetDestination(transformToFollow.position);
 
-        agent.SetDestination(new Vector3(transformToFollow.position.x - 1, transformToFollow.position.y, transformToFollow.position.z-1));
+        //agent.SetDestination(new Vector3(transformToFollow.position.x - 1, transformToFollow.position.y, transformToFollow.position.z-1));
         
         /*else
         {
