@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Maria 6
   m_EditorClassIdentifier: 
-  speech: Before you settle down, though, could you do me a favor?
-  optionOneText: "Sure, what is it?\r"
-  optionOne: {fileID: 11400000, guid: 93a4ab9f76664b641b95b3d86cfdb0e4, type: 2}
+  speech: "The weather radio says there\u2019s rain coming, so you\u2019ll probably
+    want to get in there soon."
+  optionOneText: Good idea!
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes: []
-  NewHead: {fileID: 0}
+  Outcomes:
+  - {fileID: 11400000, guid: 0465be469deb7484bad66bc4455b291e, type: 2}
+  NewHead: {fileID: 11400000, guid: 149c7cada7a72884cb38a6a8444ede3a, type: 2}
