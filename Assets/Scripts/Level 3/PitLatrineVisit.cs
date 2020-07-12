@@ -30,6 +30,7 @@ public class PitLatrineVisit : MonoBehaviour
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
+    //private GameObject levelAudio;
 
     void Start()
     {
@@ -67,6 +68,7 @@ public class PitLatrineVisit : MonoBehaviour
         (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
+        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
 
         S2 = GameObject.FindGameObjectWithTag("HighGround").gameObject;
         S1 = GameObject.FindGameObjectWithTag("LowGround").gameObject;
@@ -97,6 +99,7 @@ public class PitLatrineVisit : MonoBehaviour
         Place1.SetActive(false);
         camera.SetActive(true);
         sunlight.SetActive(true);
+        //levelAudio.SetActive(true);
         House.SetActive(true);
         WaterPond.SetActive(true);
         Player.SetActive(true);
@@ -118,6 +121,7 @@ public class PitLatrineVisit : MonoBehaviour
         camera.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
+        //levelAudio.SetActive(true);
 
         _inventory.RemoveItem(Shovel, 1);
         
