@@ -47,6 +47,8 @@ public class UIManager : MonoBehaviour
         previousWindow.Close();
         activeWindow = newActive;
         activeWindow.Open();
+        print("50previous = " + previousWindow);
+        print("51current = " + activeWindow);
 
         Systems.Instance.Pause(activeWindow.PauseOnOpen());
     }
@@ -55,6 +57,7 @@ public class UIManager : MonoBehaviour
     {
         activeWindow = active;
         active.Open();
+        print("60current = " + activeWindow);
         initialized = true;
         Systems.Instance.Pause(activeWindow.PauseOnOpen());
     }
@@ -80,6 +83,9 @@ public class UIManager : MonoBehaviour
     /// </summary>
     public void ActivatePrevious()
     {
+        print("86previous = " + previousWindow);
+        //the first time this is used, SetAsActive has been prematurely returned
+        //so previousWindow has not been set
         activeWindow.Close();
         previousWindow.Open();
         

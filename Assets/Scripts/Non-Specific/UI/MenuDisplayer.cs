@@ -50,7 +50,7 @@ public class MenuDisplayer : UIElement
                 UIManager.Instance.ActivatePrevious();
                 //closes canvi properly! Yay!
                 UIManager.Instance.ToggleActive(this);
-                //opens menu! which can be closed again to the play!
+                //opens menu! which can be closed again to play!
             }
             else
             {
