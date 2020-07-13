@@ -40,9 +40,9 @@ public class UIManager : MonoBehaviour
             activeWindow.Open();
             return;
         }
-        
+
         if (!newActive.Force() && activeWindow.IsLocked()) return;
-        
+
         previousWindow = activeWindow;
         previousWindow.Close();
         activeWindow = newActive;
