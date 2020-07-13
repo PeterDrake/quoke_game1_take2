@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueDisplayer : UIElement
 {
+
     public delegate string DialogueEvent();
     private const byte requiredComponentsAmount = 8;
     // option1, option2, invalid1, invalid2, npcImage, npcSpeech, npcName, exit 
@@ -32,6 +33,7 @@ public class DialogueDisplayer : UIElement
     private GameObject invalidOneEnabler;
     private GameObject invalidTwoEnabler;
 
+    private MenuDisplayer menu;
 
     private void Awake()
     {
@@ -98,6 +100,9 @@ public class DialogueDisplayer : UIElement
     private void Start()
     {
         locked = true;
+
+        menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
+
         initialize();
         activate(false);   
     }
@@ -189,5 +194,7 @@ public class DialogueDisplayer : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
+        if (active) { menu.openedCanvi(this); }
+        else { menu.closedCanvi(); }
     }
 }
