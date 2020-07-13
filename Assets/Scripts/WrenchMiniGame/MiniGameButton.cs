@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WrenchButton : UIElement
+public class MiniGameButton : UIElement
 {
     private GameObject toggler;
     // Start is called before the first frame update
