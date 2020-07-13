@@ -39,6 +39,7 @@ public class MoveToggle : MonoBehaviour
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
             sound.SetActive(true);
+            Systems.Input.music = true;
         }
         else
         {
@@ -46,6 +47,8 @@ public class MoveToggle : MonoBehaviour
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
             sound.SetActive(false);
+            Systems.Input.music = false;
+
         }
     }
 
@@ -58,6 +61,8 @@ public class MoveToggle : MonoBehaviour
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
             sound.SetActive(true);
+            Systems.Input.soundFX = true;
+
         }
         else
         {
@@ -65,6 +70,8 @@ public class MoveToggle : MonoBehaviour
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
             sound.SetActive(false);
+            Systems.Input.soundFX = false;
+
         }
     }
 }
