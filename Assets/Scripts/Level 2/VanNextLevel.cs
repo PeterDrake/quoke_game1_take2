@@ -29,7 +29,8 @@ public class VanNextLevel : MonoBehaviour
         if (_satisfied)
         {
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
-
+            GameObject.Find("Audio").SetActive(false);
+            GameObject.Find("WinSound").SetActive(true);
         }
     }
 }
