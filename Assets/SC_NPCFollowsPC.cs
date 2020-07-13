@@ -9,6 +9,9 @@ public class SC_NPCFollowsPC : MonoBehaviour
     public Transform transformToFollow;
     //NavMesh Agent variable
     NavMeshAgent agent;
+    public GameObject Player;
+    public GameObject NPC;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,8 @@ public class SC_NPCFollowsPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(Player.transform);
+        NPC.GetComponent<Animator>().Play("Grounded");
         agent.SetDestination(transformToFollow.position);
     }
 
