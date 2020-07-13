@@ -247,9 +247,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOn: 0
   handle: {fileID: 1567754934747674280}
-  toggle: {fileID: 1567754935788965718}
+  toggleBackground: {fileID: 0}
   handleOffset: 40
-  title: {fileID: 1567754936257828214}
+  status: {fileID: 0}
   sound: {fileID: 0}
 --- !u!1 &1567754934799122283
 GameObject:
@@ -678,9 +678,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOn: 0
   handle: {fileID: 1567754936116470599}
-  toggle: {fileID: 1567754935154691926}
+  toggleBackground: {fileID: 0}
   handleOffset: 40
-  title: {fileID: 1567754934799122281}
+  status: {fileID: 0}
   sound: {fileID: 0}
 --- !u!1 &1567754936193866657
 GameObject:
@@ -914,7 +914,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1567754934747674276}
-        m_MethodName: StartToggle
+        m_MethodName: MusicToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1629,7 +1629,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1567754936116470597}
-        m_MethodName: StartToggle
+        m_MethodName: SoundFXToggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
