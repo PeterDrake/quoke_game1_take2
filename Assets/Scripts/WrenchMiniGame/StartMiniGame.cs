@@ -8,6 +8,8 @@ public class StartMiniGame : MonoBehaviour
 	public GameObject wrenchPrefab;
 	public GameObject flange;
 	public GameObject WinScreen;
+	public GameObject Audio;
+	public GameObject WinSound;
 
 	public Vector3 attachedWrenchPosition;
 	public float z_offset;
@@ -35,10 +37,12 @@ public class StartMiniGame : MonoBehaviour
 	{
 		
 		//replace this with success action, i.e. turn off gas
-		Debug.Log("Congratz, you have won!");
+		Debug.Log("Congratulations!");
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
 		WinScreen.SetActive(true);
+		WinSound.SetActive(true);
+		Audio.SetActive(false);
 //		_wrenchMiniGameMaster.CheckCorrect(Turned);
 	}
 

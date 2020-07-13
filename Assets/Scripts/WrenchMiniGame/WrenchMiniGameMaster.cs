@@ -9,6 +9,8 @@ public class WrenchMiniGameMaster : MonoBehaviour
 {
 
     public GameObject WinScreen;
+    public GameObject Audio;
+    public GameObject WinSound;
     
     public UnityAction OnWin;
 
@@ -19,8 +21,11 @@ public class WrenchMiniGameMaster : MonoBehaviour
     {
         if (Turned)
         {
-            Debug.Log("Congratz, you have won!");
             WinScreen.SetActive(true);
+            Audio.SetActive(false);
+            WinSound.SetActive(true);
+            Debug.Log("Congratz, you have won!");
+
            // SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         }
         
