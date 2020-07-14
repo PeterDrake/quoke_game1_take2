@@ -8603,6 +8603,16 @@ PrefabInstance:
       propertyPath: InteractionDisplayText
       value: Press 'E' to build sanitation system
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557045542398767, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: miniAudio
+      value: 
+      objectReference: {fileID: 1297571853}
+    - target: {fileID: 6301557045542398767, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: levelAudio
+      value: 
+      objectReference: {fileID: 1574049521}
     - target: {fileID: 6301557045620401076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: m_Name

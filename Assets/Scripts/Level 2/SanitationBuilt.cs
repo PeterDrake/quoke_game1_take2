@@ -32,7 +32,8 @@ public class SanitationBuilt : MonoBehaviour
     private GameObject camera;
     private GameObject vcam;
     private GameObject sunlight;
-    private GameObject levelAudio;
+    public GameObject levelAudio;
+    public GameObject miniAudio;
 
     private void Awake()
     {
@@ -95,7 +96,8 @@ public class SanitationBuilt : MonoBehaviour
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
-        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
+        levelAudio.SetActive(false);
+        miniAudio.SetActive(true);
 
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnWin += MiniGameFinished;
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnExit += MiniGameLeave;
@@ -108,7 +110,8 @@ public class SanitationBuilt : MonoBehaviour
         camera.SetActive(true);
         vcam.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelAudio.SetActive(true);
+        miniAudio.SetActive(false);
         _interact.enabled = true;
     }
     private void MiniGameFinished()//this is not getting called
@@ -122,7 +125,9 @@ public class SanitationBuilt : MonoBehaviour
         vcam.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelAudio.SetActive(true);
+        print("levelAudio = " + levelAudio);
+        miniAudio.SetActive(false);
 
         _inventory.RemoveItem(Bucket, 2);
         _inventory.RemoveItem(Bag, 1);
