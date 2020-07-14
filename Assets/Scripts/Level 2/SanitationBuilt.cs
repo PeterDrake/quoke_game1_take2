@@ -35,6 +35,8 @@ public class SanitationBuilt : MonoBehaviour
     public GameObject levelAudio;
     public GameObject miniAudio;
 
+    public UIElement theGUI;
+
     private void Awake()
     {
         Buckets.SetActive(true);
@@ -112,6 +114,9 @@ public class SanitationBuilt : MonoBehaviour
         sunlight.SetActive(true);
         levelAudio.SetActive(true);
         miniAudio.SetActive(false);
+
+        UIManager.Instance.ToggleActive(theGUI);
+
         _interact.enabled = true;
     }
     private void MiniGameFinished()//this is not getting called
@@ -128,6 +133,8 @@ public class SanitationBuilt : MonoBehaviour
         levelAudio.SetActive(true);
         print("levelAudio = " + levelAudio);
         miniAudio.SetActive(false);
+
+        UIManager.Instance.ToggleActive(theGUI);
 
         _inventory.RemoveItem(Bucket, 2);
         _inventory.RemoveItem(Bag, 1);
