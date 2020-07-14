@@ -50,6 +50,9 @@ public class DialogueManager : MonoBehaviour
 
     private string traverse(DialogueNode newActive)
     {
+        print("newActive DialogueNode = " + newActive);
+        print("displayer = " + displayer);
+        print("activeNPC = " + activeNPC);
         string resp = activeDialogue.CheckRequirements();
         if (resp != "") return resp;
         
