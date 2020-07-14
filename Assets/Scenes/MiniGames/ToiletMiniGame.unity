@@ -5247,6 +5247,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 5741743967052675387, guid: d63b162dd63e95c4a99fffdd2fcd2edd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63b162dd63e95c4a99fffdd2fcd2edd, type: 3}
 --- !u!224 &1101919332 stripped
@@ -9377,7 +9382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2017584967
 Transform:
   m_ObjectHideFlags: 0
