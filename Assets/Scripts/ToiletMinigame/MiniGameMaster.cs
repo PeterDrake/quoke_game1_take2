@@ -23,6 +23,8 @@ public class MiniGameMaster : MonoBehaviour
     public GameObject Win;
 
     public GameObject Wrong;
+
+    public GameObject WinSound;
     
     public UnityAction OnWin;
 
@@ -38,6 +40,8 @@ public class MiniGameMaster : MonoBehaviour
         if (Bucket && PlasticBag && Poop && ToiletPaper && Sawdust && Pee)
         {
             Win.SetActive(true);
+            GameObject.Find("Audio").SetActive(false);
+            WinSound.SetActive(true);
         }
         else
         {
