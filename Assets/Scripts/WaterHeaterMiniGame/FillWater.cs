@@ -8,6 +8,7 @@ public class FillWater : MonoBehaviour
 {
     public WaterHeaterMaster Master;
     public Image water;
+    public GameObject WinSound;
 
     public void pourWater()
     {
@@ -16,6 +17,8 @@ public class FillWater : MonoBehaviour
         {
             Master.StopAllCoroutines();
             Master.Win.SetActive(true);
+            GameObject.Find("Audio").SetActive(false);
+            WinSound.SetActive(true);
         }
     }
 
