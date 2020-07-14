@@ -178,7 +178,6 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         WinScreen.SetActive(true);
-        GameObject.Find("Audio").SetActive(false);
         WinSound.SetActive(true);
         
     }

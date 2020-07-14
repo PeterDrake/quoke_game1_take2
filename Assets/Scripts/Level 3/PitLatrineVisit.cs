@@ -30,7 +30,10 @@ public class PitLatrineVisit : MonoBehaviour
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
-    //private GameObject levelAudio;
+    public GameObject levelAudio;
+    public GameObject miniAudio;
+
+    public UIElement theGUI;
 
     void Start()
     {
@@ -68,7 +71,8 @@ public class PitLatrineVisit : MonoBehaviour
         (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
-        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
+        levelAudio.SetActive(false);
+        miniAudio.SetActive(true);
 
         S2 = GameObject.FindGameObjectWithTag("HighGround").gameObject;
         S1 = GameObject.FindGameObjectWithTag("LowGround").gameObject;
@@ -99,7 +103,11 @@ public class PitLatrineVisit : MonoBehaviour
         Place1.SetActive(false);
         camera.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelAudio.SetActive(true);
+        miniAudio.SetActive(false);
+
+        UIManager.Instance.ToggleActive(theGUI);
+
         House.SetActive(true);
         WaterPond.SetActive(true);
         Player.SetActive(true);
@@ -121,7 +129,10 @@ public class PitLatrineVisit : MonoBehaviour
         camera.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelAudio.SetActive(true);
+        miniAudio.SetActive(false);
+
+        UIManager.Instance.ToggleActive(theGUI);
 
         _inventory.RemoveItem(Shovel, 1);
         
