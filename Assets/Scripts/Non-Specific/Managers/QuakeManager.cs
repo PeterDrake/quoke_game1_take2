@@ -103,7 +103,7 @@ public class QuakeManager : MonoBehaviour
 
         Sink = GameObject.Find("Kitchen Sink").gameObject;
 
-        _informationCanvas = GameObject.Find("Canvi").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
+        _informationCanvas = GameObject.Find("Canvi").transform.Find("MiniGameClosed").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
         virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
 
     }
