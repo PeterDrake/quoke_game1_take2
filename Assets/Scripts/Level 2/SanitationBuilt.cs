@@ -19,6 +19,8 @@ public class SanitationBuilt : MonoBehaviour
     private Item ToiletPaper;
 
     public GameObject Buckets;
+    public UIElement theGUI;
+    public GameObject Spot;
  
     private bool HasSanitizer;
     private bool HasBuckets;
@@ -91,7 +93,7 @@ public class SanitationBuilt : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
@@ -130,8 +132,10 @@ public class SanitationBuilt : MonoBehaviour
         // _inventory.RemoveItem( Sanitizer, 1);
         // _inventory.RemoveItem( ToiletPaper, 1);
 
+        UIManager.Instance.ToggleActive(theGUI);
+        Spot.SetActive(false);
         Buckets.SetActive(true);
-        Destroy(gameObject);
-        Destroy(this);
+        //Destroy(gameObject);
+        //Destroy(this);
     }
 }

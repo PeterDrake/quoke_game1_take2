@@ -12,6 +12,8 @@ public class WaterHeaterVisit : MonoBehaviour
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
+    public UIElement theGUI;
+
     public GameObject Heater;
     private Item MustardWater;
     private Item FilledWater;
@@ -54,7 +56,7 @@ public class WaterHeaterVisit : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
         //(levelAudio = GameObject.Find("Audio")).SetActive(false);
@@ -86,6 +88,8 @@ public class WaterHeaterVisit : MonoBehaviour
 
         _inventory.RemoveItem(MustardWater, 1);
         _inventory.AddItem(FilledWater, 1);
+
+        UIManager.Instance.ToggleActive(theGUI);
 
         Heater.SetActive(true);
         _interact.Kill();
