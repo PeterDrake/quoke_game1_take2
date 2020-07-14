@@ -19,7 +19,7 @@ public class WaterHeaterVisit : MonoBehaviour
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
-    //private GameObject levelAudio;
+    private GameObject levelAudio;
 
 
     void Start()
@@ -54,7 +54,7 @@ public class WaterHeaterVisit : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClosed")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
         //(levelAudio = GameObject.Find("Audio")).SetActive(false);
