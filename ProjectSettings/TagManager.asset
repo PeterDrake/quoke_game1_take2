@@ -26,6 +26,7 @@ TagManager:
   - Kitchen
   - HighGround
   - LowGround
+  - Barrel
   layers:
   - Default
   - TransparentFX
