@@ -42,7 +42,7 @@ public class GasExpCommence : MonoBehaviour
                 //boomAudio.Play();
                 StartCoroutine(DestroyHouse());
                 OnDeath.Invoke();
-                Systems.Status.PlayerDeath("You died in a gas explosion");
+                Systems.Status.PlayerDeath("Gas explosion","You died in a gas explosion");
             }
         }
     }

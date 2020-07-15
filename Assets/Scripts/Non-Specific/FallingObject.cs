@@ -32,7 +32,7 @@ public class FallingObject : MonoBehaviour
     {
         if (isEnabled && other.gameObject.CompareTag("Player"))
         {
-            Systems.Status.PlayerDeath("Crushed by falling object "+ (QuakeManager.Instance.quakes == 0? "in earthquake":"in aftershock"));
+            Systems.Status.PlayerDeath("Crushed by falling object","Crushed by falling object "+ (QuakeManager.Instance.quakes == 0? "in earthquake":"in aftershock"));
         }
     }
 }

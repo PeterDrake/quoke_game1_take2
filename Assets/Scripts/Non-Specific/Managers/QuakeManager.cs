@@ -75,6 +75,8 @@ public class QuakeManager : MonoBehaviour
     [SerializeField] private float _minimumShakes = 1;
     private bool quakeOverride;
 
+    private LogToServer logger;
+
 
     /*Subscribed to onQuake:
         QuakeFurniture
@@ -105,7 +107,8 @@ public class QuakeManager : MonoBehaviour
 
         _informationCanvas = GameObject.Find("Canvi").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
         virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
-
+        
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
 
     void Update()
@@ -206,7 +209,11 @@ public class QuakeManager : MonoBehaviour
 
         Quaking = true;
         Logger.Instance.Log((quakes == 0 ? "Earthquake" : "Aftershock") + " triggered!");
-        StopAllCoroutines();
+        logger.sendToLog("Quake triggered!");
+        //StopAllCoroutines();
+        StopCoroutine(nameof(QuakeCountdown));
+        StopCoroutine(nameof(AftershockTime));
+        
 
         OnQuake.Invoke(); // every function subscribed to OnQuake is called here
 

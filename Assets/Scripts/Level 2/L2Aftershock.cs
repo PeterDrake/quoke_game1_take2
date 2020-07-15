@@ -14,8 +14,10 @@ public class L2Aftershock : MonoBehaviour
     {
         if (QuakeManager.Instance.quakes > 0)
         {
-            Logger.Instance.Log("Aftershock Started");
-            Systems.Status.PlayerDeath("The house collapsed in an aftershock!");
+            //Logger.Instance.Log("Aftershock Started");
+            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+            logger.sendToLog("Aftershock Started");
+            Systems.Status.PlayerDeath("Aftershock","The house collapsed in an aftershock!");
             objectDropper.Drop();
         }
     }

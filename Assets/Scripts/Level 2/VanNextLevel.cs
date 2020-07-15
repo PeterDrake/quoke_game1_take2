@@ -29,7 +29,8 @@ public class VanNextLevel : MonoBehaviour
         if (_satisfied)
         {
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
-
+            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+            logger.sendToLog("Completed Level 2!");
         }
     }
 }
