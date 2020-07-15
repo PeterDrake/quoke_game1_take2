@@ -8,6 +8,7 @@ public class StartMiniGame : MonoBehaviour
 	public GameObject wrenchPrefab;
 	public GameObject flange;
 	public GameObject WinScreen;
+	public GameObject WinSound;
 
 	public Vector3 attachedWrenchPosition;
 	public float z_offset;
@@ -39,6 +40,7 @@ public class StartMiniGame : MonoBehaviour
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
 		WinScreen.SetActive(true);
+		WinSound.SetActive(true);
 //		_wrenchMiniGameMaster.CheckCorrect(Turned);
 	}
 

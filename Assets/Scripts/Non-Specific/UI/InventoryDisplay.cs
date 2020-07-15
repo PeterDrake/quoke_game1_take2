@@ -34,6 +34,8 @@ public class InventoryDisplay : UIElement
     private Item[] items;
     private byte[] amounts;
 
+    private MenuDisplayer menu;
+
     public override void Open()
     {
         Load(Systems.Inventory.GetItems(), Systems.Inventory.GetAmounts());
@@ -86,6 +88,8 @@ public class InventoryDisplay : UIElement
         itemSlots = new Image[capacity];
         amounts = new byte[]{0};
         items = new Item[capacity];
+
+        menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
 
         initialize();
         activate(false);
@@ -195,6 +199,8 @@ public class InventoryDisplay : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
+        if (active) { menu.openedCanvi(this); }
+        else { menu.closedCanvi(); }
     }
 
     private void useSelectedItem()

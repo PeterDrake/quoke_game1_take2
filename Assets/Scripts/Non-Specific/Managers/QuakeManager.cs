@@ -44,12 +44,20 @@ public class QuakeManager : MonoBehaviour
     // Game object which will be disabled after quake
     [SerializeField] private GameObject enableDoors;
 
+    [SerializeField] private GameObject frontDoor;
+    //added 49
+    [SerializeField] private GameObject backDoor;
+    //added 51
+    [SerializeField] private GameObject bedroomDoor;
+
     [SerializeField] private GameObject dustStormPrefab;
 
     // TODO Move these into a separate object
     private GameObject[] doors;
     private Rigidbody[] bodies;
     private Clobberer[] clobberers;
+
+    private GameObject Sink;
 
 
     [HideInInspector] public bool Quaking;
@@ -93,7 +101,9 @@ public class QuakeManager : MonoBehaviour
         bodies = Array.ConvertAll(doors, d => d.GetComponent(typeof(Rigidbody)) as Rigidbody);
         clobberers = Array.ConvertAll(doors, d => d.GetComponent(typeof(Clobberer)) as Clobberer);
 
-        _informationCanvas = GameObject.Find("Canvi").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
+        Sink = GameObject.Find("Kitchen Sink").gameObject;
+
+        _informationCanvas = GameObject.Find("MiniGameClose").transform.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
         virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
 
     }
@@ -171,10 +181,17 @@ public class QuakeManager : MonoBehaviour
         }
 
         StopQuake();
-        foreach (Clobberer c in clobberers)
-        {
-            c.enabled = false;
-        }
+        //foreach (Clobberer c in clobberers)
+        //{
+        //    c.enabled = false;
+        //}
+
+        frontDoor.GetComponent<Clobberer>().enabled = false;
+        //added 189
+        backDoor.GetComponent<Clobberer>().enabled = false;
+        //added 193
+        bedroomDoor.GetComponent<Clobberer>().enabled = false;
+
         _informationCanvas.ChangeText(textAfterQuake);
 
         enableDoors.SetActive(false); // allow player to exit house
@@ -207,6 +224,7 @@ public class QuakeManager : MonoBehaviour
         ShakeElapsedTime = 0f;
 
         Quaking = false;
+        Destroy(Sink.GetComponent<InteractWithObject>());
         Systems.Status.UnPause();
         TriggerCountdown(AftershockTime);
     }

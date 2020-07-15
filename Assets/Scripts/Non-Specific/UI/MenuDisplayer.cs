@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using Button = UnityEngine.UI.Button;
 
@@ -12,6 +13,63 @@ public class MenuDisplayer : UIElement
     // toggler, exitToMenu, quitGame, Settings, Inventory 
 
     private GameObject toggler;
+    private bool othCanviOpen;
+    private UIElement othCanviScript;
+
+    private void Start()
+    {
+        locked = true;
+        pauseOnOpen = true;
+        othCanviOpen = false;
+        Systems.Input.RegisterKey("escape", delegate {
+        print(othCanviOpen);
+            if (othCanviOpen)
+            {
+                //doesn't close othCanvi, open menu         <- best result
+                //if locked = true is inactive in othScript, 
+                    //then will toggle between menu and othCanvi, no exit
+                //UIManager.Instance.ToggleActive(this);
+
+                //doesn't open menu, still paused
+                //othCanviScript.Close();
+                //UIManager.Instance.ToggleActive(this);
+
+                //doesn't open menu, still paused
+                //othCanviScript.Close();
+
+                //doesn't close othCanvi, open menu         <- best result
+                //if locked = true inactive,
+                //then doesn't open menu, still paused
+                //if locked = true is inactive in othScript,
+                //then will toggle between menu and othCanvi, no exit
+                //UIManager.Instance.ToggleActive(this);
+                //othCanviScript.Close();
+
+                // BEST RESULT!!!
+                UIManager.Instance.ActivatePrevious();
+                //closes canvi properly! Yay!
+                UIManager.Instance.ToggleActive(this);
+                //opens menu! which can be closed again to play!
+            }
+            else
+            {
+                UIManager.Instance.ToggleActive(this);
+            }
+        });
+        initialize();
+        toggler.SetActive(false);
+    }
+
+    public void openedCanvi(UIElement othScript)
+    {
+        othCanviScript = othScript;
+        othCanviOpen = true;
+    }
+    public void closedCanvi()
+    {
+        othCanviOpen = false;
+    }
+
     private void initialize()
     {
         toggler = transform.Find("toggle").gameObject;
@@ -36,14 +94,7 @@ public class MenuDisplayer : UIElement
             }
         }
     }
-    private void Start()
-    {
-        locked = true;
-        pauseOnOpen = true;
-        Systems.Input.RegisterKey("escape",delegate {UIManager.Instance.ToggleActive(this); });
-        initialize();
-        toggler.SetActive(false);
-    }
+    
 
     public override void Open()
     {
