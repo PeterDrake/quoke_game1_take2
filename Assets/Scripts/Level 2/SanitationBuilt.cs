@@ -11,6 +11,9 @@ public class SanitationBuilt : MonoBehaviour
     
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
+
+    public UIElement theGUI;
+    public GameObject Spot;
  
     private Item Bucket;
     private Item Bag;
@@ -32,7 +35,8 @@ public class SanitationBuilt : MonoBehaviour
     private GameObject camera;
     private GameObject vcam;
     private GameObject sunlight;
-    //private GameObject levelAudio;
+    public GameObject levelMusic;
+    public GameObject toiletMusic;
 
     private void Awake()
     {
@@ -91,11 +95,12 @@ public class SanitationBuilt : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
-        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
+        levelMusic.SetActive(false);
+        toiletMusic.SetActive(true);
 
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnWin += MiniGameFinished;
         GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnExit += MiniGameLeave;
@@ -108,7 +113,8 @@ public class SanitationBuilt : MonoBehaviour
         camera.SetActive(true);
         vcam.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelMusic.SetActive(true);
+        toiletMusic.SetActive(false);
         _interact.enabled = true;
     }
     private void MiniGameFinished()//this is not getting called
@@ -122,7 +128,8 @@ public class SanitationBuilt : MonoBehaviour
         vcam.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelMusic.SetActive(true);
+        toiletMusic.SetActive(false);
 
         _inventory.RemoveItem(Bucket, 2);
         _inventory.RemoveItem(Bag, 1);
@@ -130,8 +137,11 @@ public class SanitationBuilt : MonoBehaviour
         // _inventory.RemoveItem( Sanitizer, 1);
         // _inventory.RemoveItem( ToiletPaper, 1);
 
+        UIManager.Instance.ToggleActive(theGUI);
+
         Buckets.SetActive(true);
-        Destroy(gameObject);
-        Destroy(this);
+        Spot.SetActive(false);
+        //Destroy(gameObject);
+        //Destroy(this);
     }
 }

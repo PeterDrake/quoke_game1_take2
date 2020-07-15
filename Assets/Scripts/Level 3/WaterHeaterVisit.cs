@@ -12,6 +12,9 @@ public class WaterHeaterVisit : MonoBehaviour
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
+    public UIElement theGUI;
+    public GameObject Spot;
+
     public GameObject Heater;
     private Item MustardWater;
     private Item FilledWater;
@@ -19,7 +22,8 @@ public class WaterHeaterVisit : MonoBehaviour
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
-    //private GameObject levelAudio;
+    public GameObject levelMusic;
+    public GameObject waterMusic;
 
 
     void Start()
@@ -54,10 +58,11 @@ public class WaterHeaterVisit : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
-        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
+        levelMusic.SetActive(false);
+        waterMusic.SetActive(true);
 
         GameObject.Find("WaterHeaterMaster").GetComponent<WaterHeaterMaster>().OnWin += MiniGameFinished;
         GameObject.Find("WaterHeaterMaster").GetComponent<WaterHeaterMaster>().OnExit += MiniGameLeave;
@@ -69,7 +74,8 @@ public class WaterHeaterVisit : MonoBehaviour
         canvi.SetActive(true);
         camera.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelMusic.SetActive(true);
+        waterMusic.SetActive(false);
     }
     private void MiniGameFinished()
     {
@@ -81,14 +87,20 @@ public class WaterHeaterVisit : MonoBehaviour
         camera.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelMusic.SetActive(true);
+        waterMusic.SetActive(false);
 
 
         _inventory.RemoveItem(MustardWater, 1);
         _inventory.AddItem(FilledWater, 1);
 
         Heater.SetActive(true);
+        //_interact.Kill();
+
+        UIManager.Instance.ToggleActive(theGUI);
         _interact.Kill();
+
+        Spot.SetActive(false);
 
         //Destroy(gameObject);
         //Destroy(this);

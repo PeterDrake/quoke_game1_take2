@@ -9,6 +9,8 @@ public class VanNextLevel : MonoBehaviour
     private const string SATISFIED = "Press 'E' to rest in Ahmad's van";
     private const string NOT_SATISFIED = "";
     public UIElement winCanvas;
+    public GameObject levelMusic;
+    public GameObject WinSound;
     private InteractWithObject _interact;
     private bool _satisfied;
     
@@ -29,8 +31,8 @@ public class VanNextLevel : MonoBehaviour
         if (_satisfied)
         {
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
-            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-            logger.sendToLog("Completed Level 2!");
+            levelMusic.SetActive(false);
+            WinSound.SetActive(true);
         }
     }
 }
