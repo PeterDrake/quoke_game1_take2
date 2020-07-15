@@ -23,7 +23,9 @@ public class MoveToggle : MonoBehaviour
     void Start()
     {
         
-        print("start method");
+        //print("start method");
+
+        //setToggles();
 
     }
 
@@ -38,17 +40,22 @@ public class MoveToggle : MonoBehaviour
         
         print("awake method");
 
+        setToggles();
+    }
+
+    public void setToggles()
+    {
         musicIsOff = SavedData.musicOff;
         if (!musicIsOff)
         {
-            Debug.Log("music turned on");
+            Debug.Log("music is on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
             sound.SetActive(true);
         }
         else
         {
-            Debug.Log("music turned off");
+            Debug.Log("music is off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
             sound.SetActive(false);
@@ -56,14 +63,14 @@ public class MoveToggle : MonoBehaviour
         sfxIsOff = SavedData.sfxOff;
         if (!sfxIsOff)
         {
-            Debug.Log("soundFX turned on");
+            Debug.Log("soundFX is on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
             sound.SetActive(true);
         }
         else
         {
-            Debug.Log("soundFX turned off");
+            Debug.Log("soundFX is off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
             sound.SetActive(false);

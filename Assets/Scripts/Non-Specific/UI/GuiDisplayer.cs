@@ -22,23 +22,23 @@ public class GuiDisplayer : UIElement
         musicIsOff = SavedData.musicOff;
         if (!musicIsOff)
         {
-            Debug.Log("music turned on");
+            Debug.Log("music is on");
             GameObject.Find("Audio").SetActive(true);
         }
         else
         {
-            Debug.Log("music turned off");
+            Debug.Log("music is off");
             GameObject.Find("Audio").SetActive(false);
         }
         sfxIsOff = SavedData.sfxOff;
         if (!sfxIsOff)
         {
-            Debug.Log("soundFX turned on");
+            Debug.Log("soundFX is on");
             GameObject.Find("SoundFX").SetActive(true);
         }
         else
         {
-            Debug.Log("soundFX turned off");
+            Debug.Log("soundFX is off");
             GameObject.Find("SoundFX").SetActive(false);
         }
     }
