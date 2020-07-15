@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractWithBarrel : MonoBehaviour
+public class BarrelSwapText : MonoBehaviour
 {
     private InteractWithObject _interact;
 
