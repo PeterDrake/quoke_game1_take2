@@ -16,6 +16,7 @@ public class FillWater : MonoBehaviour
         {
             Master.StopAllCoroutines();
             Master.Win.SetActive(true);
+            Master.WinSound.SetActive(true);
         }
     }
 
