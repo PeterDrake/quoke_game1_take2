@@ -30,24 +30,42 @@ public class MoveToggle : MonoBehaviour
         offPosX = onPosX * -1;
     }
 
-    public void StartToggle()
+    public void MusicToggle()
     {
         isOn = !isOn;
         if (isOn)
         {
-            Debug.Log("toggle turned on");
+            Debug.Log("music turned on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
             sound.SetActive(true);
         }
         else
         {
-            Debug.Log("toggle turned off");
+            Debug.Log("music turned off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
             sound.SetActive(false);
         }
+    }
 
- 
+    public void SoundFXToggle()
+    {
+        isOn = !isOn;
+        if (isOn)
+        {
+            Debug.Log("soundFX turned on");
+            handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
+            status.text = "ON";
+            sound.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("soundFX turned off");
+            handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
+            status.text = "OFF";
+            sound.SetActive(false);
+        }
     }
 }
+
