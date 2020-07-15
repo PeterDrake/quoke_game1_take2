@@ -3445,12 +3445,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 625580730}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &182616679 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 917085432765910572, guid: 54201a432732e3644b92dd53d5d1fef5,
-    type: 3}
-  m_PrefabInstance: {fileID: 625580730}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &183749965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13249,7 +13243,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 951069861}
     - target: {fileID: 7824128245263783108, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -13268,7 +13262,7 @@ PrefabInstance:
     - target: {fileID: 8077493130667667356, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8919649217602927132, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -13282,6 +13276,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
+--- !u!4 &625580731 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6455381915654371031, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &625580732 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6455381915030585878, guid: 54201a432732e3644b92dd53d5d1fef5,
@@ -40925,7 +40925,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fe367b7d8a15f149a38a692fdf8a2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theGUI: {fileID: 0}
 --- !u!4 &1888483517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 1b4ef34924659554ea1dcd936a9c8b85,
@@ -47920,7 +47919,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 7682334299718200482}
-  m_Father: {fileID: 182616679}
+  m_Father: {fileID: 625580731}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
