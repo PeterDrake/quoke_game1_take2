@@ -21,7 +21,8 @@ public class GasShutDown : MonoBehaviour
     
     private GameObject canvi;
     private GameObject camera;
-    //private GameObject levelAudio;
+    public GameObject levelAudio;
+    public GameObject gasAudio;
 
     void Start()
     {
@@ -63,7 +64,8 @@ public class GasShutDown : MonoBehaviour
 
         (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
-        //(levelAudio = GameObject.Find("Audio")).SetActive(false);
+        levelAudio.SetActive(false);
+        gasAudio.SetActive(true);
 
         GameObject.Find("GasMaster").GetComponent<WrenchMiniGameMaster>().OnWin += MiniGameFinished;
         GameObject.Find("GasMaster").GetComponent<WrenchMiniGameMaster>().OnExit += MiniGameLeave;
@@ -74,7 +76,8 @@ public class GasShutDown : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
         camera.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelAudio.SetActive(true);
+        gasAudio.SetActive(false);
     }
     private void MiniGameFinished()
     {
@@ -86,7 +89,8 @@ public class GasShutDown : MonoBehaviour
         //Systems.Objectives.Satisfy("TOILETEVENT");
         camera.SetActive(true);
         canvi.SetActive(true);
-        //levelAudio.SetActive(true);
+        levelAudio.SetActive(true);
+        gasAudio.SetActive(false);
 
         UIManager.Instance.ToggleActive(theGUI);
         //_inventory.RemoveItem(Wrench, 1);
