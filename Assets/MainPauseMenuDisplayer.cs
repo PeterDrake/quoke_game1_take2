@@ -13,19 +13,7 @@ public class MainPauseMenuDisplayer : UIElement
     {
         locked = true;
         pauseOnOpen = true;
-        /*Systems.Input.RegisterKey("escape", delegate {
-            print("UIManager = " + UIManager.Instance);
-            if (open)
-            {
-                UIManager.Instance.ActivatePrevious();
-                open = false;
-            }
-            else 
-            { 
-                open = true; 
-            }
-            UIManager.Instance.ToggleActive(this); 
-        });*/
+        
         Systems.Input.RegisterKey("escape", delegate
         {
             print("UIManager = " + UIManager.Instance);

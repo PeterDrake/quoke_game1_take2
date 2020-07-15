@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class MoveToggle : MonoBehaviour
 {
 
-    public bool isOn;
+    private bool musicIsOff;
+    private bool sfxIsOff;
     public GameObject handle;
     private RectTransform handleTransform;
     private float handleSize;
@@ -21,19 +22,61 @@ public class MoveToggle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        isOn = true;
+        
+        print("start method");
+
+    }
+
+    void Awake()
+    {
         handleTransform = handle.GetComponent<RectTransform>();
         toggleTransform = handle.GetComponent<RectTransform>();
         handleSize = handleTransform.sizeDelta.x;
         float toggleSizeX = toggleTransform.sizeDelta.x;
         onPosX = (toggleSizeX / 2) - (handleSize / 2) - handleOffset;
-        offPosX = onPosX * -1;
+        offPosX = onPosX * -1; 
+        
+        print("awake method");
+
+        musicIsOff = SavedData.musicOff;
+        if (!musicIsOff)
+        {
+            Debug.Log("music turned on");
+            handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
+            status.text = "ON";
+            sound.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("music turned off");
+            handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
+            status.text = "OFF";
+            sound.SetActive(false);
+        }
+        sfxIsOff = SavedData.sfxOff;
+        if (!sfxIsOff)
+        {
+            Debug.Log("soundFX turned on");
+            handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
+            status.text = "ON";
+            sound.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("soundFX turned off");
+            handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
+            status.text = "OFF";
+            sound.SetActive(false);
+        }
     }
 
     public void MusicToggle()
     {
-        isOn = !isOn;
-        if (isOn)
+        musicIsOff = !SavedData.musicOff;
+        SavedData.musicOff = musicIsOff;
+        print("musicIsOff = " + musicIsOff);
+        print("SavedData.musicOff = " + SavedData.musicOff);
+        if (!musicIsOff)
         {
             Debug.Log("music turned on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
@@ -51,8 +94,11 @@ public class MoveToggle : MonoBehaviour
 
     public void SoundFXToggle()
     {
-        isOn = !isOn;
-        if (isOn)
+        sfxIsOff = !SavedData.sfxOff;
+        SavedData.sfxOff = sfxIsOff;
+        print("sfxIsOff = " + sfxIsOff);
+        print("SavedData.sfxOff = " + SavedData.sfxOff);
+        if (!sfxIsOff)
         {
             Debug.Log("soundFX turned on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);

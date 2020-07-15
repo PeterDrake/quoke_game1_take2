@@ -1375,6 +1375,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500020156}
   m_CullTransparentMesh: 0
+--- !u!1 &523850907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 523850908}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &523850908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523850907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 515, y: 398, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &552022320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,12 +1761,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73776122b6a6044c6a157c317272ec42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   handle: {fileID: 867867642}
   toggleBackground: {fileID: 0}
   handleOffset: 40
   status: {fileID: 1982785668}
-  sound: {fileID: 0}
+  sound: {fileID: 523850907}
 --- !u!114 &867867644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3556,12 +3585,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73776122b6a6044c6a157c317272ec42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
   handle: {fileID: 1818341686}
   toggleBackground: {fileID: 0}
   handleOffset: 40
   status: {fileID: 448807968}
-  sound: {fileID: 0}
+  sound: {fileID: 1884061019}
 --- !u!114 &1818341688
 MonoBehaviour:
   m_ObjectHideFlags: 0
