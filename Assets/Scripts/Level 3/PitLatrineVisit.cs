@@ -14,6 +14,8 @@ public class PitLatrineVisit : MonoBehaviour
     private InventoryHelper _inventory;
 
     public UIElement theGUI;
+    public GameObject Spot;
+
 
     public float SituationNumber;
 
@@ -106,7 +108,9 @@ public class PitLatrineVisit : MonoBehaviour
         WaterPond.SetActive(true);
         Player.SetActive(true);
         UIManager.Instance.ToggleActive(theGUI);
-        Destroy(Place1);
+        _interact.Kill();
+        Spot.SetActive(false);
+        //Destroy(Place1);
     }
     private void MiniGameFinished()
     {
