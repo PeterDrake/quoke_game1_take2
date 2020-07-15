@@ -10,6 +10,8 @@ public class GasShutDown : MonoBehaviour
     
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
+
+    public UIElement theGUI;
     
     private Item Wrench;
     
@@ -59,7 +61,7 @@ public class GasShutDown : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         //(levelAudio = GameObject.Find("Audio")).SetActive(false);
 
@@ -86,6 +88,7 @@ public class GasShutDown : MonoBehaviour
         canvi.SetActive(true);
         //levelAudio.SetActive(true);
 
+        UIManager.Instance.ToggleActive(theGUI);
         //_inventory.RemoveItem(Wrench, 1);
        
     }

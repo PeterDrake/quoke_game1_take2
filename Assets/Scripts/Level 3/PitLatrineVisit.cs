@@ -13,6 +13,10 @@ public class PitLatrineVisit : MonoBehaviour
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
+    public UIElement theGUI;
+    public GameObject Spot;
+
+
     public float SituationNumber;
 
     public GameObject House;
@@ -65,7 +69,7 @@ public class PitLatrineVisit : MonoBehaviour
         SceneManager.sceneLoaded -= StartMinigame;
 
 
-        (canvi = GameObject.Find("Canvi")).SetActive(false);
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
         //(levelAudio = GameObject.Find("Audio")).SetActive(false);
@@ -103,7 +107,10 @@ public class PitLatrineVisit : MonoBehaviour
         House.SetActive(true);
         WaterPond.SetActive(true);
         Player.SetActive(true);
-        Destroy(Place1);
+        UIManager.Instance.ToggleActive(theGUI);
+        _interact.Kill();
+        Spot.SetActive(false);
+        //Destroy(Place1);
     }
     private void MiniGameFinished()
     {
@@ -129,6 +136,7 @@ public class PitLatrineVisit : MonoBehaviour
         _canvas.ChangeText("Look for shelter");
 
         //Place2.SetActive(false);
+        UIManager.Instance.ToggleActive(theGUI);
         Destroy(Place1);
         Destroy(Place2);
         Destroy(this);
