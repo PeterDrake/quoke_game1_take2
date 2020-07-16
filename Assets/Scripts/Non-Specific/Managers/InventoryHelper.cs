@@ -15,15 +15,19 @@ public class InventoryHelper : MonoBehaviour
     public Item[] holderItems;
     public int[] holderAmts;
 
+    private LogToServer logger; 
     public void Start()
     {
         for (int i = 0; i < holderItems.Length; i++)
             AddItem(holderItems[i], holderAmts[i]);
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
     
     public void AddItem(Item item, int amt)
     {
-        Logger.Instance.Log("Picked up: "+item.name);
+        //Logger.Instance.Log("Picked up: "+item.name);
+        
+        logger.sendToLog("Picked up " + item.name);
         _inventory.AddItem(item, (byte)amt);
         CheckOnAdd.Invoke();
     }

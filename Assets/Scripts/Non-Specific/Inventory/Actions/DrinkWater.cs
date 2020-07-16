@@ -10,8 +10,10 @@ public class DrinkWater : ItemAction
         if (i.GetType() != typeof(Drinkable)) return false;
 
         Drinkable d = (Drinkable) i;
-        Logger.Instance.Log("Player drank: "+i.name);
-        if (d.killPlayer) Systems.Status.PlayerDeath(d.DeathMessage);
+        //Logger.Instance.Log("Player drank: "+i.name);
+        LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Player drank " + i.name);
+        if (d.killPlayer) Systems.Status.PlayerDeath(d.DeathMessage, d.DeathMessage);
         Systems.Status.AffectHydration(d.hydrationChange);
         
         return true;

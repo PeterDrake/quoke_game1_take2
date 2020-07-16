@@ -11,7 +11,7 @@ public class Clobberer : MonoBehaviour
     {
         if (enabled && other.gameObject.CompareTag("Player"))
         {
-            Systems.Status.PlayerDeath("You were hit by a door!");
+            Systems.Status.PlayerDeath("Hit by a door","You were hit by a door!");
         }
     }
 }

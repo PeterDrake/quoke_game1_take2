@@ -53,9 +53,11 @@ public class StatusManager : MonoBehaviour
     private Color ReliefBar;
     private Color WarmthBar;
 
+    private LogToServer logger;
+
     private void Start()
     {
-
+        
         Hydration = HydrationMax;
         Relief = ReliefMax;
         Warmth = WarmthMax;
@@ -67,6 +69,8 @@ public class StatusManager : MonoBehaviour
         HydrationLossRate = HydrationMax / HydrationDepletionTime;
         ReliefLossRate = ReliefMax / ReliefDepletionTime;
         WarmthLossRate = WarmthMax / WarmthDepletionTime;
+
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
 
         StartCoroutine(nameof(DegradeStatus),DegradeStatus());
 
@@ -84,16 +88,16 @@ public class StatusManager : MonoBehaviour
 
         if (Hydration <= 0)
         {
-            PlayerDeath("Dehydration Death :(");
+            PlayerDeath("Dehydration", "Dehydration Death :(");
         }
         else if (Relief <= 0)
         {
-            PlayerDeath("Due to lack of a proper toilet, you were forced to defecate without proper " +
+            PlayerDeath("Lack of relief", "Due to lack of a proper toilet, you were forced to defecate without proper " +
                                       "sanitation. You caught a disease and died.");
         }
         else if (Warmth <= 0)
         {
-            PlayerDeath("Hypothermia Death :(");
+            PlayerDeath("Hypothermia", "Hypothermia Death :(");
         }
 
         if (hydrationChanged)
@@ -121,18 +125,21 @@ public class StatusManager : MonoBehaviour
         Hydration += deltaH;
         if (Hydration > HydrationMax) Hydration = HydrationMax;
         hydrationChanged = true;
+        logger.sendToLog("Drank water: Hydration changed to " + Hydration);
     }
     public void AffectRelief(float deltaR)
     {
         Relief += deltaR;
         if (Relief > ReliefMax) Relief = ReliefMax;
         reliefChanged = true;
+        logger.sendToLog("Relieved themselves: Relief changed to " + Relief);
     }
     public void AffectWarmth(float deltaW)
     {
         Warmth += deltaW;
         if (Warmth > WarmthMax) Warmth = WarmthMax;
         warmthChanged = true;
+        logger.sendToLog("Warmth changed to " + Warmth);
     }
 
     public float GetHydration()
@@ -150,11 +157,12 @@ public class StatusManager : MonoBehaviour
         return Warmth;
     }
     
-    public void PlayerDeath(string textOnDeath)
+    public void PlayerDeath(string causeOfDeath, string textOnDeath)
     {
         if (!alive) return;
         alive = false;
-        Logger.Instance.Log("Player killed by: "+textOnDeath);
+        //Logger.Instance.Log("Player killed by: "+textOnDeath);
+        logger.sendToLog("Death: "+ causeOfDeath);
         deathDisplay.Activate(textOnDeath);
     }
     
