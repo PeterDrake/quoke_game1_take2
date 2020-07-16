@@ -11,7 +11,7 @@ public class SegueDisplayer : UIElement
 
     private GameObject toggler;
     public Button ExitButton;
-    public float WaitTime;
+    //public float WaitTime;
 
     public override void Open()
     {
