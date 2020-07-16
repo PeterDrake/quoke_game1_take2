@@ -7,32 +7,39 @@ public class SetMusic : UIElement
     private bool musicIsOff;
     private bool sfxIsOff;
 
+    public GameObject music;
+    public GameObject sfx;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        //music = GameObject.Find("Audio");
+        //sfx = GameObject.Find("SoundFX");
+
         print("SetMusic start method");
 
         musicIsOff = SavedData.musicOff;
         if (!musicIsOff)
         {
             Debug.Log("music is on");
-            GameObject.Find("Audio").SetActive(true);
+            music.SetActive(true);
         }
         else
         {
             Debug.Log("music is off");
-            GameObject.Find("Audio").SetActive(false);
+            music.SetActive(false);
         }
         sfxIsOff = SavedData.sfxOff;
         if (!sfxIsOff)
         {
             Debug.Log("soundFX is on");
-            GameObject.Find("SoundFX").SetActive(true);
+            sfx.SetActive(true);
         }
         else
         {
             Debug.Log("soundFX is off");
-            GameObject.Find("SoundFX").SetActive(false);
+            sfx.SetActive(false);
         }
     }
 
