@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuScreenDisplayer : UIElement
+public class SetMusic : UIElement
 {
-    private GameObject toggler;
     private bool musicIsOff;
     private bool sfxIsOff;
+
     // Start is called before the first frame update
     void Start()
     {
-        toggler = GameObject.Find("EscapeClosed");
-        UIManager.Instance.Initialize(this);
-
-        /*print("EscapeClosed start method");
+        print("SetMusic start method");
 
         musicIsOff = SavedData.musicOff;
         if (!musicIsOff)
@@ -36,22 +33,19 @@ public class MenuScreenDisplayer : UIElement
         {
             Debug.Log("soundFX is off");
             GameObject.Find("SoundFX").SetActive(false);
-        }*/
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
     }
 
     public override void Open()
     {
-        toggler.SetActive(true);
     }
 
     public override void Close()
     {
-        toggler.SetActive(false);
     }
 }

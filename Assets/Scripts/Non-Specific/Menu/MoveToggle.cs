@@ -8,41 +8,51 @@ public class MoveToggle : MonoBehaviour
 
     private bool musicIsOff;
     private bool sfxIsOff;
+
     public GameObject handle;
     private RectTransform handleTransform;
     private float handleSize;
+
     public GameObject toggleBackground;
     private RectTransform toggleTransform;
     private float onPosX;
     private float offPosX;
     public float handleOffset;
     public Text status;
-    public GameObject sound;
+
+    public GameObject musicAudio;
+    public GameObject sfxAudio;
 
     // Start is called before the first frame update
     void Start()
-    {
-        
-        //print("start method");
-
-        //setToggles();
-
-    }
-
-    void Awake()
     {
         handleTransform = handle.GetComponent<RectTransform>();
         toggleTransform = handle.GetComponent<RectTransform>();
         handleSize = handleTransform.sizeDelta.x;
         float toggleSizeX = toggleTransform.sizeDelta.x;
         onPosX = (toggleSizeX / 2) - (handleSize / 2) - handleOffset;
-        offPosX = onPosX * -1; 
+        offPosX = onPosX * -1;
         
-        print("awake method");
+        print("moveToggles start method");
 
         setToggles();
+        
     }
 
+    void Awake()
+    {
+        /*handleTransform = handle.GetComponent<RectTransform>();
+        toggleTransform = handle.GetComponent<RectTransform>();
+        handleSize = handleTransform.sizeDelta.x;
+        float toggleSizeX = toggleTransform.sizeDelta.x;
+        onPosX = (toggleSizeX / 2) - (handleSize / 2) - handleOffset;
+        offPosX = onPosX * -1; 
+        */
+        //print("moveToggles awake method");
+
+        //setToggles();
+    }
+    
     public void setToggles()
     {
         musicIsOff = SavedData.musicOff;
@@ -51,14 +61,14 @@ public class MoveToggle : MonoBehaviour
             Debug.Log("music is on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
-            sound.SetActive(true);
+            musicAudio.SetActive(true);
         }
         else
         {
             Debug.Log("music is off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
-            sound.SetActive(false);
+            musicAudio.SetActive(false);
         }
         sfxIsOff = SavedData.sfxOff;
         if (!sfxIsOff)
@@ -66,14 +76,14 @@ public class MoveToggle : MonoBehaviour
             Debug.Log("soundFX is on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
-            sound.SetActive(true);
+            sfxAudio.SetActive(true);
         }
         else
         {
             Debug.Log("soundFX is off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
-            sound.SetActive(false);
+            sfxAudio.SetActive(false);
         }
     }
 
@@ -88,14 +98,14 @@ public class MoveToggle : MonoBehaviour
             Debug.Log("music turned on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
-            sound.SetActive(true);
+            musicAudio.SetActive(true);
         }
         else
         {
             Debug.Log("music turned off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
-            sound.SetActive(false);
+            musicAudio.SetActive(false);
         }
     }
 
@@ -110,14 +120,14 @@ public class MoveToggle : MonoBehaviour
             Debug.Log("soundFX turned on");
             handleTransform.localPosition = new Vector3(onPosX, toggleTransform.localPosition.y, 0);
             status.text = "ON";
-            sound.SetActive(true);
+            sfxAudio.SetActive(true);
         }
         else
         {
             Debug.Log("soundFX turned off");
             handleTransform.localPosition = new Vector3(offPosX, toggleTransform.localPosition.y, 0);
             status.text = "OFF";
-            sound.SetActive(false);
+            sfxAudio.SetActive(false);
         }
     }
 }

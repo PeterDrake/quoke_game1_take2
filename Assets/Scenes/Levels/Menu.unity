@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 137567070}
   - component: {fileID: 137567074}
   - component: {fileID: 137567075}
+  - component: {fileID: 137567076}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -797,6 +798,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bb5f93c5b1c32241b4c78698c2a0f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &137567076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137567069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09621b9da9b9f8c4493cf1d8f189e0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &173985691
@@ -1385,7 +1398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523850908}
   m_Layer: 0
-  m_Name: SFX
+  m_Name: SoundFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1765,7 +1778,8 @@ MonoBehaviour:
   toggleBackground: {fileID: 0}
   handleOffset: 40
   status: {fileID: 1982785668}
-  sound: {fileID: 523850907}
+  musicAudio: {fileID: 1884061019}
+  sfxAudio: {fileID: 523850907}
 --- !u!114 &867867644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3589,7 +3603,8 @@ MonoBehaviour:
   toggleBackground: {fileID: 0}
   handleOffset: 40
   status: {fileID: 448807968}
-  sound: {fileID: 1884061019}
+  musicAudio: {fileID: 1884061019}
+  sfxAudio: {fileID: 523850907}
 --- !u!114 &1818341688
 MonoBehaviour:
   m_ObjectHideFlags: 0
