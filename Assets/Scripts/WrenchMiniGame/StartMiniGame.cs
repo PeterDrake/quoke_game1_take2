@@ -39,6 +39,8 @@ public class StartMiniGame : MonoBehaviour
 		Debug.Log("Congratz, you have won!");
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
+		LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+		logger.sendToLog("Completed Level 1!");
 		WinScreen.SetActive(true);
 		WinSound.SetActive(true);
 //		_wrenchMiniGameMaster.CheckCorrect(Turned);

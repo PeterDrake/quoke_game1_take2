@@ -8,9 +8,13 @@ public class StartDialogue : MonoBehaviour
     [SerializeField] private NPC npc;
 
     [SerializeField] private DialogueNode dialogue;
+
+    private LogToServer logger;
     
     public void Interact()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Began interaction with" + npc.name);
         Systems.Dialogue.StartDialogue(dialogue,npc,SetNewHead);
     }
 
