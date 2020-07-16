@@ -9,7 +9,7 @@ public class AftershockL2 : MonoBehaviour
     {
         if (QuakeManager.Instance.quakes > 0)
         {
-            Systems.Status.PlayerDeath("The house collapsed due to an after shock!");
+            Systems.Status.PlayerDeath("Aftershock","The house collapsed due to an after shock!");
         }
     }
 }
