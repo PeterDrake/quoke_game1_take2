@@ -149,7 +149,7 @@ public class Bookcase : MonoBehaviour
         else if (isFalling)
         {
             Debug.Log("Player Hit");
-            Systems.Status.PlayerDeath("There was an earthquake and your bookcase crushed you :(");            
+            Systems.Status.PlayerDeath("Crushed by bookcase","There was an earthquake and your bookcase crushed you :(");            
         }
     }
 }

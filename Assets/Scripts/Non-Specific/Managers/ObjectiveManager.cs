@@ -41,6 +41,8 @@ public class ObjectiveManager : MonoBehaviour
     public void Satisfy(String key, bool destroyCallbacks = true)
     {
         Logger.Instance.Log("Objective Satisfied: "+key);
+        LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Objective satisfied: " + key);
         if (!events.ContainsKey(key))
         {
             events.Add(key,true);

@@ -13,7 +13,9 @@ public class PlayerInArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Logger.Instance.Log("Player entered area of: "+name);
+            //Logger.Instance.Log("Player entered area of: "+name);
+            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+            logger.sendToLog("Player entered area of: " + name);
             OnEnter.Invoke();
         }
     }
@@ -22,7 +24,9 @@ public class PlayerInArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Logger.Instance.Log("Player exited area of: "+name);
+            //Logger.Instance.Log("Player exited area of: "+name);
+            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+            logger.sendToLog("Player exited area of: " + name);
             OnExit.Invoke();
         }
 
