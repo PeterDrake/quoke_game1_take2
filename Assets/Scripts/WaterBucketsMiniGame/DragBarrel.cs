@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DragBarrel : MonoBehaviour
 {
-  private Vector3 screenPoint;
-  private Vector3 offset;
+    Vector3 startPos;
+     Vector3 dist;
 
-  void OnMouseDown()
-  {
-    screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
-    offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
-  }
+    void OnMouseDown()
+    {
+        startPos = Camera.main.WorldToScreenPoint(transform.position);
+        dist = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, startPos.z));
+    }
 
-  void OnMouseDrag()
-  {
-    Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-    Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
-    transform.position = cursorPosition;
-  }
+    void OnMouseDrag()
+    {
+        Vector3 lastPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, startPos.z);
+        transform.position = Camera.main.ScreenToWorldPoint(lastPos) + dist;
+    }
 }

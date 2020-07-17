@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UIElements.Image;
@@ -14,6 +15,8 @@ public class IsBarrelMoved : MonoBehaviour
 
     public Button theButton;
 
+    public GameObject BarrelItem;
+
     public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(correctTag))
@@ -23,6 +26,7 @@ public class IsBarrelMoved : MonoBehaviour
             if (correctTag == "Barrel")
             {
                 CheckBarrelPosition.Barrel = true;
+                BarrelItem.transform.position = new Vector3 (8, 0, 48);
                 StartCoroutine(BlinkText());
             }
         }
@@ -36,6 +40,7 @@ public class IsBarrelMoved : MonoBehaviour
     {
         while (true)
         {
+            BarrelItem.transform.position = new Vector3 (8, 0, 48);
             theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
             yield return new WaitForSeconds(.3f);
             theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
