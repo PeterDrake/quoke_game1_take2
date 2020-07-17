@@ -26,7 +26,7 @@ public class InventoryHelper : MonoBehaviour
     public void AddItem(Item item, int amt)
     {
         //Logger.Instance.Log("Picked up: "+item.name);
-        
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Picked up " + item.name);
         _inventory.AddItem(item, (byte)amt);
         CheckOnAdd.Invoke();
