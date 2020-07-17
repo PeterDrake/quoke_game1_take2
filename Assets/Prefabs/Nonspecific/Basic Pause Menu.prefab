@@ -245,12 +245,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73776122b6a6044c6a157c317272ec42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 0
   handle: {fileID: 1567754934747674280}
   toggleBackground: {fileID: 0}
   handleOffset: 40
   status: {fileID: 1567754936257828214}
-  musicAudio: {fileID: 0}
-  sfxAudio: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &1567754934799122283
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ Transform:
   - {fileID: 1567754935788965717}
   - {fileID: 1567754934747674279}
   m_Father: {fileID: 5741743967955602594}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567754935744095193
 GameObject:
@@ -676,12 +676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73776122b6a6044c6a157c317272ec42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOn: 0
   handle: {fileID: 1567754936116470599}
   toggleBackground: {fileID: 0}
   handleOffset: 40
   status: {fileID: 1567754934799122281}
-  musicAudio: {fileID: 0}
-  sfxAudio: {fileID: 0}
+  sound: {fileID: 0}
 --- !u!1 &1567754936193866657
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +714,7 @@ Transform:
   - {fileID: 1567754935154691923}
   - {fileID: 1567754936116470598}
   m_Father: {fileID: 5741743967955602594}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567754936257828216
 GameObject:
@@ -1498,8 +1498,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5741743968844113921}
-  - {fileID: 1567754935168077952}
   - {fileID: 1567754936193866656}
+  - {fileID: 1567754935168077952}
   - {fileID: 5741743968750561709}
   m_Father: {fileID: 5741743967052675386}
   m_RootOrder: 0
