@@ -41,16 +41,7 @@ public class MoveToggle : MonoBehaviour
 
     void Awake()
     {
-        /*handleTransform = handle.GetComponent<RectTransform>();
-        toggleTransform = handle.GetComponent<RectTransform>();
-        handleSize = handleTransform.sizeDelta.x;
-        float toggleSizeX = toggleTransform.sizeDelta.x;
-        onPosX = (toggleSizeX / 2) - (handleSize / 2) - handleOffset;
-        offPosX = onPosX * -1; 
-        */
-        //print("moveToggles awake method");
-
-        //setToggles();
+        
     }
     
     public void setToggles()
