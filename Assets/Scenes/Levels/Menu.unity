@@ -686,6 +686,7 @@ GameObject:
   - component: {fileID: 137567074}
   - component: {fileID: 137567075}
   - component: {fileID: 137567076}
+  - component: {fileID: 137567077}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -807,13 +808,34 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137567069}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09621b9da9b9f8c4493cf1d8f189e0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   music: {fileID: 1884061019}
+  mToggle: {fileID: 0}
   sfx: {fileID: 523850907}
+  sToggle: {fileID: 0}
+--- !u!114 &137567077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137567069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32befc08a46b2046941d59b1df1e391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mHandle: {fileID: 1818341686}
+  sHandle: {fileID: 867867642}
+  handleOffset: 40
+  mStatus: {fileID: 448807968}
+  sStatus: {fileID: 1982785668}
+  musicAudio: {fileID: 1884061019}
+  sfxAudio: {fileID: 523850907}
 --- !u!1 &173985691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,7 +1052,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 867867643}
+      - m_Target: {fileID: 137567077}
         m_MethodName: SoundFXToggle
         m_Mode: 1
         m_Arguments:
@@ -1171,8 +1193,8 @@ RectTransform:
   m_LocalScale: {x: 1.28, y: 1.28, z: 1.28}
   m_Children:
   - {fileID: 552022321}
-  - {fileID: 1646642677}
   - {fileID: 1660824310}
+  - {fileID: 1646642677}
   - {fileID: 351491613}
   m_Father: {fileID: 1058709001}
   m_RootOrder: 0
@@ -1771,7 +1793,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867867642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73776122b6a6044c6a157c317272ec42, type: 3}
   m_Name: 
@@ -2262,7 +2284,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1818341687}
+      - m_Target: {fileID: 137567077}
         m_MethodName: MusicToggle
         m_Mode: 1
         m_Arguments:
@@ -3499,7 +3521,7 @@ Transform:
   - {fileID: 58147786}
   - {fileID: 867867646}
   m_Father: {fileID: 440417226}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1660824309
 GameObject:
@@ -3533,7 +3555,7 @@ Transform:
   - {fileID: 976375335}
   - {fileID: 1818341690}
   m_Father: {fileID: 440417226}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1791922757
 GameObject:
@@ -3639,7 +3661,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818341686}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73776122b6a6044c6a157c317272ec42, type: 3}
   m_Name: 

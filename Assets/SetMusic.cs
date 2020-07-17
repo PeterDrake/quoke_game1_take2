@@ -8,7 +8,9 @@ public class SetMusic : UIElement
     private bool sfxIsOff;
 
     public GameObject music;
+    public GameObject mToggle;
     public GameObject sfx;
+    public GameObject sToggle;
 
     // Start is called before the first frame update
     void Start()
