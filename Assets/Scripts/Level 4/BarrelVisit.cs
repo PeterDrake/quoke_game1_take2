@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BarrelVisit : MonoBehaviour
 {
-    private const string MiniGameSceneName = "WaterBucketsMiniGame";
+    /*private const string MiniGameSceneName = "WaterBucketsMiniGame";
 
 
     private InteractWithObject _interact;
@@ -123,5 +123,5 @@ public class BarrelVisit : MonoBehaviour
         Buckets.SetActive(true);
         Destroy(gameObject);
         Destroy(this);
-    }
+    }*/
 }
