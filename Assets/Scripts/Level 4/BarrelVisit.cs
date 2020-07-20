@@ -6,17 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class BarrelVisit : MonoBehaviour
 {
-    /*private const string MiniGameSceneName = "WaterBucketsMiniGame";
-
+    private const string MiniGameSceneName = "WaterBucketMiniGame";
 
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
-    public GameObject Barrel;
-
-
-    private byte Conditions;
-
+    public GameObject BarrelEnd;
+    public GameObject DrainPipe;
+    public GameObject Particles;
 
     private GameObject canvi;
     private GameObject camera;
@@ -24,55 +21,25 @@ public class BarrelVisit : MonoBehaviour
     private GameObject sunlight;
     //private GameObject levelAudio;
 
-    private void Awake()
-    {
-        Barrel.SetActive(true);
-    }
 
     void Start()
     {
         _interact = GetComponent<InteractWithObject>();
-        _inventory = Systems.Inventory;
-
-        Bucket = Resources.Load<Item>("Items/Bucket");
-        Bag = Resources.Load<Item>("Items/Bag");
-        Sawdust = Resources.Load<Item>("Items/Sawdust");
-        Sanitizer = Resources.Load<Item>("Items/Sanitizer");
-        ToiletPaper = Resources.Load<Item>("Items/ToiletPaper");
-        _inventory.CheckOnAdd.AddListener(UpdateConditions);
-
-        Buckets.SetActive(false);
     }
 
     public void Interaction()
     {
-        if ((Conditions ^ 0xF) == 0)
-        {
-            SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
-            SceneManager.sceneLoaded += StartMinigame;
-            _interact.enabled = false;
-        }
-        else
-        {
-            _interact.SetInteractText("You need to gather more items");
-        }
-    }
-    //CAMERA, ui, move stage up a lot
-    private void UpdateConditions() //called every time an item is added to the inventory 
-    {
-        if ((Conditions ^ 0xF) == 0) return;
-
-        if ((Conditions & 0x1) > 0 || _inventory.HasItem(Bucket, 2)) //first condition not met
-            Conditions |= 0x1;
-
-        if ((Conditions & 0x2) > 0 || _inventory.HasItem(Bag, 1)) //second condition not met
-            Conditions |= 0x2;
-
-        if ((Conditions & 0x4) > 0 || _inventory.HasItem(Sawdust, 1)) //third condition not met
-            Conditions |= 0x4;
-
-        if ((Conditions & 0x8) > 0 || _inventory.HasItem(Sanitizer, 1)) //fourth condition not met
-            Conditions |= 0x8;
+        //if ((Conditions ^ 0xF) == 0) // talked with Ahmad
+        //{
+        SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
+        Debug.Log("Hello");
+        SceneManager.sceneLoaded += StartMinigame;
+        _interact.enabled = false;
+        //}
+        //else
+        //{
+          //  _interact.SetInteractText("Go talk to Ahmad about water-collecting system");
+        //}
     }
 
     private void StartMinigame(Scene scn, LoadSceneMode lsm)
@@ -80,15 +47,14 @@ public class BarrelVisit : MonoBehaviour
         Systems.Status.Pause();
         SceneManager.sceneLoaded -= StartMinigame;
 
-
         (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
         //(levelAudio = GameObject.Find("Audio")).SetActive(false);
 
-        GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnWin += MiniGameFinished;
-        GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>().OnExit += MiniGameLeave;
+        GameObject.Find("MiniGameMain").GetComponent<MiniGameMain>().OnWin += MiniGameFinished;
+        GameObject.Find("MiniGameMain").GetComponent<MiniGameMain>().OnExit += MiniGameLeave;
     }
 
     private void MiniGameLeave()
@@ -99,29 +65,22 @@ public class BarrelVisit : MonoBehaviour
         vcam.SetActive(true);
         sunlight.SetActive(true);
         //levelAudio.SetActive(true);
-        _interact.enabled = true;
+        _interact.Kill();
     }
     private void MiniGameFinished()//this is not getting called
     {
         Systems.Status.UnPause();
+        DrainPipe.SetActive(false);
+        BarrelEnd.SetActive(true);
+        Particles.SetActive(false);
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
-        Systems.Objectives.Satisfy("TOILETEVENT");
+        Systems.Objectives.Satisfy("BarrelReady");
         camera.SetActive(true);
         vcam.SetActive(true);
         canvi.SetActive(true);
         sunlight.SetActive(true);
         //levelAudio.SetActive(true);
-
-        _inventory.RemoveItem(Bucket, 2);
-        _inventory.RemoveItem(Bag, 1);
-        _inventory.RemoveItem(Sawdust, 1);
-        // _inventory.RemoveItem( Sanitizer, 1);
-        // _inventory.RemoveItem( ToiletPaper, 1);
-
-        Buckets.SetActive(true);
-        Destroy(gameObject);
-        Destroy(this);
-    }*/
+    }
 }
