@@ -13606,7 +13606,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 625580731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09621b9da9b9f8c4493cf1d8f189e0ed, type: 3}
   m_Name: 
@@ -13615,6 +13615,37 @@ MonoBehaviour:
   mToggle: {fileID: 0}
   sfx: {fileID: 1804220373}
   sToggle: {fileID: 0}
+--- !u!1 &625580734 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3059642127616472545, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &625580735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3059642126853742606, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &625580736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625580731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32befc08a46b2046941d59b1df1e391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mHandle: {fileID: 625580735}
+  sHandle: {fileID: 625580734}
+  handleOffset: 40
+  mStatus: {fileID: 1286636392}
+  sStatus: {fileID: 1673560537}
+  musicAudio: {fileID: 1007425404}
+  sfxAudio: {fileID: 1804220373}
 --- !u!1 &628812459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -32264,6 +32295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvas: {fileID: 625580732}
+  words: 
 --- !u!1 &1511606321 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -34604,7 +34636,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: textOnQuake
-      value: Earthquake! Find a stable object to hide under
+      value: Earthquake! Find a stable object to hide under and press 'C' to crouch
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
