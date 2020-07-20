@@ -10,6 +10,5 @@ public class RemoveSpout : MonoBehaviour
     void OnMouseDown()
     {
         Destroy(Spout);
-        //Spout.SetActive(false);
     }
 }
