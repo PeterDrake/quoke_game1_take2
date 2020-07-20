@@ -37,7 +37,6 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
-    public GameObject WinSound;
 
     public GameObject Depth1;
     public GameObject Depth2; //Depths 3 and 4 are regulated in MoveOtherShovel script
@@ -179,7 +178,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         WinScreen.SetActive(true);
-        WinSound.SetActive(true);
+        GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
     }
 
     private IEnumerator TooDeep()

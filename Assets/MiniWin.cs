@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class MiniWin : MonoBehaviour
 {
-    public GameObject miniWin;
+    public GameObject playMiniWin;
 
     public void MiniGameWon()
     {
         //miniWin.SetActive(true);
-        miniWin.GetComponent<AudioSource>().Play();
+        playMiniWin.GetComponent<AudioSource>().Play();
     }
 }
