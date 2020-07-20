@@ -79,7 +79,7 @@ public class GasShutDown : MonoBehaviour
         canvi.SetActive(true);
         camera.SetActive(true);
         levelAudio.SetActive(true);
-        //gasAudio.SetActive(false);
+        gasAudio.SetActive(false);
     }
     private void MiniGameFinished()
     {
@@ -90,7 +90,7 @@ public class GasShutDown : MonoBehaviour
         camera.SetActive(true);
         canvi.SetActive(true);
         levelAudio.SetActive(true);
-        //gasAudio.SetActive(false);
+        gasAudio.SetActive(false);
 
         UIManager.Instance.ToggleActive(theGUI);
         //_inventory.RemoveItem(Wrench, 1);
