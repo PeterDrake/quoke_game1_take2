@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeaveHouseText : MonoBehaviour
+public class ChangeBannerText : MonoBehaviour
 {
     public InformationCanvas _canvas;
+    public string words;
 
-    public void Interaction()
+    public void Change()
     {
-        _canvas.ChangeText("Explore the neighborhood");
+        _canvas.ChangeText(words);
     }
 }
