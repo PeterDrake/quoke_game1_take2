@@ -8,14 +8,8 @@ public class BarrelVisit : MonoBehaviour
 {
     private const string MiniGameSceneName = "WaterBucketMiniGame";
 
-    //public InformationCanvas _canvas;
-    
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
-
-    //public GameObject Barrel;
-
-    //private byte Conditions;
 
     public GameObject BarrelEnd;
     public GameObject DrainPipe;
@@ -71,7 +65,6 @@ public class BarrelVisit : MonoBehaviour
         vcam.SetActive(true);
         sunlight.SetActive(true);
         //levelAudio.SetActive(true);
-        //_interact.enabled = true;
         _interact.Kill();
     }
     private void MiniGameFinished()//this is not getting called
