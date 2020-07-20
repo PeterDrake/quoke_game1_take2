@@ -974,7 +974,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Now let's wait for the rain!
+  m_Text: It's all set up to collect rain!
 --- !u!222 &311787856
 CanvasRenderer:
   m_ObjectHideFlags: 0
