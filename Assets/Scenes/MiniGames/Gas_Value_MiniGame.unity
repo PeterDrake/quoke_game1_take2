@@ -1748,7 +1748,6 @@ MonoBehaviour:
     type: 3}
   flange: {fileID: 207983115}
   WinScreen: {fileID: 781430063}
-  WinSound: {fileID: 1400018518}
   attachedWrenchPosition: {x: 0, y: 0, z: 0}
   z_offset: -0.371
   flangeRotationUpperBound: -5
@@ -2262,7 +2261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1812025489
 Transform:
   m_ObjectHideFlags: 0
