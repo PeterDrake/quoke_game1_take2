@@ -102,6 +102,8 @@ public class WaterHeaterVisit : MonoBehaviour
 
         Spot.SetActive(false);
 
+        GameObject.Find("GUI").GetComponent<GuiDisplayer>().GetBanner().ChangeText("Find clean water and share with Zelda");
+
         //Destroy(gameObject);
         //Destroy(this);
     }
