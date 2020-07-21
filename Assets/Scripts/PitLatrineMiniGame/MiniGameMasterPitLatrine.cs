@@ -18,6 +18,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public UnityAction OnWin;
     public UnityAction OnExit;
     public GameObject Win;
+    private bool haveWon;
 
     public GameObject S1Folder;
     public GameObject S2Folder;
@@ -60,6 +61,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         //TarpButton.GetComponent<Button>().interactable = false;
         PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuildPly);
         TarpButton.GetComponent<Button>().onClick.AddListener(NoBuildTarp);
+        haveWon = false;
 
         if (S1Folder.activeSelf)
         {
@@ -144,7 +146,10 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 //Use.SetActive(false);
                 //Dig2.SetActive(false);
                 TarpButton.GetComponent<Button>().interactable = false;
-                StartCoroutine(nameof(Winning));
+                if (!haveWon)
+                {
+                    StartCoroutine(nameof(Winning));
+                }
                 //WinScreen.SetActive(true);
             }
 
@@ -176,10 +181,11 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     private IEnumerator Winning()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         print("you win the latrine");
         GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
         WinScreen.SetActive(true);
+        haveWon = true;
     }
 
     private IEnumerator TooDeep()
