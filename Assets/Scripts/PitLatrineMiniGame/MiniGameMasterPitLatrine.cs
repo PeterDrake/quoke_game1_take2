@@ -177,8 +177,9 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     private IEnumerator Winning()
     {
         yield return new WaitForSeconds(1f);
-        WinScreen.SetActive(true);
+        print("you win the latrine");
         GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
+        WinScreen.SetActive(true);
     }
 
     private IEnumerator TooDeep()
