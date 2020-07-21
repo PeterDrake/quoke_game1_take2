@@ -106537,7 +106537,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: textOnQuake
-      value: Earthquake! Find a stable object to hide under
+      value: Earthquake! Find a stable object to hide under and press 'C' to crouch
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
