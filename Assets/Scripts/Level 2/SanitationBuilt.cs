@@ -37,6 +37,7 @@ public class SanitationBuilt : MonoBehaviour
     private GameObject sunlight;
     public GameObject levelMusic;
     public GameObject toiletMusic;
+    public GameObject miniWin;
 
     private void Awake()
     {
@@ -143,5 +144,10 @@ public class SanitationBuilt : MonoBehaviour
         Spot.SetActive(false);
         //Destroy(gameObject);
         //Destroy(this);
+    }
+
+    public void MiniGameWon()
+    {
+        miniWin.SetActive(true);
     }
 }

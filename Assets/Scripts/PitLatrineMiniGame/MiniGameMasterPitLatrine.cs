@@ -18,6 +18,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public UnityAction OnWin;
     public UnityAction OnExit;
     public GameObject Win;
+    private bool haveWon;
 
     public GameObject S1Folder;
     public GameObject S2Folder;
@@ -37,7 +38,6 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject TryHighGround;
     public GameObject ErosionScreen;
     public GameObject WinScreen;
-    public GameObject WinSound;
 
     public GameObject Depth1;
     public GameObject Depth2; //Depths 3 and 4 are regulated in MoveOtherShovel script
@@ -61,6 +61,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         //TarpButton.GetComponent<Button>().interactable = false;
         PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuildPly);
         TarpButton.GetComponent<Button>().onClick.AddListener(NoBuildTarp);
+        haveWon = false;
 
         if (S1Folder.activeSelf)
         {
@@ -145,7 +146,10 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
                 //Use.SetActive(false);
                 //Dig2.SetActive(false);
                 TarpButton.GetComponent<Button>().interactable = false;
-                StartCoroutine(nameof(Winning));
+                if (!haveWon)
+                {
+                    StartCoroutine(nameof(Winning));
+                }
                 //WinScreen.SetActive(true);
             }
 
@@ -177,9 +181,11 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     private IEnumerator Winning()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
+        print("you win the latrine");
+        GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
         WinScreen.SetActive(true);
-        WinSound.SetActive(true);
+        haveWon = true;
     }
 
     private IEnumerator TooDeep()

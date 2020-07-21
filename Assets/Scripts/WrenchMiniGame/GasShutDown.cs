@@ -23,6 +23,8 @@ public class GasShutDown : MonoBehaviour
     private GameObject camera;
     public GameObject levelAudio;
     public GameObject gasAudio;
+    public GameObject levelWin;
+    public GameObject miniWin;
 
     void Start()
     {
@@ -84,9 +86,7 @@ public class GasShutDown : MonoBehaviour
         Systems.Status.UnPause();
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
-        canvi.SetActive(true);
         
-        //Systems.Objectives.Satisfy("TOILETEVENT");
         camera.SetActive(true);
         canvi.SetActive(true);
         levelAudio.SetActive(true);
@@ -95,5 +95,12 @@ public class GasShutDown : MonoBehaviour
         UIManager.Instance.ToggleActive(theGUI);
         //_inventory.RemoveItem(Wrench, 1);
        
+    }
+
+    public void GasMiniGameWon()
+    {
+        gasAudio.SetActive(false);
+        miniWin.SetActive(true);
+        levelWin.SetActive(true);
     }
 }

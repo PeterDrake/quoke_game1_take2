@@ -21,6 +21,7 @@ public class WrenchMiniGameMaster : MonoBehaviour
         {
             Debug.Log("Congratz, you have won!");
             WinScreen.SetActive(true);
+
            // SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
         }
         

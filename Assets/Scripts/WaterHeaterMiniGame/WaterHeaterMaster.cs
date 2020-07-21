@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class WaterHeaterMaster : MonoBehaviour
 {
     public GameObject Win;
-    public GameObject WinSound;
+    //public GameObject WinSound;
     public GameObject Wrong;
 
     public UnityAction OnWin;
