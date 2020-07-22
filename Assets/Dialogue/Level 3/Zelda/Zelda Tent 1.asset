@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Zelda Tent 1
   m_EditorClassIdentifier: 
-  speech: If you need a place to crash, I've got a tent set up in the park. It's
-    not safe to sleep in these buildings; I almost got flattened in that last aftershock!
+  speech: If you need a place to crash, I've got a tent set up right here. It's not
+    safe to sleep in these buildings; I almost got flattened in that last aftershock!
   optionOneText: Thanks, I'll take you up on that.
   optionOne: {fileID: 11400000, guid: ca1083a5ab5bf6e4ca2e658d840d8f33, type: 2}
   optionTwoText: 

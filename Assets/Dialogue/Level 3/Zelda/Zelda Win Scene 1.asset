@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Zelda Win Scene 1
   m_EditorClassIdentifier: 
-  speech: Of course, see you inside.
+  speech: Of course, it's not safe to sleep in these buildings; I almost got flattened
+    in that last aftershock! See you inside.
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
