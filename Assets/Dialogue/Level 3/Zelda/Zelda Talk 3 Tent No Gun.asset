@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Zelda Talk 3 Tent No Gun
   m_EditorClassIdentifier: 
   speech: 'Thanks for getting rid of that gun. '
-  optionOneText: No problem.
-  optionOne: {fileID: 11400000, guid: ed77347f142c84314be4a238419b150c, type: 2}
+  optionOneText: No problem. It's raining pretty hard. Could I crash in your tent
+    tonight?
+  optionOne: {fileID: 11400000, guid: 3b23a39848aef4270a8e3dc60ffaf13c, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
