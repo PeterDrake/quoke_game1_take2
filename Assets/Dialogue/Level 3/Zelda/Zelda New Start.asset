@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda Tent No Gun 1
+  m_Name: Zelda New Start
   m_EditorClassIdentifier: 
-  speech: 'Thanks for getting rid of that gun. '
-  optionOneText: No problem.
-  optionOne: {fileID: 11400000, guid: ed77347f142c84314be4a238419b150c, type: 2}
+  speech: Hey Mo!
+  optionOneText: Hi Zelda.
+  optionOne: {fileID: 11400000, guid: 6c63797b321c34c69b42738dc5e4558c, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
-  IfRequirementsOne: []
-  optionOneTextAlt: 
-  optionOneAlt: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
+  optionOneTextAlt: Hi Zelda.
+  optionOneAlt: {fileID: 11400000, guid: 7e0f6793875174aee901096dfeb3d402, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}

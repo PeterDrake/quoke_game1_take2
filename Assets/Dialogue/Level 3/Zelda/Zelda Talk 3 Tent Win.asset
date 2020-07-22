@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda Tent 1
+  m_Name: Zelda Talk 3 Tent Win
   m_EditorClassIdentifier: 
   speech: If you need a place to crash, I've got a tent set up right here. It's not
     safe to sleep in these buildings; I almost got flattened in that last aftershock!
@@ -22,10 +22,9 @@ MonoBehaviour:
   Outcomes:
   - {fileID: 11400000, guid: e4e423ab946e74934aa82b22fb6c2627, type: 2}
   NewHead: {fileID: 0}
-  IfRequirementsOne:
-  - {fileID: 11400000, guid: d19cf06f15cb444268b6e175453a09b5, type: 2}
-  optionOneTextAlt: Thanks, I'm going to build this pit latrine first.
-  optionOneAlt: {fileID: 11400000, guid: 8fdfd06d271eb074190d52037fdb3ca4, type: 2}
+  IfRequirementsOne: []
+  optionOneTextAlt: 
+  optionOneAlt: {fileID: 0}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}

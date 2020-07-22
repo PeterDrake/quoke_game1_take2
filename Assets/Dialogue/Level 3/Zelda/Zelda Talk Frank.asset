@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda Tent New Head
+  m_Name: Zelda Talk Frank
   m_EditorClassIdentifier: 
-  speech: Hey Mo!
-  optionOneText: Hi Zelda.
-  optionOne: {fileID: 11400000, guid: 5c2d2f733874c404f9e746fbb392dace, type: 2}
+  speech: Have you talked to Frank about a toilet?
+  optionOneText: Yeah. Im looking for a few things.
+  optionOne: {fileID: 11400000, guid: a24749e3d45be4c998a6d514d10ec5c7, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: 5658e9ab0647f4447b900f817248a3b5, type: 2}
-  optionOneTextAlt: Hi Zelda.
-  optionOneAlt: {fileID: 11400000, guid: ed77347f142c84314be4a238419b150c, type: 2}
+  - {fileID: 11400000, guid: df5d28158da1444a782acfa64243e71f, type: 2}
+  optionOneTextAlt: No.
+  optionOneAlt: {fileID: 11400000, guid: 09986807e6172420f9017a054f8256c1, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
