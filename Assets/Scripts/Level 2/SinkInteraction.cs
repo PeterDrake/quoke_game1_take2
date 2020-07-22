@@ -12,11 +12,16 @@ public class SinkInteraction : MonoBehaviour
 
     public void Interaction()
     {
-        if (!_firstInteraction) Systems.Status.AffectHydration(100);
+        if (!_firstInteraction)
+        {
+            Systems.Status.AffectHydration(100);
+            GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+        }
         else
         {
+            GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
             _firstInteraction = false;
-            _interact.SetInteractText("Press 'E' to Drink from Sink");
+            _interact.SetInteractText("Press 'E' to drink from the sink");
             _interact.DeleteItems();
             //_interact = null;
         }
