@@ -8563,7 +8563,7 @@ PrefabInstance:
     - target: {fileID: 6301557043683169967, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6301557043683169967, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
@@ -8693,7 +8693,7 @@ PrefabInstance:
     - target: {fileID: 6301557044367878309, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6301557044367878309, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
@@ -8973,7 +8973,7 @@ PrefabInstance:
     - target: {fileID: 6301557045755891076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6301557045755891076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
