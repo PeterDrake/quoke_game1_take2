@@ -152,7 +152,6 @@ public class WaterHeaterMaster : MonoBehaviour
 
     public void WinLeave()
     {
-        GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
         OnWin.Invoke();
     }
 
