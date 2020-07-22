@@ -8,6 +8,7 @@ public class AhmadAppear : MonoBehaviour
 {
 
     public GameObject Ahmad;
+    public GameObject DoorDisable;
     //-----Material Blinking-------
     public bool BlinkWhenPlayerNear = true;
     private Material mat_original;
@@ -51,6 +52,7 @@ public class AhmadAppear : MonoBehaviour
     {
         //Destroy(Ahmad);
         Ahmad.SetActive(false);
+        DoorDisable.SetActive(false);
         hasItem = (itemToReceive != null);
         if (hasItem && itemToReceive.Length > 0)
         {
@@ -118,6 +120,8 @@ public class AhmadAppear : MonoBehaviour
                 itemToReceive = null;
             }
             CallOnInteract.Invoke();
+            Ahmad.SetActive(true);
+            DoorDisable.SetActive(true);
 
             if (DestoryObjectAfterUse)
             {
@@ -158,7 +162,7 @@ public class AhmadAppear : MonoBehaviour
             interactText.ToggleVisibility(true);
             playerInCollider = true;
         }
-        Ahmad.SetActive(true);
+
     }
 
     public void OnTriggerExit(Collider other)
@@ -168,6 +172,7 @@ public class AhmadAppear : MonoBehaviour
             interactText.ToggleVisibility(false);
             playerInCollider = false;
             if (BlinkWhenPlayerNear) _meshRenderer.material = mat_original;
+        
         }
     }
 
@@ -175,12 +180,15 @@ public class AhmadAppear : MonoBehaviour
     {
         this.InteractionDisplayText = newText;
         interactText.ChangeText(InteractionDisplayText);
+       
+
     }
 
     public void DeleteItems()
     {
         itemToReceive = null;
         hasItem = false;
+     
     }
 
     public void StopBlink()
@@ -188,6 +196,7 @@ public class AhmadAppear : MonoBehaviour
         _meshRenderer.material = mat_original;
         blinkOn = false;
         BlinkWhenPlayerNear = false;
+   
     }
 
     public void Kill()
@@ -195,5 +204,9 @@ public class AhmadAppear : MonoBehaviour
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;
         Destroy(this);
+        
+       
     }
+    
+    
 }
