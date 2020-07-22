@@ -62,7 +62,6 @@ public class MiniGameMaster : MonoBehaviour
 
     public void WinLeave()
     {
-        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
         OnWin.Invoke();
     }
 
