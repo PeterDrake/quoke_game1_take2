@@ -13,9 +13,10 @@ public class SinkInteractionNotL2 : MonoBehaviour
     public void Interaction()
     {
         Systems.Status.AffectHydration(100);
-        _firstInteraction = false;
-        _interact.SetInteractText("Press 'E' to Drink from Sink");
-        _interact.DeleteItems();
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+        //_firstInteraction = false;
+        //_interact.SetInteractText("Press 'E' to drink from the sink");
+        //_interact.DeleteItems();
         // _interact = null;
     }
 }

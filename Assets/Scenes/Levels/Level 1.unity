@@ -14450,24 +14450,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
   itemToReceive: []
-  InteractionDisplayText: Press 'E' to Rest in Bed
+  InteractionDisplayText: Press 'E' to rest in the bed
   interactText: {fileID: 0}
   CallOnInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 684600404}
         m_MethodName: Interaction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 216228496}
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20309,7 +20298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8834850650759357342}
-  m_RootOrder: 38
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &933819290 stripped
 GameObject:
@@ -30225,7 +30214,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362110716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
   m_Name: 
@@ -60767,6 +60756,7 @@ Transform:
   - {fileID: 8834850652354663930}
   - {fileID: 8834850651722576895}
   - {fileID: 8834850650631245218}
+  - {fileID: 933690815}
   - {fileID: 8834850650390487486}
   - {fileID: 8834850651821959755}
   - {fileID: 8834850652155520800}
@@ -60784,7 +60774,6 @@ Transform:
   - {fileID: 8834850651318489405}
   - {fileID: 8834850651708532775}
   - {fileID: 8834850651672819048}
-  - {fileID: 933690815}
   m_Father: {fileID: 8834850650941189294}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75111,7 +75100,7 @@ MonoBehaviour:
   BlinkWhenPlayerNear: 1
   itemToReceive:
   - {fileID: 0}
-  InteractionDisplayText: Press 'E' to Drink from Sink
+  InteractionDisplayText: Press 'E' to drink from the sink
   interactText: {fileID: 0}
   CallOnInteract:
     m_PersistentCalls:
@@ -75127,21 +75116,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 216228496}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   CallOnEnterCollider:
     m_PersistentCalls:
       m_Calls: []
-  killAfterUse: 1
+  killAfterUse: 0
   DestoryObjectAfterUse: 0
 --- !u!114 &8834850651373779876
 MonoBehaviour:
@@ -94074,24 +94052,13 @@ MonoBehaviour:
   BlinkWhenPlayerNear: 1
   itemToReceive:
   - {fileID: 0}
-  InteractionDisplayText: Press 'E' to Use the Toilet
+  InteractionDisplayText: Press 'E' to use the toilet
   interactText: {fileID: 0}
   CallOnInteract:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8834850652103626558}
         m_MethodName: Interaction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 216228496}
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
