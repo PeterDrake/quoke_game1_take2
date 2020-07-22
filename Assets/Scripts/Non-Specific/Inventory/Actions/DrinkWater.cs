@@ -15,6 +15,7 @@ public class DrinkWater : ItemAction
         logger.sendToLog("Player drank " + i.name);
         if (d.killPlayer) Systems.Status.PlayerDeath(d.DeathMessage, d.DeathMessage);
         Systems.Status.AffectHydration(d.hydrationChange);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
         
         return true;
     }
