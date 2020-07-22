@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Ahmad 2
   m_EditorClassIdentifier: 
-  speech: "We want to collect some rainwater. Can you find a barrel and put it under
-    this downspout?\r"
+  speech: There's a barrel by the downspout on the corner of this building. Can you
+    set it up to collect rainwater?
   optionOneText: "I\u2019ll see what I can do!\r"
   optionOne: {fileID: 11400000, guid: 5a0fa73bea323bb419153646c591a0b4, type: 2}
   optionTwoText: 
