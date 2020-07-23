@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: A10
   m_EditorClassIdentifier: 
-  speech: 'It''s getting dark. Do you have shelter for the night? '
-  optionOneText: 'I was thinking I''d sleep under my living room table. '
-  optionOne: {fileID: 11400000, guid: d843cba4e8cfb9649aee0bf353548904, type: 2}
+  speech: No, that building doesn't look safe. You wouldn't want to be in there during
+    an aftershock. I've got some room in my vehicle. It's the blue one.
+  optionOneText: 'Thanks! '
+  optionOne: {fileID: 11400000, guid: cea9a8459d5f6ae4e9498b243f4ddcca, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 0}
+  NewHead: {fileID: 11400000, guid: 6919636eb47418944a7160d44a840619, type: 2}
