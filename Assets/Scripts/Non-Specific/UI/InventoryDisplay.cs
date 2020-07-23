@@ -96,6 +96,7 @@ public class InventoryDisplay : UIElement
         Systems.Input.RegisterKey("i", delegate
             {
                UIManager.Instance.ToggleActive(this);
+                SavedData.addInv = false;
             }
             );
     }

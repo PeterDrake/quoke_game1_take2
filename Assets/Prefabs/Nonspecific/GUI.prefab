@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3391701978328738375}
+      - m_Target: {fileID: 0}
         m_MethodName: StopCoroutine
         m_Mode: 5
         m_Arguments:
@@ -2227,9 +2227,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3391701978328738375}
-        m_MethodName: StopCoroutine
-        m_Mode: 5
+      - m_Target: {fileID: 1965601178122087004}
+        m_MethodName: ThrobOff
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2249,7 +2249,7 @@ GameObject:
   - component: {fileID: 3000584827920439829}
   - component: {fileID: 8409802022143737081}
   - component: {fileID: 6472089269743799483}
-  - component: {fileID: 3391701978328738375}
+  - component: {fileID: 1965601178122087004}
   m_Layer: 5
   m_Name: Flash
   m_TagString: Untagged
@@ -2313,7 +2313,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3391701978328738375
+--- !u!114 &1965601178122087004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2322,16 +2322,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6476170169783019807}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 350946fb60f79b247b673ee335583f5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onClick:
-    m_PersistentCalls:
-      m_Calls: []
-  theImage: {fileID: 6472089269743799483}
-  oneColor: {r: 1, g: 1, b: 0, a: 0}
-  otherColor: {r: 1, g: 1, b: 0, a: 1}
-  fadeSpeed: 0
+  startOnAwake: 0
+  TheFlash: {fileID: 6472089269743799483}
+  newInvColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &9020013510772249620
 GameObject:
   m_ObjectHideFlags: 0

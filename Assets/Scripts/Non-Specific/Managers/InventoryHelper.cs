@@ -22,6 +22,7 @@ public class InventoryHelper : MonoBehaviour
     {
         for (int i = 0; i < holderItems.Length; i++)
             AddItem(holderItems[i], holderAmts[i]);
+        if (holderItems.Length > 0) { SavedData.addInv = true; }
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
     
@@ -31,6 +32,7 @@ public class InventoryHelper : MonoBehaviour
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Picked up " + item.name);
         _inventory.AddItem(item, (byte)amt);
+        SavedData.addInv = true;
         CheckOnAdd.Invoke();
     }
 

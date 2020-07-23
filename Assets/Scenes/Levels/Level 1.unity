@@ -2759,39 +2759,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 336724233}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &129396110 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2674611547903763419, guid: 54201a432732e3644b92dd53d5d1fef5,
-    type: 3}
-  m_PrefabInstance: {fileID: 625580730}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &129396112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2670812267324475007, guid: 54201a432732e3644b92dd53d5d1fef5,
-    type: 3}
-  m_PrefabInstance: {fileID: 625580730}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129396110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &129396115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129396110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350946fb60f79b247b673ee335583f5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startOnAwake: 0
-  TheFlash: {fileID: 129396112}
-  newInvColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &133117420
 GameObject:
   m_ObjectHideFlags: 0
@@ -13861,7 +13828,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 129396115}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3059642126853742594, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
     - {fileID: 3059642127616472547, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
