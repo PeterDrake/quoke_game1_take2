@@ -2713,21 +2713,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2690835748195175517, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -293.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690835748195175517, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -123.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 2690835748195175517, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 32.93
-      objectReference: {fileID: 0}
     - target: {fileID: 2690835748371815694, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
         type: 3}
       propertyPath: m_AnchorMin.y

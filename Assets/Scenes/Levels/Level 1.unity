@@ -13363,16 +13363,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 3961619767243981624, guid: 54201a432732e3644b92dd53d5d1fef5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 34.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3961619767243981624, guid: 54201a432732e3644b92dd53d5d1fef5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 20.9
-      objectReference: {fileID: 0}
     - target: {fileID: 4204111617955944534, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Text
