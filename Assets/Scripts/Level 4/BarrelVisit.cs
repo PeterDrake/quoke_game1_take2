@@ -18,6 +18,7 @@ public class BarrelVisit : MonoBehaviour
     public GameObject DrainPipe;
     public GameObject Particles;
     public GameObject Storm;
+    public Collider SchoolEntrance;
 
     private GameObject canvi;
     private GameObject camera;
@@ -73,6 +74,7 @@ public class BarrelVisit : MonoBehaviour
         Particles.SetActive(false);
         Storm.SetActive(true);
         _canvas.ChangeText(BewareTheStorm);
+        SchoolEntrance.enabled = true;
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
