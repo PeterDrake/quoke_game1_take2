@@ -6206,10 +6206,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theImage: {fileID: 0}
+  theImage: {fileID: 299297936}
   oneColor: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0.78431374}
   otherColor: {r: 0.4229263, g: 0.68154025, b: 0.9056604, a: 0.78431374}
   fadeSpeed: 0.2
+--- !u!114 &299297936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 499350135105757208, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299297932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &303102076
 GameObject:
   m_ObjectHideFlags: 0
@@ -13172,12 +13184,12 @@ PrefabInstance:
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: KillIt
+      value: StopCoroutine
       objectReference: {fileID: 0}
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -13203,6 +13215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 499350135105757215, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: ButtonThrob
       objectReference: {fileID: 0}
     - target: {fileID: 499350135352073168, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
