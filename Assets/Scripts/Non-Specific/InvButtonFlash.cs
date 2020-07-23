@@ -15,18 +15,19 @@ public class InvButtonFlash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (startOnAwake) { isOn = true; }
+        if (startOnAwake) { SavedData.addInv = true; }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Throb(isOn);
+        isOn = SavedData.addInv;
+        Throb();
     }
 
-    private void Throb(bool isFlashing)
+    private void Throb()
     {
-        if (isFlashing)
+        if (isOn)
         {
             TheFlash.color = Color.Lerp(newInvColor, Color.clear, Mathf.PingPong(Time.time, .5f));
         }
@@ -38,11 +39,11 @@ public class InvButtonFlash : MonoBehaviour
 
     public void ThrobOn()
     {
-        isOn = true;
+        SavedData.addInv = true;
     }
 
     public void ThrobOff()
     {
-        isOn = false;
+        SavedData.addInv = false;
     }
 }

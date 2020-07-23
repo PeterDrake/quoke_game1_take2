@@ -20,5 +20,6 @@ public class GiveItems : DialogueOutcome
             i++;
         }
         GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
+        SavedData.addInv = true;
     }
 }
