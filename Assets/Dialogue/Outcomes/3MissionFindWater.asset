@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: 3MissionFindWater
   m_EditorClassIdentifier: 
   ObjectiveName: MissionWater
-  words: Find clean water and share with Zelda
+  words: 'clean water '
+  Find: 1
+  Found: 0
