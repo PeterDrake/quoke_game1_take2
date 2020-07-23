@@ -12371,7 +12371,6 @@ MonoBehaviour:
   TryHighGround: {fileID: 1743689748}
   ErosionScreen: {fileID: 1075880751}
   WinScreen: {fileID: 689588163}
-  WinSound: {fileID: 1756559692}
   Depth1: {fileID: 344212891}
   Depth2: {fileID: 1503388282}
   Dig: {fileID: 1472520561}
@@ -13347,7 +13346,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 84.3}
-  m_SizeDelta: {x: 500, y: 270.78714}
+  m_SizeDelta: {x: 500, y: 143.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596938698
 MonoBehaviour:
@@ -13380,8 +13379,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Be the first to use the brand-new pit latrine!
+    m_LineSpacing: 1.5
+  m_Text: Ah, sweet relief!
 --- !u!222 &1596938699
 CanvasRenderer:
   m_ObjectHideFlags: 0
