@@ -22,7 +22,14 @@ public class MiniGameCheck : MonoBehaviour
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
             if (correctTag == "Bucket")
             {
-                MasterCheck.Bucket = true;
+                if (!MasterCheck.PeeBucket) {
+                    MasterCheck.PeeBucket = true;
+                }
+                else
+                {
+                    MasterCheck.PooBucket = true;
+                }
+                
             }
             if (correctTag == "PlasticBag")
             {
@@ -45,7 +52,7 @@ public class MiniGameCheck : MonoBehaviour
                 MasterCheck.Pee = true;
             }
             
-            if (MasterCheck.Bucket && MasterCheck.PlasticBag && MasterCheck.Poop && MasterCheck.ToiletPaper && MasterCheck.Sawdust && MasterCheck.Pee)
+            if (MasterCheck.PeeBucket && MasterCheck.PooBucket && MasterCheck.PlasticBag && MasterCheck.Poop && MasterCheck.ToiletPaper && MasterCheck.Sawdust && MasterCheck.Pee)
             {
                 StartCoroutine(BlinkText());
             }
@@ -74,9 +81,13 @@ public void OnTriggerExit(Collider other)
    if (other.CompareTag(correctTag))
    {
        MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-       if (correctTag == "Bucket")
+       if (correctTag == "Bucket" && MasterCheck.PooBucket)
        {
-           MasterCheck.Bucket = false;
+           MasterCheck.PooBucket = false;
+       }
+       if (correctTag == "Bucket" && MasterCheck.PeeBucket)
+       {
+           MasterCheck.PeeBucket = false;
        }
        if (correctTag == "PlasticBag")
        {
