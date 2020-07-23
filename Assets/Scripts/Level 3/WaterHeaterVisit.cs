@@ -98,6 +98,9 @@ public class WaterHeaterVisit : MonoBehaviour
         //_interact.Kill();
 
         UIManager.Instance.ToggleActive(theGUI);
+
+        GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
+
         _interact.Kill();
 
         Spot.SetActive(false);
