@@ -2759,6 +2759,39 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 336724233}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &129396110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2674611547903763419, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &129396112 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2670812267324475007, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129396110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &129396115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129396110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350946fb60f79b247b673ee335583f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startOnAwake: 1
+  TheFlash: {fileID: 129396112}
+  newInvColor: {r: 1, g: 1, b: 0, a: 1}
 --- !u!1 &133117420
 GameObject:
   m_ObjectHideFlags: 0
@@ -6206,6 +6239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4404743394d6f9e4895e1f168c8c59d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startOnAwake: 1
+  oneUseOnly: 1
   theImage: {fileID: 299297936}
   oneColor: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0.78431374}
   otherColor: {r: 0.4229263, g: 0.68154025, b: 0.9056604, a: 0.78431374}
@@ -13276,6 +13311,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2674611547903763419, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Name
+      value: InventoryFlash
+      objectReference: {fileID: 0}
     - target: {fileID: 3059642126853742594, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: status
@@ -13435,6 +13475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: fadeSpeed
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6039438732951937155, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6455381913799971937, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -13805,13 +13850,18 @@ PrefabInstance:
     - target: {fileID: 8980099818359997812, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StopThrob
+      value: ThrobOff
       objectReference: {fileID: 0}
     - target: {fileID: 8980099818359997812, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8980099818359997812, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 129396115}
     m_RemovedComponents:
     - {fileID: 3059642126853742594, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
     - {fileID: 3059642127616472547, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
