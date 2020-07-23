@@ -1,6 +1,8 @@
 ﻿using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+
 
 
 /// <summary>
@@ -11,9 +13,13 @@ public class InventoryHelper : MonoBehaviour
 {
     public UnityEvent CheckOnAdd;
     [SerializeField] private OurInventory _inventory;
-
+    
     public Item[] holderItems;
     public int[] holderAmts;
+
+    [SerializeField] private Image InventoryFlash;
+    [SerializeField] private Color addColor;
+
 
     private LogToServer logger; 
     public void Start()
@@ -29,6 +35,8 @@ public class InventoryHelper : MonoBehaviour
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Picked up " + item.name);
         _inventory.AddItem(item, (byte)amt);
+        InventoryFlash.color = addColor;
+        InventoryFlash.color = Color.Lerp(InventoryFlash.color, Color.clear, Time.time);
         CheckOnAdd.Invoke();
     }
 
