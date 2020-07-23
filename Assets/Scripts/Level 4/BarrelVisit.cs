@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BarrelVisit : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BarrelVisit : MonoBehaviour
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
+    public InformationCanvas _canvas;
+    private string BewareTheStorm;
     public GameObject BarrelEnd;
     public GameObject DrainPipe;
     public GameObject Particles;
@@ -26,6 +29,7 @@ public class BarrelVisit : MonoBehaviour
     void Start()
     {
         _interact = GetComponent<InteractWithObject>();
+        BewareTheStorm = "Storm is approaching, go to the shelter";
     }
 
     public void Interaction()
@@ -68,6 +72,7 @@ public class BarrelVisit : MonoBehaviour
         BarrelEnd.SetActive(true);
         Particles.SetActive(false);
         Storm.SetActive(true);
+        _canvas.ChangeText(BewareTheStorm);
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
