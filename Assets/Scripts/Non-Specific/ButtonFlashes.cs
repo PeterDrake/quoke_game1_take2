@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class ButtonFlashes : MonoBehaviour
 {
-    public Button.ButtonClickedEvent onClick;
-    public Button theButton;
+    //public Button.ButtonClickedEvent onClick;
+    //public Button theButton;
+    public Image theImage;
 
     public Color oneColor, otherColor;
     public float fadeSpeed;
@@ -15,14 +16,14 @@ public class ButtonFlashes : MonoBehaviour
    
     private void Start()
     {
-        initialColor = theButton.GetComponent<Image>().color;
+        initialColor = theImage.color;
         currentColor = initialColor;
         goalColor = oneColor;
     }
 
     private void Update()
     {
-        StartCoroutine(ButtonThrob());
+        //StartCoroutine(ButtonThrob());
     }
     /*
     public IEnumerator BlinkText()
@@ -45,14 +46,14 @@ public class ButtonFlashes : MonoBehaviour
             else if (currentColor == otherColor) { goalColor = oneColor; }
 
             currentColor = Color.Lerp(currentColor, goalColor, fadeSpeed);
-            theButton.GetComponent<Image>().color = currentColor;
+            theImage.color = currentColor;
             yield return new WaitForSeconds(1f);
         }
     }
 
-    public void KillIt()
+    public void StopIt()
     {
-        theButton.GetComponent<Image>().color = initialColor;
-        Destroy(this);
+        StopCoroutine(ButtonThrob());
+        theImage.color = initialColor;
     }
 }
