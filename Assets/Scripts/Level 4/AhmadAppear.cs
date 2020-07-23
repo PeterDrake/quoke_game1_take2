@@ -202,7 +202,7 @@ public class AhmadAppear : MonoBehaviour
     public void Kill()
     {
         interactText.ToggleVisibility(false);
-        _meshRenderer.material = mat_original;
+        //_meshRenderer.material = mat_original;
         Destroy(this);
         
        
