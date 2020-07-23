@@ -14,6 +14,7 @@ public class BarrelVisit : MonoBehaviour
     public GameObject BarrelEnd;
     public GameObject DrainPipe;
     public GameObject Particles;
+    public GameObject Storm;
 
     private GameObject canvi;
     private GameObject camera;
@@ -29,17 +30,10 @@ public class BarrelVisit : MonoBehaviour
 
     public void Interaction()
     {
-        //if ((Conditions ^ 0xF) == 0) // talked with Ahmad
-        //{
         SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
         Debug.Log("Hello");
         SceneManager.sceneLoaded += StartMinigame;
         _interact.enabled = false;
-        //}
-        //else
-        //{
-          //  _interact.SetInteractText("Go talk to Ahmad about water-collecting system");
-        //}
     }
 
     private void StartMinigame(Scene scn, LoadSceneMode lsm)
@@ -73,6 +67,7 @@ public class BarrelVisit : MonoBehaviour
         DrainPipe.SetActive(false);
         BarrelEnd.SetActive(true);
         Particles.SetActive(false);
+        Storm.SetActive(true);
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
