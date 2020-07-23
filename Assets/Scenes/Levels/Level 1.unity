@@ -13818,7 +13818,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1975988268}
     m_RemovedComponents:
     - {fileID: 3059642126853742594, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
     - {fileID: 3059642127616472547, guid: 54201a432732e3644b92dd53d5d1fef5, type: 3}
@@ -43984,6 +43984,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8340e8586e8556c4b82f331a034bae19, type: 3}
+--- !u!114 &1975988268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7459910031737987224, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 625580730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350946fb60f79b247b673ee335583f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976068437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
