@@ -144,6 +144,9 @@ public class SanitationBuilt : MonoBehaviour
         Spot.SetActive(false);
         //Destroy(gameObject);
         //Destroy(this);
+
+        Systems.Status.AffectRelief(100);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 
     public void MiniGameWon()

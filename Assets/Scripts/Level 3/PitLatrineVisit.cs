@@ -140,6 +140,9 @@ public class PitLatrineVisit : MonoBehaviour
         _interact.Kill();
         _canvas.ChangeText("Look for shelter");
 
+        Systems.Status.AffectRelief(100);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+
         //Place2.SetActive(false);
         UIManager.Instance.ToggleActive(theGUI);
         Destroy(Place1);

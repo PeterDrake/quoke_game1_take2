@@ -19,6 +19,6 @@ public class GiveItems : DialogueOutcome
             Systems.Inventory.AddItem(item, Amounts[i]);
             i++;
         }
-        
+        GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
     }
 }
