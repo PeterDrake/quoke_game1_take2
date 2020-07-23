@@ -22,14 +22,14 @@ public class MiniGameCheck : MonoBehaviour
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
             if (correctTag == "Bucket")
             {
-                if (!MasterCheck.PeeBucket) {
+                if (this.name == "Place1a") {
                     MasterCheck.PeeBucket = true;
                 }
-                else
+                else if (this.name == "Place1")
                 {
                     MasterCheck.PooBucket = true;
                 }
-                
+
             }
             if (correctTag == "PlasticBag")
             {
@@ -81,14 +81,17 @@ public void OnTriggerExit(Collider other)
    if (other.CompareTag(correctTag))
    {
        MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-       if (correctTag == "Bucket" && MasterCheck.PooBucket)
+       if (correctTag == "Bucket")
        {
-           MasterCheck.PooBucket = false;
-       }
-       if (correctTag == "Bucket" && MasterCheck.PeeBucket)
-       {
-           MasterCheck.PeeBucket = false;
-       }
+                if (this.name == "Place1a")
+                {
+                    MasterCheck.PeeBucket = false;
+                }
+                else if (this.name == "Place1")
+                {
+                    MasterCheck.PooBucket = false;
+                }
+            }
        if (correctTag == "PlasticBag")
        {
            MasterCheck.PlasticBag = false;
