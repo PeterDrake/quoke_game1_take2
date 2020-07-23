@@ -8,6 +8,10 @@ public class ButtonFlashes : MonoBehaviour
 {
     //public Button.ButtonClickedEvent onClick;
     //public Button theButton;
+
+    public bool startOnAwake;
+    public bool oneUseOnly;
+
     public Image theImage;
 
     public Color oneColor, otherColor;
@@ -23,7 +27,7 @@ public class ButtonFlashes : MonoBehaviour
 
     private void Update()
     {
-        //StartCoroutine(ButtonThrob());
+        if (startOnAwake) { StartCoroutine(ButtonThrob()); }
     }
     /*
     public IEnumerator BlinkText()
@@ -51,9 +55,15 @@ public class ButtonFlashes : MonoBehaviour
         }
     }
 
-    public void StopIt()
+    public void StopThrob()
     {
         StopCoroutine(ButtonThrob());
         theImage.color = initialColor;
+        if (oneUseOnly) { Destroy(this); }
+    }
+
+    public void StartThrob()
+    {
+        StartCoroutine(ButtonThrob());
     }
 }
