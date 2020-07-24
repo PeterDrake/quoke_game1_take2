@@ -24,7 +24,7 @@ public class AddTablet : ItemAction
                 current = current.Replace(", ", ", and ");
             }
             current = current.Replace(", clean water", "");
-            current = current.Replace(" clean water", "");
+            current = current.Replace(" clean water,", "");
             if (current == "Find ")
             {
                 Debug.Log("Complete list but more things");
