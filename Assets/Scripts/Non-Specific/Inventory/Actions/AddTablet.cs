@@ -26,17 +26,14 @@ public class AddTablet : ItemAction
             current = current.Replace(", clean water", "");
             current = current.Replace(" clean water,", "");
             current = current.Replace("Find and", "Find");
-            Debug.Log("FIND CHANGE");
             
             if (current == "Find ")
             {
-                Debug.Log("Complete list but more things");
                 _banner.ChangeText("Talk to survivors");
             }
             //things left on list to find
             else
             {
-                Debug.Log("Remaining of list");
                 _banner.ChangeText(current);
             }
         }
