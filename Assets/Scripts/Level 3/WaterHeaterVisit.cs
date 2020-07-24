@@ -11,6 +11,7 @@ public class WaterHeaterVisit : MonoBehaviour
 
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
+    private InformationCanvas _banner;
 
     public UIElement theGUI;
     public GameObject Spot;
@@ -100,7 +101,7 @@ public class WaterHeaterVisit : MonoBehaviour
         UIManager.Instance.ToggleActive(theGUI);
 
         GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
-
+        
         _interact.Kill();
 
         Spot.SetActive(false);

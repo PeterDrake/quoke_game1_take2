@@ -3,6 +3,8 @@
 [CreateAssetMenu(fileName = "New Bleach Action", menuName = "Items/Actions/Tablet")]
 public class AddTablet : ItemAction
 {
+    private InformationCanvas _banner;
+
     public override bool Use(ref Item i)
     {
         Item item;
@@ -12,6 +14,20 @@ public class AddTablet : ItemAction
             Systems.Inventory.RemoveItem(item, 1);
             Systems.Inventory.AddItem(Resources.Load<Item>("Items/CleanMustardWater"), 1);
             
+        }
+
+        _banner = GameObject.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
+        string current = _banner.info.text;
+        current = current.Replace(", and clean water", "");
+        current = current.Replace(" clean water", "");
+        if (current == "Find")
+        {
+            _banner.ChangeText("Talk to survivors");
+        }
+        else
+        {
+            _banner.ChangeText(current);
+
         }
 
         return false;
