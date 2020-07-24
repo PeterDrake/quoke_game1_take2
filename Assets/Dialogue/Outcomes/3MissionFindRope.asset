@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectiveName: MissionRope
   words: Find a rope
+  ItemToFind: {fileID: 11400000, guid: 8526991120fe41d4996fcb2e99aca9f4, type: 2}
   Find: 1
   Found: 0

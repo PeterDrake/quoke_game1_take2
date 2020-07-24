@@ -11,6 +11,7 @@ public class DialogueChangeBanner : DialogueOutcome
     private InformationCanvas _banner;
     private string current;
     public string words;
+    public Item ItemToFind;
     private string shorten;
     public bool Find;
     private bool find;
@@ -27,8 +28,9 @@ public class DialogueChangeBanner : DialogueOutcome
         shorten = words.Replace("Find ", "");
 
         //no repeats
-        if (current.Contains(words) || current.Contains(shorten))
+        if ((current.Contains(words) || current.Contains(shorten)) && Systems.Inventory.HasItem(ItemToFind,1))
         {
+            Debug.Log("Already have");
             find = false;
         }
 
@@ -52,37 +54,40 @@ public class DialogueChangeBanner : DialogueOutcome
             }
         }
 
-        else if (Found)
+        if (Found)
         {
             Debug.Log("Found item");
-            if (current.Contains(", and " + words))
-            {
-                current = current.Replace(", ", ", and ");
-                current = current.Replace(", and " + words, "");
-            }
-            current = current.Replace(", " + words, "");
+            if (Systems.Inventory.HasItem(ItemToFind,1)){
+                if (current.Contains(", and " + words))
+                {
+                    current = current.Replace(", ", ", and ");
+                    current = current.Replace(", and " + words, "");
+                }
+                current = current.Replace(", " + words, "");
+                current = current.Replace(words, "");
 
-            Debug.Log("updated current = " + current);
-            // found everything go to franks yard in L3
-            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/CleanMustardWater"), 1)
-                && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1)
-                && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
-            {
-                Debug.Log("Found alll things");
-                _banner.ChangeText("Find Frank's backyard");
-            }
+                Debug.Log("updated current = " + current);
+                // found everything go to franks yard in L3
+                if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/CleanMustardWater"), 1)
+                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1)
+                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+                {
+                    Debug.Log("Found alll things");
+                    _banner.ChangeText("Find Frank's backyard");
+                }
 
-            //found everything for now but more things to find
-            else if (current == "Find")
-            {
-                Debug.Log("Complete list but more things");
-                _banner.ChangeText("Talk to survivors");
-            }
-            //things left on list to find
-            else
-            {
-                Debug.Log("Remaining of list");
-                _banner.ChangeText(current);
+                //found everything for now but more things to find
+                else if (current == "Find")
+                {
+                    Debug.Log("Complete list but more things");
+                    _banner.ChangeText("Talk to survivors");
+                }
+                //things left on list to find
+                else
+                {
+                    Debug.Log("Remaining of list");
+                    _banner.ChangeText(current);
+                }
             }
         }
     }

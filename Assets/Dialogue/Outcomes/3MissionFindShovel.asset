@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectiveName: MissionShovel
   words: Find a shovel
+  ItemToFind: {fileID: 11400000, guid: 44c331833cd8840b2982ae51d6a4ec81, type: 2}
   Find: 1
   Found: 0

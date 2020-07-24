@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectiveName: FoundShovel
   words: a shovel
+  ItemToFind: {fileID: 0}
   Find: 0
   Found: 1
