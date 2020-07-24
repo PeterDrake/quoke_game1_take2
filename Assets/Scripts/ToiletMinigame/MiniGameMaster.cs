@@ -8,7 +8,9 @@ using UnityEngine.UI;
 public class MiniGameMaster : MonoBehaviour
 {
 
-    public bool Bucket;
+    public bool PeeBucket;
+
+    public bool PooBucket;
 
     public bool PlasticBag;
 
@@ -37,7 +39,7 @@ public class MiniGameMaster : MonoBehaviour
 
     public void CheckCorrect()
     {
-        if (Bucket && PlasticBag && Poop && ToiletPaper && Sawdust && Pee)
+        if (PeeBucket && PooBucket && PlasticBag && Poop && ToiletPaper && Sawdust && Pee)
         {
             Win.SetActive(true);
             GameObject.Find("Sanitation Spot").GetComponent<SanitationBuilt>().MiniGameWon();

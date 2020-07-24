@@ -1346,6 +1346,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809639605854326}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &169852733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6301557044649029805, guid: c9cd190dfc12c498da7654c7039f802b,
+    type: 3}
+  m_PrefabInstance: {fileID: 481829951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &169852738
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169852733}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6.1
+  m_Height: 22.5
+  m_Direction: 0
+  m_Center: {x: 1.88, y: 0.45, z: 0.03}
+--- !u!114 &169852739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 169852733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 1
+  itemToReceive: []
+  InteractionDisplayText: Press 'E' to use buckets
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 51560418}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
 --- !u!1 &172627993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -8809,6 +8864,11 @@ PrefabInstance:
       propertyPath: TriggerCollider
       value: 
       objectReference: {fileID: 601265817}
+    - target: {fileID: 6301557045542398762, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557045542398764, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: InteractionDisplayText
@@ -8893,6 +8953,41 @@ PrefabInstance:
         type: 3}
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891076, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: BlinkWhenPlayerNear
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Height
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6304079448651278719, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
@@ -9016,6 +9111,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809641323177432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &511639409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6301557045733509772, guid: c9cd190dfc12c498da7654c7039f802b,
+    type: 3}
+  m_PrefabInstance: {fileID: 481829951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &511639414
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511639409}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 6.16
+  m_Height: 24.01
+  m_Direction: 0
+  m_Center: {x: -2.05, y: 0.72, z: -0.12}
+--- !u!114 &511639415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511639409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 1
+  itemToReceive: []
+  InteractionDisplayText: Press 'E' to use buckets
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 51560418}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
 --- !u!1 &514289221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -16828,6 +16978,61 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809640717607966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1587237842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6300664114306445083, guid: c9cd190dfc12c498da7654c7039f802b,
+    type: 3}
+  m_PrefabInstance: {fileID: 481829951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1587237844
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587237842}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.5
+  m_Height: 5.5
+  m_Direction: 0
+  m_Center: {x: 0.47, y: 0, z: 0}
+--- !u!114 &1587237845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587237842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlinkWhenPlayerNear: 1
+  itemToReceive: []
+  InteractionDisplayText: Press 'E' to use buckets
+  interactText: {fileID: 0}
+  CallOnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 51560418}
+        m_MethodName: Interaction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CallOnEnterCollider:
+    m_PersistentCalls:
+      m_Calls: []
+  killAfterUse: 0
+  DestoryObjectAfterUse: 0
 --- !u!1 &1587241096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1498271329356510, guid: a7cb3f7261bea2243966cbe7bfa916ec,
