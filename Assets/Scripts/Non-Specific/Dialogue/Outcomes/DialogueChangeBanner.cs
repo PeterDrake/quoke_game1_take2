@@ -28,11 +28,14 @@ public class DialogueChangeBanner : DialogueOutcome
         shorten = words.Replace("Find ", "");
 
         //no repeats
-        if (current.Contains(shorten) || Systems.Inventory.HasItem(ItemToFind,1))
-        {
+        if (current.Contains(shorten) || (ItemToFind != null && Systems.Inventory.HasItem(ItemToFind, 1)))
+        { 
             Debug.Log("Already have");
             find = false;
+            
         }
+
+       
 
 
         //for any find task
@@ -59,11 +62,13 @@ public class DialogueChangeBanner : DialogueOutcome
             Debug.Log("Found item");
                 if (current.Contains(", and " + shorten))
                 {
-                    current = current.Replace(", ", ", and ");
-                    current = current.Replace(", and " + shorten, "");
+                current = current.Replace(", and " + shorten, "");
+                current = current.Replace(", ", ", and ");
+                    
                 }
                 current = current.Replace(", " + shorten, "");
                 current = current.Replace(shorten, "");
+                current = current.Replace(" ,", "");
 
                 Debug.Log("updated current = " + current);
                 // found everything go to franks yard in L3
@@ -87,7 +92,6 @@ public class DialogueChangeBanner : DialogueOutcome
                     Debug.Log("Remaining of list");
                     _banner.ChangeText(current);
                 }
-            
         }
     }
 }
