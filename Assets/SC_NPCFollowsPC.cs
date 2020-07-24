@@ -22,6 +22,7 @@ public class SC_NPCFollowsPC : MonoBehaviour
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         animator.SetBool("isWalking", false);
+        animator.SetBool("isRunning", false);
     }
 
     // Update is called once per frame
