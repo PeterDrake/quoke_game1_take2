@@ -12,6 +12,7 @@ public class GasShutDown : MonoBehaviour
     private InventoryHelper _inventory;
 
     public UIElement theGUI;
+    public GameObject countdown;
     
     private Item Wrench;
     
@@ -40,6 +41,7 @@ public class GasShutDown : MonoBehaviour
     {
         if ((Conditions ^ 0x1) == 0)
         {
+            countdown.GetComponent<CountdownBoom>().StopGasCount();
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
