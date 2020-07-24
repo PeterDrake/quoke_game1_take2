@@ -28,7 +28,7 @@ public class DialogueChangeBanner : DialogueOutcome
         shorten = words.Replace("Find ", "");
 
         //no repeats
-        if ((current.Contains(words) || current.Contains(shorten)) && Systems.Inventory.HasItem(ItemToFind,1))
+        if (current.Contains(shorten) || Systems.Inventory.HasItem(ItemToFind,1))
         {
             Debug.Log("Already have");
             find = false;
@@ -58,13 +58,13 @@ public class DialogueChangeBanner : DialogueOutcome
         {
             Debug.Log("Found item");
             if (Systems.Inventory.HasItem(ItemToFind,1)){
-                if (current.Contains(", and " + words))
+                if (current.Contains(", and " + shorten))
                 {
                     current = current.Replace(", ", ", and ");
-                    current = current.Replace(", and " + words, "");
+                    current = current.Replace(", and " + shorten, "");
                 }
-                current = current.Replace(", " + words, "");
-                current = current.Replace(words, "");
+                current = current.Replace(", " + shorten, "");
+                current = current.Replace(shorten, "");
 
                 Debug.Log("updated current = " + current);
                 // found everything go to franks yard in L3
