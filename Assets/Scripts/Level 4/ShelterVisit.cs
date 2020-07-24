@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Specialized;
+using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
@@ -6,7 +7,11 @@ using UnityEngine.Events;
 /// </summary>
 public class ShelterVisit : MonoBehaviour
 {
-    public GameObject rain;
+    public GameObject Rain;
+    public GameObject Wheelchair;
+    public GameObject Maria;
+    public GameObject Ahmad;
+    
 
     //-----Material Blinking-------
     public bool BlinkWhenPlayerNear = true;
@@ -192,6 +197,9 @@ public class ShelterVisit : MonoBehaviour
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;
         Destroy(this);
-        rain.SetActive(false);
+        Rain.SetActive(false);
+        Maria.transform.position = new Vector3(-213, 0, -260);
+        Wheelchair.transform.position = new Vector3(-213, 0, -260);
+        Ahmad.transform.position = new Vector3(-213, 0, -255);
     }
 }
