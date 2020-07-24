@@ -69,8 +69,10 @@ public class DialogueChangeBanner : DialogueOutcome
                 current = current.Replace(", " + shorten, "");
                 current = current.Replace(shorten, "");
                 current = current.Replace(" ,", "");
+            current = current.Replace("Find and", "Find");
+            Debug.Log("FIND CHANGE");
 
-                Debug.Log("updated current = " + current);
+            Debug.Log("updated current = " + current);
                 // found everything go to franks yard in L3
                 if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/CleanMustardWater"), 1)
                     && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1)
