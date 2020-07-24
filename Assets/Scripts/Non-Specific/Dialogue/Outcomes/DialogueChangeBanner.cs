@@ -57,7 +57,6 @@ public class DialogueChangeBanner : DialogueOutcome
         if (Found)
         {
             Debug.Log("Found item");
-            if (Systems.Inventory.HasItem(ItemToFind,1)){
                 if (current.Contains(", and " + shorten))
                 {
                     current = current.Replace(", ", ", and ");
@@ -88,7 +87,7 @@ public class DialogueChangeBanner : DialogueOutcome
                     Debug.Log("Remaining of list");
                     _banner.ChangeText(current);
                 }
-            }
+            
         }
     }
 }
