@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Zelda Win Scene 1
   m_EditorClassIdentifier: 
   speech: Of course, it's not safe to sleep in these buildings. I almost got flattened
-    in that last aftershock! And sleeping outside isn't any better. I'll see you
-    inside.
+    in that last aftershock! And sleeping out in the rain isn't much better. I'll
+    see you inside.
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
