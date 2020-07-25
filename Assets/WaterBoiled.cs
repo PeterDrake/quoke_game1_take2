@@ -24,6 +24,8 @@ public class WaterBoiled : MonoBehaviour
         Fire.SetActive(false);
         yield return new WaitForSeconds(2f);
         Fire2.SetActive(false);
+        yield return new WaitForSeconds(15f);
+        Steam.SetActive(false);
     }
     
 }
