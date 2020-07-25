@@ -13263,6 +13263,16 @@ PrefabInstance:
       propertyPath: OtherMusic
       value: 
       objectReference: {fileID: 1007425404}
+    - target: {fileID: 1927390106342866345, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612862533820382130, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2670812267324475007, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Color.a
@@ -13282,6 +13292,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InventoryFlash
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713697135602387739, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033453417460997299, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3059642126853742594, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -13395,6 +13415,11 @@ PrefabInstance:
     - target: {fileID: 4204111618279679886, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219644073534856879, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4565862198637770835, guid: 54201a432732e3644b92dd53d5d1fef5,
