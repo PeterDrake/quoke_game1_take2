@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Frank Toilet 2
   m_EditorClassIdentifier: 
-  speech: 'I''ve got a yard. I was about to put in a new deck so they''ve already
-    marked where the utility lines are. '
+  speech: There might be utility lines buried there. You can use my back yard instead.
   optionOneText: Nice. I can use Zelda's shovel to dig a hole.
   optionOne: {fileID: 11400000, guid: f925ae0d7a9ad41ff80b1599dc3fd5b1, type: 2}
   optionTwoText: 
