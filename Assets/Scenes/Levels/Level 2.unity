@@ -1679,6 +1679,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499350134894848834, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 499350134894848846, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_SortingOrder
@@ -1824,6 +1829,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3262251361304920454, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3510980183834463910, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_SortingOrder
@@ -1902,12 +1912,12 @@ PrefabInstance:
     - target: {fileID: 4751435931170921139, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6145218305864118518, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6225663469846101385, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -1967,7 +1977,7 @@ PrefabInstance:
     - target: {fileID: 6455381914281399892, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6455381914281399893, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -2142,7 +2152,7 @@ PrefabInstance:
     - target: {fileID: 8077493130667667357, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8077493131708281816, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -11776,7 +11786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &967837062
 RectTransform:
   m_ObjectHideFlags: 0
