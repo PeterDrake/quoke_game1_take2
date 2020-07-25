@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 3FoundRope
   m_EditorClassIdentifier: 
   ObjectiveName: FoundRope
-  words: 'clean water '
+  words: a rope
+  ItemToFind: {fileID: 0}
   Find: 0
   Found: 1
