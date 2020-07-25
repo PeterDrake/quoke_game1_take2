@@ -63,6 +63,7 @@ public class CountdownBoom : MonoBehaviour
 
     public void StopGasCount()
     {
-        StopCoroutine(GasCountdown(_timeTillBoom));
+        StopCoroutine("GasCountdown");
+        print("stopped");
     }
 }
