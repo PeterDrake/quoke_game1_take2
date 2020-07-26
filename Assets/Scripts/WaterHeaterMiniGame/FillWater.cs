@@ -8,13 +8,21 @@ public class FillWater : MonoBehaviour
 {
     public WaterHeaterMaster Master;
     public Image water;
+    private LogToServer logger;
 
     public void pourWater()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         water.fillAmount += .2f;
+        Debug.Log("Filled water");
+        logger.sendToLog("Filled water");
         if (water.fillAmount >= 1f)
         {
-            Master.StopAllCoroutines();
+            //Master.StopAllCoroutines();
+            Master.StopCoroutine(Master.TryAgain());
+            Master.StopCoroutine(Master.BlinkText());
+            Debug.Log("Won Water Heater minigame");
+            logger.sendToLog("Won Water heater minigame");
             Master.Win.SetActive(true);
             GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
 

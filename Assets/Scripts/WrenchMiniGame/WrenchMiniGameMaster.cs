@@ -3,7 +3,9 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class WrenchMiniGameMaster : MonoBehaviour
 {
@@ -19,7 +21,10 @@ public class WrenchMiniGameMaster : MonoBehaviour
     {
         if (Turned)
         {
-            Debug.Log("Congratz, you have won!");
+            //Debug.Log("Congratz, you have won!");
+            //Debug.Log("Won Gas mini game");
+            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+            logger.sendToLog("Won gas minigame");
             WinScreen.SetActive(true);
 
            // SceneManager.LoadScene("Level 1", LoadSceneMode.Single);

@@ -9,7 +9,7 @@ public class LogPlayerLoad : MonoBehaviour
     void Start()
     {
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Began " + SceneManager.GetActiveScene().name);
+        logger.sendToLog("Loaded " + SceneManager.GetActiveScene().name);
     }
 
     // Update is called once per frame
