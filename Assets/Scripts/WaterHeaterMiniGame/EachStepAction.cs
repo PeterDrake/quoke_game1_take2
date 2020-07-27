@@ -18,10 +18,11 @@ public class EachStepAction : MonoBehaviour
 
     public GameObject rawimage;
 
-    private LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+    private LogToServer logger;
 
     private void Awake()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         check.SetActive(false);
         PIP.SetActive(false);
         rawimage.SetActive(false);

@@ -22,10 +22,11 @@ public class MoveOtherShovel : MonoBehaviour
     public GameObject Depth4;
     public GameObject Depth5;
 
-    private LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+    private LogToServer logger;
     public static int digCount = 0;
     public void Dig()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         digCount++;
         Debug.Log("Dug - hole depth " + digCount);
         StartCoroutine(nameof(DigVertically));
