@@ -13,8 +13,12 @@ public class MoveShovel : MonoBehaviour
     public GameObject Dirt3;    //Dirt on the shovel
     public GameObject Water;
 
+    private int digtimes = 0;
+
     public void Dig()
     {
+        digtimes++;
+        Debug.Log("Dug - hole depth " + digtimes);
         StartCoroutine(nameof(DigVertically));
     }
     

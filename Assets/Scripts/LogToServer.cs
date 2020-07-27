@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class LogToServer : MonoBehaviour
+public class LogToServer : Singleton<LogToServer>
 {
     
     private String message = "Message for log";
@@ -46,5 +46,6 @@ public class LogToServer : MonoBehaviour
         {
             Debug.Log("Logged successfully");
         }
+        
     }
 }

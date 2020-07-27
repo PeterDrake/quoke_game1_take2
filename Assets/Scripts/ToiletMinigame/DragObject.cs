@@ -7,7 +7,7 @@ public class DragObject : MonoBehaviour
 {
     private Vector3 mOffset;
 
-
+    private String lastCollison = "mouse released with no placements";
 
     private float mZCoord;
 
@@ -28,9 +28,6 @@ public class DragObject : MonoBehaviour
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
 
     }
-
-
-
     private Vector3 GetMouseAsWorldPoint()
 
     {

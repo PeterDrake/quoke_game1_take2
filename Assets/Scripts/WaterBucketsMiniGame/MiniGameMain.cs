@@ -17,9 +17,13 @@ public class MiniGameMain : MonoBehaviour
     public UnityAction OnWin;
 
     public UnityAction OnExit;
+    
+    private LogToServer logger;
 
     public void Start()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Began water barrel minigame");
         //OnWin= new UnityAction();
     }
 
@@ -27,6 +31,7 @@ public class MiniGameMain : MonoBehaviour
     {
         if (Barrel)
         {
+            logger.sendToLog("Won water barrel minigame");
             Win.SetActive(true);
         }
         else
@@ -42,6 +47,7 @@ public class MiniGameMain : MonoBehaviour
 
     public IEnumerator TryAgain()
     {
+        logger.sendToLog("Wrong answer try again");
         Wrong.SetActive(true);
         yield return new WaitForSeconds(3f);
         Wrong.SetActive(false);
