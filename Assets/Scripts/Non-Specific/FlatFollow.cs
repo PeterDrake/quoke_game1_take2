@@ -5,6 +5,8 @@ using UnityEngine;
 public class FlatFollow : MonoBehaviour
 {
     public GameObject following;
+    [Header("Height of camera: 13.5, Height of Chars: 1.7")]
+    public float height;
     public bool mobile;
 
     private Transform location;
@@ -15,7 +17,7 @@ public class FlatFollow : MonoBehaviour
     {
         location = GetComponent<Transform>();
         location.transform.position = new Vector3
-            (following.transform.position.x, 14, following.transform.position.z);
+            (following.transform.position.x, height, following.transform.position.z);
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class FlatFollow : MonoBehaviour
         while (true)
         {
             location.transform.position = new Vector3
-                (following.transform.position.x, 14, following.transform.position.z);
+                (following.transform.position.x, height, following.transform.position.z);
             yield return new WaitForSeconds(0.01f);
         }
     }
