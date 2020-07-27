@@ -9,11 +9,13 @@ using UnityEngine.Events;
 public class ShelterVisit : MonoBehaviour
 {
     public GameObject Rain;
+    public GameObject BarrelWithoutWater;
+    public GameObject BarrelWithWater;
     public GameObject Zelda;
     public GameObject Wheelchair;
     public GameObject Maria;
     public GameObject Ahmad;
-    
+
 
     //-----Material Blinking-------
     public bool BlinkWhenPlayerNear = true;
@@ -200,6 +202,8 @@ public class ShelterVisit : MonoBehaviour
         _meshRenderer.material = mat_original;
         Destroy(this);
         Rain.SetActive(false);
+        BarrelWithoutWater.SetActive(false);
+        BarrelWithWater.SetActive(true);
         Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x,Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
         Maria.transform.position = new Vector3(-213, 0, -260);
         Wheelchair.transform.position = new Vector3(-213, 0, -260);
