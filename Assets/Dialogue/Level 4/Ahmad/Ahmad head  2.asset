@@ -23,7 +23,8 @@ MonoBehaviour:
   NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: 438e598987ebb22439a909e3cb571d9b, type: 2}
-  optionOneTextAlt: Have you set up the barrel yet?
+  - {fileID: 11400000, guid: 049ac7c826df6e84091c4e45620950be, type: 2}
+  optionOneTextAlt: 
   optionOneAlt: {fileID: 0}
   IfRequirementsTwo: []
   optionTwoTextAlt: 

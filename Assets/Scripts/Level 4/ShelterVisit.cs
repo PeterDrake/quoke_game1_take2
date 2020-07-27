@@ -204,6 +204,7 @@ public class ShelterVisit : MonoBehaviour
         _meshRenderer.material = mat_original;
         Destroy(this);
         Rain.SetActive(false);
+        Systems.Objectives.Satisfy("RAINSTORM");
         BarrelWithoutWater.SetActive(false);
         BarrelWithWater.SetActive(true);
         Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x,Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
