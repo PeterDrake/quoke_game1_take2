@@ -6,7 +6,7 @@ using UnityEngine.Events;
 /// </summary>
 public class AhmadAppear : MonoBehaviour
 {
-
+    public GameObject WaterBoil;
     public GameObject Ahmad;
     public GameObject DoorDisable;
     //-----Material Blinking-------
@@ -53,6 +53,7 @@ public class AhmadAppear : MonoBehaviour
         //Destroy(Ahmad);
         Ahmad.SetActive(false);
         DoorDisable.SetActive(false);
+        WaterBoil.SetActive(false);
         hasItem = (itemToReceive != null);
         if (hasItem && itemToReceive.Length > 0)
         {
