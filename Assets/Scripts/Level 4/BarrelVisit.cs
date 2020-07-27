@@ -78,7 +78,7 @@ public class BarrelVisit : MonoBehaviour
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
-        Systems.Objectives.Satisfy("BarrelReady");
+        Systems.Objectives.Satisfy("BARRELSETUP");
         camera.SetActive(true);
         vcam.SetActive(true);
         canvi.SetActive(true);
