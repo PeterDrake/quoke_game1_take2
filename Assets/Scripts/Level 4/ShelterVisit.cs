@@ -15,7 +15,7 @@ public class ShelterVisit : MonoBehaviour
     public GameObject Wheelchair;
     public GameObject Maria;
     public GameObject Ahmad;
-    public GameObject Wood;
+    public GameObject WaterBoil;
 
 
     //-----Material Blinking-------
@@ -72,7 +72,7 @@ public class ShelterVisit : MonoBehaviour
                 }
             }
         }
-        Wood.SetActive(false);
+        WaterBoil.SetActive(false);
     }
 
 
@@ -210,6 +210,6 @@ public class ShelterVisit : MonoBehaviour
         Maria.transform.position = new Vector3(-213, 0, -260);
         Wheelchair.transform.position = new Vector3(-213, 0, -260);
         Ahmad.transform.position = new Vector3(-213, 0, -255);
-        Wood.SetActive(true);
+        WaterBoil.SetActive(true);
     }
 }
