@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class WaterHeaterVisit : MonoBehaviour
 {
+
+    public InformationCanvas _canvas;
+    public string words;
     private const string MiniGameSceneName = "WaterHeaterMiniGame";
 
 
@@ -104,6 +107,7 @@ public class WaterHeaterVisit : MonoBehaviour
         _interact.Kill();
 
         Spot.SetActive(false);
+        _canvas.ChangeText(words);
 
         //Destroy(gameObject);
         //Destroy(this);
