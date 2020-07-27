@@ -9,6 +9,7 @@ public class WaterHeaterMaster : MonoBehaviour
     public GameObject Win;
     //public GameObject WinSound;
     public GameObject Wrong;
+    public GameObject Canvas;
 
     public UnityAction OnWin;
     public UnityAction OnExit;
