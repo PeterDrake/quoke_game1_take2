@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class EachStepAction : MonoBehaviour
 {
@@ -16,9 +18,11 @@ public class EachStepAction : MonoBehaviour
 
     public GameObject rawimage;
 
+    private LogToServer logger;
 
     private void Awake()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         check.SetActive(false);
         PIP.SetActive(false);
         rawimage.SetActive(false);
@@ -30,29 +34,37 @@ public class EachStepAction : MonoBehaviour
         {
             if (current.tag == "ElectricBox")
             {
+                Debug.Log("Electric Box selected");
+                logger.sendToLog("Electrical Box selected");
                 GameObject.Find("Flip").AddComponent<KnobRotating>();
                 Master.stepOne = true;
 
             }
             else if (current.tag == "WaterPipe")
             {
+                Debug.Log("Water Pipe selected");
+                logger.sendToLog("Water pipe selected");
                 GameObject.Find("Turn").AddComponent<KnobRotating>();
                 Master.stepTwo = true;
 
             }
             else if (current.tag == "AirPipe")
             {
+                Debug.Log("Air Pipe Selected");
+                logger.sendToLog("Air pipe selected");
                 GameObject.Find("Lever").AddComponent<KnobRotating>();
                 Master.stepThree = true;
 
             }
             else if (current.tag == "WaterSpout")
             {
+                Debug.Log("Water spout selected");
+                logger.sendToLog("Water spout selected");
                 GameObject.Find("Water").AddComponent<KnobRotating>();
                 Master.stepFour = true;
 
             }
-            Debug.Log("CHECKED OFF " + current.tag);
+            //.Log("CHECKED OFF " + current.tag);
             check.SetActive(true);
             PIP.SetActive(true);
             rawimage.SetActive(true);
@@ -65,7 +77,9 @@ public class EachStepAction : MonoBehaviour
             //Master.TryAgain();
            
             Master.resetSteps();
-            Debug.Log("Wrong Step");
+            Debug.Log("Wrong step - Steps reset");
+            logger.sendToLog("Wrong step - steps reset");
+            //Debug.Log("Wrong Step");
             
         }
 

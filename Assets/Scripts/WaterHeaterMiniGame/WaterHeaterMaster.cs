@@ -41,9 +41,11 @@ public class WaterHeaterMaster : MonoBehaviour
     public GameObject RawImage2;
     public GameObject RawImage3;
 
+    private LogToServer logger;
 
     private void Start()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         stepOne = false;
         stepTwo = false;
         stepThree = false;
@@ -74,7 +76,7 @@ public class WaterHeaterMaster : MonoBehaviour
         || (tag == "AirPipe" && stepOne && stepTwo && !stepThree && !stepFour)
         || (tag == "WaterSpout" && stepOne && stepTwo && stepThree && !stepFour))
         {
-            Debug.Log("Good step");
+            //Debug.Log("Good step");
             return 1;
         }
         //same step thats already check
@@ -162,6 +164,7 @@ public class WaterHeaterMaster : MonoBehaviour
         RawImage2.SetActive(false);
         RawImage3.SetActive(false);
         Debug.Log("try again message");
+        logger.sendToLog("try again message");
         Wrong.SetActive(true);
         yield return new WaitForSeconds(2f);
         Wrong.SetActive(false);

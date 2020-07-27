@@ -2619,6 +2619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 657822481}
   - component: {fileID: 657822480}
+  - component: {fileID: 657822482}
   m_Layer: 0
   m_Name: MinigameMaster
   m_TagString: Untagged
@@ -2638,14 +2639,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83df5cdeb9c3c46a09ca24cc84e2c0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bucket: 0
+  PeeBucket: 0
+  PooBucket: 0
   PlasticBag: 0
   Poop: 0
   ToiletPaper: 0
   Sawdust: 0
   Pee: 0
   Win: {fileID: 1799654294}
-  WinSound: {fileID: 1362102842}
   Wrong: {fileID: 562683447}
 --- !u!4 &657822481
 Transform:
@@ -2661,6 +2662,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &657822482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657822479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b594a4d426e747c7a7de66587bc87dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &667321931
 GameObject:
   m_ObjectHideFlags: 0
@@ -8865,6 +8878,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939960047}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1978113180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1978113182}
+  - component: {fileID: 1978113181}
+  m_Layer: 0
+  m_Name: Logger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1978113181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978113180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046ce6cd882f141aab95b93d309e303b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1978113182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978113180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.90994, y: 1.9143517, z: -142.63196}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2000146547
 GameObject:
   m_ObjectHideFlags: 0
