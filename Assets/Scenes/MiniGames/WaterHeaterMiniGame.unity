@@ -8480,6 +8480,16 @@ PrefabInstance:
       propertyPath: m_Text
       value: Continue Level 3
       objectReference: {fileID: 0}
+    - target: {fileID: 92950292220141356, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 367340604}
+    - target: {fileID: 92950292220141356, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: WinLeave
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e37edaea2b7e049849a9b87dbe36dc9e, type: 3}
 --- !u!1 &1946443414
