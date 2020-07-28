@@ -48,7 +48,7 @@ public class StartMiniGame : MonoBehaviour
 
 	private void AttachWrench()
 	{
-		logger.sendToLog("Wrench attatched");
+		logger.sendToLog("Wrench attached");
 		flange.GetComponent<CollisionCallback>().RemoveCallback(wrench.tag);
 		Destroy(wrench);
 		flange.transform.GetChild(0).gameObject.SetActive(true);
@@ -60,6 +60,7 @@ public class StartMiniGame : MonoBehaviour
 	{
 		if (!started)
 		{
+			logger.sendToLog("Wrench created");
 			started = true;
 			wrench = CreateWrench();
 			flange.GetComponent<CollisionCallback>().AddCallback(wrench.tag, AttachWrench);

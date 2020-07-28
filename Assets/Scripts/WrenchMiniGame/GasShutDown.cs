@@ -31,7 +31,6 @@ public class GasShutDown : MonoBehaviour
     void Start()
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Began gas minigame");
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
         
@@ -44,6 +43,7 @@ public class GasShutDown : MonoBehaviour
     {
         if ((Conditions ^ 0x1) == 0)
         {
+            logger.sendToLog("Started gas mini game");
             countdown.GetComponent<CountdownBoom>().StopGasCount();
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
