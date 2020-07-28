@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   following: {fileID: 0}
-  height: 14
+  height: 14.1
   mobile: 1
   startReal: 1
 --- !u!1 &2786121349391274274
