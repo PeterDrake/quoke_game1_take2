@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2809792503861136830}
   - component: {fileID: 5686100056881571483}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: NPCAlert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,3 +128,4 @@ MonoBehaviour:
   following: {fileID: 0}
   height: 4
   mobile: 0
+  startReal: 0
