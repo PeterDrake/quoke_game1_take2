@@ -136,6 +136,7 @@ public class PitLatrineVisit : MonoBehaviour
         latrineMusic.SetActive(false);
 
         _inventory.RemoveItem(Rope, 1);
+        _inventory.RemoveItem(Shovel, 1);
         
         _interact.Kill();
         _canvas.ChangeText("Find shelter");

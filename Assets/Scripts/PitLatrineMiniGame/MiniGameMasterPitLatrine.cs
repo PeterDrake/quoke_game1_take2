@@ -18,6 +18,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public UnityAction OnWin;
     public UnityAction OnExit;
     public GameObject Win;
+    public GameObject canvi;
     private bool haveWon;
 
     public GameObject S1Folder;
@@ -200,6 +201,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         Debug.Log("Won Pit Latrine Minigame");
         GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
         WinScreen.SetActive(true);
+        canvi.SetActive(false);
         haveWon = true;
         
     }

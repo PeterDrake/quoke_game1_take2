@@ -24,6 +24,7 @@ public class FillWater : MonoBehaviour
             Debug.Log("Won Water Heater minigame");
             logger.sendToLog("Won Water heater minigame");
             Master.Win.SetActive(true);
+            Master.Canvas.SetActive(false);
             GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
 
             /*
