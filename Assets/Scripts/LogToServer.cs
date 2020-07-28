@@ -4,16 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class LogToServer : MonoBehaviour
+public class LogToServer : Singleton<LogToServer>
 {
     
     private String message = "Message for log";
     private String postURL = "/dbenter.php";
+
+    public string loggername;
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     void Start()
     {
-        Debug.Log("Logging enabled");
+        Debug.Log("Logger started: " + loggername);
     }
 
     // Update is called once per frame
@@ -26,7 +33,7 @@ public class LogToServer : MonoBehaviour
 
     IEnumerator PostRequest(String message)
     {
-        Debug.Log("Sending post request");
+        Debug.Log("Sending post request using logger: " + loggername);
         List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
         wwwForm.Add(new MultipartFormDataSection("message", message));
         
@@ -46,5 +53,7 @@ public class LogToServer : MonoBehaviour
         {
             Debug.Log("Logged successfully");
         }
+        
     }
+    
 }

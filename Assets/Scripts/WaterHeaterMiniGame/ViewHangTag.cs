@@ -9,18 +9,22 @@ public class ViewHangTag : MonoBehaviour
     public Button Close;
 
     private bool isOpen;
+    private LogToServer logger;
 
     private void Start()
     {
         //Hangtag.SetActive(false);
         //isOpen = false;
         //Debug.Log("Begin : is open = " + isOpen);
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
 
     public void OnMouseDown()
     {
             //isOpen = true;
             Hangtag.SetActive(true);
+            Debug.Log("Opened pamphlet");
+            logger.sendToLog("Opened pamphlet");
             //Debug.Log("is open should be true = " + isOpen);
 
     }
@@ -28,6 +32,8 @@ public class ViewHangTag : MonoBehaviour
     public void closeHangTag()
     {
             //isOpen = false;
+            Debug.Log("Closed pamphlet");
+            logger.sendToLog("Closed pamphlet");
             Hangtag.SetActive(false);
             //Debug.Log("isOpen is now false = " + isOpen);
     }

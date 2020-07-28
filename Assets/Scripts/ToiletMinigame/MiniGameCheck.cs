@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 using Image = UnityEngine.UIElements.Image;
 
 public class MiniGameCheck : MonoBehaviour
@@ -13,11 +15,27 @@ public class MiniGameCheck : MonoBehaviour
     private MiniGameMaster MasterCheck;
 
     public Button theButton;
-    
+
+    private String lastCollision = "mouse released with no placements";
+
+    private bool lastMouseState = false;
+
+
+    public void OnMouseOver()
+    {
+        if((!Input.GetMouseButton(0)) && lastMouseState)
+        {
+            Debug.Log(lastCollision);
+        }
+
+        lastMouseState = Input.GetMouseButton(0);
+    }
     public void OnTriggerEnter(Collider other)
     {
+        lastCollision = other.tag + " put in " + correctTag + " box";
         if (other.CompareTag(correctTag))
         {
+            
             //Debug.Log(correctTag +" is correct");
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
             if (correctTag == "Bucket")
