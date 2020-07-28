@@ -13536,6 +13536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryFlash
       objectReference: {fileID: 0}
+    - target: {fileID: 2756116372017425633, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3059642126853742594, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: status

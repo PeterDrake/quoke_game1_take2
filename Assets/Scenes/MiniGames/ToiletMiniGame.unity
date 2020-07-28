@@ -8285,12 +8285,21 @@ PrefabInstance:
     - target: {fileID: 92950291007582434, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_Text
-      value: "Best\nTwo-Bucket System \non the block"
+      value: 'Best
+
+        Two-Bucket System
+
+        On The Block'
       objectReference: {fileID: 0}
     - target: {fileID: 92950291007582437, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 92950291007582437, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 92950291177014133, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
@@ -8300,7 +8309,7 @@ PrefabInstance:
     - target: {fileID: 92950291177014133, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 92950291177014142, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
@@ -8412,11 +8421,26 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 92950291545072988, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_Name
+      value: HeadTitle
+      objectReference: {fileID: 0}
     - target: {fileID: 92950292220141356, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 657822480}
+    - target: {fileID: 264152409368049478, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_Name
+      value: Award
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543697263040489893, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_Name
+      value: Complete
+      objectReference: {fileID: 0}
     - target: {fileID: 3999220469190934013, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_AnchoredPosition.y

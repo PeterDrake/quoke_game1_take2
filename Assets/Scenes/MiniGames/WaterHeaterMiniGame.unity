@@ -7167,7 +7167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1737651892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8346,9 +8346,19 @@ PrefabInstance:
     - target: {fileID: 92950291007582434, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_Text
-      value: 'Level 3
+      value: 'Best
 
-        Badge'
+        H2Obtainer'
+      objectReference: {fileID: 0}
+    - target: {fileID: 92950291007582434, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 92950291007582437, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 92950291177014133, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
@@ -8358,7 +8368,7 @@ PrefabInstance:
     - target: {fileID: 92950291177014133, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 92950291177014142, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
@@ -8489,6 +8499,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: WinLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616936813269130555, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_Text
+      value: Minigame Completed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e37edaea2b7e049849a9b87dbe36dc9e, type: 3}
