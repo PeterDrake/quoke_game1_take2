@@ -43,6 +43,7 @@ public class WaterHeaterVisit : MonoBehaviour
     {
         if (_inventory.HasItem(MustardWater, 1))
         {
+            GameObject.Find("WaterPointer").GetComponent<FlatFollow>().disappear();
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;

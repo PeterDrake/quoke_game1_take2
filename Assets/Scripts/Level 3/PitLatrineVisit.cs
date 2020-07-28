@@ -50,6 +50,8 @@ public class PitLatrineVisit : MonoBehaviour
     {
         if (_inventory.HasItem(Shovel, 1) && _inventory.HasItem(Rope, 1))
         {
+            GameObject.Find("LatrineLowPointer").GetComponent<FlatFollow>().disappear();
+            if (SituationNumber == 2) { GameObject.Find("LatrineHighPointer").GetComponent<FlatFollow>().disappear(); }
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
