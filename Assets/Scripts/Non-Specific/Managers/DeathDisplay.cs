@@ -18,6 +18,7 @@ public class DeathDisplay : UIElement
     public AudioSource DeathMusic;
     public GameObject DMusic;
     public GameObject OtherMusic;
+    public int level;
 
     private bool dead;
    
@@ -36,6 +37,27 @@ public class DeathDisplay : UIElement
 
     public void Activate(string text)
     {
+        if (level == 1)
+        {
+            SavedData.levelOneDeath++;
+        }
+        else if (level == 2)
+        {
+            SavedData.levelTwoDeath++;
+        }
+        else if (level == 3)
+        {
+            SavedData.levelThreeDeath++;
+        }
+        else if (level == 4)
+        {
+            SavedData.levelFourDeath++;
+        }
+        print("Level 1 Deaths = " + SavedData.levelOneDeath);
+        print("Level 2 Deaths = " + SavedData.levelTwoDeath);
+        print("Level 3 Deaths = " + SavedData.levelThreeDeath);
+        print("Level 4 Deaths = " + SavedData.levelFourDeath);
+
         deathText.text = text;
         DMusic.SetActive(true);
         OtherMusic.SetActive(false);

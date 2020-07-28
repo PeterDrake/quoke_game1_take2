@@ -13560,6 +13560,11 @@ PrefabInstance:
       propertyPath: OtherMusic
       value: 
       objectReference: {fileID: 1007425404}
+    - target: {fileID: 511732269421594741, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2130093714575627274, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_SortingOrder
@@ -13679,6 +13684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639646452511728175, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: level
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4204111617955944534, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
