@@ -5,16 +5,28 @@ using UnityEngine;
 public class BoilWaterMaster : MonoBehaviour
 {
     public Item Wood;
+    public Item Pot;
+    public Item PotWithWater;
+
+    public GameObject BarrelWithWater;
     public GameObject Sphere;
     public GameObject Particles;
 
     private int check=0;
-
+    private InteractWithObject script;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        script = BarrelWithWater.GetComponent<InteractWithObject>();
+    }
+
+    public void FillPotWithWater()
+    {
+        Systems.Inventory.RemoveItem(Pot, 1);
+        Systems.Inventory.AddItem(PotWithWater, 1);
+        Sphere.SetActive(true);
+        Particles.SetActive(true);
     }
 
     // Update is called once per frame
@@ -22,8 +34,7 @@ public class BoilWaterMaster : MonoBehaviour
     {
         if (Systems.Inventory.HasItem(Wood, 1)&& check==0)
         {
-            Sphere.SetActive(true);
-            Particles.SetActive(true);
+            script.enabled = true;
             check = 1;
         }
     }
