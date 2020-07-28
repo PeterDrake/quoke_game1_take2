@@ -1411,6 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046ce6cd882f141aab95b93d309e303b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loggername: Water heater
 --- !u!4 &447107954
 Transform:
   m_ObjectHideFlags: 0
