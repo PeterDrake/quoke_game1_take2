@@ -996,7 +996,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Win: {fileID: 1438436418}
-  WinSound: {fileID: 697524637}
   Wrong: {fileID: 1504736196}
   ElectricBoxCheck: {fileID: 359445134}
   WaterPipeCheck: {fileID: 971486399}
@@ -4289,7 +4288,7 @@ MonoBehaviour:
 
     next step
 
-    Try Again'
+    Start Over'
 --- !u!222 &1062776397
 CanvasRenderer:
   m_ObjectHideFlags: 0
