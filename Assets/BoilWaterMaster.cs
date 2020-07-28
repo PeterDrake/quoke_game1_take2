@@ -34,6 +34,11 @@ public class BoilWaterMaster : MonoBehaviour
         Systems.Inventory.RemoveItem(Wood, 1);
     }
 
+    public void RemovePotWater()
+    {
+        Systems.Inventory.RemoveItem(PotWithWater, 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
