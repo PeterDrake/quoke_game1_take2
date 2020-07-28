@@ -136,9 +136,13 @@ public class PitLatrineVisit : MonoBehaviour
         latrineMusic.SetActive(false);
 
         _inventory.RemoveItem(Rope, 1);
+        _inventory.RemoveItem(Shovel, 1);
         
         _interact.Kill();
-        _canvas.ChangeText("Look for shelter");
+        _canvas.ChangeText("Find shelter");
+
+        Systems.Status.AffectRelief(100);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
 
         //Place2.SetActive(false);
         UIManager.Instance.ToggleActive(theGUI);

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
+  m_Name: Zelda Talk 2 Gun Check
+  m_EditorClassIdentifier: 
+  speech: You must feel relieved.
+  optionOneText: Yes! Now if I can only get out of this rain.
+  optionOne: {fileID: 11400000, guid: ab6fa112f5b36496686d153814731ff2, type: 2}
+  optionTwoText: 
+  optionTwo: {fileID: 0}
+  Requirements: []
+  Outcomes: []
+  NewHead: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: 3893671c334b24b458fd142e3af1323f, type: 2}
+  optionOneTextAlt: Yes! Now if I can only get out of this rain.
+  optionOneAlt: {fileID: 11400000, guid: 5c2d2f733874c404f9e746fbb392dace, type: 2}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}

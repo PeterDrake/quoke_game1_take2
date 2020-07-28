@@ -11,6 +11,7 @@ public class SanitationBuilt : MonoBehaviour
     
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
+    private InformationCanvas _canvi;
 
     public UIElement theGUI;
     public GameObject Spot;
@@ -140,10 +141,16 @@ public class SanitationBuilt : MonoBehaviour
 
         UIManager.Instance.ToggleActive(theGUI);
 
+        _canvi = GameObject.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
+        _canvi.ChangeText("Talk to Ahmad");
+
         Buckets.SetActive(true);
         Spot.SetActive(false);
         //Destroy(gameObject);
         //Destroy(this);
+
+        Systems.Status.AffectRelief(100);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 
     public void MiniGameWon()

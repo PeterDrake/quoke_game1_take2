@@ -12,6 +12,7 @@ public class GasShutDown : MonoBehaviour
     private InventoryHelper _inventory;
 
     public UIElement theGUI;
+    public GameObject countdown;
     
     private Item Wrench;
     
@@ -26,8 +27,10 @@ public class GasShutDown : MonoBehaviour
     public GameObject levelWin;
     public GameObject miniWin;
 
+    private LogToServer logger;
     void Start()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
         
@@ -40,6 +43,8 @@ public class GasShutDown : MonoBehaviour
     {
         if ((Conditions ^ 0x1) == 0)
         {
+            logger.sendToLog("Started gas mini game");
+            countdown.GetComponent<CountdownBoom>().StopGasCount();
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
@@ -47,6 +52,8 @@ public class GasShutDown : MonoBehaviour
         else
         {
             _interact.SetInteractText("You need to get the wrench!");
+            Debug.Log("Opened Gas Minigame without wrench");
+            logger.sendToLog("Opened gas minigame without a wrench");
         }
     }
     //CAMERA, ui, move stage up a lot
@@ -99,6 +106,7 @@ public class GasShutDown : MonoBehaviour
 
     public void GasMiniGameWon()
     {
+        logger.sendToLog("Won gas mini game!");
         gasAudio.SetActive(false);
         miniWin.SetActive(true);
         levelWin.SetActive(true);

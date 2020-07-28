@@ -60,4 +60,10 @@ public class CountdownBoom : MonoBehaviour
         house.SetActive(false);
         destroyed.SetActive(true);
     }
+
+    public void StopGasCount()
+    {
+        StopCoroutine("GasCountdown");
+        print("stopped");
+    }
 }

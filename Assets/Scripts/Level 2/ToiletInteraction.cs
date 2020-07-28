@@ -14,6 +14,7 @@ public class ToiletInteraction : MonoBehaviour
     public void Interaction()
     {
         Systems.Status.AffectRelief(100);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
         //_interact.SetInteractText("Press 'E' to Use Toilet");
         _interact.DeleteItems();
         //_interact = null;

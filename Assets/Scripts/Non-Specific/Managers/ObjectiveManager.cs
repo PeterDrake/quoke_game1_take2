@@ -28,10 +28,14 @@ public class ObjectiveManager : MonoBehaviour
         if (events.ContainsKey(key))
         {
             callbacks[key].AddFirst(cb);
+            Debug.Log("Registered objective - returned true");
             return true;
         }
         
         events.Add(key, false);
+        Debug.Log("Registered objective - returned false");
+        LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Objective added: " + key);
         var ll = new LinkedList<Callback>();
         ll.AddFirst(cb);
         callbacks.Add(key, ll);

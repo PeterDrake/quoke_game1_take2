@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class WaterHeaterVisit : MonoBehaviour
 {
+
+    public InformationCanvas _canvas;
+    public string words;
     private const string MiniGameSceneName = "WaterHeaterMiniGame";
 
 
@@ -98,11 +101,13 @@ public class WaterHeaterVisit : MonoBehaviour
         //_interact.Kill();
 
         UIManager.Instance.ToggleActive(theGUI);
+
+        GameObject.Find("InventoryZip").GetComponent<AudioSource>().Play();
+
         _interact.Kill();
 
         Spot.SetActive(false);
-
-        GameObject.Find("GUI").GetComponent<GuiDisplayer>().GetBanner().ChangeText("Find clean water and share with Zelda");
+        _canvas.ChangeText(words);
 
         //Destroy(gameObject);
         //Destroy(this);

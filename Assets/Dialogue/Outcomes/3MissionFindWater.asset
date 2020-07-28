@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: 3MissionFindWater
   m_EditorClassIdentifier: 
   ObjectiveName: MissionWater
-  words: Find clean water and share with Zelda
+  words: Find clean water
+  ItemToFind: {fileID: 11400000, guid: 8499936600b8f4a4b972e21858e93872, type: 2}
+  Find: 1
+  Found: 0

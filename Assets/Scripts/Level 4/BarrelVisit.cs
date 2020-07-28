@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BarrelVisit : MonoBehaviour
 {
@@ -11,9 +12,13 @@ public class BarrelVisit : MonoBehaviour
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
 
+    public InformationCanvas _canvas;
+    private string BewareTheStorm;
     public GameObject BarrelEnd;
     public GameObject DrainPipe;
     public GameObject Particles;
+    public GameObject Storm;
+    public Collider SchoolEntrance;
 
     private GameObject canvi;
     private GameObject camera;
@@ -25,21 +30,15 @@ public class BarrelVisit : MonoBehaviour
     void Start()
     {
         _interact = GetComponent<InteractWithObject>();
+        BewareTheStorm = "Storm is approaching, go to the shelter";
     }
 
     public void Interaction()
     {
-        //if ((Conditions ^ 0xF) == 0) // talked with Ahmad
-        //{
         SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
         Debug.Log("Hello");
         SceneManager.sceneLoaded += StartMinigame;
         _interact.enabled = false;
-        //}
-        //else
-        //{
-          //  _interact.SetInteractText("Go talk to Ahmad about water-collecting system");
-        //}
     }
 
     private void StartMinigame(Scene scn, LoadSceneMode lsm)
@@ -73,10 +72,13 @@ public class BarrelVisit : MonoBehaviour
         DrainPipe.SetActive(false);
         BarrelEnd.SetActive(true);
         Particles.SetActive(false);
+        Storm.SetActive(true);
+        _canvas.ChangeText(BewareTheStorm);
+        SchoolEntrance.enabled = true;
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
-        Systems.Objectives.Satisfy("BarrelReady");
+        Systems.Objectives.Satisfy("BARRELSETUP");
         camera.SetActive(true);
         vcam.SetActive(true);
         canvi.SetActive(true);

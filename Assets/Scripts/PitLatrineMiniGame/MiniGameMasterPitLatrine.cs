@@ -18,6 +18,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public UnityAction OnWin;
     public UnityAction OnExit;
     public GameObject Win;
+    public GameObject canvi;
     private bool haveWon;
 
     public GameObject S1Folder;
@@ -54,9 +55,13 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public GameObject Dirt3;
     public GameObject Dirt4;
 
+    private bool hitWaterNotLogged = true;
+    //private bool wonNotLogged = true;
+    private LogToServer logger; 
 
     public void Start()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         //PlywoodButton.GetComponent<Button>().interactable = false;
         //TarpButton.GetComponent<Button>().interactable = false;
         PlywoodButton.GetComponent<Button>().onClick.AddListener(NoBuildPly);
@@ -70,6 +75,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             S2Folder.SetActive(false);
             Dig.SetActive(true);
             Dig2.SetActive(false);
+            Debug.Log("Began Pit Latrine in Pit 1");
         }
 
         else
@@ -79,96 +85,105 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             S2Folder.SetActive(true);
             Dig.SetActive(false);
             Dig2.SetActive(true);
+            Debug.Log("Began Pit Latrine in Pit 2");
         }
     }
 
     public void Update()
     {
-        if (S1Folder.activeSelf)
-        {
-            if (S1Pit1.activeSelf)
+        
+            if (S1Folder.activeSelf)
             {
-                Depth1.SetActive(true);
-            }
-
-            if (S1Pit2.activeSelf)
-            {
-                Depth2.SetActive(true);
-            }
-
-            /*if (S1Pit2.activeSelf == false && UseClicked)
-            {
-                StartCoroutine(nameof(TooShallow));
-            }*/
-
-            if (Water.activeSelf)
-            {
-                //Use.SetActive(false);
-                Dig.SetActive(false);
-                PButton.SetActive(false);
-                TButton.SetActive(false);
-                StartCoroutine(nameof(TryElsewhere));
-            }
-        }
-
-        else
-        {
-            /*if (!S2Pit2.activeSelf && !S2Pit3.activeSelf && UseClicked)
-            {
-                StartCoroutine(nameof(TooShallow));
-            }*/
-
-            if (Depth2.activeSelf)
-            {
-                Depth1.SetActive(false);
-                PlywoodButton.GetComponent<Button>().onClick.RemoveListener(NoBuildPly);
-                PlywoodButton.GetComponent<Button>().onClick.AddListener(PlyBuild);
-            }
-
-            if (Plywood.activeSelf)
-            {
-                //TarpButton.GetComponent<Button>().interactable = true;
-                PlywoodButton.GetComponent<Button>().interactable = false;
-                Dig2.GetComponent<Button>().interactable = false;
-                Shovel2.SetActive(false);
-                S2Pit2.SetActive(false);
-                S2Pit1.SetActive(false);
-                TarpButton.GetComponent<Button>().onClick.RemoveListener(NoBuildTarp);
-                TarpButton.GetComponent<Button>().onClick.AddListener(TarpBuild);
-                //if (Tarp.activeSelf)
-                //{
-                //    TarpButton.GetComponent<Button>().interactable = false;
-                //}
-            }
-
-            if (Tarp.activeSelf) //&& UseClicked)
-            {
-                //Use.SetActive(false);
-                //Dig2.SetActive(false);
-                TarpButton.GetComponent<Button>().interactable = false;
-                if (!haveWon)
+                if (S1Pit1.activeSelf)
                 {
-                    StartCoroutine(nameof(Winning));
+                    Depth1.SetActive(true);
                 }
-                //WinScreen.SetActive(true);
+
+                if (S1Pit2.activeSelf)
+                {
+                    Depth2.SetActive(true);
+                }
+
+                /*if (S1Pit2.activeSelf == false && UseClicked)
+                {
+                    StartCoroutine(nameof(TooShallow));
+                }*/
+
+                if (Water.activeSelf)
+                {
+                    //Use.SetActive(false);
+                    Dig.SetActive(false);
+                    PButton.SetActive(false);
+                    TButton.SetActive(false);
+                    StartCoroutine(nameof(TryElsewhere));
+                }
             }
 
-            //if (S2Pit2.activeSelf && !S2Pit3.activeSelf)
-            //{
-            //    PlywoodButton.GetComponent<Button>().interactable = true;
-            //}
-
-            if (S2Pit3.activeSelf && !check)
+            else
             {
-                check = true;
-                StartCoroutine(nameof(TooDeep));
-            }
+                /*if (!S2Pit2.activeSelf && !S2Pit3.activeSelf && UseClicked)
+                {
+                    StartCoroutine(nameof(TooShallow));
+                }*/
 
-            if (!S2Pit3.activeSelf)
-            {
-                check = false;
+                if (Depth2.activeSelf)
+                {
+                    Depth1.SetActive(false);
+                    PlywoodButton.GetComponent<Button>().onClick.RemoveListener(NoBuildPly);
+                    PlywoodButton.GetComponent<Button>().onClick.AddListener(PlyBuild);
+                }
+
+                if (Plywood.activeSelf)
+                {
+                    //TarpButton.GetComponent<Button>().interactable = true;
+                    PlywoodButton.GetComponent<Button>().interactable = false;
+                    Dig2.GetComponent<Button>().interactable = false;
+                    Shovel2.SetActive(false);
+                    S2Pit2.SetActive(false);
+                    S2Pit1.SetActive(false);
+                    TarpButton.GetComponent<Button>().onClick.RemoveListener(NoBuildTarp);
+                    TarpButton.GetComponent<Button>().onClick.AddListener(TarpBuild);
+                    //if (Tarp.activeSelf)
+                    //{
+                    //    TarpButton.GetComponent<Button>().interactable = false;
+                    //}
+                }
+
+                if (Tarp.activeSelf) //&& UseClicked)
+                {
+                    //Use.SetActive(false);
+                    //Dig2.SetActive(false);
+                    TarpButton.GetComponent<Button>().interactable = false;
+                    if (!haveWon)
+                    {
+                        
+                        StartCoroutine(nameof(Winning));
+                    }
+                    else
+                    {
+                        StopCoroutine(nameof(Winning));
+                    }
+
+                    //WinScreen.SetActive(true);
+                }
+
+                //if (S2Pit2.activeSelf && !S2Pit3.activeSelf)
+                //{
+                //    PlywoodButton.GetComponent<Button>().interactable = true;
+                //}
+
+                if (S2Pit3.activeSelf && !check)
+                {
+                    check = true;
+                    StartCoroutine(nameof(TooDeep));
+                }
+
+                if (!S2Pit3.activeSelf)
+                {
+                    check = false;
+                }
             }
-        }
+        
     }
 
     /*private IEnumerator TooShallow()
@@ -182,14 +197,19 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     private IEnumerator Winning()
     {
         yield return new WaitForSeconds(0.2f);
-        print("you win the latrine");
+        //print("you win the latrine");
+        Debug.Log("Won Pit Latrine Minigame");
         GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
         WinScreen.SetActive(true);
+        canvi.SetActive(false);
         haveWon = true;
+        
     }
 
     private IEnumerator TooDeep()
     {
+        Debug.Log("Dug too deep");
+        MoveOtherShovel.ResetDigCount();
         Dig2.SetActive(false);
         //Use.SetActive(false);
         PButton.SetActive(false);
@@ -227,26 +247,42 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         yield return new WaitForSeconds(3f);
         TryHighGround.SetActive(true);
         //UseClicked = false;
+        if (hitWaterNotLogged)
+        {
+            Debug.Log("Hit Water");
+            hitWaterNotLogged = false;
+        }
     }
 
     private void PlyBuild()
     {
-        Plywood.SetActive(true);
+        if (!Plywood.activeSelf)
+        {
+            Debug.Log("Added Plywood");
+
+            Plywood.SetActive(true);
+        }
     }
 
     private void TarpBuild()
     {
-        Tarp.SetActive(true);
+        if (!Tarp.activeSelf)
+        {
+            Debug.Log("Added Tarp");
+            Tarp.SetActive(true);
+        }
     }
 
     public void NoBuildPly()
     {
+        Debug.Log("Tried to add Plywood");
         BuildErrorText.text = "You need a bigger hole. Keep Digging";
         StartCoroutine(BuildErrorMessage());
     }
 
     public void NoBuildTarp()
     {
+        Debug.Log("Tried to add tarp");
         BuildErrorText.text = "Add some plywood before setting up the tarp";
         StartCoroutine(BuildErrorMessage());
     }

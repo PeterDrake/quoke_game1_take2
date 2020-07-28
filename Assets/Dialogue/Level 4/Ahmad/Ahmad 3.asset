@@ -18,6 +18,5 @@ MonoBehaviour:
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes:
-  - {fileID: 11400000, guid: eec1e6ef21c1b0042be42c7d5cd42473, type: 2}
-  NewHead: {fileID: 0}
+  Outcomes: []
+  NewHead: {fileID: 11400000, guid: 281bfd2deec931549bdef91f8aeedead, type: 2}

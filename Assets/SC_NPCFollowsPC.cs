@@ -13,6 +13,7 @@ public class SC_NPCFollowsPC : MonoBehaviour
     public GameObject Player;
     public GameObject NPC;
     private Animator animator;
+    private int runs;
     
     
     // Start is called before the first frame update
@@ -21,6 +22,7 @@ public class SC_NPCFollowsPC : MonoBehaviour
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         animator.SetBool("isWalking", false);
+        animator.SetBool("isRunning", false);
     }
 
     // Update is called once per frame
@@ -31,12 +33,24 @@ public class SC_NPCFollowsPC : MonoBehaviour
         if (Mathf.Abs(Player.transform.position.x - NPC.transform.position.x) > 2.8  ||
             Mathf.Abs(Player.transform.position.z - NPC.transform.position.z) > 2.8)
         {
-            animator.SetBool("isWalking", true);
+            runs += 1;
+            if (runs > 50)
+            {
+                
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isWalking", false);
+            }
+            else
+            {
+                animator.SetBool("isWalking", true);
+            }
         }
         
         else
         {
             animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
+            runs = 0;
         }
         
         agent.SetDestination(transformToFollow.position);
