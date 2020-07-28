@@ -95,7 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   following: {fileID: 0}
+  height: 14
   mobile: 1
+  startReal: 1
 --- !u!1 &2786121349391274274
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +193,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   following: {fileID: 0}
+  height: 14
   mobile: 0
+  startReal: 1
 --- !u!1 &2786121349588314753
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +386,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   following: {fileID: 0}
+  height: 14
   mobile: 0
+  startReal: 1
 --- !u!1 &2786121351096887184
 GameObject:
   m_ObjectHideFlags: 0
