@@ -31,6 +31,7 @@ public class GasShutDown : MonoBehaviour
     void Start()
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Began gas minigame");
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
         
@@ -105,6 +106,7 @@ public class GasShutDown : MonoBehaviour
 
     public void GasMiniGameWon()
     {
+        logger.sendToLog("Won gas mini game!");
         gasAudio.SetActive(false);
         miniWin.SetActive(true);
         levelWin.SetActive(true);

@@ -23,11 +23,13 @@ public class StartMiniGame : MonoBehaviour
 	private bool started = false;
 	
 	private WrenchMiniGameMaster _wrenchMiniGameMaster;
+	private LogToServer logger;
 
 
 	public void Awake()
 	{
 		_wrenchMiniGameMaster = GameObject.FindObjectOfType<WrenchMiniGameMaster>();
+		logger = GameObject.Find("Logger").GetComponent<LogToServer>();
 	}
 
 
@@ -38,7 +40,6 @@ public class StartMiniGame : MonoBehaviour
 		Debug.Log("Congratz, you have won!");
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
-		LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
 		logger.sendToLog("Completed Level 1!");
 		WinScreen.SetActive(true);
 		GameObject.Find("Gas").GetComponent<GasShutDown>().GasMiniGameWon();
@@ -47,6 +48,7 @@ public class StartMiniGame : MonoBehaviour
 
 	private void AttachWrench()
 	{
+		logger.sendToLog("Wrench attatched");
 		flange.GetComponent<CollisionCallback>().RemoveCallback(wrench.tag);
 		Destroy(wrench);
 		flange.transform.GetChild(0).gameObject.SetActive(true);
