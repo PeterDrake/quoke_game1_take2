@@ -43,6 +43,7 @@ public class GasShutDown : MonoBehaviour
     {
         if ((Conditions ^ 0x1) == 0)
         {
+            logger.sendToLog("Started gas mini game");
             countdown.GetComponent<CountdownBoom>().StopGasCount();
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
@@ -105,6 +106,7 @@ public class GasShutDown : MonoBehaviour
 
     public void GasMiniGameWon()
     {
+        logger.sendToLog("Won gas mini game!");
         gasAudio.SetActive(false);
         miniWin.SetActive(true);
         levelWin.SetActive(true);
