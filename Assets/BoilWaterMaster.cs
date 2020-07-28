@@ -29,6 +29,11 @@ public class BoilWaterMaster : MonoBehaviour
         Particles.SetActive(true);
     }
 
+    public void RemoveWood()
+    {
+        Systems.Inventory.RemoveItem(Wood, 1);
+    }
+
     // Update is called once per frame
     void Update()
     {
