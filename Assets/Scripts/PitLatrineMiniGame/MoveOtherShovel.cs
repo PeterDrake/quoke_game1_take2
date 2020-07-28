@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,11 +25,17 @@ public class MoveOtherShovel : MonoBehaviour
 
     private LogToServer logger;
     public static int digCount = 0;
-    public void Dig()
+
+    public void Start()
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+    }
+
+    public void Dig()
+    {
         digCount++;
         Debug.Log("Dug - hole depth " + digCount);
+        logger.sendToLog("Dug - hole depth " + digCount);
         StartCoroutine(nameof(DigVertically));
     }
     

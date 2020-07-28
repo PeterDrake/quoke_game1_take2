@@ -76,6 +76,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             Dig.SetActive(true);
             Dig2.SetActive(false);
             Debug.Log("Began Pit Latrine in Pit 1");
+            logger.sendToLog("Began Pit Latrine in pit 1");
         }
 
         else
@@ -86,6 +87,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
             Dig.SetActive(false);
             Dig2.SetActive(true);
             Debug.Log("Began Pit Latrine in Pit 2");
+            logger.sendToLog("Began Pit Latrine in pit 2");
         }
     }
 
@@ -199,6 +201,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         //print("you win the latrine");
         Debug.Log("Won Pit Latrine Minigame");
+        logger.sendToLog("Won Pit Latrine mini game");
         GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
         WinScreen.SetActive(true);
         canvi.SetActive(false);
@@ -209,6 +212,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     private IEnumerator TooDeep()
     {
         Debug.Log("Dug too deep");
+        logger.sendToLog("Dug too deep");
         MoveOtherShovel.ResetDigCount();
         Dig2.SetActive(false);
         //Use.SetActive(false);
@@ -250,6 +254,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         if (hitWaterNotLogged)
         {
             Debug.Log("Hit Water");
+            logger.sendToLog("Hit Water");
             hitWaterNotLogged = false;
         }
     }
@@ -259,7 +264,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         if (!Plywood.activeSelf)
         {
             Debug.Log("Added Plywood");
-
+            logger.sendToLog("Added Plywood");
             Plywood.SetActive(true);
         }
     }
@@ -269,6 +274,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         if (!Tarp.activeSelf)
         {
             Debug.Log("Added Tarp");
+            logger.sendToLog("Added Tarp");
             Tarp.SetActive(true);
         }
     }
@@ -276,6 +282,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public void NoBuildPly()
     {
         Debug.Log("Tried to add Plywood");
+        logger.sendToLog("Tried to add plywood");
         BuildErrorText.text = "You need a bigger hole. Keep Digging";
         StartCoroutine(BuildErrorMessage());
     }
@@ -283,6 +290,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
     public void NoBuildTarp()
     {
         Debug.Log("Tried to add tarp");
+        logger.sendToLog("Tried to add tarp");
         BuildErrorText.text = "Add some plywood before setting up the tarp";
         StartCoroutine(BuildErrorMessage());
     }
