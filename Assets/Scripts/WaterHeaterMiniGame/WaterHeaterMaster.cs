@@ -47,6 +47,7 @@ public class WaterHeaterMaster : MonoBehaviour
     private void Start()
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Began water heater mini game");
         stepOne = false;
         stepTwo = false;
         stepThree = false;
