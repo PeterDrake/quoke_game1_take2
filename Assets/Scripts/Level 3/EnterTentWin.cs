@@ -8,6 +8,7 @@ public class EnterTentWin : MonoBehaviour
     private const string SATISFIED = "Press 'E' to rest in Ahmad's van";
     private const string NOT_SATISFIED = "";
     public UIElement winCanvas;
+    public GameObject win;
     public GameObject levelMusic;
     public GameObject winMusic;
     private InteractWithObject _interact;
@@ -29,6 +30,7 @@ public class EnterTentWin : MonoBehaviour
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
             levelMusic.SetActive(false);
             winMusic.SetActive(true);
+            win.SetActive(true);
         }
     }
 

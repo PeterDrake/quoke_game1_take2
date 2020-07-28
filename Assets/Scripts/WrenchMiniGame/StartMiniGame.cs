@@ -8,6 +8,7 @@ public class StartMiniGame : MonoBehaviour
 	public GameObject wrenchPrefab;
 	public GameObject flange;
 	public GameObject WinScreen;
+	public GameObject canvas;
 
 	public Vector3 attachedWrenchPosition;
 	public float z_offset;
@@ -42,6 +43,7 @@ public class StartMiniGame : MonoBehaviour
 		Turned = true;
 		logger.sendToLog("Completed Level 1!");
 		WinScreen.SetActive(true);
+		canvas.SetActive(false);
 		GameObject.Find("Gas").GetComponent<GasShutDown>().GasMiniGameWon();
 		//		_wrenchMiniGameMaster.CheckCorrect(Turned);
 	}
