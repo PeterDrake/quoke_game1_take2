@@ -15,5 +15,6 @@ public class EvokeController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Controller.SetActive(true);
+        this.gameObject.SetActive(false);
     }
 }
