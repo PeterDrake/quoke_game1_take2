@@ -8805,7 +8805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1934715029
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9117,6 +9117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046ce6cd882f141aab95b93d309e303b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loggername: Toilet
 --- !u!4 &1978113182
 Transform:
   m_ObjectHideFlags: 0
