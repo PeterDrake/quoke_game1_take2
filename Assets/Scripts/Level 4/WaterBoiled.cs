@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WaterBoiled : MonoBehaviour
 {
-    public GameObject Barrel;
+    public GameObject Pot;
     public GameObject Steam;
     public GameObject Fire;
     public GameObject Fire2;
     
     void Update()
     {
-        if (Barrel.activeSelf)
+        if (Pot.activeSelf)
         {
             StartCoroutine(nameof(DestroyFire));
         }
