@@ -4365,7 +4365,7 @@ MonoBehaviour:
 
     next step
 
-    Try Again'
+    Start Over'
 --- !u!222 &1062776397
 CanvasRenderer:
   m_ObjectHideFlags: 0
