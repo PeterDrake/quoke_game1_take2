@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Media;
+using System.Runtime.Versioning;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -70,8 +72,43 @@ public class DialogueChangeBanner : DialogueOutcome
                     _banner.ChangeText("Find Frank's back yard");
                 }
 
-                //found everything for now but more things to find
-                else if (current == "Find")
+            else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _banner.ChangeText("Find a rope");
+            }
+
+            else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1))
+            {
+                _banner.ChangeText("Find a shovel");
+            }
+
+            else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/DirtyMustardWater"), 1))
+            {
+                _banner.ChangeText("Add tablets from inventory to clean water");
+            }
+            else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Gun"), 1))
+            {
+                _banner.ChangeText("Throw away the gun, then ask Zelda to enter the shelter");
+            }
+            //else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Gun"), 0))
+            //{
+            //    _banner.ChangeText("Enter the shelter");
+            //}
+            //else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/CleanMustardWater"), 1))
+            //{
+            //    _banner.ChangeText("Go talk to Zelda");
+            //}
+
+            //if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/DirtyMustardWater"), 1))
+            //{
+            // _banner.ChangeText("Add tablets from inventory to clean water");
+            //}
+            //  if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/CleanMustardWater"), 1) && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            //  {
+            //     _banner.ChangeText("Talk to Frank about building a pit latrine");
+            // }
+            //found everything for now but more things to find
+            else if (current == "Find")
                 {
                     _banner.ChangeText("Talk to survivors");
                 }
