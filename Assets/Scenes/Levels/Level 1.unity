@@ -40834,7 +40834,7 @@ MonoBehaviour:
   BlinkWhenPlayerNear: 1
   itemToReceive:
   - {fileID: 0}
-  InteractionDisplayText: Press "E" to Shut Down Gas Valve.
+  InteractionDisplayText: Press "E" to Shut Off Gas Valve.
   interactText: {fileID: 0}
   CallOnInteract:
     m_PersistentCalls:
