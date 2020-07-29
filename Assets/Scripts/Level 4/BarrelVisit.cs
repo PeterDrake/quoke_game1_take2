@@ -35,6 +35,7 @@ public class BarrelVisit : MonoBehaviour
 
     public void Interaction()
     {
+        GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear();
         SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
         Debug.Log("Hello");
         SceneManager.sceneLoaded += StartMinigame;
