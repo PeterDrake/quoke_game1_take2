@@ -6,15 +6,16 @@ public class EnableWaterInteraction : MonoBehaviour
 {
 
     public GameObject Water;
+    public GameObject Water1;
     public GameObject Steam;
     public GameObject Pot;
-    private InteractWithObject script;
+    //private InteractWithObject script;
     private int check = 0;
     
     // Start is called before the first frame update
     void Start()
     {
-        script = Water.GetComponent<InteractWithObject>();
+        //script = Water.GetComponent<InteractWithObject>();
         //StartCoroutine(nameof(EnableScript));
     }
 
@@ -22,15 +23,16 @@ public class EnableWaterInteraction : MonoBehaviour
     {
         if (!Steam.activeSelf && Pot.activeSelf && check == 0)
         {
-            script.enabled = true;
-            check = 1;
+            StartCoroutine(nameof(EnableScript));
         }
     }
 
     private IEnumerator EnableScript()
     {
         yield return new WaitForSeconds(7f);
-        script.enabled = true;
+        //script.enabled = true;
+        Water1.SetActive(false);
+        Water.SetActive(true);
     }
 
 }

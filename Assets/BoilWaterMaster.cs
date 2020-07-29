@@ -11,14 +11,19 @@ public class BoilWaterMaster : MonoBehaviour
     public GameObject BarrelWithWater;
     public GameObject Sphere;
     public GameObject Particles;
+    public GameObject Controller;
+    public GameObject Pot1;
+    public GameObject Firecomplex;
 
     private int check=0;
     private InteractWithObject script;
+    private InteractWithObject script1;
 
     // Start is called before the first frame update
     void Start()
     {
         script = BarrelWithWater.GetComponent<InteractWithObject>();
+        script1 = Controller.GetComponent<InteractWithObject>();
     }
 
     public void FillPotWithWater()
@@ -37,6 +42,10 @@ public class BoilWaterMaster : MonoBehaviour
     public void RemovePotWater()
     {
         Systems.Inventory.RemoveItem(PotWithWater, 1);
+        script1.enabled = false;
+        //Controller.SetActive(false);
+        Pot1.SetActive(true);
+        Firecomplex.SetActive(false);
     }
 
     // Update is called once per frame
