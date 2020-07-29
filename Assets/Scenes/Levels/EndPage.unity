@@ -628,6 +628,7 @@ GameObject:
   - component: {fileID: 602934328}
   - component: {fileID: 602934327}
   - component: {fileID: 602934326}
+  - component: {fileID: 602934329}
   m_Layer: 5
   m_Name: download
   m_TagString: Untagged
@@ -697,7 +698,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 602934327}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 602934329}
+        m_MethodName: sendToLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: beecn
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &602934327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +747,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602934324}
   m_CullTransparentMesh: 0
+--- !u!114 &602934329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602934324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &662709731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2159,6 +2183,7 @@ GameObject:
   - component: {fileID: 1461822585}
   - component: {fileID: 1461822584}
   - component: {fileID: 1461822583}
+  - component: {fileID: 1461822586}
   m_Layer: 5
   m_Name: download
   m_TagString: Untagged
@@ -2228,7 +2253,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1461822584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1461822586}
+        m_MethodName: sendToLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: waterhanger
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1461822584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,6 +2302,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461822581}
   m_CullTransparentMesh: 0
+--- !u!114 &1461822586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461822581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1584808156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3059,6 +3107,7 @@ GameObject:
   - component: {fileID: 1989775812}
   - component: {fileID: 1989775811}
   - component: {fileID: 1989775810}
+  - component: {fileID: 1989775813}
   m_Layer: 5
   m_Name: download
   m_TagString: Untagged
@@ -3128,7 +3177,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1989775811}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1989775813}
+        m_MethodName: sendToLog
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: toilet
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1989775811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3166,6 +3226,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989775808}
   m_CullTransparentMesh: 0
+--- !u!114 &1989775813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989775808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1991914708
 GameObject:
   m_ObjectHideFlags: 0

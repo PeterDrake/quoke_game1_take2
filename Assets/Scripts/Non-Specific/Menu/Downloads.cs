@@ -1,18 +1,43 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class Downloads : MonoBehaviour
+public class Downloads : Singleton<LogToServer>
 {
-    // Start is called before the first frame update
-    void Start()
+    private String postURL = "/downloadHandout.php";
+
+    private void Awake()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void sendToLog(String docname)
     {
-        
+        StartCoroutine(PostRequest(docname));
+    }
+
+    IEnumerator PostRequest(String docname)
+    {
+        Debug.Log("Sending post request using logger: " + docname);
+        List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
+        wwwForm.Add(new MultipartFormDataSection("docname", docname));
+
+       
+
+        UnityWebRequest www = UnityWebRequest.Post(postURL, wwwForm);
+
+        yield return www.SendWebRequest();
+
+        if (www.isNetworkError || www.isHttpError)
+        {
+            Debug.LogError(www.error);
+        }
+        else
+        {
+            Debug.Log("Downloaded Successfully");
+        }
+
     }
 }
