@@ -2445,7 +2445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Exit
+  m_Text: 'Done
 
 '
 --- !u!222 &1245066767
@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 1369863079}
   - component: {fileID: 1369863078}
   m_Layer: 5
-  m_Name: Exit Game
+  m_Name: Im Done
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
