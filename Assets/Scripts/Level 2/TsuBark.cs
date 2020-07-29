@@ -5,7 +5,7 @@ using UnityEngine;
 public class TsuBark : MonoBehaviour
 {
     private const string EventKey = "LEVELFINISHED";
-    private const string SATISFIED = "Press 'E' to enter car";
+    private const string SATISFIED = "Press 'E' to interact with car";
     private const string NOT_SATISFIED = "";
     //public GameObject theBark;
     public InformationCanvas _canvas;
