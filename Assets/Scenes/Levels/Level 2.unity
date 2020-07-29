@@ -108619,13 +108619,11 @@ MonoBehaviour:
   postQuake:
   - {fileID: 2036528414}
   - {fileID: 1244310404}
-  - {fileID: 548432699}
+  - {fileID: 942715800}
   - {fileID: 1178886055}
   - {fileID: 140981073}
   - {fileID: 1387273891}
   - {fileID: 1676832567}
-  - {fileID: 788301028}
-  - {fileID: 942715800}
 --- !u!1001 &4519658951779746371
 PrefabInstance:
   m_ObjectHideFlags: 0
