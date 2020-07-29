@@ -39,7 +39,24 @@ public class LogToServer : Singleton<LogToServer>
         
         //Get time in game and add to post request
         int time = (int) Math.Round(Time.realtimeSinceStartup);
-        wwwForm.Add(new MultipartFormDataSection("gametime", time.ToString()));
+        int seconds = time;
+        int min = 0;
+        int hr = 0;
+        while (seconds >= 60)
+        {
+            min++;
+            seconds -= 60;
+        }
+
+        while (min >= 60)
+        {
+            hr++;
+            min -= 60;
+        }
+
+        string timestring = hr + ":" + min + ":" + seconds;
+        Debug.Log("Time: " + timestring);
+        wwwForm.Add(new MultipartFormDataSection("gametime", timestring));
 
         UnityWebRequest www = UnityWebRequest.Post(postURL, wwwForm);
 

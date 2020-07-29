@@ -746,7 +746,7 @@ GameObject:
   - component: {fileID: 156061071}
   - component: {fileID: 156061070}
   m_Layer: 0
-  m_Name: Place2a
+  m_Name: PeeBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2305,7 +2305,7 @@ GameObject:
   - component: {fileID: 538352398}
   - component: {fileID: 538352397}
   m_Layer: 0
-  m_Name: Place1
+  m_Name: PooBucketBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2514,7 +2514,7 @@ GameObject:
   - component: {fileID: 648869679}
   - component: {fileID: 648869678}
   m_Layer: 0
-  m_Name: Place 4
+  m_Name: ToiletPaperBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4349,7 +4349,7 @@ GameObject:
   - component: {fileID: 997852163}
   - component: {fileID: 997852162}
   m_Layer: 0
-  m_Name: Place 5
+  m_Name: SawdustBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4798,7 +4798,7 @@ GameObject:
   - component: {fileID: 1091083016}
   - component: {fileID: 1091083015}
   m_Layer: 0
-  m_Name: Place 2
+  m_Name: PlasticBagBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6292,7 +6292,7 @@ GameObject:
   - component: {fileID: 1436593197}
   - component: {fileID: 1436593196}
   m_Layer: 0
-  m_Name: Place 3
+  m_Name: PoopBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6494,7 +6494,7 @@ GameObject:
   - component: {fileID: 1448891284}
   - component: {fileID: 1448891283}
   m_Layer: 0
-  m_Name: Place1a
+  m_Name: PeeBucketBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,8 +12,11 @@ public class Pamphlet : MonoBehaviour
 
     private bool open;
 
+    private LogToServer logger;
+
     private void Awake()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         pamphlet.SetActive(false);
         buttonText.text = openText;
     }
@@ -22,11 +25,15 @@ public class Pamphlet : MonoBehaviour
     {
         if (open)
         {
+            Debug.Log("Closed pamphlet");
+            logger.sendToLog("Closed pamphlet");
             pamphlet.SetActive(false);
             buttonText.text = openText;
         }
         else
         {
+            Debug.Log("Opened pamphlet");
+            logger.sendToLog("Opened pamphlet");
             pamphlet.SetActive(true);
             buttonText.text = closeText;
         }
