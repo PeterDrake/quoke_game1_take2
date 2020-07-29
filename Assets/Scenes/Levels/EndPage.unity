@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 227470436}
   - component: {fileID: 227470435}
   - component: {fileID: 227470434}
+  - component: {fileID: 227470438}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -214,10 +215,8 @@ RectTransform:
   - {fileID: 917232003}
   - {fileID: 668551292}
   - {fileID: 427795656}
-  - {fileID: 986392828}
-  - {fileID: 1989775809}
-  - {fileID: 1048928534}
-  - {fileID: 1461822582}
+  - {fileID: 1651826787}
+  - {fileID: 1762355307}
   - {fileID: 1171883708}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -227,6 +226,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &227470438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227470433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &269013828
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,8 +350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: 172}
-  m_SizeDelta: {x: 1024.0001, y: 191.30084}
+  m_AnchoredPosition: {x: -0.000061035, y: 185}
+  m_SizeDelta: {x: 1024.0001, y: 73.90277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427795657
 MonoBehaviour:
@@ -551,7 +562,7 @@ GameObject:
   - component: {fileID: 917232005}
   - component: {fileID: 917232004}
   m_Layer: 5
-  m_Name: Image
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -625,7 +636,7 @@ GameObject:
   - component: {fileID: 986392830}
   - component: {fileID: 986392829}
   m_Layer: 5
-  m_Name: pocket prep image
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,16 +649,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986392827}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 227470437}
-  m_RootOrder: 3
+  m_Father: {fileID: 1651826787}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -272, y: -26.039993}
+  m_AnchoredPosition: {x: 240, y: 357.96002}
   m_SizeDelta: {x: 243.94983, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986392829
@@ -699,7 +710,7 @@ GameObject:
   - component: {fileID: 1048928536}
   - component: {fileID: 1048928535}
   m_Layer: 5
-  m_Name: waterheater image
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -712,16 +723,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048928533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 146.09473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 227470437}
-  m_RootOrder: 5
+  m_Father: {fileID: 1762355307}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 256, y: -26.039993}
+  m_AnchoredPosition: {x: 669.2644, y: 551.2943}
   m_SizeDelta: {x: 243.94983, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048928535
@@ -773,8 +784,9 @@ GameObject:
   - component: {fileID: 1171883711}
   - component: {fileID: 1171883710}
   - component: {fileID: 1171883709}
+  - component: {fileID: 1171883712}
   m_Layer: 5
-  m_Name: exit
+  m_Name: gameover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -793,7 +805,7 @@ RectTransform:
   m_Children:
   - {fileID: 701538019}
   m_Father: {fileID: 227470437}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -842,7 +854,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1171883710}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1171883712}
+        m_MethodName: ExitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1171883710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +903,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171883707}
   m_CullTransparentMesh: 0
+--- !u!114 &1171883712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171883707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 514f8fbd822475643b8eb4b0f9311db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1304728262
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +1011,7 @@ GameObject:
   - component: {fileID: 1461822584}
   - component: {fileID: 1461822583}
   m_Layer: 5
-  m_Name: waterheater
+  m_Name: download
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -989,17 +1024,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461822581}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 146.09473}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 269013829}
-  m_Father: {fileID: 227470437}
-  m_RootOrder: 6
+  m_Father: {fileID: 1762355307}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257, y: -129}
+  m_AnchoredPosition: {x: 670.2644, y: 448.3343}
   m_SizeDelta: {x: 160, y: 39.9261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1461822583
@@ -1082,6 +1117,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461822581}
   m_CullTransparentMesh: 0
+--- !u!1 &1651826786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1651826787}
+  m_Layer: 0
+  m_Name: PocketPrep Guide
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1651826787
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651826786}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -512, y: -384, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 986392828}
+  - {fileID: 1989775809}
+  m_Father: {fileID: 227470437}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1762355306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1762355307}
+  m_Layer: 0
+  m_Name: WaterHeaterTag
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1762355307
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762355306}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -413.2644, y: -577.3343, z: -146.09473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1048928534}
+  - {fileID: 1461822582}
+  m_Father: {fileID: 227470437}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1818958074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,7 +1338,7 @@ GameObject:
   - component: {fileID: 1989775811}
   - component: {fileID: 1989775810}
   m_Layer: 5
-  m_Name: pocketprep
+  m_Name: download
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1252,17 +1351,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989775808}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1818958075}
-  m_Father: {fileID: 227470437}
-  m_RootOrder: 4
+  m_Father: {fileID: 1651826787}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -272, y: -129}
+  m_AnchoredPosition: {x: 240, y: 255}
   m_SizeDelta: {x: 160, y: 39.9261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989775810
