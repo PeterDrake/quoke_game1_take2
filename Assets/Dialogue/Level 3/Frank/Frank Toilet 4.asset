@@ -21,4 +21,7 @@ MonoBehaviour:
   Outcomes:
   - {fileID: 11400000, guid: 86924ef4695f1a24c985f7acfc127079, type: 2}
   - {fileID: 11400000, guid: fd9cd61d738ff4f7cb9779a6a4e751e0, type: 2}
+  - {fileID: 11400000, guid: 4f1e7ef3d93836b43a7a9fe4b9a2956c, type: 2}
+  - {fileID: 11400000, guid: 3903fb4afdfdf2c40b15053e451153c3, type: 2}
+  - {fileID: 11400000, guid: ebb1702abfbf8ef41b9ab915f58b1f62, type: 2}
   NewHead: {fileID: 11400000, guid: 0bf194738963c4c9889c04c3bd588bff, type: 2}

@@ -20,4 +20,6 @@ MonoBehaviour:
   Requirements: []
   Outcomes:
   - {fileID: 11400000, guid: 1531dec95ebe74c2ea7ec83bb8015dab, type: 2}
+  - {fileID: 11400000, guid: 2440fe4dcf8be534a850e97b0a6a482b, type: 2}
+  - {fileID: 11400000, guid: ebb1702abfbf8ef41b9ab915f58b1f62, type: 2}
   NewHead: {fileID: 11400000, guid: 18ac66a31f71f4355b0a0ad0b976439f, type: 2}

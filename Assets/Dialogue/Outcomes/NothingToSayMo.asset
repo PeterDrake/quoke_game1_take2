@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1400a362385c3e24c82c57933867603c, type: 3}
   m_Name: NothingToSayMo
   m_EditorClassIdentifier: 
-  ObjectiveName: MoNothingToSay
+  ObjectiveName: NothingToSayMo
   targetGameObject: MoAlert
