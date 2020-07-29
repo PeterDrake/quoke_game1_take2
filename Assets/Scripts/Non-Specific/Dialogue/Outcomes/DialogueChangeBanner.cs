@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Media;
+//using System.Media;
 using System.Runtime.Versioning;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -82,14 +82,14 @@ public class DialogueChangeBanner : DialogueOutcome
                 _banner.ChangeText("Find a shovel");
             }
 
-            else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/DirtyMustardWater"), 1))
-            {
-                _banner.ChangeText("Add tablets from inventory to clean water");
-            }
-            else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Gun"), 1))
-            {
-                _banner.ChangeText("Throw away the gun, then ask Zelda to enter the shelter");
-            }
+            //else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/DirtyMustardWater"), 1))
+            //{
+            //    _banner.ChangeText("Add tablets from inventory to clean water");
+            //}
+            //else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Gun"), 1))
+            //{
+            //    _banner.ChangeText("Throw away the gun, then ask Zelda to enter the shelter");
+            //}
             //else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Gun"), 0))
             //{
             //    _banner.ChangeText("Enter the shelter");
