@@ -11,11 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Mo4
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   speech: "It looks like a big red tent.\r"
-  optionOneText: 
+  optionOneText:
   optionOne: {fileID: 0}
-  optionTwoText: 
+  optionTwoText:
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes:
