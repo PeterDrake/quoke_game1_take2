@@ -12,7 +12,7 @@ public class GasSwapText : MonoBehaviour
 
     public void Interaction()
     {
-        _interact.SetInteractText("Press 'E' to Shut Down Gas Valve.");
+        _interact.SetInteractText("Press 'E' to Shut Off Gas Valve.");
     }
 
 }
