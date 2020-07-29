@@ -16,23 +16,14 @@ public class MiniGameCheck : MonoBehaviour
 
     public Button theButton;
 
-    private String lastCollision = "mouse released with no placements";
-
     private bool lastMouseState = false;
 
 
-    public void OnMouseOver()
-    {
-        if((!Input.GetMouseButton(0)) && lastMouseState)
-        {
-            Debug.Log(lastCollision);
-        }
-
-        lastMouseState = Input.GetMouseButton(0);
-    }
+    
     public void OnTriggerEnter(Collider other)
     {
-        lastCollision = other.tag + " put in " + correctTag + " box";
+        //lastCollision = other.tag + " put in " + correctTag + " box";
+        other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
         if (other.CompareTag(correctTag))
         {
             
@@ -40,10 +31,10 @@ public class MiniGameCheck : MonoBehaviour
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
             if (correctTag == "Bucket")
             {
-                if (this.name == "Place1a") {
+                if (this.name == "PeeBucketBox") {
                     MasterCheck.PeeBucket = true;
                 }
-                else if (this.name == "Place1")
+                else if (this.name == "PooBucketBox")
                 {
                     MasterCheck.PooBucket = true;
                 }
@@ -110,23 +101,23 @@ public void OnTriggerExit(Collider other)
                     MasterCheck.PooBucket = false;
                 }
             }
-       if (correctTag == "PlasticBag")
+       else if (correctTag == "PlasticBag")
        {
            MasterCheck.PlasticBag = false;
        }
-       if (correctTag == "Poop")
+       else if (correctTag == "Poop")
        {
            MasterCheck.Poop = false;
        }
-       if (correctTag == "ToiletPaper")
+       else if (correctTag == "ToiletPaper")
        {
            MasterCheck.ToiletPaper = false;
        }
-       if (correctTag == "Sawdust")
+       else if (correctTag == "Sawdust")
        {
            MasterCheck.Sawdust = false;
        }
-       if (correctTag == "Pee")
+       else if (correctTag == "Pee")
        {
            MasterCheck.Pee = false;
        }

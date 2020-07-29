@@ -12,6 +12,12 @@ public class DragObject : MonoBehaviour
     private float mZCoord;
 
 
+    private LogToServer logger;
+
+    private void Awake()
+    {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+    }
 
     void OnMouseDown()
 
@@ -61,6 +67,14 @@ public class DragObject : MonoBehaviour
     }
 
 
+    public void SetLastCollision(string boxName)
+    {
+        lastCollison = boxName;
+    }
 
-   
+    private void OnMouseUp()
+    {
+        Debug.Log(this.name + " placed in " + lastCollison);
+        logger.sendToLog(this.name + " placed in " + lastCollison);
+    }
 }
