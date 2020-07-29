@@ -198,6 +198,7 @@ public class ShelterVisit : MonoBehaviour
 
     public void Kill()
     {
+        GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear();
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;
         Destroy(this);
