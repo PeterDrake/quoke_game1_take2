@@ -37,7 +37,7 @@ public class MainPauseMenuDisplayer : UIElement
                     child.GetComponent<Button>().onClick.AddListener(delegate { UIManager.Instance.ToggleActive(this); });
                     break;
                 case "exit":
-                    child.GetComponent<Button>().onClick.AddListener(Application.Quit);
+                    child.GetComponent<Button>().onClick.AddListener(gameOver);
                     break;
                 case "settings":
                     child.GetComponent<Button>().onClick.AddListener(settings);
@@ -54,6 +54,11 @@ public class MainPauseMenuDisplayer : UIElement
     public override void Close()
     {
         toggler.SetActive(false);
+    }
+
+    private void gameOver()
+    {
+        SceneManager.LoadScene("EndPage");
     }
 
     private void settings() { }

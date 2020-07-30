@@ -83,7 +83,7 @@ public class MenuDisplayer : UIElement
                     child.GetComponent<Button>().onClick.AddListener(delegate {UIManager.Instance.ToggleActive(this); });
                     break;
                 case "exit":
-                    child.GetComponent<Button>().onClick.AddListener(Application.Quit);
+                    child.GetComponent<Button>().onClick.AddListener(gameover);
                     break;
                 case "mainMenu":
                     child.GetComponent<Button>().onClick.AddListener(mainMenu);
@@ -109,6 +109,11 @@ public class MenuDisplayer : UIElement
     private void mainMenu()
     {
         SceneManager.LoadScene(mainMenuSceneIndex);
+    }
+
+    private void gameover()
+    {
+        SceneManager.LoadScene("EndPage");
     }
 
     private void settings() { }
