@@ -5,7 +5,6 @@ using UnityEngine;
 public class FlatFollow : MonoBehaviour
 {
     public GameObject following;
-    [Header("Height of camera: 13.5, Height of Chars: 1.7")]
     public float height;
     public bool mobile;
     public bool startReal;
