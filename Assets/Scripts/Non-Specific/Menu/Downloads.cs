@@ -36,7 +36,7 @@ public class Downloads : Singleton<LogToServer>
         }
         else
         {
-            Debug.Log("Downloaded Successfully");
+            Debug.Log("Downloaded " + docname + " Successfully");
         }
 
     }

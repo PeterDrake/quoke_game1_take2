@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 227470435}
   - component: {fileID: 227470434}
   - component: {fileID: 227470439}
+  - component: {fileID: 227470438}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -295,6 +296,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &227470438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227470433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6b312ae412c4c9d8f529c62b99c4ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &227470439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +641,6 @@ GameObject:
   - component: {fileID: 602934328}
   - component: {fileID: 602934327}
   - component: {fileID: 602934326}
-  - component: {fileID: 602934329}
   m_Layer: 5
   m_Name: download
   m_TagString: Untagged
@@ -699,8 +711,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 602934329}
-        m_MethodName: sendToLog
+      - m_Target: {fileID: 227470438}
+        m_MethodName: downloadResource
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -747,18 +759,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602934324}
   m_CullTransparentMesh: 0
---- !u!114 &602934329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602934324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &662709731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1314,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986392827}
   m_CullTransparentMesh: 0
+--- !u!1 &989447147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989447149}
+  - component: {fileID: 989447148}
+  m_Layer: 0
+  m_Name: Downloader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &989447148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989447147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &989447149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989447147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 406.74393, y: 380.51288, z: -196.33252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1010699852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2226,6 @@ GameObject:
   - component: {fileID: 1461822585}
   - component: {fileID: 1461822584}
   - component: {fileID: 1461822583}
-  - component: {fileID: 1461822586}
   m_Layer: 5
   m_Name: download
   m_TagString: Untagged
@@ -2254,8 +2296,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1461822586}
-        m_MethodName: sendToLog
+      - m_Target: {fileID: 227470438}
+        m_MethodName: downloadResource
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2302,18 +2344,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461822581}
   m_CullTransparentMesh: 0
---- !u!114 &1461822586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1461822581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1584808156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3107,7 +3137,6 @@ GameObject:
   - component: {fileID: 1989775812}
   - component: {fileID: 1989775811}
   - component: {fileID: 1989775810}
-  - component: {fileID: 1989775813}
   m_Layer: 5
   m_Name: download
   m_TagString: Untagged
@@ -3178,8 +3207,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1989775813}
-        m_MethodName: sendToLog
+      - m_Target: {fileID: 227470438}
+        m_MethodName: downloadResource
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3226,18 +3255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989775808}
   m_CullTransparentMesh: 0
---- !u!114 &1989775813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1989775808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56f0b1f1d84d46599edfe1a464d44f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1991914708
 GameObject:
   m_ObjectHideFlags: 0
