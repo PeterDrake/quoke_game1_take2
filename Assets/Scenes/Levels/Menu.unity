@@ -2445,7 +2445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Done
+  m_Text: 'Post-Game Resources
 
 '
 --- !u!222 &1245066767
@@ -2776,7 +2776,7 @@ GameObject:
   - component: {fileID: 1369863079}
   - component: {fileID: 1369863078}
   m_Layer: 5
-  m_Name: Im Done
+  m_Name: PostGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2799,8 +2799,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -321.4}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 49.999977, y: -314.2}
+  m_SizeDelta: {x: 237.07462, y: 44.451492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369863078
 MonoBehaviour:
