@@ -19,7 +19,9 @@ public class ChangePointersOrAlerts : DialogueOutcome
         }
         else 
         { 
-            GameObject.Find(targetGameObject).GetComponent<FlatFollow>().disappear(); 
+            GameObject.Find(targetGameObject).GetComponent<FlatFollow>().disappear();
+            Debug.Log("Finished Speaking to " + targetGameObject.Replace("Alert", ""));
+
         }
     }
 }
