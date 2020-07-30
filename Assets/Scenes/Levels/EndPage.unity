@@ -538,6 +538,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429904282}
   m_CullTransparentMesh: 0
+--- !u!1 &522977764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522977765}
+  - component: {fileID: 522977767}
+  - component: {fileID: 522977766}
+  m_Layer: 5
+  m_Name: names
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &522977765
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522977764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
+  m_Children: []
+  m_Father: {fileID: 1415951806}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.2989, y: 438}
+  m_SizeDelta: {x: 801.89136, y: 800.9403}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &522977766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522977764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: b51a3e520f9164da198dc59c8acfccd6, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "National Science Foundation Humans, Disasters, and the Built Environment
+    for funding our research with Award 1917148\nFaculty researchers: Liz Safran,
+    Peter Drake, Erik Nilsen, Bryan Sebok\nAssistant Researchers: Blythe Ballesteros
+    \u201820, Natalie Casson \u201820, Elise Gilmore \u201820, Annabel Paris \u201822,
+    Lana Parezanin \u201823, Ela Pencl \u201821, and Sarah Wood \u201822\nPrevious
+    Rogers interns: Rachel Aragaki, Gabe Mertz, Peter Huizenga, Liza Clairagneau\nSoftware
+    Development Students\nFocus Group participants\nPortland Bureau of Emergency
+    Management (EM) collaborators:\nJustin Ross, Alice Busch, Multnomah Co. EM\nChris
+    Walsh, Washington Co. EM\nJay Wilson, Clackamas Co. EM\nSusan Romanski, Vanessa
+    Jones, Mercy Corps\nRegina Ingabire, Jeremy VanKeuren, Da\u2019Von Wilson-Angel,
+    Portland Bureau of EM\n"
+--- !u!222 &522977767
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522977764}
+  m_CullTransparentMesh: 0
 --- !u!1 &570247672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,7 +1827,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -117.2, y: 98.5}
+  m_AnchoredPosition: {x: -154, y: 71}
   m_SizeDelta: {x: 24.464249, y: 24.464249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1082425558
@@ -2140,7 +2228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.1, y: 97}
+  m_AnchoredPosition: {x: 33.1, y: 69.5}
   m_SizeDelta: {x: 1042.363, y: 284.61523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1357789058
@@ -2163,9 +2251,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 04a842e316b6f44bf8da702de26a8ed6, type: 3}
+    m_Font: {fileID: 12800000, guid: b51a3e520f9164da198dc59c8acfccd6, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
@@ -2175,7 +2263,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: "@cascadia9game \t\t\t\t\tfacebook.com/cascadianinegame.lewisandclark"
+  m_Text: "@cascadia9game\t\t\tfacebook.com/cascadianinegame.lewisandclark"
 --- !u!222 &1357789059
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2279,7 +2367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1415951806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2293,8 +2381,8 @@ RectTransform:
   m_Children:
   - {fileID: 429904283}
   - {fileID: 1794760842}
-  - {fileID: 1821391609}
   - {fileID: 1664542054}
+  - {fileID: 522977765}
   - {fileID: 1357789057}
   - {fileID: 2143068702}
   - {fileID: 1082425557}
@@ -2787,11 +2875,11 @@ RectTransform:
   m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
   m_Children: []
   m_Father: {fileID: 1415951806}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00022221, y: 161}
+  m_AnchoredPosition: {x: -0.00022221, y: 133.5}
   m_SizeDelta: {x: 1024.0001, y: 284.61523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664542055
@@ -2938,7 +3026,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Special Thank You To . . .
+  m_Text: A Special Thank You To . . .
 --- !u!222 &1794760844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3024,92 +3112,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818958074}
-  m_CullTransparentMesh: 0
---- !u!1 &1821391608
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1821391609}
-  - component: {fileID: 1821391611}
-  - component: {fileID: 1821391610}
-  m_Layer: 5
-  m_Name: instructions (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1821391609
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821391608}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
-  m_Children: []
-  m_Father: {fileID: 1415951806}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00010463154, y: 470}
-  m_SizeDelta: {x: 1024.0001, y: 800.9403}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1821391610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821391608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 04a842e316b6f44bf8da702de26a8ed6, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: "John S. Rogers Science Research Program\nFaculty researchers: Liz Safran,
-    Peter Drake, Erik Nilsen, Bryan Sebok\nPrevious Rogers interns: Rachel Aragaki,
-    Gabe Mertz, Peter Huizenga, Liza Clairagneau\nSoftware Development Students\nFocus
-    Group participants\nPortland Bureau of Emergency Management (EM) collaborators:\nJustin
-    Ross, Alice Busch, Multnomah Co. EM\nChris Walsh, Washington Co. EM\nJay Wilson,
-    Clackamas Co. EM\nSusan Romanski, Vanessa Jones, Mercy Corps\nRegina Ingabire,
-    Jeremy VanKeuren, Da\u2019Von Wilson-Angel, Portland Bureau of EM\nNSF Humans,
-    Disasters, and the Built Environment Program for funding our research (award
-    1917148)"
---- !u!222 &1821391611
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821391608}
   m_CullTransparentMesh: 0
 --- !u!1 &1831293236
 GameObject:
@@ -3644,7 +3646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -492, y: 97.61}
+  m_AnchoredPosition: {x: -471, y: 70.11}
   m_SizeDelta: {x: 52.55755, y: 30.720165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143068703
