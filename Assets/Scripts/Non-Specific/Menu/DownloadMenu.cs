@@ -20,17 +20,18 @@ public class DownloadMenu: MonoBehaviour
     //downloads the document with the name you give it
     public void downloadResource(string docname)
     {
+        icon = gameObject.GetComponent<Image>();
+        icon.color = Color.green;
+        button.interactable = false;
         logger.sendToLog("Downloaded " + docname + " document");
     Application.OpenURL("/downloadHandout.php/?docname="+docname);
     /*
         downloader = GameObject.Find("Downloader").GetComponent<Downloads>();
         downloader.sendToLog(docname); */
-        icon = gameObject.GetComponent<Image>();
         /*
         downloader = GameObject.Find("Downloader").GetComponent<Downloads>();
         downloader.sendToLog(docname);
         */
-        icon.color = Color.green;
-        button.interactable = false;
+
     }
 }
