@@ -41,7 +41,15 @@ public class StarShow : MonoBehaviour
         if (SavedData.levelThreeDone)
         {
             Star3.SetActive(true);
+            Star2.SetActive(false);
         }
+
+        if (SavedData.levelThreeDone && SavedData.levelTwoDone)
+        {
+            Star3.SetActive(true);
+            Star2.SetActive(true);
+        }
+
         if (SavedData.levelFourDone)
         {
             Star4.SetActive(true);
