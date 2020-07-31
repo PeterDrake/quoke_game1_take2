@@ -64,7 +64,8 @@ public class SanitationBuilt : MonoBehaviour
     {
         if ((Conditions ^ 0xF) == 0)
         {
-            GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear();
+            if (GameObject.Find("AhmadAlert") != null)
+            { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;

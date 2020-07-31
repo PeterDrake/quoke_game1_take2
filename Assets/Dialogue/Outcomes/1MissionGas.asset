@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 1MissionGas
   m_EditorClassIdentifier: 
   ObjectiveName: MissionGas
-  words: Shut of the gas
+  words: Shut off the gas
+  ItemToFind: {fileID: 0}
   Find: 1
   Found: 0

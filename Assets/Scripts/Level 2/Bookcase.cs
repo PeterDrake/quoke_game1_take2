@@ -117,7 +117,8 @@ public class Bookcase : MonoBehaviour
             _interact.SetInteractText("");
             Systems.Objectives.Satisfy("BOOKCASE");
             Systems.Inventory.RemoveItem(CheckItem, 1);
-            GameObject.Find("BookcasePointer").GetComponent<FlatFollow>().disappear();
+            if (GameObject.Find("BookcasePointer") != null)
+            { GameObject.Find("BookcasePointer").GetComponent<FlatFollow>().disappear(); }
             Disable(); 
         }
     }

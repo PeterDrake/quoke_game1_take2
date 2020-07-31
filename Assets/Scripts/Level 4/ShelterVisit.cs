@@ -198,9 +198,12 @@ public class ShelterVisit : MonoBehaviour
 
     public void Kill()
     {
-        GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear();
-        GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().appear();
-        GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear();
+        if (GameObject.Find("SchoolPointer") != null)
+        { GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear(); }
+        if (GameObject.Find("BarrelPointer") != null)
+        { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().appear(); }
+        if (GameObject.Find("AhmadAlert") != null)
+        { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
 
         Systems.Status.AffectWarmth(50);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();

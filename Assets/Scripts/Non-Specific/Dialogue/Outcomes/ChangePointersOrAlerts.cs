@@ -11,8 +11,13 @@ public class ChangePointersOrAlerts : DialogueOutcome
 
     public bool makeAppear;
 
+    private GameObject target;
+
     public override void DoOutcome(ref NPC n)
     {
+        target = GameObject.Find(targetGameObject);
+        if (target == null) return;
+
         if (makeAppear)
         {
             GameObject.Find(targetGameObject).GetComponent<FlatFollow>().appear();
