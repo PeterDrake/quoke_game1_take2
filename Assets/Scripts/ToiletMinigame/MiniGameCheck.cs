@@ -16,22 +16,22 @@ public class MiniGameCheck : MonoBehaviour
 
     public Button theButton;
 
-    private bool lastMouseState = false;
-
-
-    
     public void OnTriggerEnter(Collider other)
     {
+        print("enter");
         //lastCollision = other.tag + " put in " + correctTag + " box";
         other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
+  
+        print("stay");
         if (other.CompareTag(correctTag))
         {
-            
             //Debug.Log(correctTag +" is correct");
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
+            this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/GreenCorrect");
             if (correctTag == "Bucket")
             {
-                if (this.name == "PeeBucketBox") {
+                if (this.name == "PeeBucketBox")
+                {
                     MasterCheck.PeeBucket = true;
                 }
                 else if (this.name == "PooBucketBox")
@@ -60,7 +60,7 @@ public class MiniGameCheck : MonoBehaviour
             {
                 MasterCheck.Pee = true;
             }
-            
+
             if (MasterCheck.PeeBucket && MasterCheck.PooBucket && MasterCheck.PlasticBag && MasterCheck.Poop && MasterCheck.ToiletPaper && MasterCheck.Sawdust && MasterCheck.Pee)
             {
                 StartCoroutine(BlinkText());
@@ -68,10 +68,12 @@ public class MiniGameCheck : MonoBehaviour
         }
         else
         {
+            this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/RedWrong");
             //Debug.Log("An item is in the wrong place"); 
         }
     }
-    
+
+
     public IEnumerator BlinkText()
     {
         while (true)
@@ -85,13 +87,16 @@ public class MiniGameCheck : MonoBehaviour
     }
 
 
-public void OnTriggerExit(Collider other)
-{
-   if (other.CompareTag(correctTag))
-   {
-       MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-       if (correctTag == "Bucket")
-       {
+    public void OnTriggerExit(Collider other)
+    {
+        print("exit");
+        this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/EthanWhite");
+
+        if (other.CompareTag(correctTag))
+        {
+            MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
+            if (correctTag == "Bucket")
+            {
                 if (this.name == "Place1a")
                 {
                     MasterCheck.PeeBucket = false;
@@ -101,31 +106,32 @@ public void OnTriggerExit(Collider other)
                     MasterCheck.PooBucket = false;
                 }
             }
-       else if (correctTag == "PlasticBag")
-       {
-           MasterCheck.PlasticBag = false;
-       }
-       else if (correctTag == "Poop")
-       {
-           MasterCheck.Poop = false;
-       }
-       else if (correctTag == "ToiletPaper")
-       {
-           MasterCheck.ToiletPaper = false;
-       }
-       else if (correctTag == "Sawdust")
-       {
-           MasterCheck.Sawdust = false;
-       }
-       else if (correctTag == "Pee")
-       {
-           MasterCheck.Pee = false;
-       }
-   }
-   else
-   {
-       //Debug.Log("An item is in the wrong place"); 
-   }
-} 
+            else if (correctTag == "PlasticBag")
+            {
+                MasterCheck.PlasticBag = false;
+            }
+            else if (correctTag == "Poop")
+            {
+                MasterCheck.Poop = false;
+            }
+            else if (correctTag == "ToiletPaper")
+            {
+                MasterCheck.ToiletPaper = false;
+            }
+            else if (correctTag == "Sawdust")
+            {
+                MasterCheck.Sawdust = false;
+            }
+            else if (correctTag == "Pee")
+            {
+                MasterCheck.Pee = false;
+            }
+        }
+        else
+        {
+            //Debug.Log("An item is in the wrong place"); 
+        }
+
+    }
 
 }
