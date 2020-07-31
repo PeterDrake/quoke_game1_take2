@@ -13,6 +13,7 @@ public class MiniGameCheck : MonoBehaviour
     public string correctTag;
 
     private MiniGameMaster MasterCheck;
+    private BlinkFrame BlinkFrame;
 
     public Button theButton;
 
@@ -21,8 +22,8 @@ public class MiniGameCheck : MonoBehaviour
         print("enter");
         //lastCollision = other.tag + " put in " + correctTag + " box";
         other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
-  
-        print("stay");
+        BlinkFrame = gameObject.GetComponent<BlinkFrame>();
+        BlinkFrame.Blink();
         if (other.CompareTag(correctTag))
         {
             //Debug.Log(correctTag +" is correct");
@@ -90,6 +91,7 @@ public class MiniGameCheck : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         print("exit");
+        BlinkFrame.StopBlink();
         this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/EthanWhite");
 
         if (other.CompareTag(correctTag))
