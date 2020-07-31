@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Water;
@@ -50,12 +51,16 @@ public class PitLatrineVisit : MonoBehaviour
     {
         if (_inventory.HasItem(Shovel, 1) && _inventory.HasItem(Rope, 1))
         {
-            GameObject.Find("LatrineLowPointer").GetComponent<FlatFollow>().disappear();
+            if (GameObject.Find("LatrineLowPointer") != null)
+            { GameObject.Find("LatrineLowPointer").GetComponent<FlatFollow>().disappear(); }
             if (SituationNumber == 2) 
-            { 
-                GameObject.Find("LatrineHighPointer").GetComponent<FlatFollow>().disappear();
-                GameObject.Find("FrankAlert").GetComponent<FlatFollow>().appear();
-                GameObject.Find("ZeldaAlert").GetComponent<FlatFollow>().appear();
+            {
+                if (GameObject.Find("LatrineHighPointer") != null)
+                { GameObject.Find("LatrineHighPointer").GetComponent<FlatFollow>().disappear(); }
+                if (GameObject.Find("FrankAlert") != null)
+                { GameObject.Find("FrankAlert").GetComponent<FlatFollow>().appear(); }
+                if (GameObject.Find("ZeldaAlert") != null)
+                { GameObject.Find("ZeldaAlert").GetComponent<FlatFollow>().appear(); }
             }
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
