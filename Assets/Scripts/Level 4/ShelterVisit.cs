@@ -200,13 +200,21 @@ public class ShelterVisit : MonoBehaviour
     {
         GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear();
         GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().appear();
+        GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear();
+
+        Systems.Status.AffectWarmth(50);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;
+
         Destroy(this);
+
         Rain.SetActive(false);
         Systems.Objectives.Satisfy("RAINSTORM");
         BarrelWithoutWater.SetActive(false);
         BarrelWithWater.SetActive(true);
+        
         Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x,Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
         Maria.transform.position = new Vector3(-213, 0, -260);
         Wheelchair.transform.position = new Vector3(-213, 0, -260);
