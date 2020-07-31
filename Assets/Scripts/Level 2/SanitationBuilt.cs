@@ -121,7 +121,7 @@ public class SanitationBuilt : MonoBehaviour
         toiletMusic.SetActive(false);
         _interact.enabled = true;
     }
-    private void MiniGameFinished()//this is not getting called
+    private void MiniGameFinished()
     {
         Systems.Status.UnPause();
 
@@ -153,6 +153,8 @@ public class SanitationBuilt : MonoBehaviour
 
         Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+
+        Systems.Status.SpeedUpWarmthLoss();
     }
 
     public void MiniGameWon()

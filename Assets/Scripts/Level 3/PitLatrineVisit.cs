@@ -156,6 +156,8 @@ public class PitLatrineVisit : MonoBehaviour
         Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
 
+        Systems.Status.SpeedUpWarmthLoss();
+
         //Place2.SetActive(false);
         UIManager.Instance.ToggleActive(theGUI);
         Destroy(Place1);
