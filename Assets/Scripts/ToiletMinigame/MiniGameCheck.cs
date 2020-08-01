@@ -18,7 +18,7 @@ public class MiniGameCheck : MonoBehaviour
     public Button theButton;
     
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         other.gameObject.GetComponent<DragObject>().inBox = true;
         print("enter");

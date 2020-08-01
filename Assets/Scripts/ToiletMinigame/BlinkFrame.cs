@@ -23,38 +23,17 @@ public class BlinkFrame : MonoBehaviour
     public void Blink()
     {
         print("BLINKKKINHG");
-        StartCoroutine("BlinkF");
-       
-    }
+        frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
+        frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
+        frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
+        frame4.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
 
-    private IEnumerator BlinkF()
-    {
-        for(int i = 1; i > 0; i ++)
-        { 
-            if (blinkOn)
-            { 
-                frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
-                frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
-                frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
-                frame4.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
-                blinkOn = false;
-            }
-            else
-            {
-                frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
-                frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
-                frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
-                frame4.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
-                blinkOn = true;
-            }
-            yield return new WaitForSeconds(.3f);
-        }
+
     }
 
     public void StopBlink()
     {
         print("stooppppp blinkkking");
-        StopCoroutine("BlinkF");
         frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
