@@ -98,6 +98,10 @@ public class DragObject : MonoBehaviour
             {
                 this.transform.position = new Vector3(place.x, home.y-.1f, place.z);
             }
+            if (tag == "ToiletPaper")
+            {
+                this.transform.position = new Vector3(place.x +.2f, home.y - .1f, place.z);
+            }
             last.GetComponent<MiniGameCheck>().StatusCheck(this.GetComponent<Collider>());
         }
         else if (!inBox)
