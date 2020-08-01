@@ -6,16 +6,20 @@ using UnityEngine;
 public class DragObject : MonoBehaviour
 {
     private Vector3 mOffset;
+    public bool inBox = false;
 
     private String lastCollison = "mouse released with no placements";
 
     private float mZCoord;
 
+    private Vector3 place;
+    private Vector3 home;
 
     private LogToServer logger;
 
     private void Awake()
     {
+        home = this.transform.position;
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
 
@@ -63,6 +67,7 @@ public class DragObject : MonoBehaviour
     {
 
         transform.position = GetMouseAsWorldPoint() + mOffset;
+        print("m offset ==== " + mOffset);
 
     }
 
@@ -74,6 +79,19 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        if (inBox)
+        {
+            place = GameObject.Find(lastCollison).transform.position;
+            this.transform.position = new Vector3(place.x, place.y, place.z);
+
+        }
+        else if (!inBox)
+        {
+            this.transform.position = home;
+            
+            SetLastCollision("Home");
+        }
+        print("PLACE OF THIS OBKECT IS " + place);
         Debug.Log(this.name + " placed in " + lastCollison);
         logger.sendToLog(this.name + " placed in " + lastCollison);
     }

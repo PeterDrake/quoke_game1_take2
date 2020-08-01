@@ -16,9 +16,11 @@ public class MiniGameCheck : MonoBehaviour
     private BlinkFrame BlinkFrame;
 
     public Button theButton;
+    
 
     public void OnTriggerEnter(Collider other)
     {
+        other.gameObject.GetComponent<DragObject>().inBox = true;
         print("enter");
         //lastCollision = other.tag + " put in " + correctTag + " box";
         other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
@@ -28,7 +30,7 @@ public class MiniGameCheck : MonoBehaviour
         {
             //Debug.Log(correctTag +" is correct");
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-            this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/GreenCorrect");
+            //this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/GreenCorrect");
             if (correctTag == "Bucket")
             {
                 if (this.name == "PeeBucketBox")
@@ -69,7 +71,7 @@ public class MiniGameCheck : MonoBehaviour
         }
         else
         {
-            this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/RedWrong");
+            //this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/RedWrong");
             //Debug.Log("An item is in the wrong place"); 
         }
     }
@@ -90,9 +92,10 @@ public class MiniGameCheck : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
+        other.gameObject.GetComponent<DragObject>().inBox = false;
         print("exit");
         BlinkFrame.StopBlink();
-        this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/EthanWhite");
+        //this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/EthanWhite");
 
         if (other.CompareTag(correctTag))
         {
