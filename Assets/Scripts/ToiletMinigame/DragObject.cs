@@ -89,7 +89,7 @@ public class DragObject : MonoBehaviour
         {
             last = GameObject.Find(lastCollison);
             place = last.transform.position;
-            this.transform.position = new Vector3(place.x, place.y, place.z);
+            this.transform.position = new Vector3(place.x, home.y, place.z);
             last.GetComponent<MiniGameCheck>().StatusCheck(this.GetComponent<Collider>());
         }
         else if (!inBox)

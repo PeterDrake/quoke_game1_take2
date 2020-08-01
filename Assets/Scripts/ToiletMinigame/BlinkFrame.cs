@@ -32,7 +32,6 @@ public class BlinkFrame : MonoBehaviour
 
     public void StopBlink()
     {
-        print("stooppppp blinkkking");
         frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
