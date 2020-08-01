@@ -90,6 +90,14 @@ public class DragObject : MonoBehaviour
             last = GameObject.Find(lastCollison);
             place = last.transform.position;
             this.transform.position = new Vector3(place.x, home.y, place.z);
+            if(tag == "Poop")
+            {
+                this.transform.position = new Vector3(place.x+ .1f , home.y - .2f, place.z-.6f);
+            }
+            if (tag == "Bucket")
+            {
+                this.transform.position = new Vector3(place.x, home.y-.1f, place.z);
+            }
             last.GetComponent<MiniGameCheck>().StatusCheck(this.GetComponent<Collider>());
         }
         else if (!inBox)
