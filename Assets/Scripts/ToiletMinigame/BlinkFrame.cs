@@ -22,7 +22,6 @@ public class BlinkFrame : MonoBehaviour
 
     public void Blink()
     {
-        print("BLINKKKINHG");
         frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
         frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");
         frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Mirror");

@@ -21,8 +21,6 @@ public class MiniGameCheck : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         other.gameObject.GetComponent<DragObject>().inBox = true;
-        print("enter");
-        //lastCollision = other.tag + " put in " + correctTag + " box";
         other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
         BlinkFrame = gameObject.GetComponent<BlinkFrame>();
         BlinkFrame.Blink();
@@ -36,7 +34,6 @@ public class MiniGameCheck : MonoBehaviour
             theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
             yield return new WaitForSeconds(.3f);
             theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
-            //theButton.colors = Color.white;
             yield return new WaitForSeconds(.3f);
         }
     }
@@ -101,6 +98,8 @@ public class MiniGameCheck : MonoBehaviour
         else
         {
             BlinkFrame.Wrong();
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+
             //Debug.Log("An item is in the wrong place"); 
         }
     }

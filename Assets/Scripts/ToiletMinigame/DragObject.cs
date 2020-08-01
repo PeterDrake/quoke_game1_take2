@@ -14,18 +14,25 @@ public class DragObject : MonoBehaviour
 
     private Vector3 place;
     private Vector3 home;
+    private GameObject last;
 
     private LogToServer logger;
 
     private void Awake()
     {
         home = this.transform.position;
+
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
 
     void OnMouseDown()
 
     {
+        if (last != null)
+        {
+            last.GetComponent<BoxCollider>().enabled = true;
+        }
+
 
         mZCoord = Camera.main.WorldToScreenPoint(
 
@@ -65,10 +72,7 @@ public class DragObject : MonoBehaviour
     void OnMouseDrag()
 
     {
-
         transform.position = GetMouseAsWorldPoint() + mOffset;
-        print("m offset ==== " + mOffset);
-
     }
 
 
@@ -83,7 +87,7 @@ public class DragObject : MonoBehaviour
 
         if (inBox)
         {
-            GameObject last = GameObject.Find(lastCollison);
+            last = GameObject.Find(lastCollison);
             place = last.transform.position;
             this.transform.position = new Vector3(place.x, place.y, place.z);
             last.GetComponent<MiniGameCheck>().StatusCheck(this.GetComponent<Collider>());
