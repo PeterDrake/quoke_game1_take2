@@ -79,11 +79,14 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseUp()
     {
+        
+
         if (inBox)
         {
-            place = GameObject.Find(lastCollison).transform.position;
+            GameObject last = GameObject.Find(lastCollison);
+            place = last.transform.position;
             this.transform.position = new Vector3(place.x, place.y, place.z);
-
+            last.GetComponent<MiniGameCheck>().StatusCheck(this.GetComponent<Collider>());
         }
         else if (!inBox)
         {

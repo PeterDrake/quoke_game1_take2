@@ -26,11 +26,40 @@ public class MiniGameCheck : MonoBehaviour
         other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
         BlinkFrame = gameObject.GetComponent<BlinkFrame>();
         BlinkFrame.Blink();
-        if (other.CompareTag(correctTag))
+    }
+
+
+    public IEnumerator BlinkText()
+    {
+        while (true)
         {
+            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            yield return new WaitForSeconds(.3f);
+            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            //theButton.colors = Color.white;
+            yield return new WaitForSeconds(.3f);
+        }
+    }
+
+
+    public void OnTriggerExit(Collider other)
+    {
+        other.gameObject.GetComponent<DragObject>().inBox = false;
+        print("exit");
+        BlinkFrame.StopBlink();
+    }
+
+
+    public void StatusCheck(Collider other)
+    {
+        BlinkFrame.StopBlink();
+        if (other.CompareTag(correctTag))
+        { 
             //Debug.Log(correctTag +" is correct");
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-            //this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/GreenCorrect");
+            BlinkFrame.Correct();
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Destroy(other.GetComponent<DragObject>());
             if (correctTag == "Bucket")
             {
                 if (this.name == "PeeBucketBox")
@@ -71,72 +100,9 @@ public class MiniGameCheck : MonoBehaviour
         }
         else
         {
-            //this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/RedWrong");
+            BlinkFrame.Wrong();
             //Debug.Log("An item is in the wrong place"); 
         }
-    }
-
-
-    public IEnumerator BlinkText()
-    {
-        while (true)
-        {
-            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
-            yield return new WaitForSeconds(.3f);
-            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
-            //theButton.colors = Color.white;
-            yield return new WaitForSeconds(.3f);
-        }
-    }
-
-
-    public void OnTriggerExit(Collider other)
-    {
-        other.gameObject.GetComponent<DragObject>().inBox = false;
-        print("exit");
-        BlinkFrame.StopBlink();
-        //this.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/EthanWhite");
-
-        if (other.CompareTag(correctTag))
-        {
-            MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-            if (correctTag == "Bucket")
-            {
-                if (this.name == "Place1a")
-                {
-                    MasterCheck.PeeBucket = false;
-                }
-                else if (this.name == "Place1")
-                {
-                    MasterCheck.PooBucket = false;
-                }
-            }
-            else if (correctTag == "PlasticBag")
-            {
-                MasterCheck.PlasticBag = false;
-            }
-            else if (correctTag == "Poop")
-            {
-                MasterCheck.Poop = false;
-            }
-            else if (correctTag == "ToiletPaper")
-            {
-                MasterCheck.ToiletPaper = false;
-            }
-            else if (correctTag == "Sawdust")
-            {
-                MasterCheck.Sawdust = false;
-            }
-            else if (correctTag == "Pee")
-            {
-                MasterCheck.Pee = false;
-            }
-        }
-        else
-        {
-            //Debug.Log("An item is in the wrong place"); 
-        }
-
     }
 
 }

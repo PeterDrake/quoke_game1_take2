@@ -60,4 +60,20 @@ public class BlinkFrame : MonoBehaviour
         frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame4.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
     }
+
+    public void Correct()
+    {
+        frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Green");
+        frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Green");
+        frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Green");
+        frame4.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Green");
+    }
+
+    public void Wrong()
+    {
+        frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Red");
+        frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Red");
+        frame3.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Red");
+        frame4.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Red");
+    }
 }
