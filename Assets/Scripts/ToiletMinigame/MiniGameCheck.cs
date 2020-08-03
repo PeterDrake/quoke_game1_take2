@@ -13,25 +13,54 @@ public class MiniGameCheck : MonoBehaviour
     public string correctTag;
 
     private MiniGameMaster MasterCheck;
+    private BlinkFrame BlinkFrame;
 
     public Button theButton;
-
-    private bool lastMouseState = false;
-
-
     
-    public void OnTriggerEnter(Collider other)
+
+    public void OnTriggerStay(Collider other)
     {
-        //lastCollision = other.tag + " put in " + correctTag + " box";
+        other.gameObject.GetComponent<DragObject>().inBox = true;
         other.gameObject.GetComponent<DragObject>().SetLastCollision(this.name);
-        if (other.CompareTag(correctTag))
+        BlinkFrame = gameObject.GetComponent<BlinkFrame>();
+        BlinkFrame.Blink();
+    }
+
+
+    public IEnumerator BlinkText()
+    {
+        while (true)
         {
-            
+            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            yield return new WaitForSeconds(.3f);
+            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            yield return new WaitForSeconds(.3f);
+        }
+    }
+
+
+    public void OnTriggerExit(Collider other)
+    {
+        other.gameObject.GetComponent<DragObject>().inBox = false;
+        print("exit");
+        BlinkFrame.StopBlink();
+    }
+
+
+    public void StatusCheck(Collider other)
+    {
+        BlinkFrame.StopBlink();
+        if (other.CompareTag(correctTag))
+        { 
             //Debug.Log(correctTag +" is correct");
             MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
+            BlinkFrame.Correct();
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+            Destroy(other.GetComponent<DragObject>());
             if (correctTag == "Bucket")
             {
-                if (this.name == "PeeBucketBox") {
+                if (this.name == "PeeBucketBox")
+                {
                     MasterCheck.PeeBucket = true;
                 }
                 else if (this.name == "PooBucketBox")
@@ -60,7 +89,7 @@ public class MiniGameCheck : MonoBehaviour
             {
                 MasterCheck.Pee = true;
             }
-            
+
             if (MasterCheck.PeeBucket && MasterCheck.PooBucket && MasterCheck.PlasticBag && MasterCheck.Poop && MasterCheck.ToiletPaper && MasterCheck.Sawdust && MasterCheck.Pee)
             {
                 StartCoroutine(BlinkText());
@@ -68,64 +97,11 @@ public class MiniGameCheck : MonoBehaviour
         }
         else
         {
+            BlinkFrame.Wrong();
+            gameObject.GetComponent<BoxCollider>().enabled = false;
+
             //Debug.Log("An item is in the wrong place"); 
         }
     }
-    
-    public IEnumerator BlinkText()
-    {
-        while (true)
-        {
-            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
-            yield return new WaitForSeconds(.3f);
-            theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
-            //theButton.colors = Color.white;
-            yield return new WaitForSeconds(.3f);
-        }
-    }
-
-
-public void OnTriggerExit(Collider other)
-{
-   if (other.CompareTag(correctTag))
-   {
-       MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-       if (correctTag == "Bucket")
-       {
-                if (this.name == "Place1a")
-                {
-                    MasterCheck.PeeBucket = false;
-                }
-                else if (this.name == "Place1")
-                {
-                    MasterCheck.PooBucket = false;
-                }
-            }
-       else if (correctTag == "PlasticBag")
-       {
-           MasterCheck.PlasticBag = false;
-       }
-       else if (correctTag == "Poop")
-       {
-           MasterCheck.Poop = false;
-       }
-       else if (correctTag == "ToiletPaper")
-       {
-           MasterCheck.ToiletPaper = false;
-       }
-       else if (correctTag == "Sawdust")
-       {
-           MasterCheck.Sawdust = false;
-       }
-       else if (correctTag == "Pee")
-       {
-           MasterCheck.Pee = false;
-       }
-   }
-   else
-   {
-       //Debug.Log("An item is in the wrong place"); 
-   }
-} 
 
 }
