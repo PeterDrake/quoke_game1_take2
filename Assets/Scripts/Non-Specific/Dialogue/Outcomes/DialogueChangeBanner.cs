@@ -43,8 +43,9 @@ public class DialogueChangeBanner : DialogueOutcome
             // Find task
             if (words.Contains("Find") && current.Contains("Find"))
             {
-                current = current.Replace(", and ", ", ");
-                _banner.ChangeText(current + ", and " + shorten);
+                current = current.Replace(" and ", ", ");
+                current = current + " and " + shorten;
+                _banner.ChangeText(current);
             }
             // any task to replace entire banner
             else
@@ -56,16 +57,31 @@ public class DialogueChangeBanner : DialogueOutcome
         if (Found)
         {
             Debug.Log("Found item");
-                if (current.Contains(", and " + shorten))
-                {
-                current = current.Replace(", and " + shorten, "");
-                current = current.Replace(", ", ", and ");
-                    
-                }
-                current = current.Replace(", " + shorten, "");
-                current = current.Replace(shorten, "");
-                current = current.Replace(" ,", "");
-                current = current.Replace("Find and", "Find");
+
+
+
+
+            //if there are three or more things
+            if (current.Contains(" and " + shorten)) //if the found item is the last in the list
+            {
+                //remove the found item from the list
+                current = current.Replace(" and " + shorten, "");
+                //add "and" in place of commas
+                current = current.Replace(", ", " and ");
+            }
+            //if the found item is not the last in the list
+            else 
+            { 
+                current = current.Replace(shorten + ", ", "");  //if there are commas between the items
+                current = current.Replace(shorten + " and ", "");   //if there is an and after the found item
+            }
+            //current = current.Replace(shorten, "");
+            //current = current.Replace(" ,", "");
+            current = current.Replace(", and ", " and ");
+            current = current.Replace("Find and", "Find");
+
+            //if there is nothing to find
+            
 
                 // found everything go to franks yard in L3
                 if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/CleanMustardWater"), 1)
@@ -75,6 +91,7 @@ public class DialogueChangeBanner : DialogueOutcome
                     _banner.ChangeText("Find Frank's back yard");
                 }
 
+            /*
             else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
             {
                 _banner.ChangeText("Find a rope");
@@ -84,6 +101,7 @@ public class DialogueChangeBanner : DialogueOutcome
             {
                 _banner.ChangeText("Find a shovel");
             }
+            */
 
             //else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/DirtyMustardWater"), 1))
             //{

@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
-  m_Name: 3MissionFindWater
+  m_Name: ResetToSurvivors
   m_EditorClassIdentifier: 
-  ObjectiveName: MissionWater
-  words: Find clean water
-  ItemToFind: {fileID: 11400000, guid: 8499936600b8f4a4b972e21858e93872, type: 2}
-  Find: 1
+  ObjectiveName: Survivors
+  words: 
+  ItemToFind: {fileID: 0}
+  Find: 0
   Found: 0
+  completeReset: 1
+  resetTo: Talk to other survivors

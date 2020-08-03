@@ -47,6 +47,8 @@ public class WaterHeaterVisit : MonoBehaviour
             { GameObject.Find("WaterPointer").GetComponent<FlatFollow>().disappear(); }
             if (GameObject.Find("FrankAlert") != null)
             { GameObject.Find("FrankAlert").GetComponent<FlatFollow>().appear(); }
+            if (GameObject.Find("ZeldaAlert") != null)
+            { GameObject.Find("ZeldaAlert").GetComponent<FlatFollow>().appear(); }
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
