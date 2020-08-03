@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b82b83c023a677e49a42bc17e2f3225e, type: 3}
-  m_Name: BarrelTalk
+  m_Name: 
   m_EditorClassIdentifier: 
   ObjectiveName: BarrelTalk
