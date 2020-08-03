@@ -108,10 +108,7 @@ public class InteractWithMaria : MonoBehaviour
             }
         }
 
-        //if (!ShelterTalk)
-        //{
-        //    Ahmad.SetActive(true);
-        //}
+
 
 
         if (interactionDelayFrames <= 0 && playerInCollider && Input.GetAxis("Interact") > 0)
@@ -161,10 +158,7 @@ public class InteractWithMaria : MonoBehaviour
             timer = .6f;
             blinkOn = false;
         }
-        //if (ShelterTalk)
-        //{
-         //   Ahmad.SetActive(true);
-        //}
+
     }
 
     void OnTriggerStay(Collider other)
