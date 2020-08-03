@@ -219,8 +219,11 @@ public class ShelterVisit : MonoBehaviour
         BarrelWithWater.SetActive(true);
         
         Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x,Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
-        Maria.transform.position = new Vector3(-213, 0, -260);
-        Wheelchair.transform.position = new Vector3(-213, 0, -260);
-        Ahmad.transform.position = new Vector3(-213, 0, -255);
+        Maria.transform.position = new Vector3(-208, 0, -265);
+        Maria.transform.Rotate(0f,230f,0f);
+        Wheelchair.transform.position = new Vector3(-208, 0, -265);
+        Wheelchair.transform.Rotate(0f, 230f, 0f);
+        Ahmad.transform.position = new Vector3(-207, 0, -256);
+        Ahmad.transform.Rotate(0f,130f,0f);
     }
 }
