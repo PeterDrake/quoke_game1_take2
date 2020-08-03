@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Frank 4
   m_EditorClassIdentifier: 
   speech: Nice.
-  optionOneText: What do you plan to use for a toilet?
-  optionOne: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
-  optionTwoText: I'm so thirsty! Do you know where we can find some water?
-  optionTwo: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
+  optionOneText: I'm so thirsty! Do you know where we can find some water?
+  optionOne: {fileID: 11400000, guid: 15c18acec5d3a4e26a2d224876ead980, type: 2}
+  optionTwoText: What do you plan to use for a toilet?
+  optionTwo: {fileID: 11400000, guid: 72269879a2f9745888ba0f8dc24104fe, type: 2}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}

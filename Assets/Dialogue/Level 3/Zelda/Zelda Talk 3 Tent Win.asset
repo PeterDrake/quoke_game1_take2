@@ -22,7 +22,6 @@ MonoBehaviour:
   Outcomes:
   - {fileID: 11400000, guid: e4e423ab946e74934aa82b22fb6c2627, type: 2}
   - {fileID: 11400000, guid: 6e08965a8a99471438f118b933a3c487, type: 2}
-  - {fileID: 11400000, guid: ded5dc027ae8ea442a1ab20cef8b7e0d, type: 2}
   NewHead: {fileID: 0}
   IfRequirementsOne: []
   optionOneTextAlt: 

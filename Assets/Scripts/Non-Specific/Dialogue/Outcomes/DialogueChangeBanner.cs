@@ -19,6 +19,9 @@ public class DialogueChangeBanner : DialogueOutcome
     private bool find;
     public bool Found;
 
+    public bool completeReset;
+    public string resetTo;
+
 
     public override void DoOutcome(ref NPC n)
     {
@@ -117,6 +120,11 @@ public class DialogueChangeBanner : DialogueOutcome
                 {
                     _banner.ChangeText(current);
                 }
+        }
+
+        if (completeReset)
+        {
+            _banner.ChangeText(resetTo);
         }
     }
 }

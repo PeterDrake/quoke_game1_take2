@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda Talk 3 Tent No Gun
+  m_Name: Zelda Talk 3 Tent No More Gun
   m_EditorClassIdentifier: 
   speech: 'Thanks for getting rid of that gun. '
   optionOneText: No problem. It's raining pretty hard. Could I crash in your tent
@@ -20,6 +20,7 @@ MonoBehaviour:
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes:
+  - {fileID: 11400000, guid: e4e423ab946e74934aa82b22fb6c2627, type: 2}
   - {fileID: 11400000, guid: 6e08965a8a99471438f118b933a3c487, type: 2}
   NewHead: {fileID: 0}
   IfRequirementsOne: []
