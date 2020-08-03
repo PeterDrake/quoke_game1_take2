@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class SC_NPCFollowsPC : MonoBehaviour
 {
+
+    public int speed;
+    private int movespeed;
     //Transform that NPC has to follow
     public Transform transformToFollow;
     //NavMesh Agent variable
@@ -30,11 +33,11 @@ public class SC_NPCFollowsPC : MonoBehaviour
     {
         transform.LookAt(Player.transform);
         
-        if (Mathf.Abs(Player.transform.position.x - NPC.transform.position.x) > 2.8  ||
-            Mathf.Abs(Player.transform.position.z - NPC.transform.position.z) > 2.8)
+        if (Mathf.Abs(Player.transform.position.x - NPC.transform.position.x) > 3  ||
+            Mathf.Abs(Player.transform.position.z - NPC.transform.position.z) > 3)
         {
             runs += 1;
-            if (runs > 50)
+            if (runs > 27)
             {
                 
                 animator.SetBool("isRunning", true);
@@ -56,4 +59,24 @@ public class SC_NPCFollowsPC : MonoBehaviour
         agent.SetDestination(transformToFollow.position);
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+
+
+        if (other.tag == "Player")
+        {
+            movespeed = 0;
+        }
+
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        speedup();
+    }
+
+    public void speedup()
+    {
+        movespeed = speed;
+    }
+    
 }
