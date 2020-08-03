@@ -8,6 +8,7 @@ public class InteractWithMaria : MonoBehaviour
 {
     //public ChangePointersOrAlerts ShelterTalk;
     public GameObject Ahmad;
+    public GameObject AlertAhmad;
 
     //-----Material Blinking-------
     public bool BlinkWhenPlayerNear = true;
@@ -51,6 +52,7 @@ public class InteractWithMaria : MonoBehaviour
     private void Awake()
     {
         Ahmad.SetActive(false);
+        AlertAhmad.SetActive(false);
         hasItem = (itemToReceive != null);
         if (hasItem && itemToReceive.Length > 0)
         {
@@ -124,7 +126,7 @@ public class InteractWithMaria : MonoBehaviour
             }
             CallOnInteract.Invoke();
             Ahmad.SetActive(true);
-
+            AlertAhmad.SetActive(true);
             if (DestoryObjectAfterUse)
             {
                 interactText.ToggleVisibility(false);
