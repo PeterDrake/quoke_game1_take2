@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -9,16 +10,28 @@ public class DownloadMenu: MonoBehaviour
     private Image icon;
     public Button button;
 
-    //loads the scene with the name you give it
+    private LogToServer logger;
+
+    private void Start()
+    {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+    }
+
+    //downloads the document with the name you give it
     public void downloadResource(string docname)
     {
         icon = gameObject.GetComponent<Image>();
-        downloader = GameObject.Find("Downloader").GetComponent<Downloads>();
-        downloader.sendToLog(docname);
         icon.color = Color.green;
         button.interactable = false;
-
-
+        logger.sendToLog("Downloaded " + docname + " document");
+    Application.OpenURL("/downloadHandout.php/?docname="+docname);
+    /*
+        downloader = GameObject.Find("Downloader").GetComponent<Downloads>();
+        downloader.sendToLog(docname); */
+        /*
+        downloader = GameObject.Find("Downloader").GetComponent<Downloads>();
+        downloader.sendToLog(docname);
+        */
 
     }
 }

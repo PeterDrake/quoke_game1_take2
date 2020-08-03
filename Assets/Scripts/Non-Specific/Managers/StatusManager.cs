@@ -208,6 +208,11 @@ public class StatusManager : MonoBehaviour
         StartCoroutine(DegradeStatus());
     }
 
+    public void SpeedUpWarmthLoss()
+    {
+        WarmthLossRate = WarmthLossRate * 2;
+    }
+
     public void RefillFlash()
     {
         if (Hydration == 100)

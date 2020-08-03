@@ -14854,6 +14854,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueAlerts
       objectReference: {fileID: 0}
+    - target: {fileID: 4193143511215571763, guid: 73c63b5904222e94f8c3a3468ce5ae53,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4945748307150699889, guid: 73c63b5904222e94f8c3a3468ce5ae53,
         type: 3}
       propertyPath: m_Name
@@ -21619,6 +21624,11 @@ PrefabInstance:
       propertyPath: startReal
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2786121349827433227, guid: 411d025747fc0d541917efa9e1615407,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2786121350116075628, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21678,6 +21688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MapPointers
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786121350116075629, guid: 411d025747fc0d541917efa9e1615407,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2786121350194432226, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}
@@ -107896,7 +107911,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: textOnQuake
-      value: Earthquake! Find a stable object to hide under and press 'C' to crouch
+      value: Earthquake! Find a stable object to hide under and hold 'C' to crouch
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}

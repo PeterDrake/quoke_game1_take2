@@ -69,7 +69,7 @@ public class QuakeManager : MonoBehaviour
     public bool _inSafeZone; // is the player safe (under the table)?
 
     private bool _countdownFinished;
-    private float entranceGracePeriod = 5f;
+    private float entranceGracePeriod = 2f;
     private float _timeTillQuake;
 
     [SerializeField] private float _minimumShakes = 1;

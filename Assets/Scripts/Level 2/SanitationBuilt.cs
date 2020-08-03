@@ -64,7 +64,8 @@ public class SanitationBuilt : MonoBehaviour
     {
         if ((Conditions ^ 0xF) == 0)
         {
-            GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear();
+            if (GameObject.Find("AhmadAlert") != null)
+            { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
@@ -120,7 +121,7 @@ public class SanitationBuilt : MonoBehaviour
         toiletMusic.SetActive(false);
         _interact.enabled = true;
     }
-    private void MiniGameFinished()//this is not getting called
+    private void MiniGameFinished()
     {
         Systems.Status.UnPause();
 
@@ -152,6 +153,8 @@ public class SanitationBuilt : MonoBehaviour
 
         Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+
+        Systems.Status.SpeedUpWarmthLoss();
     }
 
     public void MiniGameWon()
