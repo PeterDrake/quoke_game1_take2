@@ -37,7 +37,7 @@ public class SC_NPCFollowsPC : MonoBehaviour
             Mathf.Abs(Player.transform.position.z - NPC.transform.position.z) > 3)
         {
             runs += 1;
-            if (runs > 27)
+            if (runs > 25)
             {
                 
                 animator.SetBool("isRunning", true);
