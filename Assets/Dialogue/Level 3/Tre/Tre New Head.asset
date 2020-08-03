@@ -21,7 +21,7 @@ MonoBehaviour:
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: ca56d5c637697024684243562fb6aced, type: 2}
+  - {fileID: 11400000, guid: d19cf06f15cb444268b6e175453a09b5, type: 2}
   optionOneTextAlt: 'I''m working on it. '
   optionOneAlt: {fileID: 11400000, guid: f071e77b053c64ffb80ee6920c1d8d8a, type: 2}
   IfRequirementsTwo: []

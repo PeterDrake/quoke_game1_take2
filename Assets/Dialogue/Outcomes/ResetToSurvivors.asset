@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Tre 5
+  m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
+  m_Name: ResetToSurvivors
   m_EditorClassIdentifier: 
-  speech: See you later.
-  optionOneText: 
-  optionOne: {fileID: 0}
-  optionTwoText: 
-  optionTwo: {fileID: 0}
-  Requirements: []
-  Outcomes: []
-  NewHead: {fileID: 0}
+  ObjectiveName: Survivors
+  words: 
+  ItemToFind: {fileID: 0}
+  Find: 0
+  Found: 0
+  completeReset: 1
+  resetTo: Talk to other survivors
