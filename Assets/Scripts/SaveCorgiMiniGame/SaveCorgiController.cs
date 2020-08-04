@@ -8,6 +8,7 @@ public class SaveCorgiController : MonoBehaviour
 
     public GameObject Tarp;
     public GameObject Corgi;
+    public GameObject Banner;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class SaveCorgiController : MonoBehaviour
         if (Tarp.transform.position.x < -116f)
         {
             Destroy(script);
+            Banner.SetActive(false);
             StartCoroutine(nameof(CorgiSit));
             //won
         }
@@ -29,11 +31,4 @@ public class SaveCorgiController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Corgi.GetComponent<Animator>().enabled = true;
     }
-    
-    //First, instructions appear
-    // Then, you move tarp for corgi to jump
-    // animation corgi doesn't want to jump
-    // hot dog Frank comes there
-    // corgi jumps
-    // win screen2
 }
