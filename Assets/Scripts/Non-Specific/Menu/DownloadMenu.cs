@@ -23,7 +23,7 @@ public class DownloadMenu: MonoBehaviour
         icon = gameObject.GetComponent<Image>();
         icon.color = Color.green;
         button.interactable = false;
-        logger.sendToLog("Downloaded " + docname + " document");
+        logger.sendToLog("Downloaded " + docname + " document","DOWNLOAD");
     Application.OpenURL("/downloadHandout.php/?docname="+docname);
     /*
         downloader = GameObject.Find("Downloader").GetComponent<Downloads>();

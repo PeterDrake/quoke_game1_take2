@@ -26,14 +26,14 @@ public class Pamphlet : MonoBehaviour
         if (open)
         {
             Debug.Log("Closed pamphlet");
-            logger.sendToLog("Closed pamphlet");
+            logger.sendToLog("Closed pamphlet","MINIGAME");
             pamphlet.SetActive(false);
             buttonText.text = openText;
         }
         else
         {
             Debug.Log("Opened pamphlet");
-            logger.sendToLog("Opened pamphlet");
+            logger.sendToLog("Opened pamphlet","MINIGAME");
             pamphlet.SetActive(true);
             buttonText.text = closeText;
         }
