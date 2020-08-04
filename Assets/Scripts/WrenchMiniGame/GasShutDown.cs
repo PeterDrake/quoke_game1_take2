@@ -43,7 +43,7 @@ public class GasShutDown : MonoBehaviour
     {
         if ((Conditions ^ 0x1) == 0)
         {
-            logger.sendToLog("Started gas mini game");
+            logger.sendToLog("Started gas mini game","MINIGAME");
             countdown.GetComponent<CountdownBoom>().StopGasCount();
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
@@ -53,7 +53,7 @@ public class GasShutDown : MonoBehaviour
         {
             _interact.SetInteractText("You need to get the wrench!");
             Debug.Log("Opened Gas Minigame without wrench");
-            logger.sendToLog("Opened gas minigame without a wrench");
+            logger.sendToLog("Opened gas minigame without a wrench","MINIGAME");
         }
     }
     //CAMERA, ui, move stage up a lot
@@ -106,7 +106,7 @@ public class GasShutDown : MonoBehaviour
 
     public void GasMiniGameWon()
     {
-        logger.sendToLog("Won gas mini game!");
+        logger.sendToLog("Won gas mini game!","MINIGAME");
         gasAudio.SetActive(false);
         miniWin.SetActive(true);
         levelWin.SetActive(true);

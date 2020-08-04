@@ -9,7 +9,7 @@ public class DemoMenu : MonoBehaviour
     public void loadDemoScene(string sceneName)
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Began " + sceneName);
+        logger.sendToLog("Began " + sceneName,"LEVEL");
         SceneManager.LoadScene(sceneName);
     }
 }

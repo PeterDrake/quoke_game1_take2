@@ -34,7 +34,7 @@ public class VanNextLevel : MonoBehaviour
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
             Trophy.SetActive(true);
             LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-            logger.sendToLog("Completed Level 2!");
+            logger.sendToLog("Completed Level 2!", "LEVEL");
 
             
             levelMusic.SetActive(false);

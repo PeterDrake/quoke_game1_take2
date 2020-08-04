@@ -14,7 +14,7 @@ public class StartDialogue : MonoBehaviour
     public void Interact()
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Began interaction with" + npc.name);
+        logger.sendToLog("Began interaction with" + npc.name, "DIALOGUE");
         Systems.Dialogue.StartDialogue(dialogue,npc,SetNewHead);
     }
 

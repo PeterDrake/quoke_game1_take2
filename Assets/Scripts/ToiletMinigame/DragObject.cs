@@ -75,6 +75,6 @@ public class DragObject : MonoBehaviour
     private void OnMouseUp()
     {
         Debug.Log(this.name + " placed in " + lastCollison);
-        logger.sendToLog(this.name + " placed in " + lastCollison);
+        logger.sendToLog(this.name + " placed in " + lastCollison,"MINIGAME");
     }
 }

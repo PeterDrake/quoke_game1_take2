@@ -209,7 +209,7 @@ public class QuakeManager : MonoBehaviour
 
         Quaking = true;
         Logger.Instance.Log((quakes == 0 ? "Earthquake" : "Aftershock") + " triggered!");
-        logger.sendToLog("Quake triggered!");
+        logger.sendToLog("Quake triggered!","EVENT");
         //StopAllCoroutines();
         StopCoroutine(nameof(QuakeCountdown));
         StopCoroutine(nameof(AftershockTime));

@@ -35,7 +35,7 @@ public class ObjectiveManager : MonoBehaviour
         events.Add(key, false);
         Debug.Log("Registered objective - returned false");
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Objective added: " + key);
+        logger.sendToLog("Objective added: " + key,"OBJECTIVE");
         var ll = new LinkedList<Callback>();
         ll.AddFirst(cb);
         callbacks.Add(key, ll);
@@ -46,7 +46,7 @@ public class ObjectiveManager : MonoBehaviour
     {
         Logger.Instance.Log("Objective Satisfied: "+key);
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Objective satisfied: " + key);
+        logger.sendToLog("Objective satisfied: " + key,"OBJECTIVE");
         if (!events.ContainsKey(key))
         {
             events.Add(key,true);

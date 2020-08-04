@@ -24,7 +24,7 @@ public class ViewHangTag : MonoBehaviour
             //isOpen = true;
             Hangtag.SetActive(true);
             Debug.Log("Opened pamphlet");
-            logger.sendToLog("Opened pamphlet");
+            logger.sendToLog("Opened pamphlet","MINIGAME");
             //Debug.Log("is open should be true = " + isOpen);
 
     }
@@ -33,7 +33,7 @@ public class ViewHangTag : MonoBehaviour
     {
             //isOpen = false;
             Debug.Log("Closed pamphlet");
-            logger.sendToLog("Closed pamphlet");
+            logger.sendToLog("Closed pamphlet","MINIGAME");
             Hangtag.SetActive(false);
             //Debug.Log("isOpen is now false = " + isOpen);
     }

@@ -19,7 +19,7 @@ public class AftershockTrigger : MonoBehaviour
         GameObject.Find("TablePointer").GetComponent<FlatFollow>().disappear();
         //Logger.Instance.Log("Player has left the house");
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Player left the house");
+        logger.sendToLog("Player left the house","LOCATION");
         Destroy(gameObject);
     }
 }

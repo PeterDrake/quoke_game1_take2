@@ -125,21 +125,21 @@ public class StatusManager : MonoBehaviour
         Hydration += deltaH;
         if (Hydration > HydrationMax) Hydration = HydrationMax;
         hydrationChanged = true;
-        logger.sendToLog("Drank water: Hydration changed to " + Hydration);
+        logger.sendToLog("Drank water: Hydration changed to " + Hydration,"STATUS");
     }
     public void AffectRelief(float deltaR)
     {
         Relief += deltaR;
         if (Relief > ReliefMax) Relief = ReliefMax;
         reliefChanged = true;
-        logger.sendToLog("Relieved themselves: Relief changed to " + Relief);
+        logger.sendToLog("Relieved themselves: Relief changed to " + Relief,"STATUS");
     }
     public void AffectWarmth(float deltaW)
     {
         Warmth += deltaW;
         if (Warmth > WarmthMax) Warmth = WarmthMax;
         warmthChanged = true;
-        logger.sendToLog("Warmth changed to " + Warmth);
+        logger.sendToLog("Warmth changed to " + Warmth,"STATUS");
     }
 
     public float GetHydration()
@@ -162,7 +162,7 @@ public class StatusManager : MonoBehaviour
         if (!alive) return;
         alive = false;
         //Logger.Instance.Log("Player killed by: "+textOnDeath);
-        logger.sendToLog("Death: "+ causeOfDeath);
+        logger.sendToLog("Death: "+ causeOfDeath, "DEATH");
         deathDisplay.Activate(textOnDeath);
     }
     
