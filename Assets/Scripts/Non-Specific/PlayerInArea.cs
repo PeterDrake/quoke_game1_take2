@@ -15,7 +15,7 @@ public class PlayerInArea : MonoBehaviour
         {
             //Logger.Instance.Log("Player entered area of: "+name);
             LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-            logger.sendToLog("Player entered area of: " + name);
+            logger.sendToLog("Player entered area of: " + name,"LOCATION");
             OnEnter.Invoke();
         }
     }
@@ -26,7 +26,7 @@ public class PlayerInArea : MonoBehaviour
         {
             //Logger.Instance.Log("Player exited area of: "+name);
             LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-            logger.sendToLog("Player exited area of: " + name);
+            logger.sendToLog("Player exited area of: " + name,"LOCATION");
             OnExit.Invoke();
         }
 

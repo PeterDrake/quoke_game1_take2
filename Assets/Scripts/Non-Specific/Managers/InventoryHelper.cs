@@ -30,7 +30,7 @@ public class InventoryHelper : MonoBehaviour
     {
         //Logger.Instance.Log("Picked up: "+item.name);
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Picked up " + item.name);
+        logger.sendToLog("Picked up " + item.name,"ACTION");
         _inventory.AddItem(item, (byte)amt);
         SavedData.addInv = true;
         CheckOnAdd.Invoke();

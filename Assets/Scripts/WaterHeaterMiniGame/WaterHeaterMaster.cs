@@ -165,7 +165,7 @@ public class WaterHeaterMaster : MonoBehaviour
         RawImage2.SetActive(false);
         RawImage3.SetActive(false);
         Debug.Log("try again message");
-        logger.sendToLog("try again message");
+        logger.sendToLog("try again message","MINIGAME");
         Wrong.SetActive(true);
         yield return new WaitForSeconds(2f);
         Wrong.SetActive(false);

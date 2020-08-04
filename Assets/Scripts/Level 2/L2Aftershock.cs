@@ -16,7 +16,7 @@ public class L2Aftershock : MonoBehaviour
         {
             //Logger.Instance.Log("Aftershock Started");
             LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-            logger.sendToLog("Aftershock Started");
+            logger.sendToLog("Aftershock Started","EVENT");
             Systems.Status.PlayerDeath("Aftershock","The house collapsed in an aftershock!");
             objectDropper.Drop();
         }

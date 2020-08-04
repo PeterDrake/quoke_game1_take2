@@ -25,7 +25,7 @@ public class WrenchMiniGameMaster : MonoBehaviour
             //Debug.Log("Won Gas mini game");
             LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
             //This doesn't seem to print
-            logger.sendToLog("Won gas minigame");
+            logger.sendToLog("Won gas minigame","MINIGAME");
             WinScreen.SetActive(true);
 
            // SceneManager.LoadScene("Level 1", LoadSceneMode.Single);

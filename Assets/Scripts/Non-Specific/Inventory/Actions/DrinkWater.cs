@@ -12,7 +12,7 @@ public class DrinkWater : ItemAction
         Drinkable d = (Drinkable) i;
         //Logger.Instance.Log("Player drank: "+i.name);
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        logger.sendToLog("Player drank " + i.name);
+        logger.sendToLog("Player drank " + i.name,"ACTION");
         if (d.killPlayer) Systems.Status.PlayerDeath(d.DeathMessage, d.DeathMessage);
         Systems.Status.AffectHydration(d.hydrationChange);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();

@@ -25,17 +25,18 @@ public class LogToServer : Singleton<LogToServer>
 
     // Update is called once per frame
 
-    public void sendToLog(String message)
+    public void sendToLog(String message, String category)
     {
        
-        StartCoroutine(PostRequest(message));
+        StartCoroutine(PostRequest(message, category));
     }
 
-    IEnumerator PostRequest(String message)
+    IEnumerator PostRequest(String message, String category)
     {
         Debug.Log("Sending post request using logger: " + loggername);
         List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
         wwwForm.Add(new MultipartFormDataSection("message", message));
+        wwwForm.Add(new MultipartFormDataSection("category", category));
         
         //Get time in game and add to post request
         int time = (int) Math.Round(Time.realtimeSinceStartup);

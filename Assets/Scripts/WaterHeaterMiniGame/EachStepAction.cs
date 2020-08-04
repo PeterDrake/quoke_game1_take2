@@ -35,7 +35,7 @@ public class EachStepAction : MonoBehaviour
             if (current.tag == "ElectricBox")
             {
                 Debug.Log("Electric Box selected");
-                logger.sendToLog("Electrical Box selected");
+                logger.sendToLog("Electrical Box selected","MINIGAME");
                 GameObject.Find("Flip").AddComponent<KnobRotating>();
                 Master.stepOne = true;
 
@@ -43,7 +43,7 @@ public class EachStepAction : MonoBehaviour
             else if (current.tag == "WaterPipe")
             {
                 Debug.Log("Water Pipe selected");
-                logger.sendToLog("Water pipe selected");
+                logger.sendToLog("Water pipe selected","MINIGAME");
                 GameObject.Find("Turn").AddComponent<KnobRotating>();
                 Master.stepTwo = true;
 
@@ -51,7 +51,7 @@ public class EachStepAction : MonoBehaviour
             else if (current.tag == "AirPipe")
             {
                 Debug.Log("Air Pipe Selected");
-                logger.sendToLog("Air pipe selected");
+                logger.sendToLog("Air pipe selected","MINIGAME");
                 GameObject.Find("Lever").AddComponent<KnobRotating>();
                 Master.stepThree = true;
 
@@ -59,7 +59,7 @@ public class EachStepAction : MonoBehaviour
             else if (current.tag == "WaterSpout")
             {
                 Debug.Log("Water spout selected");
-                logger.sendToLog("Water spout selected");
+                logger.sendToLog("Water spout selected","MINIGAME");
                 GameObject.Find("Water").AddComponent<KnobRotating>();
                 Master.stepFour = true;
 
@@ -78,7 +78,7 @@ public class EachStepAction : MonoBehaviour
            
             Master.resetSteps();
             Debug.Log("Wrong step - Steps reset");
-            logger.sendToLog("Wrong step - steps reset");
+            logger.sendToLog("Wrong step - steps reset","MINIGAME");
             //Debug.Log("Wrong Step");
             
         }
