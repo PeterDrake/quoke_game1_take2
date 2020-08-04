@@ -745,6 +745,7 @@ GameObject:
   - component: {fileID: 156061072}
   - component: {fileID: 156061071}
   - component: {fileID: 156061070}
+  - component: {fileID: 156061074}
   m_Layer: 0
   m_Name: PeeBox
   m_TagString: Untagged
@@ -841,6 +842,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156061068}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &156061074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156061068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 1539932896}
+  frame2: {fileID: 235128331}
+  frame3: {fileID: 1501760567}
+  frame4: {fileID: 814795148}
 --- !u!1 &163725315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,6 +1749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!54 &319241897
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2304,6 +2322,7 @@ GameObject:
   - component: {fileID: 538352399}
   - component: {fileID: 538352398}
   - component: {fileID: 538352397}
+  - component: {fileID: 538352401}
   m_Layer: 0
   m_Name: PooBucketBox
   m_TagString: Untagged
@@ -2400,6 +2419,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538352395}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &538352401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538352395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 1814972170}
+  frame2: {fileID: 884827619}
+  frame3: {fileID: 122884806}
+  frame4: {fileID: 1609642254}
 --- !u!1 &562683447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2548,7 @@ GameObject:
   - component: {fileID: 648869680}
   - component: {fileID: 648869679}
   - component: {fileID: 648869678}
+  - component: {fileID: 648869682}
   m_Layer: 0
   m_Name: ToiletPaperBox
   m_TagString: Untagged
@@ -2609,6 +2645,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648869676}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &648869682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648869676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 1416007662}
+  frame2: {fileID: 1381110542}
+  frame3: {fileID: 1447798466}
+  frame4: {fileID: 1939960047}
 --- !u!1 &657822479
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,6 +3570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &881265589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3529,8 +3582,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.39295337, y: 0.5385042, z: 0.35197264}
-  m_Center: {x: -0.0015967935, y: -0.008736491, z: 0.0000006109476}
+  m_Size: {x: 0.39295337, y: 0.41618022, z: 0.9919677}
+  m_Center: {x: -0.0015967935, y: -0.041248396, z: -0.32000297}
 --- !u!23 &881265590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4031,6 +4084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &969415531
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4348,6 +4402,7 @@ GameObject:
   - component: {fileID: 997852164}
   - component: {fileID: 997852163}
   - component: {fileID: 997852162}
+  - component: {fileID: 997852166}
   m_Layer: 0
   m_Name: SawdustBox
   m_TagString: Untagged
@@ -4444,6 +4499,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997852160}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &997852166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997852160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 404043851}
+  frame2: {fileID: 291473276}
+  frame3: {fileID: 336156295}
+  frame4: {fileID: 1064582023}
 --- !u!1 &1003343371
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,6 +4868,7 @@ GameObject:
   - component: {fileID: 1091083017}
   - component: {fileID: 1091083016}
   - component: {fileID: 1091083015}
+  - component: {fileID: 1091083019}
   m_Layer: 0
   m_Name: PlasticBagBox
   m_TagString: Untagged
@@ -4893,6 +4965,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091083013}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1091083019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091083013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 1300736995}
+  frame2: {fileID: 245335822}
+  frame3: {fileID: 401848588}
+  frame4: {fileID: 1845153432}
 --- !u!1 &1133382358
 GameObject:
   m_ObjectHideFlags: 0
@@ -5626,6 +5714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &1310185454
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6291,6 +6380,7 @@ GameObject:
   - component: {fileID: 1436593198}
   - component: {fileID: 1436593197}
   - component: {fileID: 1436593196}
+  - component: {fileID: 1436593200}
   m_Layer: 0
   m_Name: PoopBox
   m_TagString: Untagged
@@ -6387,6 +6477,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436593194}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1436593200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436593194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 1426354175}
+  frame2: {fileID: 1218353987}
+  frame3: {fileID: 1735982623}
+  frame4: {fileID: 1612941171}
 --- !u!1 &1447798466
 GameObject:
   m_ObjectHideFlags: 0
@@ -6493,6 +6599,7 @@ GameObject:
   - component: {fileID: 1448891285}
   - component: {fileID: 1448891284}
   - component: {fileID: 1448891283}
+  - component: {fileID: 1448891287}
   m_Layer: 0
   m_Name: PeeBucketBox
   m_TagString: Untagged
@@ -6589,6 +6696,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448891281}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1448891287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448891281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5c27cc1b10346ccbdafc0254f4af14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame1: {fileID: 1595209341}
+  frame2: {fileID: 896053348}
+  frame3: {fileID: 1752032316}
+  frame4: {fileID: 1702978741}
 --- !u!1 &1453722371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8246,7 +8369,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0abcedae82ad13b49b256de7b8541398, type: 2}
+  - {fileID: 2100000, guid: ec8528012592047c9b289657e708196f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8685,7 +8808,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893439882}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -1.9}
+  m_LocalPosition: {x: 0, y: 0, z: -1.876}
   m_LocalScale: {x: 0.07, y: 0.07, z: -0.03}
   m_Children: []
   m_Father: {fileID: 1786565068}
@@ -8707,8 +8830,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.75007, y: 15.039575, z: 19.987541}
-  m_Center: {x: -1.4363211, y: 8.308206, z: -3.2428243}
+  m_Size: {x: 16.939426, y: 13.794089, z: 66.419975}
+  m_Center: {x: -3.341637, y: 8.369155, z: 19.97339}
 --- !u!23 &1893439885
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8792,6 +8915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!1 &1934715028
 GameObject:
   m_ObjectHideFlags: 0
@@ -9448,8 +9572,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.39295337, y: 0.5385042, z: 0.35197264}
-  m_Center: {x: -0.0015967935, y: -0.008736491, z: 0.0000006109476}
+  m_Size: {x: 0.39295337, y: 0.4271278, z: 1.0942868}
+  m_Center: {x: -0.0015967935, y: -0.0033953919, z: -0.46818498}
 --- !u!23 &3827553544974196514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9544,6 +9668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!4 &4576623144560862700
 Transform:
   m_ObjectHideFlags: 0
@@ -9552,7 +9677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4578726419222882492}
   m_LocalRotation: {x: 0.27992305, y: 0.0033778076, z: 0.1916785, w: 0.94068646}
-  m_LocalPosition: {x: 1.46, y: 1.03, z: -3.4}
+  m_LocalPosition: {x: 1.57, y: 0.79, z: -3.56}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1786565068}
@@ -9607,6 +9732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &4578726419222882495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9618,8 +9744,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.15595482, y: 0.14128068, z: 0.15595484}
-  m_Center: {x: 0.000000007450581, y: 0.07064034, z: -0.00000006543518}
+  m_Size: {x: 0.19019726, y: 0.3889307, z: 0.14604096}
+  m_Center: {x: 0.017122138, y: 0.19446763, z: -0.040615603}
 --- !u!23 &4600636421854190254
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9730,6 +9856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &5974664071857229171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9741,8 +9868,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.79320526, y: 0.97961235, z: 0.8082277}
-  m_Center: {x: 0.0000076293945, y: 0.48980618, z: -0.000000041443855}
+  m_Size: {x: 1.4639401, y: 2.1542933, z: 1.0235628}
+  m_Center: {x: -0.33536002, y: 1.0771466, z: -0.2985708}
 --- !u!33 &5974664071858202388
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -9839,6 +9966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &8359441881851750314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9850,8 +9978,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1330898, y: 0.16, z: 2.1876125}
-  m_Center: {x: -0.00000023841858, y: 0.016753774, z: 0}
+  m_Size: {x: 2.1330898, y: 0.5677709, z: 1.4516588}
+  m_Center: {x: -0.00000025544847, y: 0.22063923, z: 0.111103915}
 --- !u!4 &8359441881851848351
 Transform:
   m_ObjectHideFlags: 0
@@ -10039,6 +10167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25c02b45581b34af8945f10e289b830e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inBox: 0
 --- !u!65 &9114590147621633951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10050,5 +10179,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1160204, y: 0.2, z: 0.973267}
-  m_Center: {x: 0, y: 0.08346135, z: 0}
+  m_Size: {x: 1.1160204, y: 1.1501402, z: 0.8948587}
+  m_Center: {x: 0, y: 0.5585313, z: 0.012078168}
