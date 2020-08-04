@@ -7,6 +7,7 @@ public class SaveCorgiController : MonoBehaviour
     private DragTarp script;
 
     public GameObject Tarp;
+    public GameObject Corgi;
 
     void Start()
     {
@@ -18,8 +19,15 @@ public class SaveCorgiController : MonoBehaviour
         if (Tarp.transform.position.x < -116f)
         {
             Destroy(script);
+            StartCoroutine(nameof(CorgiSit));
             //won
         }
+    }
+
+    private IEnumerator CorgiSit()
+    {
+        yield return new WaitForSeconds(1f);
+        Corgi.GetComponent<Animator>().enabled = true;
     }
     
     //First, instructions appear
