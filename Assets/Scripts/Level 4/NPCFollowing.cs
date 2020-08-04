@@ -15,6 +15,11 @@ public class NPCFollowing : MonoBehaviour
         HeadForDestination();
     }
 
+    private void Update()
+    {
+        HeadForDestination();
+    }
+
     private void HeadForDestination()
     {
         Vector3 destination = Leader.transform.position;
