@@ -15,14 +15,14 @@ public class FillWater : MonoBehaviour
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         water.fillAmount += .2f;
         Debug.Log("Filled water");
-        logger.sendToLog("Filled water");
+        logger.sendToLog("Filled water","MINIGAME");
         if (water.fillAmount >= 1f)
         {
             //Master.StopAllCoroutines();
             Master.StopCoroutine(Master.TryAgain());
             Master.StopCoroutine(Master.BlinkText());
             Debug.Log("Won Water Heater minigame");
-            logger.sendToLog("Won Water heater minigame");
+            logger.sendToLog("Won Water heater minigame","MINIGAME");
             Master.Win.SetActive(true);
             Master.Canvas.SetActive(false);
             GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();

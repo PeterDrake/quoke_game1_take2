@@ -41,7 +41,7 @@ public class StartMiniGame : MonoBehaviour
 		Debug.Log("Congratz, you have won!");
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
-		logger.sendToLog("Completed Level 1!");
+		logger.sendToLog("Completed Level 1!","LEVEL");
 		WinScreen.SetActive(true);
 		canvas.SetActive(false);
 		GameObject.Find("Gas").GetComponent<GasShutDown>().GasMiniGameWon();
@@ -50,7 +50,7 @@ public class StartMiniGame : MonoBehaviour
 
 	private void AttachWrench()
 	{
-		logger.sendToLog("Wrench attached");
+		logger.sendToLog("Wrench attached","MINIGAME");
 		flange.GetComponent<CollisionCallback>().RemoveCallback(wrench.tag);
 		Destroy(wrench);
 		flange.transform.GetChild(0).gameObject.SetActive(true);
@@ -62,7 +62,7 @@ public class StartMiniGame : MonoBehaviour
 	{
 		if (!started)
 		{
-			logger.sendToLog("Wrench created");
+			logger.sendToLog("Wrench created","MINIGAME");
 			started = true;
 			wrench = CreateWrench();
 			flange.GetComponent<CollisionCallback>().AddCallback(wrench.tag, AttachWrench);

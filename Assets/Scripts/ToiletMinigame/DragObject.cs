@@ -112,6 +112,6 @@ public class DragObject : MonoBehaviour
         }
         print("PLACE OF THIS OBKECT IS " + place);
         Debug.Log(this.name + " placed in " + lastCollison);
-        logger.sendToLog(this.name + " placed in " + lastCollison);
+        logger.sendToLog(this.name + " placed in " + lastCollison,"MINIGAME");
     }
 }

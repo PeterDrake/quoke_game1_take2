@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoilWaterMaster : MonoBehaviour
 {
+ 
+
     public Item Wood;
     public Item Pot;
     public Item PotWithWater;
@@ -24,6 +26,7 @@ public class BoilWaterMaster : MonoBehaviour
     {
         script = BarrelWithWater.GetComponent<InteractWithObject>();
         script1 = Controller.GetComponent<InteractWithObject>();
+        
     }
 
     public void FillPotWithWater()
@@ -36,6 +39,7 @@ public class BoilWaterMaster : MonoBehaviour
         { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear(); }
         if (GameObject.Find("BoilPointer") != null)
         { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
+        
     }
 
     public void RemoveWood()
@@ -50,6 +54,7 @@ public class BoilWaterMaster : MonoBehaviour
         //Controller.SetActive(false);
         Pot1.SetActive(true);
         Firecomplex.SetActive(false);
+        
     }
 
     // Update is called once per frame
