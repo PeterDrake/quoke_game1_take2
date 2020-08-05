@@ -24,11 +24,22 @@ public class NPCFollowing : MonoBehaviour
     {
 
         float distance = Vector3.Distance(Leader.transform.position, transform.position);
-
+        if (distance > 10)
+        {
+            NPCanimator.SetBool("isWalking", false);
+            NPCanimator.SetBool("isRunning", true);
+            nav.speed = 6;
+        }
+        if (distance <= 10)
+        {
+            NPCanimator.SetBool("isWalking", true);
+            NPCanimator.SetBool("isRunning", false);
+            nav.speed = 3;
+        }
         if (distance < nav.stoppingDistance)
         {
             NPCanimator.SetBool("isWalking", false);
-            transform.LookAt(Leader.transform.position);
+            transform.LookAt(new Vector3(Leader.transform.position.x, transform.position.y, Leader.transform.position.z));
 
         }
         else
