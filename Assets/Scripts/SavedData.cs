@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class SavedData
 {
-    
+    public static int musicInt { get; set; }
+
+    public static int sfxInt { get; set; }
+
     public static bool musicOff { get; set; }
 
     public static bool sfxOff { get; set; }
