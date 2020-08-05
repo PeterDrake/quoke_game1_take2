@@ -56,25 +56,20 @@ public class NPCFollowing : MonoBehaviour
                 print("TOOO FARRRR!!! ILL RUN");
                 NPCanimator.SetBool("isWalking", false);
                 NPCanimator.SetBool("isRunning", true);
-                nav.speed = 6;
+                nav.speed = 8;
             }
             if (distance <= 10)
             {
                 print("ILL WALK THERE DONT WORRY");
                 NPCanimator.SetBool("isWalking", true);
                 NPCanimator.SetBool("isRunning", false);
-                nav.speed = 3;
+                nav.speed = 4;
             }
             if (distance <= nav.stoppingDistance)
             {
                 NPCanimator.SetBool("isWalking", false);
             }
-            else
-            {
-                NPCanimator.SetBool("isWalking", true);
-
-            }
-
+            transform.LookAt(new Vector3(Leader.transform.position.x, transform.position.y, Leader.transform.position.z));
             HeadForDestination(destination);
         }
     }
