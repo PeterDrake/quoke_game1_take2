@@ -7,6 +7,10 @@ public class SaveCorgiController : MonoBehaviour
     private DragTarp script;
 
     public GameObject Tarp;
+    public GameObject Corgi;
+    public GameObject Banner;
+    public GameObject VideoBackground;
+    public GameObject VideoDisplayer;
 
     void Start()
     {
@@ -18,14 +22,23 @@ public class SaveCorgiController : MonoBehaviour
         if (Tarp.transform.position.x < -116f)
         {
             Destroy(script);
-            //won
+            Banner.SetActive(false);
+            StartCoroutine(nameof(CorgiSit));
         }
     }
-    
-    //First, instructions appear
-    // Then, you move tarp for corgi to jump
-    // animation corgi doesn't want to jump
-    // hot dog Frank comes there
-    // corgi jumps
-    // win screen2
+
+    private IEnumerator CorgiSit()
+    {
+        yield return new WaitForSeconds(1f);
+        Corgi.GetComponent<Animator>().enabled = true;
+        //yield return new WaitForSeconds(1f);
+        StartCoroutine(nameof(PlayVideo));
+    }
+
+    private IEnumerator PlayVideo()
+    {
+        yield return new WaitForSeconds(1f);
+        VideoBackground.SetActive(true);
+        VideoDisplayer.SetActive(true);
+    }
 }

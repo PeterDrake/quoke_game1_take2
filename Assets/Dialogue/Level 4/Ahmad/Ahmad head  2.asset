@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Ahmad head  2
   m_EditorClassIdentifier: 
   speech: Hi Zelda.
-  optionOneText: Hi Mo. Now we have a barrel full of water. You think we should boil
-    it in case anything washed off the roof?
+  optionOneText: Hi Ahmad. Now we have a barrel full of water. You think we should
+    boil it in case anything washed off the roof?
   optionOne: {fileID: 11400000, guid: 62e75bf6d8939874686a40fd6bece2c2, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
