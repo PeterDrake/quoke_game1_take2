@@ -31,7 +31,13 @@ public class SaveCorgiController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Corgi.GetComponent<Animator>().enabled = true;
-        yield return new WaitForSeconds(2f);
+        //yield return new WaitForSeconds(1f);
+        StartCoroutine(nameof(PlayVideo));
+    }
+
+    private IEnumerator PlayVideo()
+    {
+        yield return new WaitForSeconds(1f);
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
     }
