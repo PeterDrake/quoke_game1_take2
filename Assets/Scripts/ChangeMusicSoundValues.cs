@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class ChangeMusicSoundValues : MonoBehaviour
 {
+    private GameObject mHandle;
+    private GameObject sHandle;
+
+
+    void Start()
+    {
+        mHandle = GameObject.Find("");
+        sHandle = GameObject.Find("");
+    }
+
+    void Update()
+    {
+        if (mHandle.transform.position.x >= 50) { }
+    }
+    /*
     private int musicVal;
     private int sfxVal;
 
@@ -50,5 +65,5 @@ public class ChangeMusicSoundValues : MonoBehaviour
     public void ChangeMusicValue(int val)
     {
 
-    }
+    }*/
 }
