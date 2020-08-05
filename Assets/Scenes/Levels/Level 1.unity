@@ -13669,6 +13669,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MusicToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 3059642126901318441, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3059642127616472547, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: status
@@ -14113,6 +14118,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SoundFXToggle
       objectReference: {fileID: 0}
+    - target: {fileID: 8077493131708281816, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8919649217602927132, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -14191,6 +14201,18 @@ MonoBehaviour:
   sStatus: {fileID: 1673560537}
   musicAudio: {fileID: 1007425404}
   sfxAudio: {fileID: 1804220373}
+--- !u!114 &625580744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 625580731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7abf97bef9f03f4f998633e0487b664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &628812459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
