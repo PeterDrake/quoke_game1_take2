@@ -24,7 +24,7 @@ MonoBehaviour:
   IfRequirementsOne:
   - {fileID: 11400000, guid: 438e598987ebb22439a909e3cb571d9b, type: 2}
   - {fileID: 11400000, guid: 049ac7c826df6e84091c4e45620950be, type: 2}
-  optionOneTextAlt: 
+  optionOneTextAlt: You should set up the barrel, the rainstorm is about to start!
   optionOneAlt: {fileID: 0}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
