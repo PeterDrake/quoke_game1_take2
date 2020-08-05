@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Ahmad 2.1
   m_EditorClassIdentifier: 
-  speech: Good idea. I have some woods and a cooking pot, do you think you can build
-    a fire?
-  optionOneText: "Sure. Listen, has anyone seen my dog, Tsunami? I\u2019m desperately
-    worried about him."
-  optionOne: {fileID: 11400000, guid: db80a160d7a31cd48ab923c7fe70dec5, type: 2}
+  speech: Good idea. I can give you some wood and a cooking pot, do you think you
+    can build a fire?
+  optionOneText: I'll see what I can do!
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
@@ -24,5 +23,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b5d1b2ff3fe802438c2d4b081278f0c, type: 2}
   - {fileID: 11400000, guid: 4a0218487aabbdf45b8d0c779386b488, type: 2}
   - {fileID: 11400000, guid: d82055f412ee4bd4799173d3e456c6b8, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 4602716bd5ed41540b659008f406e9e4, type: 2}
   NewHead: {fileID: 0}
