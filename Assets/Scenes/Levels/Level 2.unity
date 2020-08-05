@@ -2161,11 +2161,6 @@ PrefabInstance:
       propertyPath: m_UVRect.width
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 6455381915203926455, guid: 54201a432732e3644b92dd53d5d1fef5,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
     - target: {fileID: 6455381915298315439, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_IsActive

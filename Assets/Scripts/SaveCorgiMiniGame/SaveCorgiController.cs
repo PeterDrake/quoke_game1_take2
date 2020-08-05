@@ -9,6 +9,8 @@ public class SaveCorgiController : MonoBehaviour
     public GameObject Tarp;
     public GameObject Corgi;
     public GameObject Banner;
+    public GameObject VideoBackground;
+    public GameObject VideoDisplayer;
 
     void Start()
     {
@@ -22,7 +24,6 @@ public class SaveCorgiController : MonoBehaviour
             Destroy(script);
             Banner.SetActive(false);
             StartCoroutine(nameof(CorgiSit));
-            //won
         }
     }
 
@@ -30,5 +31,14 @@ public class SaveCorgiController : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         Corgi.GetComponent<Animator>().enabled = true;
+        //yield return new WaitForSeconds(1f);
+        StartCoroutine(nameof(PlayVideo));
+    }
+
+    private IEnumerator PlayVideo()
+    {
+        yield return new WaitForSeconds(1f);
+        VideoBackground.SetActive(true);
+        VideoDisplayer.SetActive(true);
     }
 }
