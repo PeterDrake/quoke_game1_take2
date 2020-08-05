@@ -6,23 +6,37 @@ using UnityEngine.AI;
 public class NPCFollowing : MonoBehaviour
 {
     public GameObject Leader;
+    public GameObject NPC;
     private NavMeshAgent nav;
+    private Animator NPCanimator;
+    private Animator Leaderanimator;
 
     // Start is called before the first frame update
     void Start()
     {
         nav = GetComponent<NavMeshAgent>();
+        NPCanimator = NPC.GetComponent<Animator>();
+        Leaderanimator = Leader.GetComponent<Animator>();
         HeadForDestination();
     }
 
     private void Update()
     {
-        HeadForDestination();
+        //float distance = Vector3.Distance(Leader.transform.position, transform.position);
+
+
+            HeadForDestination();
+        
+
     }
 
     private void HeadForDestination()
     {
         Vector3 destination = Leader.transform.position;
+        transform.LookAt(new Vector3(Leader.transform.position.x, transform.position.y, Leader.transform.position.z));
         nav.SetDestination(destination);
     }
+
+
+
 }
