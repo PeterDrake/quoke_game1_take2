@@ -43,23 +43,6 @@ public class NPCFollowing : MonoBehaviour
         Vector3 targetPosition = targetGO.transform.position;
         float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
 
-        if (distanceToTarget < runAwayDistance)
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isRunning", false);
-            navMeshAgent.speed = 6;
-        }
-
-        if (distanceToTarget > 10)
-        {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isRunning", true);
-            navMeshAgent.speed = 10;
-
-        }
-
-
-
         FleeFromTarget(targetPosition);
     }
 
