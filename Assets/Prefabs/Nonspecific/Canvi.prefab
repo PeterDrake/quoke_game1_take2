@@ -1542,6 +1542,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6455381915654371031}
     m_Modifications:
+    - target: {fileID: 1865099527345803915, guid: d63b162dd63e95c4a99fffdd2fcd2edd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526296747114919080, guid: d63b162dd63e95c4a99fffdd2fcd2edd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259544765075928825, guid: d63b162dd63e95c4a99fffdd2fcd2edd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5741743967052675386, guid: d63b162dd63e95c4a99fffdd2fcd2edd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1651,6 +1666,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basic Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8843407794844226705, guid: d63b162dd63e95c4a99fffdd2fcd2edd,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d63b162dd63e95c4a99fffdd2fcd2edd, type: 3}
