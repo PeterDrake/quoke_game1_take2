@@ -10,13 +10,13 @@ public class ChangeMusicSoundValues : MonoBehaviour
 
     void Start()
     {
-        mHandle = GameObject.Find("");
-        sHandle = GameObject.Find("");
+        //mHandle = GameObject.Find("");
+        //sHandle = GameObject.Find("");
     }
 
     void Update()
     {
-        if (mHandle.transform.position.x >= 50) { }
+        //if (mHandle.transform.position.x >= 50) { }
     }
     /*
     private int musicVal;

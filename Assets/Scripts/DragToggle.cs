@@ -20,12 +20,13 @@ public class DragToggle : MonoBehaviour
 
     void OnMouseDrag()
     {
-        float theX;
-        if (Input.mousePosition.x > 50) { theX = 50; }
-        else if (Input.mousePosition.x < -50) { theX = -50; }
-        else { theX = Input.mousePosition.x; }
+        //float theX;
+        //if (Input.mousePosition.x > 50) { theX = 50; }
+        //else if (Input.mousePosition.x < -50) { theX = -50; }
+        //else { theX = Input.mousePosition.x; }
 
-        Vector3 lastPos = new Vector3(theX, 0, startPos.z);
+        Vector3 lastPos = new Vector3(Input.mousePosition.x, 0, startPos.z);
+        //Vector3 lastPos = new Vector3(theX, 0, startPos.z);
         transform.position = Camera.main.ScreenToWorldPoint(lastPos) + dist;
     }
 }
