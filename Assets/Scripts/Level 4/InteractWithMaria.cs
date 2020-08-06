@@ -147,6 +147,7 @@ public class InteractWithMaria : MonoBehaviour
     {
         if (!playerInCollider && other.CompareTag("Player"))
         {
+            print("Zelda entered");
             CallOnEnterCollider.Invoke();
 
             interactText.ChangeText(InteractionDisplayText);
@@ -173,11 +174,11 @@ public class InteractWithMaria : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            print("Zelda exit");
             interactText.ToggleVisibility(false);
             playerInCollider = false;
             if (BlinkWhenPlayerNear) _meshRenderer.material = mat_original;
 
-            //GameObject.Find("MoController").GetComponent<NPCFollowing>().shelter = true;
         }
 
 
