@@ -177,7 +177,7 @@ public class InteractWithMaria : MonoBehaviour
             playerInCollider = false;
             if (BlinkWhenPlayerNear) _meshRenderer.material = mat_original;
 
-            GameObject.Find("MoController").GetComponent<NPCFollowing>().shelter = true;
+            //GameObject.Find("MoController").GetComponent<NPCFollowing>().shelter = true;
         }
 
 
