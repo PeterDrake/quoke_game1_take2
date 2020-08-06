@@ -1,45 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PitLatrineInteraction : MonoBehaviour
 {
-
-    //public InformationCanvas _canvas;
-    //public string words;
-    //private const string MiniGameSceneName = "WaterHeaterMiniGame";
-
-
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
-
-    //public UIElement theGUI;
-    //public GameObject Spot;
-
-    //public GameObject Heater;
     private Item MustardWater;
-    //private Item FilledWater;
-
-    //private GameObject canvi;
-    //private GameObject camera;
-    //private GameObject sunlight;
-    //public GameObject levelMusic;
-    //public GameObject waterMusic;
 
 
     void Start()
     {
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
-
-        //Heater.SetActive(false);
         MustardWater = Resources.Load<Item>("Items/Jug");
-        //FilledWater = Resources.Load<Item>("Items/DirtyMustardWater");
     }
+
 
     public void Interaction()
     {
+        string[] occupiedToiletResponses = new string[] { " 'I shouldn't have drunk that dirty water' ", " 'This will take a while.. Can you pass me the sports section??' ", " 'Esta ocupada!!' ", " 'Can't a person get any privacy??' " };
+        System.Random randomResponses = new System.Random();
+        int useOccupiedToiletResponses = randomResponses.Next (occupiedToiletResponses.Length);
+        string pickResponse = occupiedToiletResponses[useOccupiedToiletResponses];
+
         if (_inventory.HasItem(MustardWater, 1))
         {
       
@@ -47,7 +33,7 @@ public class PitLatrineInteraction : MonoBehaviour
         }
         else
         {
-            _interact.SetInteractText(" 'Esta occupada!!' ");
+            _interact.SetInteractText(pickResponse);
 
         }
 
