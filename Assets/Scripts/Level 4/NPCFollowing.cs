@@ -11,44 +11,21 @@ public class NPCFollowing : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private Animator animator;
     private float last;
-    public bool shelter = false;
+    public bool shelter;
     private int check = 20;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = NPC.GetComponent<Animator>();
-
+        shelter = false;
         last = 0f;
     }
     private void Update()
     {
         if (shelter)
         {
-            print("GOING TO SHELTER");
-            Vector3 destination = GameObject.Find("SchoolDoorStep").transform.position;
-            float distance = Vector3.Distance(destination, transform.position);
-            runAwayDistance = 2f;
-            navMeshAgent.speed = 3f;
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isRunning", false);
-
-            if (check == 0)
-            {
-                print("in the shelter I MAAADDDEE IT ");
-                GameObject.Find("Mo").SetActive(false);
-                GameObject.Find("MoPointer").SetActive(false);
-                GameObject.Find("MoAlert").SetActive(false);
-                this.enabled = false;
-            }
-
-            if (distance <= 2.5)
-            {
-                animator.SetBool("isWalking", false);
-                check--;
-            }
-
-            FleeFromTarget(destination);
+            GoToShelter();
         }
 
 
@@ -98,6 +75,35 @@ public class NPCFollowing : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(new Vector3(transform.position.x - targetPosition.x, targetPosition.y, transform.position.z - targetPosition.z));
         Vector3 runToPosition = targetPosition + (transform.forward * runAwayDistance);
         return runToPosition;
+    }
+
+    public void GoToShelter()
+    {
+        shelter = true;
+        print("GOING TO SHELTER");
+        Vector3 destination = GameObject.Find("SchoolDoorStep").transform.position;
+        float distance = Vector3.Distance(destination, transform.position);
+        runAwayDistance = 2f;
+        navMeshAgent.speed = 3f;
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isRunning", false);
+
+        if (check == 0)
+        {
+            print("in the shelter I MAAADDDEE IT ");
+            GameObject.Find("Mo").SetActive(false);
+            GameObject.Find("MoPointer").SetActive(false);
+            GameObject.Find("MoAlert").SetActive(false);
+            this.enabled = false;
+        }
+
+        if (distance <= 2.5)
+        {
+            animator.SetBool("isWalking", false);
+            check--;
+        }
+
+        FleeFromTarget(destination);
     }
 
 
