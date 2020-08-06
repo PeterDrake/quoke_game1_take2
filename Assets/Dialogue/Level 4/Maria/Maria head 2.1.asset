@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Maria head 2.1
   m_EditorClassIdentifier: 
-  speech: You should probably do that.
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: Have you talked to Ahmad about the shelter yet?
+  optionOneText: Not yet..
+  optionOne: {fileID: 11400000, guid: da9398c255ef9b94b80d70025f503b62, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
