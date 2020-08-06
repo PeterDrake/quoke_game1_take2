@@ -11,6 +11,7 @@ public class SaveCorgiController : MonoBehaviour
     public GameObject Banner;
     public GameObject VideoBackground;
     public GameObject VideoDisplayer;
+    public GameObject Video;
 
     void Start()
     {
@@ -38,7 +39,9 @@ public class SaveCorgiController : MonoBehaviour
     private IEnumerator PlayVideo()
     {
         yield return new WaitForSeconds(1f);
+        Video.SetActive(true);     
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
+
     }
 }
