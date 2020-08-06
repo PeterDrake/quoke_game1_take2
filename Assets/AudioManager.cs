@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     private int firstPlayInt;
     public Slider musicSlider, sfxSlider;
     private float musicFloat, sfxFloat;
+    public AudioSource[] musicAudio;
+    public AudioSource[] sfxAudio;
 
     void Start()
     {
@@ -45,6 +47,18 @@ public class AudioManager : MonoBehaviour
         if(!inFocus)
         {
             SaveSoundSettings();
+        }
+    }
+
+    public void UpdateSound()
+    {
+        for (int i=0; i<musicAudio.Length; i++)
+        {
+            musicAudio[i].volume = musicSlider.value;
+        }
+        for (int j=0; j<sfxAudio.Length; j++)
+        {
+            sfxAudio[j].volume = sfxSlider.value;
         }
     }
 }
