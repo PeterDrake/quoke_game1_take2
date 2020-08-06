@@ -32,18 +32,41 @@ public class NPCFollowing : MonoBehaviour
     public GameObject NPC;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
+    private float last;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = NPC.GetComponent<Animator>();
+        last = 0f;
     }
     private void Update()
     {
         Vector3 targetPosition = targetGO.transform.position;
         float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
 
+        if (distanceToTarget > runAwayDistance - 1 && distanceToTarget < runAwayDistance + 1 || last == distanceToTarget)
+        {
+            print(distanceToTarget + "im here");
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isWalking", false);
+        }
+
+        else if (distanceToTarget < runAwayDistance - 1)
+        {
+            print("wayyyy close");
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isWalking", true);
+        }
+
+        else
+        {
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", false);
+            print("running" + distanceToTarget);
+        }
         FleeFromTarget(targetPosition);
+        last = distanceToTarget;
     }
 
     private void FleeFromTarget(Vector3 targetPosition)
@@ -55,11 +78,12 @@ public class NPCFollowing : MonoBehaviour
     private void HeadForDestintation(Vector3 destinationPosition)
     {
         navMeshAgent.SetDestination(destinationPosition);
+        
     }
 
     private Vector3 PositionToFleeTowards(Vector3 targetPosition)
     {
-        transform.rotation = Quaternion.LookRotation(transform.position - targetPosition);
+        transform.rotation = Quaternion.LookRotation(new Vector3(transform.position.x - targetPosition.x, targetPosition.y, transform.position.z - targetPosition.z));
         Vector3 runToPosition = targetPosition + (transform.forward * runAwayDistance);
         return runToPosition;
     }
