@@ -118,6 +118,9 @@ MonoBehaviour:
   textOnQuake: Earthquake! Find a stable object to hide under.
   textAfterQuake: Explore outside.
   enableDoors: {fileID: 0}
+  frontDoor: {fileID: 0}
+  backDoor: {fileID: 0}
+  bedroomDoor: {fileID: 0}
   dustStormPrefab: {fileID: 100000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 3}
   Quaking: 0
   quakes: 0
@@ -161,6 +164,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectDropper: {fileID: 0}
+--- !u!1 &1339846371025219562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906791148435844126}
+  - component: {fileID: 7894790056884616542}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906791148435844126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339846371025219562}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -33.9, y: -2.6000004, z: 7.3374977}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3773122988988137123}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7894790056884616542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339846371025219562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fcec5d672603d74fb74667ed3ef216e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
 --- !u!1 &3773122988988137122
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1009612024110232352}
+  - {fileID: 906791148435844126}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -287,6 +336,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _inventory: {fileID: 2863601547666779317}
+  holderItems: []
+  holderAmts: 
 --- !u!114 &2863601547666779327
 MonoBehaviour:
   m_ObjectHideFlags: 0
