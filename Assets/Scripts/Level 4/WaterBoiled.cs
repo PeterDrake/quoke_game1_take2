@@ -5,10 +5,6 @@ using UnityEngine;
 public class WaterBoiled : MonoBehaviour
 {
 
-    //public InformationCanvas _canvas;
-    //public string words;
-    //public string words1;
-
     public GameObject Pot;
     public GameObject Steam;
     public GameObject Fire;
@@ -18,13 +14,9 @@ public class WaterBoiled : MonoBehaviour
     {
 
 
-       // _canvas.ChangeText(words1);
-        //_canvas.ChangeText(words);
-
         if (Pot.activeSelf)
         {
             StartCoroutine(nameof(DestroyFire));
-           // _canvas.ChangeText(words1);
         }
     }
     
