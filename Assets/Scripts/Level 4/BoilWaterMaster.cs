@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BoilWaterMaster : MonoBehaviour
 {
- 
+    public InformationCanvas _canvas;
+    private string words;
+
 
     public Item Wood;
     public Item Pot;
@@ -24,6 +26,8 @@ public class BoilWaterMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         script = BarrelWithWater.GetComponent<InteractWithObject>();
         script1 = Controller.GetComponent<InteractWithObject>();
         
@@ -64,6 +68,13 @@ public class BoilWaterMaster : MonoBehaviour
         {
             script.enabled = true;
             check = 1;
+        }
+
+        words = "Build a fire and set up the pot to boil water";
+        if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1)
+                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Pot"), 1))
+        {
+            _canvas.ChangeText(words);
         }
     }
 }

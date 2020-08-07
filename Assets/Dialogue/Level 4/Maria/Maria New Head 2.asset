@@ -12,17 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Maria New Head 2
   m_EditorClassIdentifier: 
-  speech: Have you talked to Ahmad about the shelter yet?
-  optionOneText: Yes I have. Thanks for helping me!
+  speech: Hi Zelda!
+  optionOneText: Hey, how are you?
   optionOne: {fileID: 11400000, guid: 94c1e3d1609d14e45a6e14c6a6d1de1b, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 11400000, guid: e9e69fd4cad4cf3488bcc5d3b35d29f3, type: 2}
+  NewHead: {fileID: 0}
   IfRequirementsOne:
   - {fileID: 11400000, guid: 1b11d9cc31aca0243a33c16e32e9d891, type: 2}
-  optionOneTextAlt: No, I haven't.
+  optionOneTextAlt: Hi Maria!
   optionOneAlt: {fileID: 11400000, guid: e430db45de4d6824687e6564f627d431, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
