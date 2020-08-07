@@ -25,6 +25,7 @@ public class ObjectiveManager : MonoBehaviour
 
     public bool Register(String key, Callback cb=null)
     {
+        printObjectives();
         if (events.ContainsKey(key))
         {
             callbacks[key].AddFirst(cb);
@@ -44,6 +45,7 @@ public class ObjectiveManager : MonoBehaviour
 
     public void Satisfy(String key, bool destroyCallbacks = true)
     {
+        printObjectives();
         Logger.Instance.Log("Objective Satisfied: "+key);
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Objective satisfied: " + key,"OBJECTIVE");
@@ -66,5 +68,20 @@ public class ObjectiveManager : MonoBehaviour
     public bool Check(String key)
     {
         return events.ContainsKey(key) && events[key];
+    }
+    
+    //For debugging only
+    public void printObjectives()
+    {
+        foreach (var VARIABLE in events)
+        {
+            Debug.Log(VARIABLE.ToString());
+        }
+
+        foreach (var VARIABLE in callbacks)
+        {
+            Debug.Log(VARIABLE.ToString());
+        }
+        Debug.Log(callbacks.ToString());
     }
 }
