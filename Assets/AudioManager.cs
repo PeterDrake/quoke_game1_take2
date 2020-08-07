@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
             PlayerPrefs.SetFloat(musicPref, musicFloat);
             PlayerPrefs.SetFloat(sfxPref, sfxFloat);
             PlayerPrefs.SetInt(FirstPlay, -1);
+            print("StartIf");
         }
         else
         {
@@ -33,6 +34,7 @@ public class AudioManager : MonoBehaviour
             musicSlider.value = musicFloat;
             sfxFloat = PlayerPrefs.GetFloat(sfxPref);
             sfxSlider.value = sfxFloat;
+            print("StartElse");
         }
     }
 
