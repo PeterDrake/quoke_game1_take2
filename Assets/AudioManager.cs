@@ -60,5 +60,6 @@ public class AudioManager : MonoBehaviour
         {
             sfxAudio[j].volume = sfxSlider.value;
         }
+        //SaveSoundSettings();
     }
 }
