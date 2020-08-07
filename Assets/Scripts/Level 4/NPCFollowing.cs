@@ -23,6 +23,7 @@ public class NPCFollowing : MonoBehaviour
     }
     private void Update()
     {
+      
         if (shelter)
         {
             GoToShelter();
@@ -33,20 +34,22 @@ public class NPCFollowing : MonoBehaviour
         {
             Vector3 targetPosition = targetGO.transform.position;
             float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+            
 
-            if (distanceToTarget > runAwayDistance - 1 && distanceToTarget < runAwayDistance + 1 || last == distanceToTarget)
+            if (distanceToTarget < runAwayDistance) 
+            {
+                print("wayyyy " + distanceToTarget + " close");
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", true);
+            }
+
+            else if (distanceToTarget > runAwayDistance && distanceToTarget < runAwayDistance + .5 || last == distanceToTarget) 
             {
                 print(distanceToTarget + "im here");
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", false);
             }
 
-            else if (distanceToTarget < runAwayDistance - 1)
-            {
-                print("wayyyy close");
-                animator.SetBool("isRunning", false);
-                animator.SetBool("isWalking", true);
-            }
             else
             {
                 animator.SetBool("isRunning", true);
