@@ -1,0 +1,50 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SaveCorgiVisit : MonoBehaviour
+{
+    //public InformationCanvas _canvas;
+    //public string words;
+    private const string MiniGameSceneName = "SaveCorgi";
+
+
+    private InteractWithObject _interact;
+    private InventoryHelper _inventory;
+
+    //public UIElement theGUI;
+    //public GameObject Spot;
+
+    private GameObject canvi;
+    private GameObject camera;
+    private GameObject sunlight;
+    public GameObject levelMusic;
+    public GameObject SoundEffects;
+
+
+    void Start()
+    {
+        _interact = GetComponent<InteractWithObject>();
+        _inventory = Systems.Inventory;
+    }
+
+    public void Interaction()
+    {
+        SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
+        SceneManager.sceneLoaded += StartMinigame;
+        _interact.enabled = false;
+    }
+
+    private void StartMinigame(Scene scn, LoadSceneMode lsm)
+    {
+        Systems.Status.Pause();
+        SceneManager.sceneLoaded -= StartMinigame;
+        
+        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
+        (camera = GameObject.Find("Main Camera")).SetActive(false);
+        (sunlight = GameObject.Find("Sunlight")).SetActive(false);
+        levelMusic.SetActive(false);
+        SoundEffects.SetActive(true);
+    }
+}

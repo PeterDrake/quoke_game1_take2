@@ -5,85 +5,128 @@ using UnityEngine.AI;
 
 public class NPCFollowing : MonoBehaviour
 {
-    public GameObject Leader;
+    public float runAwayDistance = 10;
+    public GameObject targetGO;
     public GameObject NPC;
-    private NavMeshAgent nav;
-    private Animator NPCanimator;
-    private Animator Leaderanimator;
+    private NavMeshAgent navMeshAgent;
+    private Animator animator;
+    private float last;
     public bool shelter;
-    private bool inShelter;
+    private int check = 20;
+    private bool follow;
 
-    // Start is called before the first frame update
     void Start()
     {
-        nav = GetComponent<NavMeshAgent>();
-        NPCanimator = NPC.GetComponent<Animator>();
-        Leaderanimator = Leader.GetComponent<Animator>();
-        shelter = false;
-        inShelter = false;
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = NPC.GetComponent<Animator>();
+        last = 0f;
     }
 
     private void Update()
-    {
-        if (shelter)
+    {       
+       if (shelter)
         {
-            print("GOING TO SHELTER");
-            Vector3 destination = GameObject.Find("SchoolDoorStep").transform.position;
-            float distance = Vector3.Distance(destination, transform.position);
-            nav.stoppingDistance = 2f;
-            NPCanimator.SetBool("isWalking", true);
-
-
-            if (distance <= nav.stoppingDistance)
+            if (!follow)
             {
-                print("in the shelter I MAAADDDEE IT ");
-                GameObject.Find("Mo").SetActive(false);
-                GameObject.Find("MoPointer").SetActive(false);
+                transform.position = new Vector3(-190, transform.position.y, -263);
+                GetComponent<InteractWithObject>().enabled = false;
+                GetComponent<SphereCollider>().enabled = false;
                 GameObject.Find("MoAlert").SetActive(false);
-                this.enabled = false;
+                follow = true;
             }
-
-            HeadForDestination(destination);
+            GoToShelter();
         }
 
         else
         {
-            print("FOLLOWING ZELDA");
-            float distance = Vector3.Distance(Leader.transform.position, transform.position);
-            Vector3 destination = Leader.transform.position;
-            if (distance > 10)
+            Vector3 targetPosition = targetGO.transform.position;
+            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+
+            if (distanceToTarget < runAwayDistance) 
             {
-                print("TOOO FARRRR!!! ILL RUN");
-                NPCanimator.SetBool("isWalking", false);
-                NPCanimator.SetBool("isRunning", true);
-                nav.speed = 6;
+                //print("wayyyy " + distanceToTarget + " close");
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", true);
             }
-            if (distance <= 10)
+
+            else if (distanceToTarget > runAwayDistance && distanceToTarget < runAwayDistance + .5 || last == distanceToTarget) 
             {
-                print("ILL WALK THERE DONT WORRY");
-                NPCanimator.SetBool("isWalking", true);
-                NPCanimator.SetBool("isRunning", false);
-                nav.speed = 3;
+                //print(distanceToTarget + "im here");
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", false);
             }
-            if (distance <= nav.stoppingDistance)
-            {
-                NPCanimator.SetBool("isWalking", false);
-            }
+
             else
             {
-                NPCanimator.SetBool("isWalking", true);
-
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isWalking", false);
+                //print("running" + distanceToTarget);
             }
-
-            HeadForDestination(destination);
+            FleeFromTarget(targetPosition);
+            last = distanceToTarget;
         }
     }
 
-    private void HeadForDestination(Vector3 destination)
+    private void FleeFromTarget(Vector3 targetPosition)
     {
-        nav.SetDestination(destination);
+        Vector3 destination = PositionToFleeTowards(targetPosition);
+        HeadForDestintation(destination);
     }
 
+    private void HeadForDestintation(Vector3 destinationPosition)
+    {
+        navMeshAgent.SetDestination(destinationPosition);
+        
+    }
 
+    private Vector3 PositionToFleeTowards(Vector3 targetPosition)
+    {
+        transform.rotation = Quaternion.LookRotation(new Vector3(transform.position.x - targetPosition.x, targetPosition.y, transform.position.z - targetPosition.z));
+        Vector3 runToPosition = targetPosition + (transform.forward * runAwayDistance);
+        return runToPosition;
+    }
+
+    public void GoToShelter()
+    {
+        shelter = true;
+        Vector3 destination = GameObject.Find("SchoolDoorStep").transform.position;
+        float distance = Vector3.Distance(destination, transform.position);
+        navMeshAgent.speed = 3f;
+        animator.SetBool("isWalking", true);
+        animator.SetBool("isRunning", false);
+        if(check > 0)
+        {
+            runAwayDistance = 4f;
+        }
+
+        if (distance <= 2.5)
+        {
+            print("in the shelter I MAAADDDEE IT ");
+            GameObject.Find("Mo").SetActive(false);
+            GameObject.Find("MoPointer").SetActive(false);
+            this.enabled = false;
+        }
+
+        if (distance <= 4.5 && distance > 4)
+        {
+            animator.SetBool("isWalking", false);
+            check--;
+            if (check == 0)
+            {
+                runAwayDistance = 2f;
+            }
+        }
+        FleeFromTarget(destination);
+    }
+
+    public void Follow()
+    {
+        follow = true;
+    }
+
+    public void Shelter()
+    {
+        shelter = true;
+    }
 
 }

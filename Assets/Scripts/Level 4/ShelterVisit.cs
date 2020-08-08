@@ -8,6 +8,7 @@ using UnityEngine.Events;
 /// </summary>
 public class ShelterVisit : MonoBehaviour
 {
+
     public GameObject Rain;
     public GameObject BarrelWithoutWater;
     public GameObject BarrelWithWater;
