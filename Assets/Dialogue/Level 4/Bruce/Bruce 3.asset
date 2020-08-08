@@ -31,5 +31,17 @@ MonoBehaviour:
   optionSevenText: 
   optionSeven: {fileID: 0}
   Requirements: []
+<<<<<<< HEAD
   Outcomes: []
   NewHead: {fileID: 0}
+=======
+  Outcomes:
+  - {fileID: 11400000, guid: 3f9a8d6afff9d47d3a1054a66ec5885a, type: 2}
+  NewHead: {fileID: 11400000, guid: 1d76d59d0c7f368448f5bf12927f7664, type: 2}
+  IfRequirementsOne: []
+  optionOneTextAlt: 
+  optionOneAlt: {fileID: 0}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
+>>>>>>> c527510c0cbcbb56c845ed05e21a07faf9d9e1b9
