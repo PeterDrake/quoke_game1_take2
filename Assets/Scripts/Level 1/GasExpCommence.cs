@@ -14,10 +14,15 @@ public class GasExpCommence : MonoBehaviour
     public GameObject destroyed;
     public UnityEvent OnDeath;
 
+    public bool _gasTalkSatisfied;
 
     public void LeavingHouse()
     {
         LeftHouse = true;
+        Systems.Objectives.Satisfy(QuakeManager.Instance.leaveHouse, false);
+        Debug.Log("Left house");
+        Systems.Objectives.Register("GASTALK", (() => _gasTalkSatisfied = true));
+        Systems.Objectives.printObjectives();
     }
 
 

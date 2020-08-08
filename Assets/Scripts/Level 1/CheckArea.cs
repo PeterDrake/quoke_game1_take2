@@ -14,6 +14,9 @@ public class CheckArea : MonoBehaviour
 
     public Collider Player;
 
+    
+    
+
     private void Update()
     {
         OnTriggerEnter(Player);

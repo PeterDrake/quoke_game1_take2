@@ -9,6 +9,6 @@ public class ChangeBannerText : MonoBehaviour
 
     public void Change()
     {
-        _canvas.ChangeText(words);
+        _canvas. ChangeText(words);
     }
 }

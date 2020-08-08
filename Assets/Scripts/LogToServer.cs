@@ -34,7 +34,7 @@ public class LogToServer : Singleton<LogToServer>
     IEnumerator PostRequest(String message, String category)
     {
         //Debug.Log("Sending post request using logger: " + loggername);
-        Systems.Objectives.printObjectives();
+        //Systems.Objectives.printObjectives();
         List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
         wwwForm.Add(new MultipartFormDataSection("message", message));
         wwwForm.Add(new MultipartFormDataSection("category", category));

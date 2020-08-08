@@ -191,4 +191,6 @@ public class InteractWithObject : MonoBehaviour
         _meshRenderer.material = mat_original;
         Destroy(this);
     }
+
+    
 }

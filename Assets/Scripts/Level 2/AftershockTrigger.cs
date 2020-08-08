@@ -16,6 +16,7 @@ public class AftershockTrigger : MonoBehaviour
         QuakeManager.Instance.TriggerCountdown(2f);
         aftershock = true;
         _canvas.ChangeText("Talk to survivors");
+        Systems.Objectives.Register("Talk to survivors");
         if (GameObject.Find("TablePointer") != null)
         { GameObject.Find("TablePointer").GetComponent<FlatFollow>().disappear(); }
         //Logger.Instance.Log("Player has left the house");

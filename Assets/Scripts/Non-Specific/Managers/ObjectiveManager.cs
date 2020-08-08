@@ -73,15 +73,19 @@ public class ObjectiveManager : MonoBehaviour
     //For debugging only
     public void printObjectives()
     {
+        Debug.Log("printObjectives called");
         foreach (var VARIABLE in events)
         {
             Debug.Log(VARIABLE.ToString());
         }
 
+        /*
         foreach (var VARIABLE in callbacks)
         {
             Debug.Log(VARIABLE.ToString());
         }
+        Debug.Log(events.ToString());
         Debug.Log(callbacks.ToString());
+        */
     }
 }

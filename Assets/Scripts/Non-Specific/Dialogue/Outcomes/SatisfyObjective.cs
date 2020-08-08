@@ -10,6 +10,6 @@ public class SatisfyObjective : DialogueOutcome
     
     public override void DoOutcome(ref NPC n)
     {
-        Systems.Objectives.Satisfy(ObjectiveName);
+        Systems.Objectives.Satisfy(ObjectiveName, false);
     }
 }
