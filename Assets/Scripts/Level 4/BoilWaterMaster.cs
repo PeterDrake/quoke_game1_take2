@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoilWaterMaster : MonoBehaviour
 {
+    public GameObject Bruce;
+
     public InformationCanvas _canvas;
     private string words;
 
@@ -31,6 +33,7 @@ public class BoilWaterMaster : MonoBehaviour
         script = BarrelWithWater.GetComponent<InteractWithObject>();
         script1 = Controller.GetComponent<InteractWithObject>();
         
+
     }
 
     public void FillPotWithWater()
@@ -43,7 +46,8 @@ public class BoilWaterMaster : MonoBehaviour
         { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear(); }
         if (GameObject.Find("BoilPointer") != null)
         { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
-        
+        Bruce.transform.position = new Vector3(-205, 0, -175);
+
     }
 
     public void RemoveWood()
