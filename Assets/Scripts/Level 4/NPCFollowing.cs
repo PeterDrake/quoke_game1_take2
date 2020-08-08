@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class NPCFollowing : MonoBehaviour
 {
-    public float runAwayDistance = 10;
+    public float runAwayDistance = 2;
     public GameObject targetGO;
     public GameObject NPC;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
     private float last;
-    public bool shelter;
+    private bool shelter;
     private int check = 20;
     private bool follow;
 
@@ -31,7 +31,7 @@ public class NPCFollowing : MonoBehaviour
                 transform.position = new Vector3(-190, transform.position.y, -263);
                 GetComponent<InteractWithObject>().enabled = false;
                 GetComponent<SphereCollider>().enabled = false;
-                GameObject.Find("MoAlert").SetActive(false);
+                GameObject.Find(NPC.name.ToString() + "Alert").SetActive(false);
                 follow = true;
             }
             GoToShelter();
@@ -44,14 +44,14 @@ public class NPCFollowing : MonoBehaviour
 
             if (distanceToTarget < runAwayDistance) 
             {
-                //print("wayyyy " + distanceToTarget + " close");
+                print("wayyyy " + distanceToTarget + " close");
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", true);
             }
 
             else if (distanceToTarget > runAwayDistance && distanceToTarget < runAwayDistance + .5 || last == distanceToTarget) 
             {
-                //print(distanceToTarget + "im here");
+                print(distanceToTarget + "im here");
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", false);
             }
@@ -60,7 +60,7 @@ public class NPCFollowing : MonoBehaviour
             {
                 animator.SetBool("isRunning", true);
                 animator.SetBool("isWalking", false);
-                //print("running" + distanceToTarget);
+                print("running" + distanceToTarget);
             }
             FleeFromTarget(targetPosition);
             last = distanceToTarget;
@@ -102,8 +102,8 @@ public class NPCFollowing : MonoBehaviour
         if (distance <= 2.5)
         {
             print("in the shelter I MAAADDDEE IT ");
-            GameObject.Find("Mo").SetActive(false);
-            GameObject.Find("MoPointer").SetActive(false);
+            GameObject.Find(NPC.name.ToString()).SetActive(false);
+            GameObject.Find(NPC.name.ToString()+"Pointer").SetActive(false);
             this.enabled = false;
         }
 
