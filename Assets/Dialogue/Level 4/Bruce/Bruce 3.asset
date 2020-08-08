@@ -18,8 +18,9 @@ MonoBehaviour:
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes: []
-  NewHead: {fileID: 0}
+  Outcomes:
+  - {fileID: 11400000, guid: 3f9a8d6afff9d47d3a1054a66ec5885a, type: 2}
+  NewHead: {fileID: 11400000, guid: 1d76d59d0c7f368448f5bf12927f7664, type: 2}
   IfRequirementsOne: []
   optionOneTextAlt: 
   optionOneAlt: {fileID: 0}
