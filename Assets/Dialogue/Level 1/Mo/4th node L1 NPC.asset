@@ -21,5 +21,4 @@ MonoBehaviour:
   Requirements: []
   Outcomes:
   - {fileID: 11400000, guid: 9ad2ff237cf8f42bea5798fde65dcdd6, type: 2}
-  - {fileID: 11400000, guid: bf088cbbe3839ab41b499109dfb0243c, type: 2}
-  NewHead: {fileID: 0}
+  NewHead: {fileID: 11400000, guid: 6d844b6c02d91453b8345909e57475dd, type: 2}
