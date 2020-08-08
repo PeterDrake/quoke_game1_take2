@@ -102,11 +102,8 @@ public class NPCFollowing : MonoBehaviour
         if (distance <= 2.5)
         {
             print("in the shelter I MAAADDDEE IT ");
-            //GameObject.Find("Mo").SetActive(false);
-            //GameObject.Find("MoPointer").SetActive(false);
-            //GameObject.Find("MoAlert").SetActive(false);
-            navMeshAgent.isStopped = true;
-            navMeshAgent.velocity = Vector3.zero;
+            GameObject.Find("Mo").SetActive(false);
+            GameObject.Find("MoPointer").SetActive(false);
             this.enabled = false;
         }
 
