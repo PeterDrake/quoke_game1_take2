@@ -26,7 +26,8 @@ public class StartMiniGame : MonoBehaviour
 	private WrenchMiniGameMaster _wrenchMiniGameMaster;
 	private LogToServer logger;
 
-
+	public string ObjectiveName = "MissionGas";
+	public bool _satisfied;
 	public void Awake()
 	{
 		_wrenchMiniGameMaster = GameObject.FindObjectOfType<WrenchMiniGameMaster>();
@@ -39,6 +40,11 @@ public class StartMiniGame : MonoBehaviour
 		
 		//replace this with success action, i.e. turn off gas
 		Debug.Log("Congratz, you have won!");
+		if (Systems.Objectives.Register(ObjectiveName, () => _satisfied = true)) ;
+		{
+			//this is the offending statement
+			Systems.Objectives.Satisfy(ObjectiveName, false);
+		}
 		Destroy(flange.GetComponent<RotateObjectWithMouse>());
 		Turned = true;
 		logger.sendToLog("Completed Level 1!","LEVEL");
