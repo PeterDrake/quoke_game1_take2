@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
             PlayerPrefs.SetFloat(musicPref, musicFloat);
             PlayerPrefs.SetFloat(sfxPref, sfxFloat);
             PlayerPrefs.SetInt(FirstPlay, -1);
+            print("StartIf");
         }
         else
         {
@@ -33,6 +34,32 @@ public class AudioManager : MonoBehaviour
             musicSlider.value = musicFloat;
             sfxFloat = PlayerPrefs.GetFloat(sfxPref);
             sfxSlider.value = sfxFloat;
+            print("StartElse");
+        }
+    }
+
+    void Awake()
+    {
+        firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
+
+        if (firstPlayInt == 0)
+        {
+            musicFloat = 0.25f;
+            sfxFloat = 0.5f;
+            musicSlider.value = musicFloat;
+            sfxSlider.value = sfxFloat;
+            PlayerPrefs.SetFloat(musicPref, musicFloat);
+            PlayerPrefs.SetFloat(sfxPref, sfxFloat);
+            PlayerPrefs.SetInt(FirstPlay, -1);
+            print("AwakeIf");
+        }
+        else
+        {
+            musicFloat = PlayerPrefs.GetFloat(musicPref);
+            musicSlider.value = musicFloat;
+            sfxFloat = PlayerPrefs.GetFloat(sfxPref);
+            sfxSlider.value = sfxFloat;
+            print("AwakeElse");
         }
     }
 
@@ -40,6 +67,7 @@ public class AudioManager : MonoBehaviour
     {
         PlayerPrefs.SetFloat(musicPref, musicSlider.value);
         PlayerPrefs.SetFloat(sfxPref, sfxSlider.value);
+        print("Sound saved");
     }
 
     void OnApplicationFocus(bool inFocus)
@@ -60,6 +88,7 @@ public class AudioManager : MonoBehaviour
         {
             sfxAudio[j].volume = sfxSlider.value;
         }
+        print("Sound updated");
         //SaveSoundSettings();
     }
 }

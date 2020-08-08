@@ -174,7 +174,6 @@ public class InteractWithMaria : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print("Zelda exit");
             interactText.ToggleVisibility(false);
             playerInCollider = false;
             if (BlinkWhenPlayerNear) _meshRenderer.material = mat_original;

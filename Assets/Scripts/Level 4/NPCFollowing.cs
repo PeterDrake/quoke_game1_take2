@@ -13,45 +13,54 @@ public class NPCFollowing : MonoBehaviour
     private float last;
     public bool shelter;
     private int check = 20;
+    private bool follow;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = NPC.GetComponent<Animator>();
-        shelter = false;
         last = 0f;
     }
+
     private void Update()
-    {
-        if (shelter)
+    {       
+       if (shelter)
         {
+            if (!follow)
+            {
+                transform.position = new Vector3(-190, transform.position.y, -263);
+                GetComponent<InteractWithObject>().enabled = false;
+                GetComponent<SphereCollider>().enabled = false;
+                GameObject.Find("MoAlert").SetActive(false);
+                follow = true;
+            }
             GoToShelter();
         }
-
 
         else
         {
             Vector3 targetPosition = targetGO.transform.position;
             float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
 
-            if (distanceToTarget > runAwayDistance - 1 && distanceToTarget < runAwayDistance + 1 || last == distanceToTarget)
+            if (distanceToTarget < runAwayDistance) 
             {
-                print(distanceToTarget + "im here");
+                //print("wayyyy " + distanceToTarget + " close");
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", true);
+            }
+
+            else if (distanceToTarget > runAwayDistance && distanceToTarget < runAwayDistance + .5 || last == distanceToTarget) 
+            {
+                //print(distanceToTarget + "im here");
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", false);
             }
 
-            else if (distanceToTarget < runAwayDistance - 1)
-            {
-                print("wayyyy close");
-                animator.SetBool("isRunning", false);
-                animator.SetBool("isWalking", true);
-            }
             else
             {
                 animator.SetBool("isRunning", true);
                 animator.SetBool("isWalking", false);
-                print("running" + distanceToTarget);
+                //print("running" + distanceToTarget);
             }
             FleeFromTarget(targetPosition);
             last = distanceToTarget;
@@ -80,31 +89,44 @@ public class NPCFollowing : MonoBehaviour
     public void GoToShelter()
     {
         shelter = true;
-        print("GOING TO SHELTER");
         Vector3 destination = GameObject.Find("SchoolDoorStep").transform.position;
         float distance = Vector3.Distance(destination, transform.position);
-        runAwayDistance = 2f;
         navMeshAgent.speed = 3f;
         animator.SetBool("isWalking", true);
         animator.SetBool("isRunning", false);
-
-        if (check == 0)
+        if(check > 0)
         {
-            print("in the shelter I MAAADDDEE IT ");
-            GameObject.Find("Mo").SetActive(false);
-            GameObject.Find("MoPointer").SetActive(false);
-            GameObject.Find("MoAlert").SetActive(false);
-            this.enabled = false;
+            runAwayDistance = 4f;
         }
 
         if (distance <= 2.5)
         {
-            animator.SetBool("isWalking", false);
-            check--;
+            print("in the shelter I MAAADDDEE IT ");
+            GameObject.Find("Mo").SetActive(false);
+            GameObject.Find("MoPointer").SetActive(false);
+            this.enabled = false;
         }
 
+        if (distance <= 4.5 && distance > 4)
+        {
+            animator.SetBool("isWalking", false);
+            check--;
+            if (check == 0)
+            {
+                runAwayDistance = 2f;
+            }
+        }
         FleeFromTarget(destination);
     }
 
+    public void Follow()
+    {
+        follow = true;
+    }
+
+    public void Shelter()
+    {
+        shelter = true;
+    }
 
 }
