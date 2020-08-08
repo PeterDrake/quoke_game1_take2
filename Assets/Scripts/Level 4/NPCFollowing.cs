@@ -13,19 +13,27 @@ public class NPCFollowing : MonoBehaviour
     private float last;
     public bool shelter;
     private int check = 20;
+    private bool follow;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = NPC.GetComponent<Animator>();
-        shelter = false;
         last = 0f;
     }
+
     private void Update()
-    {
-      
-        if (shelter)
+    {       
+       if (shelter)
         {
+            if (!follow)
+            {
+                transform.position = new Vector3(-190, transform.position.y, -263);
+                GetComponent<InteractWithObject>().enabled = false;
+                GetComponent<SphereCollider>().enabled = false;
+                GameObject.Find("MoAlert").SetActive(false);
+                follow = true;
+            }
             GoToShelter();
         }
 
@@ -96,7 +104,6 @@ public class NPCFollowing : MonoBehaviour
             print("in the shelter I MAAADDDEE IT ");
             GameObject.Find("Mo").SetActive(false);
             GameObject.Find("MoPointer").SetActive(false);
-            GameObject.Find("MoAlert").SetActive(false);
             this.enabled = false;
         }
 
@@ -112,5 +119,14 @@ public class NPCFollowing : MonoBehaviour
         FleeFromTarget(destination);
     }
 
+    public void Follow()
+    {
+        follow = true;
+    }
+
+    public void Shelter()
+    {
+        shelter = true;
+    }
 
 }

@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Maria 3
+  m_Name: Maria 3 Mo
   m_EditorClassIdentifier: 
-  speech: Nice to meet you. Do you have any fires or trapped people to report?
+  speech: Nice to meet you both. Do either you have any fires or trapped people to
+    report?
   optionOneText: Um, no. I was hoping to ask you for some information.
   optionOne: {fileID: 11400000, guid: 51d0da2c16ebbcb4cbd0e01784271c01, type: 2}
   optionTwoText: 
