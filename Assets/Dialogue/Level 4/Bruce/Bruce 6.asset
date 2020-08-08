@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Bruce 1.1
+  m_Name: Bruce 6
   m_EditorClassIdentifier: 
-  speech: It's located south of here.
-  optionOneText: Oh, thank you!
-  optionOne: {fileID: 11400000, guid: 8f5dff2e2c7665c4fa5cb8b778f8d532, type: 2}
+  speech: "Come back when you\u2019ve found them."
+  optionOneText: 
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
