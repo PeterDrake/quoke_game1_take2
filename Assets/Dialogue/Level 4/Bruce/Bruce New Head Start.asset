@@ -13,11 +13,21 @@ MonoBehaviour:
   m_Name: Bruce New Head Start
   m_EditorClassIdentifier: 
   speech: "Welcome to Fresh Starts Eco-Village! I\u2019m Bruce."
-  optionOneText: "Hi, I\u2019m Zelda. Have you seen a Corgi around here? He ran off
+  optionOneText: "Hi, I\u2019m Zelda. Have you seen a corgi around here? He ran off
     after the quake."
   optionOne: {fileID: 11400000, guid: 45f94d44d38a84a469c457ffc57188ed, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
+  optionThreeText: 
+  optionThree: {fileID: 0}
+  optionFourText: 
+  optionFour: {fileID: 0}
+  optionFiveText: 
+  optionFive: {fileID: 0}
+  optionSixText: 
+  optionSix: {fileID: 0}
+  optionSevenText: 
+  optionSeven: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef079c72957f7845b54bc7f346527af, type: 3}
   m_Name: Bruce 7
   m_EditorClassIdentifier: 
-  speech: 
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: Oh, what have you collected so far?
+  optionOneText: I've collected some wood, mulch and shredded paper!
+  optionOne: {fileID: 11400000, guid: f6f030596096de340ae3650632c19708, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   optionThreeText: 
@@ -30,24 +30,29 @@ MonoBehaviour:
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
-  IfRequirementsOne: []
-  optionOneTextAlt: 
-  optionOneAlt: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: 5a46c65a4f440004bb5ab49fb22c9eff, type: 2}
+  optionOneTextAlt: I've collected some shredded paper and wood!
+  optionOneAlt: {fileID: 11400000, guid: fbbccc842ed105c409e6247a81990b02, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
-  IfRequirementsThree: []
-  optionThreeTextAlt: 
-  optionThreeAlt: {fileID: 0}
-  IfRequirementsFour: []
-  optionFourTextAlt: 
-  optionFourAlt: {fileID: 0}
-  IfRequirementsFive: []
-  optionFiveTextAlt: 
-  optionFiveAlt: {fileID: 0}
+  IfRequirementsThree:
+  - {fileID: 11400000, guid: 5a3a2a817fd1368459b70c6901d16f2b, type: 2}
+  optionThreeTextAlt: I've collected some wood and mulch!
+  optionThreeAlt: {fileID: 11400000, guid: b94e401725f0dcc42963c83a3d652b2d, type: 2}
+  IfRequirementsFour:
+  - {fileID: 11400000, guid: f0b2b66ecb8abd24d958d7f696521150, type: 2}
+  optionFourTextAlt: I've collected some wood!
+  optionFourAlt: {fileID: 11400000, guid: 66812787925f08544b75d84b0a3c7d54, type: 2}
+  IfRequirementsFive:
+  - {fileID: 11400000, guid: d04494bd8fd03cb47b4cf328094fdde6, type: 2}
+  optionFiveTextAlt: I've collected some shredded paper!
+  optionFiveAlt: {fileID: 11400000, guid: 64807f689549c60498f634e0660c739c, type: 2}
   IfRequirementsSix: []
-  optionSixTextAlt: 
-  optionSixAlt: {fileID: 0}
-  IfRequirementsSeven: []
-  optionSevenTextAlt: 
-  optionSevenAlt: {fileID: 0}
+  optionSixTextAlt: I've collected some mulch!
+  optionSixAlt: {fileID: 11400000, guid: 74d2020576da99840a349192c33031ff, type: 2}
+  IfRequirementsSeven:
+  - {fileID: 11400000, guid: 53131d80a318657419929aa9872661ce, type: 2}
+  optionSevenTextAlt: I've collected some shredded paper and mulch!
+  optionSevenAlt: {fileID: 11400000, guid: 0686da8b9ccdd414a80daf1674e1e856, type: 2}
