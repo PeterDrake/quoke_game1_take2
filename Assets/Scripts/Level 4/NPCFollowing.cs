@@ -47,7 +47,6 @@ public class NPCFollowing : MonoBehaviour
                 //print("wayyyy " + distanceToTarget + " close");
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", true);
-                navMeshAgent.speed = 4f;
             }
 
             else if (distanceToTarget > runAwayDistance && distanceToTarget < runAwayDistance + .5 || last == distanceToTarget) 
@@ -61,7 +60,6 @@ public class NPCFollowing : MonoBehaviour
             {
                 animator.SetBool("isRunning", true);
                 animator.SetBool("isWalking", false);
-                navMeshAgent.speed = 7f;
                 //print("running" + distanceToTarget);
             }
             FleeFromTarget(targetPosition);
