@@ -9,28 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Bruce 3
   m_EditorClassIdentifier: 
-  speech: "Well there\u2019s a problem I could help with. If you can find some wood
-    and some kind of carbon material -- you know, sawdust, leaves, that sort of thing
-    -- I can help you build a composting waste processor."
-  optionOneText: "That would be great! I\u2019ll keep an eye out for that stuff while
-    I\u2019m looking for my dog."
-  optionOne: {fileID: 11400000, guid: 5caa14e68d175cd4a9d79d8a9872de70, type: 2}
+  speech: You're welcome.
+  optionOneText: 
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
-  optionThreeText: 
-  optionThree: {fileID: 0}
-  optionFourText: 
-  optionFour: {fileID: 0}
-  optionFiveText: 
-  optionFive: {fileID: 0}
-  optionSixText: 
-  optionSix: {fileID: 0}
-  optionSevenText: 
-  optionSeven: {fileID: 0}
   Requirements: []
-
   Outcomes: []
   NewHead: {fileID: 0}
+  IfRequirementsOne: []
+  optionOneTextAlt: 
+  optionOneAlt: {fileID: 0}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
