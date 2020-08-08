@@ -20,10 +20,9 @@ MonoBehaviour:
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
-  IfRequirementsOne:
-  - {fileID: 0}
-  optionOneTextAlt: "I\u2019m Zelda."
-  optionOneAlt: {fileID: 11400000, guid: b58c9f15e961cb5479ba8e949fe2db6d, type: 2}
+  IfRequirementsOne: []
+  optionOneTextAlt: 
+  optionOneAlt: {fileID: 0}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}

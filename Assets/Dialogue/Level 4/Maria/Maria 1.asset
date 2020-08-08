@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Hi!
   optionOneText: Hi! Is this the BEECN?
-  optionOne: {fileID: 11400000, guid: 7d2eba28e532f064798cf79e097b4580, type: 2}
+  optionOne: {fileID: 11400000, guid: db602c9570f504efb90dc50408081f75, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
