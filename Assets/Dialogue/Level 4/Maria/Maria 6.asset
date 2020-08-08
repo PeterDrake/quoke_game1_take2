@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Maria 6
   m_EditorClassIdentifier: 
   speech: "The weather radio says there\u2019s rain coming, so you\u2019ll probably
-    want to get in there soon."
+    want to get in there soon. Many people are just walking in."
   optionOneText: Good idea!
   optionOne: {fileID: 0}
   optionTwoText: 

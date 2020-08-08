@@ -9,14 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Maria 2
   m_EditorClassIdentifier: 
   speech: "It sure is. I\u2019m Maria."
   optionOneText: "I\u2019m Zelda. This is Mo."
-  optionOne: {fileID: 11400000, guid: b58c9f15e961cb5479ba8e949fe2db6d, type: 2}
+  optionOne: {fileID: 11400000, guid: 5dd193076671b48abb748bf4a16b97dd, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 0}
+  optionOneTextAlt: "I\u2019m Zelda."
+  optionOneAlt: {fileID: 11400000, guid: b58c9f15e961cb5479ba8e949fe2db6d, type: 2}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}

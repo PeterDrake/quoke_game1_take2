@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Maria 4
   m_EditorClassIdentifier: 
   speech: "It\u2019s a mess out here, but I\u2019ll see what I can do."
-  optionOneText: "We need a place to stay. We had a tent, but a tree fell on it.\r"
+  optionOneText: "I need a place to stay. I had a tent, but a tree fell on it.\r"
   optionOne: {fileID: 11400000, guid: b9ca7e3c1c52b4744ab6e0d55ab0a773, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

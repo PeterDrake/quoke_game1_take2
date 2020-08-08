@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: Nice to meet you. Do you have any fires or trapped people to report?
   optionOneText: Um, no. I was hoping to ask you for some information.
-  optionOne: {fileID: 11400000, guid: 51d0da2c16ebbcb4cbd0e01784271c01, type: 2}
+  optionOne: {fileID: 11400000, guid: 6154f1af885664d359ef1fa9d412b273, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
