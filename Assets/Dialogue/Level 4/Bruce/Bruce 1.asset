@@ -9,21 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
+  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Bruce 1
   m_EditorClassIdentifier: 
-  speech: Nice to meet you, my name is Bruce.
-  optionOneText: Do you know where to find the emergency shelter?
-  optionOne: {fileID: 11400000, guid: 59f3d1d35b2af174b9754094d8162725, type: 2}
+  speech: Hmm, I think one came through here a couple of days ago, but not lately.
+  optionOneText: "Oh, no! I can\u2019t believe I missed him! I\u2019ll have to keep
+    looking."
+  optionOne: {fileID: 11400000, guid: 4796f799ee39a664d9ea9bb0b66bcc08, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 0}
-  IfRequirementsOne:
-  - {fileID: 11400000, guid: dbf407732cb4f364bbe2aba429394945, type: 2}
-  optionOneTextAlt: Do you know where I can get some help?
-  optionOneAlt: {fileID: 11400000, guid: 4796f799ee39a664d9ea9bb0b66bcc08, type: 2}
-  IfRequirementsTwo: []
-  optionTwoTextAlt: 
-  optionTwoAlt: {fileID: 0}
+  NewHead: {fileID: 11400000, guid: 54695062464461340a986e7bd69b842e, type: 2}
