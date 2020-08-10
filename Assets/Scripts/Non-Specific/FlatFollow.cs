@@ -9,10 +9,10 @@ public class FlatFollow : MonoBehaviour
     public bool mobile;
     public bool startReal;
 
-    public float westBound;
-    public float eastBound;
-    public float northBound;
-    public float southBound;
+    public float xBoundSmaller;
+    public float xBoundBigger;
+    public float zBoundSmaller;
+    public float zBoundBigger;
 
     private float theX;
     private float theZ;
@@ -45,12 +45,12 @@ public class FlatFollow : MonoBehaviour
     {
         while (true)
         {
-            if (following.transform.position.x < westBound) { theX = westBound; }
-            else if (following.transform.position.x > eastBound) { theX = eastBound; }
+            if (following.transform.position.x < xBoundSmaller) { theX = xBoundSmaller; }
+            else if (following.transform.position.x > xBoundBigger) { theX = xBoundBigger; }
             else { theX = following.transform.position.x; }
 
-            if (following.transform.position.z > southBound) { theZ = southBound; }
-            else if (following.transform.position.z < northBound) { theZ = northBound; }
+            if (following.transform.position.z < zBoundSmaller) { theZ = zBoundSmaller; }
+            else if (following.transform.position.z > zBoundBigger) { theZ = zBoundBigger; }
             else { theZ = following.transform.position.z; }
 
 
