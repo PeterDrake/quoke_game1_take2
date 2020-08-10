@@ -17,3 +17,6 @@ MonoBehaviour:
   ItemToFind: {fileID: 0}
   Find: 1
   Found: 0
+  completeReset: 0
+  resetTo: 
+  _satisfied: 1

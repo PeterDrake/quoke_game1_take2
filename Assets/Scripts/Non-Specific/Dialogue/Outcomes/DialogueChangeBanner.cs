@@ -22,10 +22,16 @@ public class DialogueChangeBanner : DialogueOutcome
     public bool completeReset;
     public string resetTo;
 
-
+    public bool _satisfied;
     public override void DoOutcome(ref NPC n)
     {
         find = Find;
+
+        if (Systems.Objectives.Register(ObjectiveName, () => _satisfied = true)) ;
+        {
+            //this is the offending statement
+            Systems.Objectives.Satisfy(ObjectiveName, false);
+        }
 
         _banner = GameObject.Find("GUI").GetComponent<GuiDisplayer>().GetBanner();
         current = _banner.info.text;

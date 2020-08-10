@@ -33,30 +33,15 @@ public class LogToServer : Singleton<LogToServer>
 
     IEnumerator PostRequest(String message, String category)
     {
-        Debug.Log("Sending post request using logger: " + loggername);
+        //Debug.Log("Sending post request using logger: " + loggername);
+        //Systems.Objectives.printObjectives();
         List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
         wwwForm.Add(new MultipartFormDataSection("message", message));
         wwwForm.Add(new MultipartFormDataSection("category", category));
         
         //Get time in game and add to post request
         int time = (int) Math.Round(Time.realtimeSinceStartup);
-        int seconds = time;
-        int min = 0;
-        int hr = 0;
-        while (seconds >= 60)
-        {
-            min++;
-            seconds -= 60;
-        }
-
-        while (min >= 60)
-        {
-            hr++;
-            min -= 60;
-        }
-
-        string timestring = hr + ":" + min + ":" + seconds;
-        Debug.Log("Time: " + timestring);
+        String timestring = "" + time;
         wwwForm.Add(new MultipartFormDataSection("gametime", timestring));
 
         UnityWebRequest www = UnityWebRequest.Post(postURL, wwwForm);

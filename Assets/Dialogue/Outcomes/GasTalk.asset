@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: GasTalk
   m_EditorClassIdentifier: 
   ObjectiveName: GASTALK
-  _canvas: {fileID: 0}
   words: Shut off the gas
+  ItemToFind: {fileID: 0}
+  Find: 0
+  Found: 0
+  completeReset: 0
+  resetTo: 
+  _satisfied: 1

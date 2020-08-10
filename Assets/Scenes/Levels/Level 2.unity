@@ -313,8 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b79135aa6f53a43d8a49794d4b626e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 180
+  m_MovingTurnSpeed: 5000
+  m_StationaryTurnSpeed: 2500
   m_JumpPower: 12
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
@@ -11639,6 +11639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2477b0c25f1e542904b766260747b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _satisfied: 0
   _canvas: {fileID: 217066295}
 --- !u!65 &802979603
 BoxCollider:
