@@ -29,6 +29,8 @@ public class NPCWalking : MonoBehaviour
         {
             print("I MADE IT TO THE COMPOST");
             animator.SetBool("isWalking", false);
+            GetComponent<InteractWithObject>().enabled = true;
+            GetComponent<SphereCollider>().enabled = true;
             Destroy(this);
 
         }
