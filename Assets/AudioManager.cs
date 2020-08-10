@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
             PlayerPrefs.SetFloat(musicPref, musicFloat);
             PlayerPrefs.SetFloat(sfxPref, sfxFloat);
             PlayerPrefs.SetInt(FirstPlay, -1);
+            UpdateSound();
             print("StartIf");
         }
         else
@@ -52,6 +53,7 @@ public class AudioManager : MonoBehaviour
             PlayerPrefs.SetFloat(musicPref, musicFloat);
             PlayerPrefs.SetFloat(sfxPref, sfxFloat);
             PlayerPrefs.SetInt(FirstPlay, -1);
+            UpdateSound();
             print("AwakeIf");
         }
         else
@@ -84,11 +86,11 @@ public class AudioManager : MonoBehaviour
     {
         for (int i=0; i<musicAudio.Length; i++)
         {
-            musicAudio[i].volume = musicSlider.value;
+            musicAudio[i].volume = musicSlider.value * 0.5f;
         }
         for (int j=0; j<sfxAudio.Length; j++)
         {
-            sfxAudio[j].volume = sfxSlider.value;
+            sfxAudio[j].volume = sfxSlider.value * 0.5f;
         }
         print("Sound updated");
         //SaveSoundSettings();
