@@ -6,7 +6,7 @@ public class EnableWater : MonoBehaviour
 {
     public GameObject Water;
     public GameObject Water1;
-    public GameObject Pot;
+    //public GameObject Pot;
     public InformationCanvas _canvas;
     public string words;
     
@@ -20,7 +20,7 @@ public class EnableWater : MonoBehaviour
     {
         yield return new WaitForSeconds(7f);
         Water1.SetActive(false);
-        Pot.SetActive(false);
+        //Pot.SetActive(false);
         Water.SetActive(true);
         _canvas.ChangeText(words);
     }
