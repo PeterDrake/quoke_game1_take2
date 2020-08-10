@@ -60,6 +60,7 @@ public class AudioManager : MonoBehaviour
             musicSlider.value = musicFloat;
             sfxFloat = PlayerPrefs.GetFloat(sfxPref);
             sfxSlider.value = sfxFloat;
+            UpdateSound();
             print("AwakeElse");
         }
     }
