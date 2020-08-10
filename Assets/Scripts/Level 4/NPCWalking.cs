@@ -28,6 +28,9 @@ public class NPCWalking : MonoBehaviour
         if (distance < 1)
         {
             print("I MADE IT TO THE COMPOST");
+            animator.SetBool("isWalking", false);
+            Destroy(this);
+
         }
         FleeFromTarget(targetposition);
     }
