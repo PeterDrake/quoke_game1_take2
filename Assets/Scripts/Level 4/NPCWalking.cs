@@ -15,12 +15,20 @@ public class NPCWalking : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = NPC.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("isWalking", true);
         Vector3 targetposition = targetSpot.transform.position;
+        float distance = Vector3.Distance(targetposition, transform.position);
+        print("distane to composting = " + distance);
+        if (distance < 1)
+        {
+            print("I MADE IT TO THE COMPOST");
+        }
         FleeFromTarget(targetposition);
     }
 

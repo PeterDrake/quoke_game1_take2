@@ -104,7 +104,7 @@ public class MoFollowingZelda : MonoBehaviour
             print("in the shelter I MAAADDDEE IT ");
             GameObject.Find("Mo").SetActive(false);
             GameObject.Find("MoPointer").SetActive(false);
-            this.enabled = false;
+            Destroy(this);
         }
 
         if (distance <= 4.5 && distance > 4)
