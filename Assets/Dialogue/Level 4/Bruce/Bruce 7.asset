@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Bruce 7
   m_EditorClassIdentifier: 
-  speech: 
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: Oh, what do you have?
+  optionOneText: I've gathered some wood, mulch and shredded paper.
+  optionOne: {fileID: 11400000, guid: 9584b6751c652b746843446e10f413d3, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
