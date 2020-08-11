@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Bruce New Head Start
+  m_Name: Bruce 0
   m_EditorClassIdentifier: 
   speech: "Welcome to Fresh Starts Eco-Village! I\u2019m Bruce."
   optionOneText: "Hi, I\u2019m Zelda. Have you seen a corgi around here? He ran off
@@ -28,6 +28,8 @@ MonoBehaviour:
   optionSix: {fileID: 0}
   optionSevenText: 
   optionSeven: {fileID: 0}
+  optionEightText: 
+  optionEight: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
