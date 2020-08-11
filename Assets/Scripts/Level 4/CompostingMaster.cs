@@ -47,9 +47,15 @@ public class CompostingMaster : MonoBehaviour
             Systems.Inventory.RemoveItem(mulch,1);
             Systems.Inventory.RemoveItem(paper, 1);
         }
-        else
+        if (!Systems.Inventory.HasItem(mulch, 1) || !Systems.Inventory.HasItem(paper, 1))
         {
             script2.GetComponent<InteractWithObject>().SetInteractText("You need to gather more carbon material");
+        }
+        else
+        {
+            GetComponent<CompostingSwapText>().made = true;
+            script2.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to use composting toilet");
+            UseCompostingToilet();
         }
     }
 
