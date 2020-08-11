@@ -21,6 +21,7 @@ public class CompostingMaster : MonoBehaviour
         wood = Resources.Load<Item>("Items/Wood");
         mulch = Resources.Load<Item>("Items/Mulch");
         paper = Resources.Load<Item>("Items/ShreddedPaper");
+        
     }
 
     public void BuildBox()
@@ -51,7 +52,6 @@ public class CompostingMaster : MonoBehaviour
             if (Systems.Inventory.HasItem(mulch, 1) && Systems.Inventory.HasItem(paper, 1))
             {
                 print("added carbon");
-                Systems.Objectives.Satisfy("COMPOSTFINISHED", false);
                 carbon.SetActive(true);
                 Systems.Inventory.RemoveItem(mulch, 1);
                 Systems.Inventory.RemoveItem(paper, 1);

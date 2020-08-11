@@ -62,7 +62,6 @@ public class ShelterVisit : MonoBehaviour
 
     private void Awake()
     {
-
         hasItem = (itemToReceive != null);
         if (hasItem && itemToReceive.Length > 0)
         {
@@ -133,13 +132,13 @@ public class ShelterVisit : MonoBehaviour
             }
             CallOnInteract.Invoke();
 
-            //Systems.Objectives.Register(EventKey);
+            Systems.Objectives.Register(EventKey, () => _satisfied = true);
 
             if (firstVisit)
             {
                 OnFirstVisit();
             }
-            else if (Systems.Objectives.Check(EventKey))
+            else if (_satisfied)
             {
                 OnVisitsAfterCompost();
             }
@@ -235,7 +234,7 @@ public class ShelterVisit : MonoBehaviour
         if (GameObject.Find("AhmadAlert") != null)
         { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
 
-        Systems.Status.AffectWarmth(100);
+        Systems.Status.AffectWarmth(50);
         Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
 
@@ -261,13 +260,13 @@ public class ShelterVisit : MonoBehaviour
     public void OnVisitsAfterCompost()
     {
         Systems.Status.AffectRelief(100);
-        Systems.Status.AffectWarmth(100);
+        Systems.Status.AffectWarmth(50);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 
     public void OnVisitsBeforeCompost()
     {
-        Systems.Status.AffectWarmth(100);
+        Systems.Status.AffectWarmth(50);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 }
