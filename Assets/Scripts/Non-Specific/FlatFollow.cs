@@ -9,6 +9,14 @@ public class FlatFollow : MonoBehaviour
     public bool mobile;
     public bool startReal;
 
+    public float xBoundSmaller;
+    public float xBoundBigger;
+    public float zBoundSmaller;
+    public float zBoundBigger;
+
+    private float theX;
+    private float theZ;
+
     private Transform location;
     private Color realColor;
     private Color clearColor;
@@ -37,8 +45,17 @@ public class FlatFollow : MonoBehaviour
     {
         while (true)
         {
+            if (following.transform.position.x < xBoundSmaller) { theX = xBoundSmaller; }
+            else if (following.transform.position.x > xBoundBigger) { theX = xBoundBigger; }
+            else { theX = following.transform.position.x; }
+
+            if (following.transform.position.z < zBoundSmaller) { theZ = zBoundSmaller; }
+            else if (following.transform.position.z > zBoundBigger) { theZ = zBoundBigger; }
+            else { theZ = following.transform.position.z; }
+
+
             location.transform.position = new Vector3
-                (following.transform.position.x, height, following.transform.position.z);
+                (theX, height, theZ);
             yield return new WaitForSeconds(0.01f);
         }
     }
