@@ -29,12 +29,12 @@ public class ObjectiveManager : MonoBehaviour
         if (events.ContainsKey(key))
         {
             callbacks[key].AddFirst(cb);
-            Debug.Log("Registered objective - returned true");
+            Debug.Log("Registered objective "+ key + "- returned true");
             return true;
         }
         
         events.Add(key, false);
-        Debug.Log("Registered objective - returned false");
+        Debug.Log("Registered objective "+key+"- returned false");
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Objective added: " + key,"OBJECTIVE");
         var ll = new LinkedList<Callback>();
@@ -45,8 +45,8 @@ public class ObjectiveManager : MonoBehaviour
 
     public void Satisfy(String key, bool destroyCallbacks = true)
     {
-        printObjectives();
-        Logger.Instance.Log("Objective Satisfied: "+key);
+        
+        Debug.Log("Objective Satisfied: "+ key);
         LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Objective satisfied: " + key,"OBJECTIVE");
         if (!events.ContainsKey(key))
@@ -63,6 +63,7 @@ public class ObjectiveManager : MonoBehaviour
             if (destroyCallbacks) callbacks[key] = null;
             events[key] = true;
         }
+        printObjectives();
     }
 
     public bool Check(String key)
