@@ -45,6 +45,11 @@ public class DialogueNode : ScriptableObject
     [SerializeField] protected DialogueNode optionSeven;
     [Space]
 
+    [TextArea]
+    [SerializeField] protected string optionEightText;
+    [SerializeField] protected DialogueNode optionEight;
+    [Space]
+
     [SerializeField] private DialogueRequirement[] Requirements;
     [SerializeField] private DialogueOutcome[] Outcomes;
 
@@ -69,6 +74,8 @@ public class DialogueNode : ScriptableObject
 
     public virtual DialogueNode GetNodeSeven() { return optionSeven; }
 
+    public virtual DialogueNode GetNodeEight() { return optionEight; }
+
     public virtual string GetTextOne() { return optionOneText; }
     public virtual string GetTextTwo() { return optionTwoText; }
 
@@ -81,6 +88,7 @@ public class DialogueNode : ScriptableObject
     //added4
     public virtual string GetTextSix() { return optionSixText; }
     public virtual string GetTextSeven() { return optionSevenText; }
+    public virtual string GetTextEight() { return optionEightText; }
 
     public string CheckRequirements()
     {
@@ -89,6 +97,17 @@ public class DialogueNode : ScriptableObject
 
         return "";
     }
+
+/*    protected string CheckEightRequirements(EightRequirements[] fields)
+    {
+        foreach (EightReuirements[] req in fields)
+        {
+            if (req == null) continue;
+            if (!req.TestSatisfaction()) return req.GetFailureMessage();
+        }
+
+        return "";
+    }*/
 
     protected string CheckRequirements(DialogueRequirement[] dr)
     {
