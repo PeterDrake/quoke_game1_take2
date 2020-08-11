@@ -196,7 +196,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
 
     private IEnumerator Winning()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1.7f);
         //print("you win the latrine");
         Debug.Log("Won Pit Latrine Minigame");
         GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Specialized;
+using System.Media;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,7 +17,12 @@ public class ShelterVisit : MonoBehaviour
     public GameObject Wheelchair;
     public GameObject Maria;
     public GameObject Ahmad;
+    public GameObject StormCanvas;
 
+    private const string EventKey = "COMPOSTFINISHED";
+
+    private bool firstVisit;
+    private bool _satisfied;
 
     //-----Material Blinking-------
     public bool BlinkWhenPlayerNear = true;
@@ -91,6 +97,8 @@ public class ShelterVisit : MonoBehaviour
             mat_blink = Resources.Load("Materials/Transparent Object 1", typeof(Material)) as Material;
             _meshRenderer = GetComponent<MeshRenderer>();
         }
+
+        firstVisit = true;
     }
 
     public void FixedUpdate() // Fixed update responds to timescale
@@ -127,6 +135,21 @@ public class ShelterVisit : MonoBehaviour
             }
             CallOnInteract.Invoke();
 
+            Systems.Objectives.Register(EventKey, () => _satisfied = true);
+
+            if (firstVisit)
+            {
+                OnFirstVisit();
+            }
+            else if (_satisfied)
+            {
+                OnVisitsAfterCompost();
+            }
+            else
+            {
+                OnVisitsBeforeCompost();
+            }
+
             if (DestoryObjectAfterUse)
             {
                 interactText.ToggleVisibility(false);
@@ -137,6 +160,7 @@ public class ShelterVisit : MonoBehaviour
             {
                 Kill();
             }
+
         }
         else if (interactionDelayFrames > 0)
         {
@@ -199,6 +223,13 @@ public class ShelterVisit : MonoBehaviour
 
     public void Kill()
     {
+        Destroy(this);
+    }
+
+    public void OnFirstVisit()
+    {
+        StormCanvas.SetActive(true);
+
         if (GameObject.Find("SchoolPointer") != null)
         { GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear(); }
         if (GameObject.Find("BarrelPointer") != null)
@@ -207,24 +238,38 @@ public class ShelterVisit : MonoBehaviour
         { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
 
         Systems.Status.AffectWarmth(50);
+        Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
 
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;
 
-        Destroy(this);
-
         Rain.SetActive(false);
         Systems.Objectives.Satisfy("RAINSTORM");
         BarrelWithoutWater.SetActive(false);
         BarrelWithWater.SetActive(true);
-        
-        Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x,Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
+
+        Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x, Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
         Maria.transform.position = new Vector3(-210, 0, -262);
-        Maria.transform.Rotate(0f,200f,0f);
+        Maria.transform.Rotate(0f, 200f, 0f);
         Wheelchair.transform.position = new Vector3(-210, 0, -262);
         Wheelchair.transform.Rotate(0f, 200f, 0f);
         Ahmad.transform.position = new Vector3(-209, 0, -254);
-        Ahmad.transform.Rotate(0f,130f,0f);
+        Ahmad.transform.Rotate(0f, 130f, 0f);
+
+        firstVisit = false;
+    }
+
+    public void OnVisitsAfterCompost()
+    {
+        Systems.Status.AffectRelief(100);
+        Systems.Status.AffectWarmth(50);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+    }
+
+    public void OnVisitsBeforeCompost()
+    {
+        Systems.Status.AffectWarmth(50);
+        GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 }
