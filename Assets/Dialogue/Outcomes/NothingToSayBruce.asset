@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f40ddc9b230139e4482577e37f37b881, type: 3}
-  m_Name: TreNPC
+  m_Script: {fileID: 11500000, guid: 1400a362385c3e24c82c57933867603c, type: 3}
+  m_Name: NothingToSayBruce
   m_EditorClassIdentifier: 
-  name: Tre
-  image: {fileID: 21300000, guid: 609a44cd84f1d5d41b57aedd737ba620, type: 3}
+  ObjectiveName: NothingToSayBruce
+  targetGameObject: BruceAlert
+  makeAppear: 0
