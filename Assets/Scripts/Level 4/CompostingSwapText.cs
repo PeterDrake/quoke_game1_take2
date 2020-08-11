@@ -5,7 +5,6 @@ using UnityEngine;
 public class CompostingSwapText : MonoBehaviour
 {
     public InteractWithObject _interact;
-    public bool made; 
 
     public void SwapTextBox()
     {
@@ -14,14 +13,8 @@ public class CompostingSwapText : MonoBehaviour
 
     public void SwapTextCarbon()
     {
-        if (!made)
-        {
-            _interact.SetInteractText("Press 'E' to add carbon material to box");
-        }
-        else
-        {
-            _interact.SetInteractText("Press 'E' to use composting toilet");
-        }
+        _interact.SetInteractText("Press 'E' to add carbon material to box");
+
     }
     
 }
