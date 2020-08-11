@@ -8,7 +8,9 @@ public class CompostingMaster : MonoBehaviour
     public GameObject carbon;
     public GameObject script1;
     public GameObject script2;
-
+    public GameObject circle;
+    public CompostingSwapText swap;
+ 
     private Item wood;
     private Item mulch;
     private Item paper;
@@ -46,16 +48,18 @@ public class CompostingMaster : MonoBehaviour
             carbon.SetActive(true);
             Systems.Inventory.RemoveItem(mulch,1);
             Systems.Inventory.RemoveItem(paper, 1);
+            script2.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to use composting toilet");
+            swap.made = true;
+
         }
-        if (!Systems.Inventory.HasItem(mulch, 1) || !Systems.Inventory.HasItem(paper, 1))
+        if (carbon.activeSelf)
         {
-            script2.GetComponent<InteractWithObject>().SetInteractText("You need to gather more carbon material");
+            UseCompostingToilet();
         }
         else
         {
-            GetComponent<CompostingSwapText>().made = true;
-            script2.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to use composting toilet");
-            UseCompostingToilet();
+            script2.GetComponent<InteractWithObject>().SetInteractText("You need to gather more carbon material");
+
         }
     }
 
