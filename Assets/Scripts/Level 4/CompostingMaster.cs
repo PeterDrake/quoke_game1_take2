@@ -53,6 +53,7 @@ public class CompostingMaster : MonoBehaviour
             {
                 print("added carbon");
                 carbon.SetActive(true);
+                Systems.Objectives.Satisfy("COMPOSTFINISHED");
                 Systems.Inventory.RemoveItem(mulch, 1);
                 Systems.Inventory.RemoveItem(paper, 1);
                 _interact.ToggleVisibility(false);
