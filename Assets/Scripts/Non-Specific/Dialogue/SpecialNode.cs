@@ -58,6 +58,17 @@ public class SpecialNode : DialogueNode
     [SerializeField] private string optionSevenTextAlt;
     [SerializeField] private DialogueNode optionSevenAlt;
 
+    [Header("If the related requirements are not satisfied, the alt will be used")]
+    [Space]
+    public DialogueRequirement[] IfRequirementsEight;
+    [TextArea]
+    [SerializeField] private string optionEightTextAlt;
+    [SerializeField] private DialogueNode optionEightAlt;
+
+    /*public override DialogueNode WhichNodeToChoose()
+    {
+        if CheckRequirements(IfRequirementsOne) == ""
+    }*/
 
     public override DialogueNode GetNodeOne()
     {
@@ -90,6 +101,10 @@ public class SpecialNode : DialogueNode
     {
         return (CheckRequirements(IfRequirementsSeven) == "") ? optionSeven : optionSevenAlt;
     }
+    public override DialogueNode GetNodeEight()
+    {
+        return (CheckRequirements(IfRequirementsEight) == "") ? optionEight : optionEightAlt;
+    }
 
     public override string GetTextOne()
     {
@@ -118,6 +133,10 @@ public class SpecialNode : DialogueNode
     public override string GetTextSeven()
     {
         return (CheckRequirements(IfRequirementsSeven) == "") ? optionSevenText : optionSevenTextAlt;
+    }
+    public override string GetTextEight()
+    {
+        return (CheckRequirements(IfRequirementsEight) == "") ? optionEightText : optionEightTextAlt;
     }
 
 }

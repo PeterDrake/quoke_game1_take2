@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class SaveCorgiController : MonoBehaviour
@@ -22,6 +23,10 @@ public class SaveCorgiController : MonoBehaviour
     {
         if (Tarp.transform.position.x < -116f)
         {
+            if (GameObject.Find("MiniMusic") != null)
+            {
+                GameObject.Find("MiniMusic").SetActive(false);
+            }
             Destroy(script);
             Banner.SetActive(false);
             StartCoroutine(nameof(CorgiSit));
