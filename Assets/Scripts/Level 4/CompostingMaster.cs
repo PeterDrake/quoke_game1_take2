@@ -5,10 +5,6 @@ using UnityEngine;
 public class CompostingMaster : MonoBehaviour
 {
     public GameObject cube;
-
-    /*public InformationCanvas _canvas;
-    //public string words;*/
-
     public GameObject box;
     public GameObject carbon;
     public GameObject circle;
@@ -17,67 +13,11 @@ public class CompostingMaster : MonoBehaviour
     private Item wood;
     private Item mulch;
     private Item paper;
-
     public bool made;
-
-
-   /* void Awake()
-    {
-        if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
-        {
-            _canvas.ChangeText("Help Bruce build the composting..");
-        }
-
-        else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 0)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 0)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
-        {
-            _canvas.ChangeText("Find carbon material");
-        }
-
-        else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 0)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 0))
-        {
-            _canvas.ChangeText("Find more carbon material and wood");
-        }
-
-        else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 0)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 0))
-        {
-            _canvas.ChangeText("Find more carbon material and wood");
-        }
-
-        else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 0))
-        {
-            _canvas.ChangeText("Find wood");
-        }
-
-        else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 0)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
-        {
-            _canvas.ChangeText("Find more carbon material");
-        }
-
-        else if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 0)
-                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
-        {
-            _canvas.ChangeText("Find more carbon material");
-        }
-
-    }*/
 
     // Start is called before the first frame update
     void Start()
     {
-
         wood = Resources.Load<Item>("Items/Wood");
         mulch = Resources.Load<Item>("Items/Mulch");
         paper = Resources.Load<Item>("Items/ShreddedPaper");
