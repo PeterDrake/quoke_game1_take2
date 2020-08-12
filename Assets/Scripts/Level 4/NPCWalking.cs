@@ -26,7 +26,6 @@ public class NPCWalking : MonoBehaviour
         animator.SetBool("isWalking", true);
         Vector3 targetposition = targetSpot.transform.position;
         float distance = Vector3.Distance(targetposition, transform.position);
-        print("distane to composting = " + distance);
         if (distance < 1)
         {
             print("I MADE IT TO THE COMPOST");
@@ -34,6 +33,7 @@ public class NPCWalking : MonoBehaviour
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
             spotToShow.SetActive(true);
+            transform.LookAt(GameObject.Find("Maria").transform.position);
             Destroy(this);
 
         }
