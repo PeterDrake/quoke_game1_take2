@@ -8,6 +8,7 @@ public class NPCWalking : MonoBehaviour
     public GameObject targetSpot;
     public GameObject NPC;
     public GameObject spotToShow;
+    public InformationCanvas _interact;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
 
@@ -18,6 +19,11 @@ public class NPCWalking : MonoBehaviour
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = NPC.GetComponent<Animator>();
         
+    }
+
+    public void TurnOffBanner()
+    {
+        _interact.ToggleVisibility(false);
     }
 
     // Update is called once per frame
@@ -33,7 +39,8 @@ public class NPCWalking : MonoBehaviour
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
             spotToShow.SetActive(true);
-            transform.LookAt(GameObject.Find("Maria").transform.position);
+            _interact.ToggleVisibility(true);
+            transform.LookAt(spotToShow.transform.position);
             Destroy(this);
 
         }
