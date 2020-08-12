@@ -8516,6 +8516,16 @@ PrefabInstance:
       propertyPath: m_Text
       value: Continue Level 3
       objectReference: {fileID: 0}
+    - target: {fileID: 92950292072845537, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 92950292072845537, guid: e37edaea2b7e049849a9b87dbe36dc9e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 92950292220141356, guid: e37edaea2b7e049849a9b87dbe36dc9e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
