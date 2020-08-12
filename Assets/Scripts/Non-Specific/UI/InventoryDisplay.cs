@@ -36,6 +36,8 @@ public class InventoryDisplay : UIElement
 
     private MenuDisplayer menu;
 
+    
+
     public override void Open()
     {
         Load(Systems.Inventory.GetItems(), Systems.Inventory.GetAmounts());
@@ -75,6 +77,14 @@ public class InventoryDisplay : UIElement
         }
         if (amounts.Max() != 0) // if there is something in the inventory
             setActiveItem(selectedItem);
+
+        if (amounts.Max() == 0)
+        {
+            displayName.text = "Empty";
+            description.text = "There is nothing in your inventory!";
+            displayImage.sprite = Resources.Load<Sprite>("Sprites/Items/displayimage");
+            displayAmount.text = "0";
+        }
     }
 
     private void Start()

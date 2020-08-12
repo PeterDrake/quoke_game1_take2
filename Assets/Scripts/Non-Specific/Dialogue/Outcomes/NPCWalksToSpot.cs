@@ -8,11 +8,16 @@ public class NPCWalksToSpot : DialogueOutcome
 {
     public string NPC;
 
+
     public override void DoOutcome(ref NPC n)
     {
+        
         GameObject.Find(NPC + "Controller").GetComponent<NavMeshAgent>().enabled = true;
         GameObject.Find(NPC + "Controller").GetComponent<NPCWalking>().enabled = true;
+        GameObject.Find(NPC + "Controller").GetComponent<NPCWalking>().TurnOffBanner();
+
         GameObject.Find(NPC + "Controller").GetComponent<InteractWithObject>().enabled = false;
         GameObject.Find(NPC + "Controller").GetComponent<SphereCollider>().enabled = false;
     }
+
 }
