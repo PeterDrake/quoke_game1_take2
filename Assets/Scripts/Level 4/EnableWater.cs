@@ -23,5 +23,7 @@ public class EnableWater : MonoBehaviour
         //Pot.SetActive(false);
         Water.SetActive(true);
         _canvas.ChangeText(words);
+        if (GameObject.Find("MariaAlert") != null)
+        { GameObject.Find("MariaAlert").GetComponent<FlatFollow>().appear(); }
     }
 }

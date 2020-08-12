@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: "The weather radio says there\u2019s rain coming, so you\u2019ll probably
     want to get in there soon. Many people are just walking in."
-  optionOneText: Good idea!
+  optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
