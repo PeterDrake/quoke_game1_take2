@@ -16,13 +16,15 @@ public class ChangeBannerLevel4 : MonoBehaviour
 
     public void Change()
     {
-        if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
+        /*if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1)
                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
         {
             //_canvas.ChangeText("Help Bruce build the composting waste processor");
             _canvas.ChangeText(words);
-        }
+        }*/
+
+
 
         if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 0)
                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 0)
@@ -64,12 +66,20 @@ public class ChangeBannerLevel4 : MonoBehaviour
             _canvas.ChangeText(words5);
         }
 
-        if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
+        /*if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 0)
                    && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
         {
             //_canvas.ChangeText("Find more carbon material");
             _canvas.ChangeText(words6);
+        }*/
+
+        if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
+                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1)
+                   && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
+        {
+            //_canvas.ChangeText("Help Bruce build the composting waste processor");
+            _canvas.ChangeText(words);
         }
     }
 }
