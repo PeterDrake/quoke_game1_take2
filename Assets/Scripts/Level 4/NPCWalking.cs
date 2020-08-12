@@ -21,9 +21,12 @@ public class NPCWalking : MonoBehaviour
         
     }
 
-    public void TurnOffBanner()
+    public void TurnOffInteract()
     {
-        _interact.ToggleVisibility(false);
+
+        GetComponent<InteractWithObject>().OnTriggerExit(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>());
+        GetComponent<InteractWithObject>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
     }
 
     // Update is called once per frame
@@ -39,7 +42,6 @@ public class NPCWalking : MonoBehaviour
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
             spotToShow.SetActive(true);
-            _interact.ToggleVisibility(true);
             transform.LookAt(spotToShow.transform.position);
             Destroy(this);
 
