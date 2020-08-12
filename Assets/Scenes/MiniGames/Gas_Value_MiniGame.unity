@@ -1804,6 +1804,8 @@ MonoBehaviour:
   flangeRotationlowerBound: 95
   targetRotation: 90
   targetThreshold: 2
+  ObjectiveName: MissionGas
+  _satisfied: 0
 --- !u!4 &1050460395
 Transform:
   m_ObjectHideFlags: 0
@@ -2065,12 +2067,12 @@ PrefabInstance:
     - target: {fileID: 7737666414272026094, guid: 0b46448e1672d4997b76ae80b9a3754d,
         type: 3}
       propertyPath: m_ReferenceResolution.x
-      value: 1024
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 7737666414272026094, guid: 0b46448e1672d4997b76ae80b9a3754d,
         type: 3}
       propertyPath: m_ReferenceResolution.y
-      value: 768
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7737666414272026094, guid: 0b46448e1672d4997b76ae80b9a3754d,
         type: 3}
