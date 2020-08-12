@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Mulch
   m_EditorClassIdentifier: 
   DisplayName: Mulch
-  Description: Used for..
-  Icon: {fileID: 21300000, guid: e5917797a41994346b1b108da2cfed37, type: 3}
-  DisplayImage: {fileID: 21300000, guid: e5917797a41994346b1b108da2cfed37, type: 3}
+  Description: Used to build th composting waste processor
+  Icon: {fileID: 21300000, guid: 0bd29246dca17c64ab36a4f37374df81, type: 3}
+  DisplayImage: {fileID: 21300000, guid: 0bd29246dca17c64ab36a4f37374df81, type: 3}
   ID: MULCH
   action: {fileID: 0}

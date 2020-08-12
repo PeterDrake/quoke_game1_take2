@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ShreddedPaper
   m_EditorClassIdentifier: 
   DisplayName: ShreddedPaper
-  Description: Used for..
-  Icon: {fileID: 21300000, guid: 129421c2b35c73941ac64f1e97a7dc82, type: 3}
-  DisplayImage: {fileID: 21300000, guid: 129421c2b35c73941ac64f1e97a7dc82, type: 3}
+  Description: Used to build th composting waste processor
+  Icon: {fileID: 21300000, guid: acc4a67475156db47b03f9f78927fd24, type: 3}
+  DisplayImage: {fileID: 21300000, guid: acc4a67475156db47b03f9f78927fd24, type: 3}
   ID: SHREDDEDPAPER
   action: {fileID: 0}
