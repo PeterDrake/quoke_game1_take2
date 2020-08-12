@@ -17,20 +17,9 @@ MonoBehaviour:
   optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
-  optionThreeText: 
-  optionThree: {fileID: 0}
-  optionFourText: 
-  optionFour: {fileID: 0}
-  optionFiveText: 
-  optionFive: {fileID: 0}
-  optionSixText: 
-  optionSix: {fileID: 0}
-  optionSevenText: 
-  optionSeven: {fileID: 0}
-  optionEightText: 
-  optionEight: {fileID: 0}
   Requirements: []
   Outcomes:
   - {fileID: 11400000, guid: 2ace1fb6442494aa980fba60e1aa3efd, type: 2}
   - {fileID: 11400000, guid: 45364bab0f51ad941924c273e1fac297, type: 2}
+  - {fileID: 11400000, guid: 04fa6cd56306444b2b909046c5fd92c9, type: 2}
   NewHead: {fileID: 11400000, guid: 54695062464461340a986e7bd69b842e, type: 2}

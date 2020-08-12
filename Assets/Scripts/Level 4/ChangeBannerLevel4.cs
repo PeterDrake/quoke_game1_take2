@@ -14,6 +14,75 @@ public class ChangeBannerLevel4 : MonoBehaviour
     public string words6;
 
 
+
+    private bool mulch;
+    private bool paper;
+    private bool wood;
+
+    public void BannerUpdate()
+    {
+        if (Systems.Objectives.Check("CompostTalk"))
+        {
+            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1))
+            {
+                print("has mulch");
+                mulch = true;
+            }
+            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/ShreddedPaper"), 1))
+            {
+                print("has shreddedpaper");
+                paper = true;
+            }
+            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
+            {
+                print("has wood");
+                wood = true;
+            }
+            ChangeBanners();
+        }
+        else
+        {
+            print("didnt talk to bruce yet");
+        }
+    }
+
+
+    public void ChangeBanners()
+    {
+        if (mulch && !paper && !wood)
+        {
+            print("MULCHHH ONLY");
+        }
+        if (!mulch && paper && !wood)
+        {
+            print("PAPER ONLY");
+        }
+        if (!mulch && !paper && wood)
+        {
+            print("WOOD ONLY");
+        }
+        if (mulch && paper && !wood)
+        {
+            print("find wood");
+        }
+        if (mulch && !paper && wood)
+        {
+            print("find paper");
+        }
+        if (!mulch && paper && wood)
+        {
+            print("find mulch");
+        }
+        if (mulch && paper && wood)
+        {
+            print("I GOT ALL THREE!!!");
+        }
+
+    }
+
+
+
+
     public void Change()
     {
         /*if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Mulch"), 1)
