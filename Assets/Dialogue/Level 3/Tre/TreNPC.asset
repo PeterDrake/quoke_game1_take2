@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: TreNPC
   m_EditorClassIdentifier: 
   name: Tre
-  image: {fileID: 21300000, guid: 609a44cd84f1d5d41b57aedd737ba620, type: 3}
+  image: {fileID: 21300000, guid: 2de485a518c07094ca2543fd274e2688, type: 3}
