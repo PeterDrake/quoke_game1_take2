@@ -7,8 +7,10 @@ public class NPCWalking : MonoBehaviour
 {
     public GameObject targetSpot;
     public GameObject NPC;
+    public GameObject spotToShow;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +33,7 @@ public class NPCWalking : MonoBehaviour
             animator.SetBool("isWalking", false);
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
+            spotToShow.SetActive(true);
             Destroy(this);
 
         }

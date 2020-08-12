@@ -14,9 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: We can build the composting waste processor right here.
   optionOneText: Huh, how will we do that?
-  optionOne: {fileID: 11400000, guid: 27f0dcdfa9dfbcc46ba8e9401fadac7d, type: 2}
+  optionOne: {fileID: 11400000, guid: ff47ce131f8e6c746aa2ff3cec8ef110, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
+  optionThreeText: 
+  optionThree: {fileID: 0}
+  optionFourText: 
+  optionFour: {fileID: 0}
+  optionFiveText: 
+  optionFive: {fileID: 0}
+  optionSixText: 
+  optionSix: {fileID: 0}
+  optionSevenText: 
+  optionSeven: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 11400000, guid: de92c1e4b6fd55f46930a824e3be2ade, type: 2}
+  NewHead: {fileID: 0}

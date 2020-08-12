@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CompostingMaster : MonoBehaviour
 {
+
+    public GameObject cube;
+
     public GameObject box;
     public GameObject carbon;
-    public GameObject script1;
-    public GameObject script2;
     public GameObject circle;
-    public CompostingSwapText swap;
+    public InformationCanvas _interact;
  
     private Item wood;
     private Item mulch;
@@ -18,62 +19,74 @@ public class CompostingMaster : MonoBehaviour
 
 
 
+
+    public bool made;
+
+
     // Start is called before the first frame update
     void Start()
     {
         wood = Resources.Load<Item>("Items/Wood");
         mulch = Resources.Load<Item>("Items/Mulch");
         paper = Resources.Load<Item>("Items/ShreddedPaper");
+        
     }
 
     public void BuildBox()
     {
-        if (Systems.Inventory.HasItem(wood,1))
+        if (!made)
         {
-            box.SetActive(true);
-            Systems.Inventory.RemoveItem(wood, 1);
-            Destroy(script1);
-            script2.SetActive(true);
-        }
-        else
-        { 
-            script1.GetComponent<InteractWithObject>().SetInteractText("You need to gather some wood");
+            if (Systems.Inventory.HasItem(wood, 1))
+            {
+                print("box built");
+                Systems.Inventory.RemoveItem(wood, 1);
+                box.SetActive(true);
+                made = true;
+                cube.transform.position = new Vector3(cube.transform.position.x, .5f, cube.transform.position.z);
+                cube.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to add carbon material to box");
+
+            }
+            else
+            {
+                cube.GetComponent<InteractWithObject>().SetInteractText("You need to gather some wood");
+            }
         }
     }
 
     public void AddCarbon()
     {
-        if (Systems.Inventory.HasItem(mulch,1) && Systems.Inventory.HasItem(paper, 1))
+        if (made)
         {
-            carbon.SetActive(true);
-            Systems.Inventory.RemoveItem(mulch,1);
-            Systems.Inventory.RemoveItem(paper, 1);
-            script2.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to use composting toilet");
-            swap.made = true;
-
+            if (Systems.Inventory.HasItem(mulch, 1) && Systems.Inventory.HasItem(paper, 1))
+            {
+                print("added carbon");
+                carbon.SetActive(true);
+                Systems.Objectives.Satisfy("COMPOSTFINISHED");
+                Systems.Inventory.RemoveItem(mulch, 1);
+                Systems.Inventory.RemoveItem(paper, 1);
+                _interact.ToggleVisibility(false);
+                circle.SetActive(false);
+                Destroy(cube);
+            }
+            else
+            {
+                cube.GetComponent<InteractWithObject>().SetInteractText("You need to gather more carbon material");
+            }
         }
-        if (carbon.activeSelf)
+    }
+
+
+    public void SwapText()
+    {
+        if (!made)
         {
-            UseCompostingToilet();
+            cube.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to build a box");
         }
         else
         {
-            script2.GetComponent<InteractWithObject>().SetInteractText("You need to gather more carbon material");
+            cube.GetComponent<InteractWithObject>().SetInteractText("Press 'E' to add carbon material to box");
 
         }
     }
-
-    public void UseCompostingToilet()
-    {
-        Systems.Status.AffectRelief(100f);
-    }
-
-
-    //void Update()
-    //{
-    //    if (!box)
-    //    {
-    //        _
-    //    }
-    //}
+        
 }
