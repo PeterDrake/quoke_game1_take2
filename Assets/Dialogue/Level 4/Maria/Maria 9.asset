@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Maria 9
   m_EditorClassIdentifier: 
   speech: I'm doing good. It's been busy at the BEECN.
-  optionOneText: Oh good luck! Have you gotten any news about a corgi around here?
+  optionOneText: Have you gotten any news about a corgi around here?
   optionOne: {fileID: 11400000, guid: 56d7b813f52ba5640bb9eb98832c514c, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
