@@ -22,6 +22,12 @@ public class EnableWater : MonoBehaviour
         Water1.SetActive(false);
         //Pot.SetActive(false);
         Water.SetActive(true);
+
+        Systems.Objectives.Satisfy("PotWithWater");
+
         _canvas.ChangeText(words);
+
+        if (GameObject.Find("MariaAlert") != null)
+        { GameObject.Find("MariaAlert").GetComponent<FlatFollow>().appear(); }
     }
 }
