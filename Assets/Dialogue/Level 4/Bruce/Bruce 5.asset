@@ -15,8 +15,9 @@ MonoBehaviour:
   speech: "We\u2019ll put together a box and line it with carbon material. The people
     in the shelter can dump their poo buckets into it, then cover it with more carbon
     material. Have you found all of the supplies?"
-  optionOneText: Yes, I've collected some materials!
-  optionOne: {fileID: 11400000, guid: 4cf0f4368eeca804a979f1e40f2898d2, type: 2}
+  optionOneText: Yes, I've collected all the materials! Mulch, shredded paper, and
+    wood, right here!
+  optionOne: {fileID: 11400000, guid: 9584b6751c652b746843446e10f413d3, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bruce 8
   m_EditorClassIdentifier: 
   speech: "Great, that\u2019s everything we need! Putting it together is a little
-    tricky, but I\u2019ll show you how."
+    tricky, but I bet you can do it."
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
