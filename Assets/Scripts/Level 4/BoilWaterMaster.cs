@@ -46,9 +46,9 @@ public class BoilWaterMaster : MonoBehaviour
         { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear(); }
         if (GameObject.Find("BoilPointer") != null)
         { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
-        Bruce.transform.position = new Vector3(-205, 0, -175);
-        if (GameObject.Find("BrucePointer") != null)
-        { GameObject.Find("BrucePointer").GetComponent<FlatFollow>().appear(); }
+        //Bruce.transform.position = new Vector3(-205, 0, -175);
+        //if (GameObject.Find("BrucePointer") != null)
+        //{ GameObject.Find("BrucePointer").GetComponent<FlatFollow>().appear(); }
 
     }
 
