@@ -1,7 +1,4 @@
-﻿using System.Collections.Specialized;
-using System.Media;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
@@ -135,13 +132,12 @@ public class ShelterVisit : MonoBehaviour
             }
             CallOnInteract.Invoke();
 
-            Systems.Objectives.Register(EventKey, () => _satisfied = true);
 
             if (firstVisit)
             {
                 OnFirstVisit();
             }
-            else if (_satisfied)
+            else if (Systems.Objectives.Check(EventKey))
             {
                 OnVisitsAfterCompost();
             }
@@ -237,7 +233,7 @@ public class ShelterVisit : MonoBehaviour
         if (GameObject.Find("AhmadAlert") != null)
         { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
 
-        Systems.Status.AffectWarmth(50);
+        Systems.Status.AffectWarmth(100);
         Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
 
@@ -250,9 +246,9 @@ public class ShelterVisit : MonoBehaviour
         BarrelWithWater.SetActive(true);
 
         Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x, Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
-        Maria.transform.position = new Vector3(-210, 0, -262);
+        Maria.transform.position = new Vector3(-205, 0, -262);
         Maria.transform.Rotate(0f, 200f, 0f);
-        Wheelchair.transform.position = new Vector3(-210, 0, -262);
+        Wheelchair.transform.position = new Vector3(-205, 0, -262);
         Wheelchair.transform.Rotate(0f, 200f, 0f);
         Ahmad.transform.position = new Vector3(-209, 0, -254);
         Ahmad.transform.Rotate(0f, 130f, 0f);
@@ -263,13 +259,13 @@ public class ShelterVisit : MonoBehaviour
     public void OnVisitsAfterCompost()
     {
         Systems.Status.AffectRelief(100);
-        Systems.Status.AffectWarmth(50);
+        Systems.Status.AffectWarmth(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 
     public void OnVisitsBeforeCompost()
     {
-        Systems.Status.AffectWarmth(50);
+        Systems.Status.AffectWarmth(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 }
