@@ -15,6 +15,8 @@ public class NPCWalksToSpot : DialogueOutcome
         GameObject.Find(NPC + "Controller").GetComponent<NavMeshAgent>().enabled = true;
         GameObject.Find(NPC + "Controller").GetComponent<NPCWalking>().enabled = true;
         GameObject.Find(NPC + "Controller").GetComponent<NPCWalking>().TurnOffBanner();
+        GameObject.Find("ImportantObjects").GetComponent<ChangeBannerLevel4>().BannerUpdate();
     }
+
 
 }

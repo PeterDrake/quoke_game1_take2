@@ -49,6 +49,16 @@ public class ChangeBannerLevel4 : MonoBehaviour
 
     public void ChangeBanners()
     {
+        if (mulch && paper && wood)
+        {
+            print("I GOT ALL THREE!!!");
+            _canvas.ChangeText(words);
+        }
+        if (!mulch && !paper && wood)
+        {
+            print("WOOD ONLY");
+            _canvas.ChangeText(words1);
+        }
         if (mulch && !paper && !wood)
         {
             print("MULCHHH ONLY");
@@ -61,21 +71,11 @@ public class ChangeBannerLevel4 : MonoBehaviour
             _canvas.ChangeText(words3);
 
         }
-        if (!mulch && !paper && wood)
-        {
-            print("WOOD ONLY");
-            _canvas.ChangeText(words1);
-        }
+
         if (mulch && paper && !wood)
         {
             print("find wood");
             _canvas.ChangeText(words4);
-
-        }
-        if (mulch && !paper && wood)
-        {
-            print("find paper");
-            _canvas.ChangeText(words6);
 
         }
         if (!mulch && paper && wood)
@@ -84,10 +84,16 @@ public class ChangeBannerLevel4 : MonoBehaviour
             _canvas.ChangeText(words5);
 
         }
-        if (mulch && paper && wood)
+        if (mulch && !paper && wood)
         {
-            print("I GOT ALL THREE!!!");
-            _canvas.ChangeText(words);
+            print("find paper");
+            _canvas.ChangeText(words6);
+
+        }
+        if (!mulch && !paper & !wood)
+        {
+            print("I have nothing");
+            _canvas.ChangeText("Find carbon material and wood");
         }
 
     }
