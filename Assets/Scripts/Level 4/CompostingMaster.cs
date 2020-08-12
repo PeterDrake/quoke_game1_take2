@@ -30,7 +30,6 @@ public class CompostingMaster : MonoBehaviour
         {
             if (Systems.Inventory.HasItem(wood, 1))
             {
-                print("box built");
                 Systems.Inventory.RemoveItem(wood, 1);
                 box.SetActive(true);
                 made = true;
@@ -51,7 +50,6 @@ public class CompostingMaster : MonoBehaviour
         {
             if (Systems.Inventory.HasItem(mulch, 1) && Systems.Inventory.HasItem(paper, 1))
             {
-                print("added carbon");
                 carbon.SetActive(true);
                 Systems.Objectives.Satisfy("COMPOSTFINISHED");
                 Systems.Inventory.RemoveItem(mulch, 1);

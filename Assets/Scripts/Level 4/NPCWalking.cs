@@ -8,6 +8,7 @@ public class NPCWalking : MonoBehaviour
     public GameObject targetSpot;
     public GameObject NPC;
     public GameObject spotToShow;
+    public InformationCanvas _interact;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
 
@@ -20,13 +21,17 @@ public class NPCWalking : MonoBehaviour
         
     }
 
+    public void TurnOffBanner()
+    {
+        _interact.ToggleVisibility(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
         animator.SetBool("isWalking", true);
         Vector3 targetposition = targetSpot.transform.position;
         float distance = Vector3.Distance(targetposition, transform.position);
-        print("distane to composting = " + distance);
         if (distance < 1)
         {
             print("I MADE IT TO THE COMPOST");
@@ -34,6 +39,8 @@ public class NPCWalking : MonoBehaviour
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
             spotToShow.SetActive(true);
+            _interact.ToggleVisibility(true);
+            transform.LookAt(spotToShow.transform.position);
             Destroy(this);
 
         }
