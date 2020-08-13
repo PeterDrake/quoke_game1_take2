@@ -30,7 +30,7 @@ public class BarrelVisit : MonoBehaviour
     void Start()
     {
         _interact = GetComponent<InteractWithObject>();
-        BewareTheStorm = "Storm is approaching, go to the shelter";
+        BewareTheStorm = "A storm is approaching. Go to the shelter.";
     }
 
     public void Interaction()
