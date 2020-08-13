@@ -22,6 +22,13 @@ public class MoFollowingZelda : MonoBehaviour
         last = 0f;
     }
 
+    public void TurnOffBanner()
+    {
+        GetComponent<InteractWithObject>().OnTriggerExit(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>());
+        GetComponent<InteractWithObject>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
+    }
+
     private void Update()
     {       
        if (shelter)
