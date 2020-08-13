@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BarrelWithWaterVisit : MonoBehaviour
 {
+    
 
     public GameObject BoilWater;
 
@@ -31,17 +32,20 @@ public class BarrelWithWaterVisit : MonoBehaviour
 
     public void Interaction()
     {
+        
         if (_inventory.HasItem(Pot, 1) && _inventory.HasItem(Wood, 1))
         {
 
             _interact.enabled = false;
             BoilWater.SetActive(true);
-
+            //BarrelWithWater.GetComponent<InteractWithObject>().disabled;
+            GameObject.Find("BarrelWithWater").GetComponent<InteractWithObject>().Kill();
         }
         else
         {
             _interact.SetInteractText("Go talk to Ahmad about water");
             BoilWater.SetActive(false);
+            
 
         }
 
