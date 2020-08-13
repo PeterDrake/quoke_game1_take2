@@ -9,7 +9,9 @@ public class CompostingMaster : MonoBehaviour
     public GameObject carbon;
     public GameObject circle;
     public InformationCanvas _interact;
- 
+    public InformationCanvas _banner;
+
+
     private Item wood;
     private Item mulch;
     private Item paper;
@@ -52,6 +54,7 @@ public class CompostingMaster : MonoBehaviour
             {
                 carbon.SetActive(true);
                 Systems.Objectives.Satisfy("COMPOSTFINISHED");
+                _banner.ChangeText("Find Tsu");
                 Systems.Inventory.RemoveItem(mulch, 1);
                 Systems.Inventory.RemoveItem(paper, 1);
                 _interact.ToggleVisibility(false);
