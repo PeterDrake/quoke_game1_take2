@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bleach
   m_EditorClassIdentifier: 
   DisplayName: Bleach
-  Description: I can add 4 drops at a time to my gallon of water
+  Description: I can add 4 drops at a time to my gallon of water.
   Icon: {fileID: 21300000, guid: e94883aed0bbde54787db679ad0a8912, type: 3}
   DisplayImage: {fileID: 21300000, guid: e94883aed0bbde54787db679ad0a8912, type: 3}
   ID: BLCH

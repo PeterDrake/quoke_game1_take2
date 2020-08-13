@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe544f770ae3e64f8d171e0461b7b76, type: 3}
   m_Name: Toilet Paper
   m_EditorClassIdentifier: 
-  DisplayName: Toilet Paper
-  Description: TP
+  DisplayName: Toilet paper
+  Description: 
   Icon: {fileID: 21300000, guid: 12a5844169eb7374583f5a6d575ceff1, type: 3}
   DisplayImage: {fileID: 21300000, guid: 12a5844169eb7374583f5a6d575ceff1, type: 3}
   ID: TP
