@@ -56,7 +56,7 @@ public class CompostingMaster : MonoBehaviour
                 carbon.SetActive(true);
                 Systems.Objectives.Satisfy("COMPOSTFINISHED");
                 if (GameObject.Find("MariaAlert") != null) { GameObject.Find("MariaAlert").GetComponent<FlatFollow>().appear(); }
-                _banner.ChangeText("Find Tsu");
+                _banner.ChangeText("Go into the shelter and get relief");
                 Systems.Inventory.RemoveItem(mulch, 1);
                 Systems.Inventory.RemoveItem(paper, 1);
                 
