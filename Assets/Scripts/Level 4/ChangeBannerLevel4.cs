@@ -33,7 +33,7 @@ public class ChangeBannerLevel4 : MonoBehaviour
                 print("has shreddedpaper");
                 paper = true;
             }
-            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1))
+            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Boards"), 1))
             {
                 print("has wood");
                 wood = true;
