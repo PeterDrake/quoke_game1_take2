@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Zelda Talk 4 Gun
   m_EditorClassIdentifier: 
   speech: 'This is real, Mo. We''ve got to work together to survive. '
-  optionOneText: You are right. Can you help me find a way to get out of this rain?
+  optionOneText: You're right. I won't go looking for a gun, but could you help me
+    find a way to get out of this rain?
   optionOne: {fileID: 11400000, guid: 5c2d2f733874c404f9e746fbb392dace, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
