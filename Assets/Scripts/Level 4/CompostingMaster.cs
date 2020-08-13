@@ -10,6 +10,7 @@ public class CompostingMaster : MonoBehaviour
     public GameObject circle;
     public InformationCanvas _interact;
     public InformationCanvas _banner;
+    public GameObject CorgiMinigame;
 
 
     private Item wood;
@@ -57,6 +58,9 @@ public class CompostingMaster : MonoBehaviour
                 _banner.ChangeText("Find Tsu");
                 Systems.Inventory.RemoveItem(mulch, 1);
                 Systems.Inventory.RemoveItem(paper, 1);
+                
+                CorgiMinigame.SetActive(true);
+                
                 _interact.ToggleVisibility(false);
                 circle.SetActive(false);
                 Destroy(cube);

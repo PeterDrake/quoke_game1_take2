@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class SaveCorgiController : MonoBehaviour
 {
     private DragTarp script;
+    private VideoPlayer _videoPlayer;
 
     public GameObject Tarp;
     public GameObject Corgi;
@@ -17,6 +19,8 @@ public class SaveCorgiController : MonoBehaviour
     void Start()
     {
         script = Tarp.GetComponent<DragTarp>();
+        _videoPlayer = Video.GetComponent<VideoPlayer>();
+
     }
 
     void Update()
@@ -44,9 +48,12 @@ public class SaveCorgiController : MonoBehaviour
     private IEnumerator PlayVideo()
     {
         yield return new WaitForSeconds(1f);
-        Video.SetActive(true);     
-        VideoBackground.SetActive(true);
+        Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
+        VideoBackground.SetActive(true);
+        //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
+        //_videoPlayer.Play();
+        //
 
     }
 }
