@@ -41,7 +41,7 @@ public class BoilWaterMaster : MonoBehaviour
     public void FillPotWithWater()
     {
         Systems.Inventory.RemoveItem(Pot, 1);
-        Systems.Inventory.AddItem(PotWithWater, 1);
+        //Systems.Inventory.AddItem(PotWithWater, 1);
         Sphere.SetActive(true);
         Particles.SetActive(true);
         if (GameObject.Find("BarrelPointer") != null)
