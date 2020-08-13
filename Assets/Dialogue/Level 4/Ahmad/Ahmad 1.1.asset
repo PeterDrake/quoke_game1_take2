@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Ahmad 1.1
   m_EditorClassIdentifier: 
-  speech: Certainly! Could you do me a favor, though?
-  optionOneText: What is it?
+  speech: Certainly! Could you do me a favor first, though?
+  optionOneText: Sure, what is it?
   optionOne: {fileID: 11400000, guid: 296d33c6073626f4791e08831106251b, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

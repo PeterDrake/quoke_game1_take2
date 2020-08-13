@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Mo3
+  m_Name: Ahmad 2.2 no rain
   m_EditorClassIdentifier: 
-  speech: "What? No, BEECN -- Basic Earthquake Emergency Communication, um ... Node?
-    They\u2019ve got a radio and might know what\u2019s going on."
-  optionOneText: Oh, okay. How will we find it?
-  optionOne: {fileID: 11400000, guid: e7c1db8a830d4f04d8a0c8e81472584e, type: 2}
+  speech: I hope everyone stays safe during the rainstorm...
+  optionOneText: I hope so too... I'm getting a bit cold...
+  optionOne: {fileID: 11400000, guid: b8f0870f8c050f44db584e13d5767205, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

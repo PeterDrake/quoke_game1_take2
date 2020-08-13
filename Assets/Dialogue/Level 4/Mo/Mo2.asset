@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: "I think there\u2019s a BEECN site west of here. Maybe they\u2019ll have
     some ideas."
-  optionOneText: "Huh, what\u2019s a beacon?"
+  optionOneText: A bacon side? That sounds great!
   optionOne: {fileID: 11400000, guid: 5965e1af704bc17488561ad9ed9003f6, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}

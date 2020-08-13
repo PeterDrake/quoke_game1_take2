@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Mo3
+  m_Name: Maria 2.1 go to ahmad
   m_EditorClassIdentifier: 
-  speech: "What? No, BEECN -- Basic Earthquake Emergency Communication, um ... Node?
-    They\u2019ve got a radio and might know what\u2019s going on."
-  optionOneText: Oh, okay. How will we find it?
-  optionOne: {fileID: 11400000, guid: e7c1db8a830d4f04d8a0c8e81472584e, type: 2}
+  speech: Have you talked to Ahmad about the shelter yet?
+  optionOneText: Not yet..
+  optionOne: {fileID: 11400000, guid: da9398c255ef9b94b80d70025f503b62, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

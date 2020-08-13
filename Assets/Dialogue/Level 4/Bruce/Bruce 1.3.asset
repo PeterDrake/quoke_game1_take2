@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Mo3
+  m_Name: Bruce 1.3
   m_EditorClassIdentifier: 
-  speech: "What? No, BEECN -- Basic Earthquake Emergency Communication, um ... Node?
-    They\u2019ve got a radio and might know what\u2019s going on."
-  optionOneText: Oh, okay. How will we find it?
-  optionOne: {fileID: 11400000, guid: e7c1db8a830d4f04d8a0c8e81472584e, type: 2}
+  speech: "Well that\u2019s a problem I could help with. If you can find some wood
+    and some kind of carbon material -- you know, sawdust, leaves, that sort of thing
+    -- I can help you build a composting toilet system."
+  optionOneText: "That would be great! I\u2019ll keep an eye out for that stuff while
+    I\u2019m looking for my dog."
+  optionOne: {fileID: 11400000, guid: dbe26899bfd7bc440b6d4f9590790ed9, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
