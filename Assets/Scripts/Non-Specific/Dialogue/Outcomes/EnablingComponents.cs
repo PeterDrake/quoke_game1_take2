@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,6 +9,7 @@ public class EnablingComponents : DialogueOutcome
 
     public override void DoOutcome(ref NPC n)
     {
-        GameObject.Find(WhatNeedsToAppear).GetComponent<IntractWithObject>().enabled;
+        GameObject.Find(WhatGameObject).GetComponent<InteractWithObject>().enabled = true;
+        GameObject.Find(WhatGameObject).GetComponent<SphereCollider>().enabled = true;
     }
-}*/
+}
