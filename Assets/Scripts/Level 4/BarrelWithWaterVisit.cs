@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BarrelWithWaterVisit : MonoBehaviour
 {
-    
+    public Item PotWithWater;
 
     public GameObject BoilWater;
 
@@ -40,6 +40,7 @@ public class BarrelWithWaterVisit : MonoBehaviour
             BoilWater.SetActive(true);
             //BarrelWithWater.GetComponent<InteractWithObject>().disabled;
             GameObject.Find("BarrelWithWater").GetComponent<InteractWithObject>().Kill();
+            Systems.Inventory.AddItem(PotWithWater, 1);
         }
         else
         {
