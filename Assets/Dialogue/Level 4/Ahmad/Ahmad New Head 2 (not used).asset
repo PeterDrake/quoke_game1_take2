@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Ahmad New Head 3
+  m_Name: Ahmad New Head 2 (not used)
   m_EditorClassIdentifier: 
   speech: Hi Zelda.
-  optionOneText: Now we have a barrel full of water. Do you think we should boil
-    it in case anything washed off the roof?
-  optionOne: {fileID: 11400000, guid: 62e75bf6d8939874686a40fd6bece2c2, type: 2}
+  optionOneText: Hi Ahmad!
+  optionOne: {fileID: 11400000, guid: 281bfd2deec931549bdef91f8aeedead, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Maria 10
+  m_Name: Ahmad Head 1
   m_EditorClassIdentifier: 
-  speech: Thanks. See you later!
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: "Welcome to the emergency shelter. I\u2019m Ahmad."
+  optionOneText: "I\u2019m Zelda! Is there still room?\r"
+  optionOne: {fileID: 11400000, guid: edd356fce6b9603469f3e1e68a703980, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

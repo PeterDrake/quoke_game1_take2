@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Maria 10
+  m_Name: Maria 13
   m_EditorClassIdentifier: 
-  speech: Thanks. See you later!
+  speech: Of course. And thanks for building that compost box. Now that we have that,
+    we can use the shelter to go to the bathroom again.
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
-  NewHead: {fileID: 0}
+  NewHead: {fileID: 11400000, guid: 61af0a3ce303f4e4ea23e5b9335068f9, type: 2}

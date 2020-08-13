@@ -9,14 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Maria 10
+  m_Script: {fileID: 11500000, guid: 1400a362385c3e24c82c57933867603c, type: 3}
+  m_Name: 4ShowBruce
   m_EditorClassIdentifier: 
-  speech: Thanks. See you later!
-  optionOneText: 
-  optionOne: {fileID: 0}
-  optionTwoText: 
-  optionTwo: {fileID: 0}
-  Requirements: []
-  Outcomes: []
-  NewHead: {fileID: 0}
+  ObjectiveName: ShowBruce
+  targetGameObject: BrucePointer
+  makeAppear: 1

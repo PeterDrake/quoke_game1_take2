@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Maria 10
+  m_Script: {fileID: 11500000, guid: 20fe703bed23a3e4284a29cc170be1ac, type: 3}
+  m_Name: BruceAppear
   m_EditorClassIdentifier: 
-  speech: Thanks. See you later!
-  optionOneText: 
-  optionOne: {fileID: 0}
-  optionTwoText: 
-  optionTwo: {fileID: 0}
-  Requirements: []
-  Outcomes: []
-  NewHead: {fileID: 0}
+  WhatNeedsToAppear: BruceController
+  x: -205
+  y: 0
+  z: -175

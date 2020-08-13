@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Ahmad head node
+  m_Name: Maria 14
   m_EditorClassIdentifier: 
-  speech: "Welcome to the emergency shelter. I\u2019m Ahmad."
-  optionOneText: "I\u2019m Zelda! Is there still room?\r"
-  optionOne: {fileID: 11400000, guid: edd356fce6b9603469f3e1e68a703980, type: 2}
+  speech: If you haven't yet, you should talk to Bruce at the eco-village. It's on
+    the block directly north of here.
+  optionOneText: 
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
