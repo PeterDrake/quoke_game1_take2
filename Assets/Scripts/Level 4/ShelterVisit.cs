@@ -233,9 +233,10 @@ public class ShelterVisit : MonoBehaviour
         if (GameObject.Find("AhmadAlert") != null)
         { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
 
-        Systems.Status.AffectWarmth(100);
-        Systems.Status.AffectRelief(100);
+        Systems.Status.AffectWarmth(50);
+        //Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
+        Systems.Status.SlowDownWarmthLoss();
 
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;
@@ -259,13 +260,13 @@ public class ShelterVisit : MonoBehaviour
     public void OnVisitsAfterCompost()
     {
         Systems.Status.AffectRelief(100);
-        Systems.Status.AffectWarmth(100);
+        Systems.Status.AffectWarmth(50);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 
     public void OnVisitsBeforeCompost()
     {
-        Systems.Status.AffectWarmth(100);
+        Systems.Status.AffectWarmth(50);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
     }
 }

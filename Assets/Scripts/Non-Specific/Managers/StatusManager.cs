@@ -212,6 +212,10 @@ public class StatusManager : MonoBehaviour
     {
         WarmthLossRate = WarmthLossRate * 2;
     }
+    public void SlowDownWarmthLoss()
+    {
+        WarmthLossRate = WarmthLossRate * 0.5f;
+    }
 
     public void RefillFlash()
     {

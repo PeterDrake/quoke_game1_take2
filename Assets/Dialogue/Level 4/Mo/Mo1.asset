@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Mo1
   m_EditorClassIdentifier: 
-  speech: "I know!!! It's crazy! Good thing we weren\u2019t in there.."
+  speech: "I know! It's crazy! Good thing we weren\u2019t in there."
   optionOneText: Where are we going to sleep now?!
   optionOne: {fileID: 11400000, guid: 7c265376e99a0424d9115a5aca92bfdb, type: 2}
   optionTwoText: 

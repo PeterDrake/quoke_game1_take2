@@ -13,6 +13,8 @@ public class GameObjectAppear : DialogueOutcome
 
     public override void DoOutcome(ref NPC n)
     {
+        if (GameObject.Find(WhatNeedsToAppear + "Pointer") != null)
+        { GameObject.Find(WhatNeedsToAppear + "Pointer").GetComponent<FlatFollow>().appear(); }
         GameObject.Find(WhatNeedsToAppear).transform.position = new Vector3(x, y, z);
     }
 }

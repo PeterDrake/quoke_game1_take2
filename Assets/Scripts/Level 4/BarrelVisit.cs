@@ -72,7 +72,7 @@ public class BarrelVisit : MonoBehaviour
         //levelAudio.SetActive(true);
         _interact.Kill();
     }
-    private void MiniGameFinished()//this is not getting called
+    private void MiniGameFinished()
     {
         Systems.Status.UnPause();
         DrainPipe.SetActive(false);
@@ -81,6 +81,7 @@ public class BarrelVisit : MonoBehaviour
         Storm.SetActive(true);
         _canvas.ChangeText(BewareTheStorm);
         SchoolEntrance.enabled = true;
+        Systems.Status.SpeedUpWarmthLoss();
 
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
 
