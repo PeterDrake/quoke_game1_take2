@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class BarrelWithWaterVisit : MonoBehaviour
 {
 
+    public GameObject BoilWater;
 
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
@@ -34,10 +35,13 @@ public class BarrelWithWaterVisit : MonoBehaviour
         {
 
             _interact.enabled = false;
+            BoilWater.SetActive(true);
+
         }
         else
         {
             _interact.SetInteractText("Go talk to Ahmad about water");
+            BoilWater.SetActive(false);
 
         }
 
