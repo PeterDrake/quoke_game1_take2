@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class BoilWaterMaster : MonoBehaviour
 {
+   
     public GameObject Bruce;
 
     public InformationCanvas _canvas;
     private string words;
+    private string words1;
 
 
     public Item Wood;
@@ -77,10 +79,13 @@ public class BoilWaterMaster : MonoBehaviour
         }
 
         words = "Build a fire and set up the pot to boil water";
+        
+
         if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Wood"), 1)
                     && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Pot"), 1))
         {
             _canvas.ChangeText(words);
         }
+
     }
 }
