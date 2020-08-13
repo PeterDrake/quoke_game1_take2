@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sawdust
   m_EditorClassIdentifier: 
   DisplayName: Sawdust
-  Description: A heaping handful of sawdust
+  Description: A heaping handful of sawdust.
   Icon: {fileID: 21300000, guid: 4cafb9504be1f584bba96fec879995ac, type: 3}
   DisplayImage: {fileID: 21300000, guid: 4cafb9504be1f584bba96fec879995ac, type: 3}
   ID: SAWD

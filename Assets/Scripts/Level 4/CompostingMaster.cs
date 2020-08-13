@@ -13,7 +13,7 @@ public class CompostingMaster : MonoBehaviour
     public GameObject CorgiMinigame;
 
 
-    private Item wood;
+    private Item boards;
     private Item mulch;
     private Item paper;
     public bool made;
@@ -21,7 +21,7 @@ public class CompostingMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wood = Resources.Load<Item>("Items/Wood");
+        boards = Resources.Load<Item>("Items/Boards");
         mulch = Resources.Load<Item>("Items/Mulch");
         paper = Resources.Load<Item>("Items/ShreddedPaper");
         
@@ -31,9 +31,9 @@ public class CompostingMaster : MonoBehaviour
     {
         if (!made)
         {
-            if (Systems.Inventory.HasItem(wood, 1))
+            if (Systems.Inventory.HasItem(boards, 1))
             {
-                Systems.Inventory.RemoveItem(wood, 1);
+                Systems.Inventory.RemoveItem(boards, 1);
                 box.SetActive(true);
                 made = true;
                 cube.transform.position = new Vector3(cube.transform.position.x, .5f, cube.transform.position.z);

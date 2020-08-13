@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pot
   m_EditorClassIdentifier: 
   DisplayName: Pot
-  Description: Useful for boiling water
+  Description: Useful for boiling water.
   Icon: {fileID: 21300000, guid: a3fb124d59ca8594bb81878369b653fb, type: 3}
   DisplayImage: {fileID: 21300000, guid: a3fb124d59ca8594bb81878369b653fb, type: 3}
   ID: POT

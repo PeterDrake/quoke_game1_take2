@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BookcaseTools
   m_EditorClassIdentifier: 
   DisplayName: Tools
-  Description: Tools for securing a bookshelf to a wall
+  Description: Tools for securing a bookshelf to a wall.
   Icon: {fileID: 21300000, guid: b3cc5b710b9a51141b4330e6f1724f4e, type: 3}
   DisplayImage: {fileID: 21300000, guid: b3cc5b710b9a51141b4330e6f1724f4e, type: 3}
   ID: TOOL
