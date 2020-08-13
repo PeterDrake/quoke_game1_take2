@@ -215,18 +215,20 @@ public class StatusManager : MonoBehaviour
 
     public void RefillFlash()
     {
-        if (Hydration == 100)
-        {
-            WaterFlash.color = refillColor;
-        }
-        else if (Relief == 100)
+
+        if (Relief == 100)
         {
             ReliefFlash.color = refillColor;
         }
-        else if (Warmth == 100)
+        if (Warmth == 100)
         {
             WarmthFlash.color = refillColor;
         }
+        else if (Hydration == 100)
+        {
+            WaterFlash.color = refillColor;
+        }
+
         else
         {
             WaterFlash.color = Color.Lerp(WaterFlash.color, Color.clear, Time.time);
