@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Zelda Talk 3 Tent No More Gun
+  m_Name: Zelda Talk 5 Win
   m_EditorClassIdentifier: 
-  speech: 'Thanks for getting rid of that gun. '
-  optionOneText: No problem. It's raining pretty hard. Could I crash in your tent
-    tonight?
-  optionOne: {fileID: 11400000, guid: 3b23a39848aef4270a8e3dc60ffaf13c, type: 2}
+  speech: If you need a place to crash, I've got a tent set up right here. It's not
+    safe to sleep in these buildings; I almost got flattened in that last aftershock!
+  optionOneText: Thanks, I'll take you up on that.
+  optionOne: {fileID: 11400000, guid: ca1083a5ab5bf6e4ca2e658d840d8f33, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
