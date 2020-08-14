@@ -69,7 +69,7 @@ public class WaterHeaterVisit : MonoBehaviour
 
         (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
-        (sunlight = GameObject.Find("Sunlight")).SetActive(false);
+       // (sunlight = GameObject.Find("Sunlight")).SetActive(false);
         levelMusic.SetActive(false);
         waterMusic.SetActive(true);
 
@@ -82,7 +82,7 @@ public class WaterHeaterVisit : MonoBehaviour
         SceneManager.UnloadSceneAsync(MiniGameSceneName);
         canvi.SetActive(true);
         camera.SetActive(true);
-        sunlight.SetActive(true);
+       // sunlight.SetActive(true);
         levelMusic.SetActive(true);
         waterMusic.SetActive(false);
     }
@@ -95,7 +95,7 @@ public class WaterHeaterVisit : MonoBehaviour
         Systems.Objectives.Satisfy("WATERHEATEREVENT");
         camera.SetActive(true);
         canvi.SetActive(true);
-        sunlight.SetActive(true);
+       // sunlight.SetActive(true);
         levelMusic.SetActive(true);
         waterMusic.SetActive(false);
 
