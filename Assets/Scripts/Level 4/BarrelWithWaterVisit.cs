@@ -39,7 +39,9 @@ public class BarrelWithWaterVisit : MonoBehaviour
             _interact.enabled = false;
             BoilWater.SetActive(true);
             //BarrelWithWater.GetComponent<InteractWithObject>().disabled;
-            GameObject.Find("BarrelWithWater").GetComponent<InteractWithObject>().Kill();
+            GameObject.Find("BarrelWithWater").GetComponent<InteractWithObject>().OnTriggerExit(GameObject.FindGameObjectWithTag("Player").GetComponent<Collider>());
+            GameObject.Find("BarrelWithWater").GetComponent<InteractWithObject>().enabled = false;
+            GameObject.Find("BarrelWithWater").GetComponent<SphereCollider>().enabled = false;
             Systems.Inventory.AddItem(PotWithWater, 1);
         }
         else
