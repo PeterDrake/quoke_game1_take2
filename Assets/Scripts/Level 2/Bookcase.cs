@@ -2,6 +2,9 @@
 
 public class Bookcase : MonoBehaviour
 {
+    public AudioSource drillSound;
+    public GameObject supports;
+
     [Header("Will check for this item to repair bookshelf")]
     public Item CheckItem;
 
@@ -120,8 +123,10 @@ public class Bookcase : MonoBehaviour
             _interact.SetInteractText("");
             Systems.Objectives.Satisfy("BOOKCASE");
             Systems.Inventory.RemoveItem(CheckItem, 1);
+            supports.SetActive(true);
             if (GameObject.Find("BookcasePointer") != null)
             { GameObject.Find("BookcasePointer").GetComponent<FlatFollow>().disappear(); }
+            drillSound.Play();
             Disable(); 
         }
     }
