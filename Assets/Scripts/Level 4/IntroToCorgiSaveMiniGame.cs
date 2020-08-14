@@ -10,6 +10,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject VideoDisplayer;
     public GameObject VideoBackground;
     public GameObject Video;
+    public GameObject TsuPointer;
 
     public InformationCanvas _canvas;
 
@@ -63,13 +64,13 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     private IEnumerator TsuDialogue()
     {
         yield return new WaitForSeconds(3f);
+        
+        //Tsu's dialogue appears
         script.Interact();
         
+        //Tsu's dot appears
+        TsuPointer.SetActive(true);
     }
-    
-    //wait for three seconds
-    //Tsu dialogue appears
-    //Tsu's dot appears
     
     
 }
