@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class IntroToCorgiSaveMiniGame : MonoBehaviour
 {
@@ -12,14 +13,21 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject Video;
     public GameObject TsuPointer;
 
+    public GameObject Ahmad;
+    public NavMeshAgent Ahmad1;
+
     public InformationCanvas _canvas;
 
     private bool check;
     private StartDialogue script;
+    private WayPointPatrol scriptAhmad;
+    private Animator animator1;
 
     void Start()
     {
-        script = GameObject.Find("Controller").GetComponent<StartDialogue>();
+        script = this.GetComponent<StartDialogue>();
+        scriptAhmad = Ahmad.GetComponent<WayPointPatrol>();
+        animator1 = Ahmad.GetComponent<Animator>();
     }
 
 
@@ -31,6 +39,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
         }
+        
     }
     
     private IEnumerator StartCutScene()
@@ -65,9 +74,13 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         //Tsu's dot appears
         TsuPointer.SetActive(true);
         
-        
-        //start Tsu's dialogue
-        //StartCoroutine(nameof(TsuDialogue));
+        //Ahmad starts walking to Tsu
+        Ahmad1.enabled = true;
+        scriptAhmad.enabled = true;
+        animator1.SetBool("isWalking", true);
+
+        //Bruce starts walking to Tsu
+        //Maria starts moving towards Tsu
     }
     
 }
