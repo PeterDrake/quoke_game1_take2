@@ -57,12 +57,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         //change banner to "Look for Tsu"
         _canvas. ChangeText("Look for Tsu");
         
-        //start Tsu's dialogue
-        StartCoroutine(nameof(TsuDialogue));
-    }
-
-    private IEnumerator TsuDialogue()
-    {
         yield return new WaitForSeconds(3f);
         
         //Tsu's dialogue appears
@@ -70,7 +64,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         
         //Tsu's dot appears
         TsuPointer.SetActive(true);
+        
+        
+        //start Tsu's dialogue
+        //StartCoroutine(nameof(TsuDialogue));
     }
-    
     
 }
