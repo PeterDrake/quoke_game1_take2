@@ -10,15 +10,37 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject VideoDisplayer;
     public GameObject VideoBackground;
     public GameObject Video;
-    
+
     public InformationCanvas _canvas;
 
     private bool check;
-    
-    //check if the sanitation is built
+    private StatusManager script;
+    private float Warmth;
+
+    void Start()
+    {
+        script = GameObject.Find("Managers").GetComponent<StatusManager>();
+        Warmth = script.Warmth;
+        Debug.Log("Warmth is " + Warmth);
+    }
+
+
+//check if the sanitation is built
     void Update()
     {
-        if (CompostingToilet.activeSelf && !check)
+        if (Warmth >= 90f)
+        {
+            Debug.Log("WARMTH IS WELL");
+            if (CompostingToilet.activeSelf)
+            {
+                Debug.Log("BOTH ARE WELL");
+                if (!check)
+                {
+                    Debug.Log("ALL IS WELL");
+                }
+            }
+        }
+        if (CompostingToilet.activeSelf && !check) //&& Warmth>=90f)
         {
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
@@ -28,7 +50,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     private IEnumerator StartCutScene()
     {
         //if the sanitation is built, wait for four seconds and trigger "In the meantime..." slide
-        yield return new WaitForSeconds(4f);
+        //yield return new WaitForSeconds(4f);
         MiniGameClose.SetActive(false);
         InTheMeantimeCanvas.SetActive(true);
         
@@ -37,6 +59,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
+        InTheMeantimeCanvas.SetActive(false);
         yield return new WaitForSeconds(63f);
         
         //turn off the video
