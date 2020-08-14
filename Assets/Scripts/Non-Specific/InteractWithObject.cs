@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
@@ -15,7 +16,13 @@ public class InteractWithObject : MonoBehaviour
     private bool blinkOn = false;
     private bool playerInCollider = false;
     //-----------------------------
-    
+
+    //-----MaterialBlinkOnInteract-----
+    public bool BlinkOnInteract;
+    private Material mat_blinkOnce;
+    public float blinkOnceLength;
+    //-----------------------------
+
     //-----Item Manipulation------
     public Item[] itemToReceive = new Item[1];
     private InventoryHelper inventory;
@@ -79,6 +86,12 @@ public class InteractWithObject : MonoBehaviour
             mat_blink = Resources.Load("Materials/Transparent Object 1", typeof(Material)) as Material;
             _meshRenderer = GetComponent<MeshRenderer>();
         }
+        if (BlinkOnInteract)
+        {
+            mat_original = gameObject.GetComponent<MeshRenderer>().material;
+            mat_blinkOnce = Resources.Load("Materials/Transparent Object 1", typeof(Material)) as Material; //pick another color (blue) how?
+            _meshRenderer = GetComponent<MeshRenderer>();
+        }
     }
 
     public void FixedUpdate() // Fixed update responds to timescale
@@ -114,6 +127,11 @@ public class InteractWithObject : MonoBehaviour
                 itemToReceive = null;
             }
             CallOnInteract.Invoke();
+
+            if (BlinkOnInteract)
+            {
+                StartCoroutine(nameof(BlinkOnce), BlinkOnce());
+            }
 
             if (DestoryObjectAfterUse)
             {
@@ -183,6 +201,14 @@ public class InteractWithObject : MonoBehaviour
         _meshRenderer.material = mat_original;
         blinkOn = false;
         BlinkWhenPlayerNear = false;
+    }
+
+    private IEnumerator BlinkOnce()
+    {
+        _meshRenderer.material = mat_blinkOnce;
+        if (blinkOnceLength == 0f) { blinkOnceLength = 0.1f; }
+        yield return new WaitForSeconds(blinkOnceLength);
+        _meshRenderer.material = mat_original;
     }
 
     public void Kill()
