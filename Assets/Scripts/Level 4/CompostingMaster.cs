@@ -11,6 +11,7 @@ public class CompostingMaster : MonoBehaviour
     public InformationCanvas _interact;
     public InformationCanvas _banner;
     public GameObject CorgiMinigame;
+    public GameObject Frank;
 
 
     private Item boards;
@@ -65,6 +66,8 @@ public class CompostingMaster : MonoBehaviour
                 Systems.Inventory.RemoveItem(paper, 1);
                 
                 CorgiMinigame.SetActive(true);
+                Frank.SetActive(false);
+
                 
                 _interact.ToggleVisibility(false);
                 circle.SetActive(false);
