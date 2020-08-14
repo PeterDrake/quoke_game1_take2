@@ -1423,6 +1423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: Press 'E' to use buckets
   interactText: {fileID: 0}
@@ -6708,6 +6710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 0
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: Press E to talk to Ahmad
   interactText: {fileID: 0}
@@ -9336,6 +9340,16 @@ PrefabInstance:
       propertyPath: DestoryObjectAfterUse
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557045448172750, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: BlinkOnInteract
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045448172750, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: blinkOnceLength
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557045448172751, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: TriggerCollider
@@ -9621,6 +9635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: Press 'E' to use buckets
   interactText: {fileID: 0}
@@ -18775,6 +18791,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: 
   interactText: {fileID: 0}
@@ -18882,6 +18900,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: Press 'E' to use buckets
   interactText: {fileID: 0}
