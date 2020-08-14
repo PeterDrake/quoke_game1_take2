@@ -76,6 +76,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         //Tsu's dot appears
         if (GameObject.Find("TsuPointer") != null) { GameObject.Find("TsuPointer").GetComponent<FlatFollow>().appear(); }
 
+        GameObject.Find("TrePointer").GetComponent<FlatFollow>().appear();
+        GameObject.Find("MoPointer").GetComponent<FlatFollow>().appear();
+
         //Ahmad starts walking to Tsu
         Ahmad1.enabled = true;
         scriptAhmad.enabled = true;
