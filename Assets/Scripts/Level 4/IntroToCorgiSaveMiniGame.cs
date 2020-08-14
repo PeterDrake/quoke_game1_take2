@@ -47,6 +47,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         //if the sanitation is built, wait for four seconds and trigger "In the meantime..." slide
         yield return new WaitForSeconds(1.5f);
         MiniGameClose.SetActive(false);
+        if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Pause(); }
         InTheMeantimeCanvas.SetActive(true);
         
         //then trigger the video
@@ -61,6 +62,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(false);
         VideoDisplayer.SetActive(false);
         Video.SetActive(false);
+        if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Play(); }
         MiniGameClose.SetActive(true);
         
         //change banner to "Look for Tsu"
@@ -72,8 +74,8 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         script.Interact();
         
         //Tsu's dot appears
-        TsuPointer.SetActive(true);
-        
+        if (GameObject.Find("TsuPointer") != null) { GameObject.Find("TsuPointer").GetComponent<FlatFollow>().appear(); }
+
         //Ahmad starts walking to Tsu
         Ahmad1.enabled = true;
         scriptAhmad.enabled = true;
