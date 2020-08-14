@@ -14990,6 +14990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: Press 'E' to rest in the bed
   interactText: {fileID: 0}
@@ -27609,6 +27611,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 0
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive:
   - {fileID: 0}
   InteractionDisplayText: Press 'E' to talk to Mo
@@ -36215,6 +36219,11 @@ PrefabInstance:
       propertyPath: sfxAudio.Array.data[6]
       value: 
       objectReference: {fileID: 1354096024}
+    - target: {fileID: 7894790056884616542, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: halveMusic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8418557875464114439, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: objectDropper
@@ -43028,6 +43037,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive:
   - {fileID: 0}
   InteractionDisplayText: Press "E" to Shut Off Gas Valve.
@@ -45419,6 +45430,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive:
   - {fileID: 11400000, guid: f2b6b56adffec5c458a8ad17aa45f929, type: 2}
   InteractionDisplayText: Press "E" to Pickup Wrench
@@ -75876,6 +75889,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive:
   - {fileID: 0}
   InteractionDisplayText: Press 'E' to drink from the sink
@@ -94828,6 +94843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
+  BlinkOnInteract: 0
+  blinkOnceLength: 0
   itemToReceive:
   - {fileID: 0}
   InteractionDisplayText: Press 'E' to use the toilet

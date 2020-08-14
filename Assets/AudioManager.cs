@@ -10,7 +10,9 @@ public class AudioManager : MonoBehaviour
     private int firstPlayInt;
     public Slider musicSlider, sfxSlider;
     private float musicFloat, sfxFloat;
+    public bool halveMusic;
     public AudioSource[] musicAudio;
+    public bool halveSFX;
     public AudioSource[] sfxAudio;
 
     void Start()
@@ -84,13 +86,15 @@ public class AudioManager : MonoBehaviour
 
     public void UpdateSound()
     {
-        for (int i=0; i<musicAudio.Length; i++)
+        for (int i = 0; i < musicAudio.Length; i++)
         {
-            musicAudio[i].volume = musicSlider.value * 0.5f;
+            if (halveMusic) { musicAudio[i].volume = musicSlider.value * 0.5f; }
+            else { musicAudio[i].volume = musicSlider.value; }
         }
         for (int j=0; j<sfxAudio.Length; j++)
         {
-            sfxAudio[j].volume = sfxSlider.value * 0.5f;
+            if (halveSFX) { sfxAudio[j].volume = sfxSlider.value * 0.5f; }
+            else { sfxAudio[j].volume = sfxSlider.value; }
         }
         print("Sound updated");
         //SaveSoundSettings();

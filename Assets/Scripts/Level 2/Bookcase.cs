@@ -2,6 +2,8 @@
 
 public class Bookcase : MonoBehaviour
 {
+    public AudioSource drillSound;
+
     [Header("Will check for this item to repair bookshelf")]
     public Item CheckItem;
 
@@ -122,6 +124,7 @@ public class Bookcase : MonoBehaviour
             Systems.Inventory.RemoveItem(CheckItem, 1);
             if (GameObject.Find("BookcasePointer") != null)
             { GameObject.Find("BookcasePointer").GetComponent<FlatFollow>().disappear(); }
+            drillSound.Play();
             Disable(); 
         }
     }
