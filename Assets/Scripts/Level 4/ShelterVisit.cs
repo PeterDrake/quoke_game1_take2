@@ -16,6 +16,8 @@ public class ShelterVisit : MonoBehaviour
     public GameObject Ahmad;
     public GameObject StormCanvas;
 
+    public GameObject Controller;
+
     private const string EventKey = "COMPOSTFINISHED";
 
     private bool firstVisit;
@@ -259,6 +261,7 @@ public class ShelterVisit : MonoBehaviour
 
     public void OnVisitsAfterCompost()
     {
+        Controller.SetActive(true);
         Systems.Status.AffectRelief(100);
         Systems.Status.AffectWarmth(50);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
