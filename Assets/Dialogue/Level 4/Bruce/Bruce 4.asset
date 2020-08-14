@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Bruce 3.1
+  m_Name: Bruce 4
   m_EditorClassIdentifier: 
-  speech: Thanks, Zelda.
-  optionOneText: 
-  optionOne: {fileID: 0}
+  speech: That looks great! Tell the people in the shelter that they can start using
+    their buckets again, just stop lining them with garbage bags. I'll train a couple
+    of people to empty buckets into the big compost bin.
+  optionOneText: Will do!
+  optionOne: {fileID: 11400000, guid: 782831960635fe44a8e106020367b4ac, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes:
-  - {fileID: 11400000, guid: 45364bab0f51ad941924c273e1fac297, type: 2}
+  Outcomes: []
   NewHead: {fileID: 0}

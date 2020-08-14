@@ -9,14 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Bruce 3 Head
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
+  m_Name: Bruce New Head 3
   m_EditorClassIdentifier: 
   speech: Have you built the composting toilet system?
   optionOneText: Yes, I did!
-  optionOne: {fileID: 11400000, guid: 782831960635fe44a8e106020367b4ac, type: 2}
+  optionOne: {fileID: 11400000, guid: 2c5f2f24baefdd343ac1824c4c858ebd, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: b6a75cd5c325c0f4baf2b0653e8fe42c, type: 2}
+  optionOneTextAlt: No, not yet..
+  optionOneAlt: {fileID: 11400000, guid: 1b7ac6befcad18a4b8b7ffbae373569d, type: 2}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
