@@ -80,6 +80,8 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         Ahmad1.enabled = true;
         scriptAhmad.enabled = true;
         animator1.SetBool("isWalking", true);
+        Ahmad.GetComponent<SphereCollider>().isTrigger = false;
+        Ahmad.GetComponent<InteractWithObject>().Kill();
 
         //Bruce starts walking to Tsu
         //Maria starts moving towards Tsu
