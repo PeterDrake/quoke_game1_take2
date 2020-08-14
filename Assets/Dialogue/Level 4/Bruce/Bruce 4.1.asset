@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Bruce 3 Head
+  m_Name: Bruce 4
   m_EditorClassIdentifier: 
-  speech: Have you built the composting toilet system?
-  optionOneText: Yes, I did!
-  optionOne: {fileID: 11400000, guid: 782831960635fe44a8e106020367b4ac, type: 2}
+  speech: Thanks, Zelda.
+  optionOneText: 
+  optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes: []
+  Outcomes:
+  - {fileID: 11400000, guid: 45364bab0f51ad941924c273e1fac297, type: 2}
+  - {fileID: 11400000, guid: 8206848bc428e9345b0955e028edceac, type: 2}
   NewHead: {fileID: 0}

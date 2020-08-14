@@ -31,8 +31,10 @@ public class CompostingMaster : MonoBehaviour
     {
         if (!made)
         {
+            
             if (Systems.Inventory.HasItem(boards, 1))
             {
+                
                 Systems.Inventory.RemoveItem(boards, 1);
                 box.SetActive(true);
                 made = true;
@@ -53,8 +55,10 @@ public class CompostingMaster : MonoBehaviour
         {
             if (Systems.Inventory.HasItem(mulch, 1) && Systems.Inventory.HasItem(paper, 1))
             {
+
                 carbon.SetActive(true);
                 Systems.Objectives.Satisfy("COMPOSTFINISHED");
+                Systems.Objectives.Satisfy("HasBuiltCompostingSystem");
                 if (GameObject.Find("BruceAlert") != null) { GameObject.Find("BruceAlert").GetComponent<FlatFollow>().appear(); }
                 _banner.ChangeText("Talk to Bruce");
                 Systems.Inventory.RemoveItem(mulch, 1);
@@ -65,6 +69,7 @@ public class CompostingMaster : MonoBehaviour
                 _interact.ToggleVisibility(false);
                 circle.SetActive(false);
                 Destroy(cube);
+                
             }
             else
             {
