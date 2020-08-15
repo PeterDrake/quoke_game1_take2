@@ -1835,8 +1835,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c0d8a7e7a6f483faa74d450406fb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eqSound: {fileID: 1423048622}
-  ding: {fileID: 1865953952}
+  eqSound: {fileID: 1423048624}
+  background: {fileID: 1865953954}
   wave: {fileID: 1349825621}
   button: {fileID: 1393377993}
   tree: {fileID: 807090228}
@@ -11590,7 +11590,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1423048623
 Transform:
   m_ObjectHideFlags: 0
@@ -11616,7 +11616,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ba7961dbdc239c44eae6d8edd9666661, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
