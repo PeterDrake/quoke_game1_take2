@@ -27,6 +27,8 @@ TagManager:
   - HighGround
   - LowGround
   - Barrel
+  - Fire
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -14,19 +14,26 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject TsuPointer;
 
     public GameObject Ahmad;
-    public NavMeshAgent Ahmad1;
+    public GameObject Bruce;
+    public NavMeshAgent Bruce1;
+    public GameObject Maria;
 
     public InformationCanvas _canvas;
 
     private bool check;
     private StartDialogue script;
-    private WayPointPatrol scriptAhmad;
+    private NPCWalking scriptBruce;
+    private NPCWalking scriptAhmad;
+    private WayPointPatrol scriptMaria;
     private Animator animator1;
 
     void Start()
     {
         script = this.GetComponent<StartDialogue>();
-        scriptAhmad = Ahmad.GetComponent<WayPointPatrol>();
+        scriptAhmad = Ahmad.GetComponent<NPCWalking>();
+        scriptBruce = Bruce.GetComponent<NPCWalking>();
+        scriptMaria = Maria.GetComponent<WayPointPatrol>();
+        //Bruce1 = Bruce.GetComponent<NavMeshAgent>();
         animator1 = Ahmad.GetComponent<Animator>();
     }
 
@@ -80,14 +87,22 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         GameObject.Find("MoPointer").GetComponent<FlatFollow>().appear();
 
         //Ahmad starts walking to Tsu
-        Ahmad1.enabled = true;
         scriptAhmad.enabled = true;
-        animator1.SetBool("isWalking", true);
+        scriptMaria.enabled = true;
+        scriptBruce.enabled = true;
+        Bruce1.enabled = true;
+        
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
         Ahmad.GetComponent<InteractWithObject>().Kill();
 
-        //Bruce starts walking to Tsu
         //Maria starts moving towards Tsu
+
+        
+        //Bruce starts walking to Tsu
+        scriptBruce.enabled = true;
+        Bruce1.enabled = true;
+        
+        
     }
     
 }
