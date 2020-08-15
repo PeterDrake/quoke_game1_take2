@@ -15,6 +15,7 @@ public class BoilWaterMaster : MonoBehaviour
     public Item Wood;
     public Item Pot;
     public Item PotWithWater;
+    public AudioSource waterSplash;
 
     public GameObject BarrelWithWater;
     public GameObject Sphere;
@@ -48,6 +49,7 @@ public class BoilWaterMaster : MonoBehaviour
         { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear(); }
         if (GameObject.Find("BoilPointer") != null)
         { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
+        waterSplash.Play();
         //Bruce.transform.position = new Vector3(-205, 0, -175);
         //if (GameObject.Find("BrucePointer") != null)
         //{ GameObject.Find("BrucePointer").GetComponent<FlatFollow>().appear(); }
