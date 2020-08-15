@@ -251,8 +251,8 @@ public class ShelterVisit : MonoBehaviour
         Zelda.transform.eulerAngles = new Vector3(Zelda.transform.eulerAngles.x, Zelda.transform.eulerAngles.y + 180, Zelda.transform.eulerAngles.z);
         Maria.transform.position = new Vector3(-205, 0, -262);
         Maria.transform.Rotate(0f, 200f, 0f);
-        Wheelchair.transform.position = new Vector3(-205, 0, -262);
-        Wheelchair.transform.Rotate(0f, 200f, 0f);
+        //Wheelchair.transform.position = new Vector3(-205, 0, -262);
+        //Wheelchair.transform.Rotate(0f, 200f, 0f);
         Ahmad.transform.position = new Vector3(-209, 0, -254);
         Ahmad.transform.Rotate(0f, 130f, 0f);
 
