@@ -20,6 +20,8 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
     public InformationCanvas _canvas;
 
+    public AudioSource bark;
+
     private bool check;
     private StartDialogue script;
     private NPCWalking scriptBruce;
@@ -79,6 +81,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         
         //Tsu's dialogue appears
         script.Interact();
+        bark.Play();
         
         //Tsu's dot appears
         if (GameObject.Find("TsuPointer") != null) { GameObject.Find("TsuPointer").GetComponent<FlatFollow>().appear(); }
