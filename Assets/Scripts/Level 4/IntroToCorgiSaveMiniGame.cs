@@ -14,19 +14,19 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject TsuPointer;
 
     public GameObject Ahmad;
-    public NavMeshAgent Ahmad1;
+    //public NavMeshAgent Ahmad1;
 
     public InformationCanvas _canvas;
 
     private bool check;
     private StartDialogue script;
-    private WayPointPatrol scriptAhmad;
+    private NPCWalking scriptAhmad;
     private Animator animator1;
 
     void Start()
     {
         script = this.GetComponent<StartDialogue>();
-        scriptAhmad = Ahmad.GetComponent<WayPointPatrol>();
+        scriptAhmad = Ahmad.GetComponent<NPCWalking>();
         animator1 = Ahmad.GetComponent<Animator>();
     }
 
@@ -80,9 +80,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         GameObject.Find("MoPointer").GetComponent<FlatFollow>().appear();
 
         //Ahmad starts walking to Tsu
-        Ahmad1.enabled = true;
+        //Ahmad1.enabled = true;
         scriptAhmad.enabled = true;
-        animator1.SetBool("isWalking", true);
+        //animator1.SetBool("isWalking", true);
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
         Ahmad.GetComponent<InteractWithObject>().Kill();
 
