@@ -108,7 +108,7 @@ public class MenuDisplayer : UIElement
 
     private void mainMenu()
     {
-        SceneManager.LoadScene(mainMenuSceneIndex);
+        SceneManager.LoadScene("Menu");
     }
 
     private void gameover()
