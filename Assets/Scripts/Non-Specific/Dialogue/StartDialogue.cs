@@ -23,4 +23,5 @@ public class StartDialogue : MonoBehaviour
     {
         dialogue = newHead;
     }
+    
 }
