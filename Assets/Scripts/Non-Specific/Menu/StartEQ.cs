@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class StartEQ : MonoBehaviour
 {
-    public GameObject eqSound;
-    public GameObject ding;
+    public AudioSource eqSound;
+    public AudioSource background;
     public Image wave;
     public GameObject button;
     public GameObject tree;
@@ -21,6 +21,7 @@ public class StartEQ : MonoBehaviour
         Debug.Log("start");
         virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
         StartCoroutine("Read");
+        background.Play();
     }
 
     public IEnumerator Read()
@@ -29,7 +30,7 @@ public class StartEQ : MonoBehaviour
         yield return new WaitForSeconds(2f);
         StartCoroutine("ShakeCamera");
         StartCoroutine("Wave");
-        eqSound.SetActive(true);
+        
         
 
     }
@@ -47,20 +48,15 @@ public class StartEQ : MonoBehaviour
 
     IEnumerator ShakeCamera()
     {
+        eqSound.Play();
         Debug.Log("starting to shake");
         virtualCameraNoise.m_AmplitudeGain = 3f;
         virtualCameraNoise.m_FrequencyGain = 3f;
         tree.AddComponent<Rigidbody>();
         yield return new WaitForSeconds(5f);
-   
-        Debug.Log("done eq");
-        eqSound.SetActive(false);
         virtualCameraNoise.m_AmplitudeGain = 0f;
         virtualCameraNoise.m_FrequencyGain = 0f;
-        button.SetActive(true);
-        ding.SetActive(true);
     }
-
 
     public void PlayButton()
     {
