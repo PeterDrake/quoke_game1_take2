@@ -43,7 +43,7 @@ public class NPCWalking : MonoBehaviour
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
             spotToShow.SetActive(true);
-            //if (speakOnArrival && alert!=null) { alert.GetComponent<FlatFollow>().appear(); }
+            if (speakOnArrival && alert!=null) { alert.GetComponent<FlatFollow>().appear(); }
             transform.LookAt(spotToShow.transform.position);
             Destroy(this);
 
