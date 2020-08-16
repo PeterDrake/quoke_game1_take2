@@ -22698,7 +22698,7 @@ PrefabInstance:
         type: 3}
       propertyPath: following
       value: 
-      objectReference: {fileID: 33974090}
+      objectReference: {fileID: 1056539578}
     - target: {fileID: 2786121349235407098, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}
       propertyPath: height
