@@ -218,10 +218,22 @@ public class StatusManager : MonoBehaviour
         WarmthLossRate = WarmthLossRate * 0.5f;
     }
 
+    public void SlowDownReliefLoss()
+    {
+        ReliefLossRate = ReliefLossRate * 0.2f;
+    }
+
+    public void SlowDownHydrationLoss()
+    {
+        HydrationLossRate = HydrationLossRate * 0.5f;
+    }
+
     public void SlowDownWarmthLossMore()
     {
         WarmthLossRate = WarmthLossRate * 0.2f;
     }
+
+
 
     public void RefillFlash()
     {
