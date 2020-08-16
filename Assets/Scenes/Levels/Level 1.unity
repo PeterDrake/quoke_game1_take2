@@ -36069,6 +36069,11 @@ PrefabInstance:
       propertyPath: InventoryFlash
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2863601547666779326, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: flash
+      value: 
+      objectReference: {fileID: 1975988268}
     - target: {fileID: 2863601547666779327, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: displayer
