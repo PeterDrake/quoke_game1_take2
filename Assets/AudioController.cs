@@ -11,6 +11,7 @@ public class AudioController : MonoBehaviour
     private VideoPlayer video;
     private float volume;
     public bool halfVolume;
+    public bool threeFourthsVol;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +19,7 @@ public class AudioController : MonoBehaviour
         musicSlide = GameObject.Find("AudioManager").GetComponent<AudioManager>().musicSlider;
         video = GetComponent<VideoPlayer>();
         if (halfVolume) { volume = musicSlide.value * 0.5f; }
+        else if (threeFourthsVol) { volume = musicSlide.value * 0.75f; }
         else { volume = musicSlide.value; }
         video.SetDirectAudioVolume(0, volume);
     }

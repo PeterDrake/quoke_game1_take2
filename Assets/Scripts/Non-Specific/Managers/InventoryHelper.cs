@@ -16,6 +16,7 @@ public class InventoryHelper : MonoBehaviour
     
     public Item[] holderItems;
     public int[] holderAmts;
+    public InvButtonFlash flash;
 
     private LogToServer logger; 
     public void Start()
@@ -32,7 +33,7 @@ public class InventoryHelper : MonoBehaviour
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Picked up " + item.name,"ACTION");
         _inventory.AddItem(item, (byte)amt);
-        SavedData.addInv = true;
+        flash.ThrobOn();
         CheckOnAdd.Invoke();
     }
 
@@ -78,5 +79,10 @@ public class InventoryHelper : MonoBehaviour
     public byte[] GetAmounts()
     {
         return _inventory.GetAmounts();
+    }
+
+    public bool CheckEmpty()
+    {
+        return _inventory.IsEmpty();
     }
 }
