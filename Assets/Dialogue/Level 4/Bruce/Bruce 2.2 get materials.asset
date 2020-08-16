@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Bruce 2.2 get materials
   m_EditorClassIdentifier: 
-  speech: "You could collect boards and mulch at the eco-village and some newspaper
-    around the buildings to the east. Come back when you\u2019ve found everything."
+  speech: "You could collect boards, mulch and some newspaper at the eco-village.
+    Come back when you\u2019ve found everything."
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
