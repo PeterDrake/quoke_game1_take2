@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fe703bed23a3e4284a29cc170be1ac, type: 3}
   m_Name: BruceAppear
   m_EditorClassIdentifier: 
-  WhatNeedsToAppear: BruceController
-  x: -205
+  WhatNeedsToAppear: Bruce
+  x: -204
   y: 0
-  z: -175
+  z: -177

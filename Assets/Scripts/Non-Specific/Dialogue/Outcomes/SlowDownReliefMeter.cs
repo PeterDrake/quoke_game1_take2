@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New GameObject Addition", menuName = "Dialogue/Outcomes/SlowDownReliefMeter")]
+[CreateAssetMenu(fileName = "New Objective Outcome", menuName = "Dialogue/Outcomes/SlowDownReliefMeter")]
 public class SlowDownReliefMeter : DialogueOutcome
 {
     public override void DoOutcome(ref NPC n)
     {
-        Systems.Status.SlowDownWarmthLossMore();
+        Systems.Status.SlowDownReliefLoss();
     }
 }
