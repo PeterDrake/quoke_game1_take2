@@ -15,6 +15,7 @@ public class SaveCorgiController : MonoBehaviour
     public GameObject VideoBackground;
     public GameObject VideoDisplayer;
     public GameObject Video;
+    public GameObject Win;
 
     void Start()
     {
@@ -51,9 +52,16 @@ public class SaveCorgiController : MonoBehaviour
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
+        _videoPlayer.loopPointReached += EndReached;
         //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
         //_videoPlayer.Play();
         //
+    }
 
+    void EndReached(UnityEngine.Video.VideoPlayer vp)
+    {
+        StopAllCoroutines();
+        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
+        Win.SetActive(true);
     }
 }
