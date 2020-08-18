@@ -9,7 +9,9 @@ public class EnableWater : MonoBehaviour
     //public GameObject Pot;
     public InformationCanvas _canvas;
     public string words;
-    
+    public GameObject Bruce;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,5 +31,8 @@ public class EnableWater : MonoBehaviour
 
         if (GameObject.Find("MariaAlert") != null)
         { GameObject.Find("MariaAlert").GetComponent<FlatFollow>().appear(); }
+        Bruce.transform.position = new Vector3(-205, 0, -175);
+        if (GameObject.Find("BrucePointer") != null)
+        { GameObject.Find("BrucePointer").GetComponent<FlatFollow>().appear(); }
     }
 }

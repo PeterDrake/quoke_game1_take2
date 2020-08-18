@@ -99,6 +99,15 @@ public class OurInventory : MonoBehaviour
     {
         return amounts;
     }
+
+    public bool IsEmpty()
+    {
+        for (int j = 0; j < capacity; j += 1)
+        {
+            if (amounts[j] != 0) return false;
+        }
+        return true;
+    }
     
 
 }
