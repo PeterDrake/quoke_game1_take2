@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
 public class IntroToCorgiSaveMiniGame : MonoBehaviour
 {
@@ -29,6 +31,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     private WayPointPatrol scriptMaria;
     private Animator animator1;
 
+    
+    
+
     void Start()
     {
         script = this.GetComponent<StartDialogue>();
@@ -37,6 +42,11 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         scriptMaria = Maria.GetComponent<WayPointPatrol>();
         //Bruce1 = Bruce.GetComponent<NavMeshAgent>();
         animator1 = Ahmad.GetComponent<Animator>();
+
+        Debug.Log("SaveCorgiIntro script started");
+        
+
+        //Video.GetComponent<VideoPlayer>().Prepare();
     }
 
 
@@ -47,8 +57,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         {
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
+
+            
         }
-        
+
     }
     
     private IEnumerator StartCutScene()
@@ -64,6 +76,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
+        Debug.Log("Video is loaded: " + Video.GetComponent<VideoPlayer>().isPrepared);
+        Video.GetComponent<VideoPlayer>().Play();
+        
         InTheMeantimeCanvas.SetActive(false);
         yield return new WaitForSeconds(63f);
         
