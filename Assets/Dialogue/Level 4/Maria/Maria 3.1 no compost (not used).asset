@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
-  m_Name: Maria 2.3 corgi
+  m_Name: Maria 3.1 no compost (not used)
   m_EditorClassIdentifier: 
-  speech: You're welcome! Hope you find your dog!
+  speech: If you haven't yet, you should talk to Bruce at the eco-village. It's on
+    the block directly north of here.
   optionOneText: 
   optionOne: {fileID: 0}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes:
-  - {fileID: 11400000, guid: d85060464d30c5a4d81a88bcc2260f41, type: 2}
-  - {fileID: 11400000, guid: 0a5c658c92222cd46af1b486aead9fbc, type: 2}
-  NewHead: {fileID: 11400000, guid: a45b16a0aab8a2945862936d27134884, type: 2}
+  Outcomes: []
+  NewHead: {fileID: 0}

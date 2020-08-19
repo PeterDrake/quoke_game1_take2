@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speech: I'm doing good. It's been busy at the BEECN.
   optionOneText: Have you gotten any news about a Corgi around here?
-  optionOne: {fileID: 11400000, guid: 56d7b813f52ba5640bb9eb98832c514c, type: 2}
+  optionOne: {fileID: 11400000, guid: e1e502fabaf9f74419814833668a73e9, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []

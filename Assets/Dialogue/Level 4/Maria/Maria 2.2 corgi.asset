@@ -9,19 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
+  m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
   m_Name: Maria 2.2 corgi
   m_EditorClassIdentifier: 
-  speech: Hmmm... Some people at the eco-village north of here saw a Corgi the other
-    day. You can check with them.
-  optionOneText: Oh, really!?? Thank you so much! I'll try to find the eco-village!
+  speech: Hmm. Not today. There was someone here from the eco-village a while ago
+    who mentioned a Corgi, though.
+  optionOneText: Yeah, Bruce said I just missed him over there. Thanks, I'll keep
+    looking.
   optionOne: {fileID: 11400000, guid: 740826e924e613249a074b7eacd66d6a, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
-  Outcomes:
-  - {fileID: 11400000, guid: bcfdf36dc9d701242b9e145c621e770a, type: 2}
-  - {fileID: 11400000, guid: 6ca46617b648dfe488815deb0c042102, type: 2}
-  - {fileID: 11400000, guid: 00e16a8879ab76042a39bd24ca47c114, type: 2}
-  - {fileID: 11400000, guid: eac848ab506f1794bbd1879e5c6c0130, type: 2}
+  Outcomes: []
   NewHead: {fileID: 0}
+  IfRequirementsOne:
+  - {fileID: 11400000, guid: 19b05c8cfe35e8446b1e9ac1ccac2811, type: 2}
+  optionOneTextAlt: The eco-village? Where is that?
+  optionOneAlt: {fileID: 11400000, guid: 56d7b813f52ba5640bb9eb98832c514c, type: 2}
+  IfRequirementsTwo: []
+  optionTwoTextAlt: 
+  optionTwoAlt: {fileID: 0}
