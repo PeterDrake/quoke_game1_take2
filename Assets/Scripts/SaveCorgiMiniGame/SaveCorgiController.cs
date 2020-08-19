@@ -53,8 +53,7 @@ public class SaveCorgiController : MonoBehaviour
             Video.SetActive(false);
             Tarp.SetActive(false);
             Corgi.SetActive(false);
-            Frank.SetActive(false);
-            camera.transform.position = new Vector3(-110.8f,217.5f,-178f);
+            camera.transform.position = new Vector3(-110.8f,1.38f,-139.9f);
             camera.transform.rotation = Quaternion.Euler(10,180,0);
             Win.SetActive(true);
         }
@@ -74,7 +73,7 @@ public class SaveCorgiController : MonoBehaviour
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
-        yield return new WaitForSeconds(45f);
+        yield return new WaitForSeconds(40f);
         _videoPlayer.Stop();
         winScreen = true;
 
