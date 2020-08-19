@@ -17,16 +17,20 @@ public class SaveCorgiController : MonoBehaviour
     public GameObject Video;
     public GameObject Win;
 
+    private bool winScreen;
+    private bool gameOver;
+
     void Start()
     {
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
-
+        winScreen = false;
+        gameOver = false;
     }
 
     void Update()
     {
-        if (Tarp.transform.position.x < -116f)
+        if (Tarp.transform.position.x < -116f & !gameOver)
         {
             if (GameObject.Find("MiniMusic") != null)
             {
@@ -35,6 +39,17 @@ public class SaveCorgiController : MonoBehaviour
             Destroy(script);
             Banner.SetActive(false);
             StartCoroutine(nameof(CorgiSit));
+        }
+        if (winScreen)
+        {
+            StopAllCoroutines();
+            winScreen = false;
+            gameOver = true;
+            print("done WINNEr");
+            VideoBackground.SetActive(false);
+            VideoDisplayer.SetActive(false);
+            Video.SetActive(false);
+            Win.SetActive(true);
         }
     }
 
@@ -52,16 +67,30 @@ public class SaveCorgiController : MonoBehaviour
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
-        _videoPlayer.loopPointReached += EndReached;
+        yield return new WaitForSeconds(40f);
+        _videoPlayer.Stop();
+        winScreen = true;
+
+
         //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
         //_videoPlayer.Play();
         //
+        /*
+        //then trigger the video
+        yield return new WaitForSeconds(3f);
+        VideoBackground.SetActive(true);
+        VideoDisplayer.SetActive(true);
+        Video.SetActive(true);
+        InTheMeantimeCanvas.SetActive(false);
+        yield return new WaitForSeconds(63f);
+
+        //turn off the video
+        VideoBackground.SetActive(false);
+        VideoDisplayer.SetActive(false);
+        Video.SetActive(false);
+        if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Play(); }
+        MiniGameClose.SetActive(true);
+        */
     }
 
-    void EndReached(UnityEngine.Video.VideoPlayer vp)
-    {
-        StopAllCoroutines();
-        vp.playbackSpeed = vp.playbackSpeed / 10.0F;
-        Win.SetActive(true);
-    }
 }
