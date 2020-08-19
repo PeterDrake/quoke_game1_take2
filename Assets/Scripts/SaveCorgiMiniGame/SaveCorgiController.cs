@@ -53,7 +53,7 @@ public class SaveCorgiController : MonoBehaviour
             Video.SetActive(false);
             Tarp.SetActive(false);
             Corgi.SetActive(false);
-            camera.transform.position = new Vector3(-110.8f,1.38f,-139.9f);
+            camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
             camera.transform.rotation = Quaternion.Euler(10,180,0);
             Win.SetActive(true);
         }
