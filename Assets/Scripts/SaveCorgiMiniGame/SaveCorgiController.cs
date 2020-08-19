@@ -9,6 +9,7 @@ public class SaveCorgiController : MonoBehaviour
     private DragTarp script;
     private VideoPlayer _videoPlayer;
 
+    public GameObject camera;
     public GameObject Tarp;
     public GameObject Corgi;
     public GameObject Banner;
@@ -49,7 +50,10 @@ public class SaveCorgiController : MonoBehaviour
             VideoBackground.SetActive(false);
             VideoDisplayer.SetActive(false);
             Video.SetActive(false);
-            Win.SetActive(true);
+            Tarp.SetActive(false);
+            camera.transform.position = new Vector3(-113,-1,-156);
+            camera.transform.rotation = Quaternion.Euler(10,0,0);
+            //Win.SetActive(true);
         }
     }
 
