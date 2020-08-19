@@ -10,6 +10,7 @@ public class SaveCorgiController : MonoBehaviour
     private VideoPlayer _videoPlayer;
 
     public GameObject camera;
+    public GameObject Frank;
     public GameObject Tarp;
     public GameObject Corgi;
     public GameObject Banner;
@@ -51,9 +52,10 @@ public class SaveCorgiController : MonoBehaviour
             VideoDisplayer.SetActive(false);
             Video.SetActive(false);
             Tarp.SetActive(false);
-            camera.transform.position = new Vector3(-113,1,-156);
+            Corgi.SetActive(false);
+            camera.transform.position = new Vector3(-110.8f,1.38f,-139.9f);
             camera.transform.rotation = Quaternion.Euler(10,180,0);
-            //Win.SetActive(true);
+            Win.SetActive(true);
         }
     }
 
