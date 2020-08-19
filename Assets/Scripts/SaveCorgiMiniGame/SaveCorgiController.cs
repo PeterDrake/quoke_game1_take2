@@ -40,11 +40,12 @@ public class SaveCorgiController : MonoBehaviour
             }
             Destroy(script);
             Banner.SetActive(false);
-            StartCoroutine(nameof(CorgiSit));
+            StartCoroutine(nameof(PlayVideo));
         }
         if (winScreen)
         {
             StopAllCoroutines();
+            GameObject.Find("ColliderToEnterGame").GetComponent<SaveCorgiVisit>().CorgiRescue();
             winScreen = false;
             gameOver = true;
             print("done WINNEr");
@@ -53,6 +54,7 @@ public class SaveCorgiController : MonoBehaviour
             Video.SetActive(false);
             Tarp.SetActive(false);
             Corgi.SetActive(false);
+            Frank.SetActive(false);
             camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
             camera.transform.rotation = Quaternion.Euler(10,180,0);
             Win.SetActive(true);
@@ -73,7 +75,7 @@ public class SaveCorgiController : MonoBehaviour
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
-        yield return new WaitForSeconds(40f);
+        yield return new WaitForSeconds(45f);
         _videoPlayer.Stop();
         winScreen = true;
 
@@ -81,22 +83,6 @@ public class SaveCorgiController : MonoBehaviour
         //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
         //_videoPlayer.Play();
         //
-        /*
-        //then trigger the video
-        yield return new WaitForSeconds(3f);
-        VideoBackground.SetActive(true);
-        VideoDisplayer.SetActive(true);
-        Video.SetActive(true);
-        InTheMeantimeCanvas.SetActive(false);
-        yield return new WaitForSeconds(63f);
-
-        //turn off the video
-        VideoBackground.SetActive(false);
-        VideoDisplayer.SetActive(false);
-        Video.SetActive(false);
-        if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Play(); }
-        MiniGameClose.SetActive(true);
-        */
     }
 
 }
