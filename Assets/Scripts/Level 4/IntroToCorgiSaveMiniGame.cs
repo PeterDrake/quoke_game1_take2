@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Video;
 
 public class IntroToCorgiSaveMiniGame : MonoBehaviour
 {
@@ -29,6 +31,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     private NPCWalking scriptAhmad;
     private NPCWalking scriptMaria;
     private Animator animator1;
+    private InteractWithObject _interact;
+
+    
+    
 
     void Start()
     {
@@ -38,6 +44,11 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         scriptMaria = Maria.GetComponent<NPCWalking>();
         //Bruce1 = Bruce.GetComponent<NavMeshAgent>();
         animator1 = Ahmad.GetComponent<Animator>();
+
+        Debug.Log("SaveCorgiIntro script started");
+        
+
+        //Video.GetComponent<VideoPlayer>().Prepare();
     }
 
 
@@ -48,8 +59,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         {
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
+
+            
         }
-        
+
     }
     
     private IEnumerator StartCutScene()
@@ -65,6 +78,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
+        Debug.Log("Video is loaded: " + Video.GetComponent<VideoPlayer>().isPrepared);
+        Video.GetComponent<VideoPlayer>().Play();
+        
         InTheMeantimeCanvas.SetActive(false);
         yield return new WaitForSeconds(63f);
         
@@ -92,10 +108,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         //Ahmad starts walking to Tsu
         scriptAhmad.enabled = true;
-        
-        Ahmad.GetComponent<SphereCollider>().enabled = false;
-        //Ahmad.GetComponent<InteractWithObject>().Kill();
-        Ahmad.GetComponent<InteractWithObject>().enabled = false;
+        Ahmad.GetComponent<SphereCollider>().isTrigger = false;
+        _interact = Ahmad.GetComponent<InteractWithObject>();
+        _interact.Kill();
+
 
         //Maria starts moving towards Tsu
         scriptMaria.enabled = true;
