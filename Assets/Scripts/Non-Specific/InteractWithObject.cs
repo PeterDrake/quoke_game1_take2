@@ -214,7 +214,13 @@ public class InteractWithObject : MonoBehaviour
     public void Kill()
     {
         interactText.ToggleVisibility(false);
-        _meshRenderer.material = mat_original;
+        if (_meshRenderer.material != null)
+        {
+            if (mat_original != null)
+            {
+                _meshRenderer.material = mat_original;
+            }
+        }
         Destroy(this);
     }
 

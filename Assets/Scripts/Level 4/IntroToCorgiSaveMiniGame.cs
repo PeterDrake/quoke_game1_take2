@@ -17,6 +17,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject Maria;
     public GameObject Bruce;
     public NavMeshAgent Bruce1;
+    public GameObject BruceCont;
 
     public InformationCanvas _canvas;
 
@@ -93,17 +94,22 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         scriptAhmad.enabled = true;
         
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
-        Ahmad.GetComponent<InteractWithObject>().Kill();
+        //Ahmad.GetComponent<InteractWithObject>().Kill();
+        Ahmad.GetComponent<InteractWithObject>().enabled = false;
 
         //Maria starts moving towards Tsu
         scriptMaria.enabled = true;
 
         Maria.GetComponent<SphereCollider>().isTrigger = false;
-        Maria.GetComponent<InteractWithMaria>().Kill();
+        //Maria.GetComponent<InteractWithMaria>().Kill();
+        Maria.GetComponent<InteractWithMaria>().enabled = false;
 
         //Bruce starts walking to Tsu
         scriptBruce.enabled = true;
         Bruce1.enabled = true;
+
+        BruceCont.GetComponent<SphereCollider>().isTrigger = false;
+        BruceCont.GetComponent<InteractWithObject>().enabled = false;
         
         
     }
