@@ -14,7 +14,8 @@ public class StartVideoLoad : MonoBehaviour
     void Start()
     {
         _videoPlayer = Video.GetComponent<VideoPlayer>();
-        Video.SetActive(true);
+        //Video.SetActive(true);
+        _videoPlayer.source = VideoSource.Url;
         _videoPlayer.Prepare();
         Debug.Log("Started to load video");
         loadedAlert = false;

@@ -30,6 +30,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     private NPCWalking scriptAhmad;
     private WayPointPatrol scriptMaria;
     private Animator animator1;
+    private InteractWithObject _interact;
 
     
     
@@ -111,7 +112,8 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         Bruce1.enabled = true;
         
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
-        Ahmad.GetComponent<InteractWithObject>().Kill();
+        _interact = Ahmad.GetComponent<InteractWithObject>();
+        _interact.Kill();
 
         //Maria starts moving towards Tsu
 
