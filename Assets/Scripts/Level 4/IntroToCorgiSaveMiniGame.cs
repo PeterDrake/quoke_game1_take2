@@ -93,14 +93,14 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         //Ahmad starts walking to Tsu
         scriptAhmad.enabled = true;
         
-        Ahmad.GetComponent<SphereCollider>().isTrigger = false;
+        Ahmad.GetComponent<SphereCollider>().enabled = false;
         //Ahmad.GetComponent<InteractWithObject>().Kill();
         Ahmad.GetComponent<InteractWithObject>().enabled = false;
 
         //Maria starts moving towards Tsu
         scriptMaria.enabled = true;
 
-        Maria.GetComponent<SphereCollider>().isTrigger = false;
+        Maria.GetComponent<SphereCollider>().enabled = false;
         //Maria.GetComponent<InteractWithMaria>().Kill();
         Maria.GetComponent<InteractWithMaria>().enabled = false;
 
@@ -108,7 +108,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         scriptBruce.enabled = true;
         Bruce1.enabled = true;
 
-        BruceCont.GetComponent<SphereCollider>().isTrigger = false;
+        BruceCont.GetComponent<SphereCollider>().enabled = false;
         BruceCont.GetComponent<InteractWithObject>().enabled = false;
         
         
