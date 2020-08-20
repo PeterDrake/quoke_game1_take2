@@ -21,10 +21,12 @@ public class SaveCorgiVisit : MonoBehaviour
     private GameObject sunlight;
     public AudioSource levelMusic;
     public AudioSource miniMusic;
-
+    public GameObject winMusic;
+    private LogToServer logger;
 
     void Start()
     {
+        logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         _interact = GetComponent<InteractWithObject>();
         _inventory = Systems.Inventory;
     }
@@ -44,7 +46,14 @@ public class SaveCorgiVisit : MonoBehaviour
         (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
-        levelMusic.Pause();
+        levelMusic.Stop();
         miniMusic.Play();
+    }
+
+    public void CorgiRescue()
+    {
+        logger.sendToLog("Rescued Tsu!", "MINIGAME");
+        winMusic.SetActive(true);
+
     }
 }
