@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9081b025a17517146bf6f9d8ffb8e392, type: 3}
-  m_Name: Ahmad 2 Head
+  m_Name: Ahmad 2.2 no rain shelter
   m_EditorClassIdentifier: 
-  speech: Hi Zelda.
-  optionOneText: Now we have a barrel full of water. Do you think we should boil
-    it in case anything washed off the roof?
-  optionOne: {fileID: 11400000, guid: 62e75bf6d8939874686a40fd6bece2c2, type: 2}
+  speech: I hope everyone stays safe during the rainstorm...
+  optionOneText: I hope so too... I'm getting a bit cold...
+  optionOne: {fileID: 11400000, guid: b8f0870f8c050f44db584e13d5767205, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
   Requirements: []
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: 049ac7c826df6e84091c4e45620950be, type: 2}
-  optionOneTextAlt: Hi Ahmad!
-  optionOneAlt: {fileID: 11400000, guid: 8536613a3e2ec6545968fe6b1c105779, type: 2}
+  - {fileID: 11400000, guid: 438e598987ebb22439a909e3cb571d9b, type: 2}
+  optionOneTextAlt: I hope so too... I'm getting a bit cold...
+  optionOneAlt: {fileID: 11400000, guid: 9b39fe755b6f8914280ec5fd2af69c74, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
