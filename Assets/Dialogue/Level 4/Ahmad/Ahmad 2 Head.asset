@@ -22,10 +22,9 @@ MonoBehaviour:
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 11400000, guid: 438e598987ebb22439a909e3cb571d9b, type: 2}
   - {fileID: 11400000, guid: 049ac7c826df6e84091c4e45620950be, type: 2}
   optionOneTextAlt: Hi Ahmad!
-  optionOneAlt: {fileID: 11400000, guid: db80a160d7a31cd48ab923c7fe70dec5, type: 2}
+  optionOneAlt: {fileID: 11400000, guid: 8536613a3e2ec6545968fe6b1c105779, type: 2}
   IfRequirementsTwo: []
   optionTwoTextAlt: 
   optionTwoAlt: {fileID: 0}
