@@ -9,23 +9,30 @@ public class SaveCorgiController : MonoBehaviour
     private DragTarp script;
     private VideoPlayer _videoPlayer;
 
+    public GameObject camera;
+    public GameObject Frank;
     public GameObject Tarp;
     public GameObject Corgi;
     public GameObject Banner;
     public GameObject VideoBackground;
     public GameObject VideoDisplayer;
     public GameObject Video;
+    public GameObject Win;
+
+    private bool winScreen;
+    private bool gameOver;
 
     void Start()
     {
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
-
+        winScreen = false;
+        gameOver = false;
     }
 
     void Update()
     {
-        if (Tarp.transform.position.x < -116f)
+        if (Tarp.transform.position.x < -116f & !gameOver)
         {
             if (GameObject.Find("MiniMusic") != null)
             {
@@ -33,7 +40,24 @@ public class SaveCorgiController : MonoBehaviour
             }
             Destroy(script);
             Banner.SetActive(false);
-            StartCoroutine(nameof(CorgiSit));
+            StartCoroutine(nameof(PlayVideo));
+        }
+        if (winScreen)
+        {
+            StopAllCoroutines();
+            GameObject.Find("ColliderToEnterGame").GetComponent<SaveCorgiVisit>().CorgiRescue();
+            winScreen = false;
+            gameOver = true;
+            print("done WINNEr");
+            VideoBackground.SetActive(false);
+            VideoDisplayer.SetActive(false);
+            Video.SetActive(false);
+            Tarp.SetActive(false);
+            Corgi.SetActive(false);
+            Frank.SetActive(false);
+            camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
+            camera.transform.rotation = Quaternion.Euler(10,180,0);
+            Win.SetActive(true);
         }
     }
 
@@ -51,9 +75,14 @@ public class SaveCorgiController : MonoBehaviour
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
+        yield return new WaitForSeconds(45f);
+        _videoPlayer.Stop();
+        winScreen = true;
+
+
         //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
         //_videoPlayer.Play();
         //
-
     }
+
 }
