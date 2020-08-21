@@ -14133,6 +14133,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Text
+      value: "Use the arrow buttons or WASD to move\n\nPress 'I' to get the inventory\n\nHold
+        'C' to crouch\n\nClick dialogue box to keep talking\n\nClick \"Bye' button
+        to leave conversation \n\nPress 'Esc' for sound/exit menu"
+      objectReference: {fileID: 0}
     - target: {fileID: 7111826699031988918, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
