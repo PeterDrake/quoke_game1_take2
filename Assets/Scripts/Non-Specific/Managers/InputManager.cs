@@ -18,6 +18,7 @@ public class InputManager : MonoBehaviour
 
    private void Awake()
    {
+        print("Input Manager");
       keys = new ArrayList();
       registeredKeys = new Dictionary<string, CallBack>();
    }
