@@ -164,6 +164,7 @@ public class DialogueDisplayer : UIElement
     // Called when the first dialogue option is pressed
     private void optionOnePressed()
     {
+        print("option 1 pressed");
         string resp = option1();
         
         if (resp != "")
@@ -176,6 +177,7 @@ public class DialogueDisplayer : UIElement
     // Called when the second dialogue option is pressed
     private void optionTwoPressed()
     {
+        print("option 2 pressed");
         string resp = option2();
         
         if (resp != "")
