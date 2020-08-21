@@ -17,8 +17,6 @@ public class InvButtonFlash : MonoBehaviour
     {
         if (Systems.Inventory.CheckEmpty()) ThrobOff();
         else ThrobOn();
-        //if (Systems.Inventory.IsEmpty) { ThrobOn(); }
-        //else { ThrobOff(); }
     }
 
     // Update is called once per frame

@@ -9,7 +9,8 @@ public class InventoryDisplay : UIElement
     [Header("A prefab object which will be instantiated for each slot in the inventory")]
     [SerializeField] private GameObject SlotPrefab;
 
-        
+    public InvButtonFlash inventoryFlasher;
+
     // The inventory display script finds components based on name. If you want to create
     // a new inventory display, see the Basic Inventory Display for the proper names and locations in
     // the hierarchy for the UI elements (with respect to the InventoryToggler)
@@ -105,8 +106,8 @@ public class InventoryDisplay : UIElement
         activate(false);
         Systems.Input.RegisterKey("i", delegate
             {
-               UIManager.Instance.ToggleActive(this);
-                SavedData.addInv = false;
+                UIManager.Instance.ToggleActive(this);
+                inventoryFlasher.ThrobOff();
             }
             );
     }

@@ -2102,6 +2102,11 @@ PrefabInstance:
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8418291972147126651, guid: 04b467ff86713934882bb4eebf569d56,
+        type: 3}
+      propertyPath: inventoryFlasher
+      value: 
+      objectReference: {fileID: 7459910031737987224}
     - target: {fileID: 8418291972437653853, guid: 04b467ff86713934882bb4eebf569d56,
         type: 3}
       propertyPath: m_Sprite
@@ -2478,6 +2483,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7, type: 3}
+--- !u!114 &7459910031737987224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1965601178122087004, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8989707661965773508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350946fb60f79b247b673ee335583f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6455381915298315436 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2690835749078955624, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
