@@ -75,7 +75,7 @@ public class SaveCorgiController : MonoBehaviour
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
-        yield return new WaitForSeconds(45f);
+        yield return new WaitForSeconds(43f);
         _videoPlayer.Stop();
         winScreen = true;
 
