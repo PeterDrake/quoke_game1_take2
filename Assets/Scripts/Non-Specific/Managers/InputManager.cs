@@ -35,12 +35,15 @@ public class InputManager : MonoBehaviour
 
     public void Update()
     {
+        print("new : ");
         foreach (string key in keys)
         {
+            print(key);
             if (Input.GetKeyDown(key))
             {
                 registeredKeys[key].Invoke();
             }
         }
+
     }
 }

@@ -17,66 +17,6 @@ public class DialogueManager : MonoBehaviour
     /// <summary> Starts the given dialogue with the given NPC </summary>
     public void StartDialogue(DialogueNode d, NPC n, NewHeadCallBack cb)
     {
-        print("add keys here");
-        Systems.Input.RegisterKey("down", delegate
-        {
-            if (!displayer.second)
-            {
-
-                displayer.nextOption = displayer.selectedOption;
-                displayer.selectedOption = displayer.lastOption;
-                displayer.lastOption = displayer.nextOption;
-            }
-            else
-            {
-                GameObject s = displayer.selectedOption;
-                displayer.selectedOption = displayer.nextOption;
-                displayer.nextOption = displayer.lastOption;
-                displayer.lastOption = s;
-            }
-            //print("PRESS DOWN KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
-        });
-
-        Systems.Input.RegisterKey("up", delegate
-        {
-            if (!displayer.second)
-            {
-                displayer.nextOption = displayer.selectedOption;
-                displayer.selectedOption = displayer.lastOption;
-                displayer.lastOption = displayer.nextOption;
-            }
-            else
-            {
-                GameObject s = displayer.selectedOption;
-                displayer.selectedOption = displayer.lastOption;
-                displayer.lastOption = displayer.nextOption;
-                displayer.nextOption = s;
-            }
-            //print("PRESS UP KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
-        });
-
-        //Systems.Input.RegisterKey("return", delegate
-        //{
-        //    if (displayer.selectedOption.name == "option1")
-        //    {
-        //        displayer.optionOnePressed();
-        //        print("PRESSED Return : selected " + displayer.selectedOption);
-        //    }
-        //    if (displayer.selectedOption.name == "option2")
-        //    {
-        //        displayer.optionTwoPressed();
-        //        print("PRESSED return : selected " + displayer.selectedOption);
-        //    }
-        //    if (displayer.selectedOption.name == "exit")
-        //    {
-        //        print("deleting return key");
-        //        Systems.Input.RemoveKey("return");
-        //        displayer.exitPressed();
-              
-        //        print("PRESSED return : selected " + displayer.selectedOption);
-
-        //    }
-        //});
         activeDialogue = d;
         activeCallback = cb;
         activeNPC = n;
@@ -91,8 +31,8 @@ public class DialogueManager : MonoBehaviour
     public DialogueNode EndDialogue()
     {
         print("delete keys here");
-        Systems.Input.RemoveKey("up");
-        Systems.Input.RemoveKey("down");
+        //Systems.Input.RemoveKey("up");
+        //Systems.Input.RemoveKey("down");
         //Systems.Input.RemoveKey("return");
         return activeDialogue;
     }

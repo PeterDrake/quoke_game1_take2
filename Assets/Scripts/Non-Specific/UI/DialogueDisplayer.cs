@@ -18,7 +18,7 @@ public class DialogueDisplayer : UIElement
     private DialogueEvent option2;
     private DialogueEvent exit;
     private bool displaying;
-    private GameObject toggler;
+    public GameObject toggler;
     
     // Object references for population of information
     private Image npcImage;
@@ -100,8 +100,7 @@ public class DialogueDisplayer : UIElement
         //no dialog node
         if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
         {
-            Systems.Input.RemoveKey("up");
-            Systems.Input.RemoveKey("down");
+
             second = false;
 
             selectedOption = bye;
@@ -135,6 +134,73 @@ public class DialogueDisplayer : UIElement
 
     private void Start()
     {
+        print("add keys here");
+        Systems.Input.RegisterKey("down", delegate
+        {
+            if (toggler.activeInHierarchy)
+            {
+                if (!second)
+                {
+
+                   nextOption = selectedOption;
+                    selectedOption = lastOption;
+                    lastOption = nextOption;
+                }
+                else
+                {
+                    GameObject s = selectedOption;
+                    selectedOption = nextOption;
+                    nextOption = lastOption;
+                    lastOption = s;
+                }
+            }
+            //print("PRESS DOWN KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
+        });
+
+        Systems.Input.RegisterKey("up", delegate
+        {
+            if (toggler.activeInHierarchy)
+            {
+                if (!second)
+                {
+                    nextOption = selectedOption;
+                    selectedOption = lastOption;
+                    lastOption = nextOption;
+                }
+                else
+                {
+                    GameObject s = selectedOption;
+                    selectedOption = lastOption;
+                    lastOption = nextOption;
+                   nextOption = s;
+                }
+                //print("PRESS UP KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
+            }
+        });
+
+        Systems.Input.RegisterKey("return", delegate
+        {
+            if (toggler.activeInHierarchy)
+            {
+                if (selectedOption.name == "option1")
+                {
+                    optionOnePressed();
+                    print("PRESSED Return : selected " + selectedOption);
+                }
+                if (selectedOption.name == "option2")
+                {
+                    optionTwoPressed();
+                    print("PRESSED return : selected " + selectedOption);
+                }
+                if (selectedOption.name == "exit")
+                {
+                    exitPressed();
+
+                    print("PRESSED return : selected " + selectedOption);
+
+                }
+            }
+        });
         locked = true;
         second = false;
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
