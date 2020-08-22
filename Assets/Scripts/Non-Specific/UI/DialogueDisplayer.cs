@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class DialogueDisplayer : UIElement
 {
 
     public delegate string DialogueEvent();
+    
     private const byte requiredComponentsAmount = 8;
     // option1, option2, invalid1, invalid2, npcImage, npcSpeech, npcName, exit 
     
@@ -35,23 +37,33 @@ public class DialogueDisplayer : UIElement
 
     private MenuDisplayer menu;
 
+    public GameObject lastOption;
+    public GameObject selectedOption;
+    public GameObject nextOption;
+    private GameObject bye;
+    public bool second;
+
     private void Awake()
     {
+        print("awake??");
         pauseOnOpen = true;
     }
 
     public override void Close()
     {
+        print("closed dialog");
         activate(false);
     }
 
     public override void Open()
     {
+        print("open dialog");
         activate(true);
     }
     
     public void Load(DialogueNode d, NPC n)
     {
+        print("new dialog select");
         // Debug.Log("Loading "+d.name+", "+n.name);
         npcName.text = n.name;
         if (n.image != null) npcImage.sprite = n.image;
@@ -63,22 +75,29 @@ public class DialogueDisplayer : UIElement
         }
         else
         {
+            selectedOption = responseOneEnabler;
             responseOneEnabler.SetActive(true);
             optionOne.text = d.GetTextOne();
         }
         
         if (d.GetNodeTwo() == null)
         {
+            second = false;
+            nextOption = bye;
+            lastOption = bye;
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
         }
         else
         {
+            second = true;
+            nextOption = responseTwoEnabler;
+            lastOption = bye;
             responseTwoEnabler.SetActive(true);
             optionTwo.text = d.GetTextTwo();
         }
-        
-       UIManager.Instance.SetAsActive(this);
+
+        UIManager.Instance.SetAsActive(this);
         /* Extra:
             check each options requirements, and enable invalids accordingly
         */
@@ -100,9 +119,8 @@ public class DialogueDisplayer : UIElement
     private void Start()
     {
         locked = true;
-
+        second = false;
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
-
         initialize();
         activate(false);   
     }
@@ -152,6 +170,7 @@ public class DialogueDisplayer : UIElement
                     componentsFound += 1;
                     break;
                 case "exit":
+                    bye = child.gameObject;
                     child.GetComponent<Button>().onClick.AddListener(exitPressed);
                     componentsFound += 1;
                     break;
@@ -164,7 +183,6 @@ public class DialogueDisplayer : UIElement
     // Called when the first dialogue option is pressed
     private void optionOnePressed()
     {
-        print("option 1 pressed");
         string resp = option1();
         
         if (resp != "")
@@ -177,7 +195,6 @@ public class DialogueDisplayer : UIElement
     // Called when the second dialogue option is pressed
     private void optionTwoPressed()
     {
-        print("option 2 pressed");
         string resp = option2();
         
         if (resp != "")
@@ -200,3 +217,44 @@ public class DialogueDisplayer : UIElement
         else { menu.closedCanvi(); }
     }
 }
+
+
+//514F5E
+//6CAEE7
+//print("registered keys");
+//Systems.Input.RegisterKey("down", delegate
+//        {
+//            if (!second)
+//            {
+
+//                nextOption = selectedOption;
+//                selectedOption = lastOption;
+//                lastOption = nextOption;
+//            }
+//            else
+//            {
+//                GameObject s = selectedOption;
+//selectedOption = nextOption;
+//                nextOption = lastOption;
+//                lastOption = s;
+//            }
+//            print("PRESS DOWN KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
+//        });
+
+//        Systems.Input.RegisterKey("up", delegate
+//        {
+//            if (!second)
+//            {
+//                nextOption = selectedOption;
+//                selectedOption = lastOption;
+//                lastOption = nextOption;
+//            }
+//            else
+//            {
+//                GameObject s = selectedOption;
+//selectedOption = lastOption;
+//                lastOption = nextOption;
+//                nextOption = s;
+//            }
+//            print("PRESS UP KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
+//        });
