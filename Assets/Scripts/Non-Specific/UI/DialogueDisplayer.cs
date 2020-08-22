@@ -29,7 +29,8 @@ public class DialogueDisplayer : UIElement
     private Text optionTwo;
     [SerializeField] private GameObject responseOneEnabler;
     [SerializeField] private GameObject responseTwoEnabler;
-    
+    [SerializeField] private GameObject bye;
+
     private Text invalidOne;
     private Text invalidTwo;
     private GameObject invalidOneEnabler;
@@ -40,27 +41,24 @@ public class DialogueDisplayer : UIElement
     public GameObject lastOption;
     public GameObject selectedOption;
     public GameObject nextOption;
-    private GameObject bye;
+    
     public bool second;
 
     private void Awake()
     {
-        print("awake??");
         pauseOnOpen = true;
     }
 
     public override void Close()
     {
-        print("closed dialog");
         activate(false);
     }
 
     public override void Open()
     {
-        print("open dialog");
         activate(true);
     }
-    
+
     public void Load(DialogueNode d, NPC n)
     {
         print("new dialog select");
@@ -69,31 +67,50 @@ public class DialogueDisplayer : UIElement
         if (n.image != null) npcImage.sprite = n.image;
         npcSpeech.text = d.speech;
 
-        if (d.GetNodeOne() == null)
-        {
-            responseOneEnabler.SetActive(false);
-        }
-        else
-        {
-            selectedOption = responseOneEnabler;
-            responseOneEnabler.SetActive(true);
-            optionOne.text = d.GetTextOne();
-        }
-        
-        if (d.GetNodeTwo() == null)
+        //one dialog node
+        if (d.GetNodeOne() != null && d.GetNodeTwo() == null)
         {
             second = false;
+
+            selectedOption = responseOneEnabler;
             nextOption = bye;
             lastOption = bye;
+
+            responseOneEnabler.SetActive(true);
+            optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
         }
-        else
+
+        //two dialog node
+        if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
         {
             second = true;
+
+            selectedOption = responseOneEnabler;
             nextOption = responseTwoEnabler;
             lastOption = bye;
+
+            responseOneEnabler.SetActive(true);
+            optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(true);
+            optionTwo.text = d.GetTextTwo();
+        }
+
+        //no dialog node
+        if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
+        {
+            Systems.Input.RemoveKey("up");
+            Systems.Input.RemoveKey("down");
+            second = false;
+
+            selectedOption = bye;
+            //nextOption = bye;
+            //lastOption = bye;
+
+            responseOneEnabler.SetActive(false);
+            optionOne.text = d.GetTextOne();
+            responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
         }
 
@@ -181,7 +198,7 @@ public class DialogueDisplayer : UIElement
     }
 
     // Called when the first dialogue option is pressed
-    private void optionOnePressed()
+    public void optionOnePressed()
     {
         string resp = option1();
         
@@ -193,7 +210,7 @@ public class DialogueDisplayer : UIElement
     }
     
     // Called when the second dialogue option is pressed
-    private void optionTwoPressed()
+    public void optionTwoPressed()
     {
         string resp = option2();
         
@@ -204,9 +221,9 @@ public class DialogueDisplayer : UIElement
         }
     }
 
-    private void exitPressed()
+    public void exitPressed()
     {
-       UIManager.Instance.ActivatePrevious();
+        UIManager.Instance.ActivatePrevious();
         exit();
     }
 

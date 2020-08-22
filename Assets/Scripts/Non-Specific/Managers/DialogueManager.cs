@@ -34,7 +34,7 @@ public class DialogueManager : MonoBehaviour
                 displayer.nextOption = displayer.lastOption;
                 displayer.lastOption = s;
             }
-            print("PRESS DOWN KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
+            //print("PRESS DOWN KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
         });
 
         Systems.Input.RegisterKey("up", delegate
@@ -52,13 +52,31 @@ public class DialogueManager : MonoBehaviour
                 displayer.lastOption = displayer.nextOption;
                 displayer.nextOption = s;
             }
-            print("PRESS UP KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
+            //print("PRESS UP KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
         });
 
-        Systems.Input.RegisterKey("enter", delegate
-        {
-            if (displayer.selectedOption = )
-	    });
+        //Systems.Input.RegisterKey("return", delegate
+        //{
+        //    if (displayer.selectedOption.name == "option1")
+        //    {
+        //        displayer.optionOnePressed();
+        //        print("PRESSED Return : selected " + displayer.selectedOption);
+        //    }
+        //    if (displayer.selectedOption.name == "option2")
+        //    {
+        //        displayer.optionTwoPressed();
+        //        print("PRESSED return : selected " + displayer.selectedOption);
+        //    }
+        //    if (displayer.selectedOption.name == "exit")
+        //    {
+        //        print("deleting return key");
+        //        Systems.Input.RemoveKey("return");
+        //        displayer.exitPressed();
+              
+        //        print("PRESSED return : selected " + displayer.selectedOption);
+
+        //    }
+        //});
         activeDialogue = d;
         activeCallback = cb;
         activeNPC = n;
@@ -75,6 +93,7 @@ public class DialogueManager : MonoBehaviour
         print("delete keys here");
         Systems.Input.RemoveKey("up");
         Systems.Input.RemoveKey("down");
+        //Systems.Input.RemoveKey("return");
         return activeDialogue;
     }
 
