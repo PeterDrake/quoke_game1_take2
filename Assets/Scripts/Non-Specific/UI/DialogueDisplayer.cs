@@ -104,8 +104,8 @@ public class DialogueDisplayer : UIElement
             second = false;
 
             selectedOption = bye;
-            //nextOption = bye;
-            //lastOption = bye;
+            nextOption = bye;
+            lastOption = bye;
 
             responseOneEnabler.SetActive(false);
             optionOne.text = d.GetTextOne();
@@ -182,23 +182,23 @@ public class DialogueDisplayer : UIElement
         {
             if (toggler.activeInHierarchy)
             {
-                if (selectedOption.name == "option1")
-                {
-                    optionOnePressed();
-                    print("PRESSED Return : selected " + selectedOption);
-                }
-                if (selectedOption.name == "option2")
-                {
-                    optionTwoPressed();
-                    print("PRESSED return : selected " + selectedOption);
-                }
-                if (selectedOption.name == "exit")
-                {
-                    exitPressed();
+                //if (selectedOption.name == "option1")
+                //{
+                //    optionOnePressed();
+                //    print("PRESSED Return : selected " + selectedOption);
+                //}
+                //if (selectedOption.name == "option2")
+                //{
+                //    optionTwoPressed();
+                //    print("PRESSED return : selected " + selectedOption);
+                //}
+                //if (selectedOption.name == "exit")
+                //{
+                //    exitPressed();
+                //    print("PRESSED return : selected " + selectedOption);
+                //}
+                selectedOption.GetComponent<Button>().onClick.Invoke();
 
-                    print("PRESSED return : selected " + selectedOption);
-
-                }
             }
         });
         locked = true;

@@ -30,10 +30,6 @@ public class DialogueManager : MonoBehaviour
     /// <returns> A new head if one was reached</returns>
     public DialogueNode EndDialogue()
     {
-        print("delete keys here");
-        //Systems.Input.RemoveKey("up");
-        //Systems.Input.RemoveKey("down");
-        //Systems.Input.RemoveKey("return");
         return activeDialogue;
     }
 
