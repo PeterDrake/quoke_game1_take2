@@ -8896,28 +8896,17 @@ MonoBehaviour:
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 300
+    m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Use the arrow buttons or WASD to move
-
-
-    Press ''I'' to get the inventory
-
-
-    Hold
-    ''C'' to crouch
-
-
-    Click dialogue box to keep talking
-
-
-    Press ''Esc''
-    for sound/exit menu'
+    m_LineSpacing: 2
+  m_Text: "Use the arrow buttons or WASD to move\nPress 'I' to get the inventory\nHold
+    'C' to crouch\nUse up/down arrows to change dialogue box\nPress 'Enter/Return'
+    to select dialogue box\nSelect \"Bye' button to leave conversation \nPress 'Esc'
+    for sound/exit menu"
 --- !u!222 &450345988
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14105,9 +14094,15 @@ PrefabInstance:
     - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Text
-      value: "Use the arrow buttons or WASD to move\n\nPress 'I' to get the inventory\n\nHold
-        'C' to crouch\n\nClick dialogue box to keep talking\n\nClick \"Bye' button
-        to leave conversation \n\nPress 'Esc' for sound/exit menu"
+      value: "Use the arrow buttons or WASD to move\nPress 'I' to get the inventory\nHold
+        'C' to crouch\nUse up/down arrows to change dialogue box\nPress 'Enter/Return'
+        to select dialogue box\nSelect \"Bye' button to leave conversation \nPress
+        'Esc' for sound/exit menu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7111826699031988918, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
