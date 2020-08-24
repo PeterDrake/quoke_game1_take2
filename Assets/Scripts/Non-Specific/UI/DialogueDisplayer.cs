@@ -182,21 +182,7 @@ public class DialogueDisplayer : UIElement
         {
             if (toggler.activeInHierarchy)
             {
-                //if (selectedOption.name == "option1")
-                //{
-                //    optionOnePressed();
-                //    print("PRESSED Return : selected " + selectedOption);
-                //}
-                //if (selectedOption.name == "option2")
-                //{
-                //    optionTwoPressed();
-                //    print("PRESSED return : selected " + selectedOption);
-                //}
-                //if (selectedOption.name == "exit")
-                //{
-                //    exitPressed();
-                //    print("PRESSED return : selected " + selectedOption);
-                //}
+
                 selectedOption.GetComponent<Button>().onClick.Invoke();
 
             }
