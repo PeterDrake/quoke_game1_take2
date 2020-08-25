@@ -18,7 +18,6 @@ public class InputManager : MonoBehaviour
 
    private void Awake()
    {
-        print("Input Manager");
       keys = new ArrayList();
       registeredKeys = new Dictionary<string, CallBack>();
    }
@@ -34,14 +33,15 @@ public class InputManager : MonoBehaviour
       registeredKeys.Remove(key);
    }
 
-   public void Update()
-   {
-      foreach (string key in keys)
-      {
-         if (Input.GetKeyDown(key))
-         {
-            registeredKeys[key].Invoke();
-         }
-      }
-   }
+    public void Update()
+    {
+        foreach (string key in keys)
+        {
+            if (Input.GetKeyDown(key))
+            {
+                registeredKeys[key].Invoke();
+            }
+        }
+
+    }
 }

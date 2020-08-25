@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,7 @@ public class DialogueDisplayer : UIElement
 {
 
     public delegate string DialogueEvent();
+    
     private const byte requiredComponentsAmount = 8;
     // option1, option2, invalid1, invalid2, npcImage, npcSpeech, npcName, exit 
     
@@ -16,7 +18,7 @@ public class DialogueDisplayer : UIElement
     private DialogueEvent option2;
     private DialogueEvent exit;
     private bool displaying;
-    private GameObject toggler;
+    public GameObject toggler;
     
     // Object references for population of information
     private Image npcImage;
@@ -27,13 +29,20 @@ public class DialogueDisplayer : UIElement
     private Text optionTwo;
     [SerializeField] private GameObject responseOneEnabler;
     [SerializeField] private GameObject responseTwoEnabler;
-    
+    [SerializeField] private GameObject bye;
+
     private Text invalidOne;
     private Text invalidTwo;
     private GameObject invalidOneEnabler;
     private GameObject invalidTwoEnabler;
 
     private MenuDisplayer menu;
+
+    public GameObject lastOption;
+    public GameObject selectedOption;
+    public GameObject nextOption;
+    
+    public bool second;
 
     private void Awake()
     {
@@ -49,36 +58,62 @@ public class DialogueDisplayer : UIElement
     {
         activate(true);
     }
-    
+
     public void Load(DialogueNode d, NPC n)
     {
+        print("new dialog select");
         // Debug.Log("Loading "+d.name+", "+n.name);
         npcName.text = n.name;
         if (n.image != null) npcImage.sprite = n.image;
         npcSpeech.text = d.speech;
 
-        if (d.GetNodeOne() == null)
+        //one dialog node
+        if (d.GetNodeOne() != null && d.GetNodeTwo() == null)
         {
-            responseOneEnabler.SetActive(false);
-        }
-        else
-        {
+            second = false;
+
+            selectedOption = responseOneEnabler;
+            nextOption = bye;
+            lastOption = bye;
+
             responseOneEnabler.SetActive(true);
             optionOne.text = d.GetTextOne();
-        }
-        
-        if (d.GetNodeTwo() == null)
-        {
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
         }
-        else
+
+        //two dialog node
+        if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
         {
+            second = true;
+
+            selectedOption = responseOneEnabler;
+            nextOption = responseTwoEnabler;
+            lastOption = bye;
+
+            responseOneEnabler.SetActive(true);
+            optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(true);
             optionTwo.text = d.GetTextTwo();
         }
-        
-       UIManager.Instance.SetAsActive(this);
+
+        //no dialog node
+        if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
+        {
+
+            second = false;
+
+            selectedOption = bye;
+            nextOption = bye;
+            lastOption = bye;
+
+            responseOneEnabler.SetActive(false);
+            optionOne.text = d.GetTextOne();
+            responseTwoEnabler.SetActive(false);
+            optionTwo.text = d.GetTextTwo();
+        }
+
+        UIManager.Instance.SetAsActive(this);
         /* Extra:
             check each options requirements, and enable invalids accordingly
         */
@@ -99,10 +134,62 @@ public class DialogueDisplayer : UIElement
 
     private void Start()
     {
+        print("add keys here");
+        Systems.Input.RegisterKey("down", delegate
+        {
+            if (toggler.activeInHierarchy)
+            {
+                if (!second)
+                {
+
+                   nextOption = selectedOption;
+                    selectedOption = lastOption;
+                    lastOption = nextOption;
+                }
+                else
+                {
+                    GameObject s = selectedOption;
+                    selectedOption = nextOption;
+                    nextOption = lastOption;
+                    lastOption = s;
+                }
+            }
+            //print("PRESS DOWN KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
+        });
+
+        Systems.Input.RegisterKey("up", delegate
+        {
+            if (toggler.activeInHierarchy)
+            {
+                if (!second)
+                {
+                    nextOption = selectedOption;
+                    selectedOption = lastOption;
+                    lastOption = nextOption;
+                }
+                else
+                {
+                    GameObject s = selectedOption;
+                    selectedOption = lastOption;
+                    lastOption = nextOption;
+                   nextOption = s;
+                }
+                //print("PRESS UP KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
+            }
+        });
+
+        Systems.Input.RegisterKey("return", delegate
+        {
+            if (toggler.activeInHierarchy)
+            {
+
+                selectedOption.GetComponent<Button>().onClick.Invoke();
+
+            }
+        });
         locked = true;
-
+        second = false;
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
-
         initialize();
         activate(false);   
     }
@@ -152,6 +239,7 @@ public class DialogueDisplayer : UIElement
                     componentsFound += 1;
                     break;
                 case "exit":
+                    bye = child.gameObject;
                     child.GetComponent<Button>().onClick.AddListener(exitPressed);
                     componentsFound += 1;
                     break;
@@ -162,9 +250,8 @@ public class DialogueDisplayer : UIElement
     }
 
     // Called when the first dialogue option is pressed
-    private void optionOnePressed()
+    public void optionOnePressed()
     {
-        print("option 1 pressed");
         string resp = option1();
         
         if (resp != "")
@@ -175,9 +262,8 @@ public class DialogueDisplayer : UIElement
     }
     
     // Called when the second dialogue option is pressed
-    private void optionTwoPressed()
+    public void optionTwoPressed()
     {
-        print("option 2 pressed");
         string resp = option2();
         
         if (resp != "")
@@ -187,9 +273,9 @@ public class DialogueDisplayer : UIElement
         }
     }
 
-    private void exitPressed()
+    public void exitPressed()
     {
-       UIManager.Instance.ActivatePrevious();
+        UIManager.Instance.ActivatePrevious();
         exit();
     }
 
@@ -200,3 +286,44 @@ public class DialogueDisplayer : UIElement
         else { menu.closedCanvi(); }
     }
 }
+
+
+//514F5E
+//6CAEE7
+//print("registered keys");
+//Systems.Input.RegisterKey("down", delegate
+//        {
+//            if (!second)
+//            {
+
+//                nextOption = selectedOption;
+//                selectedOption = lastOption;
+//                lastOption = nextOption;
+//            }
+//            else
+//            {
+//                GameObject s = selectedOption;
+//selectedOption = nextOption;
+//                nextOption = lastOption;
+//                lastOption = s;
+//            }
+//            print("PRESS DOWN KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
+//        });
+
+//        Systems.Input.RegisterKey("up", delegate
+//        {
+//            if (!second)
+//            {
+//                nextOption = selectedOption;
+//                selectedOption = lastOption;
+//                lastOption = nextOption;
+//            }
+//            else
+//            {
+//                GameObject s = selectedOption;
+//selectedOption = lastOption;
+//                lastOption = nextOption;
+//                nextOption = s;
+//            }
+//            print("PRESS UP KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
+//        });

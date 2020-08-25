@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
         
         traverse(d);
         displayer.Load(d,n);
+
     }
     
     /// <summary> End the current dialogue if one is active</summary>

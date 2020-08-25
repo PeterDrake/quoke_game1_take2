@@ -2408,9 +2408,15 @@ PrefabInstance:
     - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Text
-      value: "Use the arrow buttons or WASD to move\n\nPress 'I' to get the inventory\n\nHold
-        'C' to crouch\n\nClick dialogue box to keep talking\n\nClick \"Bye' button
-        to leave conversation \n\nPress 'Esc' for sound/exit menu"
+      value: "Use the arrow buttons or WASD to move\nPress 'I' to get the inventory\nHold
+        'C' to crouch\nUse up/down arrows to change dialogue box\nPress 'Enter/Return'
+        to select dialogue box\nSelect \"Bye' button to leave conversation \nPress
+        'Esc' for sound/exit menu"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_LineSpacing
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7459910031737987224, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -10721,6 +10727,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809640458848248}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &631624547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 499350135413996139, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 217066294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &632796736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1424496007241718, guid: 43223205572f7034585ff939a4ce68f3,
@@ -10739,7 +10751,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 217066294}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1556277718}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1ab06f00b58aaf248aafc3f2ed9b2988, type: 3}
@@ -18783,6 +18795,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 676809640456449198}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1556277718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 499350134894848834, guid: 54201a432732e3644b92dd53d5d1fef5,
+    type: 3}
+  m_PrefabInstance: {fileID: 217066294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1556277720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556277718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac4b268707484e12b7eb4243f9dc10a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggler: {fileID: 631624547}
+  original: {r: 0.31764707, g: 0.30980393, b: 0.36862746, a: 0.78431374}
+  flash: {r: 0.42352942, g: 0.68235296, b: 0.90588236, a: 0.78431374}
 --- !u!1 &1563700884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1401059426690076, guid: 4eca986093346484984c5b401dad4cc1,
