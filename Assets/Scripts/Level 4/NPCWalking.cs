@@ -42,9 +42,12 @@ public class NPCWalking : MonoBehaviour
             animator.SetBool("isWalking", false);
             GetComponent<InteractWithObject>().enabled = true;
             GetComponent<SphereCollider>().enabled = true;
-            spotToShow.SetActive(true);
             if (speakOnArrival && alert!=null) { alert.GetComponent<FlatFollow>().appear(); }
-            transform.LookAt(spotToShow.transform.position);
+            if (spotToShow != null)
+            {
+                spotToShow.SetActive(true);
+                transform.LookAt(spotToShow.transform.position);
+            }
             Destroy(this);
 
         }

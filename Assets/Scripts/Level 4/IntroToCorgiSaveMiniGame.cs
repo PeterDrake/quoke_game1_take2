@@ -18,7 +18,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     public GameObject Ahmad;
     public GameObject Maria;
     public GameObject Bruce;
-    public NavMeshAgent Bruce1;
+    public NavMeshAgent BruceNav;
     public GameObject BruceCont;
 
     public InformationCanvas _canvas;
@@ -27,9 +27,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
     private bool check;
     private StartDialogue script;
-    private NPCWalking scriptBruce;
+    public  NPCWalking scriptBruce;
     private NPCWalking scriptAhmad;
-    private NPCWalking scriptMaria;
+    public NPCWalking scriptMaria;
     private Animator animator1;
     private InteractWithObject _interact;
 
@@ -40,8 +40,8 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     {
         script = this.GetComponent<StartDialogue>();
         scriptAhmad = Ahmad.GetComponent<NPCWalking>();
-        scriptBruce = Bruce.GetComponent<NPCWalking>();
-        scriptMaria = Maria.GetComponent<NPCWalking>();
+        //scriptBruce = Bruce.GetComponent<NPCWalking>();
+        //scriptMaria = Maria.GetComponent<NPCWalking>();
         //Bruce1 = Bruce.GetComponent<NavMeshAgent>();
         animator1 = Ahmad.GetComponent<Animator>();
 
@@ -110,24 +110,24 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         scriptAhmad.enabled = true;
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
         _interact = Ahmad.GetComponent<InteractWithObject>();
-        _interact.Kill();
+        Destroy(_interact);
+        print("move the maira");
 
-
-        //Maria starts moving towards Tsu
+        ////Maria starts moving towards Tsu
         scriptMaria.enabled = true;
 
         Maria.GetComponent<SphereCollider>().enabled = false;
-        //Maria.GetComponent<InteractWithMaria>().Kill();
+        ////Maria.GetComponent<InteractWithMaria>().Kill();
         Maria.GetComponent<InteractWithMaria>().enabled = false;
 
-        //Bruce starts walking to Tsu
+        ////Bruce starts walking to Tsu
         scriptBruce.enabled = true;
-        Bruce1.enabled = true;
+        BruceNav.enabled = true;
 
         BruceCont.GetComponent<SphereCollider>().enabled = false;
         BruceCont.GetComponent<InteractWithObject>().enabled = false;
-        
-        
+
+
     }
     
 }
