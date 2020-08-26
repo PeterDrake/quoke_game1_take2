@@ -115,7 +115,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         ////Maria starts moving towards Tsu
         scriptMaria.enabled = true;
-
+        if (GameObject.Find("MariaAlert").activeInHierarchy)
+        {
+            GameObject.Find("MariaAlert").SetActive(false);
+        }
         Maria.GetComponent<SphereCollider>().enabled = false;
         ////Maria.GetComponent<InteractWithMaria>().Kill();
         Maria.GetComponent<InteractWithMaria>().enabled = false;
@@ -123,7 +126,10 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         ////Bruce starts walking to Tsu
         scriptBruce.enabled = true;
         BruceNav.enabled = true;
-
+        if (GameObject.Find("BruceAlert").activeInHierarchy)
+        {
+            GameObject.Find("BruceAlert").SetActive(false);
+        }
         BruceCont.GetComponent<SphereCollider>().enabled = false;
         BruceCont.GetComponent<InteractWithObject>().enabled = false;
 
