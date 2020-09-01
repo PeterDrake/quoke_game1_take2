@@ -53,8 +53,6 @@ public class ChangeBannerLevel4 : MonoBehaviour
         {
             print("I GOT ALL THREE!!!");
             _canvas.ChangeText(words);
-            if (GameObject.Find("BruceAlert") != null) 
-                { GameObject.Find("BruceAlert").GetComponent<FlatFollow>().appear(); }
         }
         if (!mulch && !paper && wood)
         {

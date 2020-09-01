@@ -40,15 +40,25 @@ public class NPCWalking : MonoBehaviour
         {
             print("I MADE IT TO THE COMPOST");
             animator.SetBool("isWalking", false);
-            GetComponent<InteractWithObject>().enabled = true;
-            GetComponent<SphereCollider>().enabled = true;
-            spotToShow.SetActive(true);
-            if (speakOnArrival && alert!=null) { alert.GetComponent<FlatFollow>().appear(); }
-            transform.LookAt(spotToShow.transform.position);
+            if (speakOnArrival)
+            {
+                GetComponent<InteractWithObject>().enabled = true;
+                GetComponent<SphereCollider>().enabled = true;
+            }
+            if (speakOnArrival && alert != null) { alert.GetComponent<FlatFollow>().appear(); }
+            if (spotToShow != null)
+            {
+                spotToShow.SetActive(true);
+                transform.LookAt(spotToShow.transform.position);
+            }
+            navMeshAgent.enabled = false;
             Destroy(this);
 
         }
-        FleeFromTarget(targetposition);
+        else
+        {
+            FleeFromTarget(targetposition);
+        }
     }
 
     private void FleeFromTarget(Vector3 target)
