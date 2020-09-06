@@ -49,6 +49,7 @@ public class DialogueDisplayer : UIElement
 
     public override void Close()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         activate(false);
     }
 
@@ -69,59 +70,77 @@ public class DialogueDisplayer : UIElement
         dialog2 = responseTwoEnabler.GetComponent<Button>();
         dialogEnd = bye.GetComponent<Button>();
 
-
-        ////one dialog node
-        //if (d.GetNodeOne() != null && d.GetNodeTwo() == null)
-        //{
-        //    EventSystem.current.SetSelectedGameObject(responseOneEnabler);
-        //    //set navigation for one dialog node to exit button
-        //    Navigation nav = dialog1.navigation;
-        //    nav.mode = Navigation.Mode.Explicit;
-        //    nav.selectOnDown = dialogEnd;
-        //    nav.selectOnUp = dialogEnd;
-        //    dialog1.navigation = nav;
-        //    //set navigation for exit to one dialog button
-        //    nav = dialogEnd.navigation;
-        //    nav.mode = Navigation.Mode.Explicit;
-        //    nav.selectOnDown = dialog1;
-        //    nav.selectOnUp = dialog1;
-        //    dialogEnd.navigation = nav;
-        //}
-
-        ////two dialog node
-        //if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
-        //{
-        //    EventSystem.current.SetSelectedGameObject(responseOneEnabler);
-        //    //set navigation for one dialog node to up->end, down->two
-        //    Navigation nav = dialog1.navigation;
-        //    nav.mode = Navigation.Mode.Explicit;
-        //    nav.selectOnDown = dialog2;
-        //    nav.selectOnUp = dialogEnd;
-        //    dialog1.navigation = nav;
-        //    //set navigation for two dialog node to up->one, down->end
-        //    nav = dialog2.navigation;
-        //    nav.mode = Navigation.Mode.Explicit;
-        //    nav.selectOnDown = dialogEnd;
-        //    nav.selectOnUp = dialog1;
-        //    dialog2.navigation = nav;
-        //    //set navigation for exit to up->two, down->one
-        //    nav = dialogEnd.navigation;
-        //    nav.mode = Navigation.Mode.Explicit;
-        //    nav.selectOnDown = dialog1;
-        //    nav.selectOnUp = dialog2;
-        //    dialogEnd.navigation = nav;
-        //}
-
-        ////no dialog node
-        //if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
-        //{
-        //    EventSystem.current.SetSelectedGameObject(bye);
-        //    //set navigation for exit only;
-        //    Navigation nav = dialog1.navigation;
-        //    nav.mode = Navigation.Mode.None;
-        //}
-
         UIManager.Instance.SetAsActive(this);
+
+        //one dialog node
+        if (d.GetNodeOne() != null && d.GetNodeTwo() == null)
+        {
+            print("set selected to dialog1 button");
+            EventSystem.current.SetSelectedGameObject(responseOneEnabler);
+            //set navigation for one dialog node to exit button
+            Navigation nav = dialog1.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialogEnd;
+            nav.selectOnUp = dialogEnd;
+            dialog1.navigation = nav;
+            //set navigation for exit to one dialog button
+            nav = dialogEnd.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialog1;
+            nav.selectOnUp = dialog1;
+            dialogEnd.navigation = nav;
+
+            responseOneEnabler.SetActive(true);
+            optionOne.text = d.GetTextOne();
+            responseTwoEnabler.SetActive(false);
+            optionTwo.text = d.GetTextTwo();
+        }
+
+        //two dialog node
+        if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
+        {
+            print("set selected to dialog1 button");
+            EventSystem.current.SetSelectedGameObject(responseOneEnabler);
+            //set navigation for one dialog node to up->end, down->two
+            Navigation nav = dialog1.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialog2;
+            nav.selectOnUp = dialogEnd;
+            dialog1.navigation = nav;
+            //set navigation for two dialog node to up->one, down->end
+            nav = dialog2.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialogEnd;
+            nav.selectOnUp = dialog1;
+            dialog2.navigation = nav;
+            //set navigation for exit to up->two, down->one
+            nav = dialogEnd.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialog1;
+            nav.selectOnUp = dialog2;
+            dialogEnd.navigation = nav;
+
+            responseOneEnabler.SetActive(true);
+            optionOne.text = d.GetTextOne();
+            responseTwoEnabler.SetActive(true);
+            optionTwo.text = d.GetTextTwo();
+        }
+
+        //no dialog node
+        if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
+        {
+            print("set selected to bye button");
+            EventSystem.current.SetSelectedGameObject(bye);
+            //set navigation for exit only;
+            Navigation nav = dialog1.navigation;
+            nav.mode = Navigation.Mode.None;
+
+            responseOneEnabler.SetActive(false);
+            optionOne.text = d.GetTextOne();
+            responseTwoEnabler.SetActive(false);
+            optionTwo.text = d.GetTextTwo();
+        }
+
         /* Extra:
             check each options requirements, and enable invalids accordingly
         */
@@ -193,8 +212,8 @@ public class DialogueDisplayer : UIElement
                     componentsFound += 1;
                     break;
                 case "exit":
-                    bye = child.gameObject;
                     child.GetComponent<Button>().onClick.AddListener(exitPressed);
+                    bye = child.gameObject;
                     componentsFound += 1;
                     break;
             }
@@ -244,40 +263,4 @@ public class DialogueDisplayer : UIElement
 
 //514F5E
 //6CAEE7
-//print("registered keys");
-//Systems.Input.RegisterKey("down", delegate
-//        {
-//            if (!second)
-//            {
 
-//                nextOption = selectedOption;
-//                selectedOption = lastOption;
-//                lastOption = nextOption;
-//            }
-//            else
-//            {
-//                GameObject s = selectedOption;
-//selectedOption = nextOption;
-//                nextOption = lastOption;
-//                lastOption = s;
-//            }
-//            print("PRESS DOWN KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
-//        });
-
-//        Systems.Input.RegisterKey("up", delegate
-//        {
-//            if (!second)
-//            {
-//                nextOption = selectedOption;
-//                selectedOption = lastOption;
-//                lastOption = nextOption;
-//            }
-//            else
-//            {
-//                GameObject s = selectedOption;
-//selectedOption = lastOption;
-//                lastOption = nextOption;
-//                nextOption = s;
-//            }
-//            print("PRESS UP KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
-//        });
