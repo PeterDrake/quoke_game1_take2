@@ -2596,19 +2596,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 749994653745181202}
-    - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
-        type: 3}
-      propertyPath: m_Text
-      value: "Use the arrow buttons or WASD to move\nPress 'I' to get the inventory\nHold
-        'C' to crouch\nUse up/down arrows to change dialogue box\nPress 'Enter/Return'
-        to select dialogue box\nSelect \"Bye' button to leave conversation \nPress
-        'Esc' for sound/exit menu"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6944327965356146409, guid: 54201a432732e3644b92dd53d5d1fef5,
-        type: 3}
-      propertyPath: m_FontData.m_LineSpacing
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7459910031737987224, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: newInvColor.b
@@ -4177,7 +4164,7 @@ RectTransform:
   m_Children:
   - {fileID: 1560934619}
   m_Father: {fileID: 217066310}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
