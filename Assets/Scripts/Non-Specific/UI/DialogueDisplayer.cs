@@ -48,8 +48,7 @@ public class DialogueDisplayer : UIElement
     }
 
     public override void Close()
-    {
-        EventSystem.current.SetSelectedGameObject(null);
+    { 
         activate(false);
     }
 
@@ -249,6 +248,9 @@ public class DialogueDisplayer : UIElement
     public void exitPressed()
     {
         UIManager.Instance.ActivatePrevious();
+        dialog1.OnSelect(null);
+        dialog2.OnSelect(null);
+        dialogEnd.OnSelect(null);
         exit();
     }
 
