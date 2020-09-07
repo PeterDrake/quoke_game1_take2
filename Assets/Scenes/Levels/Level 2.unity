@@ -1737,6 +1737,36 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 499350134112532785, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 499350134112532785, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499350134112532785, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 499350134618236897, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 499350134618236897, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 499350134618236897, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 499350134620214592, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.r
