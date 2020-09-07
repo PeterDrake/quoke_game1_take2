@@ -93,6 +93,7 @@ public class DialogueDisplayer : UIElement
             optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
+            dialog1.Select();
         }
 
         //two dialog node
@@ -123,6 +124,8 @@ public class DialogueDisplayer : UIElement
             optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(true);
             optionTwo.text = d.GetTextTwo();
+            dialog1.Select();
+
         }
 
         //no dialog node
@@ -138,6 +141,7 @@ public class DialogueDisplayer : UIElement
             optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
+            dialogEnd.Select();
         }
 
         /* Extra:
