@@ -31,6 +31,7 @@ public class DialogueDisplayer : UIElement
     [SerializeField] private GameObject responseOneEnabler;
     [SerializeField] private GameObject responseTwoEnabler;
     [SerializeField] private GameObject bye;
+    [SerializeField] private GameObject ReplaceBye;
 
     private Text invalidOne;
     private Text invalidTwo;
@@ -68,6 +69,8 @@ public class DialogueDisplayer : UIElement
         dialog1 = responseOneEnabler.GetComponent<Button>();
         dialog2 = responseTwoEnabler.GetComponent<Button>();
         dialogEnd = bye.GetComponent<Button>();
+        ReplaceBye.SetActive(false);
+        bye.SetActive(true);
 
         UIManager.Instance.SetAsActive(this);
 
@@ -97,7 +100,7 @@ public class DialogueDisplayer : UIElement
         }
 
         //two dialog node
-        if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
+        else if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
         {
             print("set selected to dialog1 button");
             EventSystem.current.SetSelectedGameObject(responseOneEnabler);
@@ -129,13 +132,18 @@ public class DialogueDisplayer : UIElement
         }
 
         //no dialog node
-        if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
+        else if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
         {
+            ReplaceBye.SetActive(true);
+            bye.SetActive(false);
+            dialogEnd = ReplaceBye.GetComponent<Button>();
+
             print("set selected to bye button");
-            EventSystem.current.SetSelectedGameObject(bye);
+            EventSystem.current.SetSelectedGameObject(ReplaceBye);
             //set navigation for exit only;
-            Navigation nav = dialog1.navigation;
+            Navigation nav = dialogEnd.navigation;
             nav.mode = Navigation.Mode.None;
+            dialogEnd.navigation = nav;
 
             responseOneEnabler.SetActive(false);
             optionOne.text = d.GetTextOne();
