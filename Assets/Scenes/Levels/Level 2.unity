@@ -1907,6 +1907,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1256184377463889493, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Text
+      value: Tre
+      objectReference: {fileID: 0}
     - target: {fileID: 1785773753975599621, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1921,6 +1926,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968765629374541981, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Name
+      value: TreFace
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220048540396687137, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Name
+      value: TreName
       objectReference: {fileID: 0}
     - target: {fileID: 2592026523344652361, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
@@ -2255,6 +2270,12 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6186834849907455342, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2de485a518c07094ca2543fd274e2688,
+        type: 3}
     - target: {fileID: 6225663469846101385, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Text
