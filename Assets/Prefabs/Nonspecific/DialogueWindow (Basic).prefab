@@ -1179,6 +1179,8 @@ MonoBehaviour:
   responseOneEnabler: {fileID: 0}
   responseTwoEnabler: {fileID: 0}
   bye: {fileID: 0}
+  dialogDesign: {fileID: 0}
+  byeButton: {fileID: 0}
 --- !u!1 &6879270332543429390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,8 +1549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.4, y: 50}
-  m_SizeDelta: {x: 359.7, y: 103.1}
+  m_AnchoredPosition: {x: 73.4, y: 77}
+  m_SizeDelta: {x: 359.7, y: 75.55001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6879270332690442770
 CanvasRenderer:

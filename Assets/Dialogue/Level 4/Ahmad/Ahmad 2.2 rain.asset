@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a692057595962314d904972bdfcf7e54, type: 3}
   m_Name: Ahmad 2.2 rain
   m_EditorClassIdentifier: 
-  speech: Good idea. I can give you some wood to build a fire and a pot so you can
-    boil some water. It would probably be easiest to build the fire near the barrel
+  speech: Good idea. Here is some wood to build a fire and a pot so you can boil
+    some water in. It would probably be easiest to build the fire near the barrel
     so we don't spill too much water.
   optionOneText: 
   optionOne: {fileID: 0}
