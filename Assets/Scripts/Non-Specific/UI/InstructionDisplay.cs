@@ -26,9 +26,15 @@ public class InstructionDisplay : UIElement
 
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
 
+
         initialize();
         activate(false);
-        
+        Systems.Input.RegisterKey("h", delegate
+        {
+            UIManager.Instance.ToggleActive(this);
+        }
+           );
+
     }
 
     private void initialize() //Get all references that are needed to populate the UI
