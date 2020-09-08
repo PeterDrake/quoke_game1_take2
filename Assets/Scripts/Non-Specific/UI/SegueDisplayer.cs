@@ -28,7 +28,7 @@ public class SegueDisplayer : UIElement
     {
         pauseOnOpen = true;
         locked = true;
-
+        print("does segue trigger here?");
 
 
         initialize();
@@ -54,6 +54,7 @@ public class SegueDisplayer : UIElement
 
     private void activate(bool active)
     {
+        print("open segue");
         toggler.SetActive(active);
     }
 

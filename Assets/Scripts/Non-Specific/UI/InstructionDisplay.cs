@@ -9,6 +9,8 @@ public class InstructionDisplay : UIElement
 
     private GameObject toggler;
     public Button ExitButton;
+    public GameObject page1;
+    public GameObject page2;
 
     private MenuDisplayer menu;
 
@@ -49,6 +51,8 @@ public class InstructionDisplay : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
+        page1.SetActive(true);
+        page2.SetActive(false);
         if (active) { menu.openedCanvi(this); }
         else { menu.closedCanvi(); }
     }
