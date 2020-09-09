@@ -20,11 +20,7 @@ public class MenuScreenDisplayer : UIElement
         toggler = GameObject.Find("EscapeClosed");
         UIManager.Instance.Initialize(this);
         EventSystem.current.SetSelectedGameObject(level1);
-        //level1.GetComponent<Button>().OnSubmit(null);
-        //level2.GetComponent<Button>().OnSubmit(null);
-        //level3.GetComponent<Button>().OnSubmit(null);
-        //level4.GetComponent<Button>().OnSubmit(null);
-        //post.GetComponent<Button>().OnSubmit(null);
+
 
         /*print("EscapeClosed start method");
 
