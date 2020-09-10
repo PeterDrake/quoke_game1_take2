@@ -2,9 +2,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Button = UnityEngine.UI.Button;
+using UnityEngine.EventSystems;
 
 public class MainPauseMenuDisplayer : UIElement
 {
+    public GameObject returnButton;
     private GameObject toggler;
     private bool open;
 
@@ -49,11 +51,15 @@ public class MainPauseMenuDisplayer : UIElement
     public override void Open()
     {
         toggler.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(returnButton);
+        
     }
 
     public override void Close()
     {
         toggler.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
     }
 
     private void gameOver()
