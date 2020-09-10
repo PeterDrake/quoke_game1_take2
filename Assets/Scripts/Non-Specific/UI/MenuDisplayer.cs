@@ -101,12 +101,14 @@ public class MenuDisplayer : UIElement
     public override void Open()
     {
         toggler.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(returnButton);
 
     }
 
     public override void Close()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         toggler.SetActive(false);
     }
 
