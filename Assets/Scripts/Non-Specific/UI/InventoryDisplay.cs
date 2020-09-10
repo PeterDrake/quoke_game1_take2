@@ -181,6 +181,7 @@ public class InventoryDisplay : UIElement
         displayName.text = items[i].DisplayName;
         description.text = items[i].Description;
         displayAmount.text = amounts[i].ToString();
+        itemSlots[i].color = new Color(131,171,255);
 
         if (items[i].ID == "PAM")
         {

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DialogueDisplayer : UIElement
 {
@@ -30,6 +31,9 @@ public class DialogueDisplayer : UIElement
     [SerializeField] private GameObject responseOneEnabler;
     [SerializeField] private GameObject responseTwoEnabler;
     [SerializeField] private GameObject bye;
+    [SerializeField] private GameObject dialogDesign;
+    [SerializeField] private GameObject byeButton;
+
 
     private Text invalidOne;
     private Text invalidTwo;
@@ -37,20 +41,17 @@ public class DialogueDisplayer : UIElement
     private GameObject invalidTwoEnabler;
 
     private MenuDisplayer menu;
-
-    public GameObject lastOption;
-    public GameObject selectedOption;
-    public GameObject nextOption;
+    private Button dialog1;
+    private Button dialog2;
+    private Button dialogEnd;
     
-    public bool second;
-
     private void Awake()
     {
         pauseOnOpen = true;
     }
 
     public override void Close()
-    {
+    { 
         activate(false);
     }
 
@@ -67,53 +68,94 @@ public class DialogueDisplayer : UIElement
         if (n.image != null) npcImage.sprite = n.image;
         npcSpeech.text = d.speech;
 
+        dialog1 = responseOneEnabler.GetComponent<Button>();
+        dialog2 = responseTwoEnabler.GetComponent<Button>();
+        dialogEnd = bye.GetComponent<Button>();
+
+        dialogDesign.SetActive(true);
+        bye.SetActive(true);
+        byeButton.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        UIManager.Instance.SetAsActive(this);
+
         //one dialog node
         if (d.GetNodeOne() != null && d.GetNodeTwo() == null)
         {
-            second = false;
-
-            selectedOption = responseOneEnabler;
-            nextOption = bye;
-            lastOption = bye;
+            print("set selected to dialog1 button");
+            EventSystem.current.SetSelectedGameObject(responseOneEnabler);
+            //set navigation for one dialog node to exit button
+            Navigation nav = dialog1.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialogEnd;
+            nav.selectOnUp = dialogEnd;
+            dialog1.navigation = nav;
+            //set navigation for exit to one dialog button
+            nav = dialogEnd.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialog1;
+            nav.selectOnUp = dialog1;
+            dialogEnd.navigation = nav;
 
             responseOneEnabler.SetActive(true);
             optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
+            dialog1.Select();
         }
 
         //two dialog node
-        if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
+        else if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
         {
-            second = true;
-
-            selectedOption = responseOneEnabler;
-            nextOption = responseTwoEnabler;
-            lastOption = bye;
+            print("set selected to dialog1 button");
+            EventSystem.current.SetSelectedGameObject(responseOneEnabler);
+            //set navigation for one dialog node to up->end, down->two
+            Navigation nav = dialog1.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialog2;
+            nav.selectOnUp = dialogEnd;
+            dialog1.navigation = nav;
+            //set navigation for two dialog node to up->one, down->end
+            nav = dialog2.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialogEnd;
+            nav.selectOnUp = dialog1;
+            dialog2.navigation = nav;
+            //set navigation for exit to up->two, down->one
+            nav = dialogEnd.navigation;
+            nav.mode = Navigation.Mode.Explicit;
+            nav.selectOnDown = dialog1;
+            nav.selectOnUp = dialog2;
+            dialogEnd.navigation = nav;
 
             responseOneEnabler.SetActive(true);
             optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(true);
             optionTwo.text = d.GetTextTwo();
+            dialog1.Select();
+
         }
 
         //no dialog node
-        if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
+        else if (d.GetNodeOne() == null && d.GetNodeTwo() == null)
         {
-
-            second = false;
-
-            selectedOption = bye;
-            nextOption = bye;
-            lastOption = bye;
+            dialogDesign.SetActive(false);
+            bye.SetActive(false);
+            byeButton.SetActive(true);
+            print("set selected to bye button");
+            dialogEnd = byeButton.GetComponent<Button>();
+            EventSystem.current.SetSelectedGameObject(byeButton);
+            //set navigation for exit only;
+            Navigation nav = dialogEnd.navigation;
+            nav.mode = Navigation.Mode.None;
+            dialogEnd.navigation = nav;
 
             responseOneEnabler.SetActive(false);
             optionOne.text = d.GetTextOne();
             responseTwoEnabler.SetActive(false);
             optionTwo.text = d.GetTextTwo();
+            dialogEnd.Select();
         }
 
-        UIManager.Instance.SetAsActive(this);
         /* Extra:
             check each options requirements, and enable invalids accordingly
         */
@@ -134,61 +176,7 @@ public class DialogueDisplayer : UIElement
 
     private void Start()
     {
-        print("add keys here");
-        Systems.Input.RegisterKey("down", delegate
-        {
-            if (toggler.activeInHierarchy)
-            {
-                if (!second)
-                {
-
-                   nextOption = selectedOption;
-                    selectedOption = lastOption;
-                    lastOption = nextOption;
-                }
-                else
-                {
-                    GameObject s = selectedOption;
-                    selectedOption = nextOption;
-                    nextOption = lastOption;
-                    lastOption = s;
-                }
-            }
-            //print("PRESS DOWN KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
-        });
-
-        Systems.Input.RegisterKey("up", delegate
-        {
-            if (toggler.activeInHierarchy)
-            {
-                if (!second)
-                {
-                    nextOption = selectedOption;
-                    selectedOption = lastOption;
-                    lastOption = nextOption;
-                }
-                else
-                {
-                    GameObject s = selectedOption;
-                    selectedOption = lastOption;
-                    lastOption = nextOption;
-                   nextOption = s;
-                }
-                //print("PRESS UP KEY " + "select= " + displayer.selectedOption.name + " next= " + displayer.nextOption.name + " last= " + displayer.lastOption.name);
-            }
-        });
-
-        Systems.Input.RegisterKey("return", delegate
-        {
-            if (toggler.activeInHierarchy)
-            {
-
-                selectedOption.GetComponent<Button>().onClick.Invoke();
-
-            }
-        });
         locked = true;
-        second = false;
         menu = GameObject.Find("Basic Pause Menu").GetComponent<MenuDisplayer>();
         initialize();
         activate(false);   
@@ -239,8 +227,8 @@ public class DialogueDisplayer : UIElement
                     componentsFound += 1;
                     break;
                 case "exit":
-                    bye = child.gameObject;
                     child.GetComponent<Button>().onClick.AddListener(exitPressed);
+                    bye = child.gameObject;
                     componentsFound += 1;
                     break;
             }
@@ -276,6 +264,9 @@ public class DialogueDisplayer : UIElement
     public void exitPressed()
     {
         UIManager.Instance.ActivatePrevious();
+        dialog1.OnSubmit(null);
+        dialog2.OnSubmit(null);
+        dialogEnd.OnSubmit(null);
         exit();
     }
 
@@ -290,40 +281,4 @@ public class DialogueDisplayer : UIElement
 
 //514F5E
 //6CAEE7
-//print("registered keys");
-//Systems.Input.RegisterKey("down", delegate
-//        {
-//            if (!second)
-//            {
 
-//                nextOption = selectedOption;
-//                selectedOption = lastOption;
-//                lastOption = nextOption;
-//            }
-//            else
-//            {
-//                GameObject s = selectedOption;
-//selectedOption = nextOption;
-//                nextOption = lastOption;
-//                lastOption = s;
-//            }
-//            print("PRESS DOWN KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
-//        });
-
-//        Systems.Input.RegisterKey("up", delegate
-//        {
-//            if (!second)
-//            {
-//                nextOption = selectedOption;
-//                selectedOption = lastOption;
-//                lastOption = nextOption;
-//            }
-//            else
-//            {
-//                GameObject s = selectedOption;
-//selectedOption = lastOption;
-//                lastOption = nextOption;
-//                nextOption = s;
-//            }
-//            print("PRESS UP KEY " + "select= " + selectedOption.name + " next= " + nextOption.name + " last= " + lastOption.name);
-//        });

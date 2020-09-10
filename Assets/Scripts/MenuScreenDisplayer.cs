@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MenuScreenDisplayer : UIElement
 {
+    public GameObject level1;
+    public GameObject level2;
+    public GameObject level3;
+    public GameObject level4;
+    public GameObject post;
     private GameObject toggler;
     private bool musicIsOff;
     private bool sfxIsOff;
@@ -12,6 +19,8 @@ public class MenuScreenDisplayer : UIElement
     {
         toggler = GameObject.Find("EscapeClosed");
         UIManager.Instance.Initialize(this);
+        EventSystem.current.SetSelectedGameObject(level1);
+
 
         /*print("EscapeClosed start method");
 

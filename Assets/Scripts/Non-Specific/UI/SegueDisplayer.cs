@@ -29,8 +29,6 @@ public class SegueDisplayer : UIElement
         pauseOnOpen = true;
         locked = true;
 
-
-
         initialize();
         //WaitForIt();
         //activate(false);

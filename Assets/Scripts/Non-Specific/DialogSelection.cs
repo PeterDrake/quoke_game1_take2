@@ -47,9 +47,9 @@ public class DialogSelection : MonoBehaviour
 
             current = Color.Lerp(current, goal, .4f);
             //print("Selected is " + displayer.selectedOption.name);
-            displayer.nextOption.GetComponent<Image>().color = original;
-            displayer.lastOption.GetComponent<Image>().color = original;
-            displayer.selectedOption.GetComponent<Image>().color = current;
+            //displayer.nextOption.GetComponent<Image>().color = original;
+            //displayer.lastOption.GetComponent<Image>().color = original;
+            //displayer.selectedOption.GetComponent<Image>().color = current;
 
             yield return new WaitForSeconds(1f);
         }

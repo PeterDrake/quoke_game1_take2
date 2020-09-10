@@ -21,12 +21,10 @@ MonoBehaviour:
   Outcomes: []
   NewHead: {fileID: 0}
   IfRequirementsOne:
-  - {fileID: 0}
   - {fileID: 11400000, guid: ca56d5c637697024684243562fb6aced, type: 2}
   optionOneTextAlt: 'No, I haven''t put that together yet. '
   optionOneAlt: {fileID: 11400000, guid: 2ef321040985c124f99112c8842ec078, type: 2}
   IfRequirementsTwo:
-  - {fileID: 11400000, guid: ca56d5c637697024684243562fb6aced, type: 2}
   - {fileID: 11400000, guid: 0b03776babcbacf42a38be727d03c61e, type: 2}
   optionTwoTextAlt: Can you give me any more information?
   optionTwoAlt: {fileID: 11400000, guid: b30c2c3cca90abb4d94a5b52a6f11dfe, type: 2}

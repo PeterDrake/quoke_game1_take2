@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Button = UnityEngine.UI.Button;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Manages the Menu, containing buttons such as Exit to Menu, Exit Game, Settings, and Inventory
@@ -9,6 +10,7 @@ using Button = UnityEngine.UI.Button;
 public class MenuDisplayer : UIElement
 {
     public int mainMenuSceneIndex;
+    public GameObject returnButton;
     
     // toggler, exitToMenu, quitGame, Settings, Inventory 
 
@@ -99,10 +101,14 @@ public class MenuDisplayer : UIElement
     public override void Open()
     {
         toggler.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(returnButton);
+
     }
 
     public override void Close()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         toggler.SetActive(false);
     }
 
