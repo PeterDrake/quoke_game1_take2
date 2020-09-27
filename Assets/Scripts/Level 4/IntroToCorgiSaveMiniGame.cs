@@ -46,7 +46,8 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         animator1 = Ahmad.GetComponent<Animator>();
 
         Debug.Log("SaveCorgiIntro script started");
-        
+
+        Video.GetComponent<VideoPlayer>().Prepare();
 
         //Video.GetComponent<VideoPlayer>().Prepare();
     }
@@ -55,12 +56,11 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 //check if the sanitation is built
     void Update()
     {
+
         if (CompostingToilet.activeSelf && !check)
         {
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
-
-            
         }
 
     }
