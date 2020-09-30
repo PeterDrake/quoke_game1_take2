@@ -47,8 +47,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         Debug.Log("SaveCorgiIntro script started");
 
-        Video.GetComponent<VideoPlayer>().Prepare();
-
         //Video.GetComponent<VideoPlayer>().Prepare();
     }
 
@@ -78,7 +76,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
-        Debug.Log("Video is loaded: " + Video.GetComponent<VideoPlayer>().isPrepared);
         Video.GetComponent<VideoPlayer>().Play();
         
         InTheMeantimeCanvas.SetActive(false);
