@@ -71,7 +71,7 @@ public class SaveCorgiController : MonoBehaviour
 
     private IEnumerator PlayVideo()
     {
-        //yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
