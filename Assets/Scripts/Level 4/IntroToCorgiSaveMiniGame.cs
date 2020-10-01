@@ -48,7 +48,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         Debug.Log("SaveCorgiIntro script started");
 
         Video.GetComponent<VideoPlayer>().source = VideoSource.Url;
-        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiSadScene");
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiSadScene.mp4");
         Video.GetComponent<VideoPlayer>().url = filepath;
 
         //Video.GetComponent<VideoPlayer>().Prepare();
