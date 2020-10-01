@@ -71,12 +71,13 @@ public class SaveCorgiController : MonoBehaviour
 
     private IEnumerator PlayVideo()
     {
-        yield return new WaitForSeconds(1f);
+        //yield return new WaitForSeconds(1f);
         Video.SetActive(true);    
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
         yield return new WaitForSeconds(43f);
-        _videoPlayer.Stop();
+        //_videoPlayer.Stop();
+        Video.SetActive(false);
         winScreen = true;
 
 
