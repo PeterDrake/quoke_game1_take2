@@ -47,11 +47,15 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         Debug.Log("SaveCorgiIntro script started");
 
+        Video.GetComponent<VideoPlayer>().source = VideoSource.Url;
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiSadScene");
+        Video.GetComponent<VideoPlayer>().url = filepath;
+
         //Video.GetComponent<VideoPlayer>().Prepare();
     }
 
 
-//check if the sanitation is built
+    //check if the sanitation is built
     void Update()
     {
 
