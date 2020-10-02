@@ -26,6 +26,9 @@ public class SaveCorgiController : MonoBehaviour
     {
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
+        _videoPlayer.source = VideoSource.Url;
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiVideoFINALE.mp4");
+        _videoPlayer.url = filepath;
         winScreen = false;
         gameOver = false;
     }
