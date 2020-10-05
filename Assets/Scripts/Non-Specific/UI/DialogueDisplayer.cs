@@ -62,7 +62,7 @@ public class DialogueDisplayer : UIElement
 
     public void Load(DialogueNode d, NPC n)
     {
-        print("new dialog select");
+        //print("new dialog select");
         // Debug.Log("Loading "+d.name+", "+n.name);
         npcName.text = n.name;
         if (n.image != null) npcImage.sprite = n.image;
@@ -81,7 +81,7 @@ public class DialogueDisplayer : UIElement
         //one dialog node
         if (d.GetNodeOne() != null && d.GetNodeTwo() == null)
         {
-            print("set selected to dialog1 button");
+            //print("set selected to dialog1 button");
             EventSystem.current.SetSelectedGameObject(responseOneEnabler);
             //set navigation for one dialog node to exit button
             Navigation nav = dialog1.navigation;
@@ -106,7 +106,7 @@ public class DialogueDisplayer : UIElement
         //two dialog node
         else if (d.GetNodeOne() != null && d.GetNodeTwo() != null)
         {
-            print("set selected to dialog1 button");
+            //print("set selected to dialog1 button");
             EventSystem.current.SetSelectedGameObject(responseOneEnabler);
             //set navigation for one dialog node to up->end, down->two
             Navigation nav = dialog1.navigation;
@@ -141,7 +141,7 @@ public class DialogueDisplayer : UIElement
             dialogDesign.SetActive(false);
             bye.SetActive(false);
             byeButton.SetActive(true);
-            print("set selected to bye button");
+            //print("set selected to bye button");
             dialogEnd = byeButton.GetComponent<Button>();
             EventSystem.current.SetSelectedGameObject(byeButton);
             //set navigation for exit only;

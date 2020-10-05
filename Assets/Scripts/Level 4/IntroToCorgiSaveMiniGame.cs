@@ -46,21 +46,23 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         animator1 = Ahmad.GetComponent<Animator>();
 
         Debug.Log("SaveCorgiIntro script started");
-        
+
+        Video.GetComponent<VideoPlayer>().source = VideoSource.Url;
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiSadScene.mp4");
+        Video.GetComponent<VideoPlayer>().url = filepath;
 
         //Video.GetComponent<VideoPlayer>().Prepare();
     }
 
 
-//check if the sanitation is built
+    //check if the sanitation is built
     void Update()
     {
+
         if (CompostingToilet.activeSelf && !check)
         {
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
-
-            
         }
 
     }
@@ -78,7 +80,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
-        Debug.Log("Video is loaded: " + Video.GetComponent<VideoPlayer>().isPrepared);
         Video.GetComponent<VideoPlayer>().Play();
         
         InTheMeantimeCanvas.SetActive(false);

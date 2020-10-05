@@ -26,6 +26,9 @@ public class SaveCorgiController : MonoBehaviour
     {
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
+        _videoPlayer.source = VideoSource.Url;
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiVideoFINALE.mp4");
+        _videoPlayer.url = filepath;
         winScreen = false;
         gameOver = false;
     }
@@ -72,11 +75,13 @@ public class SaveCorgiController : MonoBehaviour
     private IEnumerator PlayVideo()
     {
         yield return new WaitForSeconds(1f);
-        Video.SetActive(true);    
+        Video.SetActive(true);
+        Video.GetComponent<VideoPlayer>().Play();  
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
         yield return new WaitForSeconds(43f);
-        _videoPlayer.Stop();
+        //_videoPlayer.Stop();
+        Video.SetActive(false);
         winScreen = true;
 
 
