@@ -1429,7 +1429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlinkWhenPlayerNear: 1
+  BlinkWhenPlayerNear: 0
   BlinkOnInteract: 0
   blinkOnceLength: 0
   itemToReceive: []
@@ -9655,6 +9655,11 @@ PrefabInstance:
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557043688527413, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: BlinkOnInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557044159806426, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: winCanvas
@@ -10055,6 +10060,11 @@ PrefabInstance:
       propertyPath: CallOnInteract.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6301557045089568252, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: BlinkOnInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557045448172750, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: DestoryObjectAfterUse
@@ -10178,6 +10188,11 @@ PrefabInstance:
     - target: {fileID: 6301557045755891076, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: BlinkWhenPlayerNear
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045755891076, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: BlinkOnInteract
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6301557045755891079, guid: c9cd190dfc12c498da7654c7039f802b,
@@ -10364,7 +10379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c36eea2c1ace4b5183069731daa7ce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlinkWhenPlayerNear: 1
+  BlinkWhenPlayerNear: 0
   BlinkOnInteract: 0
   blinkOnceLength: 0
   itemToReceive: []
@@ -20333,7 +20348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkWhenPlayerNear: 1
-  BlinkOnInteract: 0
+  BlinkOnInteract: 1
   blinkOnceLength: 0
   itemToReceive: []
   InteractionDisplayText: Press 'E' to use buckets
