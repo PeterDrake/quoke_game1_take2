@@ -240,6 +240,7 @@ public class QuakeManager : MonoBehaviour
         ShakeElapsedTime = 0f;
 
         Quaking = false;
+        GameObject.Find("Interactables").transform.Find("Falling Bookshelf").GetComponent<InteractWithObject>().BlinkOnInteract = false;
         Destroy(Sink.GetComponent<InteractWithObject>());
         Systems.Status.UnPause();
         TriggerCountdown(AftershockTime);
