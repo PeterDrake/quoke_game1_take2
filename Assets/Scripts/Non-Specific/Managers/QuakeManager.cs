@@ -200,6 +200,7 @@ public class QuakeManager : MonoBehaviour
         backDoor.GetComponent<Clobberer>().enabled = false;
         //added 193
         bedroomDoor.GetComponent<Clobberer>().enabled = false;
+        bedroomDoor.GetComponent<Clobberer>().aftershock = true;
 
         _informationCanvas.ChangeText(textAfterQuake);
         Systems.Objectives.Satisfy("SURVIVEQUAKE");
