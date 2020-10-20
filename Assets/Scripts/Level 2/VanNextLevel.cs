@@ -31,6 +31,7 @@ public class VanNextLevel : MonoBehaviour
     {
         if (_satisfied)
         {
+            Systems.Status.Pause();
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
             Trophy.SetActive(true);
             LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();

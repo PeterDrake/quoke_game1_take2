@@ -27,6 +27,7 @@ public class EnterTentWin : MonoBehaviour
         //_interact.BlinkWhenPlayerNear = _satisfied;
         if (_satisfied)
         {
+            Systems.Status.Pause();
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
             levelMusic.SetActive(false);
             winMusic.SetActive(true);

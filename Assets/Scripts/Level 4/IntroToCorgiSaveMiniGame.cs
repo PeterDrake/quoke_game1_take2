@@ -77,6 +77,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         
         //then trigger the video
         yield return new WaitForSeconds(3f);
+        Systems.Status.Pause();
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
@@ -84,8 +85,9 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         
         InTheMeantimeCanvas.SetActive(false);
         yield return new WaitForSeconds(63f);
-        
+
         //turn off the video
+        Systems.Status.UnPause();
         VideoBackground.SetActive(false);
         VideoDisplayer.SetActive(false);
         Video.SetActive(false);
