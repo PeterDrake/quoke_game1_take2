@@ -200,6 +200,7 @@ public class QuakeManager : MonoBehaviour
         backDoor.GetComponent<Clobberer>().enabled = false;
         //added 193
         bedroomDoor.GetComponent<Clobberer>().enabled = false;
+        bedroomDoor.GetComponent<Clobberer>().aftershock = true;
 
         _informationCanvas.ChangeText(textAfterQuake);
         Systems.Objectives.Satisfy("SURVIVEQUAKE");
@@ -240,6 +241,11 @@ public class QuakeManager : MonoBehaviour
         ShakeElapsedTime = 0f;
 
         Quaking = false;
+        if (GameObject.Find("Interactables") != null)
+        {
+            GameObject.Find("Interactables").transform.Find("Falling Bookshelf").GetComponent<InteractWithObject>().BlinkOnInteract = false;
+
+        }
         Destroy(Sink.GetComponent<InteractWithObject>());
         Systems.Status.UnPause();
         TriggerCountdown(AftershockTime);

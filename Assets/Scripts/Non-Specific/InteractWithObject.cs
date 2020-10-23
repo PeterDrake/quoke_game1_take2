@@ -188,6 +188,7 @@ public class InteractWithObject : MonoBehaviour
     {
         this.InteractionDisplayText = newText;
         interactText.ChangeText(InteractionDisplayText);
+        BlinkOnInteract = false;
     }
 
     public void DeleteItems()

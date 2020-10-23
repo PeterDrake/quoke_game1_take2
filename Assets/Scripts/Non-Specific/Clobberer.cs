@@ -6,12 +6,20 @@
 public class Clobberer : MonoBehaviour
 {
     public new bool enabled;
+    public new bool aftershock;
 
     private void OnCollisionEnter(Collision other)
     {
         if (enabled && other.gameObject.CompareTag("Player"))
         {
-            Systems.Status.PlayerDeath("Hit by a door","You were hit by a door!");
+            
+                Systems.Status.PlayerDeath("Hit by a door", "You were hit by a door!");
+           
+        }
+        if (aftershock && other.gameObject.CompareTag("Player"))
+        {
+            Systems.Status.PlayerDeath("Aftershock", "The house collapsed due to an after shock!");
+
         }
     }
 }

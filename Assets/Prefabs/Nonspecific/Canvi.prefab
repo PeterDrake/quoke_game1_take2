@@ -855,7 +855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.1, y: -27.500002}
+  m_AnchoredPosition: {x: -69.8, y: -27.500002}
   m_SizeDelta: {x: 30.836517, y: 30.836517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7452897037855009886
@@ -2592,7 +2592,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press          to open pause menu
+  m_Text: Press          to pause / open settings
 --- !u!1 &6455381914245048018
 GameObject:
   m_ObjectHideFlags: 0

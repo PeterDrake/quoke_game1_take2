@@ -587,8 +587,8 @@ MonoBehaviour:
   - {fileID: 2139955424}
   - {fileID: 821855975}
   playerKiller: {fileID: 595748492}
-  DropDelay: 4
-  TotalDropTime: 4
+  DropDelay: 5
+  TotalDropTime: 5
 --- !u!1001 &15978983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12682,7 +12682,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 8834850652302248617}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 9.6
+    FieldOfView: 18.5
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -31374,7 +31374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54.1, y: -27.500002}
+  m_AnchoredPosition: {x: -72.1, y: -27.500002}
   m_SizeDelta: {x: 30.836517, y: 30.836517}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1308077634
@@ -32102,7 +32102,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Press          to open pause menu
+  m_Text: Press          to pause / open settings
 --- !u!222 &1341150089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50674,7 +50674,7 @@ MonoBehaviour:
   m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
   m_PivotOffset: {x: 0, y: 0, z: 0}
   m_AmplitudeGain: 0
-  m_FrequencyGain: 1
+  m_FrequencyGain: 5
   mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!114 &2087207470
 MonoBehaviour:

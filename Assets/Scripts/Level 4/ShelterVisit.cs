@@ -16,6 +16,7 @@ public class ShelterVisit : MonoBehaviour
     public GameObject Ahmad;
     public GameObject StormCanvas;
 
+    public GameObject SaveCorgiAppear;
     public GameObject Controller;
 
     private const string EventKey = "COMPOSTFINISHED";
@@ -259,6 +260,7 @@ public class ShelterVisit : MonoBehaviour
 
     public void OnVisitsAfterCompost()
     {
+        SaveCorgiAppear.SetActive(true);
         Controller.SetActive(true);
         Systems.Status.AffectRelief(100);
         Systems.Status.AffectWarmth(50);
