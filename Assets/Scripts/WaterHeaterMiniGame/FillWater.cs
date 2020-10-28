@@ -24,7 +24,7 @@ public class FillWater : MonoBehaviour
     {
         while (water.fillAmount < .75f)
         {
-            water.fillAmount += Mathf.Lerp(0f, 1f, Time.deltaTime*10);
+            water.fillAmount += Mathf.Lerp(0f, .8f, Time.deltaTime*10);
             yield return new WaitForSeconds(.5f);
         }
         water.fillAmount = 1f;
