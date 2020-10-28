@@ -14320,6 +14320,11 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 511732269421594741, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1711242428}
     - target: {fileID: 1036428175612862382, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
