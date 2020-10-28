@@ -2692,6 +2692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Master: {fileID: 367340604}
   water: {fileID: 683912191}
+  button: {fileID: 0}
 --- !u!222 &683912193
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5401,6 +5402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227975396}
+  - component: {fileID: 1227975397}
   m_Layer: 0
   m_Name: FillWater
   m_TagString: Untagged
@@ -5425,6 +5427,21 @@ Transform:
   m_Father: {fileID: 746494962}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1227975397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227975395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63336e1c63b8841489979e77bb527a81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Master: {fileID: 367340604}
+  water: {fileID: 683912191}
+  button: {fileID: 1608123384}
 --- !u!1 &1240189657
 GameObject:
   m_ObjectHideFlags: 0
@@ -6518,7 +6535,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1503440249
@@ -7036,7 +7053,6 @@ GameObject:
   - component: {fileID: 1608123388}
   - component: {fileID: 1608123387}
   - component: {fileID: 1608123386}
-  - component: {fileID: 1608123389}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7107,7 +7123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1608123389}
+      - m_Target: {fileID: 1227975397}
         m_MethodName: pourWater
         m_Mode: 1
         m_Arguments:
@@ -7155,20 +7171,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608123384}
   m_CullTransparentMesh: 0
---- !u!114 &1608123389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1608123384}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63336e1c63b8841489979e77bb527a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Master: {fileID: 367340604}
-  water: {fileID: 683912191}
 --- !u!1 &1609630547
 GameObject:
   m_ObjectHideFlags: 0
