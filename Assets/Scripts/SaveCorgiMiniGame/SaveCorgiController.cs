@@ -48,7 +48,7 @@ public class SaveCorgiController : MonoBehaviour
         if (winScreen)
         {
             StopAllCoroutines();
-            GameObject.Find("ColliderToEnterGame").GetComponent<SaveCorgiVisit>().CorgiRescue();
+            GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
             winScreen = false;
             gameOver = true;
             print("done WINNEr");
