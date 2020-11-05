@@ -10588,6 +10588,7 @@ MonoBehaviour:
   pamphlet: {fileID: 236507515}
   buttonText: {fileID: 1896954423}
   items: {fileID: 0}
+  invopen: 0
 --- !u!1 &547157728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 947cc650f81b16d409be699cb7ba2d1e,

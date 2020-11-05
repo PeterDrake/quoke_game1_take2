@@ -27,7 +27,10 @@ public class InventoryDisplay : UIElement
     private GameObject useToggle;
     private Text useText;
     private GameObject openToggle;
+    private GameObject openImage;
     private Text openText;
+   
+    private Pamphlet pamControl;
 
     private int selectedItem;
 
@@ -164,6 +167,8 @@ public class InventoryDisplay : UIElement
                     componentsFound += 3;
                     openToggle = child.gameObject;
                     Transform button2 = child.Find("open");
+                    pamControl = child.Find("open").GetComponent<Pamphlet>();
+                    openImage = button2.Find("Image").gameObject;
                     openText = button2.Find("text").GetComponent<Text>();
                     break;
             }
@@ -185,6 +190,7 @@ public class InventoryDisplay : UIElement
 
         if (items[i].ID == "PAM")
         {
+            openImage.SetActive(false);
             useToggle.SetActive(false);
             openToggle.SetActive(true);
             openText.text = "Open Pamphlet";
@@ -193,12 +199,14 @@ public class InventoryDisplay : UIElement
 
         else if (items[i].action != null)
         {
+            pamControl.invopen = false;
             openToggle.SetActive(false);
             useToggle.SetActive(true);
             useText.text = items[i].action.ActionWord;
         }
         else
         {
+            pamControl.invopen = false;
             useToggle.SetActive(false);
             openToggle.SetActive(false);
         }
