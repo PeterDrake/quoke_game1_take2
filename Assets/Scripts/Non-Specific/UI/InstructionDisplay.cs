@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class InstructionDisplay : UIElement
@@ -11,6 +12,11 @@ public class InstructionDisplay : UIElement
     public Button ExitButton;
     public GameObject page1;
     public GameObject page2;
+
+    public GameObject close1;
+    public GameObject close2;
+    public GameObject next;
+    public GameObject back;
 
     private MenuDisplayer menu;
 
@@ -37,6 +43,11 @@ public class InstructionDisplay : UIElement
 
     }
 
+    //private void Awake()
+    //{
+    //    pauseOnOpen = true;
+    //}
+
     private void initialize() //Get all references that are needed to populate the UI
     {
         Transform main = transform.Find("InstructToggler");
@@ -59,9 +70,30 @@ public class InstructionDisplay : UIElement
         toggler.SetActive(active);
         page1.SetActive(true);
         page2.SetActive(false);
-        if (active) { menu.openedCanvi(this); }
+        if (active)
+        {
+            menu.openedCanvi(this);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(next.gameObject);
+        }
         else { menu.closedCanvi(); }
     }
 
+
+    public void NextPressed()
+    {
+        page1.SetActive(false);
+        page2.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(back.gameObject);
+    }
+
+    public void BackPressed()
+    {
+        page2.SetActive(false);
+        page1.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(next.gameObject);
+    }
 
 }
