@@ -13,10 +13,10 @@ public class SegueDisplayer : UIElement
     public Button ExitButton;
     //public float WaitTime;
 
+
     public override void Open()
     {
         //activate(true);
-
     }
     /*
     private int WaitForIt()
@@ -30,9 +30,9 @@ public class SegueDisplayer : UIElement
         locked = true;
 
         initialize();
+        activate(true);
         //WaitForIt();
         //activate(false);
-
     }
 
     private void initialize() //Get all references that are needed to populate the dialogue UI
@@ -48,6 +48,7 @@ public class SegueDisplayer : UIElement
     public override void Close()
     {
         activate(false);
+
     }
 
     private void activate(bool active)
