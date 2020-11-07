@@ -14,10 +14,6 @@ public class SegueDisplayer : UIElement
     //public float WaitTime;
 
 
-    public override void Open()
-    {
-        //activate(true);
-    }
     /*
     private int WaitForIt()
     {
@@ -26,27 +22,39 @@ public class SegueDisplayer : UIElement
     */
     private void Start()
     {
-        pauseOnOpen = true;
         locked = true;
+        pauseOnOpen = true;
+        print("pasued at start");
+        UIManager.Instance.Initialize(this);
 
         initialize();
         activate(true);
         //WaitForIt();
         //activate(false);
+        
     }
 
     private void initialize() //Get all references that are needed to populate the dialogue UI
     {
         Transform main = transform.Find("SegueToggler");
         toggler = main.gameObject;
+        UIManager.Instance.SetAsActive(this);
+        ExitButton.onClick.AddListener(delegate
+        { UIManager.Instance.ToggleActive(this); });
+        print("initialized exit button is toggle active");
         //ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
         //byte componentsFound = 1;
+    }
 
-
+    public override void Open()
+    {
+        print("open segue");
+        activate(true);
     }
 
     public override void Close()
     {
+        print("clsoed segue");
         activate(false);
 
     }
@@ -54,6 +62,7 @@ public class SegueDisplayer : UIElement
     private void activate(bool active)
     {
         toggler.SetActive(active);
+        print("set active something");
     }
 
 
