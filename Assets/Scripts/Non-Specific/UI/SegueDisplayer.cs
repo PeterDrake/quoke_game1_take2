@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SegueDisplayer : UIElement
@@ -10,7 +11,7 @@ public class SegueDisplayer : UIElement
     //[Header("A prefab object which will be instantiated for each slot in the inventory")]
 
     private GameObject toggler;
-    //public Button ExitButton;
+    public Button ExitButton;
     //public float WaitTime;
 
 
@@ -25,6 +26,13 @@ public class SegueDisplayer : UIElement
         pauseOnOpen = true;
         initialize();
         toggler.SetActive(true);
+
+        if (ExitButton != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(ExitButton.gameObject);
+        }
+
         //UIManager.Instance.Initialize(this);
         //WaitForIt();
         //activate(false);
