@@ -10,6 +10,7 @@ public class InstructionSegue : MonoBehaviour
     public GameObject page2;
     public GameObject next;
     public GameObject back;
+    public GameObject close;
 
 
     private void Start()
@@ -24,6 +25,14 @@ public class InstructionSegue : MonoBehaviour
         page2.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(back.gameObject);
+        Navigation nav = close.GetComponent<Button>().navigation;
+        nav.mode = Navigation.Mode.Explicit;
+        nav.selectOnUp = back.GetComponent<Button>();
+        nav.selectOnLeft = back.GetComponent<Button>();
+        nav.selectOnRight = null;
+        close.GetComponent<Button>().navigation = nav;
+
+
     }
 
     public void BackPressed()
@@ -32,6 +41,12 @@ public class InstructionSegue : MonoBehaviour
         page1.SetActive(true);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(next.gameObject);
+        Navigation nav = close.GetComponent<Button>().navigation;
+        nav.mode = Navigation.Mode.Explicit;
+        nav.selectOnUp = next.GetComponent<Button>();
+        nav.selectOnRight = back.GetComponent<Button>();
+        nav.selectOnLeft = null;
+        close.GetComponent<Button>().navigation = nav;
     }
 
 

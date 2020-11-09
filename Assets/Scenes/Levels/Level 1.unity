@@ -30767,7 +30767,6 @@ GameObject:
   - component: {fileID: 1289962239}
   - component: {fileID: 1289962241}
   - component: {fileID: 1289962240}
-  - component: {fileID: 1289962242}
   m_Layer: 5
   m_Name: SegueToggler
   m_TagString: Untagged
@@ -30834,22 +30833,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289962238}
   m_CullTransparentMesh: 0
---- !u!114 &1289962242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1289962238}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f30a312cbcce54c40ac6e73159a7d22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  page1: {fileID: 970924941}
-  page2: {fileID: 2146609037}
-  next: {fileID: 1513540840}
-  back: {fileID: 2032898637}
 --- !u!1 &1291835505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -35573,7 +35556,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1787155498}
         m_MethodName: NextPressed
         m_Mode: 1
         m_Arguments:
@@ -43568,6 +43551,7 @@ GameObject:
   - component: {fileID: 1787155501}
   - component: {fileID: 1787155500}
   - component: {fileID: 1787155499}
+  - component: {fileID: 1787155498}
   m_Layer: 5
   m_Name: SegueScreen
   m_TagString: Untagged
@@ -43595,6 +43579,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1787155498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787155496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30a312cbcce54c40ac6e73159a7d22c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  page1: {fileID: 970924941}
+  page2: {fileID: 2146609037}
+  next: {fileID: 1513540840}
+  back: {fileID: 2032898637}
+  close: {fileID: 671703854}
 --- !u!114 &1787155499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49620,9 +49621,9 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnDown: {fileID: 671703857}
     m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnRight: {fileID: 671703857}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.8784314, g: 0.43529412, b: 0.43529412, a: 1}
@@ -49648,7 +49649,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1787155498}
         m_MethodName: BackPressed
         m_Mode: 1
         m_Arguments:
