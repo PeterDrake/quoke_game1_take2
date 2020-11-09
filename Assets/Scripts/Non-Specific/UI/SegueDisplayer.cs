@@ -10,8 +10,7 @@ public class SegueDisplayer : UIElement
     //[Header("A prefab object which will be instantiated for each slot in the inventory")]
 
     private GameObject toggler;
-    public Button ExitButton;
-    public UIElement Gui;
+    //public Button ExitButton;
     //public float WaitTime;
 
 
@@ -23,12 +22,10 @@ public class SegueDisplayer : UIElement
     */
     private void Start()
     {
-        locked = true;
         pauseOnOpen = true;
-        Debug.Log("pasued at start");
         initialize();
-        activate(true);
-        UIManager.Instance.Initialize(this);
+        toggler.SetActive(true);
+        //UIManager.Instance.Initialize(this);
         //WaitForIt();
         //activate(false);
 
@@ -40,29 +37,20 @@ public class SegueDisplayer : UIElement
         toggler = main.gameObject;
         //ExitButton.onClick.AddListener(delegate
         //{ UIManager.Instance.ToggleActive(this); });
-        Debug.Log("initalize");
         //ExitButton.onClick.AddListener(UIManager.Instance.ActivatePrevious);
         //byte componentsFound = 1;
     }
 
     public override void Open()
     {
-        Debug.Log("open segue");
-        activate(true);
+        toggler.SetActive(true);
     }
 
     public override void Close()
     {
-        Debug.Log("clsoed segue");
-        activate(false);
+        toggler.SetActive(false);
+
 
     }
-
-    private void activate(bool active)
-    {
-        toggler.SetActive(active);
-        Debug.Log("activate");
-    }
-
 
 }
