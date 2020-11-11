@@ -21,6 +21,7 @@ public class SanitationBuilt : MonoBehaviour
     private Item Sawdust;
     private Item Sanitizer;
     private Item ToiletPaper;
+    private Item Pamphlet;
 
     public GameObject Buckets;
  
@@ -55,6 +56,7 @@ public class SanitationBuilt : MonoBehaviour
         Sawdust =  Resources.Load<Item>("Items/Sawdust");
         Sanitizer =  Resources.Load<Item>("Items/Sanitizer");
         ToiletPaper =  Resources.Load<Item>("Items/ToiletPaper");
+        Pamphlet = Resources.Load<Item>("Items/SanitationPamphlet");
         _inventory.CheckOnAdd.AddListener(UpdateConditions);
         
         Buckets.SetActive(false);
@@ -62,7 +64,7 @@ public class SanitationBuilt : MonoBehaviour
     
     public void Interaction()
     {
-        if ((Conditions ^ 0xF) == 0)
+        if ((Conditions ^ 0x1F) == 0)
         {
             if (GameObject.Find("AhmadAlert") != null)
             { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
@@ -78,7 +80,7 @@ public class SanitationBuilt : MonoBehaviour
     //CAMERA, ui, move stage up a lot
     private void UpdateConditions() //called every time an item is added to the inventory 
     {
-        if ((Conditions ^ 0xF) == 0) return;
+        if ((Conditions ^ 0x1F) == 0) return;
 
         if ((Conditions & 0x1) > 0 || _inventory.HasItem(Bucket, 2)) //first condition not met
             Conditions |= 0x1;
@@ -91,7 +93,11 @@ public class SanitationBuilt : MonoBehaviour
 
         if ((Conditions & 0x8) > 0 || _inventory.HasItem(Sanitizer, 1)) //fourth condition not met
             Conditions |= 0x8;
+
+        if ((Conditions & 0x10) > 0 || _inventory.HasItem(Pamphlet, 1)) // fifth condition not met
+            Conditions |= 0x10;
     }
+
 
     private void StartMinigame(Scene scn, LoadSceneMode lsm)
     {

@@ -11,6 +11,7 @@ public class Pamphlet : MonoBehaviour
     private string openText = "Open Pamphlet";
     private string closeText = "Close Pamphlet";
 
+    public bool invopen;
     private bool open;
 
     private LogToServer logger;
@@ -28,7 +29,7 @@ public class Pamphlet : MonoBehaviour
 
     public void toggle()
     {
-        if (open)
+        if (invopen)
         {
             Debug.Log("Closed pamphlet");
             logger.sendToLog("Closed pamphlet", "PAMPHLET");
@@ -42,7 +43,7 @@ public class Pamphlet : MonoBehaviour
             pamphlet.SetActive(true);
             buttonText.text = closeText;
         }
-        open = !open;
+        invopen = !invopen;
     }
 
     public void miniToggle()
