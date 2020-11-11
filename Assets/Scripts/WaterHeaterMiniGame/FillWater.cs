@@ -2,43 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-
+using System;
 
 public class FillWater : MonoBehaviour
 {
     public WaterHeaterMaster Master;
     public Image water;
+    public GameObject button;
     private LogToServer logger;
 
     public void pourWater()
     {
+        
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
-        water.fillAmount += .2f;
+        StartCoroutine(WaitToFillWater());
+        button.SetActive(false);
         Debug.Log("Filled water");
         logger.sendToLog("Filled water","MINIGAME");
-        if (water.fillAmount >= 1f)
+    }
+    public IEnumerator WaitToFillWater()
+    {
+        while (water.fillAmount < .75f)
         {
-            //Master.StopAllCoroutines();
-            Master.StopCoroutine(Master.TryAgain());
-            Master.StopCoroutine(Master.BlinkText());
-            Debug.Log("Won Water Heater minigame");
-            logger.sendToLog("Won Water heater minigame","MINIGAME");
-            Master.Win.SetActive(true);
-            Master.Canvas.SetActive(false);
-            GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
-
-            /*
-            print("Important = " + GameObject.Find("ImportantObjects"));                                                        //Finds the ImportantObjects GameObject
-            //print("Important Heater = " + GameObject.Find("ImportantObjects").Find("WaterHeaterBody"));
-            print("Important + HeaterChild = " + GameObject.Find("ImportantObjects").transform.FindChild("WaterHeaterBody"));   //null
-            print("Important + Heater = " + GameObject.Find("ImportantObjects").transform.Find("WaterHeaterBody"));             //null
-            print("WaterHeater = " + GameObject.Find("WaterHeaterBody"));                                                       //null
-            //print("Component = " + GameObject.Find("WaterHeaterBody").GetComponent<WaterHeaterVisit>());
-            print("The waterheater = " + GameObject.Find("ImportantObjects/WaterHeaterBody"));                                  //null
-            //print("that waterheater = " + GameObject.Find("ImportantObject\ WaterHeaterBody"));
-            GameObject.Find("WaterHeaterBody").GetComponent<WaterHeaterVisit>().MiniGameWon();
-            */
+            water.fillAmount += Mathf.Lerp(0f, .8f, Time.deltaTime*10);
+            yield return new WaitForSeconds(.5f);
         }
+        water.fillAmount = 1f;
+        yield return new WaitForSeconds(1f);
+        Master.StopCoroutine(Master.TryAgain());
+        Master.StopCoroutine(Master.BlinkText());
+        Debug.Log("Won Water Heater minigame");
+        logger.sendToLog("Won Water heater minigame", "MINIGAME");
+        Master.Win.SetActive(true);
+        Master.Canvas.SetActive(false);
+        GameObject.Find("ImportantObjects").GetComponent<MiniWin>().MiniGameWon();
+        StopCoroutine(WaitToFillWater());
+     
+        
+
     }
 
 }

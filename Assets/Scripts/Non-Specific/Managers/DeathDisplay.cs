@@ -10,7 +10,8 @@ using System.Threading;
 /// Manager class for killing the player and displaying death screen 
 /// </summary>
 public class DeathDisplay : UIElement
-{ 
+{
+    public GameObject player;
     public GameObject toggle;
     public Text deathText;
     public float waitTime;
@@ -37,6 +38,7 @@ public class DeathDisplay : UIElement
 
     public void Activate(string text)
     {
+        player.SetActive(false);
         if (level == 1)
         {
             SavedData.levelOneDeath++;

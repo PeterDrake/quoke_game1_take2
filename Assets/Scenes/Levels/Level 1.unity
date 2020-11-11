@@ -12682,7 +12682,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 8834850652302248617}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 18.5
+    FieldOfView: 9.52
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -14320,6 +14320,11 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 511732269421594741, guid: 54201a432732e3644b92dd53d5d1fef5,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1711242428}
     - target: {fileID: 1036428175612862382, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -30516,7 +30521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d60a53b823c84195ae725da47264e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1711242429}
+  player: {fileID: 0}
   pivotOffset: {x: 0, y: 1, z: -1.5}
   camOffset: {x: 0, y: 1.5, z: -10}
   smooth: 80
@@ -52501,7 +52506,7 @@ PrefabInstance:
     - target: {fileID: 2786121349235407076, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2786121349235407076, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}
@@ -52557,6 +52562,11 @@ PrefabInstance:
         type: 3}
       propertyPath: zBoundBigger
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786121349235407098, guid: 411d025747fc0d541917efa9e1615407,
+        type: 3}
+      propertyPath: height
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2786121349235407099, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}
@@ -52647,6 +52657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: zBoundBigger
       value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786121349391274279, guid: 411d025747fc0d541917efa9e1615407,
+        type: 3}
+      propertyPath: height
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2786121349584554612, guid: 411d025747fc0d541917efa9e1615407,
         type: 3}

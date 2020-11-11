@@ -20,4 +20,4 @@ MonoBehaviour:
   action: {fileID: 11400000, guid: f8ed056a5c69c124ebe07b3bbf1c644f, type: 2}
   hydrationChange: 0
   killPlayer: 1
-  DeathMessage: Drinking contaminated water killed you
+  DeathMessage: You drank dirty water and died of dysentery
