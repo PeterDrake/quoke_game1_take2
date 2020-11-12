@@ -65,8 +65,7 @@ public class InstructionDisplay : UIElement
 
     public override void Close()
     {
-        //EventSystem.current.SetSelectedGameObject(null);
-        //activate(false);
+
         toggler.SetActive(false);
         menu.closedCanvi();
         opened = false;
