@@ -28,6 +28,7 @@ public class HintController : MonoBehaviour
     public void TurnHintsOn()
     {
         hintText.text = "Hints ON";
+        interactables.SetActive(true);
         SavedData.hints = true;
         print("HINTS ARE " + SavedData.hints);
 
