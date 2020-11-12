@@ -16006,7 +16006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 1513540842}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -35526,7 +35526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 671703857}
     m_SelectOnLeft: {fileID: 671703857}
@@ -35556,16 +35556,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1787155498}
-        m_MethodName: NextPressed
-        m_Mode: 1
+      - m_Target: {fileID: 2146609037}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1513540843
 MonoBehaviour:
@@ -43551,7 +43551,6 @@ GameObject:
   - component: {fileID: 1787155501}
   - component: {fileID: 1787155500}
   - component: {fileID: 1787155499}
-  - component: {fileID: 1787155498}
   m_Layer: 5
   m_Name: SegueScreen
   m_TagString: Untagged
@@ -43579,23 +43578,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1787155498
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787155496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f30a312cbcce54c40ac6e73159a7d22c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  page1: {fileID: 970924941}
-  page2: {fileID: 2146609037}
-  next: {fileID: 1513540840}
-  back: {fileID: 2032898637}
-  close: {fileID: 671703854}
 --- !u!114 &1787155499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43608,7 +43590,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df368ac0b149d6419fc435bb1f802e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExitButton: {fileID: 0}
+  ExitButton: {fileID: 671703857}
+  NextButton: {fileID: 1513540842}
+  BackButton: {fileID: 2032898639}
+  page: {fileID: 2146609037}
 --- !u!114 &1787155500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49620,7 +49605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 671703857}
     m_SelectOnLeft: {fileID: 0}
@@ -49650,9 +49635,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1787155498}
-        m_MethodName: BackPressed
-        m_Mode: 1
+      - m_Target: {fileID: 2146609037}
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
