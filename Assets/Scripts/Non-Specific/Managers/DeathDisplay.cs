@@ -34,6 +34,8 @@ public class DeathDisplay : UIElement
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
+        print("Died but HINTS ARE " + SavedData.hints);
+
     }
 
     public void Activate(string text)

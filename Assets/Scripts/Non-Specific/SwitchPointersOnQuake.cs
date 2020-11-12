@@ -9,22 +9,25 @@ public class SwitchPointersOnQuake : MonoBehaviour
     public FlatFollow[] postQuake;
     
     public void Switch()
-    {
-        foreach (var point in preQuake)
+    {   if (SavedData.hints)
         {
-            point.disappear();
+            foreach (var point in preQuake)
+            {
+                point.disappear();
+            }
+            foreach (var point in postQuake)
+            {
+                point.appear();
+            }
         }
-        foreach (var point in postQuake)
-        {
-            point.appear();
-        }
+
     }
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame

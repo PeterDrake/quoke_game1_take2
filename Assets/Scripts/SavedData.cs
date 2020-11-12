@@ -31,6 +31,6 @@ public class SavedData
 
     public static bool levelFourDone { get; set; }
 
-
+    public static bool hints { get; set;}
 
 }
