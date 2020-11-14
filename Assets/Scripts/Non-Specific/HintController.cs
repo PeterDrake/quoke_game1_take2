@@ -100,7 +100,7 @@ public class HintController : MonoBehaviour
         }
     }
 
-    public void TaskCompleted(GameObject turnoff)
+    public void AllTaskCompleted(GameObject turnoff)
     {
         print("TURNING " + turnoff.name + " OFF");
         foreach(Transform child in turnoff.transform)

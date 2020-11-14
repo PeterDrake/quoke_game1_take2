@@ -97,6 +97,7 @@ MonoBehaviour:
   following: {fileID: 0}
   height: 14.1
   mobile: 1
+  offAtStart: 0
   realColor: {r: 0, g: 0, b: 0, a: 0}
   xBoundSmaller: 0
   xBoundBigger: 0
@@ -199,6 +200,7 @@ MonoBehaviour:
   following: {fileID: 0}
   height: 14
   mobile: 0
+  offAtStart: 0
   realColor: {r: 0, g: 0, b: 0, a: 0}
   xBoundSmaller: 0
   xBoundBigger: 0
