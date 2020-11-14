@@ -4899,6 +4899,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8340e8586e8556c4b82f331a034bae19, type: 3}
+--- !u!1 &206624113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2786121349827433227, guid: 411d025747fc0d541917efa9e1615407,
+    type: 3}
+  m_PrefabInstance: {fileID: 2786121349424555787}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &206624114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206624113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5159124ea9204cc4b381f28657f9d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tasks:
+  - {fileID: 111599941}
+  - {fileID: 1064663746}
+  hintText: {fileID: 1558903820}
 --- !u!1 &209733319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1990216340993278, guid: 5afed722cc07f0045bfb9c283f384e9c,
@@ -8838,28 +8860,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8340e8586e8556c4b82f331a034bae19, type: 3}
---- !u!1 &410898560 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1632881708440735637, guid: 54201a432732e3644b92dd53d5d1fef5,
-    type: 3}
-  m_PrefabInstance: {fileID: 625580730}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &410898565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410898560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5159124ea9204cc4b381f28657f9d8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tasks:
-  - {fileID: 111599941}
-  - {fileID: 1064663746}
-  hintText: {fileID: 1558903820}
 --- !u!1 &423595710 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1509721933878616, guid: 6a8507e353ff65a4ca0400707533938b,
@@ -15142,7 +15142,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 410898565}
+      objectReference: {fileID: 206624114}
     - target: {fileID: 7996281479428483865, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -38741,7 +38741,7 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[18].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -38757,7 +38757,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[18].m_Target
       value: 
-      objectReference: {fileID: 410898565}
+      objectReference: {fileID: 206624114}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[15].m_MethodName
@@ -38806,17 +38806,17 @@ PrefabInstance:
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[18].m_MethodName
-      value: NextTask
+      value: AllTaskCompleted
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[18].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[19].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
@@ -38832,20 +38832,25 @@ PrefabInstance:
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[19].m_Target
       value: 
-      objectReference: {fileID: 410898565}
+      objectReference: {fileID: 206624114}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[19].m_MethodName
-      value: TaskCompleted
+      value: NextTask
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[19].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
         type: 3}
       propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[19].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1009612024110232353, guid: 21a8bd79396454dc8a320f82efe24b84,
+        type: 3}
+      propertyPath: OnQuake.m_PersistentCalls.m_Calls.Array.data[18].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 111599941}
     - target: {fileID: 1009612024110232355, guid: 21a8bd79396454dc8a320f82efe24b84,

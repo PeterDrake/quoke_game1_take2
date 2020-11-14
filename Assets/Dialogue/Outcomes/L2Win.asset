@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ddc0226481e45d1870fdf2952d7b2d, type: 3}
   m_Name: L2Win
   m_EditorClassIdentifier: 
-  hint: HintsButton
+  hint: 
   taskCompleted: {fileID: 0}

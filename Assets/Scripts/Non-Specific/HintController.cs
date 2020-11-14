@@ -84,7 +84,11 @@ public class HintController : MonoBehaviour
     {
         check++;
         print("next task is #" + check);
-        if (check> tasks.Length) { return;  }
+        if (check > tasks.Length)
+        {
+            print("YOOU PASSED TASK LIMIT");
+            return;
+        }
         tasks[check].SetActive(true);
         foreach(Transform child in tasks[check].transform)
         {
@@ -108,6 +112,25 @@ public class HintController : MonoBehaviour
             child.GetComponent<FlatFollow>().disappear();
         }
         turnoff.SetActive(false);
+    }
+
+
+    public void StartThisTask(GameObject start)
+    {
+        start.SetActive(true);
+        print("STARTING " + start.name);
+        
+        foreach(Transform child in start.transform)
+        {
+            if (SavedData.hints)
+            {
+                child.GetComponent<FlatFollow>().appear();
+            }
+            else
+            {
+                child.GetComponent<FlatFollow>().disappear();
+            }
+        }
     }
 
 }
