@@ -14,9 +14,11 @@ public class WaterHeaterVisit : MonoBehaviour
 
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
+    
 
     public UIElement theGUI;
     public GameObject Spot;
+    public GameObject hint;
 
     public GameObject Heater;
     private Item MustardWater;
@@ -49,6 +51,7 @@ public class WaterHeaterVisit : MonoBehaviour
             { GameObject.Find("FrankAlert").GetComponent<FlatFollow>().appear(); }
             if (GameObject.Find("ZeldaAlert") != null)
             { GameObject.Find("ZeldaAlert").GetComponent<FlatFollow>().appear(); }
+            hint.GetComponent<HintController>().AllTaskCompleted(GameObject.Find("AfterWaterTalk"));
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;
@@ -113,7 +116,26 @@ public class WaterHeaterVisit : MonoBehaviour
         _interact.Kill();
 
         Spot.SetActive(false);
-        _canvas.ChangeText(words);
+        if (Systems.Objectives.Check("LatrineTalk"))
+        {
+            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1) && !Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _canvas.ChangeText("Find a shovel");
+            }
+            else if (!Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1) && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _canvas.ChangeText("Find a rope");
+            }
+            if (!Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1) && !Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _canvas.ChangeText("Find a shovel and a rope");
+            }
+        }
+        else
+        {
+            _canvas.ChangeText(words);
+
+        }
 
         //Destroy(gameObject);
         //Destroy(this);

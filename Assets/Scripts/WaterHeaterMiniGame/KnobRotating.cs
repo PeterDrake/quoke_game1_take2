@@ -19,8 +19,9 @@ public class KnobRotating : MonoBehaviour
         {
             if (move1 < 40)
             {
-                transform.Rotate(0, -5, 0);
-                move1 += 5;
+
+                transform.Rotate(0, -.5f, 0);
+                move1 += .5f;
             }
             else
             {

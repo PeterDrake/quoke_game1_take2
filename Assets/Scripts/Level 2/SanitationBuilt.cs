@@ -15,6 +15,8 @@ public class SanitationBuilt : MonoBehaviour
 
     public UIElement theGUI;
     public GameObject Spot;
+
+    public GameObject hint;
  
     private Item Bucket;
     private Item Bag;
@@ -68,6 +70,8 @@ public class SanitationBuilt : MonoBehaviour
         {
             if (GameObject.Find("AhmadAlert") != null)
             { GameObject.Find("AhmadAlert").GetComponent<FlatFollow>().appear(); }
+            hint.GetComponent<HintController>().NextTask();
+            hint.GetComponent<HintController>().AllTaskCompleted(GameObject.Find("Post EQ"));
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;

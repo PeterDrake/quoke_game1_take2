@@ -7,7 +7,8 @@ public class FlatFollow : MonoBehaviour
     public GameObject following;
     public float height;
     public bool mobile;
-    public bool startReal;
+    public bool offAtStart;
+    public Color realColor;
 
     public float xBoundSmaller;
     public float xBoundBigger;
@@ -18,7 +19,6 @@ public class FlatFollow : MonoBehaviour
     private float theZ;
 
     private Transform location;
-    private Color realColor;
     private Color clearColor;
 
     // Start is called before the first frame update
@@ -27,9 +27,8 @@ public class FlatFollow : MonoBehaviour
         location = GetComponent<Transform>();
         location.transform.position = new Vector3
             (following.transform.position.x, height, following.transform.position.z);
-        realColor = GetComponent<SpriteRenderer>().color;
         clearColor = Color.clear;
-        if (!startReal) { disappear(); }
+        if (offAtStart) { disappear(); }
     }
 
     // Update is called once per frame

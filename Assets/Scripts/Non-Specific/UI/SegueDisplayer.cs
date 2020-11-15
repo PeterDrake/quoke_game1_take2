@@ -12,6 +12,9 @@ public class SegueDisplayer : UIElement
 
     private GameObject toggler;
     public Button ExitButton;
+    public Button NextButton;
+    public Button BackButton;
+    public GameObject page;
     //public float WaitTime;
 
 
@@ -27,11 +30,14 @@ public class SegueDisplayer : UIElement
         initialize();
         toggler.SetActive(true);
 
-        if (ExitButton != null)
-        {
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(ExitButton.gameObject);
-        }
+        //if (ExitButton != null)
+        //{
+        //    EventSystem.current.SetSelectedGameObject(null);
+        //    EventSystem.current.SetSelectedGameObject(ExitButton.gameObject);
+        //}
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(ExitButton.gameObject);
 
         //UIManager.Instance.Initialize(this);
         //WaitForIt();
@@ -57,7 +63,28 @@ public class SegueDisplayer : UIElement
     public override void Close()
     {
         toggler.SetActive(false);
+        Destroy(this);
+    }
 
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ExitButton.onClick.Invoke();
+        }
+
+        if (page != null)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow) && page.activeSelf)
+            {
+                BackButton.onClick.Invoke();
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow) && !page.activeSelf)
+            {
+                NextButton.onClick.Invoke();
+            }
+        }
 
     }
 
