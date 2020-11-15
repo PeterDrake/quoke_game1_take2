@@ -28,6 +28,7 @@ public class EnableWater : MonoBehaviour
         Systems.Objectives.Satisfy("PotWithWater");
 
         _canvas.ChangeText(words);
+        GameObject.Find("LocationsOfInterest").GetComponent<HintController>().StartThisTask("GetWater");
 
         if (GameObject.Find("MariaAlert") != null)
         { GameObject.Find("MariaAlert").GetComponent<FlatFollow>().appear(); }

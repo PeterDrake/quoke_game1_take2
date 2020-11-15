@@ -20,6 +20,8 @@ public class CompostVisit : MonoBehaviour
         {
             master.AddCarbon();
             master.BuildBox();
+            GameObject.Find("LocationsOfInterest").GetComponent<HintController>().AllTaskCompleted(GameObject.Find("Compost"));
+
         }
         else
         {
