@@ -242,7 +242,7 @@ public class StatusManager : MonoBehaviour
         {
             ReliefFlash.color = refillColor;
         }
-        if (Warmth == 100)
+        else if (Warmth == 100)
         {
             WarmthFlash.color = refillColor;
         }
