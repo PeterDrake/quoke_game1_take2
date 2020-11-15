@@ -116,7 +116,26 @@ public class WaterHeaterVisit : MonoBehaviour
         _interact.Kill();
 
         Spot.SetActive(false);
-        _canvas.ChangeText(words);
+        if (Systems.Objectives.Check("LatrineTalk"))
+        {
+            if (Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1) && !Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _canvas.ChangeText("Find a shovel");
+            }
+            else if (!Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1) && Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _canvas.ChangeText("Find a rope");
+            }
+            if (!Systems.Inventory.HasItem(Resources.Load<Item>("Items/Rope"), 1) && !Systems.Inventory.HasItem(Resources.Load<Item>("Items/Shovel"), 1))
+            {
+                _canvas.ChangeText("Find a shovel and a rope");
+            }
+        }
+        else
+        {
+            _canvas.ChangeText(words);
+
+        }
 
         //Destroy(gameObject);
         //Destroy(this);
