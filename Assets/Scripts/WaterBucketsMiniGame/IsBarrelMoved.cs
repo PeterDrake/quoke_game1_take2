@@ -60,10 +60,6 @@ public class IsBarrelMoved : MonoBehaviour
                 CheckBarrelPosition.Barrel = false;
             }
         }
-        else
-        {
-            //Debug.Log("An item is in the wrong place"); 
-        }
     }
 
 }

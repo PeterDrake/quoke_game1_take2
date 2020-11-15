@@ -20,6 +20,9 @@ public class BarrelVisit : MonoBehaviour
     public GameObject Storm;
     public Collider SchoolEntrance;
 
+    public GameObject MiniGameMusic;
+    public GameObject LevelMusic;
+
     private GameObject canvi;
     private GameObject camera;
     private GameObject vcam;
@@ -57,6 +60,9 @@ public class BarrelVisit : MonoBehaviour
         (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
         //(levelAudio = GameObject.Find("Audio")).SetActive(false);
+        
+        LevelMusic.SetActive(false);
+        MiniGameMusic.SetActive(true);
 
         GameObject.Find("MiniGameMain").GetComponent<MiniGameMain>().OnWin += MiniGameFinished;
         GameObject.Find("MiniGameMain").GetComponent<MiniGameMain>().OnExit += MiniGameLeave;
@@ -69,12 +75,16 @@ public class BarrelVisit : MonoBehaviour
         camera.SetActive(true);
         vcam.SetActive(true);
         sunlight.SetActive(true);
+        MiniGameMusic.SetActive(false);
+        LevelMusic.SetActive(true);
         //levelAudio.SetActive(true);
         _interact.Kill();
     }
     private void MiniGameFinished()
     {
         Systems.Status.UnPause();
+        MiniGameMusic.SetActive(false);
+        LevelMusic.SetActive(true);
         DrainPipe.SetActive(false);
         BarrelEnd.SetActive(true);
         Particles.SetActive(false);
