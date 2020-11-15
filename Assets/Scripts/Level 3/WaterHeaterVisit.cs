@@ -14,9 +14,11 @@ public class WaterHeaterVisit : MonoBehaviour
 
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
+    
 
     public UIElement theGUI;
     public GameObject Spot;
+    public GameObject hint;
 
     public GameObject Heater;
     private Item MustardWater;
@@ -49,6 +51,7 @@ public class WaterHeaterVisit : MonoBehaviour
             { GameObject.Find("FrankAlert").GetComponent<FlatFollow>().appear(); }
             if (GameObject.Find("ZeldaAlert") != null)
             { GameObject.Find("ZeldaAlert").GetComponent<FlatFollow>().appear(); }
+            hint.GetComponent<HintController>().AllTaskCompleted(GameObject.Find("AfterWaterTalk"));
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
             _interact.enabled = false;

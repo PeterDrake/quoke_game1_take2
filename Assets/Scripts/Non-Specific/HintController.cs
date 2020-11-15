@@ -115,22 +115,33 @@ public class HintController : MonoBehaviour
     }
 
 
-    public void StartThisTask(GameObject start)
+    public void StartThisTask(string start)
     {
-        start.SetActive(true);
-        print("STARTING " + start.name);
-        
-        foreach(Transform child in start.transform)
+        for(int i = 0; i < tasks.Length; i++)
         {
-            if (SavedData.hints)
+            if(tasks[i].name == start)
             {
-                child.GetComponent<FlatFollow>().appear();
-            }
-            else
-            {
-                child.GetComponent<FlatFollow>().disappear();
+                tasks[i].SetActive(true);
+                print("STARTING " + tasks[i].name);
+
+                foreach (Transform child in tasks[i].transform)
+                {
+                    if (SavedData.hints)
+                    {
+                        child.GetComponent<FlatFollow>().appear();
+                        print(child.name + " will appear");
+
+                    }
+                    else
+                    {
+                        print(child.name + "will not appear");
+                        child.GetComponent<FlatFollow>().disappear();
+                    }
+                }
+                break;
             }
         }
+        
     }
 
 }

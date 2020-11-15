@@ -16,6 +16,7 @@ public class PitLatrineVisit : MonoBehaviour
 
     public UIElement theGUI;
     public GameObject Spot;
+    public GameObject hint;
 
 
     public float SituationNumber;
@@ -61,6 +62,10 @@ public class PitLatrineVisit : MonoBehaviour
                 { GameObject.Find("FrankAlert").GetComponent<FlatFollow>().appear(); }
                 if (GameObject.Find("ZeldaAlert") != null)
                 { GameObject.Find("ZeldaAlert").GetComponent<FlatFollow>().appear(); }
+                hint.GetComponent<HintController>().AllTaskCompleted(GameObject.Find("AfterLatrineTalk"));
+                hint.GetComponent<HintController>().StartThisTask("Toilet");
+
+
             }
             SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
             SceneManager.sceneLoaded += StartMinigame;
