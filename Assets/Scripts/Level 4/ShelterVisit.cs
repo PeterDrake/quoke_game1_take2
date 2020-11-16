@@ -229,8 +229,8 @@ public class ShelterVisit : MonoBehaviour
     {
         StormCanvas.SetActive(true);
 
-        if (GameObject.Find("SchoolPointer") != null)
-        { GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear(); }
+        //if (GameObject.Find("SchoolPointer") != null)
+        //{ GameObject.Find("SchoolPointer").GetComponent<FlatFollow>().disappear(); }
         if (GameObject.Find("BarrelPointer") != null)
         { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().appear(); }
         if (GameObject.Find("AhmadAlert") != null)

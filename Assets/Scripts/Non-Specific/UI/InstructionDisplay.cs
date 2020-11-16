@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,6 +18,7 @@ public class InstructionDisplay : UIElement
     public GameObject back;
 
     private MenuDisplayer menu;
+    private bool opened;
 
 
     private void Start()
@@ -37,6 +38,7 @@ public class InstructionDisplay : UIElement
         });
         initialize();
         toggler.SetActive(false);
+        opened = false;
 
     }
 
@@ -53,48 +55,87 @@ public class InstructionDisplay : UIElement
 
     public override void Open()
     {
-        activate(true);
+        //activate(true);
+        toggler.SetActive(true);
+        page1.SetActive(true);
+        page2.SetActive(false);
+        menu.openedCanvi(this);
+        opened = true;
     }
 
     public override void Close()
     {
-        EventSystem.current.SetSelectedGameObject(null);
-        activate(false);
+
+        toggler.SetActive(false);
+        menu.closedCanvi();
+        opened = false;
     }
 
-    private void activate(bool active)
+    //private void activate(bool active)
+    //{
+    //    if (active)
+    //    {
+    //        toggler.SetActive(true);
+    //        page1.SetActive(true);
+    //        page2.SetActive(false);
+    //        EventSystem.current.SetSelectedGameObject(null);
+    //        EventSystem.current.SetSelectedGameObject(next.gameObject);
+    //        menu.openedCanvi(this);
+    //    }
+    //    else
+    //    {
+    //        toggler.SetActive(false);
+    //        menu.closedCanvi();
+    //    }
+    //}
+
+    //public void NextPressed()
+    //{
+    //    page1.SetActive(false);
+    //    page2.SetActive(true);
+    //    //EventSystem.current.SetSelectedGameObject(null);
+    //    //EventSystem.current.SetSelectedGameObject(back.gameObject);
+    //}
+
+    //public void BackPressed()
+    //{
+    //    page2.SetActive(false);
+    //    page1.SetActive(true);
+    //    //EventSystem.current.SetSelectedGameObject(null);
+    //    //EventSystem.current.SetSelectedGameObject(next.gameObject);
+    //}
+
+    private void Update()
     {
-        if (active)
+        if (opened)
         {
-            toggler.SetActive(true);
-            page1.SetActive(true);
-            page2.SetActive(false);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(next.gameObject);
-            menu.openedCanvi(this);
+            //page1 open
+            if (page1.activeSelf && !page2.activeSelf)
+            {
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    next.GetComponent<Button>().onClick.Invoke();
+                }
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    close1.GetComponent<Button>().onClick.Invoke();
+                }
+            }
+
+            //page2 open
+            if (!page1.activeSelf && page2.activeSelf)
+            {
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    back.GetComponent<Button>().onClick.Invoke();
+                }
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    close2.GetComponent<Button>().onClick.Invoke();
+                }
+            }
+
         }
-        else
-        {
-            toggler.SetActive(false);
-            menu.closedCanvi();
-        }
-    }
-
-
-    public void NextPressed()
-    {
-        page1.SetActive(false);
-        page2.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(back.gameObject);
-    }
-
-    public void BackPressed()
-    {
-        page2.SetActive(false);
-        page1.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(next.gameObject);
     }
 
 }

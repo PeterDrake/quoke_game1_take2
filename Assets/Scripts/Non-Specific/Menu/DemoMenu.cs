@@ -11,5 +11,6 @@ public class DemoMenu : MonoBehaviour
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Began " + sceneName,"LEVEL");
         SceneManager.LoadScene(sceneName);
+        SavedData.hints = false;
     }
 }

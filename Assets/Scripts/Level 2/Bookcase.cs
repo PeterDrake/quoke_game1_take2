@@ -125,7 +125,10 @@ public class Bookcase : MonoBehaviour
             Systems.Inventory.RemoveItem(CheckItem, 1);
             supports.SetActive(true);
             if (GameObject.Find("BookcasePointer") != null)
-            { GameObject.Find("BookcasePointer").GetComponent<FlatFollow>().disappear(); }
+            {
+                GameObject.Find("BookcasePointer").GetComponent<FlatFollow>().disappear();
+                GameObject.Find("BookcasePointer").SetActive(false);
+            }
             drillSound.Play();
             Disable(); 
         }

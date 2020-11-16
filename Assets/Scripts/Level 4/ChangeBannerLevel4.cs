@@ -13,8 +13,6 @@ public class ChangeBannerLevel4 : MonoBehaviour
     public string words5;
     public string words6;
 
-
-
     private bool mulch;
     private bool paper;
     private bool wood;
@@ -53,6 +51,8 @@ public class ChangeBannerLevel4 : MonoBehaviour
         {
             print("I GOT ALL THREE!!!");
             _canvas.ChangeText(words);
+            GameObject.Find("LocationsOfInterest").GetComponent<HintController>().AllTaskCompleted(GameObject.Find("Materials"));
+            GameObject.Find("LocationsOfInterest").GetComponent<HintController>().StartThisTask("Compost");
         }
         if (!mulch && !paper && wood)
         {

@@ -199,7 +199,6 @@ public class InventoryDisplay : UIElement
 
         else if (items[i].action != null)
         {
-            pamControl.invopen = false;
             openToggle.SetActive(false);
             useToggle.SetActive(true);
             useText.text = items[i].action.ActionWord;
