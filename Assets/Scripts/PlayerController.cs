@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using System.Collections;
 
 namespace UnityStandardAssets.Characters.ThirdPerson
 {
@@ -29,6 +30,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
+		Collision m_currColl = null;
+		ArrayList m_CollisionsThisStep;
 
 		private Transform m_Cam;                  // A reference to the main camera in the scenes transform
 		private Vector3 m_CamForward;             // The current forward direction of the camera
@@ -42,6 +45,8 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_Capsule = GetComponent<CapsuleCollider>();
 			m_CapsuleHeight = m_Capsule.height;
 			m_CapsuleCenter = m_Capsule.center;
+
+			m_CollisionsThisStep = new ArrayList();
 
 			m_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
 
@@ -194,8 +199,74 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
 				// we preserve the existing y part of the current velocity.
 				v.y = m_Rigidbody.velocity.y;
-				m_Rigidbody.velocity = v;
+
+				Vector3 xz = new Vector3(1, 1, 1);
+
+				bool posX = m_Rigidbody.transform.forward.x > 0.05f && m_Rigidbody.transform.forward.x < 0.95f;
+				bool negX = m_Rigidbody.transform.forward.x < -0.05f && m_Rigidbody.transform.forward.x > -0.95f;
+				bool posZ = m_Rigidbody.transform.forward.z > 0.05f && m_Rigidbody.transform.forward.z < 0.95f;
+				bool negZ = m_Rigidbody.transform.forward.z < -0.05f && m_Rigidbody.transform.forward.z > -0.95f;
+
+				m_currColl = null;
+				foreach (Collision coll in m_CollisionsThisStep)
+				{
+					if (!((coll.GetContact(0).point - m_Rigidbody.transform.position).normalized.y < 0.7f))
+					{
+						m_currColl = coll;
+						break;
+					}
+				}
+				m_CollisionsThisStep.Clear();
+				if (m_currColl != null)
+				{
+					Vector3 dirBetween = (m_currColl.GetContact(0).point - m_Rigidbody.transform.position).normalized;
+					double sign = dirBetween.x + dirBetween.z;
+					float stuckDirectionVal = 0.001f;
+					if ((sign > 0.05f && dirBetween.x > 0.05f) || (sign < -0.05f && dirBetween.x < -0.05f))
+                    {
+						if (dirBetween.x > 0.1f)
+						{
+							if ((posX && posZ) || (posX && negZ))
+							{
+								xz = new Vector3(stuckDirectionVal, 0, 1);
+							}
+						}
+						else if (dirBetween.x < -0.1f)
+						{
+							if ((negX && posZ) || (negX && negZ))
+							{
+								xz = new Vector3(stuckDirectionVal, 0, 1);
+							}
+						}
+					} else if ((sign > 0.05f && dirBetween.z > 0.05f) || (sign < 0 && dirBetween.z < -0.05f))
+                    {
+						if (dirBetween.z > 0.1f)
+						{
+							if ((posX && posZ) || (negX && posZ))
+							{
+								xz = new Vector3(1, 0, stuckDirectionVal);
+							}
+						}
+						else if (dirBetween.z < -0.1f)
+						{
+							if ((posX && negZ) || (negX && negZ))
+							{
+								xz = new Vector3(1, 0, stuckDirectionVal);
+							}
+						}
+					}
+				}
+				m_Rigidbody.velocity = Vector3.Scale(v, xz);
 			}
+		}
+		private void OnCollisionEnter(Collision collision)
+		{
+			m_CollisionsThisStep.Add(collision);
+		}
+
+		private void OnCollisionStay(Collision collision)
+		{
+			m_CollisionsThisStep.Add(collision);
 		}
 
 		private void Update()
