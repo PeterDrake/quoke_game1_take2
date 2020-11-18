@@ -138,7 +138,7 @@ public class HintController : MonoBehaviour
                         child.GetComponent<FlatFollow>().disappear();
                     }
                 }
-                break;
+                return;
             }
         }
         

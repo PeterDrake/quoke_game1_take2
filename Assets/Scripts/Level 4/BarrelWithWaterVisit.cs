@@ -9,6 +9,7 @@ public class BarrelWithWaterVisit : MonoBehaviour
     public Item PotWithWater;
 
     public GameObject BoilWater;
+   
 
     private InteractWithObject _interact;
     private InventoryHelper _inventory;
@@ -35,7 +36,6 @@ public class BarrelWithWaterVisit : MonoBehaviour
         
         if (_inventory.HasItem(Pot, 1) && _inventory.HasItem(Wood, 1))
         {
-
             _interact.enabled = false;
             BoilWater.SetActive(true);
             //BarrelWithWater.GetComponent<InteractWithObject>().disabled;
@@ -43,11 +43,12 @@ public class BarrelWithWaterVisit : MonoBehaviour
             GameObject.Find("BarrelWithWater").GetComponent<InteractWithObject>().enabled = false;
             GameObject.Find("BarrelWithWater").GetComponent<SphereCollider>().enabled = false;
             Systems.Inventory.AddItem(PotWithWater, 1);
+            GameObject.Find("BoilWaterMaster").GetComponent<BoilWaterMaster>().FillPotWithWater();
         }
         else
         {
             _interact.SetInteractText("Go talk to Ahmad about water");
-            BoilWater.SetActive(false);
+            //BoilWater.SetActive(false);
             
 
         }

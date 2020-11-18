@@ -205,7 +205,6 @@ public class InventoryDisplay : UIElement
         }
         else
         {
-            pamControl.invopen = false;
             useToggle.SetActive(false);
             openToggle.SetActive(false);
         }

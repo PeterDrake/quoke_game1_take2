@@ -176,8 +176,10 @@ public class WaterHeaterMaster : MonoBehaviour
         while (true)
         {
             FillButton.GetComponent<UnityEngine.UI.Image>().color = Color.blue;
+            FillButton.GetComponentInChildren<Text>().color = Color.white;
             yield return new WaitForSeconds(.5f);
-            FillButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            FillButton.GetComponent<UnityEngine.UI.Image>().color = new Color(80,130,255,255);
+            FillButton.GetComponentInChildren<Text>().color = Color.black;
             yield return new WaitForSeconds(.5f);
         }
     }

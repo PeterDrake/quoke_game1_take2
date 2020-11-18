@@ -48,6 +48,8 @@ public class BoilWaterMaster : MonoBehaviour
         if (GameObject.Find("BoilPointer") != null)
         { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
         waterSplash.Play();
+        print("this is happening we fillingthe pot");
+
         
 
     }
