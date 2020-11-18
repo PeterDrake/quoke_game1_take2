@@ -4569,6 +4569,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Explore the  house, move using the WASD keys or arrow keys
       objectReference: {fileID: 0}
+    - target: {fileID: 2690835748743213396, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 2690835748810145531, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4588,6 +4593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 655
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690835748811889984, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2690835748862871645, guid: 64d8e81fcaab5bb4aa47965d4e1d48a7,
         type: 3}
