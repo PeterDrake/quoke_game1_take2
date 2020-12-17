@@ -15,14 +15,9 @@ public class HintController : MonoBehaviour
     void Start()
     {
         print("HINTS ARE " + SavedData.hints);
-        if (SavedData.hints)
-        {
-            hintText.text = "Hints ON";
-        }
-        else
-        {
-            hintText.text = "Hints OFF";
-        }
+        SavedData.hints = false;
+        hintText.text = "Turn Hints ON";
+
         print("starting CHECKLIST");
         for (int i = 0; i < tasks.Length; i++)
         {
@@ -52,23 +47,41 @@ public class HintController : MonoBehaviour
         }
     }
 
-    public void TurnHintsOn()
+    public void ButtonClick()
     {
-        hintText.text = "Hints ON";
-        SavedData.hints = true;
-        print("HINTS ARE " + SavedData.hints);
-        print("CHECKLIST UPDATED");
-        for (int i = 0; i < tasks.Length; i++)
-        {
-            if (tasks[i].activeSelf)
+        //hints are off turning on
+        if (!SavedData.hints){
+            SavedData.hints = true;
+            hintText.text = "Turn Hints OFF";
+            print("HINTS ARE " + SavedData.hints);
+            print("CHECKLIST UPDATED");
+            for (int i = 0; i < tasks.Length; i++)
             {
-                foreach(Transform child in tasks[i].transform)
+                if (tasks[i].activeSelf)
                 {
-                    print("Task turned active = " + child.name);
-                    child.GetComponent<FlatFollow>().appear();
+                    foreach(Transform child in tasks[i].transform)
+                    {
+                        print("Task turned active = " + child.name);
+                        child.GetComponent<FlatFollow>().appear();
+                    }
+                }
+                else
+                {
+                    foreach (Transform child in tasks[i].transform)
+                    {
+                        print("Task NOT active = " + child.name);
+                        child.GetComponent<FlatFollow>().disappear();
+                    }
                 }
             }
-            else
+        }
+        // hints are on turnning off
+        else{
+            hintText.text = "Turn Hints ON";
+            SavedData.hints = false;
+            print("HINTS ARE " + SavedData.hints);
+            print("CHECKLIST UPDATED");
+            for (int i = 0; i < tasks.Length; i++)
             {
                 foreach (Transform child in tasks[i].transform)
                 {
