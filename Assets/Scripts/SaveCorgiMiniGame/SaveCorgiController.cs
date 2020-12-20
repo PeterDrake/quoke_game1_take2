@@ -48,23 +48,6 @@ public class SaveCorgiController : MonoBehaviour
             sound.Stop();
             StartCoroutine(nameof(PlayVideo));
         }
-        if (winScreen)
-        {
-            StopAllCoroutines();
-            GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
-            winScreen = false;
-            gameOver = true;
-            print("done WINNEr");
-            VideoBackground.SetActive(false);
-            VideoDisplayer.SetActive(false);
-            Video.SetActive(false);
-            Tarp.SetActive(false);
-            Corgi.SetActive(false);
-            Frank.SetActive(false);
-            camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
-            camera.transform.rotation = Quaternion.Euler(10,180,0);
-            Win.SetActive(true);
-        }
     }
 
     private IEnumerator CorgiSit()
@@ -85,12 +68,30 @@ public class SaveCorgiController : MonoBehaviour
         yield return new WaitForSeconds(43f);
         //_videoPlayer.Stop();
         Video.SetActive(false);
-        winScreen = true;
+        ShowWinScreen();
 
 
         //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
         //_videoPlayer.Play();
         //
+    }
+
+    private void ShowWinScreen(){
+        StopAllCoroutines();
+        GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
+        winScreen = false;
+        gameOver = true;
+        print("done WINNEr");
+        VideoBackground.SetActive(false);
+        VideoDisplayer.SetActive(false);
+        Video.SetActive(false);
+        Tarp.SetActive(false);
+        Corgi.SetActive(false);
+        Frank.SetActive(false);
+        camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
+        camera.transform.rotation = Quaternion.Euler(10,180,0);
+        Win.SetActive(true);
+    
     }
 
 }
