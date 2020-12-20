@@ -218,6 +218,7 @@ public class MiniGameMasterPitLatrine : MonoBehaviour
         yield return new WaitForSeconds(3f);
         ErosionScreen.SetActive(true);
         yield return new WaitForSeconds(3f); 
+        S2Pit3.SetActive(false);
         ErosionScreen.SetActive(false);
         Dig2.SetActive(true);
         //Use.SetActive(true);
