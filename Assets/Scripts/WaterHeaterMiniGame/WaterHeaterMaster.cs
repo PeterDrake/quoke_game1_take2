@@ -117,7 +117,7 @@ public class WaterHeaterMaster : MonoBehaviour
         StartCoroutine(TryAgain());
         if (stepOne)
         {
-            GameObject.Find("Flip").transform.Rotate(0, 40, 0);
+            GameObject.Find("Flip").transform.Rotate(0, -150, 0);
         }
         if (stepTwo)
         {
