@@ -17,11 +17,11 @@ public class KnobRotating : MonoBehaviour
     {
         if (gameObject.tag == "ElectricBox")
         {
-            if (move1 < 40)
+            if (move1 < 25)
             {
 
-                transform.Rotate(0, -.5f, 0);
-                move1 += .5f;
+                transform.Rotate(0, 6f, 0);
+                move1 += 1f;
             }
             else
             {
