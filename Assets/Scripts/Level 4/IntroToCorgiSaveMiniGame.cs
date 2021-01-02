@@ -104,7 +104,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         bark.Play();
         
         //Tsu's dot appears
-        if (GameObject.Find("TsuPointer") != null) { GameObject.Find("TsuPointer").GetComponent<FlatFollow>().appear(); }
+        // if (GameObject.Find("TsuPointer") != null) { GameObject.Find("TsuPointer").GetComponent<FlatFollow>().appear(); }
 
         GameObject.Find("TrePointer").GetComponent<FlatFollow>().appear();
         GameObject.Find("MoPointer").GetComponent<FlatFollow>().appear();
