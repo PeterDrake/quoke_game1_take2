@@ -55,7 +55,7 @@ public class SaveCorgiController : MonoBehaviour
             }
             if (Tarp.transform.position.x > -110f)
             {
-                print("too far left");
+                // print("too far left");
                 Tarp.transform.position = new Vector3(-113f,107.1427f,-156f);
             }
 
@@ -66,7 +66,7 @@ public class SaveCorgiController : MonoBehaviour
 
             if (!_videoPlayer.isPlaying)
             {
-                print("video playing done");
+                // print("video playing done");
                 _videoPlayer.Stop();
                 Video.SetActive(false);
                 Destroy(Video);
@@ -78,7 +78,7 @@ public class SaveCorgiController : MonoBehaviour
     }
     private IEnumerator PlayVideo()
     {
-        print("starting video now");
+        // print("starting video now");
         yield return new WaitForSeconds(.5f);
         Video.SetActive(true);
         VideoDisplayer.SetActive(true);
@@ -103,7 +103,7 @@ public class SaveCorgiController : MonoBehaviour
     */
 
     private void ShowWinScreen(){
-        // GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
+        GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
         winScreen = false;
         gameOver = true;
         print("done WINNEr");
