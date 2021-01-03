@@ -30,7 +30,7 @@ public class SaveCorgiController : MonoBehaviour
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
         _videoPlayer.source = VideoSource.Url;
-        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiVideoFINALE.mp4");
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiFINALE_short.mp4");
         _videoPlayer.url = filepath;
         winScreen = false;
         gameOver = false;
@@ -79,12 +79,13 @@ public class SaveCorgiController : MonoBehaviour
     private IEnumerator PlayVideo()
     {
         print("starting video now");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.5f);
         Video.SetActive(true);
-        Video.GetComponent<VideoPlayer>().Play();  
         VideoDisplayer.SetActive(true);
         VideoBackground.SetActive(true);
+        Video.GetComponent<VideoPlayer>().Play();  
         start = true;
+        yield return new WaitForSeconds(1f);
         //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
         //_videoPlayer.Play();
         //
@@ -102,7 +103,7 @@ public class SaveCorgiController : MonoBehaviour
     */
 
     private void ShowWinScreen(){
-        GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
+        // GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
         winScreen = false;
         gameOver = true;
         print("done WINNEr");
