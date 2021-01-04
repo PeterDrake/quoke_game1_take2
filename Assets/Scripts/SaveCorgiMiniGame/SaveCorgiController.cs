@@ -22,6 +22,7 @@ public class SaveCorgiController : MonoBehaviour
 
     private bool winScreen;
     private bool gameOver;
+    private bool start;
 
     void Start()
     {
@@ -29,27 +30,68 @@ public class SaveCorgiController : MonoBehaviour
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
         _videoPlayer.source = VideoSource.Url;
-        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiVideoFINALE.mp4");
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiFINALE_short.mp4");
         _videoPlayer.url = filepath;
         winScreen = false;
         gameOver = false;
+        start = false;
     }
 
     void Update()
     {
-        if (Tarp.transform.position.x < -116f & !gameOver)
+        if (!gameOver && !start)
         {
-            if (GameObject.Find("MiniMusic") != null)
+            if (Tarp.transform.position.x < -117f )
             {
-                GameObject.Find("MiniMusic").SetActive(false);
+                if (GameObject.Find("MiniMusic") != null)
+                {
+                    GameObject.Find("MiniMusic").SetActive(false);
+                }
+                Destroy(script);
+                Banner.SetActive(false);
+                sound.Stop();
+                // StartVideo();
+                StartCoroutine(nameof(PlayVideo));
             }
-            Destroy(script);
-            Banner.SetActive(false);
-            sound.Stop();
-            StartCoroutine(nameof(PlayVideo));
+            if (Tarp.transform.position.x > -110f)
+            {
+                // print("too far left");
+                Tarp.transform.position = new Vector3(-113f,107.1427f,-156f);
+            }
+
+        }
+        else if (start && !gameOver)
+        {
+            StopAllCoroutines();
+
+            if (!_videoPlayer.isPlaying)
+            {
+                // print("video playing done");
+                _videoPlayer.Stop();
+                Video.SetActive(false);
+                Destroy(Video);
+                Destroy(VideoBackground);
+                Destroy(VideoDisplayer);
+                ShowWinScreen();
+            }
         }
     }
+    private IEnumerator PlayVideo()
+    {
+        // print("starting video now");
+        yield return new WaitForSeconds(.5f);
+        Video.SetActive(true);
+        VideoDisplayer.SetActive(true);
+        VideoBackground.SetActive(true);
+        Video.GetComponent<VideoPlayer>().Play();  
+        start = true;
+        yield return new WaitForSeconds(1f);
+        //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
+        //_videoPlayer.Play();
+        //
+    }
 
+/*
     private IEnumerator CorgiSit()
     {
         yield return new WaitForSeconds(1f);
@@ -58,26 +100,9 @@ public class SaveCorgiController : MonoBehaviour
         StartCoroutine(nameof(PlayVideo));
     }
 
-    private IEnumerator PlayVideo()
-    {
-        yield return new WaitForSeconds(1f);
-        Video.SetActive(true);
-        Video.GetComponent<VideoPlayer>().Play();  
-        VideoDisplayer.SetActive(true);
-        VideoBackground.SetActive(true);
-        yield return new WaitForSeconds(43f);
-        //_videoPlayer.Stop();
-        Video.SetActive(false);
-        ShowWinScreen();
-
-
-        //_videoPlayer.url = System.IO.Path.Combine (Application.streamingAssetsPath,"CorgiFINALE.mp4");
-        //_videoPlayer.Play();
-        //
-    }
+    */
 
     private void ShowWinScreen(){
-        StopAllCoroutines();
         GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
         winScreen = false;
         gameOver = true;

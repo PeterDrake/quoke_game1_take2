@@ -43,10 +43,10 @@ public class BoilWaterMaster : MonoBehaviour
         //Systems.Inventory.AddItem(PotWithWater, 1);
         Sphere.SetActive(true);
         Particles.SetActive(true);
-        if (GameObject.Find("BarrelPointer") != null)
-        { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear(); }
-        if (GameObject.Find("BoilPointer") != null)
-        { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
+        // if (GameObject.Find("BarrelPointer") != null)
+        // { GameObject.Find("BarrelPointer").GetComponent<FlatFollow>().disappear(); }
+        // if (GameObject.Find("BoilPointer") != null)
+        // { GameObject.Find("BoilPointer").GetComponent<FlatFollow>().appear(); }
         waterSplash.Play();
         print("this is happening we fillingthe pot");
 
