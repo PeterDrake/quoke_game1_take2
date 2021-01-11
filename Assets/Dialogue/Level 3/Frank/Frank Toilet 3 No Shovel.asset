@@ -15,7 +15,8 @@ MonoBehaviour:
   speech: 'No, you''ll have to find one. I do have some plywood we can use to make
     a floor around the pit. I''ve also got a tarp we can put up to keep the rain
     out if we can find a rope. '
-  optionOneText: 'Okay. I''ll try to find that stuff and meet you in your backyard. '
+  optionOneText: 'Okay. I''ll try to find some rope and then start building it in
+    your backyard. '
   optionOne: {fileID: 11400000, guid: ab50eb836ed985c47ade7e74d19d6191, type: 2}
   optionTwoText: 
   optionTwo: {fileID: 0}
