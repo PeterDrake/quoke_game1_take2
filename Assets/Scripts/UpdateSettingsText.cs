@@ -7,16 +7,19 @@ public class UpdateSettingsText : MonoBehaviour
 {
     public Text settingsText;
     public string preText = "Quality Level:";
+    public string[] qualityLevels = new string[] { "Very Low", "Low", "Medium", "High", "Very High", "Ultra" };
 
     // Start is called before the first frame update
     void Start()
     {
-        settingsText.text = preText + " " + QualitySettings.GetQualityLevel();
+        Debug.Log(QualitySettings.GetQualityLevel());
+        Debug.Log(qualityLevels[5]);
+        settingsText.text = preText + " " + qualityLevels[QualitySettings.GetQualityLevel()];
     }
 
     // Update is called once per frame
     void Update()
     {
-        settingsText.text = preText + " " + QualitySettings.GetQualityLevel();
+        settingsText.text = preText + " " + qualityLevels[QualitySettings.GetQualityLevel()];
     }
 }

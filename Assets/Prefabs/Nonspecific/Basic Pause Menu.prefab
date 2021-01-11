@@ -601,7 +601,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50.00004, y: -220.29211}
-  m_SizeDelta: {x: 140, y: 30}
+  m_SizeDelta: {x: 170, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5501552047032550105
 CanvasRenderer:
@@ -720,6 +720,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsText: {fileID: 2162091687856723048}
   preText: 'Quality Level:'
+  qualityLevels:
+  - Very Low
+  - Low
+  - Medium
+  - High
+  - Very High
+  - Ultra
 --- !u!1 &4890675391722846284
 GameObject:
   m_ObjectHideFlags: 0
