@@ -122,5 +122,14 @@ public class MenuDisplayer : UIElement
         SceneManager.LoadScene("EndPage");
     }
 
-    private void settings() { }
+    private void settings()
+    {
+        if (QualitySettings.GetQualityLevel() >= 5)
+        {
+            QualitySettings.SetQualityLevel(0);
+        } else
+        {
+            QualitySettings.SetQualityLevel(QualitySettings.GetQualityLevel() + 1);
+        }
+    }
 }
