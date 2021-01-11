@@ -12,8 +12,6 @@ public class UpdateSettingsText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(QualitySettings.GetQualityLevel());
-        Debug.Log(qualityLevels[5]);
         settingsText.text = preText + " " + qualityLevels[QualitySettings.GetQualityLevel()];
     }
 
