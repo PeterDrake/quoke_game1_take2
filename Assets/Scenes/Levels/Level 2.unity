@@ -10416,6 +10416,16 @@ PrefabInstance:
       propertyPath: supports
       value: 
       objectReference: {fileID: 1502206560}
+    - target: {fileID: 6301557045448172751, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: TriggerTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301557045448172751, guid: c9cd190dfc12c498da7654c7039f802b,
+        type: 3}
+      propertyPath: KillCount
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6301557045542398762, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: m_IsActive
