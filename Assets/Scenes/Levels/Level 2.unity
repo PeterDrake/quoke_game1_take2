@@ -10419,7 +10419,7 @@ PrefabInstance:
     - target: {fileID: 6301557045448172751, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}
       propertyPath: TriggerTime
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6301557045448172751, guid: c9cd190dfc12c498da7654c7039f802b,
         type: 3}

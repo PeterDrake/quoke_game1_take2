@@ -131,6 +131,11 @@ public class Bookcase : MonoBehaviour
             }
             drillSound.Play();
             Disable(); 
+            // If player has everything, have a quake soon
+            if (HasEverything())
+            {
+                QuakeManager.Instance.TriggerCountdown(TriggerTime);
+            }
         }
     }
     
