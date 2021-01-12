@@ -2766,7 +2766,7 @@ PrefabInstance:
     - target: {fileID: 6455381915499314064, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
       propertyPath: m_Text
-      value: Prepare for an earthquake
+      value: Gather supplies and prepare your home for an earthquake
       objectReference: {fileID: 0}
     - target: {fileID: 6455381915499314064, guid: 54201a432732e3644b92dd53d5d1fef5,
         type: 3}
