@@ -131,6 +131,11 @@ public class Bookcase : MonoBehaviour
             }
             drillSound.Play();
             Disable(); 
+            // If player has everything, have a quake soon
+            if (HasEverything())
+            {
+                QuakeManager.Instance.TriggerCountdown(TriggerTime);
+            }
         }
     }
     
@@ -142,6 +147,7 @@ public class Bookcase : MonoBehaviour
         
         fallCollider.enabled = true;
         rb.isKinematic = false;
+        _interact.BlinkWhenPlayerNear = false;
         rb.AddRelativeTorque(new Vector3(1,0,0) * fallThrust,ForceMode.VelocityChange);
     }
 
