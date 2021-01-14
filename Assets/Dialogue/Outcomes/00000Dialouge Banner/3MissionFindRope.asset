@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
-  m_Name: TalkedToMariaAboutShelter
+  m_Name: 3MissionFindRope
   m_EditorClassIdentifier: 
-  ObjectiveName: MariaShelterTalk
-  words: 
-  ItemToFind: {fileID: 0}
-  Find: 0
+  ObjectiveName: MissionRope
+  words: Find a rope
+  ItemToFind: {fileID: 11400000, guid: 8526991120fe41d4996fcb2e99aca9f4, type: 2}
+  Find: 1
   Found: 0
-  completeReset: 1
-  resetTo: Find the emergency shelter
+  completeReset: 0
+  resetTo: 
+  _satisfied: 0

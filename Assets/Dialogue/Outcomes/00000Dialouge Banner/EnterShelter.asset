@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
-  m_Name: 3FoundShovel
+  m_Name: EnterShelter
   m_EditorClassIdentifier: 
-  ObjectiveName: FoundShovel
-  words: a shovel
+  ObjectiveName: EnterShelter
+  words: Enter the shelter
   ItemToFind: {fileID: 0}
   Find: 0
   Found: 1
+  completeReset: 0
+  resetTo: 
+  _satisfied: 0

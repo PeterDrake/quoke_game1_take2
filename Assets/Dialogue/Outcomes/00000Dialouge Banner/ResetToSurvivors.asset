@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
-  m_Name: ThrowGun
+  m_Name: ResetToSurvivors
   m_EditorClassIdentifier: 
-  ObjectiveName: ThrowGun
-  words: Throw gun away to enter the shelter
+  ObjectiveName: Survivors
+  words: 
   ItemToFind: {fileID: 0}
   Find: 0
-  Found: 1
+  Found: 0
+  completeReset: 1
+  resetTo: Talk to other survivors
+  _satisfied: 0

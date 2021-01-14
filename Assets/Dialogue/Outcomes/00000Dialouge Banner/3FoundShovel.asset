@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
-  m_Name: 3MissionFindShovel
+  m_Name: 3FoundShovel
   m_EditorClassIdentifier: 
-  ObjectiveName: MissionShovel
-  words: Find a shovel
-  ItemToFind: {fileID: 11400000, guid: 44c331833cd8840b2982ae51d6a4ec81, type: 2}
-  Find: 1
-  Found: 0
+  ObjectiveName: FoundShovel
+  words: a shovel
+  ItemToFind: {fileID: 0}
+  Find: 0
+  Found: 1
+  completeReset: 0
+  resetTo: 
+  _satisfied: 0
