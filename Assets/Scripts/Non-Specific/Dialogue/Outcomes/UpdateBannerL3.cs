@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Objective Outcome", menuName = "Dialogue/Outcomes/UpdateBannerL1")]
+[CreateAssetMenu(fileName = "New Objective Outcome", menuName = "Dialogue/Outcomes/UpdateBannerL3")]
 public class UpdateBannerL3 : DialogueOutcome
 {
-    private ChangeBannerLevel1 manager;
+    private ChangeBannerLevel3 manager;
     public override void DoOutcome(ref NPC n)
     {
-        GameObject.Find("BannerManager").GetComponent<ChangeBannerLevel1>().UpdateBanner();
+        GameObject.Find("BannerManager").GetComponent<ChangeBannerLevel3>().UpdateBanner();
     }
 
 }
