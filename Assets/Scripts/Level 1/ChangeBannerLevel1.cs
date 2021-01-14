@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChangeBannerText : MonoBehaviour
+public class ChangeBannerLevel1 : MonoBehaviour
 {
     public InformationCanvas _canvas;
-    public string words;
 
-    public void Change()
+    public void UpdateBanner()
     {
-        _canvas. ChangeText(words);
+        _canvas.ChangeText("Shut off the gas");
     }
 }
