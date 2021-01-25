@@ -7,6 +7,11 @@ public class QuakeCommence : MonoBehaviour
 
     private bool ExploreBath;
     private bool ExploreKitc;
+
+    private bool InteractBath;
+    private bool InteractKitc;
+    private bool InteractWardrobe;
+    private bool Interactbookshelf;
     
     private bool _satisfied;
 
@@ -21,6 +26,23 @@ public class QuakeCommence : MonoBehaviour
         ExploreKitc = true;
     }
 
+    public void SetInteractBath()
+    {
+        InteractBath = true;
+    }
+
+    public void SetInteractKitc()
+    {
+        InteractKitc = true;
+    }
+    public void SetInteractWardrobe()
+    {
+        InteractWardrobe = true;
+    }
+    public void SetInteractbookshelf()
+    {
+        Interactbookshelf = true;
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -30,6 +52,10 @@ public class QuakeCommence : MonoBehaviour
         Debug.Log("Start called");
         ExploreBath = false;
         ExploreKitc = false;
+        InteractBath = false;
+        InteractKitc = false;
+        InteractWardrobe = false;
+        Interactbookshelf = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,6 +63,12 @@ public class QuakeCommence : MonoBehaviour
         if (other.tag == "Player")
         {
             if (ExploreBath && ExploreKitc)
+            {
+                Systems.Objectives.Satisfy("EXPLOREAREA");
+                QuakeManager.Instance.TriggerQuake();
+            }
+
+            else if (InteractBath && InteractKitc && InteractWardrobe && Interactbookshelf)
             {
                 Systems.Objectives.Satisfy("EXPLOREAREA");
                 QuakeManager.Instance.TriggerQuake();
