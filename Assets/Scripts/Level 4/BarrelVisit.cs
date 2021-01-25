@@ -55,7 +55,7 @@ public class BarrelVisit : MonoBehaviour
         Systems.Status.Pause();
         SceneManager.sceneLoaded -= StartMinigame;
 
-        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
+        (canvi = GameObject.Find("Canvi")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (vcam = GameObject.Find("CM vcam1")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
