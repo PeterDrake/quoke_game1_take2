@@ -140,5 +140,6 @@ public class MoveOtherShovel : MonoBehaviour
     public static void ResetDigCount()
     {
         digCount = 0;
+        GameObject.Find("5 feet deep").SetActive(false);
     }
 }
