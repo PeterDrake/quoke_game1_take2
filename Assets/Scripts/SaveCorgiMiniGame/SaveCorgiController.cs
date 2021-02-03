@@ -18,7 +18,6 @@ public class SaveCorgiController : MonoBehaviour
     public GameObject VideoDisplayer;
     public GameObject Video;
     public GameObject Win;
-    public AudioSource sound;
 
     private bool winScreen;
     private bool gameOver;
@@ -26,7 +25,6 @@ public class SaveCorgiController : MonoBehaviour
 
     void Start()
     {
-        sound.Play();
         script = Tarp.GetComponent<DragTarp>();
         _videoPlayer = Video.GetComponent<VideoPlayer>();
         _videoPlayer.source = VideoSource.Url;
@@ -49,7 +47,6 @@ public class SaveCorgiController : MonoBehaviour
                 }
                 Destroy(script);
                 Banner.SetActive(false);
-                sound.Stop();
                 // StartVideo();
                 StartCoroutine(nameof(PlayVideo));
             }
