@@ -34,12 +34,6 @@ public class SaveCorgiController : MonoBehaviour
         Video.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
     }
 
-    void CheckOver(UnityEngine.Video.VideoPlayer vp)
-{
-     print  ("Video Is Over");
-}
-
-
     void Update()
     {
         if (!gameOver && !start)
@@ -62,23 +56,7 @@ public class SaveCorgiController : MonoBehaviour
             }
 
         }
-        // else if (start && !gameOver)
-        // {
-        //     StopAllCoroutines();
-
-        //     if (!_videoPlayer.isPlaying)
-        //     {
-        //         // print("video playing done");
-        //         _videoPlayer.Stop();
-        //         Video.SetActive(false);
-        //         Destroy(Video);
-        //         Destroy(VideoBackground);
-        //         Destroy(VideoDisplayer);
-        //         ShowWinScreen();
-        //     }
-        // }
     }
-
 
     private IEnumerator PlayVideo()
     {
@@ -92,10 +70,10 @@ public class SaveCorgiController : MonoBehaviour
         yield return new WaitForSeconds(1f);
     }
 
-    
-
-    private void ShowWinScreen(){
-        GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
+    void CheckOver(UnityEngine.Video.VideoPlayer vp)
+    {
+     print  ("Video Is Over");
+     GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
         winScreen = false;
         gameOver = true;
         print("done WINNEr");
@@ -108,8 +86,5 @@ public class SaveCorgiController : MonoBehaviour
         camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
         camera.transform.rotation = Quaternion.Euler(10,180,0);
         Win.SetActive(true);
-    
     }
-
-
 }
