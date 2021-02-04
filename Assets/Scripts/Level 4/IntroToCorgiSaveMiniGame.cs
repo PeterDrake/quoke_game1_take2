@@ -61,7 +61,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         if (CompostingToilet.activeSelf && !check)
         {
-            Video.SetActive(true);
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
         }
