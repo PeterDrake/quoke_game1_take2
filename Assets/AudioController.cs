@@ -39,13 +39,13 @@ public class AudioController : MonoBehaviour
         if(changedSettings && !menuToggler.activeSelf) 
         {
             video.SetDirectAudioVolume(0, musicSlide.value);
+            video.Play();
             changedSettings = false;
-            print("MENU IS CLOSSEDDDD!!!");
         }
         else if (menuToggler.activeSelf)
         {
             changedSettings = true;
-            print("MENU IS OPPPEEENNN!");
+            video.Pause();
         }
 
     }
