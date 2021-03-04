@@ -18,6 +18,7 @@ public class ShelterVisit : MonoBehaviour
 
     public GameObject SaveCorgiAppear;
     public GameObject Controller;
+    public InformationCanvas Banner;
 
     private const string EventKey = "COMPOSTFINISHED";
 
@@ -240,6 +241,7 @@ public class ShelterVisit : MonoBehaviour
         //Systems.Status.AffectRelief(100);
         GameObject.Find("MeterDing").GetComponent<AudioSource>().Play();
         Systems.Status.SlowDownWarmthLoss();
+        Banner.ChangeText("Talk to other survivors");
 
         interactText.ToggleVisibility(false);
         _meshRenderer.material = mat_original;

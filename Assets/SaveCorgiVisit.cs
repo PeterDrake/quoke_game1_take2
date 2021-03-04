@@ -19,8 +19,8 @@ public class SaveCorgiVisit : MonoBehaviour
     private GameObject canvi;
     private GameObject camera;
     private GameObject sunlight;
-    public AudioSource levelMusic;
-    public AudioSource miniMusic;
+    public GameObject levelMusic;
+    public GameObject miniMusic;
     public GameObject winMusic;
     private LogToServer logger;
 
@@ -46,8 +46,8 @@ public class SaveCorgiVisit : MonoBehaviour
         (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
         (camera = GameObject.Find("Main Camera")).SetActive(false);
         (sunlight = GameObject.Find("Sunlight")).SetActive(false);
-        levelMusic.Stop();
-        miniMusic.Play();
+        levelMusic.SetActive(false);
+        miniMusic.SetActive(true);
     }
 
     public void CorgiRescue()
