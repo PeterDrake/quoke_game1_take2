@@ -8,11 +8,7 @@ using UnityEngine.Video;
 public class IntroToCorgiSaveMiniGame : MonoBehaviour
 {
     public GameObject CompostingToilet;
-    public GameObject InTheMeantimeCanvas;
     public GameObject MiniGameClose;
-    public GameObject VideoDisplayer;
-    public GameObject VideoBackground;
-    public GameObject Video;
     public GameObject TsuPointer;
 
     public GameObject Ahmad;
@@ -47,10 +43,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         Debug.Log("SaveCorgiIntro script started");
 
-        Video.GetComponent<VideoPlayer>().source = VideoSource.Url;
-        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiSadScene.mp4");
-        Video.GetComponent<VideoPlayer>().url = filepath;
-
         //Video.GetComponent<VideoPlayer>().Prepare();
     }
 
@@ -61,39 +53,14 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         if (CompostingToilet.activeSelf && !check)
         {
-            StartCoroutine(nameof(StartCutScene));
+            GetComponent<SadCorgiVideoInteraction>().OpenSadCorgi();
             check = true; //used this bool so the coroutine is triggered only once
         }
 
     }
     
-    private IEnumerator StartCutScene()
-    {
-        //if the sanitation is built, wait for four seconds and trigger "In the meantime..." slide
-        yield return new WaitForSeconds(1.5f);
-        MiniGameClose.SetActive(false);
-        if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Pause(); }
-        InTheMeantimeCanvas.SetActive(true);
-        
-        //then trigger the video
-        yield return new WaitForSeconds(3f);
-        Systems.Status.Pause();
-        VideoBackground.SetActive(true);
-        VideoDisplayer.SetActive(true);
-        Video.SetActive(true);
-        Video.GetComponent<VideoPlayer>().Play();
-        
-        InTheMeantimeCanvas.SetActive(false);
-        yield return new WaitForSeconds(63f);
-
-        //turn off the video
-        Systems.Status.UnPause();
-        VideoBackground.SetActive(false);
-        VideoDisplayer.SetActive(false);
-        Video.SetActive(false);
-        if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Play(); }
-        MiniGameClose.SetActive(true);
-        
+    public IEnumerator EventsAfterSadCorgi()
+    {   
         //change banner to "Look for Tsu"
         _canvas. ChangeText("Look for Tsu");
         
@@ -135,8 +102,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         }
         BruceCont.GetComponent<SphereCollider>().enabled = false;
         BruceCont.GetComponent<InteractWithObject>().enabled = false;
-
-
     }
     
 }
