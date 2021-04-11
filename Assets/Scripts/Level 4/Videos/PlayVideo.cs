@@ -22,12 +22,12 @@ public class PlayVideo : MonoBehaviour
         videoPlayer.GetComponent<VideoPlayer>().url = filepath;
         print("preparing video now!");
         videoPlayer.Prepare();
-        play = false;
         videoPlayer.loopPointReached += EndofVideo;
     }
 
     void Update(){
         if (play){
+            print("playing video!");
             videoPlayer.Play();
             play = false;
         }
