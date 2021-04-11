@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using UnityEngine;
-using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 
 public class SaveCorgiController : MonoBehaviour
 {
@@ -13,9 +13,6 @@ public class SaveCorgiController : MonoBehaviour
     public GameObject Tarp;
     public GameObject Corgi;
     public GameObject Banner;
-    public GameObject VideoBackground;
-    public GameObject VideoDisplayer;
-    public GameObject Video;
     public GameObject Win;
 
     private bool winScreen;
@@ -25,13 +22,9 @@ public class SaveCorgiController : MonoBehaviour
     void Start()
     {
         script = Tarp.GetComponent<DragTarp>();
-        Video.GetComponent<VideoPlayer>().source = VideoSource.Url;
-        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiFINALE_short.mp4");
-        Video.GetComponent<VideoPlayer>().url = filepath;
         winScreen = false;
         gameOver = false;
         start = false;
-        Video.GetComponent<VideoPlayer>().loopPointReached += CheckOver;
     }
 
     void Update()
@@ -46,8 +39,9 @@ public class SaveCorgiController : MonoBehaviour
                 }
                 Destroy(script);
                 Banner.SetActive(false);
+                OpenFinalVideo();
                 // StartVideo();
-                StartCoroutine(nameof(PlayVideo));
+                // StartCoroutine(nameof(PlayVideo));
             }
             if (Tarp.transform.position.x > -110f)
             {
@@ -58,33 +52,35 @@ public class SaveCorgiController : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayVideo()
+    public void OpenFinalVideo()
     {
-        // print("starting video now");
-        yield return new WaitForSeconds(.5f);
-        Video.SetActive(true);
-        VideoDisplayer.SetActive(true);
-        VideoBackground.SetActive(true);
-        Video.GetComponent<VideoPlayer>().Play();  
         start = true;
-        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("VideoFinalCorgi", LoadSceneMode.Additive);
+        SceneManager.sceneLoaded += StartVideo;
     }
 
-    void CheckOver(UnityEngine.Video.VideoPlayer vp)
+    private void StartVideo(Scene scn, LoadSceneMode lsm)
     {
-     print  ("Video Is Over");
-     GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
-        winScreen = false;
-        gameOver = true;
-        print("done WINNEr");
-        VideoBackground.SetActive(false);
-        VideoDisplayer.SetActive(false);
-        Video.SetActive(false);
+        // Systems.Status.Pause();
+        SceneManager.sceneLoaded -= StartVideo;
+        GameObject.Find("FinalCorgiController").GetComponent<PlayVideo>().CloseVideo += CloseVideo;
+    }
+
+    private void CloseVideo()
+    {
+        // Systems.Status.UnPause();
+        SceneManager.UnloadSceneAsync("VideoFinalCorgi");
+        Win.SetActive(true);
         Tarp.SetActive(false);
         Corgi.SetActive(false);
         Frank.SetActive(false);
         camera.transform.position = new Vector3(-112.58f, 109.9f, -141.5f);
         camera.transform.rotation = Quaternion.Euler(10,180,0);
-        Win.SetActive(true);
+        GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
+        winScreen = false;
+        gameOver = true;
+
+
+        print("done WINNEr");
     }
 }
