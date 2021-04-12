@@ -21,15 +21,15 @@ public class SadCorgiVideoInteraction : MonoBehaviour
 
     private void StartVideo(Scene scn, LoadSceneMode lsm)
     {
-        Systems.Status.Pause();
+        // Systems.Status.Pause();
         SceneManager.sceneLoaded -= StartVideo;
 
         if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Pause(); }
 
-        (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
-        (camera = GameObject.Find("Main Camera")).SetActive(false);
-        (vcam = GameObject.Find("CM vcam1")).SetActive(false);
-        (sunlight = GameObject.Find("Sunlight")).SetActive(false);
+        // (canvi = GameObject.Find("MiniGameClose")).SetActive(false);
+        // (camera = GameObject.Find("Main Camera")).SetActive(false);
+        // (vcam = GameObject.Find("CM vcam1")).SetActive(false);
+        // (sunlight = GameObject.Find("Sunlight")).SetActive(false);
 
         GameObject.Find("SadCorgiController").GetComponent<PlayVideo>().CloseVideo += CloseVideo;
 
@@ -39,15 +39,15 @@ public class SadCorgiVideoInteraction : MonoBehaviour
 
     private void CloseVideo()
     {
-        Systems.Status.UnPause();
+        // Systems.Status.UnPause();
         SceneManager.UnloadSceneAsync("VideoSadCorgi");
 
         if (GameObject.Find("Music") != null) { GameObject.Find("Music").GetComponent<AudioSource>().Play(); }
 
-        camera.SetActive(true);
-        vcam.SetActive(true);
-        canvi.SetActive(true);
-        sunlight.SetActive(true);
+        // camera.SetActive(true);
+        // vcam.SetActive(true);
+        // canvi.SetActive(true);
+        // sunlight.SetActive(true);
 
         StartCoroutine(GetComponent<IntroToCorgiSaveMiniGame>().EventsAfterSadCorgi());
     }
