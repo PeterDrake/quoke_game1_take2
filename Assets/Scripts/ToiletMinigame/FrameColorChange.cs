@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlinkFrame : MonoBehaviour
+public class FrameColorChange : MonoBehaviour
 {
     public GameObject frame1;
     public GameObject frame2;

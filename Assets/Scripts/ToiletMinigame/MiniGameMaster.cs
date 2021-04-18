@@ -21,6 +21,7 @@ public class MiniGameMaster : MonoBehaviour
     public bool Sawdust;
 
     public bool Pee;
+    public Button submitButton;
     
     public GameObject Win;
 
@@ -34,13 +35,16 @@ public class MiniGameMaster : MonoBehaviour
 
     private LogToServer logger;
 
+
+    //begin with setting up logging information
     public void Start()
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Began toilet minigame","MINIGAME");
-        // Debug.Log("Began toilet minigame");
     }
 
+    //if all boxes are correct we will win the game
+    //else show the try again pop up for a bit
     public void CheckCorrect()
     {
         if (PeeBucket && PooBucket && PlasticBag && Poop && ToiletPaper && Sawdust && Pee)
@@ -56,14 +60,10 @@ public class MiniGameMaster : MonoBehaviour
         }
     }
 
-    public void Leave()
-    {
-        OnExit.Invoke();
-    }
-
+    //Show the try again pop up for a bit
     public IEnumerator TryAgain()
     {
-        Debug.Log("Attempted to sanitize hands");
+        // Debug.Log("Attempted to sanitize hands");
         logger.sendToLog("Attempted to sanitize hands", "MINIGAME");
         Wrong.SetActive(true);
         yield return new WaitForSeconds(3f);
@@ -75,6 +75,17 @@ public class MiniGameMaster : MonoBehaviour
         OnWin.Invoke();
     }
 
+    //function will flash the sanitize hands & used once all items are placed correctly
+    public IEnumerator BlinkText()
+    {
+        while (true)
+        {
+            // theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            yield return new WaitForSeconds(.3f);
+            // theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            yield return new WaitForSeconds(.3f);
+        }
+    }
     
     
 }
