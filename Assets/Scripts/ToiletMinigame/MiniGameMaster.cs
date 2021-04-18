@@ -38,14 +38,14 @@ public class MiniGameMaster : MonoBehaviour
     {
         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
         logger.sendToLog("Began toilet minigame","MINIGAME");
-        Debug.Log("Began toilet minigame");
+        // Debug.Log("Began toilet minigame");
     }
 
     public void CheckCorrect()
     {
         if (PeeBucket && PooBucket && PlasticBag && Poop && ToiletPaper && Sawdust && Pee)
         {
-            Debug.Log("Won toilet mini game");
+            // Debug.Log("Won toilet mini game");
             logger.sendToLog("Won toilet mini game","MINIGAME");
             Win.SetActive(true);
             GameObject.Find("Sanitation Spot").GetComponent<SanitationBuilt>().MiniGameWon();
