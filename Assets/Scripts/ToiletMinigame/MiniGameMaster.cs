@@ -64,7 +64,6 @@ public class MiniGameMaster : MonoBehaviour
     //Show the try again pop up for a bit
     public IEnumerator TryAgain()
     {
-        // Debug.Log("Attempted to sanitize hands");
         logger.sendToLog("Attempted to sanitize hands", "MINIGAME");
         Wrong.SetActive(true);
         yield return new WaitForSeconds(3f);

@@ -59,17 +59,11 @@ public class DragObject : MonoBehaviour
             if (newSpot.GetComponent<BoxCheck>().CheckBox(this.gameObject))
             {
                 Destroy(this);
-                Debug.Log("Placed in Right box");
-            }
-            else
-            {
-                Debug.Log("Placed in Wrong box");
             }
         }
         else
         {
             PlaceItem(home);
-            Debug.Log("placed in home");
         }
     }
 
@@ -104,7 +98,7 @@ public class DragObject : MonoBehaviour
                 this.transform.position = new Vector3(newPosition.x +.2f, home.y - .1f, newPosition.z);
             }
             lastSpot = newSpot;
-            // logger.sendToLog(this.name + " placed in " + lastCollison,"MINIGAME");
+            logger.sendToLog(this.name + " placed in " + newSpot.name,"MINIGAME");
         }
         else
         {

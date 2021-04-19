@@ -41,7 +41,6 @@ public class BoxCheck : MonoBehaviour
     {
         if (this.CompareTag(itemInBox.tag))
         {
-            Debug.Log("Correct match " + this.tag + " and " + itemInBox.tag);
             Frame.Correct();
             SetMasterTrue();
             return true;
@@ -62,7 +61,7 @@ public class BoxCheck : MonoBehaviour
 
     private void SetMasterTrue()
     {   
-        Debug.Log("THIS NAME IS " + this.name);
+        Debug.Log("Completed" + this.name);
         if (this.name == "PeeBucketBox")
         {
             MasterCheck.PeeBucket = true;
