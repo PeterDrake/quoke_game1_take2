@@ -11,7 +11,8 @@ public class DragObject : MonoBehaviour
     private float mZCoord;
     private Vector3 place;
     private Vector3 home;
-    public GameObject box;
+    public GameObject lastSpot;
+    public GameObject newSpot;
     private LogToServer logger;
 
     //at the beginning save starting position as home vector & logging stuff
@@ -24,9 +25,9 @@ public class DragObject : MonoBehaviour
     //on click find mouse & screen offset
     void OnMouseDown()
     {
-        if (box != null)
+        if (lastSpot != null)
         {
-            box.GetComponent<BoxCollider>().enabled = true;
+            lastSpot.GetComponent<BoxCheck>().ResetBox();
         }
         mZCoord = Camera.main.WorldToScreenPoint(
             gameObject.transform.position).z;
@@ -53,9 +54,17 @@ public class DragObject : MonoBehaviour
     {
         if (inBox)
         {
-            //Move Position
-            PlaceItem(box.transform.position);
-            Debug.Log("placed in box");
+            PlaceItem(newSpot.transform.position);
+            newSpot.GetComponent<BoxCollider>().enabled = false;
+            if (newSpot.GetComponent<BoxCheck>().CheckBox(this.gameObject))
+            {
+                Destroy(this);
+                Debug.Log("Placed in Right box");
+            }
+            else
+            {
+                Debug.Log("Placed in Wrong box");
+            }
         }
         else
         {
@@ -67,18 +76,18 @@ public class DragObject : MonoBehaviour
     public void OnTriggerStay(Collider other)
     {
         inBox = true;
-        box = other.gameObject;
+        newSpot = other.gameObject;
     }
 
     public void OnTriggerExit(Collider other)
     {
         inBox = false;
-        box = null;
+        newSpot = null;
     }
 
     public void PlaceItem(Vector3 newPosition)
     {
-        if (box != null)
+        if (newSpot != null)
         {
             
             this.transform.position = new Vector3(newPosition.x, home.y, newPosition.z);
@@ -94,14 +103,13 @@ public class DragObject : MonoBehaviour
             {
                 this.transform.position = new Vector3(newPosition.x +.2f, home.y - .1f, newPosition.z);
             }
+            lastSpot = newSpot;
             // logger.sendToLog(this.name + " placed in " + lastCollison,"MINIGAME");
-            // Debug.Log(this.name +" is placed in the "+ box.name);
         }
         else
         {
             this.transform.position = home;
-            // Debug.Log(this.name + " got sent back home");
-
+            lastSpot = null;
         }
     }
 }

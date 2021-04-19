@@ -21,6 +21,7 @@ public class MiniGameMaster : MonoBehaviour
     public bool Sawdust;
 
     public bool Pee;
+    private bool match = true;
     public Button submitButton;
     
     public GameObject Win;
@@ -75,14 +76,23 @@ public class MiniGameMaster : MonoBehaviour
         OnWin.Invoke();
     }
 
+    void Update()
+    {
+        if (PeeBucket && Pee && PooBucket && PlasticBag && Poop && ToiletPaper && Sawdust && match)
+        {
+            StartCoroutine(BlinkText());
+        }
+
+    }
     //function will flash the sanitize hands & used once all items are placed correctly
     public IEnumerator BlinkText()
     {
+        match = false;
         while (true)
         {
-            // theButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            submitButton.GetComponent<UnityEngine.UI.Image>().color = Color.green;
             yield return new WaitForSeconds(.3f);
-            // theButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            submitButton.GetComponent<UnityEngine.UI.Image>().color = Color.white;
             yield return new WaitForSeconds(.3f);
         }
     }

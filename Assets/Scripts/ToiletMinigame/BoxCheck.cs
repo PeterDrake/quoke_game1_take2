@@ -9,8 +9,7 @@ using Image = UnityEngine.UIElements.Image;
 
 public class BoxCheck : MonoBehaviour
 {
-    public string itemInBox;
-    public string correctTag;
+    // public GameObject itemInBox;
     private MiniGameMaster MasterCheck;
     private FrameColorChange Frame;
 
@@ -36,80 +35,61 @@ public class BoxCheck : MonoBehaviour
     {
         Frame = gameObject.GetComponent<FrameColorChange>();
         MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-        itemInBox = null;
     }
 
-    void Update()
+    public bool CheckBox(GameObject itemInBox)
     {
-        if (itemInBox != null)
+        if (this.CompareTag(itemInBox.tag))
         {
-            if (itemInBox.Equals(correctTag))
-            {
-                Frame.Correct();
-                // gameObject.GetComponent<BoxCollider>().enabled = false;
-            }
-            else 
-            {
-                Frame.Wrong();
-            }
+            Debug.Log("Correct match " + this.tag + " and " + itemInBox.tag);
+            Frame.Correct();
+            SetMasterTrue();
+            return true;
         }
-        //need ITEM from drag object.
+        else 
+        {
+            Frame.Wrong();
+            return false;
+        }
         //if item is not null then update box color && update master && delete things
     }
 
-    // public void StatusCheck(Collider other)
-    // {
-    //     BlinkFrame.StopBlink();
-    //     if (other.CompareTag(correctTag))
-    //     { 
-    //         //Debug.Log(correctTag +" is correct");
-    //         MasterCheck = GameObject.Find("MinigameMaster").GetComponent<MiniGameMaster>();
-    //         BlinkFrame.Correct();
-    //         Destroy(other.GetComponent<DragObject>());
-    //         if (correctTag == "Bucket")
-    //         {
-    //             if (this.name == "PeeBucketBox")
-    //             {
-    //                 MasterCheck.PeeBucket = true;
-    //             }
-    //             else if (this.name == "PooBucketBox")
-    //             {
-    //                 MasterCheck.PooBucket = true;
-    //             }
+    public void ResetBox()
+    {
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+        Frame.Empty();   
+    }
 
-    //         }
-    //         if (correctTag == "PlasticBag")
-    //         {
-    //             MasterCheck.PlasticBag = true;
-    //         }
-    //         if (correctTag == "Poop")
-    //         {
-    //             MasterCheck.Poop = true;
-    //         }
-    //         if (correctTag == "ToiletPaper")
-    //         {
-    //             MasterCheck.ToiletPaper = true;
-    //         }
-    //         if (correctTag == "Sawdust")
-    //         {
-    //             MasterCheck.Sawdust = true;
-    //         }
-    //         if (correctTag == "Pee")
-    //         {
-    //             MasterCheck.Pee = true;
-    //         }
-
-    //         if (MasterCheck.PeeBucket && MasterCheck.PooBucket && MasterCheck.PlasticBag && MasterCheck.Poop && MasterCheck.ToiletPaper && MasterCheck.Sawdust && MasterCheck.Pee)
-    //         {
-    //             StartCoroutine(BlinkText());
-    //         }
-    //     }
-    //     else
-    //     {
-    //         BlinkFrame.Wrong();
-    //         gameObject.GetComponent<BoxCollider>().enabled = false;
-    //         //Debug.Log("An item is in the wrong place"); 
-    //     }
-    // }
-
+    private void SetMasterTrue()
+    {   
+        Debug.Log("THIS NAME IS " + this.name);
+        if (this.name == "PeeBucketBox")
+        {
+            MasterCheck.PeeBucket = true;
+        }
+        else if (this.name == "PooBucketBox")
+        {
+            MasterCheck.PooBucket = true;
+        }
+        else if (this.name == "PlasticBagBox")
+        {
+            MasterCheck.PlasticBag = true;
+        }
+        else if (this.name == "PoopBox")
+        {
+            MasterCheck.Poop = true;
+        }
+        else if (this.name == "ToiletPaperBox")
+        {
+            MasterCheck.ToiletPaper = true;
+        }
+        else if (this.name == "SawdustBox")
+        {
+            MasterCheck.Sawdust = true;
+        }
+        else if (this.name == "PeeBox")
+        {
+            MasterCheck.Pee = true;
+        }
+    }
 }

@@ -30,7 +30,7 @@ public class FrameColorChange : MonoBehaviour
 
     }
 
-    public void StopBlink()
+    public void Empty()
     {
         frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");

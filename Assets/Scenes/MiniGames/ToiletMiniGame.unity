@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 156061074}
   m_Layer: 0
   m_Name: PeeBox
-  m_TagString: Untagged
+  m_TagString: Pee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -672,8 +672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: Pee
 --- !u!65 &156061071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1918,8 +1916,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: Bucket
 --- !u!65 &538352398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2186,7 +2182,7 @@ GameObject:
   - component: {fileID: 648869682}
   m_Layer: 0
   m_Name: ToiletPaperBox
-  m_TagString: Untagged
+  m_TagString: ToiletPaper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2218,8 +2214,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: ToiletPaper
 --- !u!65 &648869679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2333,7 +2327,7 @@ MonoBehaviour:
   ToiletPaper: 0
   Sawdust: 0
   Pee: 0
-  submitButton: {fileID: 0}
+  submitButton: {fileID: 981360262}
   Win: {fileID: 1799654294}
   Wrong: {fileID: 562683447}
 --- !u!4 &657822481
@@ -3207,7 +3201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &881265587
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3887,7 +3882,7 @@ GameObject:
   - component: {fileID: 997852166}
   m_Layer: 0
   m_Name: SawdustBox
-  m_TagString: Untagged
+  m_TagString: Sawdust
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3919,8 +3914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: Sawdust
 --- !u!65 &997852163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4280,7 +4273,7 @@ GameObject:
   - component: {fileID: 1091083019}
   m_Layer: 0
   m_Name: PlasticBagBox
-  m_TagString: Untagged
+  m_TagString: PlasticBag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4312,8 +4305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: PlasticBag
 --- !u!65 &1091083016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5562,7 +5553,7 @@ GameObject:
   - component: {fileID: 1436593200}
   m_Layer: 0
   m_Name: PoopBox
-  m_TagString: Untagged
+  m_TagString: Poop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5594,8 +5585,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: Poop
 --- !u!65 &1436593197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5781,7 +5770,7 @@ GameObject:
   - component: {fileID: 1448891287}
   m_Layer: 0
   m_Name: PeeBucketBox
-  m_TagString: Untagged
+  m_TagString: Bucket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5813,8 +5802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 937b42c47d5204aada122b4ec15166c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemInBox: 
-  correctTag: Bucket
 --- !u!65 &1448891284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8409,7 +8396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &3841034552286335838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8487,7 +8475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &4578726419222882496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8612,7 +8601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &5974664071857229172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8745,7 +8735,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &7917876220073834225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8809,7 +8800,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &8359441881851750315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9011,7 +9003,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inBox: 0
-  box: {fileID: 0}
+  lastSpot: {fileID: 0}
+  newSpot: {fileID: 0}
 --- !u!65 &9114590147621633952
 BoxCollider:
   m_ObjectHideFlags: 0
