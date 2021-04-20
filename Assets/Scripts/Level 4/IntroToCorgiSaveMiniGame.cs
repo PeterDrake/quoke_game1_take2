@@ -33,9 +33,6 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
     private Animator animator1;
     private InteractWithObject _interact;
 
-    
-    
-
     void Start()
     {
         script = this.GetComponent<StartDialogue>();
@@ -50,16 +47,16 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         Video.GetComponent<VideoPlayer>().source = VideoSource.Url;
         string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "CorgiSadScene.mp4");
         Video.GetComponent<VideoPlayer>().url = filepath;
-
-        //Video.GetComponent<VideoPlayer>().Prepare();
+        
+        // Video.GetComponent<VideoPlayer>().Prepare();
     }
 
 
     //check if the sanitation is built
     void Update()
     {
-
-        if (CompostingToilet.activeSelf && !check)
+        if (!check)
+        // if (CompostingToilet.activeSelf && !check)
         {
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
@@ -81,7 +78,13 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
-        Video.GetComponent<VideoPlayer>().Play();
+        UnityEngine.Video.VideoPlayer v = Video.GetComponent<VideoPlayer>();
+        v.Prepare();
+        while (!v.isPrepared)
+        {
+            yield return null;
+        }
+        v.Play();
         
         InTheMeantimeCanvas.SetActive(false);
         yield return new WaitForSeconds(63f);

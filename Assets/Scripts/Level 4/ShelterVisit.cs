@@ -171,6 +171,7 @@ public class ShelterVisit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Eneted door trigger");
         if (!playerInCollider && other.CompareTag("Player"))
         {
             CallOnEnterCollider.Invoke();
