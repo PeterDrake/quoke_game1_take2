@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlinkFrame : MonoBehaviour
+public class FrameColorChange : MonoBehaviour
 {
     public GameObject frame1;
     public GameObject frame2;
@@ -30,7 +30,7 @@ public class BlinkFrame : MonoBehaviour
 
     }
 
-    public void StopBlink()
+    public void Empty()
     {
         frame1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
         frame2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/Ground");
