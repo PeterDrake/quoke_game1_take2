@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniGames/SaveCorgi.unity
     guid: 037ce1f9d77b3024d8ddfd32a995211b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level 5.unity
+    guid: 3497732021e85d5409961965ab5861dc
   m_configObjects: {}
