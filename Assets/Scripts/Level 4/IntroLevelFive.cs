@@ -13,9 +13,8 @@ public class IntroLevelFive : MonoBehaviour
     public GameObject Ahmad;
     public GameObject Maria;
     public GameObject Bruce;
-    public NavMeshAgent BruceNav;
     public GameObject BruceCont;
-
+    public NavMeshAgent BruceNav;
     public InformationCanvas _canvas;
 
     public AudioSource bark;
@@ -35,9 +34,8 @@ public class IntroLevelFive : MonoBehaviour
     {
         script = this.GetComponent<StartDialogue>();
         scriptAhmad = Ahmad.GetComponent<NPCWalking>();
-        //scriptBruce = Bruce.GetComponent<NPCWalking>();
-        //scriptMaria = Maria.GetComponent<NPCWalking>();
-        //Bruce1 = Bruce.GetComponent<NavMeshAgent>();
+        scriptBruce = Bruce.GetComponent<NPCWalking>();
+        scriptMaria = Maria.GetComponent<NPCWalking>();
         animator1 = Ahmad.GetComponent<Animator>();
 
         //Video.GetComponent<VideoPlayer>().Prepare();
@@ -72,8 +70,18 @@ public class IntroLevelFive : MonoBehaviour
 
         GameObject.Find("TrePointer").GetComponent<FlatFollow>().appear();
         GameObject.Find("MoPointer").GetComponent<FlatFollow>().appear();
-        
 
+
+        ////Bruce starts walking to Tsu
+        scriptBruce.enabled = true;
+        BruceNav.enabled = true;/*
+        if (GameObject.Find("BruceAlert").activeInHierarchy)
+        {
+            GameObject.Find("BruceAlert").SetActive(false);
+        }*/
+        BruceCont.GetComponent<SphereCollider>().enabled = false;
+        BruceCont.GetComponent<InteractWithObject>().enabled = false;
+        
         //Ahmad starts walking to Tsu
         scriptAhmad.enabled = true;
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
@@ -91,15 +99,8 @@ public class IntroLevelFive : MonoBehaviour
         ////Maria.GetComponent<InteractWithMaria>().Kill();
         Maria.GetComponent<InteractWithMaria>().enabled = false;
 
-        ////Bruce starts walking to Tsu
-        scriptBruce.enabled = true;
-        BruceNav.enabled = true;
-        if (GameObject.Find("BruceAlert").activeInHierarchy)
-        {
-            GameObject.Find("BruceAlert").SetActive(false);
-        }
-        BruceCont.GetComponent<SphereCollider>().enabled = false;
-        BruceCont.GetComponent<InteractWithObject>().enabled = false;
+        
+        
 
 
     }
