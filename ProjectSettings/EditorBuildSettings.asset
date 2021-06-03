@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Level 5.unity
     guid: 3497732021e85d5409961965ab5861dc
+  - enabled: 1
+    path: Assets/Scenes/Levels/CorgiCutScene.unity
+    guid: a482fdb8b81c8704d85c6b7f77c9f968
   m_configObjects: {}

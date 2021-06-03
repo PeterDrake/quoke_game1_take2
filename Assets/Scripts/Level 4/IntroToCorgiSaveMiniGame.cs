@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class IntroToCorgiSaveMiniGame : MonoBehaviour
@@ -61,6 +62,7 @@ public class IntroToCorgiSaveMiniGame : MonoBehaviour
 
         if (CompostingToilet.activeSelf && !check)
         {
+            SceneManager.LoadSceneAsync("Scenes/Levels/CorgiCutScene");
             StartCoroutine(nameof(StartCutScene));
             check = true; //used this bool so the coroutine is triggered only once
         }
