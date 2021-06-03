@@ -72,13 +72,14 @@ public class IntroLevelFive : MonoBehaviour
 
         GameObject.Find("TrePointer").GetComponent<FlatFollow>().appear();
         GameObject.Find("MoPointer").GetComponent<FlatFollow>().appear();
+        
 
         //Ahmad starts walking to Tsu
         scriptAhmad.enabled = true;
         Ahmad.GetComponent<SphereCollider>().isTrigger = false;
         _interact = Ahmad.GetComponent<InteractWithObject>();
         Destroy(_interact);
-        print("move the maira");
+        print("move the maria");
 
         ////Maria starts moving towards Tsu
         scriptMaria.enabled = true;
