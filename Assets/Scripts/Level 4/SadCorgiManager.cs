@@ -55,8 +55,8 @@ public class SadCorgiManager : MonoBehaviour
         Video.GetComponent<VideoPlayer>().Play();
 
         InTheMeantimeCanvas.SetActive(false);
-        yield return new WaitForSeconds(60f);
-        /*
+        yield return new WaitForSeconds(18f);
+        
         string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "Sad2.mp4");
         Video.GetComponent<VideoPlayer>().url = filepath;
         Video.GetComponent<VideoPlayer>().Play();
@@ -66,15 +66,16 @@ public class SadCorgiManager : MonoBehaviour
         filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "Sad3.mp4");
         Video.GetComponent<VideoPlayer>().url = filepath;
         Video.GetComponent<VideoPlayer>().Play();
-        yield return new WaitForSeconds(17f);
-
+        yield return new WaitForSeconds(13f);
+        SceneManager.LoadSceneAsync("Scenes/Levels/Level 5");
+        yield return new WaitForSeconds(3f);
         //yield return new WaitForSeconds(63f);
 
-        */
+        
         //turn off the video
 
         //Systems.Status.UnPause();
-        SceneManager.LoadScene("Scenes/Levels/Level 5");
+        //SceneManager.LoadSceneAsync("Scenes/Levels/Level 5");
         VideoBackground.SetActive(false);
         VideoDisplayer.SetActive(false);
         Video.SetActive(false);
