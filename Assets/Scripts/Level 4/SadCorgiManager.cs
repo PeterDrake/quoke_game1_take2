@@ -33,6 +33,7 @@ public class SadCorgiManager : MonoBehaviour
 
     private IEnumerator StartCutScene()
     {
+        Time.timeScale = 1;
         //if the sanitation is built, wait for four seconds and trigger "In the meantime..." slide
         Debug.Log("Waiting for 1.5 seconds");
         yield return new WaitForSeconds(1.5f);
