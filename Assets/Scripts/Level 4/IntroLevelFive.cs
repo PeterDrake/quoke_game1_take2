@@ -59,7 +59,7 @@ public class IntroLevelFive : MonoBehaviour
         //change banner to "Look for Tsu"
         _canvas. ChangeText("Look for Tsu");
         
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         
         //Tsu's dialogue appears
         script.Interact();

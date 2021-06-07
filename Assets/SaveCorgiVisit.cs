@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class SaveCorgiVisit : MonoBehaviour
@@ -34,6 +35,13 @@ public class SaveCorgiVisit : MonoBehaviour
     public void Interaction()
     {
         SceneManager.LoadScene(MiniGameSceneName, LoadSceneMode.Additive);
+        GameObject bruce = GameObject.Find("Bruce");
+        GameObject maria = GameObject.Find("Maria");
+        GameObject ahmad = GameObject.Find("Ahmad");
+        bruce.SetActive(false);
+        maria.SetActive(false);
+        ahmad.SetActive(false);
+        
         SceneManager.sceneLoaded += StartMinigame;
         _interact.enabled = false;
     }
