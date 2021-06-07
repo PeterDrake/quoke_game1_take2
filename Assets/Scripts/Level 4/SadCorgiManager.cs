@@ -38,6 +38,7 @@ public class SadCorgiManager : MonoBehaviour
         Debug.Log("Waiting for 1.5 seconds");
         yield return new WaitForSeconds(1.5f);
         MiniGameClose.SetActive(false);
+        GameObject.Find("Black Background").SetActive(false);
         if (GameObject.Find("Music") != null)
         {
             GameObject.Find("Music").GetComponent<AudioSource>().Pause();
