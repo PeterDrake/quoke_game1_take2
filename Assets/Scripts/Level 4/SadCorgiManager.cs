@@ -36,7 +36,7 @@ public class SadCorgiManager : MonoBehaviour
         Time.timeScale = 1;
         //if the sanitation is built, wait for four seconds and trigger "In the meantime..." slide
         Debug.Log("Waiting for 1.5 seconds");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         MiniGameClose.SetActive(false);
         GameObject.Find("Black Background").SetActive(false);
         if (GameObject.Find("Music") != null)
@@ -44,30 +44,35 @@ public class SadCorgiManager : MonoBehaviour
             GameObject.Find("Music").GetComponent<AudioSource>().Pause();
         }
 
-        InTheMeantimeCanvas.SetActive(true);
+        //InTheMeantimeCanvas.SetActive(true);
 
         //then trigger the video
         Debug.Log("Waiting for 3 seconds");
-        yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(3f);
         Systems.Status.Pause();
 
         VideoBackground.SetActive(true);
         VideoDisplayer.SetActive(true);
         Video.SetActive(true);
+        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "Sad1.mp4");
+        Video.GetComponent<VideoPlayer>().url = filepath;
         Video.GetComponent<VideoPlayer>().Play();
 
         InTheMeantimeCanvas.SetActive(false);
+        Debug.Log("Waiting for Video 1");
         yield return new WaitForSeconds(18f);
         
-        string filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "Sad2.mp4");
+        filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "Sad2.mp4");
         Video.GetComponent<VideoPlayer>().url = filepath;
         Video.GetComponent<VideoPlayer>().Play();
+        Debug.Log("Waiting for Video 2");
         yield return new WaitForSeconds(27f);
 
         
         filepath = System.IO.Path.Combine(Application.streamingAssetsPath, "Sad3.mp4");
         Video.GetComponent<VideoPlayer>().url = filepath;
         Video.GetComponent<VideoPlayer>().Play();
+        Debug.Log("Waiting for Video 3");
         yield return new WaitForSeconds(13f);
         SceneManager.LoadSceneAsync("Scenes/Levels/Level 5");
         yield return new WaitForSeconds(3f);

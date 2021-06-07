@@ -1118,7 +1118,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &992610691
 RectTransform:
@@ -1283,7 +1283,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: Assets/StreamingAssets/Sad1.mp4
+  m_Url: file://D:/Users/Ameliyn/Unity-Projects/quoke_game1_take2/splitlevel/StreamingAssets/Sad1.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Close
+  m_Text: Continue
 --- !u!222 &1180261777
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2170,7 +2170,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click for Cutscene
+  m_Text: Where's Tsu?
 --- !u!222 &1681217261
 CanvasRenderer:
   m_ObjectHideFlags: 0
