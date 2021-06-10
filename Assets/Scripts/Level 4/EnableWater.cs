@@ -10,6 +10,7 @@ public class EnableWater : MonoBehaviour
     public InformationCanvas _canvas;
     public string words;
     public GameObject BruceController;
+    
 
 
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class EnableWater : MonoBehaviour
     
     private IEnumerator EnableTheWater()
     {
+        _canvas.ChangeText("Bring water to a rolling boil for 1 minute");
         yield return new WaitForSeconds(7f);
         Water1.SetActive(false);
         //Pot.SetActive(false);
