@@ -28,6 +28,8 @@ public class EnterTentWin : MonoBehaviour
         if (_satisfied)
         {
             Systems.Status.Pause();
+            LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+            logger.sendToLog("Completed Level 3!", "LEVEL");
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
             levelMusic.SetActive(false);
             winMusic.SetActive(true);
