@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
   m_Name: TalkedToAhmadAboutShelter
   m_EditorClassIdentifier: 
-  ObjectiveName: AhmadShelterTalk
+  ObjectiveName: BARRELSETUP
   words: 
   ItemToFind: {fileID: 0}
   Find: 0

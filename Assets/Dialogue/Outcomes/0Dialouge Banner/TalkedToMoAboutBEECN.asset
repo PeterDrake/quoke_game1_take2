@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be402c975674db943bc88b88b8c05c98, type: 3}
   m_Name: TalkedToMoAboutBEECN
   m_EditorClassIdentifier: 
-  ObjectiveName: MoBEECNTalk
+  ObjectiveName: FindBEECN
   words: 
   ItemToFind: {fileID: 0}
   Find: 0
