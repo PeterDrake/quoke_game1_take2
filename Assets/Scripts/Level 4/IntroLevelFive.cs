@@ -57,8 +57,14 @@ public class IntroLevelFive : MonoBehaviour
     private IEnumerator StartCutScene()
     {
         //change banner to "Look for Tsu"
-        _canvas. ChangeText("Look for Tsu");
-        
+        _canvas.ChangeText("Look for Tsu");
+        BruceCont.GetComponent<SphereCollider>().enabled = false;
+        BruceCont.GetComponent<InteractWithObject>().enabled = false;
+        Ahmad.GetComponent<SphereCollider>().enabled = false;
+        _interact = Ahmad.GetComponent<InteractWithObject>();
+        Destroy(_interact);
+        Maria.GetComponent<SphereCollider>().enabled = false;
+        Maria.GetComponent<InteractWithMaria>().enabled = false;
         yield return new WaitForSeconds(3f);
         
         //Tsu's dialogue appears
@@ -79,24 +85,21 @@ public class IntroLevelFive : MonoBehaviour
         {
             GameObject.Find("BruceAlert").SetActive(false);
         }*/
-        BruceCont.GetComponent<SphereCollider>().enabled = false;
-        BruceCont.GetComponent<InteractWithObject>().enabled = false;
+        
         
         //Ahmad starts walking to Tsu
         scriptAhmad.enabled = true;
-        Ahmad.GetComponent<SphereCollider>().isTrigger = false;
-        _interact = Ahmad.GetComponent<InteractWithObject>();
-        Destroy(_interact);
+        
         print("move the maria");
 
         ////Maria starts moving towards Tsu
         scriptMaria.enabled = true;
-        if (GameObject.Find("MariaAlert").activeInHierarchy)
+        /*if (GameObject.Find("MariaAlert").activeInHierarchy)
         {
             GameObject.Find("MariaAlert").SetActive(false);
-        }
-        Maria.GetComponent<SphereCollider>().enabled = false;
-        ////Maria.GetComponent<InteractWithMaria>().Kill();
+        }*/
+        
+        //Maria.GetComponent<InteractWithMaria>().Kill();
         Maria.GetComponent<InteractWithMaria>().enabled = false;
 
         
