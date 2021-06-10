@@ -13,6 +13,7 @@ public class NPCWalking : MonoBehaviour
     public InformationCanvas _interact;
     private NavMeshAgent navMeshAgent;
     private Animator animator;
+    private bool check;
 
 
     // Start is called before the first frame update
@@ -33,8 +34,13 @@ public class NPCWalking : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("isWalking", true);
+        if (!check)
+        {
+            animator.SetBool("isWalking", true);
+            check = true;
+        }
         Vector3 targetposition = targetSpot.transform.position;
+        
         float distance = Vector3.Distance(targetposition, transform.position);
         if (distance < 1)
         {
