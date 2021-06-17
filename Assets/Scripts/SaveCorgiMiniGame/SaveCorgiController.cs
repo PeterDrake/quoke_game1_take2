@@ -72,7 +72,9 @@ public class SaveCorgiController : MonoBehaviour
 
     void CheckOver(UnityEngine.Video.VideoPlayer vp)
     {
-     print  ("Video Is Over");
+        LogToServer logger = GameObject.Find("Logger").GetComponent<LogToServer>();
+        logger.sendToLog("Completed Level 4!", "LEVEL");
+        print  ("Video Is Over");
      GameObject.Find("Mo1").GetComponent<SaveCorgiVisit>().CorgiRescue();
         winScreen = false;
         gameOver = true;
