@@ -13,11 +13,13 @@ public class EnterTentWin : MonoBehaviour
     public GameObject winMusic;
     private InteractWithObject _interact;
     private bool _satisfied;
+    private LogToServer logger;
 
     private void Start()
     {
         _interact = GetComponent<InteractWithObject>();
         Systems.Objectives.Register(EventKey, () => _satisfied = true);
+         logger = GameObject.Find("Logger").GetComponent<LogToServer>();
     }
 
 
@@ -26,7 +28,9 @@ public class EnterTentWin : MonoBehaviour
         _interact.SetInteractText(_satisfied ? SATISFIED : NOT_SATISFIED);
         //_interact.BlinkWhenPlayerNear = _satisfied;
         if (_satisfied)
+            
         {
+            logger.sendToLog("Won Level 3!", "LEVEL");
             Systems.Status.Pause();
             UIManager.Instance.SetAsActive(winCanvas); //changed from winCanvas
             levelMusic.SetActive(false);
